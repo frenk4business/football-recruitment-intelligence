@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "eligible": true,
+      "method": "weighted_rms",
+      "mrr": 0.3912387959262959,
+      "random_mrr": 0.24077108669123945,
+      "weight_jaccard": 0.9452769070010448
+    },
+    {
+      "eligible": true,
+      "method": "family_rms",
+      "mrr": 0.3880806197770484,
+      "random_mrr": 0.24077108669123945,
+      "weight_jaccard": 0.9598853254025669
+    }
+  ],
+  "code_commit": "9a96a5a22d5070cacdabb1116baea08578f5bced",
+  "context_in_ranking": "Only explicit user-adopted requirements; no hidden context blend",
+  "development_sha256": "84521191d06c5e658120482268619b705ac504d67fa58eaf827dbcd6e8d1fdfa",
+  "experiment_sha256": "e1112beba231651d911a2716f24aa569cc25f638ca23cce738a853ef214fed86",
+  "final_queries_opened": false,
+  "selected_method": "weighted_rms",
+  "selection_policy": "Continuous severity + correct constraints + transparency, then development retrieval above random and weight Jaccard >=0.65; prefer equal explicit feature weights",
+  "version": "recruitment-fit-v1"
+}
