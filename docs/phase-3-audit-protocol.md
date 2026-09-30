@@ -1,0 +1,15 @@
+# Phase 3 evidence audit protocol
+
+Recorded before identity/transition counts and before any model fit. Base: merged main `3d8f9a4`. The earlier unmerged-PR policy is superseded by the Phase 3 brief: verify, merge into main, then verify production. Existing Phase 1/2 baseline: 76 Python and four frontend tests plus lint/types/contracts passed.
+
+Audit the current official StatsBomb catalogue and match/lineup metadata at a frozen revision. Report observed coverage rather than assuming each catalogue entry is a full league season. Audit Wyscout/Figshare separately; never join providers by names or pool their feature definitions. Retain input URLs and SHA-256 checksums. Raw input remains ignored.
+
+Identity requires the same provider ID plus consistent normalized full name and available nationality metadata. Accent/case/spacing normalization only compares names attached to that ID; it never merges IDs. Conflicting names, gender or metadata are quarantined and listed. Internally consistent provider identity is not a guarantee of external identity verification. Birth dates are not assumed and age is excluded unless independently supported by permitted fields.
+
+An environment is one player, provider, domestic competition, season, team and observed interval. Adjacent observed environments form candidates; overlap, identical contexts, unknown intervening seasons and gaps over 450 days are rejection reasons for training. International and club-cup contexts are separately classified and excluded from domestic league translation. Observation boundaries are not contract dates. Within-season returns to a team require separate stints. No all-pairs career expansion.
+
+Catalogue lineups can measure identity and candidate coverage, but **cannot establish reconciled reliable minutes or feature availability**. Label any roster-based screening bounds as such. Reconcile events and lineup evidence before publishing eligible model episode counts at 450/600/900/1,200 minutes on both sides. Preserve zero/low-minute roster observations in a separate outcome audit; absence from a roster is not proof of a failed transfer.
+
+For a broad cross-league GO, require at least 100 reconciled outfield episodes, at least three source-destination pairs with 15 unique players each, and a later untouched evaluation period containing at least 30 episodes across at least two pairs. These are conservative project feasibility rules, not statistical power guarantees. A CONDITIONAL pair study requires at least 50 episodes in one interpretable pair with at least 15 later evaluation episodes. Otherwise record NO-GO for cross-league inference and assess a narrower repeated-season/team-context model. No pooling of male/female, club/international or separate providers to reach these counts.
+
+Model scope will be committed after the evidence audit. A separate experiment plan will then freeze targets, split, baselines, likelihood, priors, diagnostics, sensitivity and publication rules before fitting and before inspection of final held-out outcomes.
