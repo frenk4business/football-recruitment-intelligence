@@ -1,0 +1,21 @@
+{
+  "version": "recruitment-fit-v1",
+  "requirements_version": "requirements-v1",
+  "unit": "percentile_points",
+  "loss": {"exact": "absolute", "minimum": "shortfall", "maximum": "excess", "neutral": "ignore"},
+  "power": 2,
+  "default_importance": 1,
+  "importance_values": [1, 2, 3],
+  "ranking_round_decimals": 9,
+  "tie_break": "player_id_ascending",
+  "epsilon": 1e-9,
+  "satisfaction_exact_tolerance": 10,
+  "weight_samples": 100,
+  "weight_range": [0.8, 1.2],
+  "seed": 20260930,
+  "lcg": {"multiplier": 1664525, "increment": 1013904223, "modulus": 4294967296},
+  "profile_samples": 100,
+  "profile_percentile_scale": 10,
+  "top_k": 10,
+  "rank_quantiles": [0.1, 0.9]
+}

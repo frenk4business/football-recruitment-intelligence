@@ -119,3 +119,106 @@ class ClubContext(PublicModel):
     feature_version: Literal["features-v1"] = "features-v1"
     features: list[ClubFeature]
     roles: list[ClubRoleContext]
+
+
+class RecruitmentCandidate(PublicModel):
+    player_id: str
+    name: str
+    team_ids: list[str]
+    teams: list[str]
+    role: str | None
+    minutes: float = Field(ge=0)
+    appearances: int = Field(ge=0)
+    eligible: bool
+    exclusions: list[str]
+    neighbor_stability: float | None = Field(ge=0, le=1)
+    percentiles: dict[str, float]
+    multi_club: bool
+
+
+class RecruitmentClubSummary(PublicModel):
+    club_id: str
+    name: str
+    season: str
+    matches: int
+
+
+class RecruitmentIndex(PublicModel):
+    version: Literal["recruitment-fit-v1"] = "recruitment-fit-v1"
+    requirements_version: Literal["requirements-v1"] = "requirements-v1"
+    club_context_version: Literal["club-context-v1"] = "club-context-v1"
+    dna_version: Literal["player-dna-v1"] = "player-dna-v1"
+    feature_version: Literal["features-v1"] = "features-v1"
+    cohort: Literal["wsl_2023_24"] = "wsl_2023_24"
+    season: Literal["2023/2024"] = "2023/2024"
+    competition: str
+    observation_start: str
+    observation_end: str
+    roles: list[str]
+    players: list[RecruitmentCandidate]
+    clubs: list[RecruitmentClubSummary]
+    features: list[RecruitmentFeature]
+    method: Literal["weighted_rms", "family_rms"]
+
+
+class RecruitmentContribution(PublicModel):
+    feature_id: str
+    family: str
+    candidate: float = Field(ge=0, le=100)
+    target: float = Field(ge=0, le=100)
+    mismatch: float = Field(ge=0, le=100)
+    effective_weight: float = Field(gt=0)
+    squared_contribution: float = Field(ge=0)
+    share: float = Field(ge=0, le=1.000001)
+    source: RequirementSource
+
+
+class RecruitmentRank(PublicModel):
+    player_id: str
+    rank: int = Field(ge=1)
+    distance: float = Field(ge=0, le=100.000001)
+    contributions: list[RecruitmentContribution]
+    family_contributions: dict[str, float]
+    strong_matches: list[str]
+    main_mismatches: list[str]
+    frontier: bool
+
+
+class RecruitmentExclusion(PublicModel):
+    player_id: str
+    reasons: list[str]
+
+
+class RecruitmentResult(PublicModel):
+    version: Literal["recruitment-fit-v1"] = "recruitment-fit-v1"
+    status: Literal["ok", "no_requirements", "no_candidates"]
+    eligible_count: int = Field(ge=0)
+    active_requirements: int = Field(ge=0)
+    frontier_count: int = Field(ge=0)
+    rankings: list[RecruitmentRank]
+    exclusions: list[RecruitmentExclusion]
+
+
+class RecruitmentBootstrap(PublicModel):
+    version: Literal["recruitment-bootstrap-v1"] = "recruitment-bootstrap-v1"
+    role: str
+    seed: int
+    samples: int = Field(ge=1)
+    scale: int = Field(ge=1)
+    feature_ids: list[str]
+    player_ids: list[str]
+    values: list[list[list[int]]]
+
+    @model_validator(mode="after")
+    def valid_dimensions(self):
+        if len(self.values) != self.samples or len(set(self.player_ids)) != len(self.player_ids):
+            raise ValueError("Invalid bootstrap sample/player dimensions")
+        for draw in self.values:
+            if len(draw) != len(self.player_ids):
+                raise ValueError("Invalid bootstrap player dimensions")
+            if any(
+                len(row) != len(self.feature_ids) or any(v < 0 or v > 100 * self.scale for v in row)
+                for row in draw
+            ):
+                raise ValueError("Invalid bootstrap feature dimensions/ranges")
+        return self
