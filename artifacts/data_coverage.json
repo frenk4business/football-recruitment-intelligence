@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-30T13:34:42.661055+00:00",
+  "providers": [
+    {
+      "provider": "statsbomb",
+      "competitions": 1,
+      "seasons": 1,
+      "matches": 1,
+      "teams": 2,
+      "players": 50,
+      "events": 4407,
+      "tracking_frames": null,
+      "tracking_objects": null,
+      "date_start": "2022-12-18",
+      "date_end": "2022-12-18",
+      "missing_player_events": 29,
+      "undetected_objects": null,
+      "available_metrics": [
+        "minutes",
+        "shots",
+        "passes",
+        "xg",
+        "shots_per90"
+      ]
+    },
+    {
+      "provider": "skillcorner",
+      "competitions": 1,
+      "seasons": 1,
+      "matches": 1,
+      "teams": 2,
+      "players": 36,
+      "events": null,
+      "tracking_frames": 60,
+      "tracking_objects": 1380,
+      "date_start": "2025-04-27",
+      "date_end": "2025-04-27",
+      "missing_player_events": null,
+      "undetected_objects": 448,
+      "available_metrics": [
+        "minutes",
+        "tracking_frames"
+      ]
+    }
+  ],
+  "validation_status": "passed",
+  "warnings": [
+    "lineups: 11 unavailable minutes; absent metadata or inconsistent intervals",
+    "events: 2 provider-index timestamp inversions retained; sort by period/time for timelines"
+  ]
+}

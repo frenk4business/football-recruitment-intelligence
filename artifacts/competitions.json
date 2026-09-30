@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1dbe394f-74e1-5822-839f-789dc8fc4adc",
+    "provider": "skillcorner",
+    "name": "A-League",
+    "season": "2024/2025"
+  },
+  {
+    "id": "07e90654-63ed-51fe-9024-39810b9a6c81",
+    "provider": "statsbomb",
+    "name": "FIFA World Cup",
+    "season": "2022"
+  }
+]

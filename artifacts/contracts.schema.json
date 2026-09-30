@@ -1,0 +1,671 @@
+{
+  "MetricDefinition": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "label_en": {
+        "title": "Label En",
+        "type": "string"
+      },
+      "label_nl": {
+        "title": "Label Nl",
+        "type": "string"
+      },
+      "unit": {
+        "title": "Unit",
+        "type": "string"
+      },
+      "kind": {
+        "enum": [
+          "derived",
+          "provider_estimate",
+          "observed"
+        ],
+        "title": "Kind",
+        "type": "string"
+      },
+      "providers": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Providers",
+        "type": "array"
+      },
+      "description_en": {
+        "title": "Description En",
+        "type": "string"
+      },
+      "description_nl": {
+        "title": "Description Nl",
+        "type": "string"
+      },
+      "formula": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Formula"
+      }
+    },
+    "required": [
+      "id",
+      "label_en",
+      "label_nl",
+      "unit",
+      "kind",
+      "providers",
+      "description_en",
+      "description_nl"
+    ],
+    "title": "MetricDefinition",
+    "type": "object"
+  },
+  "Source": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "url": {
+        "title": "Url",
+        "type": "string"
+      },
+      "license": {
+        "title": "License",
+        "type": "string"
+      },
+      "license_url": {
+        "title": "License Url",
+        "type": "string"
+      },
+      "attribution": {
+        "title": "Attribution",
+        "type": "string"
+      },
+      "limitation_en": {
+        "title": "Limitation En",
+        "type": "string"
+      },
+      "limitation_nl": {
+        "title": "Limitation Nl",
+        "type": "string"
+      },
+      "revision": {
+        "title": "Revision",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "url",
+      "license",
+      "license_url",
+      "attribution",
+      "limitation_en",
+      "limitation_nl",
+      "revision"
+    ],
+    "title": "Source",
+    "type": "object"
+  },
+  "CoverageRow": {
+    "additionalProperties": false,
+    "properties": {
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "competitions": {
+        "title": "Competitions",
+        "type": "integer"
+      },
+      "seasons": {
+        "title": "Seasons",
+        "type": "integer"
+      },
+      "matches": {
+        "title": "Matches",
+        "type": "integer"
+      },
+      "teams": {
+        "title": "Teams",
+        "type": "integer"
+      },
+      "players": {
+        "title": "Players",
+        "type": "integer"
+      },
+      "events": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Events"
+      },
+      "tracking_frames": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Tracking Frames"
+      },
+      "tracking_objects": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Tracking Objects"
+      },
+      "date_start": {
+        "title": "Date Start",
+        "type": "string"
+      },
+      "date_end": {
+        "title": "Date End",
+        "type": "string"
+      },
+      "missing_player_events": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Missing Player Events"
+      },
+      "undetected_objects": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Undetected Objects"
+      },
+      "available_metrics": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Available Metrics",
+        "type": "array"
+      }
+    },
+    "required": [
+      "provider",
+      "competitions",
+      "seasons",
+      "matches",
+      "teams",
+      "players",
+      "events",
+      "tracking_frames",
+      "tracking_objects",
+      "date_start",
+      "date_end",
+      "missing_player_events",
+      "undetected_objects",
+      "available_metrics"
+    ],
+    "title": "CoverageRow",
+    "type": "object"
+  },
+  "Coverage": {
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "title": "Schema Version",
+        "type": "string"
+      },
+      "generated_at": {
+        "title": "Generated At",
+        "type": "string"
+      },
+      "providers": {
+        "items": {
+          "$ref": "#/$defs/CoverageRow"
+        },
+        "title": "Providers",
+        "type": "array"
+      },
+      "validation_status": {
+        "title": "Validation Status",
+        "type": "string"
+      },
+      "warnings": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Warnings",
+        "type": "array"
+      }
+    },
+    "required": [
+      "schema_version",
+      "generated_at",
+      "providers",
+      "validation_status",
+      "warnings"
+    ],
+    "title": "Coverage",
+    "type": "object"
+  },
+  "CompetitionSummary": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "provider",
+      "name",
+      "season"
+    ],
+    "title": "CompetitionSummary",
+    "type": "object"
+  },
+  "MatchSummary": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "date": {
+        "title": "Date",
+        "type": "string"
+      },
+      "home": {
+        "title": "Home",
+        "type": "string"
+      },
+      "away": {
+        "title": "Away",
+        "type": "string"
+      },
+      "score": {
+        "title": "Score",
+        "type": "string"
+      },
+      "coverage": {
+        "title": "Coverage",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "provider",
+      "competition",
+      "season",
+      "date",
+      "home",
+      "away",
+      "score",
+      "coverage"
+    ],
+    "title": "MatchSummary",
+    "type": "object"
+  },
+  "PlayerSummary": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "match_id": {
+        "title": "Match Id",
+        "type": "string"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "team": {
+        "title": "Team",
+        "type": "string"
+      },
+      "position": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Position"
+      },
+      "minutes": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Minutes"
+      },
+      "minutes_method": {
+        "title": "Minutes Method",
+        "type": "string"
+      },
+      "shots": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Shots"
+      },
+      "passes": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Passes"
+      },
+      "xg": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Xg"
+      },
+      "shots_per90": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Shots Per90"
+      },
+      "pass_completion": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Pass Completion"
+      }
+    },
+    "required": [
+      "id",
+      "match_id",
+      "provider",
+      "name",
+      "team",
+      "position",
+      "minutes",
+      "minutes_method",
+      "shots",
+      "passes",
+      "xg",
+      "shots_per90",
+      "pass_completion"
+    ],
+    "title": "PlayerSummary",
+    "type": "object"
+  },
+  "EventCount": {
+    "additionalProperties": false,
+    "properties": {
+      "event_type": {
+        "title": "Event Type",
+        "type": "string"
+      },
+      "count": {
+        "title": "Count",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "event_type",
+      "count"
+    ],
+    "title": "EventCount",
+    "type": "object"
+  },
+  "SpatialBin": {
+    "additionalProperties": false,
+    "properties": {
+      "x": {
+        "title": "X",
+        "type": "number"
+      },
+      "y": {
+        "title": "Y",
+        "type": "number"
+      },
+      "count": {
+        "title": "Count",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "x",
+      "y",
+      "count"
+    ],
+    "title": "SpatialBin",
+    "type": "object"
+  },
+  "TrackingPoint": {
+    "additionalProperties": false,
+    "properties": {
+      "x": {
+        "title": "X",
+        "type": "number"
+      },
+      "y": {
+        "title": "Y",
+        "type": "number"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "team": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Team"
+      },
+      "object_type": {
+        "title": "Object Type",
+        "type": "string"
+      },
+      "is_detected": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Is Detected"
+      }
+    },
+    "required": [
+      "x",
+      "y",
+      "name",
+      "team",
+      "object_type",
+      "is_detected"
+    ],
+    "title": "TrackingPoint",
+    "type": "object"
+  },
+  "TrackingSnapshot": {
+    "additionalProperties": false,
+    "properties": {
+      "frame": {
+        "title": "Frame",
+        "type": "integer"
+      },
+      "timestamp_seconds": {
+        "title": "Timestamp Seconds",
+        "type": "number"
+      },
+      "period": {
+        "title": "Period",
+        "type": "integer"
+      },
+      "points": {
+        "items": {
+          "$ref": "#/$defs/TrackingPoint"
+        },
+        "title": "Points",
+        "type": "array"
+      }
+    },
+    "required": [
+      "frame",
+      "timestamp_seconds",
+      "period",
+      "points"
+    ],
+    "title": "TrackingSnapshot",
+    "type": "object"
+  },
+  "Explorer": {
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "title": "Schema Version",
+        "type": "string"
+      },
+      "match": {
+        "$ref": "#/$defs/MatchSummary"
+      },
+      "players": {
+        "items": {
+          "$ref": "#/$defs/PlayerSummary"
+        },
+        "title": "Players",
+        "type": "array"
+      },
+      "event_counts": {
+        "items": {
+          "$ref": "#/$defs/EventCount"
+        },
+        "title": "Event Counts",
+        "type": "array"
+      },
+      "spatial_bins": {
+        "items": {
+          "$ref": "#/$defs/SpatialBin"
+        },
+        "title": "Spatial Bins",
+        "type": "array"
+      },
+      "spatial_sample_size": {
+        "title": "Spatial Sample Size",
+        "type": "integer"
+      },
+      "tracking_snapshots": {
+        "items": {
+          "$ref": "#/$defs/TrackingSnapshot"
+        },
+        "title": "Tracking Snapshots",
+        "type": "array"
+      }
+    },
+    "required": [
+      "schema_version",
+      "match",
+      "players",
+      "event_counts",
+      "spatial_bins",
+      "spatial_sample_size",
+      "tracking_snapshots"
+    ],
+    "title": "Explorer",
+    "type": "object"
+  }
+}
