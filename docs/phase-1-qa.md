@@ -1,5 +1,7 @@
 # Phase 1 verification — 30 September 2026
 
+Historical verification record. PR #1 was subsequently merged into `main`; its earlier open status below records the original check time, not a current merge policy.
+
 ## Public project
 
 - [English preview](https://football-recruitment-intelligence.onrender.com/)
@@ -50,4 +52,4 @@ A measured warm offline build took about **0.50 seconds** on this development ma
 
 ## Cost boundary
 
-Fixed recurring infrastructure cost for the created project: **€0/month**. Static-site traffic and build minutes share the existing Render workspace allowance; overages may be billable under its current billing settings. No billing plan or spend limit was changed. Existing unrelated services are excluded from this project cost statement.
+Cost correction recorded in Phase 3: **no additional paid infrastructure was introduced beyond the existing Render workspace/Starter subscription**. The earlier zero-cost wording did not account for the existing subscription. Static-site traffic and build minutes share the existing Render workspace allowance; overages may be billable under its current billing settings. No billing plan or spend limit was changed. Existing unrelated services are excluded from this project cost statement.

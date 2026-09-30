@@ -26,3 +26,9 @@ export const dnaRegistry = () =>
   );
 export const dnaEvaluation = () =>
   load<import("./contracts").DNAEvaluation>("phase2/public/evaluation.json");
+export const translationIndex = () =>
+  load<import("./contracts").TranslationIndex>("phase3/public/index.json");
+export const translationEvaluation = () =>
+  load<import("./contracts").TranslationEvaluation>(
+    "phase3/public/evaluation.json",
+  );

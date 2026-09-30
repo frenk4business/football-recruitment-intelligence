@@ -1380,5 +1380,790 @@
     ],
     "title": "FeatureDefinition",
     "type": "object"
+  },
+  "TranslationMetric": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "label_en": {
+        "title": "Label En",
+        "type": "string"
+      },
+      "label_nl": {
+        "title": "Label Nl",
+        "type": "string"
+      },
+      "unit": {
+        "default": "per90",
+        "title": "Unit",
+        "type": "string"
+      },
+      "selected_method": {
+        "title": "Selected Method",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "label_en",
+      "label_nl",
+      "selected_method"
+    ],
+    "title": "TranslationMetric",
+    "type": "object"
+  },
+  "TranslationPlayer": {
+    "additionalProperties": false,
+    "properties": {
+      "player_id": {
+        "title": "Player Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      },
+      "supported_sources": {
+        "minimum": 0,
+        "title": "Supported Sources",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "player_id",
+      "name",
+      "teams",
+      "supported_sources"
+    ],
+    "title": "TranslationPlayer",
+    "type": "object"
+  },
+  "TranslationTarget": {
+    "additionalProperties": false,
+    "properties": {
+      "environment_id": {
+        "title": "Environment Id",
+        "type": "string"
+      },
+      "team_id": {
+        "title": "Team Id",
+        "type": "string"
+      },
+      "team": {
+        "title": "Team",
+        "type": "string"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      }
+    },
+    "required": [
+      "environment_id",
+      "team_id",
+      "team",
+      "competition",
+      "season"
+    ],
+    "title": "TranslationTarget",
+    "type": "object"
+  },
+  "TranslationIndex": {
+    "additionalProperties": false,
+    "properties": {
+      "version": {
+        "title": "Version",
+        "type": "string"
+      },
+      "translated_profile_version": {
+        "title": "Translated Profile Version",
+        "type": "string"
+      },
+      "feature_version": {
+        "title": "Feature Version",
+        "type": "string"
+      },
+      "observed_dna_version": {
+        "title": "Observed Dna Version",
+        "type": "string"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "source_season": {
+        "title": "Source Season",
+        "type": "string"
+      },
+      "target_season": {
+        "title": "Target Season",
+        "type": "string"
+      },
+      "minimum_minutes": {
+        "title": "Minimum Minutes",
+        "type": "integer"
+      },
+      "prediction_minutes": {
+        "title": "Prediction Minutes",
+        "type": "integer"
+      },
+      "development_episodes": {
+        "title": "Development Episodes",
+        "type": "integer"
+      },
+      "test_episodes": {
+        "title": "Test Episodes",
+        "type": "integer"
+      },
+      "test_team_changes": {
+        "title": "Test Team Changes",
+        "type": "integer"
+      },
+      "players": {
+        "items": {
+          "$ref": "#/$defs/TranslationPlayer"
+        },
+        "title": "Players",
+        "type": "array"
+      },
+      "targets": {
+        "items": {
+          "$ref": "#/$defs/TranslationTarget"
+        },
+        "title": "Targets",
+        "type": "array"
+      },
+      "roles": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Roles",
+        "type": "array"
+      },
+      "metrics": {
+        "items": {
+          "$ref": "#/$defs/TranslationMetric"
+        },
+        "title": "Metrics",
+        "type": "array"
+      }
+    },
+    "required": [
+      "version",
+      "translated_profile_version",
+      "feature_version",
+      "observed_dna_version",
+      "scope",
+      "source_season",
+      "target_season",
+      "minimum_minutes",
+      "prediction_minutes",
+      "development_episodes",
+      "test_episodes",
+      "test_team_changes",
+      "players",
+      "targets",
+      "roles",
+      "metrics"
+    ],
+    "title": "TranslationIndex",
+    "type": "object"
+  },
+  "TranslationEnvironment": {
+    "additionalProperties": false,
+    "properties": {
+      "environment_id": {
+        "title": "Environment Id",
+        "type": "string"
+      },
+      "team_id": {
+        "title": "Team Id",
+        "type": "string"
+      },
+      "team": {
+        "title": "Team",
+        "type": "string"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "start_date": {
+        "title": "Start Date",
+        "type": "string"
+      },
+      "end_date": {
+        "title": "End Date",
+        "type": "string"
+      },
+      "role": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Role"
+      },
+      "role_shares": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "title": "Role Shares",
+        "type": "object"
+      },
+      "reliable_minutes": {
+        "minimum": 0,
+        "title": "Reliable Minutes",
+        "type": "number"
+      },
+      "appearances": {
+        "minimum": 0,
+        "title": "Appearances",
+        "type": "integer"
+      },
+      "used_as_development_outcome": {
+        "title": "Used As Development Outcome",
+        "type": "boolean"
+      },
+      "supported": {
+        "title": "Supported",
+        "type": "boolean"
+      },
+      "exclusions": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Exclusions",
+        "type": "array"
+      }
+    },
+    "required": [
+      "environment_id",
+      "team_id",
+      "team",
+      "competition",
+      "season",
+      "start_date",
+      "end_date",
+      "role",
+      "role_shares",
+      "reliable_minutes",
+      "appearances",
+      "used_as_development_outcome",
+      "supported",
+      "exclusions"
+    ],
+    "title": "TranslationEnvironment",
+    "type": "object"
+  },
+  "TranslationEstimate": {
+    "additionalProperties": false,
+    "properties": {
+      "metric": {
+        "title": "Metric",
+        "type": "string"
+      },
+      "method": {
+        "title": "Method",
+        "type": "string"
+      },
+      "observed_source": {
+        "minimum": 0,
+        "title": "Observed Source",
+        "type": "number"
+      },
+      "expected_target": {
+        "minimum": 0,
+        "title": "Expected Target",
+        "type": "number"
+      },
+      "p10": {
+        "minimum": 0,
+        "title": "P10",
+        "type": "number"
+      },
+      "p90": {
+        "minimum": 0,
+        "title": "P90",
+        "type": "number"
+      },
+      "p025": {
+        "minimum": 0,
+        "title": "P025",
+        "type": "number"
+      },
+      "p975": {
+        "minimum": 0,
+        "title": "P975",
+        "type": "number"
+      },
+      "interval_kind": {
+        "enum": [
+          "posterior_predictive",
+          "empirical_predictive"
+        ],
+        "title": "Interval Kind",
+        "type": "string"
+      },
+      "expected_rate_p10": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Expected Rate P10"
+      },
+      "expected_rate_p90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Expected Rate P90"
+      }
+    },
+    "required": [
+      "metric",
+      "method",
+      "observed_source",
+      "expected_target",
+      "p10",
+      "p90",
+      "p025",
+      "p975",
+      "interval_kind"
+    ],
+    "title": "TranslationEstimate",
+    "type": "object"
+  },
+  "TranslationEvidence": {
+    "additionalProperties": false,
+    "properties": {
+      "direct_episodes": {
+        "minimum": 0,
+        "title": "Direct Episodes",
+        "type": "integer"
+      },
+      "direct_players": {
+        "minimum": 0,
+        "title": "Direct Players",
+        "type": "integer"
+      },
+      "target_team_role_episodes": {
+        "minimum": 0,
+        "title": "Target Team Role Episodes",
+        "type": "integer"
+      },
+      "role_episodes": {
+        "minimum": 0,
+        "title": "Role Episodes",
+        "type": "integer"
+      },
+      "development_episodes": {
+        "minimum": 0,
+        "title": "Development Episodes",
+        "type": "integer"
+      },
+      "development_seasons": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Development Seasons",
+        "type": "array"
+      },
+      "relies_on_pooling": {
+        "title": "Relies On Pooling",
+        "type": "boolean"
+      },
+      "unseen_target_team": {
+        "title": "Unseen Target Team",
+        "type": "boolean"
+      },
+      "source_context_matches": {
+        "minimum": 0,
+        "title": "Source Context Matches",
+        "type": "integer"
+      },
+      "target_context_matches": {
+        "minimum": 0,
+        "title": "Target Context Matches",
+        "type": "integer"
+      },
+      "context_latest_date": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Context Latest Date"
+      }
+    },
+    "required": [
+      "direct_episodes",
+      "direct_players",
+      "target_team_role_episodes",
+      "role_episodes",
+      "development_episodes",
+      "development_seasons",
+      "relies_on_pooling",
+      "unseen_target_team",
+      "source_context_matches",
+      "target_context_matches",
+      "context_latest_date"
+    ],
+    "title": "TranslationEvidence",
+    "type": "object"
+  },
+  "TranslationPrediction": {
+    "additionalProperties": false,
+    "properties": {
+      "model_version": {
+        "title": "Model Version",
+        "type": "string"
+      },
+      "source_environment_id": {
+        "title": "Source Environment Id",
+        "type": "string"
+      },
+      "target_environment_id": {
+        "title": "Target Environment Id",
+        "type": "string"
+      },
+      "target_role": {
+        "title": "Target Role",
+        "type": "string"
+      },
+      "status": {
+        "enum": [
+          "supported",
+          "insufficient_evidence",
+          "out_of_scope"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "exclusions": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Exclusions",
+        "type": "array"
+      },
+      "prediction_minutes": {
+        "title": "Prediction Minutes",
+        "type": "integer"
+      },
+      "estimates": {
+        "items": {
+          "$ref": "#/$defs/TranslationEstimate"
+        },
+        "title": "Estimates",
+        "type": "array"
+      },
+      "research_estimates": {
+        "items": {
+          "$ref": "#/$defs/TranslationEstimate"
+        },
+        "title": "Research Estimates",
+        "type": "array"
+      },
+      "evidence": {
+        "$ref": "#/$defs/TranslationEvidence"
+      }
+    },
+    "required": [
+      "model_version",
+      "source_environment_id",
+      "target_environment_id",
+      "target_role",
+      "status",
+      "exclusions",
+      "prediction_minutes",
+      "estimates",
+      "research_estimates",
+      "evidence"
+    ],
+    "title": "TranslationPrediction",
+    "type": "object"
+  },
+  "TranslationPlayerDetail": {
+    "additionalProperties": false,
+    "properties": {
+      "player": {
+        "$ref": "#/$defs/TranslationPlayer"
+      },
+      "model_version": {
+        "title": "Model Version",
+        "type": "string"
+      },
+      "environments": {
+        "items": {
+          "$ref": "#/$defs/TranslationEnvironment"
+        },
+        "title": "Environments",
+        "type": "array"
+      },
+      "predictions": {
+        "items": {
+          "$ref": "#/$defs/TranslationPrediction"
+        },
+        "title": "Predictions",
+        "type": "array"
+      }
+    },
+    "required": [
+      "player",
+      "model_version",
+      "environments",
+      "predictions"
+    ],
+    "title": "TranslationPlayerDetail",
+    "type": "object"
+  },
+  "TranslationEvaluationRow": {
+    "additionalProperties": false,
+    "properties": {
+      "metric": {
+        "title": "Metric",
+        "type": "string"
+      },
+      "method": {
+        "title": "Method",
+        "type": "string"
+      },
+      "n": {
+        "title": "N",
+        "type": "integer"
+      },
+      "mae": {
+        "title": "Mae",
+        "type": "number"
+      },
+      "rmse": {
+        "title": "Rmse",
+        "type": "number"
+      },
+      "coverage50": {
+        "maximum": 1,
+        "minimum": 0,
+        "title": "Coverage50",
+        "type": "number"
+      },
+      "coverage80": {
+        "maximum": 1,
+        "minimum": 0,
+        "title": "Coverage80",
+        "type": "number"
+      },
+      "coverage95": {
+        "maximum": 1,
+        "minimum": 0,
+        "title": "Coverage95",
+        "type": "number"
+      },
+      "width80": {
+        "minimum": 0,
+        "title": "Width80",
+        "type": "number"
+      },
+      "selected": {
+        "title": "Selected",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "metric",
+      "method",
+      "n",
+      "mae",
+      "rmse",
+      "coverage50",
+      "coverage80",
+      "coverage95",
+      "width80",
+      "selected"
+    ],
+    "title": "TranslationEvaluationRow",
+    "type": "object"
+  },
+  "TranslationEvaluation": {
+    "additionalProperties": false,
+    "properties": {
+      "model_version": {
+        "title": "Model Version",
+        "type": "string"
+      },
+      "train": {
+        "title": "Train",
+        "type": "integer"
+      },
+      "validation": {
+        "title": "Validation",
+        "type": "integer"
+      },
+      "test": {
+        "title": "Test",
+        "type": "integer"
+      },
+      "test_period": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Test Period",
+        "type": "array"
+      },
+      "test_team_changes": {
+        "title": "Test Team Changes",
+        "type": "integer"
+      },
+      "max_rhat": {
+        "title": "Max Rhat",
+        "type": "number"
+      },
+      "divergences": {
+        "title": "Divergences",
+        "type": "integer"
+      },
+      "rows": {
+        "items": {
+          "$ref": "#/$defs/TranslationEvaluationRow"
+        },
+        "title": "Rows",
+        "type": "array"
+      }
+    },
+    "required": [
+      "model_version",
+      "train",
+      "validation",
+      "test",
+      "test_period",
+      "test_team_changes",
+      "max_rhat",
+      "divergences",
+      "rows"
+    ],
+    "title": "TranslationEvaluation",
+    "type": "object"
+  },
+  "TranslationModels": {
+    "additionalProperties": false,
+    "properties": {
+      "version": {
+        "title": "Version",
+        "type": "string"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "source_revision": {
+        "title": "Source Revision",
+        "type": "string"
+      },
+      "feature_version": {
+        "title": "Feature Version",
+        "type": "string"
+      },
+      "observed_dna_version": {
+        "title": "Observed Dna Version",
+        "type": "string"
+      },
+      "supported_competitions": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Supported Competitions",
+        "type": "array"
+      },
+      "development_period": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Development Period",
+        "type": "array"
+      },
+      "heldout_period": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Heldout Period",
+        "type": "array"
+      },
+      "likelihood": {
+        "title": "Likelihood",
+        "type": "string"
+      },
+      "primary_priors_version": {
+        "title": "Primary Priors Version",
+        "type": "string"
+      },
+      "selected_methods": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Selected Methods",
+        "type": "object"
+      },
+      "model_code_commit": {
+        "title": "Model Code Commit",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "scope",
+      "provider",
+      "source_revision",
+      "feature_version",
+      "observed_dna_version",
+      "supported_competitions",
+      "development_period",
+      "heldout_period",
+      "likelihood",
+      "primary_priors_version",
+      "selected_methods",
+      "model_code_commit"
+    ],
+    "title": "TranslationModels",
+    "type": "object"
   }
 }

@@ -1,0 +1,338 @@
+{
+  "alternative:pressures": {
+    "ceiling": 150,
+    "finite": true,
+    "fraction_above_ceiling": 0.004851282051282052,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.007528205128205128,
+      "rate_quantiles": [
+        0.0,
+        10.589639596169356,
+        131.82021019152347
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 1.0813718206539094,
+      "p50": 12.221245896685652,
+      "p99": 110.58362631859055
+    },
+    "target": "pressures"
+  },
+  "alternative:progressive_carries": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.011323076923076924,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.013456410256410256,
+      "rate_quantiles": [
+        0.0,
+        2.6879277667662644,
+        58.83157678035481
+      ]
+    },
+    "passed": false,
+    "rate_quantiles": {
+      "p01": 0.09879668474279193,
+      "p50": 3.1743159101850544,
+      "p99": 53.29171537266336
+    },
+    "target": "progressive_carries"
+  },
+  "alternative:progressive_passes": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.004666666666666667,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.006584615384615385,
+      "rate_quantiles": [
+        0.0,
+        2.600964111339842,
+        40.444215858222215
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.23668964930670025,
+      "p50": 3.0083445797099544,
+      "p99": 35.29452257651234
+    },
+    "target": "progressive_passes"
+  },
+  "alternative:shots": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0041948717948717944,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.005528205128205128,
+      "rate_quantiles": [
+        0.0,
+        1.33875556885129,
+        35.51485526656622
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.03495990820395142,
+      "p50": 1.5907527997801265,
+      "p99": 32.16134172648602
+    },
+    "target": "shots"
+  },
+  "final_alternative:pressures": {
+    "ceiling": 150,
+    "finite": true,
+    "fraction_above_ceiling": 0.0015897435897435897,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.004061538461538462,
+      "rate_quantiles": [
+        0.0,
+        10.652158186814455,
+        103.08955623639176
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 1.424178372300508,
+      "p50": 12.22962770435548,
+      "p99": 84.63208130570958
+    },
+    "target": "pressures"
+  },
+  "final_alternative:progressive_carries": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.006328205128205128,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.008543589743589744,
+      "rate_quantiles": [
+        0.0,
+        2.7237925288192137,
+        45.83402615467615
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.13103319566591137,
+      "p50": 3.20319570296665,
+      "p99": 40.07575287369232
+    },
+    "target": "progressive_carries"
+  },
+  "final_alternative:progressive_passes": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0020717948717948716,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.0036615384615384617,
+      "rate_quantiles": [
+        0.0,
+        2.6131919215558463,
+        32.619506277578914
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.31022906249211163,
+      "p50": 3.013920394102791,
+      "p99": 27.21318430336266
+    },
+    "target": "progressive_passes"
+  },
+  "final_alternative:shots": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0018153846153846154,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.0030666666666666668,
+      "rate_quantiles": [
+        0.0,
+        1.354628266068064,
+        27.932947436156965
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.04721984963566254,
+      "p50": 1.6029188519579805,
+      "p99": 23.847891662387774
+    },
+    "target": "shots"
+  },
+  "primary:pressures": {
+    "ceiling": 150,
+    "finite": true,
+    "fraction_above_ceiling": 0.0008717948717948718,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.0032410256410256412,
+      "rate_quantiles": [
+        0.0,
+        10.71004455081032,
+        96.07325557110923
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 1.5836031801761479,
+      "p50": 12.245307110137567,
+      "p99": 76.16195849607585
+    },
+    "target": "pressures"
+  },
+  "primary:progressive_carries": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0044,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.007261538461538462,
+      "rate_quantiles": [
+        0.0,
+        2.73104741599466,
+        42.80432889781634
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.14855202258487127,
+      "p50": 3.2143711416458474,
+      "p99": 35.656449747100694
+    },
+    "target": "progressive_carries"
+  },
+  "primary:progressive_passes": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0013435897435897437,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.003158974358974359,
+      "rate_quantiles": [
+        0.0,
+        2.6074277583980727,
+        30.463986359655824
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.344440189146281,
+      "p50": 3.0127608843240825,
+      "p99": 24.485828301959444
+    },
+    "target": "progressive_passes"
+  },
+  "primary:shots": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0010666666666666667,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.0020205128205128204,
+      "rate_quantiles": [
+        0.0,
+        1.3501750965768506,
+        24.621468724616594
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.05427615520438269,
+      "p50": 1.6094698519763377,
+      "p99": 21.096048669292134
+    },
+    "target": "shots"
+  },
+  "revised_alternative:pressures": {
+    "ceiling": 150,
+    "finite": true,
+    "fraction_above_ceiling": 0.002523076923076923,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.005046153846153846,
+      "rate_quantiles": [
+        0.0,
+        10.694433679484716,
+        111.76668369498204
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 1.3131298141703651,
+      "p50": 12.230308890762633,
+      "p99": 91.0745105146836
+    },
+    "target": "pressures"
+  },
+  "revised_alternative:progressive_carries": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.007938461538461538,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.010215384615384616,
+      "rate_quantiles": [
+        0.0,
+        2.730165916004948,
+        50.447976629252
+      ]
+    },
+    "passed": false,
+    "rate_quantiles": {
+      "p01": 0.11672436426356364,
+      "p50": 3.1957679365804395,
+      "p99": 44.18736394829536
+    },
+    "target": "progressive_carries"
+  },
+  "revised_alternative:progressive_passes": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0028,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.004687179487179487,
+      "rate_quantiles": [
+        0.0,
+        2.60324031580702,
+        35.340644177308086
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.28453083002078433,
+      "p50": 3.011234767063817,
+      "p99": 29.510518532944594
+    },
+    "target": "progressive_passes"
+  },
+  "revised_alternative:shots": {
+    "ceiling": 50,
+    "finite": true,
+    "fraction_above_ceiling": 0.0026153846153846153,
+    "observation_prediction": {
+      "finite": true,
+      "fraction_above_ceiling": 0.0037743589743589744,
+      "rate_quantiles": [
+        0.0,
+        1.3467480709644186,
+        30.522047487390836
+      ]
+    },
+    "passed": true,
+    "rate_quantiles": {
+      "p01": 0.04149736009159189,
+      "p50": 1.5989966447153332,
+      "p99": 26.706932387595117
+    },
+    "target": "shots"
+  }
+}

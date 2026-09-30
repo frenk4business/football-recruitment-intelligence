@@ -126,6 +126,56 @@ def create_app(artifact_dir: Path | None = None) -> FastAPI:
     def dna_features():
         return read("phase2/public/features.json")
 
+    from football_intelligence.translation.contracts import (
+        TranslationEvaluation,
+        TranslationIndex,
+        TranslationModels,
+        TranslationPlayerDetail,
+        TranslationPrediction,
+    )
+
+    @app.get("/api/v1/translation/models", response_model=TranslationModels)
+    def translation_models():
+        return read("phase3/public/models.json")
+
+    @app.get("/api/v1/translation/environments", response_model=TranslationIndex)
+    def translation_environments():
+        return read("phase3/public/index.json")
+
+    def translation_detail(player_id: UUID):
+        if str(player_id) not in {
+            p["player_id"] for p in read("phase3/public/index.json")["players"]
+        }:
+            raise HTTPException(404, "Player not in audited historical cohort")
+        return read(f"phase3/public/players/{player_id}.json")
+
+    @app.get("/api/v1/translation/players/{player_id}", response_model=TranslationPlayerDetail)
+    def translation_player(player_id: UUID):
+        return translation_detail(player_id)
+
+    @app.get("/api/v1/translation/predict", response_model=TranslationPrediction)
+    def translation_predict(
+        player_id: UUID,
+        source_environment: UUID,
+        target_environment: UUID,
+        target_role: str = Query(max_length=10),
+    ):
+        detail = translation_detail(player_id)
+        for prediction in detail["predictions"]:
+            if (
+                prediction["source_environment_id"] == str(source_environment)
+                and prediction["target_environment_id"] == str(target_environment)
+                and prediction["target_role"] == target_role
+            ):
+                return prediction
+        raise HTTPException(
+            422, "Unsupported source, target or role; inspect the player's environment exclusions"
+        )
+
+    @app.get("/api/v1/translation/evaluation", response_model=TranslationEvaluation)
+    def translation_evaluation():
+        return read("phase3/public/evaluation.json")
+
     return app
 
 

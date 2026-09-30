@@ -28,3 +28,14 @@ Contract version is 1.0.0. Breaking changes require incrementing the schema vers
 - `GET /api/v1/features`: bilingual versioned registry.
 
 Invalid UUIDs/thresholds/limits return 422, unknown valid player UUIDs return 404, unavailable artifacts return 503. No arbitrary path or SQL endpoint. Static equivalents live at `/data/phase2/index.json`, `/<threshold>/<UUID>.json`, `/evaluation.json`, `/features.json` and `/map-<threshold>.json`. The FastAPI process remains local.
+# Phase 3 translation contracts
+
+The optional local FastAPI exposes:
+
+- `GET /api/v1/translation/models`: versions, scope, provider revision, periods and selected methods.
+- `GET /api/v1/translation/environments`: bounded player/target/role index and metric labels.
+- `GET /api/v1/translation/players/{player_id}`: observed environments and precomputed conditional scenarios.
+- `GET /api/v1/translation/predict?player_id=…&source_environment=…&target_environment=…&target_role=…`: one exact precomputed scenario, including unsupported states. Invalid UUIDs return 422; unaudited players 404; unavailable combinations 422.
+- `GET /api/v1/translation/evaluation`: all four methods’ held-out error and interval calibration.
+
+The deployed static equivalents are `/data/phase3/models.json`, `index.json`, `players/{player_id}.json` and `evaluation.json`. There is no hosted FastAPI service and no request-time inference. Pydantic publication models forbid extra/raw fields and nonfinite values; generated TypeScript, JSON Schema and OpenAPI remain the contract source. Predictions distinguish selected `estimates` from `research_estimates`, observed source from expected target, and `empirical_predictive` from `posterior_predictive` intervals. Unsupported states contain no estimates. Evidence exposes numerical episode counts, pooling, pre-change context dates and unseen-team status. `used_as_development_outcome` identifies a source observation also used as an earlier fitted outcome.

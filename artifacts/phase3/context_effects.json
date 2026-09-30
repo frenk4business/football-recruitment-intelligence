@@ -1,0 +1,270 @@
+{
+  "pressures": {
+    "context_for_10_percent_pass_ratio": {
+      "mean": 0.9745613208055497,
+      "p025": 0.9373890225504032,
+      "p10": 0.9505009730785736,
+      "p90": 0.9987326134948542,
+      "p975": 1.0128137171991414
+    },
+    "role_pooling": [
+      {
+        "n": 2,
+        "posterior_log_effect_mean": -0.040064741951963606,
+        "posterior_log_effect_p10": -0.15212745604809852,
+        "posterior_log_effect_p90": 0.046767392745668365,
+        "role": "AM",
+        "unpooled_conditional_log_residual": -0.14865341798663553
+      },
+      {
+        "n": 18,
+        "posterior_log_effect_mean": -0.09621010632071791,
+        "posterior_log_effect_p10": -0.21480398582684923,
+        "posterior_log_effect_p90": 0.0008572187992945813,
+        "role": "CB",
+        "unpooled_conditional_log_residual": -0.15135829868572834
+      },
+      {
+        "n": 8,
+        "posterior_log_effect_mean": 0.04150064254522343,
+        "posterior_log_effect_p10": -0.023660277263705436,
+        "posterior_log_effect_p90": 0.1236458272579129,
+        "role": "CM",
+        "unpooled_conditional_log_residual": 0.0450759200908799
+      },
+      {
+        "n": 6,
+        "posterior_log_effect_mean": 0.055546526377673704,
+        "posterior_log_effect_p10": -0.016369595605524295,
+        "posterior_log_effect_p90": 0.15243094205474375,
+        "role": "DM",
+        "unpooled_conditional_log_residual": 0.11114806615619449
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": -0.026270899647843158,
+        "posterior_log_effect_p10": -0.09326940447925379,
+        "posterior_log_effect_p90": 0.03105679028647537,
+        "role": "FB/WB",
+        "unpooled_conditional_log_residual": -0.05874363299037158
+      },
+      {
+        "n": 7,
+        "posterior_log_effect_mean": 0.04694995966025675,
+        "posterior_log_effect_p10": -0.024832104832110943,
+        "posterior_log_effect_p90": 0.14000446595935193,
+        "role": "ST",
+        "unpooled_conditional_log_residual": 0.06249605886190831
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": 0.018548619337370793,
+        "posterior_log_effect_p10": -0.04267702509711283,
+        "posterior_log_effect_p90": 0.08976814473000826,
+        "role": "W",
+        "unpooled_conditional_log_residual": -0.005081640788768858
+      }
+    ]
+  },
+  "progressive_carries": {
+    "context_for_10_percent_pass_ratio": {
+      "mean": 1.0402267228272972,
+      "p025": 0.9797014406184028,
+      "p10": 1.000287498714605,
+      "p90": 1.081480619342378,
+      "p975": 1.10309290846695
+    },
+    "role_pooling": [
+      {
+        "n": 2,
+        "posterior_log_effect_mean": 0.06706473191077593,
+        "posterior_log_effect_p10": -0.11404903787358787,
+        "posterior_log_effect_p90": 0.29653436136621997,
+        "role": "AM",
+        "unpooled_conditional_log_residual": 0.14465914440599925
+      },
+      {
+        "n": 18,
+        "posterior_log_effect_mean": -0.02572182645885539,
+        "posterior_log_effect_p10": -0.16796404161610354,
+        "posterior_log_effect_p90": 0.10232378491804399,
+        "role": "CB",
+        "unpooled_conditional_log_residual": -0.12474706190520059
+      },
+      {
+        "n": 8,
+        "posterior_log_effect_mean": 0.07315311758883966,
+        "posterior_log_effect_p10": -0.060018809588937835,
+        "posterior_log_effect_p90": 0.25340262291052734,
+        "role": "CM",
+        "unpooled_conditional_log_residual": 0.049751212198632294
+      },
+      {
+        "n": 6,
+        "posterior_log_effect_mean": -0.25466766568375726,
+        "posterior_log_effect_p10": -0.6151755323250642,
+        "posterior_log_effect_p90": 0.007151648892243487,
+        "role": "DM",
+        "unpooled_conditional_log_residual": -0.8826741720738581
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": 0.002152455400276697,
+        "posterior_log_effect_p10": -0.12858722963749725,
+        "posterior_log_effect_p90": 0.13481456603577718,
+        "role": "FB/WB",
+        "unpooled_conditional_log_residual": -0.01584256648551177
+      },
+      {
+        "n": 7,
+        "posterior_log_effect_mean": 0.05175363107951087,
+        "posterior_log_effect_p10": -0.08663768100266576,
+        "posterior_log_effect_p90": 0.2213912749734364,
+        "role": "ST",
+        "unpooled_conditional_log_residual": 0.13676095211150452
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": 0.08626555616320947,
+        "posterior_log_effect_p10": -0.04981965398122315,
+        "posterior_log_effect_p90": 0.26759956415857866,
+        "role": "W",
+        "unpooled_conditional_log_residual": 0.14359929557914095
+      }
+    ]
+  },
+  "progressive_passes": {
+    "context_for_10_percent_pass_ratio": {
+      "mean": 1.0379455466008318,
+      "p025": 0.9924663342271376,
+      "p10": 1.007141127485793,
+      "p90": 1.0688960803388443,
+      "p975": 1.0844078506337835
+    },
+    "role_pooling": [
+      {
+        "n": 2,
+        "posterior_log_effect_mean": 0.005165566857325029,
+        "posterior_log_effect_p10": -0.06318228005917248,
+        "posterior_log_effect_p90": 0.07996416637710246,
+        "role": "AM",
+        "unpooled_conditional_log_residual": 0.039752664774208225
+      },
+      {
+        "n": 18,
+        "posterior_log_effect_mean": 0.04438894546164397,
+        "posterior_log_effect_p10": -0.009287948634107302,
+        "posterior_log_effect_p90": 0.12263273574902614,
+        "role": "CB",
+        "unpooled_conditional_log_residual": 0.08170917773624597
+      },
+      {
+        "n": 8,
+        "posterior_log_effect_mean": -0.01596482025073149,
+        "posterior_log_effect_p10": -0.08324228541091487,
+        "posterior_log_effect_p90": 0.03865759548321203,
+        "role": "CM",
+        "unpooled_conditional_log_residual": -0.07841202835008068
+      },
+      {
+        "n": 6,
+        "posterior_log_effect_mean": -0.009223571289088767,
+        "posterior_log_effect_p10": -0.07449843512146404,
+        "posterior_log_effect_p90": 0.04700054738534003,
+        "role": "DM",
+        "unpooled_conditional_log_residual": -0.027387889643339783
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": -0.008712843814396933,
+        "posterior_log_effect_p10": -0.06468330473645276,
+        "posterior_log_effect_p90": 0.04120934544722783,
+        "role": "FB/WB",
+        "unpooled_conditional_log_residual": -0.037269295885239716
+      },
+      {
+        "n": 7,
+        "posterior_log_effect_mean": -0.029451669382773844,
+        "posterior_log_effect_p10": -0.11808820719222095,
+        "posterior_log_effect_p90": 0.03218108724303229,
+        "role": "ST",
+        "unpooled_conditional_log_residual": -0.10792966568446537
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": 0.013798392418022028,
+        "posterior_log_effect_p10": -0.03876757926199474,
+        "posterior_log_effect_p90": 0.07653652403931689,
+        "role": "W",
+        "unpooled_conditional_log_residual": 0.015890478334204445
+      }
+    ]
+  },
+  "shots": {
+    "context_for_10_percent_pass_ratio": {
+      "mean": 1.0237185337783867,
+      "p025": 0.9702044118495261,
+      "p10": 0.9880322957429518,
+      "p90": 1.0597282787680344,
+      "p975": 1.0778498154550824
+    },
+    "role_pooling": [
+      {
+        "n": 2,
+        "posterior_log_effect_mean": 0.13411289747904628,
+        "posterior_log_effect_p10": -0.05147592427228463,
+        "posterior_log_effect_p90": 0.36739814557847766,
+        "role": "AM",
+        "unpooled_conditional_log_residual": 0.26211236787461756
+      },
+      {
+        "n": 18,
+        "posterior_log_effect_mean": -0.23934886571793856,
+        "posterior_log_effect_p10": -0.4427500272981352,
+        "posterior_log_effect_p90": -0.031267373830455594,
+        "role": "CB",
+        "unpooled_conditional_log_residual": -0.37642834687938853
+      },
+      {
+        "n": 8,
+        "posterior_log_effect_mean": 0.05742377362550861,
+        "posterior_log_effect_p10": -0.07482677448446196,
+        "posterior_log_effect_p90": 0.2059392339519938,
+        "role": "CM",
+        "unpooled_conditional_log_residual": 0.08182403516754137
+      },
+      {
+        "n": 6,
+        "posterior_log_effect_mean": -0.03347442564024587,
+        "posterior_log_effect_p10": -0.20842715363482328,
+        "posterior_log_effect_p90": 0.12805613070492763,
+        "role": "DM",
+        "unpooled_conditional_log_residual": -0.056298456293843
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": -0.20178320653622717,
+        "posterior_log_effect_p10": -0.42681832943710857,
+        "posterior_log_effect_p90": 0.0003102323247254329,
+        "role": "FB/WB",
+        "unpooled_conditional_log_residual": -0.3571446267992766
+      },
+      {
+        "n": 7,
+        "posterior_log_effect_mean": 0.18529170625463065,
+        "posterior_log_effect_p10": 0.0007669058718187558,
+        "posterior_log_effect_p90": 0.38468459048395776,
+        "role": "ST",
+        "unpooled_conditional_log_residual": 0.266454118059349
+      },
+      {
+        "n": 12,
+        "posterior_log_effect_mean": 0.09777812053522605,
+        "posterior_log_effect_p10": -0.026128691314852737,
+        "posterior_log_effect_p90": 0.24186434030791856,
+        "role": "W",
+        "unpooled_conditional_log_residual": 0.09441255614423825
+      }
+    ]
+  }
+}

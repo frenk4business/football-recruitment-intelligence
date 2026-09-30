@@ -1,9 +1,16 @@
 export type Locale = "en" | "nl";
 export type Section =
-  "home" | "player-dna" | "explorer" | "coverage" | "methodology" | "roadmap";
+  | "home"
+  | "player-dna"
+  | "translation"
+  | "explorer"
+  | "coverage"
+  | "methodology"
+  | "roadmap";
 export const sections: Section[] = [
   "home",
   "player-dna",
+  "translation",
   "explorer",
   "coverage",
   "methodology",
@@ -15,6 +22,7 @@ const en = {
   nav: {
     home: "Overview",
     "player-dna": "Player DNA",
+    translation: "Translation",
     explorer: "Data explorer",
     coverage: "Coverage",
     methodology: "Methodology",
@@ -22,17 +30,17 @@ const en = {
   },
   skip: "Skip to content",
   language: "Taal wijzigen naar Nederlands",
-  phase: "PHASE 02 / PLAYER DNA & SIMILARITY",
+  phase: "PHASE 03 / PERFORMANCE TRANSLATION",
   title: "Recruitment research starts with the evidence.",
   intro:
     "Explore what open football data can tell us — and where it stops. A research platform for player profiles, competition context and, eventually, recruitment decisions.",
-  open: "Compare player profiles",
+  open: "Explore performance translation",
   methods: "Read the methodology",
   sample: "The working sample",
   sampleIntro:
     "Two providers. Different matches, formats and assumptions. Every number below comes from the ingestion pipeline.",
   noModels:
-    "Player profiles and similarity are available for WSL 2023/24. Inspect the evidence, differences and sampling stability.",
+    "Observed Player DNA meets a historical WSL context study. Explore expected performance and the uncertainty around it.",
   source: "Source",
   match: "Match",
   competition: "Competition / season",
@@ -176,6 +184,7 @@ const nl: Copy = {
   nav: {
     home: "Overzicht",
     "player-dna": "Spelers-DNA",
+    translation: "Prestatievertaling",
     explorer: "Dataverkenner",
     coverage: "Datadekking",
     methodology: "Methodologie",
@@ -183,17 +192,17 @@ const nl: Copy = {
   },
   skip: "Ga naar inhoud",
   language: "Switch language to English",
-  phase: "FASE 02 / SPELERS-DNA EN GELIJKENIS",
+  phase: "FASE 03 / PRESTATIEVERTALING",
   title: "Recruitmentonderzoek begint bij de onderbouwing.",
   intro:
     "Onderzoek wat open voetbaldata ons vertelt — en waar de grenzen liggen. Een onderzoeksplatform voor spelersprofielen, competitiecontext en uiteindelijk recruitmentbeslissingen.",
-  open: "Vergelijk spelersprofielen",
+  open: "Verken prestatievertaling",
   methods: "Lees de methodologie",
   sample: "De gebruikte steekproef",
   sampleIntro:
     "Twee databronnen. Andere wedstrijden, formaten en aannames. Alle aantallen hieronder komen uit de datapijplijn.",
   noModels:
-    "Spelersprofielen en gelijkenis zijn beschikbaar voor WSL 2023/24. Bekijk de onderbouwing, verschillen en steekproefstabiliteit.",
+    "Waargenomen spelers-DNA ontmoet historisch WSL-contextonderzoek. Verken verwachte prestaties en de onzekerheid eromheen.",
   source: "Databron",
   match: "Wedstrijd",
   competition: "Competitie / seizoen",

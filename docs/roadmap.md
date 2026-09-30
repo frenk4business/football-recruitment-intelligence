@@ -1,13 +1,9 @@
 # Five-phase roadmap
 
-1. **Data foundation (current):** audited sources, two working providers, contracts, validation, Parquet/DuckDB, API, bilingual explorer and free static preview.
-2. **Player DNA & similarity (planned):** expand the event cohort, resolve minutes quality, define role-aware features and establish interpretable similarity baselines. Preserve source/context and quantify sample sensitivity.
-3. **League translation (planned):** broader temporal coverage, competition/team context, hierarchical estimates and credible evaluation on later periods.
-4. **Recruitment intelligence (planned):** candidate comparison, role/club context, constraints, explanations and uncertainty. Requires evidence from phases 2–3.
-5. **Product & portfolio (planned):** operational hardening, evaluation evidence, final bilingual case study and deliberate integration into the existing portfolio.
+1. **Data Foundation — complete.** Audited sources, provider-isolated IDs, typed contracts, validation, Parquet/DuckDB, local API and bilingual event/tracking explorer.
+2. **Player DNA & Similarity — complete.** WSL 2023/24, reconciled minutes, versioned behavioural features, evaluated role-aware distances, bootstrap stability and explanations.
+3. **League Translation & Bayesian Performance Transfer — complete/current.** Full evidence audit, explicit NO-GO for broad cross-league claims, conditional WSL season/context study, registered hierarchical count models, frozen baselines, later-season evaluation and visible predictive uncertainty. No Bayesian target qualified as the default; that negative result is preserved.
+4. **Recruitment Intelligence & Club Fit — planned.** Combine observed profiles, supported context estimates, club requirements, constraints and uncertainty. Begin with the [Phase 4 hand-off](phase-4-handoff.md); do not interpret Phase 3 as existing club recommendations.
+5. **Production Hardening & Portfolio Integration — planned.** Operational hardening, performance budgets, release automation and a full bilingual portfolio case study.
 
-No similarity endpoint, embedding, xT/VAEP model, recommendation score, transfer-success classifier, chatbot or external model API is implemented in Phase 1.
-
-## Phase 2 release
-
-Player DNA & Similarity now adds a meaningful WSL cohort, reconciled minutes, a versioned feature registry, evaluated role-aware distances, bootstrap stability, deterministic explanations and a bilingual static workflow. PCA is an exploratory research comparison/map; learned representations, xT and VAEP remain deferred. Phase 3 League Translation and Phase 4 club/recruitment fit are still planned. The next evidence task is in [Phase 3 hand-off](phase-3-handoff.md).
+Completed phase PRs merge to `main` after green CI and QA. Start the next phase from current `main`. Production should track `main`; no permanent feature-branch review boundary remains. No market-value model, transfer-success classifier, arbitrary league ranking, xT/VAEP model or external model API is implemented.

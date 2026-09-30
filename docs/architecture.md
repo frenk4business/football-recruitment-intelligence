@@ -1,5 +1,13 @@
 # Architecture
 
+## Phase 3 extension
+
+Provider-isolated catalogue/identity audit → reconciled player/team/season stints → adjacent transition episodes → frozen temporal split → offline baselines/PyMC fits → held-out diagnostics → strict aggregate publication → static bilingual product. `config/phase3.sources.json` locks bounded source inputs; `config/translation.yaml` locks scientific settings. The selection artifact is committed before held-out evaluation and checked by the evaluator/publisher.
+
+Local `data/processed/phase3` contains observation/context Parquet and environment/transition marts. Local ignored `artifacts/phase3/posterior` holds NetCDF draws. Committed `artifacts/phase3/public` contains one compact index, model/evaluation metadata and 660 lazy player summaries. No raw feeds, posterior draws or inference runtime reach the browser. FastAPI exposes the same aggregate contracts locally, with UUID allowlists and unsupported-state handling. The website uses `/data/phase3/` static equivalents; no production backend is needed.
+
+The public default is selected per target from earlier validation. Bayes is a research comparison in v1; ridge and unchanged-source baselines supply the defaults. Observed Player DNA and translated profiles retain separate versions/contracts. Models are cached by data, config, code and PyMC-version hashes; clean-rebuild verification separately reconstructs observations from raw caches and runs fresh primary sampling. See [model card](model-card-phase3.md), [evaluation](league-translation-evaluation.md) and [Phase 4 hand-off](phase-4-handoff.md).
+
 Phase 1 is local-first: one Python package owns retrieval, contracts, transformations and analytics. A Next.js static export is the public product. The FastAPI service remains local because the same small validated JSON contracts can serve the preview without a sleeping backend or hosted database.
 
 ```mermaid

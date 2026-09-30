@@ -1,26 +1,19 @@
 # Deployment and costs
 
-The deployed public service is one **Render Static Site** at https://football-recruitment-intelligence.onrender.com/, connected to `frenk4business/football-recruitment-intelligence`, branch `phase/02-player-dna`. The review branch remains separate from `main`; it is not automatically merged.
+One existing Render **Static Site** serves https://football-recruitment-intelligence.onrender.com/ from `frenk4business/football-recruitment-intelligence`.
 
-- Build: `cd apps/web && npm ci && npm run build`
-- Publish: `apps/web/out`
-- Runtime: static HTML/CSS/JS, Node 24.19.0 for builds
-- Secrets: none
-- Environment: `NODE_VERSION=24.19.0`, `NEXT_TELEMETRY_DISABLED=1`
-- Data: committed validated aggregate artifacts; deployment never downloads source tracking files
-- Routing: generated directory indexes, English `/`, Dutch `/nl/`; no SPA catch-all
-- Indexing: noindex research preview
-- Regions: static delivery is global CDN, so Frankfurt is not a selectable service region
-- Backend: FastAPI local only; no hosted database, disk, worker or paid compute
+- Service: `srv-dauh12hsrm7s73c7uiu0`, workspace `tea-d7ln8pbbc2fs73bkqpdg`.
+- Actual build plan: **Starter**, within the user's existing paid workspace/resource context.
+- Build: `cd apps/web && npm ci && npm run build`; publish: `apps/web/out`; Node 24.19.0.
+- Secrets: none. Source downloads, Bayesian fitting and evaluation never run in the deployment build.
+- Runtime: static HTML/CSS/JS plus validated derived JSON. FastAPI remains optional/local.
+- No additional backend, worker, database, disk or production site was introduced.
+- **No additional paid infrastructure was introduced beyond the existing Render subscription.** Shared build/bandwidth usage remains subject to existing billing settings; this is not a claim that the account costs €0/month.
 
-`render.yaml` records the reproducible target configuration, including security headers and deploy-after-checks intent. Direct MCP creation supports only a subset of that configuration; actual applied settings are recorded in [Phase 1 QA](phase-1-qa.md). A YAML file does not prove its headers or auto-deploy policy are applied to an independently created service.
+Production's target branch is `main`; `render.yaml` now declares it. At the start of Phase 3, the actual service still tracked `phase/02-player-dna`. The installed Render integration can inspect/deploy the service but cannot modify its Git branch, and no Render API/CLI credential is available. A Dashboard branch change to `main` was requested from the user. Final observed branch/deploy state belongs in [Phase 3 QA](phase-3-qa.md); this document does not treat editing YAML as proof that the independent service configuration changed.
 
-The project's fixed recurring infrastructure charge is **€0/month**. Render static sites share workspace bandwidth and build-minute allowances. Excess use can be billed depending on the existing workspace plan/settings; this task does not change billing limits or upgrade the workspace. Avoid enabling paid service plans and review the existing workspace spend cap before treating any free hosted preview as an unlimited zero-cost guarantee. Existing unrelated Render services are outside this project's cost claim.
+The actual auto-deploy trigger observed at Phase 3 start is commit-based. The Blueprint's `checksPass` and security headers remain a target configuration, not a claim that they are applied to this independently created service. Completed PRs merge only after GitHub checks pass. Verify the deployed commit and both language routes after merge. No SPA catch-all is needed: Next exports directory indexes. Static delivery uses the global CDN, so no compute region is selected.
 
-Official references: [free services](https://render.com/docs/free), [static sites](https://render.com/docs/static-sites), [Blueprint specification](https://render.com/docs/blueprint-spec). GitHub Actions uses small offline fixtures plus committed analysis JSON. No large data ingestion runs per commit.
+Phase 3 routes: `/translation/`, `/nl/translation/`, `/methodology/#translation`, `/nl/methodology/#translation`. Player DNA and explorer routes remain. Historical source observations and unsupported states are precomputed; no arbitrary public model parameters or inference endpoint are exposed.
 
-## Phase 2 release
-
-The existing Render static service `srv-dauh12hsrm7s73c7uiu0` now tracks `phase/02-player-dna` (verified through the Render integration). The service's actual trigger remains commit-based; the optional Blueprint `checksPass`/headers are still declarative rather than claimed as applied. Build/publish paths and Node version are unchanged. No additional service, paid instance, database or disk was provisioned. Fixed project infrastructure remains €0/month within the existing workspace allowances; existing overage billing settings were not changed.
-
-Routes: https://football-recruitment-intelligence.onrender.com/player-dna/ and https://football-recruitment-intelligence.onrender.com/nl/player-dna/. Local FastAPI remains optional and is not hosted. Research source downloads and model evaluation never run in the Render build. A branch switch was required because the installed Render connector can inspect/deploy services but cannot modify their configured Git branch. The user changed this existing setting in the Dashboard; no new deployment credential was requested.
+Official references: [Render static sites](https://render.com/docs/static-sites), [Blueprint specification](https://render.com/docs/blueprint-spec). Source/data rights are independent of hosting costs and code licensing: [attribution](../ATTRIBUTION.md).

@@ -1,0 +1,1749 @@
+{
+  "anomalies": [
+    {
+      "appearances": 28,
+      "competitions": 1,
+      "first_date": "2015-11-28",
+      "last_date": "2023-03-04",
+      "names": [
+        "Alban Lafont"
+      ],
+      "player_id": "fc47df7a-7f96-5882-833d-b458f196ab65",
+      "provider": "statsbomb",
+      "provider_player_id": 2981,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 28,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 3,
+      "competitions": 2,
+      "first_date": "2018-06-16",
+      "last_date": "2024-06-29",
+      "names": [
+        "Mathias Jattah-Njie J\u00f8rgensen",
+        "Mathias J\u00f8rgensen Jatta"
+      ],
+      "player_id": "30336e45-6506-5f30-be92-ba08575eac4d",
+      "provider": "statsbomb",
+      "provider_player_id": 3027,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 13,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 38,
+      "competitions": 2,
+      "first_date": "2015-08-10",
+      "last_date": "2018-07-06",
+      "names": [
+        "Fernando Luiz Rosa",
+        "Fernando Luiz Roza"
+      ],
+      "player_id": "f0f77684-4828-5ae3-bd16-a64f8aa4a796",
+      "provider": "statsbomb",
+      "provider_player_id": 3054,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 40,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 6,
+      "competitions": 2,
+      "first_date": "2015-08-15",
+      "last_date": "2024-02-02",
+      "names": [
+        "Abdoulaye Tour\u00e9"
+      ],
+      "player_id": "752982e5-ec3a-5854-b11c-8c6a614e2b27",
+      "provider": "statsbomb",
+      "provider_player_id": 3138,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 13,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 15,
+      "competitions": 2,
+      "first_date": "2016-01-13",
+      "last_date": "2024-07-01",
+      "names": [
+        "Demarai Gray"
+      ],
+      "player_id": "fc76d0b3-ce92-5aec-b816-098955ef4927",
+      "provider": "statsbomb",
+      "provider_player_id": 3312,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 21,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 23,
+      "competitions": 1,
+      "first_date": "2015-08-22",
+      "last_date": "2016-04-24",
+      "names": [
+        "Cheikh M''Bengue",
+        "Cheikh M'Bengue"
+      ],
+      "player_id": "e256141b-912e-5ad6-a9cf-b966fc5246ab",
+      "provider": "statsbomb",
+      "provider_player_id": 3424,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 27,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 8,
+      "competitions": 2,
+      "first_date": "2015-09-20",
+      "last_date": "2024-01-27",
+      "names": [
+        "Clinton Mua N''Jie",
+        "Clinton Mua N'Jie"
+      ],
+      "player_id": "700c6c3e-bbcf-5e7e-9381-5a8a3cd40be1",
+      "provider": "statsbomb",
+      "provider_player_id": 3534,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 12,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 9,
+      "competitions": 1,
+      "first_date": "2015-08-09",
+      "last_date": "2016-05-15",
+      "names": [
+        "Karl Darlow"
+      ],
+      "player_id": "02a5abb1-2379-5df6-9777-ae0e4ed654ab",
+      "provider": "statsbomb",
+      "provider_player_id": 3649,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 30,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 34,
+      "competitions": 2,
+      "first_date": "2015-08-15",
+      "last_date": "2023-11-12",
+      "names": [
+        "J\u00e9r\u00f4me Roussillon"
+      ],
+      "player_id": "41d593ba-63e7-5a64-b8da-e7d186e5f148",
+      "provider": "statsbomb",
+      "provider_player_id": 3676,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 35,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 54,
+      "competitions": 3,
+      "first_date": "2015-08-08",
+      "last_date": "2024-07-09",
+      "names": [
+        "N''Golo Kant\u00e9",
+        "N'Golo Kant\u00e9"
+      ],
+      "player_id": "333269c1-0287-554a-9662-c8a0a2e51f23",
+      "provider": "statsbomb",
+      "provider_player_id": 3961,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 54,
+      "seasons": 4,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 21,
+      "competitions": 1,
+      "first_date": "2015-11-21",
+      "last_date": "2016-05-14",
+      "names": [
+        "Issa Diop"
+      ],
+      "player_id": "1219bb30-6644-548c-a7d7-2859bb7cdbd9",
+      "provider": "statsbomb",
+      "provider_player_id": 4349,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 22,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 14,
+      "competitions": 2,
+      "first_date": "2021-06-13",
+      "last_date": "2024-07-14",
+      "names": [
+        "Phil Foden",
+        "Philip Foden"
+      ],
+      "player_id": "3e20406f-1509-59f3-bb74-d03b327a3d7c",
+      "provider": "statsbomb",
+      "provider_player_id": 4354,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 17,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 37,
+      "competitions": 1,
+      "first_date": "2015-08-15",
+      "last_date": "2016-05-15",
+      "names": [
+        "Yann G\u00e9rard M''Vila",
+        "Yann G\u00e9rard M'Vila"
+      ],
+      "player_id": "beb0d500-d827-50a3-893e-3732b5afe45b",
+      "provider": "statsbomb",
+      "provider_player_id": 4429,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 37,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 3,
+      "competitions": 1,
+      "first_date": "2015-08-22",
+      "last_date": "2016-02-20",
+      "names": [
+        "Guy Adolphe N''Gosso Massouma",
+        "Guy Adolphe N'Gosso Massouma"
+      ],
+      "player_id": "b200425d-07ea-5b6e-b7a0-e4a7ad09b4eb",
+      "provider": "statsbomb",
+      "provider_player_id": 4469,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 15,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 32,
+      "competitions": 2,
+      "first_date": "2018-05-06",
+      "last_date": "2023-11-12",
+      "names": [
+        "Quinn Quinn",
+        "Rebecca Quinn"
+      ],
+      "player_id": "0d2431bb-546a-56a6-bad3-02119a3611be",
+      "provider": "statsbomb",
+      "provider_player_id": 4951,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 33,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 3
+    },
+    {
+      "appearances": 19,
+      "competitions": 1,
+      "first_date": "2018-05-06",
+      "last_date": "2023-11-12",
+      "names": [
+        "Katherine Nicole Stengel",
+        "Katie Stengel"
+      ],
+      "player_id": "403ea379-6326-5fcb-aa1d-9ddc32ad623d",
+      "provider": "statsbomb",
+      "provider_player_id": 4972,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 20,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 48,
+      "competitions": 3,
+      "first_date": "2018-05-20",
+      "last_date": "2021-05-09",
+      "names": [
+        "Janine Elizabeth Beckie",
+        "Janine Elizabeth Sonis"
+      ],
+      "player_id": "6acd509e-e157-5b97-97ab-8620f0e9d8d0",
+      "provider": "statsbomb",
+      "provider_player_id": 4992,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 59,
+      "seasons": 5,
+      "status": "quarantined",
+      "teams": 3
+    },
+    {
+      "appearances": 16,
+      "competitions": 2,
+      "first_date": "2018-05-05",
+      "last_date": "2023-08-06",
+      "names": [
+        "Lindsey Michelle Heaps",
+        "Lindsey Michelle Horan"
+      ],
+      "player_id": "d8433c1b-ac14-5d66-9f5b-380e92f42a57",
+      "provider": "statsbomb",
+      "provider_player_id": 4999,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 17,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 10,
+      "competitions": 2,
+      "first_date": "2018-04-15",
+      "last_date": "2023-04-01",
+      "names": [
+        "Mallory Diane Swanson",
+        "Mallory Pugh"
+      ],
+      "player_id": "1d08f1ba-bc6d-5c12-af0e-4c6b5afeb41e",
+      "provider": "statsbomb",
+      "provider_player_id": 5023,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 14,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 3
+    },
+    {
+      "appearances": 34,
+      "competitions": 2,
+      "first_date": "2018-04-15",
+      "last_date": "2023-11-12",
+      "names": [
+        "Lynn Raenie Williams",
+        "Lynn Williams Biyendolo"
+      ],
+      "player_id": "4b33a7b7-ec9d-5882-ad33-75c856bd0ce0",
+      "provider": "statsbomb",
+      "provider_player_id": 5055,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 36,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 3
+    },
+    {
+      "appearances": 30,
+      "competitions": 2,
+      "first_date": "2018-05-24",
+      "last_date": "2023-10-16",
+      "names": [
+        "Marta Vieira da Silva",
+        "Marta Vieira da Silva Veiga"
+      ],
+      "player_id": "c3872704-ca78-5e79-a197-dae466a04226",
+      "provider": "statsbomb",
+      "provider_player_id": 5082,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 31,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 22,
+      "competitions": 3,
+      "first_date": "2015-11-01",
+      "last_date": "2023-05-21",
+      "names": [
+        "M''Baye Babacar Niang",
+        "M'Baye Babacar Niang"
+      ],
+      "player_id": "5d3d450f-881a-5972-b90c-1651f187bbe7",
+      "provider": "statsbomb",
+      "provider_player_id": 5661,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 23,
+      "seasons": 4,
+      "status": "quarantined",
+      "teams": 4
+    },
+    {
+      "appearances": 37,
+      "competitions": 2,
+      "first_date": "2014-04-05",
+      "last_date": "2018-06-28",
+      "names": [
+        "Alfred John Momar N''Diaye",
+        "Alfred John Momar N'Diaye"
+      ],
+      "player_id": "6ef39880-3c18-52a9-9464-26433fae8527",
+      "provider": "statsbomb",
+      "provider_player_id": 5671,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 39,
+      "seasons": 4,
+      "status": "quarantined",
+      "teams": 3
+    },
+    {
+      "appearances": 34,
+      "competitions": 2,
+      "first_date": "2015-08-08",
+      "last_date": "2018-06-28",
+      "names": [
+        "Cheikh N''Doye",
+        "Cheikh N'Doye"
+      ],
+      "player_id": "f82b9bc2-0a23-58ce-bda2-c8ef7644ad40",
+      "provider": "statsbomb",
+      "provider_player_id": 5676,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 35,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 37,
+      "competitions": 2,
+      "first_date": "2015-08-21",
+      "last_date": "2018-07-15",
+      "names": [
+        "Steven N''Kemboanza Mike Christopher Nzonzi",
+        "Steven N'Kemboanza Mike Christopher Nzonzi"
+      ],
+      "player_id": "4910db09-a067-52c3-b6e7-0f640914fbbf",
+      "provider": "statsbomb",
+      "provider_player_id": 5737,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 45,
+      "seasons": 4,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 20,
+      "competitions": 1,
+      "first_date": "2015-08-23",
+      "last_date": "2016-05-14",
+      "names": [
+        "Danilo D''Ambrosio",
+        "Danilo D'Ambrosio"
+      ],
+      "player_id": "1fee5175-ee2f-5173-9d90-cea9daf5c610",
+      "provider": "statsbomb",
+      "provider_player_id": 6984,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 35,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 21,
+      "competitions": 2,
+      "first_date": "2015-08-08",
+      "last_date": "2024-02-03",
+      "names": [
+        "Steven Moreira"
+      ],
+      "player_id": "9a745159-7e5d-531d-853c-e076fe679855",
+      "provider": "statsbomb",
+      "provider_player_id": 7197,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 32,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 10,
+      "competitions": 1,
+      "first_date": "2015-08-09",
+      "last_date": "2016-03-19",
+      "names": [
+        "Aldo Kalulu Kyatengwa"
+      ],
+      "player_id": "3c4181af-219a-5c8e-8169-d439390bd366",
+      "provider": "statsbomb",
+      "provider_player_id": 7225,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 14,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 6,
+      "competitions": 2,
+      "first_date": "2022-05-21",
+      "last_date": "2024-02-03",
+      "names": [
+        "Sikou Niakate"
+      ],
+      "player_id": "ca96a9ad-f52d-53fe-b150-3ee379131058",
+      "provider": "statsbomb",
+      "provider_player_id": 7295,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 6,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 5,
+      "competitions": 2,
+      "first_date": "2016-02-28",
+      "last_date": "2024-01-27",
+      "names": [
+        "Olivier Michel Kemen"
+      ],
+      "player_id": "a81d21dc-2efa-549a-b8d8-aa7b56d14fe8",
+      "provider": "statsbomb",
+      "provider_player_id": 7355,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 8,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 3,
+      "competitions": 2,
+      "first_date": "2021-12-22",
+      "last_date": "2024-01-22",
+      "names": [
+        "Houboulang Mendes"
+      ],
+      "player_id": "7af2619b-0934-5ca0-b1a2-88c0f22cf815",
+      "provider": "statsbomb",
+      "provider_player_id": 9361,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 5,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 8,
+      "competitions": 3,
+      "first_date": "2016-01-13",
+      "last_date": "2022-11-29",
+      "names": [
+        "Daniel Ward",
+        "Danny Ward"
+      ],
+      "player_id": "b9b2f9f0-8f19-547c-86d6-a6ec6411144e",
+      "provider": "statsbomb",
+      "provider_player_id": 9914,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 22,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 0,
+      "competitions": 1,
+      "first_date": "2022-11-21",
+      "last_date": "2022-12-04",
+      "names": [
+        "Mamadou Loum N''Diaye",
+        "Mamadou Loum N'Diaye"
+      ],
+      "player_id": "c9eb65f3-50d9-5be8-95b2-a09955cb8232",
+      "provider": "statsbomb",
+      "provider_player_id": 10603,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 4,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 2,
+      "competitions": 1,
+      "first_date": "2021-06-15",
+      "last_date": "2021-06-27",
+      "names": [
+        "S\u00e9rgio Miguel Relvas Gon\u00e7alves Pereira de Oliveira",
+        "S\u00e9rgio Miguel Relvas de Oliveira"
+      ],
+      "player_id": "c81eba39-72f9-5b6f-976b-275f7147cc9d",
+      "provider": "statsbomb",
+      "provider_player_id": 11173,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 3,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 16,
+      "competitions": 1,
+      "first_date": "2015-08-08",
+      "last_date": "2016-05-17",
+      "names": [
+        "Eunan O''Kane",
+        "Eunan O'Kane"
+      ],
+      "player_id": "80f991be-97c6-5c8d-ba51-15e9e959190b",
+      "provider": "statsbomb",
+      "provider_player_id": 13248,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 32,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 58,
+      "competitions": 2,
+      "first_date": "2018-09-09",
+      "last_date": "2024-06-15",
+      "names": [
+        "Rinsola Babajide",
+        "Rinsola Omowunmiajike Babajide"
+      ],
+      "player_id": "c894c52b-5ad3-5480-9c46-e4c578b9dd6f",
+      "provider": "statsbomb",
+      "provider_player_id": 15613,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 59,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 6,
+      "competitions": 1,
+      "first_date": "2018-09-09",
+      "last_date": "2023-12-17",
+      "names": [
+        "Jessica Wooley",
+        "Jessica Woolley"
+      ],
+      "player_id": "d7863eb4-3436-52c8-8c76-bc80d0710515",
+      "provider": "statsbomb",
+      "provider_player_id": 16389,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 24,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 31,
+      "competitions": 2,
+      "first_date": "2003-09-21",
+      "last_date": "2016-05-15",
+      "names": [
+        "John O''Shea",
+        "John O'Shea"
+      ],
+      "player_id": "c611d979-e60f-5141-891d-52e9fa503d8c",
+      "provider": "statsbomb",
+      "provider_player_id": 16890,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 37,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 8,
+      "competitions": 1,
+      "first_date": "2021-06-13",
+      "last_date": "2024-06-26",
+      "names": [
+        "Mykola Matvienko",
+        "Mykola Matviyenko"
+      ],
+      "player_id": "a940312b-3e23-5b6b-b407-d0d3a352ca45",
+      "provider": "statsbomb",
+      "provider_player_id": 18617,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 8,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 79,
+      "competitions": 2,
+      "first_date": "2004-10-16",
+      "last_date": "2010-05-22",
+      "names": [
+        "Samuel Eto''o Fils",
+        "Samuel Eto'o Fils"
+      ],
+      "player_id": "3bb6cdbb-5c61-5266-832b-da59b66924b3",
+      "provider": "statsbomb",
+      "provider_player_id": 19298,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 80,
+      "seasons": 6,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 30,
+      "competitions": 1,
+      "first_date": "2018-09-09",
+      "last_date": "2024-05-18",
+      "names": [
+        "Aoife Mannion"
+      ],
+      "player_id": "1ddf9d08-571e-5bd8-860c-b824a22cae1d",
+      "provider": "statsbomb",
+      "provider_player_id": 19503,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 42,
+      "seasons": 4,
+      "status": "quarantined",
+      "teams": 3
+    },
+    {
+      "appearances": 16,
+      "competitions": 2,
+      "first_date": "2018-09-19",
+      "last_date": "2023-08-08",
+      "names": [
+        "Vyan Sampson"
+      ],
+      "player_id": "21eaa9e2-272f-5481-8c6f-6d90f9600dc2",
+      "provider": "statsbomb",
+      "provider_player_id": 21014,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 24,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 1,
+      "competitions": 2,
+      "first_date": "2023-04-21",
+      "last_date": "2024-01-24",
+      "names": [
+        "Yan Valery"
+      ],
+      "player_id": "3006c5f0-7350-5b68-93f1-4909e3777638",
+      "provider": "statsbomb",
+      "provider_player_id": 22117,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 4,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 9,
+      "competitions": 2,
+      "first_date": "2020-03-07",
+      "last_date": "2024-07-14",
+      "names": [
+        "Robin Aime Robert Le Normand"
+      ],
+      "player_id": "c116c213-af48-5867-ac61-2fc8dbdfb43a",
+      "provider": "statsbomb",
+      "provider_player_id": 22128,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 9,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 2,
+      "competitions": 2,
+      "first_date": "2015-09-27",
+      "last_date": "2024-02-10",
+      "names": [
+        "Dimitry Bertaud"
+      ],
+      "player_id": "a436fcab-da65-5f1a-aa6c-8839281421ca",
+      "provider": "statsbomb",
+      "provider_player_id": 22823,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 14,
+      "seasons": 4,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 11,
+      "competitions": 1,
+      "first_date": "2019-01-27",
+      "last_date": "2023-12-17",
+      "names": [
+        "Melisa Filis"
+      ],
+      "player_id": "e422535c-0769-501a-ae95-02ebec5ab381",
+      "provider": "statsbomb",
+      "provider_player_id": 23320,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 21,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 30,
+      "competitions": 2,
+      "first_date": "2015-04-05",
+      "last_date": "2024-02-10",
+      "names": [
+        "Th\u00e9o Bongonda Mbul''Ofeko Batombo",
+        "Th\u00e9o Bongonda Mbul'Ofeko Batombo"
+      ],
+      "player_id": "b2774bef-c49c-5035-9751-a44569a41c57",
+      "provider": "statsbomb",
+      "provider_player_id": 23785,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 46,
+      "seasons": 4,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 2,
+      "competitions": 1,
+      "first_date": "2022-11-22",
+      "last_date": "2022-12-03",
+      "names": [
+        "Awer Denis Bul Mabil",
+        "Awer Mabil"
+      ],
+      "player_id": "d13be026-afab-5859-adc3-8ad49ddf494b",
+      "provider": "statsbomb",
+      "provider_player_id": 24475,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 4,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 1,
+      "competitions": 2,
+      "first_date": "2023-08-27",
+      "last_date": "2024-07-03",
+      "names": [
+        "Carlos Miguel Coronel"
+      ],
+      "player_id": "0921dc13-b619-59fc-8b97-86046e35159f",
+      "provider": "statsbomb",
+      "provider_player_id": 24611,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 4,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 2,
+      "competitions": 2,
+      "first_date": "2018-06-03",
+      "last_date": "2019-06-20",
+      "names": [
+        "Yanara Aedo",
+        "Yanara Katherine Nicole Aedo Mu\u00f1oz"
+      ],
+      "player_id": "62cdc4ba-7dd1-58ae-bd2c-e0dbe06f7367",
+      "provider": "statsbomb",
+      "provider_player_id": 25686,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 4,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 19,
+      "competitions": 1,
+      "first_date": "2019-09-08",
+      "last_date": "2021-04-04",
+      "names": [
+        "Hannah Godfrey"
+      ],
+      "player_id": "64e83e73-b413-5bfd-9e98-52e5aaf1e0d1",
+      "provider": "statsbomb",
+      "provider_player_id": 31552,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 26,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 13,
+      "competitions": 1,
+      "first_date": "2019-11-24",
+      "last_date": "2021-05-09",
+      "names": [
+        "Emily Murphy"
+      ],
+      "player_id": "f2c01db9-c55a-57d8-99cc-38e34e38f53d",
+      "provider": "statsbomb",
+      "provider_player_id": 33090,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 17,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 21,
+      "competitions": 1,
+      "first_date": "2020-01-11",
+      "last_date": "2024-03-30",
+      "names": [
+        "Alexandra MacIver"
+      ],
+      "player_id": "14f954ea-23a2-547a-b2b0-94bd17ea79aa",
+      "provider": "statsbomb",
+      "provider_player_id": 34360,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 37,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 2,
+      "competitions": 2,
+      "first_date": "2022-05-08",
+      "last_date": "2024-01-23",
+      "names": [
+        "Yasser Larouci"
+      ],
+      "player_id": "cd9cb0c1-b95c-523a-9ad3-42d5fffefc1d",
+      "provider": "statsbomb",
+      "provider_player_id": 34793,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 5,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 2,
+      "competitions": 2,
+      "first_date": "2022-04-09",
+      "last_date": "2024-01-22",
+      "names": [
+        "Ouparine Djoco"
+      ],
+      "player_id": "543aaeff-6a21-5edb-abb6-cdf33cf1d730",
+      "provider": "statsbomb",
+      "provider_player_id": 36552,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 6,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 7,
+      "competitions": 2,
+      "first_date": "2023-04-21",
+      "last_date": "2024-02-11",
+      "names": [
+        "Yahia Fofana"
+      ],
+      "player_id": "ed088fbb-8b6e-5481-97fb-d20b46e20c63",
+      "provider": "statsbomb",
+      "provider_player_id": 36629,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 8,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 8,
+      "competitions": 1,
+      "first_date": "2015-08-08",
+      "last_date": "2016-04-24",
+      "names": [
+        "Mamadou N''Diaye",
+        "Mamadou N'Diaye"
+      ],
+      "player_id": "0f1bc581-ab20-532f-9888-a4ac734c7613",
+      "provider": "statsbomb",
+      "provider_player_id": 40700,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 20,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 20,
+      "competitions": 1,
+      "first_date": "2020-09-05",
+      "last_date": "2021-05-09",
+      "names": [
+        "Elisha N''Dow",
+        "Elisha N'Dow"
+      ],
+      "player_id": "112ad56a-1911-5e6f-84b0-88b4ed3fb3d9",
+      "provider": "statsbomb",
+      "provider_player_id": 46534,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 22,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 5,
+      "competitions": 1,
+      "first_date": "2020-01-12",
+      "last_date": "2021-04-24",
+      "names": [
+        "Ellen Jones"
+      ],
+      "player_id": "6c9b7655-0985-59c1-b484-32c30afd121a",
+      "provider": "statsbomb",
+      "provider_player_id": 46739,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 21,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 0,
+      "competitions": 1,
+      "first_date": "2021-06-13",
+      "last_date": "2021-06-21",
+      "names": [
+        "Krste Velkoski"
+      ],
+      "player_id": "097ae567-b42d-5043-b119-768396b4cdea",
+      "provider": "statsbomb",
+      "provider_player_id": 46913,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 2,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 2,
+      "competitions": 2,
+      "first_date": "2022-08-06",
+      "last_date": "2024-01-29",
+      "names": [
+        "Mory Diaw"
+      ],
+      "player_id": "43ef8b34-111c-5aa6-b7fd-1ce5a50d5161",
+      "provider": "statsbomb",
+      "provider_player_id": 48502,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 6,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 6,
+      "competitions": 2,
+      "first_date": "2020-10-04",
+      "last_date": "2025-07-13",
+      "names": [
+        "Lois Joel"
+      ],
+      "player_id": "fa2e5543-b414-5b8e-a7d1-37e6cfa90fed",
+      "provider": "statsbomb",
+      "provider_player_id": 49646,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 14,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 1,
+      "competitions": 2,
+      "first_date": "2021-04-25",
+      "last_date": "2022-12-06",
+      "names": [
+        "Yeremi Jes\u00fas Pino Santos",
+        "Yeremy Jes\u00fas Pino Santos"
+      ],
+      "player_id": "0554b4ef-382b-54a5-b8d9-3624fdbdc6b7",
+      "provider": "statsbomb",
+      "provider_player_id": 50494,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 5,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 4,
+      "competitions": 2,
+      "first_date": "2023-01-29",
+      "last_date": "2024-07-02",
+      "names": [
+        "Folarin Balogun"
+      ],
+      "player_id": "d2f9fbe5-48fc-5ec7-82f0-cc81b8f75c83",
+      "provider": "statsbomb",
+      "provider_player_id": 51733,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 4,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 5,
+      "competitions": 1,
+      "first_date": "2020-12-05",
+      "last_date": "2021-03-07",
+      "names": [
+        "Ivana Ferreira Fuso",
+        "Ivana Fuso"
+      ],
+      "player_id": "d9b80ef0-7b00-5340-b2ce-7e23f3291d48",
+      "provider": "statsbomb",
+      "provider_player_id": 61029,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 9,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 29,
+      "competitions": 1,
+      "first_date": "2021-01-17",
+      "last_date": "2024-05-18",
+      "names": [
+        "Anna Patten"
+      ],
+      "player_id": "9bd85131-bb9d-5075-9781-7923b686170e",
+      "provider": "statsbomb",
+      "provider_player_id": 78072,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 34,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 1,
+      "competitions": 1,
+      "first_date": "2022-11-23",
+      "last_date": "2022-12-17",
+      "names": [
+        "Anass Zaroury"
+      ],
+      "player_id": "782af0c5-8c97-5eab-9398-524138f846d3",
+      "provider": "statsbomb",
+      "provider_player_id": 131037,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 7,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 16,
+      "competitions": 1,
+      "first_date": "2021-11-22",
+      "last_date": "2022-03-05",
+      "names": [
+        "Vikram Partap Singh",
+        "Vikram Pratap Singh"
+      ],
+      "player_id": "953fd86a-e0bf-5e2f-bb04-66435a6be9bc",
+      "provider": "statsbomb",
+      "provider_player_id": 159773,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 16,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 9,
+      "competitions": 1,
+      "first_date": "2021-11-22",
+      "last_date": "2022-03-06",
+      "names": [
+        "Leander D''Cunha",
+        "Leander D'Cunha"
+      ],
+      "player_id": "b083da14-2056-5fcc-ad03-678e19ed61cf",
+      "provider": "statsbomb",
+      "provider_player_id": 159777,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 18,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 6,
+      "competitions": 3,
+      "first_date": "2022-08-31",
+      "last_date": "2024-05-05",
+      "names": [
+        "Fares Cha\u00efbi"
+      ],
+      "player_id": "f4f9b87e-211f-578d-b321-a7c25cdf159b",
+      "provider": "statsbomb",
+      "provider_player_id": 217047,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 7,
+      "seasons": 3,
+      "status": "quarantined",
+      "teams": 3
+    },
+    {
+      "appearances": 0,
+      "competitions": 1,
+      "first_date": "2015-09-20",
+      "last_date": "2015-11-29",
+      "names": [
+        "Nicola Raffaele Guglielmelli"
+      ],
+      "player_id": "7f1919ea-a227-5558-9e77-56ccb30d0b69",
+      "provider": "statsbomb",
+      "provider_player_id": 388743,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "roster_appearances": 5,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 16,
+      "competitions": 1,
+      "first_date": "2015-08-09",
+      "last_date": "2016-05-14",
+      "names": [
+        "David N\"Gog",
+        "David N'Gog"
+      ],
+      "player_id": "639a89ae-3227-5589-85c0-757f1f6137bf",
+      "provider": "statsbomb",
+      "provider_player_id": 401453,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 24,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 0,
+      "competitions": 2,
+      "first_date": "2018-06-03",
+      "last_date": "2019-06-20",
+      "names": [
+        "Ryann Danielle Torrero Rojas",
+        "Ryann Torrero"
+      ],
+      "player_id": "238e97d4-f634-5352-a859-07d25702835c",
+      "provider": "statsbomb",
+      "provider_player_id": 401535,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 4,
+      "seasons": 2,
+      "status": "quarantined",
+      "teams": 2
+    },
+    {
+      "appearances": 1,
+      "competitions": 1,
+      "first_date": "2023-07-20",
+      "last_date": "2023-07-31",
+      "names": [
+        "Aine O\"Gorman",
+        "\u00c1ine Marie O'Gorman"
+      ],
+      "player_id": "1ffc317f-1107-5aa6-aaec-18cf0d4bd064",
+      "provider": "statsbomb",
+      "provider_player_id": 401633,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 3,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    },
+    {
+      "appearances": 7,
+      "competitions": 1,
+      "first_date": "2023-07-20",
+      "last_date": "2023-08-19",
+      "names": [
+        "Clare Hunt",
+        "Clare Josephine Hunt"
+      ],
+      "player_id": "add2c897-d02b-5119-b156-e98c6a6f02a7",
+      "provider": "statsbomb",
+      "provider_player_id": 401635,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "roster_appearances": 7,
+      "seasons": 1,
+      "status": "quarantined",
+      "teams": 1
+    }
+  ],
+  "cross_competition_ids": 2376,
+  "cross_league_matrix": [
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Liga F",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Frauen Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A Women",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Frauen Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "FA Women's Super League",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Liga F"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A Women",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Liga F"
+    },
+    {
+      "at_least_five_appearances_both": 5,
+      "destination": "FA Women's Super League",
+      "episodes": 10,
+      "gender": "female",
+      "players": 9,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Frauen Bundesliga",
+      "episodes": 2,
+      "gender": "female",
+      "players": 2,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Liga F",
+      "episodes": 2,
+      "gender": "female",
+      "players": 2,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A Women",
+      "episodes": 2,
+      "gender": "female",
+      "players": 2,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "FA Women's Super League",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Serie A Women"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Frauen Bundesliga",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Serie A Women"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Liga F",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Serie A Women"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "La Liga",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Ligue 1",
+      "episodes": 1,
+      "gender": "male",
+      "players": 1,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Premier League",
+      "episodes": 2,
+      "gender": "male",
+      "players": 2,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Serie A",
+      "episodes": 1,
+      "gender": "male",
+      "players": 1,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 3,
+      "destination": "Ligue 1",
+      "episodes": 14,
+      "gender": "male",
+      "players": 14,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Premier League",
+      "episodes": 9,
+      "gender": "male",
+      "players": 9,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Serie A",
+      "episodes": 12,
+      "gender": "male",
+      "players": 12,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 11,
+      "gender": "male",
+      "players": 11,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 3,
+      "destination": "La Liga",
+      "episodes": 12,
+      "gender": "male",
+      "players": 12,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Major League Soccer",
+      "episodes": 3,
+      "gender": "male",
+      "players": 3,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Premier League",
+      "episodes": 5,
+      "gender": "male",
+      "players": 5,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Serie A",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "La Liga",
+      "episodes": 15,
+      "gender": "male",
+      "players": 15,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Ligue 1",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 1,
+      "gender": "male",
+      "players": 1,
+      "source": "Serie A"
+    },
+    {
+      "at_least_five_appearances_both": 4,
+      "destination": "La Liga",
+      "episodes": 26,
+      "gender": "male",
+      "players": 26,
+      "source": "Serie A"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Ligue 1",
+      "episodes": 2,
+      "gender": "male",
+      "players": 2,
+      "source": "Serie A"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Premier League",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Serie A"
+    }
+  ],
+  "cross_season_ids": 4025,
+  "cross_team_ids": 2897,
+  "domestic_candidates": 6033,
+  "domestic_environments": 14480,
+  "environments": 21626,
+  "identity_status": {
+    "provider_id_consistent_metadata": 11719,
+    "quarantined": 75
+  },
+  "limitation": "Catalogue screening only: reliable minutes and feature availability require event reconciliation; overlapping or sparse observations do not establish a contractual transfer.",
+  "repeated_ids": 9651,
+  "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "structural_rejections": {
+    "observation_gap_over_450_days": 1804,
+    "overlapping_observations": 2,
+    "rejected_identity": 46,
+    "unobserved_intervening_season": 1589
+  },
+  "unique_players": 11794
+}
