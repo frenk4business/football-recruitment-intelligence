@@ -65,3 +65,11 @@ Synthetic tests cover approximate known translation recovery, partial pooling an
 Public: strict derived contracts, expected rate and 80% prediction range, numeric evidence, scope, model/version, source and target environment. Keep 95% summaries in research artifacts. No raw events, provider lineups, full posterior samples, arbitrary leagues, transfer-success score or club recommendation. Major role changes, unavailable historical context, out-of-range source evidence and unsupported periods get explicit states without fabricated numbers.
 
 Principal limits: small development/validation cohorts; observational selection; destination-minute survivorship; incomplete published historical fixtures; an interrupted 2019/20 observation window; supplied target role; historical target context as a proxy; predominantly same-team seasons; no untouched independent provider or competition; no causal effects or general league ranking.
+
+## Pre-fit amendment — prior predictive gate, 2026-09-30
+
+Before any real-outcome likelihood fit or held-out evaluation, the registered alternative prior failed its own plausibility rule for progressive carries: 1.13% of latent rates and 1.35% of simulated observation rates exceeded 50/90 (limit 1%). The primary prior passed for all four targets. Retain the rejected simulation in `artifacts/phase3/prior_predictive.json`; revise only the sensitivity prior to group SD scales ×1.25 and source coefficient SD 0.45. This adjustment is driven by prior predictions, not fitted accuracy, and does not change the primary model or holdout. The corrected alternative must pass the same gate before fitting.
+
+Dependency compatibility: use PyMC 5.28.5 / ArviZ 0.23.4 and NumPy <2.4. The installed ArviZ/Numba stack references NumPy aliases removed in 2.4/2.5. The lock records the compatible versions; Phase 1/2 regression checks are rerun after this numerical-stack change.
+
+The first revision (×1.25 / 0.45) also narrowly failed the **observation** gate for progressive carries (1.0215% above 50/90), despite passing the latent-rate check. Preserve that result as `revised_alternative`. The final sensitivity prior uses group scales ×1.15 and source SD 0.40; its narrower perturbation limits the strength of any robustness conclusion. This second adjustment also precedes every real-outcome fit and test inspection.

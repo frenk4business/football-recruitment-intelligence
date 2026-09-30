@@ -11,4 +11,42 @@ audit_seasons:
   - [37, 42]
   - [37, 90]
   - [37, 281]
-# Modelling configuration is added only after committing the evidence scope.
+scope: conditional_wsl_season_context
+minimum_minutes: 600
+role_policy: same_or_adjacent
+development_pair: [2018/2019, 2019/2020]
+test_pair: [2019/2020, 2020/2021]
+targets: [shots, progressive_passes, progressive_carries, pressures]
+priors_version: context-priors-v1
+reference_rates:
+  shots: 1.5
+  progressive_passes: 3.0
+  progressive_carries: 3.0
+  pressures: 12.0
+prior_rate_ceilings:
+  shots: 50
+  progressive_passes: 50
+  progressive_carries: 50
+  pressures: 150
+priors:
+  intercept_sd: 0.5
+  source_mean: 1.0
+  source_sd: 0.35
+  context_sd: 0.35
+  minutes_sd: 0.15
+  role_change_sd: 0.2
+  role_scale: 0.35
+  team_scale: 0.25
+  dispersion_rate: 0.1
+sampling:
+  chains: 4
+  draws: 1000
+  tune: 1000
+  target_accept: 0.95
+  cores: 1
+prior_samples: 1500
+bootstrap_samples: 200
+public_exposure_minutes: 900
+alternative_prior:
+  group_scale_multiplier: 1.15
+  source_sd: 0.40
