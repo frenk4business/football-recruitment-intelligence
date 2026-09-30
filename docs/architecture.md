@@ -37,10 +37,18 @@ The public export is a deliberate publication boundary: it omits raw StatsBomb e
 
 The one optional extension is the **lineage manifest**: revisions/checksums → canonical row counts/Parquet checksums → SQL marts → public artifacts. It makes reproducibility inspectable without introducing a scheduler or warehouse.
 
-The static site consumes committed research summaries, so deployment requires Node only and no external football-source access. Updating data is explicit (`make data-bootstrap`), followed by reviewing and committing aggregate artifacts. Later phases may add a feature layer, similarity service and model registry; none exist yet.
+The static site consumes committed research summaries, so deployment requires Node only and no external football-source access. Updating data is explicit (`make data-bootstrap`), followed by reviewing and committing aggregate artifacts. Phase 2 adds the feature/similarity layer; subsequent sections describe the research and recruitment extensions.
 
 ## Phase 2 extension
 
 The existing source → canonical Parquet → derived JSON boundary remains. A separately configured 132-match StatsBomb season is cached and materialized as validated match partitions, with deduplicated provider entities. Explicit participation events reconcile minutes. `dna/features.py` produces a dedicated match observation mart and season profiles; `dna/similarity.py` and `evaluation.py` fit versioned representations and run repeat-observation evaluations locally. `publish.py` enforces Pydantic allowlists for the static search index, lazy top-10 details, explanations and PCA map. No raw event feed, full distance matrix, browser-side model fitting or new hosted service. Model/scaler metadata and hashes are committed; canonical/source data remain ignored.
 
 The research pipeline is single-writer. Cohort activation uses a staged directory with a recoverable previous snapshot; publication stages validated files before copying. There is no multi-process transaction spanning every local/committed artifact. CI validates synthetic and committed derived evidence offline. Research download/evaluation is explicit, not triggered by web deployment.
+
+## Phase 4 extension
+
+The unchanged 2023/24 DNA profiles feed a compact candidate index. Canonical match events feed team-level count rates with actual match-duration denominators, while player-match counts feed club-stint roster distributions. Separate 100-draw player-match bootstrap profiles are quantized only for publication. `requirements-v1`, `club-context-v1` and `recruitment-fit-v1` are explicit interfaces; the source/feature versions remain unchanged.
+
+A shared declarative scoring specification drives Python reference scoring and generated browser metadata. Strict fixture comparisons verify preference losses, weights, constraints, explanations, ties, frontier membership and separate ranking sensitivities. Scenario calculation stays in the browser over observed derived aggregates: initial index + one club detail, then one role bootstrap on demand. URL state supplies bounded, versioned share/reset without a server account or database. No LLM sits in the decision path.
+
+Research evaluation is registered and committed before method selection/final queries. Frozen result/selection hashes are checked during publication; a research rerun compares rather than overwrites them. Public export stages twenty allowlisted JSON files. Global schemas/OpenAPI/TypeScript are generated. A static deployment needs only committed aggregates and Node; no football-source access, Python, Bayesian sampler or heavy evaluation runs on Render.

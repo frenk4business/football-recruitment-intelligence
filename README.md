@@ -1,10 +1,16 @@
 # Football Recruitment Intelligence
 
-Open football data → observed Player DNA → historical performance translation, with visible uncertainty. Independent non-commercial research by Frenk Kester.
+Open football data → Player DNA → historical translation → explicit recruitment requirements and observed profile fit. Independent non-commercial research by Frenk Kester.
 
-[Live translation](https://football-recruitment-intelligence.onrender.com/translation/) · [Nederlands](README.nl.md) · [Player DNA](https://football-recruitment-intelligence.onrender.com/player-dna/) · [Research evaluation](docs/league-translation-evaluation.md) · [Model card](docs/model-card-phase3.md)
+[Live recruitment](https://football-recruitment-intelligence.onrender.com/recruitment/) · [Nederlands](README.nl.md) · [Evaluation](docs/recruitment-fit-evaluation.md) · [Model card](docs/model-card-phase4.md) · [QA](docs/phase-4-qa.md)
 
-Phase 3 is merged into `main` with green CI and is live in both languages. Render tracks `main`; all 14 browser checks pass against production. [Release verification](docs/phase-3-qa.md) records the deployed commit, content checks and test evidence.
+## Phase 4: explicit requirements, observed fit
+
+Find Candidates, Replace a Player and Club Context connect **138 eligible WSL 2023/24 profiles**, six roles, eighteen style features and twelve clubs. Custom requirements start neutral. Choose exact/minimum/maximum preferences, visible feature/family weights and hard constraints; inspect the top ten, compare up to three candidates and share/reset the scenario by URL. Club characteristics enter ranking only through explicit analyst adoption. Evidence and exclusions stay separate from fit.
+
+`recruitment-fit-v1` is weighted root mean squared percentile mismatch, lower meaning closer to the selected requirements. It is not quality, success probability or a transfer recommendation. In 31 final peer queries, Recall@5 is **45.2% versus 31.6% random**; MRR **.258 versus .259 existing DNA**. In 27 roster holdouts weighted MRR .232 trails DNA .332. Context gains are mixed. Across 205 scenarios, mean top-ten Jaccard is **.950 for weight changes, .723 for profile sampling**; fourteen small pools inflate inclusion. Every comparator, negative result and leakage limitation is retained in the [registered evaluation](docs/recruitment-fit-evaluation.md).
+
+Observed recruitment uses 2023/24 only. The separate historical translation research below remains unchanged; no validated translation is available for the recruitment environment. Age, contract availability, salary and market values are absent. Phase 4 adds no hosted service or paid resource. [Phase 5 hand-off](docs/phase-5-handoff.md).
 
 ## Phase 3: what the evidence supports
 
@@ -40,7 +46,7 @@ make smoke
 make dev
 ```
 
-The static build uses committed, validated research aggregates and needs no source downloads, secrets or model server. English `/translation/`; Dutch `/nl/translation/`. `make api` starts optional local FastAPI with interactive `/docs`.
+The static build uses committed, validated research aggregates and needs no source downloads, secrets or model server. English `/recruitment/`; Dutch `/nl/recruitment/`; historical translation routes remain available. `make api` starts optional local FastAPI with interactive `/docs`.
 
 ```sh
 make data-bootstrap       # small Phase 1 event/tracking sample
@@ -48,6 +54,8 @@ make phase2-build         # pinned WSL 2023/24 features/similarity
 make translation-audit    # full catalogue + separate Wyscout metadata audit
 make phase3-build         # WSL data, fixed-selection evaluation, public summaries and reports
 uv run python scripts/phase3_reproduce.py  # offline reconstruction + four fresh fits
+make phase4-build          # pinned club context, candidate index, bootstrap aggregates
+make recruitment-evaluate # recompute and compare all frozen Phase 4 results
 make contracts            # Pydantic → TypeScript / JSON Schema / OpenAPI
 ```
 
@@ -63,14 +71,14 @@ Raw StatsBomb event/lineup feeds, canonical Parquet and full posterior draws rem
 
 ## Delivery and next phase
 
-One existing Render Static Site serves committed aggregates. **No additional paid infrastructure was introduced beyond the existing Render workspace/Starter subscription.** No backend, worker, database or disk was added. Production tracks `main`; actual deployment verification is recorded in [deployment](docs/deployment.md) and [Phase 3 QA](docs/phase-3-qa.md). Completed phase PRs merge after checks; phase branches are not permanent review boundaries.
+One existing Render Static Site serves committed aggregates. **No additional paid infrastructure was introduced beyond the existing Render workspace/Starter subscription.** No backend, worker, database or disk was added. Production tracks `main`; actual deployment verification is recorded in [deployment](docs/deployment.md) and [Phase 4 QA](docs/phase-4-qa.md). Completed phase PRs merge after checks; phase branches are not permanent review boundaries.
 
 1. Data Foundation — complete.
 2. Player DNA & Similarity — complete.
-3. League Translation & Bayesian Performance Transfer — complete/current, with the narrower WSL scope above.
-4. Recruitment Intelligence & Club Fit — planned.
+3. League Translation & Bayesian Performance Transfer — complete, with the narrower WSL scope above.
+4. Recruitment Intelligence & Club Fit — complete/current.
 5. Production Hardening & Portfolio Integration — planned.
 
-Phase 3 adds hierarchical inference, prior/PPC checks, probabilistic calibration, temporal holdout discipline, negative-result reporting and static delivery of predictive uncertainty. [Phase 4 hand-off](docs/phase-4-handoff.md) · [Portfolio learning](docs/portfolio-context.md).
+Phase 3 adds hierarchical inference, prior/PPC checks, probabilistic calibration, temporal holdout discipline, negative-result reporting and static delivery of predictive uncertainty. [Phase 5 hand-off](docs/phase-5-handoff.md) · [Portfolio learning](docs/portfolio-context.md).
 
 Code © 2026 Frenk Kester, MIT. Data and logos retain their own rights.

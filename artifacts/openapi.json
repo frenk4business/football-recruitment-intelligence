@@ -629,10 +629,462 @@
           }
         }
       }
+    },
+    "/api/v1/recruitment": {
+      "get": {
+        "summary": "Recruitment Index",
+        "operationId": "recruitment_index_api_v1_recruitment_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecruitmentIndex"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/recruitment/clubs": {
+      "get": {
+        "summary": "Recruitment Clubs",
+        "operationId": "recruitment_clubs_api_v1_recruitment_clubs_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/RecruitmentClubSummary"
+                  },
+                  "type": "array",
+                  "title": "Response Recruitment Clubs Api V1 Recruitment Clubs Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/recruitment/clubs/{club_id}": {
+      "get": {
+        "summary": "Recruitment Club",
+        "operationId": "recruitment_club_api_v1_recruitment_clubs__club_id__get",
+        "parameters": [
+          {
+            "name": "club_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Club Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClubContext"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/recruitment/requirements": {
+      "get": {
+        "summary": "Recruitment Requirements",
+        "operationId": "recruitment_requirements_api_v1_recruitment_requirements_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/RecruitmentFeature"
+                  },
+                  "type": "array",
+                  "title": "Response Recruitment Requirements Api V1 Recruitment Requirements Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/recruitment/candidates": {
+      "get": {
+        "summary": "Recruitment Candidates",
+        "operationId": "recruitment_candidates_api_v1_recruitment_candidates_get",
+        "parameters": [
+          {
+            "name": "role",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Role"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecruitmentCandidate"
+                  },
+                  "title": "Response Recruitment Candidates Api V1 Recruitment Candidates Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/recruitment/scenario": {
+      "post": {
+        "summary": "Recruitment Scenario",
+        "operationId": "recruitment_scenario_api_v1_recruitment_scenario_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecruitmentScenario"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecruitmentResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/recruitment/evaluation": {
+      "get": {
+        "summary": "Recruitment Evaluation",
+        "operationId": "recruitment_evaluation_api_v1_recruitment_evaluation_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecruitmentEvaluation"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "ClubContext": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "club-context-v1",
+            "title": "Version",
+            "default": "club-context-v1"
+          },
+          "provider": {
+            "type": "string",
+            "const": "statsbomb",
+            "title": "Provider",
+            "default": "statsbomb"
+          },
+          "club_id": {
+            "type": "string",
+            "title": "Club Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "competition": {
+            "type": "string",
+            "title": "Competition"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "observation_start": {
+            "type": "string",
+            "title": "Observation Start"
+          },
+          "observation_end": {
+            "type": "string",
+            "title": "Observation End"
+          },
+          "matches": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Matches"
+          },
+          "team_minutes": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Team Minutes"
+          },
+          "source_revision": {
+            "type": "string",
+            "title": "Source Revision"
+          },
+          "feature_version": {
+            "type": "string",
+            "const": "features-v1",
+            "title": "Feature Version",
+            "default": "features-v1"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/ClubFeature"
+            },
+            "type": "array",
+            "title": "Features"
+          },
+          "roles": {
+            "items": {
+              "$ref": "#/components/schemas/ClubRoleContext"
+            },
+            "type": "array",
+            "title": "Roles"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "club_id",
+          "name",
+          "competition",
+          "season",
+          "observation_start",
+          "observation_end",
+          "matches",
+          "team_minutes",
+          "source_revision",
+          "features",
+          "roles"
+        ],
+        "title": "ClubContext"
+      },
+      "ClubFeature": {
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "percentile": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Percentile"
+          },
+          "available_matches": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Available Matches"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "feature_id",
+          "value",
+          "percentile",
+          "available_matches"
+        ],
+        "title": "ClubFeature"
+      },
+      "ClubRoleContext": {
+        "properties": {
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "players": {
+            "items": {
+              "$ref": "#/components/schemas/RosterPlayer"
+            },
+            "type": "array",
+            "title": "Players"
+          },
+          "reliable_minutes": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Reliable Minutes"
+          },
+          "roster_depth": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Roster Depth"
+          },
+          "profile_depth": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Profile Depth"
+          },
+          "top_player_minutes_share": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Top Player Minutes Share"
+          },
+          "minutes_hhi": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minutes Hhi"
+          },
+          "median": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Median"
+          },
+          "p25": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "P25"
+          },
+          "p75": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "P75"
+          },
+          "minimum": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Minimum"
+          },
+          "maximum": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Maximum"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "role",
+          "players",
+          "reliable_minutes",
+          "roster_depth",
+          "profile_depth",
+          "top_player_minutes_share",
+          "minutes_hhi",
+          "median",
+          "p25",
+          "p75",
+          "minimum",
+          "maximum"
+        ],
+        "title": "ClubRoleContext"
+      },
       "CompetitionSummary": {
         "properties": {
           "id": {
@@ -1803,6 +2255,1037 @@
           "pass_completion"
         ],
         "title": "PlayerSummary"
+      },
+      "RecruitmentCandidate": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "team_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Team Ids"
+          },
+          "teams": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "role": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role"
+          },
+          "minutes": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Minutes"
+          },
+          "appearances": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Appearances"
+          },
+          "eligible": {
+            "type": "boolean",
+            "title": "Eligible"
+          },
+          "exclusions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Exclusions"
+          },
+          "neighbor_stability": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Neighbor Stability"
+          },
+          "percentiles": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Percentiles"
+          },
+          "multi_club": {
+            "type": "boolean",
+            "title": "Multi Club"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "name",
+          "team_ids",
+          "teams",
+          "role",
+          "minutes",
+          "appearances",
+          "eligible",
+          "exclusions",
+          "neighbor_stability",
+          "percentiles",
+          "multi_club"
+        ],
+        "title": "RecruitmentCandidate"
+      },
+      "RecruitmentClubSummary": {
+        "properties": {
+          "club_id": {
+            "type": "string",
+            "title": "Club Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "matches": {
+            "type": "integer",
+            "title": "Matches"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "club_id",
+          "name",
+          "season",
+          "matches"
+        ],
+        "title": "RecruitmentClubSummary"
+      },
+      "RecruitmentConstraints": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "const": "user_defined",
+            "title": "Source",
+            "default": "user_defined"
+          },
+          "minimum_minutes": {
+            "type": "integer",
+            "maximum": 10000.0,
+            "minimum": 900.0,
+            "title": "Minimum Minutes",
+            "default": 900
+          },
+          "minimum_neighbor_stability": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Minimum Neighbor Stability",
+            "default": 0
+          },
+          "exclude_same_club": {
+            "type": "boolean",
+            "title": "Exclude Same Club",
+            "default": true
+          },
+          "candidate_team_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Candidate Team Id"
+          },
+          "provider": {
+            "type": "string",
+            "const": "statsbomb",
+            "title": "Provider",
+            "default": "statsbomb"
+          },
+          "comparison_cohort": {
+            "type": "string",
+            "const": "wsl_2023_24",
+            "title": "Comparison Cohort",
+            "default": "wsl_2023_24"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "RecruitmentConstraints"
+      },
+      "RecruitmentContribution": {
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "family": {
+            "type": "string",
+            "title": "Family"
+          },
+          "candidate": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Candidate"
+          },
+          "target": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Target"
+          },
+          "mismatch": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Mismatch"
+          },
+          "effective_weight": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Effective Weight"
+          },
+          "squared_contribution": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Squared Contribution"
+          },
+          "share": {
+            "type": "number",
+            "maximum": 1.000001,
+            "minimum": 0.0,
+            "title": "Share"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "user_defined",
+              "observed_club_context",
+              "replacement_player",
+              "derived_roster_gap"
+            ],
+            "title": "Source"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "feature_id",
+          "family",
+          "candidate",
+          "target",
+          "mismatch",
+          "effective_weight",
+          "squared_contribution",
+          "share",
+          "source"
+        ],
+        "title": "RecruitmentContribution"
+      },
+      "RecruitmentEvaluation": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "recruitment-fit-evaluation-v1",
+            "title": "Version",
+            "default": "recruitment-fit-evaluation-v1"
+          },
+          "selected_method": {
+            "type": "string",
+            "title": "Selected Method"
+          },
+          "transfer_success_evaluation": {
+            "type": "string",
+            "const": "no_go",
+            "title": "Transfer Success Evaluation",
+            "default": "no_go"
+          },
+          "rows": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentEvaluationRow"
+            },
+            "type": "array",
+            "title": "Rows"
+          },
+          "robustness_scenarios": {
+            "type": "integer",
+            "title": "Robustness Scenarios"
+          },
+          "weight_mean_jaccard": {
+            "type": "number",
+            "title": "Weight Mean Jaccard"
+          },
+          "profile_mean_jaccard": {
+            "type": "number",
+            "title": "Profile Mean Jaccard"
+          },
+          "frontier_median_size": {
+            "type": "number",
+            "title": "Frontier Median Size"
+          },
+          "small_pool_scenarios": {
+            "type": "integer",
+            "title": "Small Pool Scenarios"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "selected_method",
+          "rows",
+          "robustness_scenarios",
+          "weight_mean_jaccard",
+          "profile_mean_jaccard",
+          "frontier_median_size",
+          "small_pool_scenarios"
+        ],
+        "title": "RecruitmentEvaluation"
+      },
+      "RecruitmentEvaluationRow": {
+        "properties": {
+          "stage": {
+            "type": "string",
+            "title": "Stage"
+          },
+          "task": {
+            "type": "string",
+            "title": "Task"
+          },
+          "method": {
+            "type": "string",
+            "title": "Method"
+          },
+          "queries": {
+            "type": "integer",
+            "title": "Queries"
+          },
+          "recall5": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recall5"
+          },
+          "recall10": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recall10"
+          },
+          "mrr": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mrr"
+          },
+          "random_recall5": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Random Recall5"
+          },
+          "random_recall10": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Random Recall10"
+          },
+          "random_mrr": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Random Mrr"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "stage",
+          "task",
+          "method",
+          "queries",
+          "recall5",
+          "recall10",
+          "mrr",
+          "random_recall5",
+          "random_recall10",
+          "random_mrr"
+        ],
+        "title": "RecruitmentEvaluationRow"
+      },
+      "RecruitmentExclusion": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "reasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Reasons"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "reasons"
+        ],
+        "title": "RecruitmentExclusion"
+      },
+      "RecruitmentFeature": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label_en": {
+            "type": "string",
+            "title": "Label En"
+          },
+          "label_nl": {
+            "type": "string",
+            "title": "Label Nl"
+          },
+          "family": {
+            "type": "string",
+            "title": "Family"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "formula": {
+            "type": "string",
+            "title": "Formula"
+          },
+          "note_en": {
+            "type": "string",
+            "title": "Note En"
+          },
+          "note_nl": {
+            "type": "string",
+            "title": "Note Nl"
+          },
+          "core": {
+            "type": "boolean",
+            "title": "Core"
+          },
+          "intended_use": {
+            "type": "string",
+            "title": "Intended Use"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "default": "StatsBomb"
+          },
+          "higher_is": {
+            "type": "string",
+            "title": "Higher Is",
+            "default": "descriptive"
+          },
+          "eligibility": {
+            "type": "string",
+            "title": "Eligibility",
+            "default": "Reliable participation time; complete relevant event fields; role cohort; selected minute threshold."
+          },
+          "null_semantics": {
+            "type": "string",
+            "title": "Null Semantics",
+            "default": "Unavailable evidence or zero denominator is null; measured absence is zero."
+          },
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "features-v1"
+          },
+          "recruitment_relevance": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "CB",
+                "FB/WB",
+                "DM",
+                "CM",
+                "AM",
+                "W",
+                "ST"
+              ]
+            },
+            "type": "array",
+            "title": "Recruitment Relevance"
+          },
+          "default_visibility": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "CB",
+                "FB/WB",
+                "DM",
+                "CM",
+                "AM",
+                "W",
+                "ST"
+              ]
+            },
+            "type": "array",
+            "title": "Default Visibility"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "label_en",
+          "label_nl",
+          "family",
+          "unit",
+          "formula",
+          "note_en",
+          "note_nl",
+          "core",
+          "intended_use",
+          "recruitment_relevance",
+          "default_visibility"
+        ],
+        "title": "RecruitmentFeature"
+      },
+      "RecruitmentIndex": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "recruitment-fit-v1",
+            "title": "Version",
+            "default": "recruitment-fit-v1"
+          },
+          "requirements_version": {
+            "type": "string",
+            "const": "requirements-v1",
+            "title": "Requirements Version",
+            "default": "requirements-v1"
+          },
+          "club_context_version": {
+            "type": "string",
+            "const": "club-context-v1",
+            "title": "Club Context Version",
+            "default": "club-context-v1"
+          },
+          "dna_version": {
+            "type": "string",
+            "const": "player-dna-v1",
+            "title": "Dna Version",
+            "default": "player-dna-v1"
+          },
+          "feature_version": {
+            "type": "string",
+            "const": "features-v1",
+            "title": "Feature Version",
+            "default": "features-v1"
+          },
+          "cohort": {
+            "type": "string",
+            "const": "wsl_2023_24",
+            "title": "Cohort",
+            "default": "wsl_2023_24"
+          },
+          "season": {
+            "type": "string",
+            "const": "2023/2024",
+            "title": "Season",
+            "default": "2023/2024"
+          },
+          "competition": {
+            "type": "string",
+            "title": "Competition"
+          },
+          "observation_start": {
+            "type": "string",
+            "title": "Observation Start"
+          },
+          "observation_end": {
+            "type": "string",
+            "title": "Observation End"
+          },
+          "roles": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Roles"
+          },
+          "players": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentCandidate"
+            },
+            "type": "array",
+            "title": "Players"
+          },
+          "clubs": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentClubSummary"
+            },
+            "type": "array",
+            "title": "Clubs"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentFeature"
+            },
+            "type": "array",
+            "title": "Features"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "weighted_rms",
+              "family_rms"
+            ],
+            "title": "Method"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "competition",
+          "observation_start",
+          "observation_end",
+          "roles",
+          "players",
+          "clubs",
+          "features",
+          "method"
+        ],
+        "title": "RecruitmentIndex"
+      },
+      "RecruitmentRank": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "rank": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Rank"
+          },
+          "distance": {
+            "type": "number",
+            "maximum": 100.000001,
+            "minimum": 0.0,
+            "title": "Distance"
+          },
+          "contributions": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentContribution"
+            },
+            "type": "array",
+            "title": "Contributions"
+          },
+          "family_contributions": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Family Contributions"
+          },
+          "strong_matches": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Strong Matches"
+          },
+          "main_mismatches": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Main Mismatches"
+          },
+          "frontier": {
+            "type": "boolean",
+            "title": "Frontier"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "rank",
+          "distance",
+          "contributions",
+          "family_contributions",
+          "strong_matches",
+          "main_mismatches",
+          "frontier"
+        ],
+        "title": "RecruitmentRank"
+      },
+      "RecruitmentRequirement": {
+        "properties": {
+          "requirement_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Requirement Id"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "style_preference",
+              "target_profile",
+              "club_context"
+            ],
+            "title": "Type",
+            "default": "style_preference"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "user_defined",
+              "observed_club_context",
+              "replacement_player",
+              "derived_roster_gap"
+            ],
+            "title": "Source",
+            "default": "user_defined"
+          },
+          "feature_id": {
+            "type": "string",
+            "title": "Feature Id"
+          },
+          "preference": {
+            "type": "string",
+            "enum": [
+              "exact",
+              "minimum",
+              "maximum",
+              "neutral"
+            ],
+            "title": "Preference"
+          },
+          "value": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 0.0,
+            "title": "Value"
+          },
+          "weight": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3
+            ],
+            "title": "Weight",
+            "default": 1
+          },
+          "hard_constraint": {
+            "type": "boolean",
+            "title": "Hard Constraint",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "requirement_id",
+          "feature_id",
+          "preference",
+          "value"
+        ],
+        "title": "RecruitmentRequirement"
+      },
+      "RecruitmentResult": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "recruitment-fit-v1",
+            "title": "Version",
+            "default": "recruitment-fit-v1"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "no_requirements",
+              "no_candidates"
+            ],
+            "title": "Status"
+          },
+          "eligible_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Eligible Count"
+          },
+          "active_requirements": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Active Requirements"
+          },
+          "frontier_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Frontier Count"
+          },
+          "rankings": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentRank"
+            },
+            "type": "array",
+            "title": "Rankings"
+          },
+          "exclusions": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentExclusion"
+            },
+            "type": "array",
+            "title": "Exclusions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "status",
+          "eligible_count",
+          "active_requirements",
+          "frontier_count",
+          "rankings",
+          "exclusions"
+        ],
+        "title": "RecruitmentResult"
+      },
+      "RecruitmentScenario": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "requirements-v1",
+            "title": "Version",
+            "default": "requirements-v1"
+          },
+          "fit_method_version": {
+            "type": "string",
+            "const": "recruitment-fit-v1",
+            "title": "Fit Method Version",
+            "default": "recruitment-fit-v1"
+          },
+          "club_id": {
+            "type": "string",
+            "title": "Club Id"
+          },
+          "season": {
+            "type": "string",
+            "const": "2023/2024",
+            "title": "Season",
+            "default": "2023/2024"
+          },
+          "target_role": {
+            "type": "string",
+            "enum": [
+              "CB",
+              "FB/WB",
+              "DM",
+              "CM",
+              "AM",
+              "W",
+              "ST"
+            ],
+            "title": "Target Role"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "find",
+              "replace"
+            ],
+            "title": "Mode",
+            "default": "find"
+          },
+          "replacement_player_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Replacement Player Id"
+          },
+          "requirements": {
+            "items": {
+              "$ref": "#/components/schemas/RecruitmentRequirement"
+            },
+            "type": "array",
+            "maxItems": 18,
+            "title": "Requirements"
+          },
+          "hard_constraints": {
+            "$ref": "#/components/schemas/RecruitmentConstraints"
+          },
+          "family_weights": {
+            "additionalProperties": {
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "propertyNames": {
+              "enum": [
+                "shooting",
+                "creation",
+                "passing",
+                "carrying",
+                "defending"
+              ]
+            },
+            "type": "object",
+            "title": "Family Weights"
+          },
+          "translation_mode": {
+            "type": "string",
+            "const": "observed_only",
+            "title": "Translation Mode",
+            "default": "observed_only"
+          },
+          "created_from": {
+            "type": "string",
+            "enum": [
+              "custom",
+              "replacement",
+              "adjusted_replacement",
+              "shared"
+            ],
+            "title": "Created From",
+            "default": "custom"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "club_id",
+          "target_role"
+        ],
+        "title": "RecruitmentScenario"
+      },
+      "RosterPlayer": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "minutes": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Minutes"
+          },
+          "role": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role"
+          },
+          "profile_eligible": {
+            "type": "boolean",
+            "title": "Profile Eligible"
+          },
+          "percentiles": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Percentiles"
+          },
+          "exclusions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Exclusions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "name",
+          "minutes",
+          "role",
+          "profile_eligible",
+          "percentiles",
+          "exclusions"
+        ],
+        "title": "RosterPlayer"
       },
       "Source": {
         "properties": {

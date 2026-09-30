@@ -25,4 +25,7 @@ await cp(new URL("phase2/public/", src), new URL("phase2/", dest), {
 await cp(new URL("phase3/public/", src), new URL("phase3/", dest), {
   recursive: true,
 });
+await cp(new URL("phase4/public/", src), new URL("phase4/", dest), {
+  recursive: true,
+});
 console.log("Prepared validated aggregate artifacts.");

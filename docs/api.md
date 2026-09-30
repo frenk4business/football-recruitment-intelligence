@@ -39,3 +39,17 @@ The optional local FastAPI exposes:
 - `GET /api/v1/translation/evaluation`: all four methods’ held-out error and interval calibration.
 
 The deployed static equivalents are `/data/phase3/models.json`, `index.json`, `players/{player_id}.json` and `evaluation.json`. There is no hosted FastAPI service and no request-time inference. Pydantic publication models forbid extra/raw fields and nonfinite values; generated TypeScript, JSON Schema and OpenAPI remain the contract source. Predictions distinguish selected `estimates` from `research_estimates`, observed source from expected target, and `empirical_predictive` from `posterior_predictive` intervals. Unsupported states contain no estimates. Evidence exposes numerical episode counts, pooling, pre-change context dates and unseen-team status. `used_as_development_outcome` identifies a source observation also used as an earlier fitted outcome.
+
+## Phase 4 — optional local recruitment API
+
+| Route | Returns |
+|---|---|
+| `GET /api/v1/recruitment` | Compact observed candidate/club/feature index |
+| `GET /api/v1/recruitment/clubs` | Twelve club summaries |
+| `GET /api/v1/recruitment/clubs/{club_id}` | Typed club-context-v1 rates, availability and roster distributions |
+| `GET /api/v1/recruitment/requirements` | Eighteen existing features with bilingual recruitment visibility metadata |
+| `GET /api/v1/recruitment/candidates?role=CB` | Role-filtered observed candidates, eligibility and reasons |
+| `POST /api/v1/recruitment/scenario` | Validated requirements-v1 scenario → ranking, contributions, frontier and exclusions |
+| `GET /api/v1/recruitment/evaluation` | All public development/final metric summaries and robustness means |
+
+Unknown clubs, features, inconsistent references, seasons, translation modes and extra fields fail validation. A known but absent UUID returns 404; missing public artifacts return 503. Neutral scenarios return `no_requirements`, valid scenarios with no eligible candidates return `no_candidates`; neither invents a ranking. These endpoints are **local only**. The deployed product uses strict aggregate JSON and deterministic browser scoring verified against Python fixtures; it does not expose a hosted scoring API.

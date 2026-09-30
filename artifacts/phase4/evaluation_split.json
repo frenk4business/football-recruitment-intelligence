@@ -1,0 +1,34 @@
+{
+  "development_clubs": [
+    "ea7a234e-5bbd-55b3-8f0b-ef872c0433f6",
+    "3a6cf779-2270-5819-8cd8-e7a355a83a87",
+    "5e1eb273-c618-5745-8f49-d2e770cd66f4",
+    "7322fcac-f730-5311-bce4-127e97c243d8",
+    "a6e40be4-0c03-548e-b313-3765c77638f4",
+    "60ab3faa-b309-556c-b5e6-e39a37765e22",
+    "7ec08217-8a10-52c6-8b2c-223b7273dde3",
+    "acf863e0-94d3-5983-8b8c-56976c2b59dc"
+  ],
+  "final_clubs": [
+    "fd45bdfb-70d8-5ffe-8be7-b26723b6fa87",
+    "67cea9eb-8181-5982-ae0c-0e7f417144cb",
+    "76d18126-4c59-59b6-92d8-8cb6e64d6f06",
+    "4ec8fc42-342a-5a45-9070-3b237ecb7252"
+  ],
+  "names": {
+    "3a6cf779-2270-5819-8cd8-e7a355a83a87": "Chelsea FCW",
+    "4ec8fc42-342a-5a45-9070-3b237ecb7252": "Brighton & Hove Albion WFC",
+    "5e1eb273-c618-5745-8f49-d2e770cd66f4": "Manchester United W",
+    "60ab3faa-b309-556c-b5e6-e39a37765e22": "Arsenal WFC",
+    "67cea9eb-8181-5982-ae0c-0e7f417144cb": "Manchester City WFC",
+    "7322fcac-f730-5311-bce4-127e97c243d8": "Tottenham Hotspur Women",
+    "76d18126-4c59-59b6-92d8-8cb6e64d6f06": "Leicester City WFC",
+    "7ec08217-8a10-52c6-8b2c-223b7273dde3": "Liverpool WFC",
+    "a6e40be4-0c03-548e-b313-3765c77638f4": "Bristol City WFC",
+    "acf863e0-94d3-5983-8b8c-56976c2b59dc": "Aston Villa W",
+    "ea7a234e-5bbd-55b3-8f0b-ef872c0433f6": "Everton LFC",
+    "fd45bdfb-70d8-5ffe-8be7-b26723b6fa87": "West Ham United LFC"
+  },
+  "prior_football_season_already_examined": true,
+  "seed": 20260930
+}

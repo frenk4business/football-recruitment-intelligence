@@ -2,6 +2,7 @@ export type Locale = "en" | "nl";
 export type Section =
   | "home"
   | "player-dna"
+  | "recruitment"
   | "translation"
   | "explorer"
   | "coverage"
@@ -11,6 +12,7 @@ export const sections: Section[] = [
   "home",
   "player-dna",
   "translation",
+  "recruitment",
   "explorer",
   "coverage",
   "methodology",
@@ -23,6 +25,7 @@ const en = {
     home: "Overview",
     "player-dna": "Player DNA",
     translation: "Translation",
+    recruitment: "Recruitment",
     explorer: "Data explorer",
     coverage: "Coverage",
     methodology: "Methodology",
@@ -30,17 +33,17 @@ const en = {
   },
   skip: "Skip to content",
   language: "Taal wijzigen naar Nederlands",
-  phase: "PHASE 03 / PERFORMANCE TRANSLATION",
+  phase: "PHASE 04 / RECRUITMENT INTELLIGENCE",
   title: "Recruitment research starts with the evidence.",
   intro:
     "Explore what open football data can tell us — and where it stops. A research platform for player profiles, competition context and, eventually, recruitment decisions.",
-  open: "Explore performance translation",
+  open: "Build a recruitment scenario",
   methods: "Read the methodology",
   sample: "The working sample",
   sampleIntro:
     "Two providers. Different matches, formats and assumptions. Every number below comes from the ingestion pipeline.",
   noModels:
-    "Observed Player DNA meets a historical WSL context study. Explore expected performance and the uncertainty around it.",
+    "Compare observed profiles against explicit requirements, with club context, visible trade-offs and separate evidence.",
   source: "Source",
   match: "Match",
   competition: "Competition / season",
@@ -185,6 +188,7 @@ const nl: Copy = {
     home: "Overzicht",
     "player-dna": "Spelers-DNA",
     translation: "Prestatievertaling",
+    recruitment: "Recruitment",
     explorer: "Dataverkenner",
     coverage: "Datadekking",
     methodology: "Methodologie",
@@ -192,17 +196,17 @@ const nl: Copy = {
   },
   skip: "Ga naar inhoud",
   language: "Switch language to English",
-  phase: "FASE 03 / PRESTATIEVERTALING",
+  phase: "FASE 04 / RECRUITMENT INTELLIGENCE",
   title: "Recruitmentonderzoek begint bij de onderbouwing.",
   intro:
     "Onderzoek wat open voetbaldata ons vertelt — en waar de grenzen liggen. Een onderzoeksplatform voor spelersprofielen, competitiecontext en uiteindelijk recruitmentbeslissingen.",
-  open: "Verken prestatievertaling",
+  open: "Stel een recruitmentscenario samen",
   methods: "Lees de methodologie",
   sample: "De gebruikte steekproef",
   sampleIntro:
     "Twee databronnen. Andere wedstrijden, formaten en aannames. Alle aantallen hieronder komen uit de datapijplijn.",
   noModels:
-    "Waargenomen spelers-DNA ontmoet historisch WSL-contextonderzoek. Verken verwachte prestaties en de onzekerheid eromheen.",
+    "Vergelijk waargenomen profielen met expliciete eisen, clubcontext, zichtbare afwegingen en afzonderlijke onderbouwing.",
   source: "Databron",
   match: "Wedstrijd",
   competition: "Competitie / seizoen",

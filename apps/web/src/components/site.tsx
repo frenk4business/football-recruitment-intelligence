@@ -14,6 +14,10 @@ import { dnaIndex, dnaRegistry, dnaEvaluation } from "@/lib/data";
 import { Translation, TranslationEvaluation } from "./translation";
 import { translationCopy } from "@/lib/translation-copy";
 import { translationIndex, translationEvaluation } from "@/lib/data";
+import { Recruitment } from "./recruitment";
+import { RecruitmentEvaluation } from "./recruitment-evaluation";
+import { recruitmentCopy } from "@/lib/recruitment-copy";
+import { recruitmentEvaluation } from "@/lib/data";
 import { Explorer } from "./explorer";
 const repo =
   "https://github.com/frenk4business/football-recruitment-intelligence";
@@ -89,7 +93,7 @@ export function Site({
                 <div className="hero-links">
                   <Link
                     className="primary-link"
-                    href={route(locale, "translation")}
+                    href={route(locale, "recruitment")}
                   >
                     {c.open}
                     <span aria-hidden="true">↗</span>
@@ -104,7 +108,7 @@ export function Site({
               </div>
               <aside className="hero-aside">
                 <span className="large-number">
-                  03<span>/05</span>
+                  04<span>/05</span>
                 </span>
                 <p>{c.noModels}</p>
                 <div className="mini-field" aria-hidden="true">
@@ -201,33 +205,38 @@ export function Site({
           <div className="page-heading">
             <p className="eyebrow">{c.phase}</p>
             <h1>
-              {section === "translation"
-                ? translationCopy[locale].title
-                : section === "player-dna"
-                  ? dnaCopy[locale].title
-                  : section === "explorer"
-                    ? c.explorerTitle
-                    : section === "coverage"
-                      ? c.coverageTitle
-                      : section === "methodology"
-                        ? c.methodologyTitle
-                        : c.roadmapTitle}
+              {section === "recruitment"
+                ? recruitmentCopy[locale].title
+                : section === "translation"
+                  ? translationCopy[locale].title
+                  : section === "player-dna"
+                    ? dnaCopy[locale].title
+                    : section === "explorer"
+                      ? c.explorerTitle
+                      : section === "coverage"
+                        ? c.coverageTitle
+                        : section === "methodology"
+                          ? c.methodologyTitle
+                          : c.roadmapTitle}
             </h1>
             <p className="lead">
-              {section === "translation"
-                ? translationCopy[locale].intro
-                : section === "player-dna"
-                  ? dnaCopy[locale].intro
-                  : section === "explorer"
-                    ? c.explorerIntro
-                    : section === "coverage"
-                      ? c.coverageIntro
-                      : section === "methodology"
-                        ? c.methodologyIntro
-                        : c.roadmapIntro}
+              {section === "recruitment"
+                ? recruitmentCopy[locale].intro
+                : section === "translation"
+                  ? translationCopy[locale].intro
+                  : section === "player-dna"
+                    ? dnaCopy[locale].intro
+                    : section === "explorer"
+                      ? c.explorerIntro
+                      : section === "coverage"
+                        ? c.coverageIntro
+                        : section === "methodology"
+                          ? c.methodologyIntro
+                          : c.roadmapIntro}
             </p>
           </div>
         )}
+        {section === "recruitment" && <Recruitment locale={locale} />}
         {section === "translation" && (
           <Translation locale={locale} index={translationIndex()} />
         )}
@@ -391,6 +400,10 @@ export function Site({
         )}
         {section === "methodology" && (
           <>
+            <RecruitmentEvaluation
+              locale={locale}
+              evaluation={recruitmentEvaluation()}
+            />
             <TranslationEvaluation
               locale={locale}
               index={translationIndex()}
@@ -441,8 +454,8 @@ export function Site({
               <li key={title}>
                 <span className="section-number">0{i + 1}</span>
                 <div>
-                  <span className={i < 3 ? "current-phase" : "planned-phase"}>
-                    {i < 3
+                  <span className={i < 4 ? "current-phase" : "planned-phase"}>
+                    {i < 4
                       ? locale === "en"
                         ? "Complete"
                         : "Voltooid"

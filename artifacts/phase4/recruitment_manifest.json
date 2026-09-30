@@ -1,0 +1,120 @@
+{
+  "club_context_version": "club-context-v1",
+  "clubs": 12,
+  "code_sha256": {
+    "src/football_intelligence/recruitment/__init__.py": "3f849e08bb0e237fa85aec595064e175b2343b87366923272488e95af611cace",
+    "src/football_intelligence/recruitment/audit.py": "399ab4df64080179ba9eb8cace2cf97d5757103f9ef004373671c573fbd5e83d",
+    "src/football_intelligence/recruitment/context.py": "0995f35646ff478cc38f05bbd19f4bd42ba2bcaccef37f7b5efafe1667afc1ed",
+    "src/football_intelligence/recruitment/contracts.py": "8a43bb19d4a40600110544aa3cddddad23ea900fa10de78a710dba1629f9d6fb",
+    "src/football_intelligence/recruitment/data.py": "1d2e2143d2a92d0c00aa648a623e4092b750b46fac1d9cf5dfd139092a2b3d35",
+    "src/football_intelligence/recruitment/evaluation.py": "69e8f4ac6c248ca1f94a449a2303a06bb9140ba4884d2fe5c21a43d9b8b8dc92",
+    "src/football_intelligence/recruitment/export.py": "f8725d65446a0676ca29d2c80673e111decfb03c746deed7194b0c248d665542",
+    "src/football_intelligence/recruitment/registry.py": "aff3071078219dcbe69aefca9e5fb75c4b8a58f87358d97270efcf85d042ed33",
+    "src/football_intelligence/recruitment/robustness.py": "fd89f63c59b877b5ad36a3c68e7da3616ab939e1a4b886e2097e71fae24066d0",
+    "src/football_intelligence/recruitment/scoring.py": "012a5f8c26c8b32ecc47271ab81514e7a93ae8b1f9bd0462125c340d16758e6d",
+    "src/football_intelligence/recruitment/stability.py": "3b31be0ac3725f3e97412a8812bea4840adb43d54a9be562f726a24e8d4ebb40"
+  },
+  "cohort": "wsl_2023_24",
+  "default_threshold": 900,
+  "dna_version": "player-dna-v1",
+  "eligible_players": 138,
+  "feature_registry": "features-v1",
+  "fit_algorithm": "weighted_rms",
+  "generated_at": "2026-09-30T19:36:10+02:00",
+  "public_bytes": 1562322,
+  "public_sha256": {
+    "bootstrap/CB.json": "e133c89b17d49493e091da99772f869e53ad8658b94b3ed702738969c53e2d7e",
+    "bootstrap/CM.json": "0afc15ef3c6528e01b48c1a04b424b9d3bcc3ee0a7b33e38ca1cedee0cd686eb",
+    "bootstrap/DM.json": "3724efb5de1bfeb7a6bb3ce4f01bc0196a9d94b33b4a91fed9392599b07d0a85",
+    "bootstrap/FB-WB.json": "a3f3e6337c99ef7380bfe2243963c0296d88eb5c7f2a735f4c5078082ca5534d",
+    "bootstrap/ST.json": "db9798e7c156bc562f1cf122621882ab0d95187a77e33cd401965bc70cf21904",
+    "bootstrap/W.json": "d55f3cdb923c590b762e326f43c15cd742a41bf9acb907c2c4b87e2e096b83a3",
+    "clubs/3a6cf779-2270-5819-8cd8-e7a355a83a87.json": "c21c9258553259318e4147dc6dcbb921525e3ecb72f432cd0620ce39e16c7cbd",
+    "clubs/4ec8fc42-342a-5a45-9070-3b237ecb7252.json": "0192d610db42ceae40ceb1610c0785a76170b0c7e1ffd9f204a52c02650d9821",
+    "clubs/5e1eb273-c618-5745-8f49-d2e770cd66f4.json": "87a3e471185a1688f2cbef26401be3a7f2d024b7c510169bc66fa6f6aa0d93af",
+    "clubs/60ab3faa-b309-556c-b5e6-e39a37765e22.json": "c763124616541dd701bc8c1aa994dc124641448b788838c8e1769d06ac8471c4",
+    "clubs/67cea9eb-8181-5982-ae0c-0e7f417144cb.json": "a411f4c44d99ac13facc4eb6cd9f3bbb22aa03830fe1fccfc28f62831b41d6d6",
+    "clubs/7322fcac-f730-5311-bce4-127e97c243d8.json": "3d72971e76e43a9f5d01bf659814cd4b472d0fb1e898f3ab3c3b828e47316053",
+    "clubs/76d18126-4c59-59b6-92d8-8cb6e64d6f06.json": "1c0c1d8ead93d3ffbdbd00bee04547523863c2875c0eaf01eec41e03d661b04b",
+    "clubs/7ec08217-8a10-52c6-8b2c-223b7273dde3.json": "b733d2a0a4e17a561c166657ab339d4a2e3302dc31f27adddaccb0f1b19cd762",
+    "clubs/a6e40be4-0c03-548e-b313-3765c77638f4.json": "2999117636ca89cac3c99258671d78ec06849ecd6d2f8be999d1fb690deddd1d",
+    "clubs/acf863e0-94d3-5983-8b8c-56976c2b59dc.json": "37ab3e6e7e8f706da3061ed79d5845a49b8189f9ab22d7ea334ec929d48f045d",
+    "clubs/ea7a234e-5bbd-55b3-8f0b-ef872c0433f6.json": "c2f685a63c6a1ab80d562042436796173ff5dfc574fc8d51ee0846f2821e0a36",
+    "clubs/fd45bdfb-70d8-5ffe-8be7-b26723b6fa87.json": "09f1ed0bc3e8d337afd2c76cdf3284a8969a4e94f5ffb6bd15f5417211784405",
+    "evaluation.json": "18b7cd2c2ca02686d5cf77003780692bed39c0f293e1f2cfab41e92ca3c879c8",
+    "index.json": "2191ea93170b8827d7c716c1d622487cbbc28e30f55adfab3614cc754932ebf9"
+  },
+  "ranking_stability_settings": {
+    "default_importance": 1,
+    "epsilon": 1e-09,
+    "importance_values": [
+      1,
+      2,
+      3
+    ],
+    "lcg": {
+      "increment": 1013904223,
+      "modulus": 4294967296,
+      "multiplier": 1664525
+    },
+    "loss": {
+      "exact": "absolute",
+      "maximum": "excess",
+      "minimum": "shortfall",
+      "neutral": "ignore"
+    },
+    "power": 2,
+    "profile_percentile_scale": 10,
+    "profile_samples": 100,
+    "rank_quantiles": [
+      0.1,
+      0.9
+    ],
+    "ranking_round_decimals": 9,
+    "requirements_version": "requirements-v1",
+    "satisfaction_exact_tolerance": 10,
+    "seed": 20260930,
+    "tie_break": "player_id_ascending",
+    "top_k": 10,
+    "unit": "percentile_points",
+    "version": "recruitment-fit-v1",
+    "weight_range": [
+      0.8,
+      1.2
+    ],
+    "weight_samples": 100
+  },
+  "requirement_schema": "requirements-v1",
+  "roster_players": 336,
+  "score_unit": "Weighted RMS percentile-point mismatch; lower is closer; not a suitability probability",
+  "selection": {
+    "checks": [
+      {
+        "eligible": true,
+        "method": "weighted_rms",
+        "mrr": 0.3912387959262959,
+        "random_mrr": 0.24077108669123945,
+        "weight_jaccard": 0.9452769070010448
+      },
+      {
+        "eligible": true,
+        "method": "family_rms",
+        "mrr": 0.3880806197770484,
+        "random_mrr": 0.24077108669123945,
+        "weight_jaccard": 0.9598853254025669
+      }
+    ],
+    "code_commit": "9a96a5a22d5070cacdabb1116baea08578f5bced",
+    "context_in_ranking": "Only explicit user-adopted requirements; no hidden context blend",
+    "development_sha256": "84521191d06c5e658120482268619b705ac504d67fa58eaf827dbcd6e8d1fdfa",
+    "experiment_sha256": "e1112beba231651d911a2716f24aa569cc25f638ca23cce738a853ef214fed86",
+    "final_queries_opened": false,
+    "selected_method": "weighted_rms",
+    "selection_policy": "Continuous severity + correct constraints + transparency, then development retrieval above random and weight Jaccard >=0.65; prefer equal explicit feature weights",
+    "version": "recruitment-fit-v1"
+  },
+  "selection_commit": "190bdc0c82a6a73f788e623545639d35671860d7",
+  "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "version": "recruitment-fit-v1",
+  "weights_policy": "Equal explicitly selected feature weights by default; optional visible 1/2/3 feature and family importance"
+}

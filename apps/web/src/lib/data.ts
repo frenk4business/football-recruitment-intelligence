@@ -32,3 +32,8 @@ export const translationEvaluation = () =>
   load<import("./contracts").TranslationEvaluation>(
     "phase3/public/evaluation.json",
   );
+
+export const recruitmentEvaluation = () =>
+  load<import("./contracts").RecruitmentEvaluation>(
+    "phase4/public/evaluation.json",
+  );
