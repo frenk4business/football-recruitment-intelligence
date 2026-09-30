@@ -1,0 +1,188 @@
+{
+  "candidate_transitions": 153,
+  "competitions": [
+    {
+      "id": 28,
+      "matches": 64,
+      "name": "World Cup",
+      "seasons": [
+        10078
+      ]
+    },
+    {
+      "id": 102,
+      "matches": 51,
+      "name": "European Championship",
+      "seasons": [
+        9291
+      ]
+    },
+    {
+      "id": 364,
+      "matches": 380,
+      "name": "English first division",
+      "seasons": [
+        181150
+      ]
+    },
+    {
+      "id": 412,
+      "matches": 380,
+      "name": "French first division",
+      "seasons": [
+        181189
+      ]
+    },
+    {
+      "id": 426,
+      "matches": 306,
+      "name": "German first division",
+      "seasons": [
+        181137
+      ]
+    },
+    {
+      "id": 524,
+      "matches": 380,
+      "name": "Italian first division",
+      "seasons": [
+        181248
+      ]
+    },
+    {
+      "id": 795,
+      "matches": 380,
+      "name": "Spanish first division",
+      "seasons": [
+        181144
+      ]
+    }
+  ],
+  "cross_league_candidates": 61,
+  "cross_league_players": 61,
+  "domestic_roster_players": 2996,
+  "environments": 3149,
+  "feature_compatibility": "Separate event ontology; no StatsBomb pressure, carry or xG equivalence assumed. No events pooled or model fitted.",
+  "licence": "CC BY 4.0",
+  "limitation": "Only one domestic season. Counts are provider-ID-linked ordered roster-context candidates, not reconciled-minute eligible episodes or contractual transfer records. No later domestic season for independent temporal validation.",
+  "matrix": [
+    {
+      "candidates": 2,
+      "destination": "French first division",
+      "source": "English first division"
+    },
+    {
+      "candidates": 3,
+      "destination": "German first division",
+      "source": "English first division"
+    },
+    {
+      "candidates": 1,
+      "destination": "Italian first division",
+      "source": "English first division"
+    },
+    {
+      "candidates": 8,
+      "destination": "Spanish first division",
+      "source": "English first division"
+    },
+    {
+      "candidates": 4,
+      "destination": "English first division",
+      "source": "French first division"
+    },
+    {
+      "candidates": 2,
+      "destination": "German first division",
+      "source": "French first division"
+    },
+    {
+      "candidates": 7,
+      "destination": "Italian first division",
+      "source": "French first division"
+    },
+    {
+      "candidates": 3,
+      "destination": "Spanish first division",
+      "source": "French first division"
+    },
+    {
+      "candidates": 4,
+      "destination": "English first division",
+      "source": "German first division"
+    },
+    {
+      "candidates": 2,
+      "destination": "French first division",
+      "source": "German first division"
+    },
+    {
+      "candidates": 1,
+      "destination": "Italian first division",
+      "source": "German first division"
+    },
+    {
+      "candidates": 5,
+      "destination": "Spanish first division",
+      "source": "German first division"
+    },
+    {
+      "candidates": 5,
+      "destination": "English first division",
+      "source": "Italian first division"
+    },
+    {
+      "candidates": 2,
+      "destination": "French first division",
+      "source": "Italian first division"
+    },
+    {
+      "candidates": 1,
+      "destination": "German first division",
+      "source": "Italian first division"
+    },
+    {
+      "candidates": 5,
+      "destination": "Spanish first division",
+      "source": "Italian first division"
+    },
+    {
+      "candidates": 2,
+      "destination": "English first division",
+      "source": "Spanish first division"
+    },
+    {
+      "candidates": 1,
+      "destination": "French first division",
+      "source": "Spanish first division"
+    },
+    {
+      "candidates": 3,
+      "destination": "Italian first division",
+      "source": "Spanish first division"
+    }
+  ],
+  "metadata_missing_player_ids": [
+    3689,
+    298776,
+    302605,
+    379199,
+    381235,
+    447214,
+    470819,
+    471582,
+    475356,
+    488648,
+    497353,
+    503366,
+    530062,
+    531447,
+    532900
+  ],
+  "players_metadata": 3603,
+  "provider": "wyscout",
+  "source": "https://figshare.com/collections/Soccer_match_event_dataset/4415000",
+  "structural_rejections": {
+    "overlapping_observations": 4
+  }
+}

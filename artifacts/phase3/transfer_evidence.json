@@ -1,0 +1,702 @@
+{
+  "actual_team_changes": 87,
+  "candidates": 565,
+  "catalogue_cross_league_candidates": {
+    "female": 23,
+    "male": 142
+  },
+  "catalogue_matrix": [
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Liga F",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Frauen Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A Women",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Frauen Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "FA Women's Super League",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Liga F"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A Women",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Liga F"
+    },
+    {
+      "at_least_five_appearances_both": 5,
+      "destination": "FA Women's Super League",
+      "episodes": 10,
+      "gender": "female",
+      "players": 9,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Frauen Bundesliga",
+      "episodes": 2,
+      "gender": "female",
+      "players": 2,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Liga F",
+      "episodes": 2,
+      "gender": "female",
+      "players": 2,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A Women",
+      "episodes": 2,
+      "gender": "female",
+      "players": 2,
+      "source": "NWSL"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "FA Women's Super League",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Serie A Women"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Frauen Bundesliga",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Serie A Women"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Liga F",
+      "episodes": 1,
+      "gender": "female",
+      "players": 1,
+      "source": "Serie A Women"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "La Liga",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Ligue 1",
+      "episodes": 1,
+      "gender": "male",
+      "players": 1,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Premier League",
+      "episodes": 2,
+      "gender": "male",
+      "players": 2,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "Serie A",
+      "episodes": 1,
+      "gender": "male",
+      "players": 1,
+      "source": "1. Bundesliga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 3,
+      "destination": "Ligue 1",
+      "episodes": 14,
+      "gender": "male",
+      "players": 14,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Premier League",
+      "episodes": 9,
+      "gender": "male",
+      "players": 9,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Serie A",
+      "episodes": 12,
+      "gender": "male",
+      "players": 12,
+      "source": "La Liga"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 11,
+      "gender": "male",
+      "players": 11,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 3,
+      "destination": "La Liga",
+      "episodes": 12,
+      "gender": "male",
+      "players": 12,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Major League Soccer",
+      "episodes": 3,
+      "gender": "male",
+      "players": 3,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Premier League",
+      "episodes": 5,
+      "gender": "male",
+      "players": 5,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Serie A",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Ligue 1"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "La Liga",
+      "episodes": 15,
+      "gender": "male",
+      "players": 15,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Ligue 1",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Serie A",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Premier League"
+    },
+    {
+      "at_least_five_appearances_both": 0,
+      "destination": "1. Bundesliga",
+      "episodes": 1,
+      "gender": "male",
+      "players": 1,
+      "source": "Serie A"
+    },
+    {
+      "at_least_five_appearances_both": 4,
+      "destination": "La Liga",
+      "episodes": 26,
+      "gender": "male",
+      "players": 26,
+      "source": "Serie A"
+    },
+    {
+      "at_least_five_appearances_both": 1,
+      "destination": "Ligue 1",
+      "episodes": 2,
+      "gender": "male",
+      "players": 2,
+      "source": "Serie A"
+    },
+    {
+      "at_least_five_appearances_both": 2,
+      "destination": "Premier League",
+      "episodes": 4,
+      "gender": "male",
+      "players": 4,
+      "source": "Serie A"
+    }
+  ],
+  "cross_league_changes": 0,
+  "dates": [
+    "2018-09-09",
+    "2024-05-18"
+  ],
+  "destination_under_450": 160,
+  "destination_zero_minutes": 44,
+  "environments": 1225,
+  "feature_coverage": {
+    "box_carries_per90": 1063,
+    "box_passes_per90": 1063,
+    "box_shots_per90": 1063,
+    "carries_per90": 1063,
+    "carry_distance_per90": 1063,
+    "counterpressures_per90": 1063,
+    "crosses_per90": 1063,
+    "final_third_passes_per90": 1063,
+    "interceptions_per90": 1063,
+    "long_passes_per90": 1063,
+    "passes_per90": 1063,
+    "pressures_per90": 1063,
+    "progressive_carries_per90": 1063,
+    "progressive_passes_per90": 1063,
+    "recoveries_per90": 1063,
+    "shot_assists_per90": 1063,
+    "shots_per90": 1063,
+    "tackles_per90": 1063
+  },
+  "identity_anomalies": {
+    "112ad56a-1911-5e6f-84b0-88b4ed3fb3d9": {
+      "names": [
+        "Elisha N''Dow",
+        "Elisha N'Dow"
+      ],
+      "provider_player_id": 46534,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "status": "quarantined"
+    },
+    "14f954ea-23a2-547a-b2b0-94bd17ea79aa": {
+      "names": [
+        "Alexandra MacIver"
+      ],
+      "provider_player_id": 34360,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    },
+    "1ddf9d08-571e-5bd8-860c-b824a22cae1d": {
+      "names": [
+        "Aoife Mannion"
+      ],
+      "provider_player_id": 19503,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    },
+    "21eaa9e2-272f-5481-8c6f-6d90f9600dc2": {
+      "names": [
+        "Vyan Sampson"
+      ],
+      "provider_player_id": 21014,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    },
+    "64e83e73-b413-5bfd-9e98-52e5aaf1e0d1": {
+      "names": [
+        "Hannah Godfrey"
+      ],
+      "provider_player_id": 31552,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    },
+    "6acd509e-e157-5b97-97ab-8620f0e9d8d0": {
+      "names": [
+        "Janine Elizabeth Beckie",
+        "Janine Elizabeth Sonis"
+      ],
+      "provider_player_id": 4992,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "status": "quarantined"
+    },
+    "6c9b7655-0985-59c1-b484-32c30afd121a": {
+      "names": [
+        "Ellen Jones"
+      ],
+      "provider_player_id": 46739,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    },
+    "9bd85131-bb9d-5075-9781-7923b686170e": {
+      "names": [
+        "Anna Patten"
+      ],
+      "provider_player_id": 78072,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    },
+    "c894c52b-5ad3-5480-9c46-e4c578b9dd6f": {
+      "names": [
+        "Rinsola Babajide",
+        "Rinsola Omowunmiajike Babajide"
+      ],
+      "provider_player_id": 15613,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "status": "quarantined"
+    },
+    "d7863eb4-3436-52c8-8c76-bc80d0710515": {
+      "names": [
+        "Jessica Wooley",
+        "Jessica Woolley"
+      ],
+      "provider_player_id": 16389,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "status": "quarantined"
+    },
+    "d9b80ef0-7b00-5340-b2ce-7e23f3291d48": {
+      "names": [
+        "Ivana Ferreira Fuso",
+        "Ivana Fuso"
+      ],
+      "provider_player_id": 61029,
+      "reasons": [
+        "conflicting_names"
+      ],
+      "status": "quarantined"
+    },
+    "e422535c-0769-501a-ae95-02ebec5ab381": {
+      "names": [
+        "Melisa Filis"
+      ],
+      "provider_player_id": 23320,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    },
+    "f2c01db9-c55a-57d8-99cc-38e34e38f53d": {
+      "names": [
+        "Emily Murphy"
+      ],
+      "provider_player_id": 33090,
+      "reasons": [
+        "conflicting_nationality"
+      ],
+      "status": "quarantined"
+    }
+  },
+  "identity_status": {
+    "provider_id_consistent_metadata": 647,
+    "quarantined": 13
+  },
+  "matches": 457,
+  "minutes_quality": {
+    "conflicting": 26,
+    "reconciled": 40,
+    "reliable": 16527
+  },
+  "players": 660,
+  "provider": "statsbomb",
+  "repeated_players": 311,
+  "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "scope_decision": "NO-GO for broad cross-league translation; assess narrower WSL season/team context",
+  "selected_competitions": [
+    "FA Women's Super League"
+  ],
+  "selected_matrix": [
+    {
+      "candidates": 3,
+      "destination_season": "2018/2019",
+      "eligible": {
+        "1200": 0,
+        "450": 0,
+        "600": 0,
+        "900": 0
+      },
+      "source_season": "2018/2019"
+    },
+    {
+      "candidates": 173,
+      "destination_season": "2019/2020",
+      "eligible": {
+        "1200": 27,
+        "450": 92,
+        "600": 80,
+        "900": 55
+      },
+      "source_season": "2018/2019"
+    },
+    {
+      "candidates": 13,
+      "destination_season": "2020/2021",
+      "eligible": {
+        "1200": 0,
+        "450": 0,
+        "600": 0,
+        "900": 0
+      },
+      "source_season": "2018/2019"
+    },
+    {
+      "candidates": 3,
+      "destination_season": "2023/2024",
+      "eligible": {
+        "1200": 0,
+        "450": 0,
+        "600": 0,
+        "900": 0
+      },
+      "source_season": "2018/2019"
+    },
+    {
+      "candidates": 7,
+      "destination_season": "2019/2020",
+      "eligible": {
+        "1200": 0,
+        "450": 0,
+        "600": 0,
+        "900": 0
+      },
+      "source_season": "2019/2020"
+    },
+    {
+      "candidates": 191,
+      "destination_season": "2020/2021",
+      "eligible": {
+        "1200": 24,
+        "450": 97,
+        "600": 81,
+        "900": 62
+      },
+      "source_season": "2019/2020"
+    },
+    {
+      "candidates": 19,
+      "destination_season": "2023/2024",
+      "eligible": {
+        "1200": 0,
+        "450": 0,
+        "600": 0,
+        "900": 0
+      },
+      "source_season": "2019/2020"
+    },
+    {
+      "candidates": 13,
+      "destination_season": "2020/2021",
+      "eligible": {
+        "1200": 0,
+        "450": 0,
+        "600": 0,
+        "900": 0
+      },
+      "source_season": "2020/2021"
+    },
+    {
+      "candidates": 133,
+      "destination_season": "2023/2024",
+      "eligible": {
+        "1200": 0,
+        "450": 0,
+        "600": 0,
+        "900": 0
+      },
+      "source_season": "2020/2021"
+    },
+    {
+      "candidates": 10,
+      "destination_season": "2023/2024",
+      "eligible": {
+        "1200": 0,
+        "450": 2,
+        "600": 1,
+        "900": 0
+      },
+      "source_season": "2023/2024"
+    }
+  ],
+  "selected_seasons": [
+    "2018/2019",
+    "2019/2020",
+    "2020/2021",
+    "2023/2024"
+  ],
+  "structural_destination_under_450": 116,
+  "structural_destination_zero_minutes": 33,
+  "structurally_eligible_candidates": 385,
+  "teams": 15,
+  "thresholds": {
+    "1200": {
+      "destination_seasons": {
+        "2019/2020": 27,
+        "2020/2021": 24
+      },
+      "eligible": 51,
+      "players": 35,
+      "rejected_reasons": {
+        "below_minutes": 469,
+        "goalkeeper_excluded": 50,
+        "missing_core_features": 70,
+        "missing_role": 95,
+        "observation_gap_over_450_days": 170,
+        "rejected_identity": 17,
+        "unobserved_intervening_season": 168
+      },
+      "roles": {
+        "AM": 3,
+        "CB": 17,
+        "CM": 7,
+        "DM": 7,
+        "FB/WB": 7,
+        "ST": 2,
+        "W": 8
+      },
+      "transition_types": {
+        "season_change_same_team": 46,
+        "team_and_season_change": 5
+      }
+    },
+    "450": {
+      "destination_seasons": {
+        "2019/2020": 92,
+        "2020/2021": 97,
+        "2023/2024": 2
+      },
+      "eligible": 191,
+      "players": 130,
+      "rejected_reasons": {
+        "below_minutes": 246,
+        "goalkeeper_excluded": 50,
+        "missing_core_features": 70,
+        "missing_role": 95,
+        "observation_gap_over_450_days": 170,
+        "rejected_identity": 17,
+        "unobserved_intervening_season": 168
+      },
+      "roles": {
+        "AM": 5,
+        "CB": 38,
+        "CM": 20,
+        "DM": 28,
+        "FB/WB": 40,
+        "ST": 20,
+        "W": 40
+      },
+      "transition_types": {
+        "same_league_team_change": 2,
+        "season_change_same_team": 161,
+        "team_and_season_change": 28
+      }
+    },
+    "600": {
+      "destination_seasons": {
+        "2019/2020": 80,
+        "2020/2021": 81,
+        "2023/2024": 1
+      },
+      "eligible": 162,
+      "players": 112,
+      "rejected_reasons": {
+        "below_minutes": 298,
+        "goalkeeper_excluded": 50,
+        "missing_core_features": 70,
+        "missing_role": 95,
+        "observation_gap_over_450_days": 170,
+        "rejected_identity": 17,
+        "unobserved_intervening_season": 168
+      },
+      "roles": {
+        "AM": 5,
+        "CB": 34,
+        "CM": 18,
+        "DM": 22,
+        "FB/WB": 31,
+        "ST": 16,
+        "W": 36
+      },
+      "transition_types": {
+        "same_league_team_change": 1,
+        "season_change_same_team": 137,
+        "team_and_season_change": 24
+      }
+    },
+    "900": {
+      "destination_seasons": {
+        "2019/2020": 55,
+        "2020/2021": 62
+      },
+      "eligible": 117,
+      "players": 83,
+      "rejected_reasons": {
+        "below_minutes": 378,
+        "goalkeeper_excluded": 50,
+        "missing_core_features": 70,
+        "missing_role": 95,
+        "observation_gap_over_450_days": 170,
+        "rejected_identity": 17,
+        "unobserved_intervening_season": 168
+      },
+      "roles": {
+        "AM": 4,
+        "CB": 28,
+        "CM": 14,
+        "DM": 18,
+        "FB/WB": 18,
+        "ST": 10,
+        "W": 25
+      },
+      "transition_types": {
+        "season_change_same_team": 105,
+        "team_and_season_change": 12
+      }
+    }
+  },
+  "transition_types": {
+    "same_league_team_change": 33,
+    "season_change_same_team": 383,
+    "team_and_season_change": 149
+  }
+}

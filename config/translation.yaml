@@ -1,0 +1,14 @@
+version: translation-model-v1
+feature_version: features-v1
+player_dna_version: player-dna-v1
+seed: 20260930
+provider: statsbomb
+revision: 4b73468fc5b0f1950f9f66fada70ad3a4f9327cb
+audit_thresholds: [450, 600, 900, 1200]
+max_gap_days: 450
+audit_seasons:
+  - [37, 4]
+  - [37, 42]
+  - [37, 90]
+  - [37, 281]
+# Modelling configuration is added only after committing the evidence scope.

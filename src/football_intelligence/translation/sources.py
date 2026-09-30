@@ -16,6 +16,16 @@ class SourceCache:
         self.directory = directory
         self.directory.mkdir(parents=True, exist_ok=True)
         self.client = httpx.Client(timeout=90, follow_redirects=True)
+        self.expected = {}
+        for ancestor in directory.parents:
+            lock = ancestor / "config/phase3.sources.json"
+            if lock.exists():
+                prefix = ancestor / "data/raw/phase3"
+                for record in json.loads(lock.read_text())["files"]:
+                    self.expected[str(prefix / record["provider"] / record["path"])] = record[
+                        "sha256"
+                    ]
+                break
 
     def get(self, relative: str, url: str, limit: int = 30_000_000) -> bytes:
         path = self.directory / relative
@@ -23,7 +33,11 @@ class SourceCache:
         if path.exists() and sidecar.exists():
             payload = path.read_bytes()
             record = json.loads(sidecar.read_text())
-            if record["url"] != url or hashlib.sha256(payload).hexdigest() != record["sha256"]:
+            if (
+                record["url"] != url
+                or hashlib.sha256(payload).hexdigest() != record["sha256"]
+                or record["sha256"] != self.expected.get(str(path), record["sha256"])
+            ):
                 raise ValueError(f"Source cache mismatch: {relative}")
             return payload
         for attempt in range(5):
@@ -48,6 +62,11 @@ class SourceCache:
                 if attempt == 4:
                     raise
                 time.sleep(2**attempt)
+        if (
+            str(path) in self.expected
+            and hashlib.sha256(payload).hexdigest() != self.expected[str(path)]
+        ):
+            raise ValueError(f"Pinned source checksum mismatch: {relative}")
         path.parent.mkdir(parents=True, exist_ok=True)
         path.with_suffix(path.suffix + ".tmp").write_bytes(payload)
         path.with_suffix(path.suffix + ".tmp").replace(path)
