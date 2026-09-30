@@ -9,6 +9,7 @@ from football_intelligence.api import create_app
 from football_intelligence.dna import contracts as dna_contracts
 from football_intelligence.dna.registry import FeatureDefinition
 from football_intelligence.export import write_json
+from football_intelligence.translation import contracts as translation_contracts
 
 MODELS = [
     "MetricDefinition",
@@ -24,6 +25,10 @@ MODELS = [
     "DNAEvaluation",
     "DNANeighbor",
     "FeatureDefinition",
+    "TranslationIndex",
+    "TranslationPlayerDetail",
+    "TranslationEvaluation",
+    "TranslationModels",
 ]
 
 
@@ -63,7 +68,14 @@ def generate(check: bool = False):
         model = (
             FeatureDefinition
             if name == "FeatureDefinition"
-            else getattr(dna_contracts if name.startswith("DNA") else contracts, name)
+            else getattr(
+                translation_contracts
+                if name.startswith("Translation")
+                else dna_contracts
+                if name.startswith("DNA")
+                else contracts,
+                name,
+            )
         )
         schema = model.model_json_schema()
         schemas.update(schema.pop("$defs", {}))

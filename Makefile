@@ -51,3 +51,19 @@ phase2-build:
 	uv run fri similarity evaluate
 	uv run fri similarity build
 	uv run python scripts/phase2_reports.py
+
+.PHONY: translation-audit translation-data translation-validate translation-evaluate translation-publish phase3-build
+translation-audit:
+	uv run fri translation audit
+translation-data:
+	uv run fri translation data
+	uv run python scripts/phase3_reports.py
+translation-validate:
+	uv run fri translation validate-models
+translation-evaluate:
+	uv run fri translation evaluate
+translation-publish:
+	uv run fri translation publish
+phase3-build: translation-data translation-evaluate translation-publish
+	uv run python scripts/translation_reports.py
+	uv run python scripts/generate_contracts.py

@@ -1,0 +1,100 @@
+{
+  "default_lazy_player": {
+    "bytes": 118916,
+    "gzip_bytes": 7198
+  },
+  "default_player": "Abbi Grant",
+  "index": {
+    "bytes": 92404,
+    "gzip_bytes": 25665
+  },
+  "note": "Static bootstrap script references; browser prefetch, HTTP headers and CDN compression can change transferred totals. One player detail is fetched on initial interaction load; no posterior samples.",
+  "routes": {
+    "nl/translation": {
+      "html": {
+        "bytes": 166039,
+        "gzip_bytes": 52627
+      },
+      "initial_javascript_bytes": 655121,
+      "initial_javascript_files": 8,
+      "initial_javascript_gzip_bytes": 201324,
+      "scripts": {
+        "/_next/static/chunks/256-a8a557284ab64c62.js": {
+          "bytes": 22805,
+          "gzip_bytes": 8394
+        },
+        "/_next/static/chunks/340-7858fe3e2d11a72e.js": {
+          "bytes": 73476,
+          "gzip_bytes": 22768
+        },
+        "/_next/static/chunks/4bd1b696-92152b0f5947070d.js": {
+          "bytes": 201054,
+          "gzip_bytes": 63201
+        },
+        "/_next/static/chunks/794-71ff2c1735abeddf.js": {
+          "bytes": 241299,
+          "gzip_bytes": 65609
+        },
+        "/_next/static/chunks/app/nl/%5Bsection%5D/page-c6b31408772cb408.js": {
+          "bytes": 127,
+          "gzip_bytes": 122
+        },
+        "/_next/static/chunks/main-app-7d59ed80360bc834.js": {
+          "bytes": 513,
+          "gzip_bytes": 222
+        },
+        "/_next/static/chunks/polyfills-42372ed130431b0a.js": {
+          "bytes": 112594,
+          "gzip_bytes": 39373
+        },
+        "/_next/static/chunks/webpack-52d428ccd66bfe75.js": {
+          "bytes": 3253,
+          "gzip_bytes": 1635
+        }
+      }
+    },
+    "translation": {
+      "html": {
+        "bytes": 166942,
+        "gzip_bytes": 52663
+      },
+      "initial_javascript_bytes": 655121,
+      "initial_javascript_files": 8,
+      "initial_javascript_gzip_bytes": 201324,
+      "scripts": {
+        "/_next/static/chunks/256-a8a557284ab64c62.js": {
+          "bytes": 22805,
+          "gzip_bytes": 8394
+        },
+        "/_next/static/chunks/340-7858fe3e2d11a72e.js": {
+          "bytes": 73476,
+          "gzip_bytes": 22768
+        },
+        "/_next/static/chunks/4bd1b696-92152b0f5947070d.js": {
+          "bytes": 201054,
+          "gzip_bytes": 63201
+        },
+        "/_next/static/chunks/794-71ff2c1735abeddf.js": {
+          "bytes": 241299,
+          "gzip_bytes": 65609
+        },
+        "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a0b57f6df719fb02.js": {
+          "bytes": 127,
+          "gzip_bytes": 122
+        },
+        "/_next/static/chunks/main-app-7d59ed80360bc834.js": {
+          "bytes": 513,
+          "gzip_bytes": 222
+        },
+        "/_next/static/chunks/polyfills-42372ed130431b0a.js": {
+          "bytes": 112594,
+          "gzip_bytes": 39373
+        },
+        "/_next/static/chunks/webpack-52d428ccd66bfe75.js": {
+          "bytes": 3253,
+          "gzip_bytes": 1635
+        }
+      }
+    }
+  }
+}

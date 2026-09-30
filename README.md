@@ -1,109 +1,74 @@
 # Football Recruitment Intelligence
 
-**Phase 2 — Player DNA & Similarity** is implemented on `phase/02-player-dna`, stacked on the unmerged Phase 1 branch. WSL 2023/24: 132 matches, 336 roster players, 138 eligible at 900 reliable minutes. Eighteen style features, role-aware scaling, equal-family Euclidean distance, top-10 explanations and bootstrap stability. English `/player-dna/`, Dutch `/nl/player-dna/`.
+Open football data → observed Player DNA → historical performance translation, with visible uncertainty. Independent non-commercial research by Frenk Kester.
 
-Run `make setup`, `make test`, `make phase2-build`, `make build`. The research build downloads/caches the pinned season once; the web build uses only committed permitted aggregates. See [evaluation](docs/player-similarity-evaluation.md), [features](docs/player-features.md), [method](docs/player-similarity.md), [Phase 3 hand-off](docs/phase-3-handoff.md). Fixed infrastructure remains €0/month within existing Render allowances. Similarity is not quality, tactical fit or transfer prediction.
+[Live translation](https://football-recruitment-intelligence.onrender.com/translation/) · [Nederlands](README.nl.md) · [Player DNA](https://football-recruitment-intelligence.onrender.com/player-dna/) · [Research evaluation](docs/league-translation-evaluation.md) · [Model card](docs/model-card-phase3.md)
 
-The original Phase 1 foundation and setup documentation follows.
+## Phase 3: what the evidence supports
 
+The full official StatsBomb catalogue was audited: **80 competition-seasons, 3,961 match lineups and 11,794 provider identities**. A separate Wyscout audit did not solve the shortage of longitudinal transfer evidence. Broad cross-league translation is **NO-GO**. The implemented fallback is a **conditional historical FA Women’s Super League season/team-context study**, not a universal translator or a transfer-success score.
 
-Open-data football research with explicit provenance, canonical event/tracking contracts and reproducible analytical tables.
+Four WSL seasons provide 457 matches, 660 roster players and 1,225 environment stints. Reliable minutes, provider identity, adjacent observation windows and role/context coverage yield **53 train / 12 validation / 76 later-season test episodes**, with 600 reliable minutes on both sides. Only **four test episodes change team**. The source is 2019/20 and the target scenario is 2020/21; this is not a current-season forecast.
 
-[Live preview](https://football-recruitment-intelligence.onrender.com/) · [Phase 1 PR](https://github.com/frenk4business/football-recruitment-intelligence/pull/1) · [English](README.md) · [Nederlands](README.nl.md) · [Data audit](docs/data-sources.md) · [Architecture](docs/architecture.md)
+Three baselines are compared with four hierarchical Bayesian negative-binomial count models. Role and team effects are partially pooled; minutes enter as exposure. Inputs use source activity and team information available before the destination observation. No league coefficient is estimated from a single league. Priors and the experiment were committed before fitting, and method choices were committed before inspecting the later test.
 
-**Phase 1: data foundation.** The bilingual explorer uses real ingested observations. Player similarity, league translation and recruitment recommendations are planned, not implemented. This is independent research and does not reproduce any organisation's proprietary methods.
+| Target | Validation-selected default | Test MAE /90 | 80% range coverage | Mean width /90 |
+|---|---|---:|---:|---:|
+| Non-penalty shots | Ridge regression | 0.397 | 73.7% | 0.969 |
+| Progressive passes | Ridge regression | 0.920 | 71.1% | 1.889 |
+| Progressive carries | Unchanged source | 0.500 | 80.3% | 1.552 |
+| Pressures | Unchanged source | 2.894 | 76.3% | 8.214 |
 
-Research question: **How can open football data support useful, explainable and uncertainty-aware recruitment decisions?** First establish whether the underlying evidence can be represented and inspected reliably.
+**No Bayesian model qualified as the public default under every validation rule.** It remains a documented research comparison. All primary fits have zero divergences and maximum R-hat 1.0055; good sampling did not guarantee better prediction. Shot/pass ranges understate uncertainty. Context effects are weakly identified and do not justify ranking clubs or leagues.
 
-## What is here
+The bilingual workflow shows source and target environment, role assumption, observed versus expected action rates, an 80% predictive range, numeric evidence and pooling warnings. Unsupported periods, roles, low minutes, missing context and source extrapolation get explicit states without estimates. Observed Player DNA remains separate: WSL 2023/24, 132 matches, 336 roster players, 138 comparable profiles at 900 minutes and 18 style features.
 
-- StatsBomb event and SkillCorner tracking adapters with pinned inputs, checksum-verified caches and deterministic IDs.
-- Typed canonical tables, coordinate transforms, explicit quality reports, Parquet storage and DuckDB player-match/player-season/team-season marts.
-- FastAPI response contracts, generated TypeScript definitions and a Next.js English/Dutch product.
-- Match exploration, player filtering, coarse event-location analysis, a tracking slider, data coverage and methodology.
-- Offline fixture tests, GitHub Actions and a static Render deployment configuration. No hosted database or paid data/model API.
+## Run and reproduce
 
-## Architecture
-
-```mermaid
-flowchart LR
-  A[Pinned provider files] --> B[Adapters + validation]
-  B --> C[Parquet]
-  C --> D[DuckDB marts]
-  D --> E[Typed aggregate JSON]
-  E --> F[Local FastAPI]
-  E --> G[Next.js / Render static CDN]
-```
-
-[Architecture and trade-offs](docs/architecture.md) · [Data model](docs/data-model.md) · [Decision records](docs/adr/001-duckdb-parquet.md)
-
-## Data actually used
-
-| Provider | Observation | Ingested records | Boundary |
-|---|---|---|---|
-| StatsBomb | Argentina–France, 18 Dec 2022, FIFA World Cup | 4,407 events; 50 roster players | Full match including extra time/shootout; public metrics exclude shootout |
-| SkillCorner | Western United–Sydney FC, 27 Apr 2025, A-League 2024/25 | 60 frames; 1,380 objects; 36 roster players | First 60 seconds, 1 Hz; roster/minutes metadata refers to full match |
-
-These are different matches and independent identities. Roster players include unused substitutes. Six inconsistent StatsBomb minute intervals and five absent SkillCorner playing-time entries remain null. Two event-order timestamp anomalies and 29 actorless events are reported. [Methods and limitations](docs/methodology.md).
-
-**Data rights differ from code rights.** StatsBomb's agreement restricts raw redistribution and commercial exploitation. Only derived research aggregates/bins are public. SkillCorner's MIT notice is retained. Source names, licence links and the StatsBomb logo appear in the UI. Raw downloads and Parquet are ignored by Git. See [ATTRIBUTION](ATTRIBUTION.md) before reuse.
-
-## Run locally
-
-Requirements: Python 3.12+, [uv](https://docs.astral.sh/uv/), Node **24.19.0**, npm and Make. Use the pinned versions/lockfiles; no account or secret is needed for local functionality. Source use remains subject to provider terms.
+Requirements: Python 3.12–3.13, [uv](https://docs.astral.sh/uv/), Node **24.19.0**, npm and Make. Use the committed lockfiles.
 
 ```sh
-git clone --branch phase/01-data-foundation https://github.com/frenk4business/football-recruitment-intelligence.git
+git clone https://github.com/frenk4business/football-recruitment-intelligence.git
 cd football-recruitment-intelligence
 make setup
 make test
-make data-bootstrap
+make build
+cd apps/web && npx playwright install chromium && cd ../..
+make smoke
 make dev
 ```
 
-The web app is at `http://localhost:3000`, Dutch at `/nl/`. Committed public artifacts also let the web build and tests work before downloading raw data. `make dev` runs the web process; `make api` optionally starts the local API separately.
-
-## Data commands
+The static build uses committed, validated research aggregates and needs no source downloads, secrets or model server. English `/translation/`; Dutch `/nl/translation/`. `make api` starts optional local FastAPI with interactive `/docs`.
 
 ```sh
-make data-bootstrap    # pinned small downloads, validation, Parquet, marts and public artifacts
-make data-statsbomb    # retrieve/cache only StatsBomb sample inputs
-make data-tracking     # retrieve/cache only the bounded tracking slice
-make data-build        # rebuild offline from checked caches
-make data-validate     # validate current canonical Parquet
-make data-coverage     # show actual coverage JSON
-uv run fri data discover statsbomb
+make data-bootstrap       # small Phase 1 event/tracking sample
+make phase2-build         # pinned WSL 2023/24 features/similarity
+make translation-audit    # full catalogue + separate Wyscout metadata audit
+make phase3-build         # WSL data, fixed-selection evaluation, public summaries and reports
+uv run python scripts/phase3_reproduce.py  # offline reconstruction + four fresh fits
+make contracts            # Pydantic → TypeScript / JSON Schema / OpenAPI
 ```
 
-Canonical and mart tables are in `data/processed/`. Queries use `football_intelligence.data.marts.connect(Path('data/processed'))`; it creates DuckDB views over Parquet. Source-specific IDs, original payloads, dates and quality flags remain available locally. [Provenance](docs/data-provenance.md) explains reproducibility and deliberate publication limits.
+The first research build downloads bounded, checksum-locked sources; repeated builds reuse them. Full research sampling is offline from the product, not part of Render builds or CI. `make translation-validate` is the explicit historical model-selection stage; the committed v1 selection must remain unchanged before test evaluation. [Architecture](docs/architecture.md) · [API](docs/api.md) · [provenance](docs/data-provenance.md).
 
-## Tests, web and API
+## Research, rights and limits
 
-```sh
-make test             # Python/frontend lint, typechecks, tests and generated-contract check
-make build            # static Next.js export
-cd apps/web && npx playwright install chromium && cd ../..
-make smoke            # both languages, interactions, mobile, accessibility, error state
-make api              # localhost:8000; /health, /docs, /api/v1/coverage and more
-make contracts        # regenerate public TypeScript/JSON/OpenAPI contracts
-```
+[Evidence audit](docs/phase-3-transfer-evidence.md) · [scope decision](docs/adr/006-phase3-evidence-scope.md) · [registered experiment](docs/phase-3-experiment-plan.md) · [prior predictive checks](docs/phase-3-prior-predictive.md) · [every baseline and sensitivity](docs/league-translation-evaluation.md) · [Player DNA evaluation](docs/player-similarity-evaluation.md).
 
-Tests use tiny clearly labelled synthetic fixtures; production artifacts use real data. They check adapter errors, coordinates, identity stability, references, quality anomalies, null semantics, SQL totals, deterministic Parquet, API validation and the no-raw-event export boundary. CI downloads no football dataset. [API contract](docs/api.md).
+Selection on destination minutes omits many non-playing outcomes. Historical fixture coverage is incomplete, target roles are supplied assumptions, and team/ability/opportunity are confounded. There is no causal league-strength claim, market value model or club recommendation. Baseline ranges describe earlier ≥600-minute season windows; only the optional Bayesian research range simulates a specific 900-minute observation.
 
-## Deployment and cost
+Raw StatsBomb event/lineup feeds, canonical Parquet and full posterior draws remain local. Only permitted derived research aggregates are published; source attribution and the StatsBomb logo remain visible. Wyscout metadata is separately attributed under CC BY 4.0. The one-minute SkillCorner sample remains a data-engineering demonstration, not a physical performance model. [Data rights and attribution](ATTRIBUTION.md).
 
-Render builds the static site from committed aggregates; the API remains local to avoid cold starts and unnecessary services. `render.yaml` documents build/publish settings. Fixed recurring project infrastructure cost: **€0/month**, subject to workspace-level bandwidth/build allowances; excess usage can be billable under the existing account settings. No paid resources or trial database are required. [Deployment details](docs/deployment.md).
+## Delivery and next phase
 
-## Roadmap and learning
+One existing Render Static Site serves committed aggregates. **No additional paid infrastructure was introduced beyond the existing Render workspace/Starter subscription.** No backend, worker, database or disk was added. Production is intended to track `main`; actual deployment verification is recorded in [deployment](docs/deployment.md) and [Phase 3 QA](docs/phase-3-qa.md). Completed phase PRs merge after checks; phase branches are not permanent review boundaries.
 
-1. Data foundation — current
-2. Player DNA & similarity — planned
-3. League translation & performance transfer — planned
-4. Recruitment intelligence — planned
-5. Product hardening & portfolio integration — planned
+1. Data Foundation — complete.
+2. Player DNA & Similarity — complete.
+3. League Translation & Bayesian Performance Transfer — complete/current, with the narrower WSL scope above.
+4. Recruitment Intelligence & Club Fit — planned.
+5. Production Hardening & Portfolio Integration — planned.
 
-The additional portfolio evidence is heterogeneous data engineering, canonical identities, provenance, data contracts, analytical SQL, source-aware product design and reproducible testing. [Portfolio context](docs/portfolio-context.md) · [Roadmap](docs/roadmap.md) · [Phase 2 hand-off](docs/phase-2-handoff.md).
+Phase 3 adds hierarchical inference, prior/PPC checks, probabilistic calibration, temporal holdout discipline, negative-result reporting and static delivery of predictive uncertainty. [Phase 4 hand-off](docs/phase-4-handoff.md) · [Portfolio learning](docs/portfolio-context.md).
 
-The current sample cannot establish player quality, competition strength or transfer success. No physical performance estimate is derived from 1 Hz tracking. Expanding the pinned cohort, resolving minutes conservatively and validating temporal coverage must precede any similarity model. Build snapshots assume one local writer. See source and architecture documents for the remaining practical limits.
-
-Code © 2026 Frenk Kester, MIT. Data and logos retain their own rights. Credit StatsBomb, SkillCorner and PySport as described in [ATTRIBUTION.md](ATTRIBUTION.md).
+Code © 2026 Frenk Kester, MIT. Data and logos retain their own rights.

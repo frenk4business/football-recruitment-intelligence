@@ -1,5 +1,7 @@
 # Phase 2 quality and reproducibility record
 
+Historical verification record. PRs #1 and #2 were subsequently merged into `main`; Phase 3 starts from `3d8f9a4`. The original branch/open status below is historical, not a current instruction.
+
 Phase 1 starting audit passed `make setup`, `make test`, `make data-bootstrap`, `make data-validate`, `make build` at 15b8415: 46 Python tests and four web unit tests. PR #1 remains unmerged. New work branches from that exact head and PR #2 targets `phase/01-data-foundation`.
 
 Local Phase 2 gate: 76 Python tests, Ruff lint/format, mypy, generated TypeScript contract consistency, frontend ESLint/TypeScript, four web unit tests, production static export and ten Playwright tests. Browser checks cover both languages, all six routes, source/tracking controls, player selection, low-minute/null states, threshold changes, pair comparisons, deterministic explanations, PCA map keyboard selection, error/retry states, mobile overflow and axe WCAG 2.2 AA checks. Intentional aborted-request tests are separated from normal no-console/no-failed-asset assertions.

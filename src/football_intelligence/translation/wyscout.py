@@ -8,9 +8,15 @@ from pathlib import Path
 from football_intelligence.data.schema import canonical_id
 from football_intelligence.dna.cohort import write
 from football_intelligence.translation.evidence import adjacent_transitions
+from football_intelligence.translation.sources import SourceCache
 
 
 def audit_wyscout(root: Path) -> dict:
+    cache = SourceCache(root / "data/raw/phase3/wyscout")
+    lock = json.loads((root / "config/phase3.sources.json").read_text())
+    for record in lock["files"]:
+        if record["provider"] == "wyscout" and record["path"].startswith("files/"):
+            cache.get(record["path"], record["url"])
     directory = root / "data/raw/phase3/wyscout/files"
     players = json.loads((directory / "players.json").read_text())
     if len({p["wyId"] for p in players}) != len(players):

@@ -295,6 +295,8 @@ def evaluate(root: Path, sensitivities: bool = True) -> dict:
                 trace, manifest = fit(
                     root, development, target, variant, label, no_team=label == "without_team"
                 )
+                if not manifest["diagnostics"]["passed"]:
+                    raise ValueError(f"Sensitivity diagnostic gate failed: {label}/{target}")
                 prediction = predict(trace, manifest["design"], heldout, seed=cfg["seed"] + 31)
                 values = np.array([rate(r, "destination", target) for r in heldout])
                 report["sensitivities"][label]["targets"][target] = dict(

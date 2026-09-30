@@ -246,3 +246,151 @@ export type TrackingSnapshot = {
   period: number;
   points: Array<TrackingPoint>;
 };
+
+export type TranslationEnvironment = {
+  environment_id: string;
+  team_id: string;
+  team: string;
+  competition: string;
+  season: string;
+  start_date: string;
+  end_date: string;
+  role: string | null;
+  role_shares: Record<string, number>;
+  reliable_minutes: number;
+  appearances: number;
+  used_as_development_outcome: boolean;
+  supported: boolean;
+  exclusions: Array<string>;
+};
+
+export type TranslationEstimate = {
+  metric: string;
+  method: string;
+  observed_source: number;
+  expected_target: number;
+  p10: number;
+  p90: number;
+  p025: number;
+  p975: number;
+  interval_kind: "posterior_predictive" | "empirical_predictive";
+  expected_rate_p10?: number | null;
+  expected_rate_p90?: number | null;
+};
+
+export type TranslationEvaluation = {
+  model_version: string;
+  train: number;
+  validation: number;
+  test: number;
+  test_period: Array<string>;
+  test_team_changes: number;
+  max_rhat: number;
+  divergences: number;
+  rows: Array<TranslationEvaluationRow>;
+};
+
+export type TranslationEvaluationRow = {
+  metric: string;
+  method: string;
+  n: number;
+  mae: number;
+  rmse: number;
+  coverage50: number;
+  coverage80: number;
+  coverage95: number;
+  width80: number;
+  selected: boolean;
+};
+
+export type TranslationEvidence = {
+  direct_episodes: number;
+  direct_players: number;
+  target_team_role_episodes: number;
+  role_episodes: number;
+  development_episodes: number;
+  development_seasons: Array<string>;
+  relies_on_pooling: boolean;
+  unseen_target_team: boolean;
+  source_context_matches: number;
+  target_context_matches: number;
+  context_latest_date: string | null;
+};
+
+export type TranslationIndex = {
+  version: string;
+  translated_profile_version: string;
+  feature_version: string;
+  observed_dna_version: string;
+  scope: string;
+  source_season: string;
+  target_season: string;
+  minimum_minutes: number;
+  prediction_minutes: number;
+  development_episodes: number;
+  test_episodes: number;
+  test_team_changes: number;
+  players: Array<TranslationPlayer>;
+  targets: Array<TranslationTarget>;
+  roles: Array<string>;
+  metrics: Array<TranslationMetric>;
+};
+
+export type TranslationMetric = {
+  id: string;
+  label_en: string;
+  label_nl: string;
+  unit?: string;
+  selected_method: string;
+};
+
+export type TranslationModels = {
+  version: string;
+  scope: string;
+  provider: string;
+  source_revision: string;
+  feature_version: string;
+  observed_dna_version: string;
+  supported_competitions: Array<string>;
+  development_period: Array<string>;
+  heldout_period: Array<string>;
+  likelihood: string;
+  primary_priors_version: string;
+  selected_methods: Record<string, string>;
+  model_code_commit: string;
+};
+
+export type TranslationPlayer = {
+  player_id: string;
+  name: string;
+  teams: Array<string>;
+  supported_sources: number;
+};
+
+export type TranslationPlayerDetail = {
+  player: TranslationPlayer;
+  model_version: string;
+  environments: Array<TranslationEnvironment>;
+  predictions: Array<TranslationPrediction>;
+};
+
+export type TranslationPrediction = {
+  model_version: string;
+  source_environment_id: string;
+  target_environment_id: string;
+  target_role: string;
+  status: "supported" | "insufficient_evidence" | "out_of_scope";
+  exclusions: Array<string>;
+  prediction_minutes: number;
+  estimates: Array<TranslationEstimate>;
+  research_estimates: Array<TranslationEstimate>;
+  evidence: TranslationEvidence;
+};
+
+export type TranslationTarget = {
+  environment_id: string;
+  team_id: string;
+  team: string;
+  competition: string;
+  season: string;
+};

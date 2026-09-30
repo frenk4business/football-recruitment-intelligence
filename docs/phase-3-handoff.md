@@ -1,6 +1,6 @@
 # Phase 3 hand-off — League Translation & Bayesian Performance Transfer
 
-Repository: https://github.com/frenk4business/football-recruitment-intelligence. Phase 2 branch: `phase/02-player-dna`, based on the unmerged `phase/01-data-foundation` review boundary. Do not merge either PR automatically. Inspect current GitHub status before choosing the next base.
+Repository: https://github.com/frenk4business/football-recruitment-intelligence. Historical Phase 2 branch: `phase/02-player-dna`. Phases 1 and 2 were subsequently merged into `main`; Phase 3 started at `3d8f9a4`. The Phase 3 brief supersedes the old open-review policy: completed phase PRs merge after CI and QA. This document records the Phase 2 hand-off; current work continues from [Phase 4 hand-off](phase-4-handoff.md).
 
 ## Analytical evidence
 
@@ -32,7 +32,7 @@ Minutes reconciliation: 5,067 agreeing, 25 reconciled, 10 conflicting player-mat
 
 `make dev` serves the bilingual product; `make api` provides local FastAPI. Endpoints: `/api/v1/player-dna`, `/{player_id}?threshold=900`, `/{player_id}/similar?threshold=900&limit=10`, `/api/v1/similarity/evaluation`, `/api/v1/features`. IDs are allowlisted UUIDs and thresholds are controlled. Existing explorer endpoints remain. No public model API is required.
 
-Render is static, no paid compute/database/disk. Existing service `srv-dauh12hsrm7s73c7uiu0`, tracking `phase/02-player-dna`; see `docs/deployment.md` and Phase 2 QA for the final deployment/branch state and verification links. Fixed project infrastructure is €0/month within workspace allowances; usage overages follow existing Render billing settings. Raw events, lineups and canonical Parquet must remain outside Git. StatsBomb requires attribution/logo for non-commercial analysis; code MIT does not change data rights.
+Render is static, no paid compute/database/disk. Existing service `srv-dauh12hsrm7s73c7uiu0`, tracking `phase/02-player-dna`; see `docs/deployment.md` and Phase 2 QA for the final deployment/branch state and verification links. No additional paid infrastructure was introduced beyond the existing Render workspace/Starter subscription; usage follows existing billing settings. Raw events, lineups and canonical Parquet must remain outside Git. StatsBomb requires attribution/logo for non-commercial analysis; code MIT does not change data rights.
 
 Verified tests: 76 Python, four frontend unit and ten Playwright tests pass; the ten browser tests also pass against the live site. English: https://football-recruitment-intelligence.onrender.com/player-dna/. Dutch: https://football-recruitment-intelligence.onrender.com/nl/player-dna/. [PR #2](https://github.com/frenk4business/football-recruitment-intelligence/pull/2) records final review status and CI evidence. The clean rebuild reproduced all 1,351 public JSON files byte-for-byte and the feature-observation Parquet byte-for-byte, using 266 checksum-verified cached source files and no source requests.
 

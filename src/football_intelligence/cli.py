@@ -70,9 +70,11 @@ app.add_typer(translation_app, name="translation")
 
 @translation_app.command("data")
 def translation_data():
+    from football_intelligence.translation.dataset import prepare
     from football_intelligence.translation.materialize import materialize
 
     typer.echo(materialize(Path.cwd()))
+    typer.echo(prepare(Path.cwd()))
 
 
 @translation_app.command("audit")
@@ -80,9 +82,11 @@ def translation_audit():
     from football_intelligence.translation.evidence import audit_catalogue_identities
     from football_intelligence.translation.materialize import settings
     from football_intelligence.translation.sources import catalogue
+    from football_intelligence.translation.wyscout import audit_wyscout
 
     catalogue(Path.cwd(), settings(Path.cwd())["revision"], lineups=True)
     typer.echo(audit_catalogue_identities(Path.cwd()))
+    typer.echo(audit_wyscout(Path.cwd()))
 
 
 @translation_app.command("validate-models")
@@ -97,6 +101,14 @@ def translation_evaluate():
     from football_intelligence.translation.evaluation import evaluate
 
     evaluate(Path.cwd())
+
+
+@translation_app.command("publish")
+def translation_publish():
+    from football_intelligence.translation.publish import publish
+
+    result = publish(Path.cwd())
+    typer.echo(f"Published {result['players']} historical profiles; {result['public_bytes']} bytes")
 
 
 @cohort_app.command("build")

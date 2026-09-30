@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14",
+  "system": "Darwin",
+  "machine": "arm64",
+  "pymc": "5.28.5",
+  "arviz": "0.23.4",
+  "numpy": "2.3.5",
+  "pytensor": "2.38.3",
+  "pytensor_floatX": "float64",
+  "pytensor_blas_flags": "-framework Accelerate -Wl,-rpath,/private/tmp/fri-tools/python/cpython-3.12-macos-aarch64-none/lib",
+  "blas": {
+    "name": "accelerate",
+    "version": "unknown",
+    "openblas configuration": "unknown"
+  },
+  "execution": "CPU NUTS; four chains sequentially; no GPU or external inference service"
+}
