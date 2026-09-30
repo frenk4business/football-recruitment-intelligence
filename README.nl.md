@@ -4,6 +4,8 @@ Open voetbaldata → waargenomen spelers-DNA → historische prestatievertaling,
 
 [Live prestatievertaling](https://football-recruitment-intelligence.onrender.com/nl/translation/) · [English](README.md) · [Spelers-DNA](https://football-recruitment-intelligence.onrender.com/nl/player-dna/) · [Evaluatie](docs/league-translation-evaluation.md) · [Modelkaart](docs/model-card-phase3.md)
 
+Fase 3 is samengevoegd in `main` met geslaagde CI. **Publicatie staat nog open:** de bestaande Render-dienst moet van branch `phase/02-player-dna` naar `main` worden gezet. De vertaalpagina’s hierboven zijn nog niet live; [releaseverificatie](docs/phase-3-qa.md) bevat de actuele 404-controles.
+
 ## Fase 3: wat de gegevens onderbouwen
 
 De volledige officiële StatsBomb-catalogus is gecontroleerd: **80 competitie-seizoenen, 3.961 wedstrijdselecties en 11.794 provideridentiteiten**. Een afzonderlijke Wyscout-audit loste het tekort aan longitudinale transferwaarnemingen niet op. Algemene vertaling tussen competities is **NO-GO**. Het uitgewerkte alternatief is een **voorwaardelijk historisch onderzoek naar seizoen- en teamcontext binnen de FA Women’s Super League**.

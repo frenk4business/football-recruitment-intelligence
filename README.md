@@ -4,6 +4,8 @@ Open football data → observed Player DNA → historical performance translatio
 
 [Live translation](https://football-recruitment-intelligence.onrender.com/translation/) · [Nederlands](README.nl.md) · [Player DNA](https://football-recruitment-intelligence.onrender.com/player-dna/) · [Research evaluation](docs/league-translation-evaluation.md) · [Model card](docs/model-card-phase3.md)
 
+Phase 3 is merged into `main` with green CI. **Production activation is pending:** the existing Render service still needs its Branch setting changed from `phase/02-player-dna` to `main`. The translation links above are not yet live; [release verification](docs/phase-3-qa.md) records the current 404 checks.
+
 ## Phase 3: what the evidence supports
 
 The full official StatsBomb catalogue was audited: **80 competition-seasons, 3,961 match lineups and 11,794 provider identities**. A separate Wyscout audit did not solve the shortage of longitudinal transfer evidence. Broad cross-league translation is **NO-GO**. The implemented fallback is a **conditional historical FA Women’s Super League season/team-context study**, not a universal translator or a transfer-success score.

@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-09-30T16:39:31.730369+00:00",
+  "main_release": "7e2927a72544eb18f55aa269d42bde1cee27da4b",
+  "routes": [
+    {
+      "url": "https://football-recruitment-intelligence.onrender.com/",
+      "http_status": 200,
+      "contains_phase3_heading": false
+    },
+    {
+      "url": "https://football-recruitment-intelligence.onrender.com/translation/",
+      "http_status": 404,
+      "contains_phase3_heading": false
+    },
+    {
+      "url": "https://football-recruitment-intelligence.onrender.com/nl/translation/",
+      "http_status": 404,
+      "contains_phase3_heading": false
+    }
+  ],
+  "render_branch_change_pending": true,
+  "service_id": "srv-dauh12hsrm7s73c7uiu0",
+  "actual_branch": "phase/02-player-dna",
+  "build_plan": "starter",
+  "live_deploy": "dep-dauiaoff3r2c73f0laeg",
+  "live_commit": "152ad7783ad4d32b36f6985e059c81d091a20644",
+  "incremental_paid_resources": 0
+}
