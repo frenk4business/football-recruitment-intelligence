@@ -11,7 +11,7 @@ Branch `phase/04-recruitment-intelligence`, based on main `6051ce04da532381766c6
 - Scientific reproduction compared every development/final query and all 205 registered robustness scenarios at 1e-10 tolerance; all reproduced. Frozen registration, selection and evidence remained unchanged. Current code-commit metadata is the only ignored reproduction field.
 - Phase 2/3 artifacts and source feature/translation modules are unchanged against base main. Twenty public Phase 4 JSON artifacts validate against strict schemas and their manifest hashes; **1,562,322 bytes** total. Initial recruitment data is two requests, **232,781 bytes** uncompressed for index + Chelsea detail. Bootstrap role payloads are 86,204–261,232 bytes and load only when sensitivity is opened. These are payload measurements, not mobile latency guarantees.
 
-Local logs: `/private/tmp/fri-phase4-all-checks.log`, `/private/tmp/fri-phase4-parity.log`, `/private/tmp/fri-phase4-browser-all.log`, `/private/tmp/fri-phase4-reproduce.log`. Screenshot artifacts remain local under `artifacts/local-qa/`; research figures are committed under `docs/figures/phase4/`. Desktop visual inspection retained the existing ivory/forest editorial style; mobile checks use 390×844 and desktop 1440×1000.
+Local logs: `/private/tmp/fri-phase4-all-checks.log`, `/private/tmp/fri-phase4-parity.log`, `/private/tmp/fri-phase4-browser-all.log`, `/private/tmp/fri-phase4-reproduce.log`. Screenshot artifacts remain local under `artifacts/local-qa/`; research figures are committed under `docs/figures/phase4/`. Desktop and mobile visual inspection covered requirements, candidate comparisons and club context, retaining the existing ivory/forest editorial style; mobile checks use 390×844 and desktop 1440×1000.
 
 ## QA corrections
 
@@ -19,7 +19,9 @@ Reference fixture generation originally encoded a replacement ID with find-mode 
 
 ## Rebuild and release checkpoint
 
-Clean-checkout/source-cache reconstruction and hosted release verification are the remaining release gates at this checkpoint. Actual PR, main commit, CI and Render deployment evidence will be appended after those checks, rather than inferred from a successful local build. Render service inspection confirms `main`, `autoDeployTrigger=commit`, static-site type and Starter build plan; no new resource is required.
+Clean clone of product commit `6c777fc` passed `make setup`, `make test` (114 Python +17 frontend tests) and `make build` with no source or processed data. Then only the 413 MB raw WSL source cache was copied in: `make phase4-build` verified 266 source files with **zero network requests**, rebuilt all 132 canonical matches and features, and reproduced all twenty public artifacts, the manifest and reference cases **byte-for-byte**. The clean clone had no tracked diff; Phase 2/3 artifacts stayed unchanged. Logs are `/private/tmp/fri-phase4-clean-{setup,test,build,research}.log`.
+
+[PR #4](https://github.com/frenk4business/football-recruitment-intelligence/pull/4) contains the chronological research commits. Hosted release verification remains a gate; actual main commit, CI and Render evidence will be appended after deployment rather than inferred from a local build. Render service inspection confirms `main`, `autoDeployTrigger=commit`, static-site type and Starter build plan; no new resource is required.
 
 ## Practical limits
 

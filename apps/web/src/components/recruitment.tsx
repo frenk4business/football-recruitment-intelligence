@@ -1113,7 +1113,9 @@ function RecruitmentBoard({
                   <tbody>
                     {context.data.roles.map((r) => (
                       <tr key={r.role}>
-                        <th scope="row">{r.role}</th>
+                        <th scope="row">
+                          {r.role === "unknown" ? c.unavailable : r.role}
+                        </th>
                         <td>{r.roster_depth}</td>
                         <td>{r.profile_depth}</td>
                         <td>{number(r.reliable_minutes, 0)}</td>
