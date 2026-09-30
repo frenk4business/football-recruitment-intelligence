@@ -1,0 +1,60 @@
+{
+  "version": "recruitment-fit-v1",
+  "requirements_version": "requirements-v1",
+  "unit": "percentile_points",
+  "loss": {
+    "exact": "absolute",
+    "minimum": "shortfall",
+    "maximum": "excess",
+    "neutral": "ignore"
+  },
+  "power": 2,
+  "default_importance": 1,
+  "importance_values": [
+    1,
+    2,
+    3
+  ],
+  "ranking_round_decimals": 9,
+  "tie_break": "player_id_ascending",
+  "epsilon": 1e-09,
+  "satisfaction_exact_tolerance": 10,
+  "weight_samples": 100,
+  "weight_range": [
+    0.8,
+    1.2
+  ],
+  "seed": 20260930,
+  "lcg": {
+    "multiplier": 1664525,
+    "increment": 1013904223,
+    "modulus": 4294967296
+  },
+  "profile_samples": 100,
+  "profile_percentile_scale": 10,
+  "top_k": 10,
+  "rank_quantiles": [
+    0.1,
+    0.9
+  ],
+  "families": {
+    "shots_per90": "shooting",
+    "box_shots_per90": "shooting",
+    "shot_assists_per90": "creation",
+    "box_passes_per90": "creation",
+    "crosses_per90": "creation",
+    "passes_per90": "passing",
+    "progressive_passes_per90": "passing",
+    "final_third_passes_per90": "passing",
+    "long_passes_per90": "passing",
+    "carries_per90": "carrying",
+    "progressive_carries_per90": "carrying",
+    "carry_distance_per90": "carrying",
+    "box_carries_per90": "carrying",
+    "pressures_per90": "defending",
+    "counterpressures_per90": "defending",
+    "tackles_per90": "defending",
+    "interceptions_per90": "defending",
+    "recoveries_per90": "defending"
+  }
+}

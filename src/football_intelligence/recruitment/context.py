@@ -101,6 +101,11 @@ def aggregate_team_context(rows: list[dict]) -> list[dict]:
 
 
 def roster_context(observations: list[dict], profiles: list[dict], names: dict[str, str]) -> dict:
+    if len({(r["competition_id"], r["season_id"]) for r in observations}) > 1:
+        raise ValueError("Roster context requires one competition-season")
+    keys = [(r["team_id"], r["player_id"], r["match_id"]) for r in observations]
+    if len(keys) != len(set(keys)):
+        raise ValueError("Duplicate player-team-match observation")
     # A club's roster reference only uses that player's events at this club.
     groups = defaultdict(list)
     for r in observations:

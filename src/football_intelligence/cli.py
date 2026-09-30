@@ -66,6 +66,33 @@ translation_app = typer.Typer(
     help="Audited environment evidence and offline probabilistic translation."
 )
 app.add_typer(translation_app, name="translation")
+recruitment_app = typer.Typer(help="Observed recruitment requirements, context and candidate fit.")
+app.add_typer(recruitment_app, name="recruitment")
+
+
+@recruitment_app.command("build")
+def recruitment_build():
+    from football_intelligence.recruitment.export import build
+
+    result = build(Path.cwd())
+    typer.echo(
+        f"Published {result['eligible_players']} eligible candidates, {result['clubs']} clubs; {result['public_bytes']} bytes"
+    )
+
+
+@recruitment_app.command("audit")
+def recruitment_audit():
+    from football_intelligence.recruitment.audit import audit
+
+    result = audit(Path.cwd())
+    typer.echo(result["decision"])
+
+
+@recruitment_app.command("publish")
+def recruitment_publish():
+    from football_intelligence.recruitment.export import publish
+
+    typer.echo(publish(Path.cwd())["public_bytes"])
 
 
 @translation_app.command("data")

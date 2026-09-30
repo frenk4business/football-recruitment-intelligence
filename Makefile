@@ -67,3 +67,10 @@ translation-publish:
 phase3-build: translation-data translation-evaluate translation-publish
 	uv run python scripts/translation_reports.py
 	uv run python scripts/generate_contracts.py
+
+.PHONY: phase4-build recruitment-evaluate
+phase4-build:
+	uv run fri recruitment build
+	uv run python scripts/generate_contracts.py
+recruitment-evaluate:
+	uv run python scripts/recruitment_reproduce.py

@@ -64,6 +64,8 @@ class RecruitmentScenario(PublicModel):
             raise ValueError("A feature may occur only once in a scenario")
         if self.mode == "replace" and not self.replacement_player_id:
             raise ValueError("Replacement mode requires a reference player")
+        if self.mode == "find" and self.replacement_player_id:
+            raise ValueError("A reference player requires replacement mode")
         return self
 
 
@@ -222,3 +224,28 @@ class RecruitmentBootstrap(PublicModel):
             ):
                 raise ValueError("Invalid bootstrap feature dimensions/ranges")
         return self
+
+
+class RecruitmentEvaluationRow(PublicModel):
+    stage: str
+    task: str
+    method: str
+    queries: int
+    recall5: float | None
+    recall10: float | None
+    mrr: float | None
+    random_recall5: float | None
+    random_recall10: float | None
+    random_mrr: float | None
+
+
+class RecruitmentEvaluation(PublicModel):
+    version: Literal["recruitment-fit-evaluation-v1"] = "recruitment-fit-evaluation-v1"
+    selected_method: str
+    transfer_success_evaluation: Literal["no_go"] = "no_go"
+    rows: list[RecruitmentEvaluationRow]
+    robustness_scenarios: int
+    weight_mean_jaccard: float
+    profile_mean_jaccard: float
+    frontier_median_size: float
+    small_pool_scenarios: int

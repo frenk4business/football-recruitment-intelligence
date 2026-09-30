@@ -176,6 +176,56 @@ def create_app(artifact_dir: Path | None = None) -> FastAPI:
     def translation_evaluation():
         return read("phase3/public/evaluation.json")
 
+    from football_intelligence.recruitment.contracts import (
+        ClubContext,
+        RecruitmentCandidate,
+        RecruitmentClubSummary,
+        RecruitmentEvaluation,
+        RecruitmentFeature,
+        RecruitmentIndex,
+        RecruitmentResult,
+        RecruitmentScenario,
+    )
+    from football_intelligence.recruitment.scoring import rank_candidates, validate_scenario
+
+    @app.get("/api/v1/recruitment", response_model=RecruitmentIndex)
+    def recruitment_index():
+        return read("phase4/public/index.json")
+
+    @app.get("/api/v1/recruitment/clubs", response_model=list[RecruitmentClubSummary])
+    def recruitment_clubs():
+        return recruitment_index()["clubs"]
+
+    @app.get("/api/v1/recruitment/clubs/{club_id}", response_model=ClubContext)
+    def recruitment_club(club_id: UUID):
+        if str(club_id) not in {c["club_id"] for c in recruitment_clubs()}:
+            raise HTTPException(404, "Club not in observed cohort")
+        return read(f"phase4/public/clubs/{club_id}.json")
+
+    @app.get("/api/v1/recruitment/requirements", response_model=list[RecruitmentFeature])
+    def recruitment_requirements():
+        return recruitment_index()["features"]
+
+    @app.get("/api/v1/recruitment/candidates", response_model=list[RecruitmentCandidate])
+    def recruitment_candidates(role: str | None = None):
+        index = recruitment_index()
+        if role is not None and role not in index["roles"]:
+            raise HTTPException(422, "Unsupported comparison role")
+        return [p for p in index["players"] if role is None or p["role"] == role]
+
+    @app.post("/api/v1/recruitment/scenario", response_model=RecruitmentResult)
+    def recruitment_scenario(scenario: RecruitmentScenario):
+        index = recruitment_index()
+        try:
+            validate_scenario(index, scenario)
+            return rank_candidates(index["players"], scenario, index["method"])
+        except ValueError as exc:
+            raise HTTPException(422, str(exc)) from exc
+
+    @app.get("/api/v1/recruitment/evaluation", response_model=RecruitmentEvaluation)
+    def recruitment_evaluation():
+        return read("phase4/public/evaluation.json")
+
     return app
 
 

@@ -7,8 +7,10 @@ from pathlib import Path
 from football_intelligence import contracts
 from football_intelligence.api import create_app
 from football_intelligence.dna import contracts as dna_contracts
-from football_intelligence.dna.registry import FeatureDefinition
+from football_intelligence.dna.registry import FAMILIES, FeatureDefinition
 from football_intelligence.export import write_json
+from football_intelligence.recruitment import contracts as recruitment_contracts
+from football_intelligence.recruitment.scoring import specification
 from football_intelligence.translation import contracts as translation_contracts
 
 MODELS = [
@@ -29,10 +31,18 @@ MODELS = [
     "TranslationPlayerDetail",
     "TranslationEvaluation",
     "TranslationModels",
+    "RecruitmentIndex",
+    "RecruitmentScenario",
+    "RecruitmentResult",
+    "RecruitmentBootstrap",
+    "RecruitmentEvaluation",
+    "ClubContext",
 ]
 
 
 def ts(schema: dict) -> str:
+    if "const" in schema:
+        return json.dumps(schema["const"])
     if "$ref" in schema:
         return schema["$ref"].split("/")[-1]
     if "anyOf" in schema:
@@ -69,7 +79,9 @@ def generate(check: bool = False):
             FeatureDefinition
             if name == "FeatureDefinition"
             else getattr(
-                translation_contracts
+                recruitment_contracts
+                if name.startswith(("Recruitment", "Club"))
+                else translation_contracts
                 if name.startswith("Translation")
                 else dna_contracts
                 if name.startswith("DNA")
@@ -86,12 +98,17 @@ def generate(check: bool = False):
         + "\n"
     )
     path = Path("apps/web/src/lib/contracts.ts")
+    spec_path = Path("apps/web/src/lib/recruitment-spec.json")
+    spec_text = json.dumps({**specification(Path.cwd()), "families": FAMILIES}, indent=2) + "\n"
     if check:
         if path.read_text() != result:
             raise SystemExit("TypeScript contracts are stale")
+        if not spec_path.exists() or spec_path.read_text() != spec_text:
+            raise SystemExit("Shared recruitment scoring specification is stale")
     else:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(result)
+        spec_path.write_text(spec_text)
         write_json(Path("artifacts/contracts.schema.json"), schemas)
         write_json(Path("artifacts/openapi.json"), create_app().openapi())
 

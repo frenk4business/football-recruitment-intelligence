@@ -60,6 +60,8 @@ def scenario(
         dict(
             club_id=club_id,
             target_role=role,
+            mode="replace" if replacement else "find",
+            created_from="replacement" if replacement else "custom",
             requirements=[r.model_dump() for r in requirements],
             replacement_player_id=replacement,
             hard_constraints=dict(exclude_same_club=exclude_club),
@@ -347,7 +349,7 @@ def reconstruction(index: dict, club_ids: list[str]) -> dict:
     return dict(queries=rows)
 
 
-def evaluate(root: Path, stage: str) -> dict:
+def evaluate(root: Path, stage: str, *, persist: bool = True) -> dict:
     if stage not in ("development", "final"):
         raise ValueError("Evaluation stage must be development or final")
     plan = root / "docs/phase-4-experiment-plan.md"
@@ -434,7 +436,8 @@ def evaluate(root: Path, stage: str) -> dict:
         roster=roster,
         reconstruction=reconstruct,
     )
-    write(root / f"artifacts/phase4/{stage}_evaluation.json", result)
+    if persist:
+        write(root / f"artifacts/phase4/{stage}_evaluation.json", result)
     return result
 
 

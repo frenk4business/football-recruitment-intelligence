@@ -1,10 +1,21 @@
 # Football Recruitment Intelligence
 
-Open voetbaldata → waargenomen spelers-DNA → historische prestatievertaling, met zichtbare onzekerheid. Onafhankelijk, niet-commercieel onderzoek door Frenk Kester.
+Open voetbaldata → spelers-DNA → historische vertaling → expliciete recruitmenteisen en waargenomen profielmatch. Onafhankelijk, niet-commercieel onderzoek door Frenk Kester.
 
-[Live prestatievertaling](https://football-recruitment-intelligence.onrender.com/nl/translation/) · [English](README.md) · [Spelers-DNA](https://football-recruitment-intelligence.onrender.com/nl/player-dna/) · [Evaluatie](docs/league-translation-evaluation.md) · [Modelkaart](docs/model-card-phase3.md)
+[Live recruitment](https://football-recruitment-intelligence.onrender.com/nl/recruitment/) · [English](README.md) · [Spelers-DNA](https://football-recruitment-intelligence.onrender.com/nl/player-dna/) · [Evaluatie](docs/league-translation-evaluation.md) · [Modelkaart](docs/model-card-phase3.md)
 
-Fase 3 is samengevoegd in `main` met geslaagde CI en is live in beide talen. Render volgt `main`; alle 14 browsertests slagen op productie. [Releaseverificatie](docs/phase-3-qa.md) vermeldt de gepubliceerde commit, inhoudscontroles en testresultaten.
+
+## Fase 4: expliciete eisen, waargenomen profielmatch
+
+[Recruitment openen](https://football-recruitment-intelligence.onrender.com/nl/recruitment/) · [Evaluatie](docs/recruitment-fit-evaluation.md) · [Modelkaart](docs/model-card-phase4.md) · [QA](docs/phase-4-qa.md)
+
+Kandidaten zoeken, Speler vervangen en Clubcontext verbinden **138 geschikte WSL-profielen uit 2023/24**, zes rollen, achttien stijlkenmerken en twaalf clubs. Eigen eisen beginnen neutraal. Kies exacte, minimale of maximale voorkeuren, zichtbare gewichten en harde voorwaarden. Bekijk de top tien, vergelijk maximaal drie spelers en deel/herstel een scenario via de URL. Clubkenmerken tellen alleen mee als de analist ze expliciet overneemt.
+
+De gewogen RMS-afwijking in percentielpunten betekent: lager is dichter bij de gekozen eisen. Onderbouwing is afzonderlijk zichtbaar. Dit is geen spelerskwaliteit, kans op succes of transferadvies. Bij 31 finale buurvragen is Recall@5 **45,2% tegenover 31,6% toeval**; MRR **0,258 tegenover 0,259 bestaand spelers-DNA**. Bij 27 weggelaten selectiespelers blijft MRR 0,232 achter bij DNA 0,332. Contextwinst is wisselend. Over 205 scenario's is top-10-Jaccard **0,950 bij gewichtsveranderingen en 0,723 bij profielsteekproeven**. Veertien kleine groepen overschatten aanwezigheid in de top tien.
+
+Waargenomen recruitment gebruikt uitsluitend 2023/24. Het historische vertaalonderzoek blijft ongewijzigd en wordt niet gebruikt voor deze ranglijst. Leeftijd, contractbeschikbaarheid, salaris en marktwaarde ontbreken. Er is geen extra gehoste dienst of betaalde resource toegevoegd. [Overdracht naar Fase 5](docs/phase-5-handoff.md); Fase 5 is nog niet gestart.
+
+Onderzoek reproduceren: `make phase4-build` bouwt de vaste club-, kandidaat- en bootstrapaggregaten; `make recruitment-evaluate` vergelijkt alle opnieuw berekende resultaten met het vastgelegde onderzoek. De eerste onderzoeksbouw haalt de vastgelegde brondata op; de websitebouw gebruikt alleen de gecommitte aggregaten.
 
 ## Fase 3: wat de gegevens onderbouwen
 
@@ -63,14 +74,14 @@ Ruwe StatsBomb-events, selecties, canonieke Parquet en volledige posteriorsteekp
 
 ## Hosting en vervolg
 
-Eén bestaande statische Render-site serveert de aggregaten. **Er is geen aanvullende betaalde infrastructuur toegevoegd boven op het bestaande Render-workspace-/Starter-abonnement.** Er is geen backend, worker, database of schijf toegevoegd. Productie volgt `main`; de feitelijke verificatie staat in [hosting](docs/deployment.md) en [Fase 3 QA](docs/phase-3-qa.md). Voltooide fase-PR’s worden na geslaagde controles samengevoegd.
+Eén bestaande statische Render-site serveert de aggregaten. **Er is geen aanvullende betaalde infrastructuur toegevoegd boven op het bestaande Render-workspace-/Starter-abonnement.** Er is geen backend, worker, database of schijf toegevoegd. Productie volgt `main`; de feitelijke verificatie staat in [hosting](docs/deployment.md) en [Fase 4 QA](docs/phase-4-qa.md). Voltooide fase-PR’s worden na geslaagde controles samengevoegd.
 
 1. Datafundament — voltooid.
 2. Spelers-DNA en gelijkenis — voltooid.
-3. Competitievertaling en Bayesiaanse prestatieoverdracht — voltooid/huidig, binnen de smallere WSL-afbakening.
-4. Recruitmentondersteuning en clubpassendheid — gepland.
+3. Competitievertaling en Bayesiaanse prestatieoverdracht — voltooid, binnen de smallere WSL-afbakening.
+4. Recruitmentondersteuning en clubpassendheid — voltooid/huidig.
 5. Productieversteviging en portfolio-integratie — gepland.
 
-Fase 3 voegt hiërarchische inferentie, prior-/posteriorcontroles, kalibratie, temporele evaluatie, negatieve resultaten en begrijpelijke voorspellingsonzekerheid toe. [Overdracht naar Fase 4](docs/phase-4-handoff.md).
+Fase 3 voegt hiërarchische inferentie, prior-/posteriorcontroles, kalibratie, temporele evaluatie, negatieve resultaten en begrijpelijke voorspellingsonzekerheid toe. [Overdracht naar Fase 5](docs/phase-5-handoff.md).
 
 Software © 2026 Frenk Kester, MIT. Brondata en logo’s behouden hun eigen rechten.
