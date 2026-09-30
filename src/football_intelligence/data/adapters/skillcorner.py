@@ -1,7 +1,7 @@
 import json
 
 from football_intelligence.data.adapters.base import Rows
-from football_intelligence.data.adapters.statsbomb import seconds
+from football_intelligence.data.adapters.statsbomb import PERIOD_START, seconds
 from football_intelligence.data.coordinates import CoordinateSystem, in_pitch, to_canonical
 from football_intelligence.data.positions import position_group
 
@@ -80,7 +80,8 @@ class SkillCornerAdapter:
                 match_id=mid,
                 frame=frame["frame"],
                 period=period,
-                timestamp_seconds=seconds(frame["timestamp"]),
+                timestamp_seconds=seconds(frame["timestamp"]) - PERIOD_START[period],
+                provider_timestamp=frame["timestamp"],
                 possession_team_id=teams.get(group) if group is not None else None,
                 home_attacking_direction=m.get("home_team_side", [None, None])[period - 1],
             )

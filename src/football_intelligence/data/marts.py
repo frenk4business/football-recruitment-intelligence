@@ -56,10 +56,10 @@ def build_marts(directory: Path) -> dict[str, pl.DataFrame]:
         player_season = con.sql("""
             SELECT provider, season_id, competition_id, player_id, player_name,
               count(*) AS roster_matches, count(*) FILTER (WHERE minutes>0) AS appearances,
-              sum(minutes) AS minutes, sum(starter::INTEGER) AS starts,
+              CASE WHEN count(minutes)=count(*) THEN sum(minutes) END AS minutes, sum(starter::INTEGER) AS starts,
               sum(shots) AS shots, sum(passes) AS passes, sum(goals) AS goals,
               CASE WHEN count(xg)=count(*) THEN sum(xg) END AS xg,
-              CASE WHEN sum(minutes)>=30 THEN sum(shots)/sum(minutes)*90 END AS shots_per90
+              CASE WHEN count(minutes)=count(*) AND sum(minutes)>=30 THEN sum(shots)/sum(minutes)*90 END AS shots_per90
             FROM player_match GROUP BY ALL ORDER BY provider, player_name
         """).pl()
         team_season = con.sql("""

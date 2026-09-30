@@ -101,6 +101,7 @@ class TrackingFrame(Record):
     frame: int = Field(ge=0)
     period: int = Field(ge=1, le=4)
     timestamp_seconds: float = Field(ge=0)
+    provider_timestamp: str
     ball_state: str | None = None
     possession_team_id: str | None = None
     home_attacking_direction: str | None = None
