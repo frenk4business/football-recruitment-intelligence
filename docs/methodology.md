@@ -10,7 +10,7 @@ SkillCorner centre-origin metres use the **actual 106 × 68 m** match pitch: `(x
 
 Off-pitch positions can be legitimate. They are retained and counted, never clipped silently. A generous physical envelope catches gross unit errors; nonfinite/partial coordinate pairs fail. Spatial analysis includes only in-pitch located actions, grouped into 12 × 8 bins. Missing locations are excluded and the plotted sample size is shown.
 
-StatsBomb event time is elapsed seconds within the stated period. SkillCorner time is the supplied match-clock timestamp; the current first-period sample is 0–59 seconds. Future full-match tracking ingestion must standardize later-period clocks before joining timelines. These sources are different matches and are never time-joined.
+Canonical time is elapsed seconds within the stated period. SkillCorner nominal match-clock offsets (45/90/105 minutes for periods 2/3/4) are subtracted; its original timestamp is retained. The current first-period sample is 0–59 seconds. These sources are different matches and are never time-joined. A second-period fixture checks clock normalization and preserved fixed-pitch orientation.
 
 ## Descriptive metrics
 

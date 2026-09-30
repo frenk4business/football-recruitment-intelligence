@@ -30,7 +30,7 @@ erDiagram
 | matches | Source match ID, competition/season, date, two teams, score, optional actual pitch size and explicit coverage description |
 | lineups | Match + player; team, starter, canonical position, all original position intervals as JSON, minutes/method and substitution labels |
 | events | Original event ID; index, period, time, team/player, type/subtype/outcome, coordinates, possession, body part, supplied xG and entire original payload JSON |
-| tracking_frames | Match + source frame; period, time, possession team and home attack direction |
+| tracking_frames | Match + source frame; period, elapsed time, original provider timestamp, possession team and home attack direction |
 | tracking_objects | Match + frame + object kind + player; x/y/z, raw x/y, detection flag, nullable uncertainty, in-pitch flag |
 | provider_entity_map | Canonical ID, provider/type/ID/name, confidence, method, verified |
 | player_match | Match/roster member; descriptive counts, source-dependent nulls, minutes and guarded per-90 |
