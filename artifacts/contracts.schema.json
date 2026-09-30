@@ -667,5 +667,718 @@
     ],
     "title": "Explorer",
     "type": "object"
+  },
+  "DNAPlayer": {
+    "additionalProperties": false,
+    "properties": {
+      "player_id": {
+        "title": "Player Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "primary_role": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Primary Role"
+      },
+      "secondary_role": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Secondary Role"
+      },
+      "role_shares": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "title": "Role Shares",
+        "type": "object"
+      },
+      "multi_role": {
+        "title": "Multi Role",
+        "type": "boolean"
+      },
+      "minutes": {
+        "minimum": 0,
+        "title": "Minutes",
+        "type": "number"
+      },
+      "appearances": {
+        "minimum": 0,
+        "title": "Appearances",
+        "type": "integer"
+      },
+      "unreliable_appearances": {
+        "minimum": 0,
+        "title": "Unreliable Appearances",
+        "type": "integer"
+      },
+      "eligibility": {
+        "additionalProperties": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "title": "Eligibility",
+        "type": "object"
+      }
+    },
+    "required": [
+      "player_id",
+      "name",
+      "teams",
+      "competition",
+      "season",
+      "primary_role",
+      "secondary_role",
+      "role_shares",
+      "multi_role",
+      "minutes",
+      "appearances",
+      "unreliable_appearances",
+      "eligibility"
+    ],
+    "title": "DNAPlayer",
+    "type": "object"
+  },
+  "DNAIndex": {
+    "additionalProperties": false,
+    "properties": {
+      "version": {
+        "title": "Version",
+        "type": "string"
+      },
+      "cohort": {
+        "title": "Cohort",
+        "type": "string"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "thresholds": {
+        "items": {
+          "type": "integer"
+        },
+        "title": "Thresholds",
+        "type": "array"
+      },
+      "default_threshold": {
+        "title": "Default Threshold",
+        "type": "integer"
+      },
+      "matches": {
+        "title": "Matches",
+        "type": "integer"
+      },
+      "players": {
+        "items": {
+          "$ref": "#/$defs/DNAPlayer"
+        },
+        "title": "Players",
+        "type": "array"
+      }
+    },
+    "required": [
+      "version",
+      "cohort",
+      "competition",
+      "season",
+      "thresholds",
+      "default_threshold",
+      "matches",
+      "players"
+    ],
+    "title": "DNAIndex",
+    "type": "object"
+  },
+  "DNAContribution": {
+    "additionalProperties": false,
+    "properties": {
+      "feature": {
+        "title": "Feature",
+        "type": "string"
+      },
+      "standardized_difference": {
+        "title": "Standardized Difference",
+        "type": "number"
+      },
+      "squared_contribution": {
+        "minimum": 0,
+        "title": "Squared Contribution",
+        "type": "number"
+      },
+      "share": {
+        "maximum": 1.000001,
+        "minimum": 0,
+        "title": "Share",
+        "type": "number"
+      }
+    },
+    "required": [
+      "feature",
+      "standardized_difference",
+      "squared_contribution",
+      "share"
+    ],
+    "title": "DNAContribution",
+    "type": "object"
+  },
+  "DNAFeatureValue": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "value": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Value"
+      },
+      "percentile": {
+        "anyOf": [
+          {
+            "maximum": 100,
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Percentile"
+      }
+    },
+    "required": [
+      "id",
+      "value",
+      "percentile"
+    ],
+    "title": "DNAFeatureValue",
+    "type": "object"
+  },
+  "DNANeighbor": {
+    "additionalProperties": false,
+    "properties": {
+      "player_id": {
+        "title": "Player Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      },
+      "role": {
+        "title": "Role",
+        "type": "string"
+      },
+      "minutes": {
+        "title": "Minutes",
+        "type": "number"
+      },
+      "rank": {
+        "title": "Rank",
+        "type": "integer"
+      },
+      "distance": {
+        "minimum": 0,
+        "title": "Distance",
+        "type": "number"
+      },
+      "stability": {
+        "maximum": 1,
+        "minimum": 0,
+        "title": "Stability",
+        "type": "number"
+      },
+      "similar": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Similar",
+        "type": "array"
+      },
+      "different": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Different",
+        "type": "array"
+      },
+      "contributions": {
+        "items": {
+          "$ref": "#/$defs/DNAContribution"
+        },
+        "title": "Contributions",
+        "type": "array"
+      },
+      "family_contributions": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "title": "Family Contributions",
+        "type": "object"
+      }
+    },
+    "required": [
+      "player_id",
+      "name",
+      "teams",
+      "role",
+      "minutes",
+      "rank",
+      "distance",
+      "stability",
+      "similar",
+      "different",
+      "contributions",
+      "family_contributions"
+    ],
+    "title": "DNANeighbor",
+    "type": "object"
+  },
+  "DNAProfile": {
+    "additionalProperties": false,
+    "properties": {
+      "player": {
+        "$ref": "#/$defs/DNAPlayer"
+      },
+      "version": {
+        "default": "player-dna-v1",
+        "title": "Version",
+        "type": "string"
+      },
+      "cohort": {
+        "title": "Cohort",
+        "type": "string"
+      },
+      "threshold": {
+        "title": "Threshold",
+        "type": "integer"
+      },
+      "eligible": {
+        "title": "Eligible",
+        "type": "boolean"
+      },
+      "exclusions": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Exclusions",
+        "type": "array"
+      },
+      "comparison_size": {
+        "title": "Comparison Size",
+        "type": "integer"
+      },
+      "features": {
+        "items": {
+          "$ref": "#/$defs/DNAFeatureValue"
+        },
+        "title": "Features",
+        "type": "array"
+      },
+      "scaled_vector": {
+        "anyOf": [
+          {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Scaled Vector"
+      },
+      "neighbors": {
+        "items": {
+          "$ref": "#/$defs/DNANeighbor"
+        },
+        "title": "Neighbors",
+        "type": "array"
+      },
+      "neighbor_jaccard": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Neighbor Jaccard"
+      },
+      "bootstrap_samples": {
+        "title": "Bootstrap Samples",
+        "type": "integer"
+      },
+      "bins": {
+        "items": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "title": "Bins",
+        "type": "array"
+      }
+    },
+    "required": [
+      "player",
+      "cohort",
+      "threshold",
+      "eligible",
+      "exclusions",
+      "comparison_size",
+      "features",
+      "scaled_vector",
+      "neighbors",
+      "neighbor_jaccard",
+      "bootstrap_samples",
+      "bins"
+    ],
+    "title": "DNAProfile",
+    "type": "object"
+  },
+  "DNAMapPoint": {
+    "additionalProperties": false,
+    "properties": {
+      "player_id": {
+        "title": "Player Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      },
+      "role": {
+        "title": "Role",
+        "type": "string"
+      },
+      "minutes": {
+        "title": "Minutes",
+        "type": "number"
+      },
+      "x": {
+        "title": "X",
+        "type": "number"
+      },
+      "y": {
+        "title": "Y",
+        "type": "number"
+      }
+    },
+    "required": [
+      "player_id",
+      "name",
+      "teams",
+      "role",
+      "minutes",
+      "x",
+      "y"
+    ],
+    "title": "DNAMapPoint",
+    "type": "object"
+  },
+  "DNAMap": {
+    "additionalProperties": false,
+    "properties": {
+      "threshold": {
+        "title": "Threshold",
+        "type": "integer"
+      },
+      "method": {
+        "const": "PCA",
+        "title": "Method",
+        "type": "string"
+      },
+      "explained_variance": {
+        "items": {
+          "type": "number"
+        },
+        "title": "Explained Variance",
+        "type": "array"
+      },
+      "points": {
+        "items": {
+          "$ref": "#/$defs/DNAMapPoint"
+        },
+        "title": "Points",
+        "type": "array"
+      }
+    },
+    "required": [
+      "threshold",
+      "method",
+      "explained_variance",
+      "points"
+    ],
+    "title": "DNAMap",
+    "type": "object"
+  },
+  "DNAEvaluationRow": {
+    "additionalProperties": false,
+    "properties": {
+      "method": {
+        "title": "Method",
+        "type": "string"
+      },
+      "threshold": {
+        "title": "Threshold",
+        "type": "integer"
+      },
+      "eligible": {
+        "title": "Eligible",
+        "type": "integer"
+      },
+      "queries": {
+        "title": "Queries",
+        "type": "integer"
+      },
+      "recall1": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Recall1"
+      },
+      "recall5": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Recall5"
+      },
+      "recall10": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Recall10"
+      },
+      "mrr": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Mrr"
+      },
+      "bootstrap_jaccard": {
+        "title": "Bootstrap Jaccard",
+        "type": "number"
+      },
+      "random_recall5": {
+        "title": "Random Recall5",
+        "type": "number"
+      }
+    },
+    "required": [
+      "method",
+      "threshold",
+      "eligible",
+      "queries",
+      "recall1",
+      "recall5",
+      "recall10",
+      "mrr",
+      "bootstrap_jaccard",
+      "random_recall5"
+    ],
+    "title": "DNAEvaluationRow",
+    "type": "object"
+  },
+  "DNAEvaluation": {
+    "additionalProperties": false,
+    "properties": {
+      "version": {
+        "title": "Version",
+        "type": "string"
+      },
+      "default_method": {
+        "title": "Default Method",
+        "type": "string"
+      },
+      "bootstrap_samples": {
+        "title": "Bootstrap Samples",
+        "type": "integer"
+      },
+      "seed": {
+        "title": "Seed",
+        "type": "integer"
+      },
+      "rows": {
+        "items": {
+          "$ref": "#/$defs/DNAEvaluationRow"
+        },
+        "title": "Rows",
+        "type": "array"
+      }
+    },
+    "required": [
+      "version",
+      "default_method",
+      "bootstrap_samples",
+      "seed",
+      "rows"
+    ],
+    "title": "DNAEvaluation",
+    "type": "object"
+  },
+  "FeatureDefinition": {
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "label_en": {
+        "title": "Label En",
+        "type": "string"
+      },
+      "label_nl": {
+        "title": "Label Nl",
+        "type": "string"
+      },
+      "family": {
+        "title": "Family",
+        "type": "string"
+      },
+      "unit": {
+        "title": "Unit",
+        "type": "string"
+      },
+      "formula": {
+        "title": "Formula",
+        "type": "string"
+      },
+      "note_en": {
+        "title": "Note En",
+        "type": "string"
+      },
+      "note_nl": {
+        "title": "Note Nl",
+        "type": "string"
+      },
+      "core": {
+        "title": "Core",
+        "type": "boolean"
+      },
+      "intended_use": {
+        "title": "Intended Use",
+        "type": "string"
+      },
+      "source": {
+        "default": "StatsBomb",
+        "title": "Source",
+        "type": "string"
+      },
+      "higher_is": {
+        "default": "descriptive",
+        "title": "Higher Is",
+        "type": "string"
+      },
+      "eligibility": {
+        "default": "Reliable participation time; complete relevant event fields; role cohort; selected minute threshold.",
+        "title": "Eligibility",
+        "type": "string"
+      },
+      "null_semantics": {
+        "default": "Unavailable evidence or zero denominator is null; measured absence is zero.",
+        "title": "Null Semantics",
+        "type": "string"
+      },
+      "version": {
+        "default": "features-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "label_en",
+      "label_nl",
+      "family",
+      "unit",
+      "formula",
+      "note_en",
+      "note_nl",
+      "core",
+      "intended_use"
+    ],
+    "title": "FeatureDefinition",
+    "type": "object"
   }
 }

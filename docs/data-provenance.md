@@ -13,3 +13,9 @@ The StatsBomb sample has four input files: catalogue, competition-season matches
 Raw data, intermediate files, Parquet, virtual environments and local QA screenshots are excluded from Git. Committed public artifacts contain research aggregates and the permitted small SkillCorner sample. Test fixtures are synthetic and explicitly labelled. The public exporter never uses them.
 
 A source-data update is a reviewable change: inspect the new licence and format, change the revision/selection, retrieve and verify hashes, rebuild, inspect anomalies, update contracts if needed, run tests, then commit only publication-safe artifacts. Do not silently refresh upstream `master` during CI or deployment.
+
+## Phase 2 frozen season
+
+The official repository head was reverified on 30 September 2026 at the same commit as Phase 1. WSL competition 37 / season 281 has 132 matches and 12 teams; IDs belong in `config/cohorts.yaml`, not analytical logic. 266 exact files are locked in `config/wsl_2023_24.sources.json`. The license PDF was downloaded again and was byte-identical to the audited Phase 1 copy. Bounded concurrency is three, retries cover transient HTTP/network failures, and each cache hit verifies SHA-256 without network retrieval. All raw data remains ignored.
+
+`artifacts/phase2/cohort_eligibility.json` reports actual coverage, feature missingness, role populations and per-player exclusion reasons at four thresholds. `model_manifest.json` records the source/feature/representation versions, fitted scalers and publication hashes. Public payloads are derived research profiles and coarse bins, with no source event IDs/timestamps/payloads. The registered hypotheses predate similarity evaluation. Seed and fitted transformations are preserved; generation times intentionally vary.

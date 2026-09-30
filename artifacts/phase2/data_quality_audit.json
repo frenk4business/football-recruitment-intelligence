@@ -1,0 +1,81 @@
+{
+  "actorless_events": [
+    {
+      "count": 528,
+      "event_type": "Half End"
+    },
+    {
+      "count": 528,
+      "event_type": "Half Start"
+    },
+    {
+      "count": 17,
+      "event_type": "Own Goal For"
+    },
+    {
+      "count": 513,
+      "event_type": "Referee Ball-Drop"
+    },
+    {
+      "count": 264,
+      "event_type": "Starting XI"
+    },
+    {
+      "count": 494,
+      "event_type": "Tactical Shift"
+    }
+  ],
+  "conflicting_player_matches": 10,
+  "missing_lineup_player_ids": 0,
+  "team_match_coverage": [
+    {
+      "matches": 22,
+      "team_id": "3a6cf779-2270-5819-8cd8-e7a355a83a87"
+    },
+    {
+      "matches": 22,
+      "team_id": "4ec8fc42-342a-5a45-9070-3b237ecb7252"
+    },
+    {
+      "matches": 22,
+      "team_id": "5e1eb273-c618-5745-8f49-d2e770cd66f4"
+    },
+    {
+      "matches": 22,
+      "team_id": "60ab3faa-b309-556c-b5e6-e39a37765e22"
+    },
+    {
+      "matches": 22,
+      "team_id": "67cea9eb-8181-5982-ae0c-0e7f417144cb"
+    },
+    {
+      "matches": 22,
+      "team_id": "7322fcac-f730-5311-bce4-127e97c243d8"
+    },
+    {
+      "matches": 22,
+      "team_id": "76d18126-4c59-59b6-92d8-8cb6e64d6f06"
+    },
+    {
+      "matches": 22,
+      "team_id": "7ec08217-8a10-52c6-8b2c-223b7273dde3"
+    },
+    {
+      "matches": 22,
+      "team_id": "a6e40be4-0c03-548e-b313-3765c77638f4"
+    },
+    {
+      "matches": 22,
+      "team_id": "acf863e0-94d3-5983-8b8c-56976c2b59dc"
+    },
+    {
+      "matches": 22,
+      "team_id": "ea7a234e-5bbd-55b3-8f0b-ef872c0433f6"
+    },
+    {
+      "matches": 22,
+      "team_id": "fd45bdfb-70d8-5ffe-8be7-b26723b6fa87"
+    }
+  ],
+  "unknown_or_uncertain_role_profiles": 47
+}

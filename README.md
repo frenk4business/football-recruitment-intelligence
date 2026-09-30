@@ -1,5 +1,12 @@
 # Football Recruitment Intelligence
 
+**Phase 2 — Player DNA & Similarity** is implemented on `phase/02-player-dna`, stacked on the unmerged Phase 1 branch. WSL 2023/24: 132 matches, 336 roster players, 138 eligible at 900 reliable minutes. Eighteen style features, role-aware scaling, equal-family Euclidean distance, top-10 explanations and bootstrap stability. English `/player-dna/`, Dutch `/nl/player-dna/`.
+
+Run `make setup`, `make test`, `make phase2-build`, `make build`. The research build downloads/caches the pinned season once; the web build uses only committed permitted aggregates. See [evaluation](docs/player-similarity-evaluation.md), [features](docs/player-features.md), [method](docs/player-similarity.md), [Phase 3 hand-off](docs/phase-3-handoff.md). Fixed infrastructure remains €0/month within existing Render allowances. Similarity is not quality, tactical fit or transfer prediction.
+
+The original Phase 1 foundation and setup documentation follows.
+
+
 Open-data football research with explicit provenance, canonical event/tracking contracts and reproducible analytical tables.
 
 [Live preview](https://football-recruitment-intelligence.onrender.com/) · [Phase 1 PR](https://github.com/frenk4business/football-recruitment-intelligence/pull/1) · [English](README.md) · [Nederlands](README.nl.md) · [Data audit](docs/data-sources.md) · [Architecture](docs/architecture.md)

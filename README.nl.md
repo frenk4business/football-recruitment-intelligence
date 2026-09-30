@@ -1,5 +1,12 @@
 # Football Recruitment Intelligence
 
+**Fase 2 — Spelers-DNA en gelijkenis** is geïmplementeerd op `phase/02-player-dna`, bovenop de nog niet samengevoegde Fase 1-branch. WSL 2023/24: 132 wedstrijden, 336 selectiespelers, 138 vergelijkbare profielen bij 900 betrouwbare minuten. Achttien stijlkenmerken, schaling per rol, gelijk gewogen kenmerkfamilies, top 10-vergelijkingen, uitlegbare verschillen en bootstrapstabiliteit. Engels `/player-dna/`, Nederlands `/nl/player-dna/`.
+
+Gebruik `make setup`, `make test`, `make phase2-build`, `make build`. De onderzoeksbuild downloadt het vastgezette seizoen één keer en gebruikt daarna de gecontroleerde cache. De website gebruikt uitsluitend toegestane onderzoeksaggregaten. Zie [evaluatie](docs/player-similarity-evaluation.md), [kenmerken](docs/player-features.md), [methode](docs/player-similarity.md) en [overdracht naar Fase 3](docs/phase-3-handoff.md). De vaste infrastructuurkosten blijven €0 per maand binnen de bestaande Render-limieten. Gelijkenis is geen kwaliteit, tactische passendheid of transfervoorspelling.
+
+Hieronder volgt de oorspronkelijke documentatie van het Fase 1-datafundament.
+
+
 Onderzoek met open voetbaldata, expliciete herkomst, canonieke event- en trackingcontracten en reproduceerbare analysetabellen.
 
 [Live preview](https://football-recruitment-intelligence.onrender.com/) · [Phase 1 PR](https://github.com/frenk4business/football-recruitment-intelligence/pull/1) · [English](README.md) · [Nederlands](README.nl.md) · [Bronnenonderzoek](docs/data-sources.md) · [Architectuur](docs/architecture.md)

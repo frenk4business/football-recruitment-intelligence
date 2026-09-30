@@ -2,6 +2,7 @@ import json
 
 from football_intelligence.data.adapters.base import Rows
 from football_intelligence.data.coordinates import STATSBOMB, to_canonical
+from football_intelligence.data.minutes import reconcile
 from football_intelligence.data.positions import position_group
 
 PERIOD_START = {1: 0, 2: 45 * 60, 3: 90 * 60, 4: 105 * 60, 5: 120 * 60}
@@ -155,4 +156,9 @@ class StatsBombAdapter:
                 xg=details.get("statsbomb_xg"),
                 attributes_json=json.dumps(e, sort_keys=True),
             )
+        reconciled = reconcile(raw)
+        for row in r.tables["lineups"].values():
+            source_pid = int(row["provider_id"].split(":")[-1])
+            if source_pid in reconciled:
+                row.update(reconciled[source_pid])
         return r.result()

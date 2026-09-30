@@ -19,4 +19,7 @@ for (const name of [
   "explorer",
 ])
   await cp(new URL(name, src), new URL(name, dest), { recursive: true });
+await cp(new URL("phase2/public/", src), new URL("phase2/", dest), {
+  recursive: true,
+});
 console.log("Prepared validated aggregate artifacts.");

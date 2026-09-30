@@ -30,7 +30,7 @@ def create_app(artifact_dir: Path | None = None) -> FastAPI:
     app = FastAPI(
         title="Football Recruitment Intelligence",
         version="0.1.0",
-        description="Phase 1 aggregate research contracts; no arbitrary SQL or predictive models.",
+        description="Versioned aggregate research contracts and precomputed player similarity; no arbitrary SQL.",
     )
     app.add_middleware(
         CORSMiddleware,
@@ -94,6 +94,37 @@ def create_app(artifact_dir: Path | None = None) -> FastAPI:
     @app.get("/api/v1/players", response_model=list[PlayerSummary])
     def players(match_id: UUID, limit: int = Query(25, ge=1, le=100), offset: int = Query(0, ge=0)):
         return explorer_data(match_id)["players"][offset : offset + limit]
+
+    from football_intelligence.dna.contracts import DNAEvaluation, DNAIndex, DNANeighbor, DNAProfile
+    from football_intelligence.dna.registry import FeatureDefinition
+
+    @app.get("/api/v1/player-dna", response_model=DNAIndex)
+    def dna_index():
+        return read("phase2/public/index.json")
+
+    def dna_detail(player_id: UUID, threshold: int):
+        index = read("phase2/public/index.json")
+        if threshold not in index["thresholds"]:
+            raise HTTPException(422, "Unsupported evidence threshold")
+        if str(player_id) not in {p["player_id"] for p in index["players"]}:
+            raise HTTPException(404, "Player not in analytical cohort")
+        return read(f"phase2/public/{threshold}/{player_id}.json")
+
+    @app.get("/api/v1/player-dna/{player_id}", response_model=DNAProfile)
+    def dna_profile(player_id: UUID, threshold: int = 900):
+        return dna_detail(player_id, threshold)
+
+    @app.get("/api/v1/player-dna/{player_id}/similar", response_model=list[DNANeighbor])
+    def dna_similar(player_id: UUID, threshold: int = 900, limit: int = Query(10, ge=1, le=20)):
+        return dna_detail(player_id, threshold)["neighbors"][:limit]
+
+    @app.get("/api/v1/similarity/evaluation", response_model=DNAEvaluation)
+    def dna_evaluation():
+        return read("phase2/public/evaluation.json")
+
+    @app.get("/api/v1/features", response_model=list[FeatureDefinition])
+    def dna_features():
+        return read("phase2/public/features.json")
 
     return app
 

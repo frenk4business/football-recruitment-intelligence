@@ -1,0 +1,16 @@
+version: player-dna-v1
+seed: 20260930
+bootstrap_samples: 100
+thresholds: [450, 600, 900, 1200]
+default_threshold: 900
+minimum_role_players: 12
+cohorts:
+  wsl_2023_24:
+    provider: statsbomb
+    repository: statsbomb/open-data
+    revision: 4b73468fc5b0f1950f9f66fada70ad3a4f9327cb
+    competition: 37
+    season: 281
+    mode: complete_season
+    max_matches: null
+    license: StatsBomb Open Data User Agreement; non-commercial research aggregates only

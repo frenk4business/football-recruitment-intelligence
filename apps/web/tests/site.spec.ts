@@ -16,6 +16,7 @@ for (const locale of ["en", "nl"]) {
     for (const section of [
       "",
       "explorer/",
+      "player-dna/",
       "coverage/",
       "methodology/",
       "roadmap/",

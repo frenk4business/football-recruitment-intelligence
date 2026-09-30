@@ -1,8 +1,9 @@
 export type Locale = "en" | "nl";
 export type Section =
-  "home" | "explorer" | "coverage" | "methodology" | "roadmap";
+  "home" | "player-dna" | "explorer" | "coverage" | "methodology" | "roadmap";
 export const sections: Section[] = [
   "home",
+  "player-dna",
   "explorer",
   "coverage",
   "methodology",
@@ -13,6 +14,7 @@ export const route = (locale: Locale, section: Section) =>
 const en = {
   nav: {
     home: "Overview",
+    "player-dna": "Player DNA",
     explorer: "Data explorer",
     coverage: "Coverage",
     methodology: "Methodology",
@@ -20,17 +22,17 @@ const en = {
   },
   skip: "Skip to content",
   language: "Taal wijzigen naar Nederlands",
-  phase: "PHASE 01 / DATA FOUNDATION",
+  phase: "PHASE 02 / PLAYER DNA & SIMILARITY",
   title: "Recruitment research starts with the evidence.",
   intro:
     "Explore what open football data can tell us — and where it stops. A research platform for player profiles, competition context and, eventually, recruitment decisions.",
-  open: "Explore the data",
+  open: "Compare player profiles",
   methods: "Read the methodology",
   sample: "The working sample",
   sampleIntro:
     "Two providers. Different matches, formats and assumptions. Every number below comes from the ingestion pipeline.",
   noModels:
-    "Player similarity and recruitment models are planned. This release establishes the data foundation.",
+    "Player profiles and similarity are available for WSL 2023/24. Inspect the evidence, differences and sampling stability.",
   source: "Source",
   match: "Match",
   competition: "Competition / season",
@@ -160,7 +162,7 @@ const en = {
   planned: "Planned",
   footer: "Independent open-data research by Frenk Kester.",
   repo: "Source code",
-  limitations: "Small research sample. No recruitment recommendations.",
+  limitations: "Observed profiles. No recruitment recommendations.",
   pipelineTitle: "From source file to inspectable evidence",
   pipeline: [
     "Pinned sources",
@@ -173,6 +175,7 @@ export type Copy = typeof en;
 const nl: Copy = {
   nav: {
     home: "Overzicht",
+    "player-dna": "Spelers-DNA",
     explorer: "Dataverkenner",
     coverage: "Datadekking",
     methodology: "Methodologie",
@@ -180,17 +183,17 @@ const nl: Copy = {
   },
   skip: "Ga naar inhoud",
   language: "Switch language to English",
-  phase: "FASE 01 / DATAFUNDAMENT",
+  phase: "FASE 02 / SPELERS-DNA EN GELIJKENIS",
   title: "Recruitmentonderzoek begint bij de onderbouwing.",
   intro:
     "Onderzoek wat open voetbaldata ons vertelt — en waar de grenzen liggen. Een onderzoeksplatform voor spelersprofielen, competitiecontext en uiteindelijk recruitmentbeslissingen.",
-  open: "Verken de data",
+  open: "Vergelijk spelersprofielen",
   methods: "Lees de methodologie",
   sample: "De gebruikte steekproef",
   sampleIntro:
     "Twee databronnen. Andere wedstrijden, formaten en aannames. Alle aantallen hieronder komen uit de datapijplijn.",
   noModels:
-    "Spelersvergelijking en recruitmentmodellen zijn gepland. Deze versie legt het datafundament.",
+    "Spelersprofielen en gelijkenis zijn beschikbaar voor WSL 2023/24. Bekijk de onderbouwing, verschillen en steekproefstabiliteit.",
   source: "Databron",
   match: "Wedstrijd",
   competition: "Competitie / seizoen",
@@ -320,7 +323,7 @@ const nl: Copy = {
   planned: "Gepland",
   footer: "Onafhankelijk onderzoek met open data door Frenk Kester.",
   repo: "Broncode",
-  limitations: "Kleine onderzoekssteekproef. Geen recruitmentaanbevelingen.",
+  limitations: "Waargenomen profielen. Geen recruitmentaanbevelingen.",
   pipelineTitle: "Van bronbestand naar controleerbare onderbouwing",
   pipeline: [
     "Vaste bronversies",

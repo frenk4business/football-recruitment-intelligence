@@ -1,0 +1,101 @@
+{
+  "note": "Exploratory team volumes. Own sequences counted in actor events are not possession duration. Final-third pass starts are a field-tilt candidate, not a validated possession measure; not in production distance.",
+  "teams": [
+    {
+      "event_volume": 47223,
+      "final_third_pass_starts": 3429,
+      "own_sequences_in_actor_events": 2131,
+      "pass_volume": 13409,
+      "team": "Chelsea FCW",
+      "team_id": "3a6cf779-2270-5819-8cd8-e7a355a83a87"
+    },
+    {
+      "event_volume": 37773,
+      "final_third_pass_starts": 1899,
+      "own_sequences_in_actor_events": 2055,
+      "pass_volume": 9690,
+      "team": "Brighton & Hove Albion WFC",
+      "team_id": "4ec8fc42-342a-5a45-9070-3b237ecb7252"
+    },
+    {
+      "event_volume": 44604,
+      "final_third_pass_starts": 2749,
+      "own_sequences_in_actor_events": 2127,
+      "pass_volume": 12319,
+      "team": "Manchester United W",
+      "team_id": "5e1eb273-c618-5745-8f49-d2e770cd66f4"
+    },
+    {
+      "event_volume": 46438,
+      "final_third_pass_starts": 4226,
+      "own_sequences_in_actor_events": 2091,
+      "pass_volume": 13151,
+      "team": "Arsenal WFC",
+      "team_id": "60ab3faa-b309-556c-b5e6-e39a37765e22"
+    },
+    {
+      "event_volume": 48406,
+      "final_third_pass_starts": 3751,
+      "own_sequences_in_actor_events": 2059,
+      "pass_volume": 13873,
+      "team": "Manchester City WFC",
+      "team_id": "67cea9eb-8181-5982-ae0c-0e7f417144cb"
+    },
+    {
+      "event_volume": 42220,
+      "final_third_pass_starts": 1976,
+      "own_sequences_in_actor_events": 2038,
+      "pass_volume": 11264,
+      "team": "Tottenham Hotspur Women",
+      "team_id": "7322fcac-f730-5311-bce4-127e97c243d8"
+    },
+    {
+      "event_volume": 40673,
+      "final_third_pass_starts": 2188,
+      "own_sequences_in_actor_events": 2182,
+      "pass_volume": 10674,
+      "team": "Leicester City WFC",
+      "team_id": "76d18126-4c59-59b6-92d8-8cb6e64d6f06"
+    },
+    {
+      "event_volume": 38568,
+      "final_third_pass_starts": 1954,
+      "own_sequences_in_actor_events": 2048,
+      "pass_volume": 10368,
+      "team": "Liverpool WFC",
+      "team_id": "7ec08217-8a10-52c6-8b2c-223b7273dde3"
+    },
+    {
+      "event_volume": 30779,
+      "final_third_pass_starts": 1333,
+      "own_sequences_in_actor_events": 1946,
+      "pass_volume": 7414,
+      "team": "Bristol City WFC",
+      "team_id": "a6e40be4-0c03-548e-b313-3765c77638f4"
+    },
+    {
+      "event_volume": 42537,
+      "final_third_pass_starts": 2237,
+      "own_sequences_in_actor_events": 2163,
+      "pass_volume": 11710,
+      "team": "Aston Villa W",
+      "team_id": "acf863e0-94d3-5983-8b8c-56976c2b59dc"
+    },
+    {
+      "event_volume": 39678,
+      "final_third_pass_starts": 1666,
+      "own_sequences_in_actor_events": 2037,
+      "pass_volume": 10419,
+      "team": "Everton LFC",
+      "team_id": "ea7a234e-5bbd-55b3-8f0b-ef872c0433f6"
+    },
+    {
+      "event_volume": 36290,
+      "final_third_pass_starts": 1700,
+      "own_sequences_in_actor_events": 2069,
+      "pass_volume": 9282,
+      "team": "West Ham United LFC",
+      "team_id": "fd45bdfb-70d8-5ffe-8be7-b26723b6fa87"
+    }
+  ]
+}

@@ -52,3 +52,7 @@ Live preview: https://football-recruitment-intelligence.onrender.com/ (Dutch `/n
 Create a **cohort and feature eligibility report before fitting anything**: choose an appropriately licensed multi-match event cohort; implement bounded configurable multi-match ingestion and provider-entity deduplication; audit role coverage, reliable minutes, missingness and dates; define position-aware features and excluded observations. Reconcile minutes or exclude unreliable entries explicitly. Begin with standardized descriptive features and an interpretable distance baseline only after that report is reviewable. Assess sensitivity to minutes thresholds and time windows, and keep keeper/outfield roles separate.
 
 Do not mistake supplied StatsBomb xG for this project's model. Never fuzzy-merge source identities, rank the tracking sample, infer commercial reuse rights from download access, or publish raw StatsBomb records. Preserve source scope, temporal provenance and non-commercial attribution throughout Phase 2.
+
+## Phase 2 implemented
+
+This document above preserves the starting hand-off from Phase 1. The completed continuation is on `phase/02-player-dna`; see [cohort](phase-2-cohort.md), [feature registry](player-features.md), [evaluation](player-similarity-evaluation.md), [method ADR](adr/005-player-similarity-method.md) and [Phase 3 hand-off](phase-3-handoff.md). The initial small-sample and interval-minute limitations are addressed for the separate WSL analytical cohort, with explicit remaining exclusions. Keep the original Phase 1 PR review boundary.

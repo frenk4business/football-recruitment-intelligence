@@ -1,0 +1,1739 @@
+{
+  "cohort": "wsl_2023_24",
+  "competition": 37,
+  "complete": true,
+  "files": [
+    {
+      "bytes": 34887,
+      "path": "data/competitions.json",
+      "sha256": "e6cd42f5d8956d6aa30fb917ce8d4c3b3df1879a93f02f8feba820930a6971fa",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/competitions.json"
+    },
+    {
+      "bytes": 2990143,
+      "path": "data/events/3912592.json",
+      "sha256": "80bc3e242d54f6f74f044f61d118a8b7ac04952d02cbb430d4d7e350c1ea8047",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912592.json"
+    },
+    {
+      "bytes": 3460351,
+      "path": "data/events/3912593.json",
+      "sha256": "a810d9e95aabcd5218b8a5316198f669dceab6cfe19f7bfe8100dd09851efca3",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912593.json"
+    },
+    {
+      "bytes": 2647289,
+      "path": "data/events/3912594.json",
+      "sha256": "0cd435630d495dc3a29a687f7493152b28d7c6d1292966f6dcd343b095754013",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912594.json"
+    },
+    {
+      "bytes": 2760103,
+      "path": "data/events/3912595.json",
+      "sha256": "5406eebbf587070f8477fecf017a8446283ea7d4ec26fd286211319bf401edb7",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912595.json"
+    },
+    {
+      "bytes": 3312180,
+      "path": "data/events/3912596.json",
+      "sha256": "1970634456c532eb59ed002246e7d52f9f27e5f79eb13226103186bb261a907a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912596.json"
+    },
+    {
+      "bytes": 3567738,
+      "path": "data/events/3912597.json",
+      "sha256": "1622e8fbb1b7fec3f4b717026aaebc1a092c4b6da96a7d2c9dbeb59ff6f239c6",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912597.json"
+    },
+    {
+      "bytes": 2925179,
+      "path": "data/events/3912598.json",
+      "sha256": "3ffd955e38a2cd149e07dd12d148cc4293d6620305ab62c9d4aaad257f5224f1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912598.json"
+    },
+    {
+      "bytes": 3033388,
+      "path": "data/events/3912599.json",
+      "sha256": "409b4f2ad03d4d4d849a4fa9143d4dc9dab85d485eec80d20ef7e3ce52bcbe34",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912599.json"
+    },
+    {
+      "bytes": 3127910,
+      "path": "data/events/3912600.json",
+      "sha256": "27e9f1c404120e4c5d790a91601f2423a0f64e3e76e3a643cfc533c89467b741",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912600.json"
+    },
+    {
+      "bytes": 3309711,
+      "path": "data/events/3912601.json",
+      "sha256": "33a03e15f073ac77f90f98ad32a01c8d875b76245c4fd8af82beeb5fbd6325cd",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912601.json"
+    },
+    {
+      "bytes": 3014220,
+      "path": "data/events/3912602.json",
+      "sha256": "82a5c29ddb3e893420564beeaacc9f8d0086150c05da96d0be74d8548e6e132f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912602.json"
+    },
+    {
+      "bytes": 3325157,
+      "path": "data/events/3912603.json",
+      "sha256": "88c4359c5082b8c033342f97ccd56375548bbe7887b87baefb36c08049b6f878",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3912603.json"
+    },
+    {
+      "bytes": 3388602,
+      "path": "data/events/3913069.json",
+      "sha256": "6644454368c1e309bc91d787ea5b09544785234758e75745fdd846514dac2f6d",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913069.json"
+    },
+    {
+      "bytes": 3306310,
+      "path": "data/events/3913070.json",
+      "sha256": "487b74578a966edb11c3949d1d8c6876168732dcc8d2f9185b12ca9f0a679637",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913070.json"
+    },
+    {
+      "bytes": 3152123,
+      "path": "data/events/3913071.json",
+      "sha256": "98accfc0eba34ed5862f5b47a0401b095ccbb2f202e8ee4f97cc27cdcbe38698",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913071.json"
+    },
+    {
+      "bytes": 3452104,
+      "path": "data/events/3913072.json",
+      "sha256": "ff1c32711c32338baa88e7b544e5161b0ab01f53868dadf075a1d1fecf9ea7de",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913072.json"
+    },
+    {
+      "bytes": 3342134,
+      "path": "data/events/3913073.json",
+      "sha256": "be909bbef4c719b5b7427d892a2f8bbaebbd15d8fb4c98eeba27bc862d9f3b15",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913073.json"
+    },
+    {
+      "bytes": 3675927,
+      "path": "data/events/3913074.json",
+      "sha256": "5930dc37edc736d8474b8b3a0ec0bc14ffd867848c548db945725a5fa29ee593",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913074.json"
+    },
+    {
+      "bytes": 3639338,
+      "path": "data/events/3913075.json",
+      "sha256": "a77b8835f63edf8646cf147fb2ee3b11bec9257d591c736aa60d192c0250124e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913075.json"
+    },
+    {
+      "bytes": 3153909,
+      "path": "data/events/3913076.json",
+      "sha256": "5c12c27a3284419fa19d10cef13031e02cd8aba5a478349d0f939a721fa4a51d",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913076.json"
+    },
+    {
+      "bytes": 3420201,
+      "path": "data/events/3913077.json",
+      "sha256": "8d75b5bb39194868e4b90c57761465b31365027766df1690a67e40da8b9725e0",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913077.json"
+    },
+    {
+      "bytes": 3265853,
+      "path": "data/events/3913078.json",
+      "sha256": "939d1037bb459c2491ad69c23f1c0aae71a16c955f29af9a9716f0d11cd42a71",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913078.json"
+    },
+    {
+      "bytes": 3184874,
+      "path": "data/events/3913079.json",
+      "sha256": "abcc9e385394393c6737d3b5fb4c07e6ea6fe9aec36c7ec488fe8278d810c298",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913079.json"
+    },
+    {
+      "bytes": 3191741,
+      "path": "data/events/3913080.json",
+      "sha256": "f381ed6c4efb9675e768c142d99c0410195a72d702b226d398942312aea5a4df",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913080.json"
+    },
+    {
+      "bytes": 3508324,
+      "path": "data/events/3913081.json",
+      "sha256": "80ff92050f1d4de81594c0c545bd4bc5a2855621e33f73747faa7b2b049b76ce",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913081.json"
+    },
+    {
+      "bytes": 2969867,
+      "path": "data/events/3913082.json",
+      "sha256": "1e0fe3adee123051915cc7c94ffdb2067b62adacefc59b47486567b44c50a77e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913082.json"
+    },
+    {
+      "bytes": 3051250,
+      "path": "data/events/3913083.json",
+      "sha256": "ce03b069c05f7c3a92212eb6707fe95fb1e8b337421395be401c90f82b9540a4",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913083.json"
+    },
+    {
+      "bytes": 3103736,
+      "path": "data/events/3913084.json",
+      "sha256": "acaf3a1d014167efc54637df53fff5930813f7bf04a34042164166a1903cd455",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913084.json"
+    },
+    {
+      "bytes": 3320872,
+      "path": "data/events/3913085.json",
+      "sha256": "60737fe0844afbadeb1bcbc5fcf16afec30eafb3e134f088eaf39d1689ddbd3e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913085.json"
+    },
+    {
+      "bytes": 3190361,
+      "path": "data/events/3913086.json",
+      "sha256": "ddcb1aa31951c271fd7612a3ce409f05ce59e8bf8f66e42676aff48700b3760c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913086.json"
+    },
+    {
+      "bytes": 3320617,
+      "path": "data/events/3913087.json",
+      "sha256": "8f7fda24aab1ecbb6b9e712b90fdfd16d358a9d760af5f0c77391bac1e41170f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913087.json"
+    },
+    {
+      "bytes": 3402105,
+      "path": "data/events/3913088.json",
+      "sha256": "a4db5070921724b222c313ecc8065adfd7fe21998c3d92edddf4c13160155954",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913088.json"
+    },
+    {
+      "bytes": 3835459,
+      "path": "data/events/3913089.json",
+      "sha256": "74a978634705756a536f07f11645115eb98ad4b2638dd63d0a4f5092ab816c0a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913089.json"
+    },
+    {
+      "bytes": 3436246,
+      "path": "data/events/3913090.json",
+      "sha256": "a8aa7fbc610c571e6253e731f05c7f35b4326a9707fc953a08ad362d176320c2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913090.json"
+    },
+    {
+      "bytes": 2927535,
+      "path": "data/events/3913091.json",
+      "sha256": "f6b5634bea44f0d0739824e562ed47a3ca097f23359eb20dadbd10f8f017e2d4",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913091.json"
+    },
+    {
+      "bytes": 3166691,
+      "path": "data/events/3913092.json",
+      "sha256": "9302c24d4b06a0948b5a5c10739b8f0b38c944891c33dfd04a33b6b25293ddca",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913092.json"
+    },
+    {
+      "bytes": 3404703,
+      "path": "data/events/3913093.json",
+      "sha256": "49978f8aa4202833602b5991ca07d9681a30c3b6975beffd030ed2ae1d982c49",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913093.json"
+    },
+    {
+      "bytes": 3179548,
+      "path": "data/events/3913094.json",
+      "sha256": "0d93eecf392581b4f4b8e49e40f2265de44c077c7b1b6cf705746801c6a6defa",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913094.json"
+    },
+    {
+      "bytes": 3400229,
+      "path": "data/events/3913095.json",
+      "sha256": "6f7bf02b7b86e93ac0c441baa86a5baefd5ac4d1fb4c8f7e01265467734fb61f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913095.json"
+    },
+    {
+      "bytes": 2931577,
+      "path": "data/events/3913096.json",
+      "sha256": "ee569b18716273918fe695ff0927c60ce61a8ef812b53d9ce37774ecaf16b620",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913096.json"
+    },
+    {
+      "bytes": 3310514,
+      "path": "data/events/3913097.json",
+      "sha256": "d8aa4775df3cec66710cf12ad9805336a724df1f928e94ef1771f22c0239783e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913097.json"
+    },
+    {
+      "bytes": 3104668,
+      "path": "data/events/3913098.json",
+      "sha256": "f2cd9708ca1c8385f97720d4f8ed70a48e2458db8fc60d6deb66174d065bd98f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913098.json"
+    },
+    {
+      "bytes": 3433981,
+      "path": "data/events/3913099.json",
+      "sha256": "a27d7ebb198b7f847e71644bc50b42b137eb6ba5dc29487e6252acdd9b4e6f1c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913099.json"
+    },
+    {
+      "bytes": 3494715,
+      "path": "data/events/3913100.json",
+      "sha256": "bfb7a9f5e580e541263d706735d53fd10a440e5d908f6d5feb0ce08d07827452",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913100.json"
+    },
+    {
+      "bytes": 3113714,
+      "path": "data/events/3913101.json",
+      "sha256": "0cc6de8fee03019f30911ebefc84a82350111a21f0d76fc115d5bdca572b922b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913101.json"
+    },
+    {
+      "bytes": 3518879,
+      "path": "data/events/3913102.json",
+      "sha256": "876d207a45e9a4ccaa304efa01430b0ddb79d9259f7e638ea1831e9fae88909c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913102.json"
+    },
+    {
+      "bytes": 3363673,
+      "path": "data/events/3913103.json",
+      "sha256": "3467c682a13cee8f53653a1b64cc7c264a0247072d43d0a2fcc0c677cba99b12",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913103.json"
+    },
+    {
+      "bytes": 3107991,
+      "path": "data/events/3913104.json",
+      "sha256": "57d5098c1bf30ebbe1c7296cd96b217c76551e16a595221bc5707b2d21686439",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913104.json"
+    },
+    {
+      "bytes": 3064779,
+      "path": "data/events/3913105.json",
+      "sha256": "bed42572862a818c4bf3463a7fc885d36f29ba78a1a494456ead40989ef266a3",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913105.json"
+    },
+    {
+      "bytes": 3237569,
+      "path": "data/events/3913106.json",
+      "sha256": "41d3aafa664cceb5249f4007112cd89ac8789611188e518674f254658dcdb3ed",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913106.json"
+    },
+    {
+      "bytes": 3397114,
+      "path": "data/events/3913107.json",
+      "sha256": "62e49b000eeb4218a33ffe0c63769f848639150ce7d0f8e402619238b360389a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913107.json"
+    },
+    {
+      "bytes": 3092706,
+      "path": "data/events/3913108.json",
+      "sha256": "05d3aadf5226640c0104288f6e219446dacaac6aff0f4ef133b8bb0dca297866",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913108.json"
+    },
+    {
+      "bytes": 3414943,
+      "path": "data/events/3913109.json",
+      "sha256": "6b98e6d280b038e817d2bfa7828cc1159a9c7b6e0385f45eed7106fe05169b06",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913109.json"
+    },
+    {
+      "bytes": 3238605,
+      "path": "data/events/3913110.json",
+      "sha256": "7a543b9dd6ea39c56556654dd3b72332fa359219a7e41bed1e7c6e0271ae01fc",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913110.json"
+    },
+    {
+      "bytes": 3120038,
+      "path": "data/events/3913111.json",
+      "sha256": "55dde5cfc63a88bc16c4196985d15cd5a66717e4100b24bb203d189d4adf0e13",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913111.json"
+    },
+    {
+      "bytes": 3428253,
+      "path": "data/events/3913112.json",
+      "sha256": "abe03e8d02b602abab896c227fdb7606d0eadc609addd15c1ddbf9f8a732f9e0",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913112.json"
+    },
+    {
+      "bytes": 3269274,
+      "path": "data/events/3913113.json",
+      "sha256": "5ab7177b506a1656fa71e2c19029a0f4cfacaeba2289c7f80953c02db12dc781",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913113.json"
+    },
+    {
+      "bytes": 3466109,
+      "path": "data/events/3913114.json",
+      "sha256": "e0c970f87285344a4dce5f26ce9b99c7ea6f553a4524626bc3faec90a40d4169",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913114.json"
+    },
+    {
+      "bytes": 3022816,
+      "path": "data/events/3913115.json",
+      "sha256": "7951aa90975648c31632eb1de8ec1e38d21ea94b65245641e0904b4cae9714d7",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913115.json"
+    },
+    {
+      "bytes": 3440856,
+      "path": "data/events/3913116.json",
+      "sha256": "cc2b0912fa157ebeb199ebc4c4e6f6ccf947c60a70d6dbbecfd9726cc484009f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913116.json"
+    },
+    {
+      "bytes": 3302801,
+      "path": "data/events/3913117.json",
+      "sha256": "66110c79fa84f63a7ff7c68db573f34ba13577f8647ddde24bd33f584739ae1f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913117.json"
+    },
+    {
+      "bytes": 3442818,
+      "path": "data/events/3913118.json",
+      "sha256": "2086f27544117aecec514fd437e352c6c953838e702b654494732944913b10ec",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913118.json"
+    },
+    {
+      "bytes": 3410959,
+      "path": "data/events/3913119.json",
+      "sha256": "c164aac9e707a8dec18a62247fc5393143f5bcfb14e1f365e3d6bacffc429360",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913119.json"
+    },
+    {
+      "bytes": 3474648,
+      "path": "data/events/3913120.json",
+      "sha256": "36ac7382dc72f92e35fdcf50333f602f5cf5f2b987a5a1928f7afb19d211087b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913120.json"
+    },
+    {
+      "bytes": 3322754,
+      "path": "data/events/3913121.json",
+      "sha256": "7fc56a6d1e43ea9b8a26d62a02ad3154795c32dcdf3462ebe0f7a37224c32e0c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913121.json"
+    },
+    {
+      "bytes": 3141188,
+      "path": "data/events/3913122.json",
+      "sha256": "e4fecace29958a81e30ef80947900574af2816186d9e9a9910c4f6cfdae85603",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913122.json"
+    },
+    {
+      "bytes": 3102870,
+      "path": "data/events/3913123.json",
+      "sha256": "2766326c703c15bc44b005db2f40a4e54010e7f75a62b8753ed6c36b7ae71864",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913123.json"
+    },
+    {
+      "bytes": 2930670,
+      "path": "data/events/3913124.json",
+      "sha256": "7ae87d7087a761f7f66f983084a1b4bcdc4a504473a445698332846c7bdaf67f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913124.json"
+    },
+    {
+      "bytes": 3110321,
+      "path": "data/events/3913125.json",
+      "sha256": "787e4ca0f6b9f622d901484bcd287f78bed763f9ee2cb1ce59c4a7f5fdab6b1a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913125.json"
+    },
+    {
+      "bytes": 3502297,
+      "path": "data/events/3913126.json",
+      "sha256": "87486fb70a8316af639a53e7298446b843b8ab3ea22a6f0b4292587a0561b4ce",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913126.json"
+    },
+    {
+      "bytes": 3183489,
+      "path": "data/events/3913127.json",
+      "sha256": "c47bf4d6362cc734ed945995007f98f2e6321316ce7cad59f5bf026042bb1b40",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913127.json"
+    },
+    {
+      "bytes": 3203192,
+      "path": "data/events/3913128.json",
+      "sha256": "f373d621dffb1e4c84524213cdbead17ec5f6615fe5f63589f589fa22cb1a30e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913128.json"
+    },
+    {
+      "bytes": 3329776,
+      "path": "data/events/3913129.json",
+      "sha256": "abdd166ccaf534a88e8b0a33987eccb6d8f84a1492aa38ecb31c7aa7675777ed",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913129.json"
+    },
+    {
+      "bytes": 3102691,
+      "path": "data/events/3913130.json",
+      "sha256": "908cb447c38fbcc8c1a0475c40e66a115a5c71430954ba0ab79e67281fde922c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913130.json"
+    },
+    {
+      "bytes": 3311144,
+      "path": "data/events/3913131.json",
+      "sha256": "a48e4476115e51542ab94c15b618a1ffeb0de47a0bfcfa225296da36a3e40c8e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913131.json"
+    },
+    {
+      "bytes": 3479593,
+      "path": "data/events/3913132.json",
+      "sha256": "08ee411440bb978be7225bcb68751386c97263c38349af60f3e55e6cc729c535",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913132.json"
+    },
+    {
+      "bytes": 3364365,
+      "path": "data/events/3913133.json",
+      "sha256": "8b7da04f53325fd116b427717daf7a74509342d498f9a9ef5e553977f47d9ecd",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913133.json"
+    },
+    {
+      "bytes": 3374704,
+      "path": "data/events/3913134.json",
+      "sha256": "5cc4e4b88ba7a7916dac850369126cd7c969b7bf4cb570c998f2a0bb60126c79",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913134.json"
+    },
+    {
+      "bytes": 3150294,
+      "path": "data/events/3913135.json",
+      "sha256": "98acaf2f23d2204ab7bd14865605009185be4282cd7aa6f93f2b8ade444b6a2b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913135.json"
+    },
+    {
+      "bytes": 3363535,
+      "path": "data/events/3913136.json",
+      "sha256": "57fb0c6251d6562aab07c728d9499c141940071ee9b47b1abeac149812ff2697",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913136.json"
+    },
+    {
+      "bytes": 2962321,
+      "path": "data/events/3913137.json",
+      "sha256": "1f8e258dec72d3b7dd326eb3cab4fd43bfc595c5ddd6b12eb1529e394b66448d",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913137.json"
+    },
+    {
+      "bytes": 2995066,
+      "path": "data/events/3913138.json",
+      "sha256": "15b409b665ec88975a85ea07b28deb868e16e3e162ad2bf0e2801574c42439bf",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913138.json"
+    },
+    {
+      "bytes": 3291550,
+      "path": "data/events/3913139.json",
+      "sha256": "195f0d8e9eee66406a895160b1302d31ad10f2c04e624fc7d8361181d6210f90",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913139.json"
+    },
+    {
+      "bytes": 3264927,
+      "path": "data/events/3913140.json",
+      "sha256": "8ff7ce8a9242f5d3de4d5d99a4c309058c6346cd98aa1eb7ef3a36e2163367ad",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913140.json"
+    },
+    {
+      "bytes": 3278674,
+      "path": "data/events/3913141.json",
+      "sha256": "f0ee1002ed38a85d1f50fb40ef20a66c46dfc82851611f4d070b173548bc9941",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913141.json"
+    },
+    {
+      "bytes": 3195273,
+      "path": "data/events/3913142.json",
+      "sha256": "b896265f4a2f0f5adef61b41e08a637aebb24c09b91713f49ce9fca489f71979",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913142.json"
+    },
+    {
+      "bytes": 3368713,
+      "path": "data/events/3913143.json",
+      "sha256": "115ceedde45ebb6826ead440f1e67cb1e05de2547cbca2e2912998e27a4c87ce",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913143.json"
+    },
+    {
+      "bytes": 3288637,
+      "path": "data/events/3913144.json",
+      "sha256": "2ec32b4293d338ccccd56333f4147910d9f6a2c06e5fa65ebf2872809cc18ce4",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913144.json"
+    },
+    {
+      "bytes": 3327438,
+      "path": "data/events/3913145.json",
+      "sha256": "91ea748c388a964d842d43d5eac546b93b4832d7c9ca8fb49eb281ece6d90247",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913145.json"
+    },
+    {
+      "bytes": 3522769,
+      "path": "data/events/3913146.json",
+      "sha256": "2fe7984e9891b05e4e7de730664368f899873e539780e902b4d288741c7c838b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913146.json"
+    },
+    {
+      "bytes": 3279481,
+      "path": "data/events/3913147.json",
+      "sha256": "09237cf167b7077b884bef10a75740a083c7c6aaf2af9f99ae7b6992c4a236ae",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913147.json"
+    },
+    {
+      "bytes": 3366519,
+      "path": "data/events/3913148.json",
+      "sha256": "987166a7d187dcee05a93956fa7bcdbde01a64585e5d7998133c0bf3926ec87a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913148.json"
+    },
+    {
+      "bytes": 3452249,
+      "path": "data/events/3913149.json",
+      "sha256": "04b3e8f30e966de873e237b3836b8b48789caf64dbf3e12b66528dbd23e0ac26",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913149.json"
+    },
+    {
+      "bytes": 3475293,
+      "path": "data/events/3913150.json",
+      "sha256": "fe8d60ccd96f9487256718e5dddbea9acb7a89fac505a362a6a67349fb1ab7dc",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913150.json"
+    },
+    {
+      "bytes": 2897163,
+      "path": "data/events/3913151.json",
+      "sha256": "5f420cc1193070041ce248b7371b5192131ba92a3943c95d61c16668ddd65527",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913151.json"
+    },
+    {
+      "bytes": 2956825,
+      "path": "data/events/3913152.json",
+      "sha256": "4c3f2ca5b03001205ffe3309ffa892ff5c24f200e7e74d49d4f63ba5fda82eca",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913152.json"
+    },
+    {
+      "bytes": 3111129,
+      "path": "data/events/3913153.json",
+      "sha256": "20c8fd0e07e06aef0d0e6310a719e781a3b5bdac4b27a657b4ac033fc60aae05",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913153.json"
+    },
+    {
+      "bytes": 3062770,
+      "path": "data/events/3913154.json",
+      "sha256": "24b782c540017cba51c871913800dc18824e6273c2c2171db309505750422418",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913154.json"
+    },
+    {
+      "bytes": 3265172,
+      "path": "data/events/3913155.json",
+      "sha256": "b70a19318a94485a8792760e4a3e426a373d87c8f7f9aa158266e4c74b9402b8",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913155.json"
+    },
+    {
+      "bytes": 3654945,
+      "path": "data/events/3913156.json",
+      "sha256": "c5b9247fd13967cc885b227d4200bbb8380ba2cfee1d307cc3f6742d2b2f18f1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913156.json"
+    },
+    {
+      "bytes": 2905365,
+      "path": "data/events/3913157.json",
+      "sha256": "c79b2f56c4dbd88197535ed685ecdb969c6008b89b1d5332bbe321381f982c42",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913157.json"
+    },
+    {
+      "bytes": 3079204,
+      "path": "data/events/3913158.json",
+      "sha256": "f30ede27de9e3fb605ed4ccc5357a3eb557ee8bdf9ee309ef6e23c8b6064ba1e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913158.json"
+    },
+    {
+      "bytes": 2998486,
+      "path": "data/events/3913159.json",
+      "sha256": "27c34cf2d01713e2d63a345d770776037d452a4c045f8d854d975eea32254693",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913159.json"
+    },
+    {
+      "bytes": 3708605,
+      "path": "data/events/3913160.json",
+      "sha256": "04e241de70fc0cf2e47d6ae96f075f361a001b84111dfd28ca91d15b28cd9055",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913160.json"
+    },
+    {
+      "bytes": 3476259,
+      "path": "data/events/3913161.json",
+      "sha256": "cb0cb863004fa101dcfeb8ac885876f0037eadb5036879ef5c65a407c8046c86",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913161.json"
+    },
+    {
+      "bytes": 3290858,
+      "path": "data/events/3913162.json",
+      "sha256": "7aad66930fa3579baf3e2274832c79089cca186baeb3ebe7b8dcc508cee138cc",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913162.json"
+    },
+    {
+      "bytes": 3217832,
+      "path": "data/events/3913163.json",
+      "sha256": "bf3009be6245807a6aae0a7cc4e1a5f906eedbbe873a096dacdfeae398b1784c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913163.json"
+    },
+    {
+      "bytes": 2987118,
+      "path": "data/events/3913164.json",
+      "sha256": "83c5eb3f2e7dc9c7e8d7e4c15df09f1b1e92369a49bb94ef0fd0c0c2a51bd9c3",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913164.json"
+    },
+    {
+      "bytes": 3269425,
+      "path": "data/events/3913165.json",
+      "sha256": "8075ea88151892f610da1a2280f4c6ea7f50c59711bbc89e07293a86ad965376",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913165.json"
+    },
+    {
+      "bytes": 3293925,
+      "path": "data/events/3913166.json",
+      "sha256": "ca1adfaeb2c3038702dfdaf0df58a136f3eb80ae0e4f20d378f38d0adf74cd8e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913166.json"
+    },
+    {
+      "bytes": 3375832,
+      "path": "data/events/3913167.json",
+      "sha256": "f1a691e5b609fea9899303939b178ecac0af2e1b32234605eb050c3868ccdf26",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913167.json"
+    },
+    {
+      "bytes": 3614197,
+      "path": "data/events/3913168.json",
+      "sha256": "c4cd66fe0987bcc171de03d8d3074be7fd7239e9904e6ace3f5f7d6ec39403de",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913168.json"
+    },
+    {
+      "bytes": 3247299,
+      "path": "data/events/3913169.json",
+      "sha256": "7cfb2a23ddd54a131c69e5ff32d03ea8e0f4c6142d8836b5942b4b4fa8e194c8",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913169.json"
+    },
+    {
+      "bytes": 3069594,
+      "path": "data/events/3913170.json",
+      "sha256": "f6a62fcae2c9d76e1452a23595ad7eb12d72bf1062aff2d8c4637231ec9f5921",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913170.json"
+    },
+    {
+      "bytes": 3337876,
+      "path": "data/events/3913171.json",
+      "sha256": "ca58169c701ec46f81555a12545ec1a226fc5bb3a17906d31b865aac7d8977aa",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913171.json"
+    },
+    {
+      "bytes": 3400859,
+      "path": "data/events/3913172.json",
+      "sha256": "ce8d76675483dd91a2c2600e35e61006815a621100578409cade9397c245f30b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913172.json"
+    },
+    {
+      "bytes": 3086558,
+      "path": "data/events/3913173.json",
+      "sha256": "f896d03e9d66bd0bcb8018b742debb2b78d1e6aa060f662c00429ee44452906a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913173.json"
+    },
+    {
+      "bytes": 3375308,
+      "path": "data/events/3913174.json",
+      "sha256": "648cc28420b2e25f68cd2519030ddc6959c1087046cafdf73dd1bf92d727d9a0",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913174.json"
+    },
+    {
+      "bytes": 2917491,
+      "path": "data/events/3913175.json",
+      "sha256": "b580a7881d9370f8726b3ce8cf59a5e5dc1c2f6cd43b97d4363d18232b727103",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913175.json"
+    },
+    {
+      "bytes": 3152482,
+      "path": "data/events/3913176.json",
+      "sha256": "69544020522f000982d843b6f2d427dc3cf2fc1412822016194bb7c9be44dbc2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913176.json"
+    },
+    {
+      "bytes": 3175158,
+      "path": "data/events/3913177.json",
+      "sha256": "8aa0b3bd2d6e0828f8e1029a7a57186b5d02ebb7c0f25ce2464bb396b3c965a2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913177.json"
+    },
+    {
+      "bytes": 2995281,
+      "path": "data/events/3913178.json",
+      "sha256": "f8f71079b44cb18c375abecd0b20fe54740ca5600ddfde31c85b83673ba3cb3c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913178.json"
+    },
+    {
+      "bytes": 2982513,
+      "path": "data/events/3913179.json",
+      "sha256": "e5affde3c05afd380968285f7582298d9ffa4546c68d4ad9160f612aab9e60f5",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913179.json"
+    },
+    {
+      "bytes": 3361020,
+      "path": "data/events/3913180.json",
+      "sha256": "539724cb09b257b77b96af27aa72d504790cf31bbd4d38bf40472a4ea0bd6419",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913180.json"
+    },
+    {
+      "bytes": 3167943,
+      "path": "data/events/3913181.json",
+      "sha256": "644c3c17831844b3e5ba5fbd964073a8ee75774ab4ebf260b7bd93e6db597263",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913181.json"
+    },
+    {
+      "bytes": 3265314,
+      "path": "data/events/3913182.json",
+      "sha256": "ae5820ec8bd6c388fbc51a8446fbd4ab1530987c966b189c71f7a004229bbc5c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913182.json"
+    },
+    {
+      "bytes": 3416933,
+      "path": "data/events/3913183.json",
+      "sha256": "aa18cdce62db11ca0330e1f790a4aa0c5626c5a66598bc1be5ef1e4cfeb07636",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913183.json"
+    },
+    {
+      "bytes": 3150175,
+      "path": "data/events/3913184.json",
+      "sha256": "c808f5c9694c3a3bee37fe96f02b3a9b14e28bdb000c3e7bc8f6bf8336a8f4fa",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913184.json"
+    },
+    {
+      "bytes": 3471790,
+      "path": "data/events/3913185.json",
+      "sha256": "104de7b1dfb7949dbafed0b8dd8839311f1e2da4e66bfa85d9b9e7219782f31f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913185.json"
+    },
+    {
+      "bytes": 3080547,
+      "path": "data/events/3913186.json",
+      "sha256": "ce9596535f4a22379219cb775059264ecfc78dd8345d7f2f91430a99485c14cd",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913186.json"
+    },
+    {
+      "bytes": 2886815,
+      "path": "data/events/3913187.json",
+      "sha256": "645b38e5cbfbaeb9ba99be43121acfb1afc5c58d6a72543434f5f2c0470400ce",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913187.json"
+    },
+    {
+      "bytes": 3261163,
+      "path": "data/events/3913188.json",
+      "sha256": "ed0ddaca7b134ba2f95b45e5fb1a1fcc217e5f9571dc3241e805fb63cc9fe681",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3913188.json"
+    },
+    {
+      "bytes": 19971,
+      "path": "data/lineups/3912592.json",
+      "sha256": "0d61b29a35a44a2f06c18e09870ee8b0b062881923f278b9a55c92420a186c2a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912592.json"
+    },
+    {
+      "bytes": 23943,
+      "path": "data/lineups/3912593.json",
+      "sha256": "91f137c56be925f42543b9fac16f65724c71a953e8cd50edfd0842375aef99d4",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912593.json"
+    },
+    {
+      "bytes": 24498,
+      "path": "data/lineups/3912594.json",
+      "sha256": "77c6fc8f2983a35b8ed8b1e82f20ce7b02b083db4a4b49830e013b11af5f139a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912594.json"
+    },
+    {
+      "bytes": 19279,
+      "path": "data/lineups/3912595.json",
+      "sha256": "5373b02a1c42d847e4c54eed6aee623db45d20b0a5e7d819172ca4cf8e8386d3",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912595.json"
+    },
+    {
+      "bytes": 21007,
+      "path": "data/lineups/3912596.json",
+      "sha256": "f9c90500cc30498a8f46df5284345ea71c8603a1c8ca45f3dc0811e22419afa6",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912596.json"
+    },
+    {
+      "bytes": 20997,
+      "path": "data/lineups/3912597.json",
+      "sha256": "ed7be0d49028e321c62bf7a707369bffa40fe9b89c61b90d84f7188933a133dc",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912597.json"
+    },
+    {
+      "bytes": 21540,
+      "path": "data/lineups/3912598.json",
+      "sha256": "1af10ef2ac59784a0d58a17b6e7b1615735be6641d5cc7b65d217a119bd11a89",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912598.json"
+    },
+    {
+      "bytes": 24215,
+      "path": "data/lineups/3912599.json",
+      "sha256": "9f377cca4fc2631bf74b651a40249fae5fae69c0eaf24a8dca87ae14f58457f5",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912599.json"
+    },
+    {
+      "bytes": 22748,
+      "path": "data/lineups/3912600.json",
+      "sha256": "931cd7328864ee9971562010489753f532f29673fd92e94c5b80d665c2b47724",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912600.json"
+    },
+    {
+      "bytes": 18708,
+      "path": "data/lineups/3912601.json",
+      "sha256": "71e2b54db23fb4a12ada845dc2b24b7b794c3f955f3cf23b92ea4672dff199f1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912601.json"
+    },
+    {
+      "bytes": 20669,
+      "path": "data/lineups/3912602.json",
+      "sha256": "6a1cacb36f811c535be8e58864ebb883a06cd5058ab8120374c82083b65e04e2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912602.json"
+    },
+    {
+      "bytes": 22154,
+      "path": "data/lineups/3912603.json",
+      "sha256": "2126e1d6286400e45de0fc0ca02e193966df45434158d3abddefe02b4878a166",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3912603.json"
+    },
+    {
+      "bytes": 16638,
+      "path": "data/lineups/3913069.json",
+      "sha256": "ab5e9ab171f740784e7203e256d320ea6db758a426555727e599545ae1fbe22b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913069.json"
+    },
+    {
+      "bytes": 21804,
+      "path": "data/lineups/3913070.json",
+      "sha256": "6ab2680ca77c6eeb4b67277c4ab230402d08688ab69b9b8b3bafd3192e8cbc5b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913070.json"
+    },
+    {
+      "bytes": 21271,
+      "path": "data/lineups/3913071.json",
+      "sha256": "aa05da37d881581ad81b93f7ff1b16afc835b66e8b8dea306dad920101fe5ffd",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913071.json"
+    },
+    {
+      "bytes": 26243,
+      "path": "data/lineups/3913072.json",
+      "sha256": "bea261caf009c5bf325d8c31c4d319cdd992dc64a9bf09bdbcbc44e1fbca5c8c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913072.json"
+    },
+    {
+      "bytes": 21960,
+      "path": "data/lineups/3913073.json",
+      "sha256": "63a26c8f97fc2377ea9c1cee1ef6e217b4674364db71025a7fa0ac355fd40e6f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913073.json"
+    },
+    {
+      "bytes": 20802,
+      "path": "data/lineups/3913074.json",
+      "sha256": "ed8416d338812542fa8a3647131e9e20c9d69819e6dad8210c625d160f1b7360",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913074.json"
+    },
+    {
+      "bytes": 20567,
+      "path": "data/lineups/3913075.json",
+      "sha256": "7c43571cc35e5577c9a2579898fd3e66c7d0c158ea05031109fdf5273e7f232f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913075.json"
+    },
+    {
+      "bytes": 19497,
+      "path": "data/lineups/3913076.json",
+      "sha256": "d44493a38fe160ba00e234bc9ce3ac97610bef913f90c4c564e29a2cb14aa3b1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913076.json"
+    },
+    {
+      "bytes": 22532,
+      "path": "data/lineups/3913077.json",
+      "sha256": "c70278708703c4e566ab822bbd0dd6a89c7d91522fe7d24987f51e699f3d41b5",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913077.json"
+    },
+    {
+      "bytes": 18234,
+      "path": "data/lineups/3913078.json",
+      "sha256": "c00c641b69d5684f91cea0a7ed664aa3b4b51efd2c226631da4f048b71737ee1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913078.json"
+    },
+    {
+      "bytes": 19116,
+      "path": "data/lineups/3913079.json",
+      "sha256": "6c2519b836577e55ef8b8ba329287c1f3fa8911654054e30f655d09a7d823871",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913079.json"
+    },
+    {
+      "bytes": 22202,
+      "path": "data/lineups/3913080.json",
+      "sha256": "3b37f3c3662484fe6a79816f9e7ad8d2cd1407ad05682fa1e6f8c73c6f8f5d7c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913080.json"
+    },
+    {
+      "bytes": 21351,
+      "path": "data/lineups/3913081.json",
+      "sha256": "1bc2d63bb3fa1acb725a599fe42a04745bfcb8eabbfa5710775ae3912a43c617",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913081.json"
+    },
+    {
+      "bytes": 22214,
+      "path": "data/lineups/3913082.json",
+      "sha256": "510e4c87c947f8684320e5b254191b3a0d14f1b725bb29ffba0b12ea1eef59b4",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913082.json"
+    },
+    {
+      "bytes": 22202,
+      "path": "data/lineups/3913083.json",
+      "sha256": "d810a666b52ef454ebea918952bb2f47aa9e766ed8eb18fa69d7c26f41ee74a7",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913083.json"
+    },
+    {
+      "bytes": 21121,
+      "path": "data/lineups/3913084.json",
+      "sha256": "08c9700f94fde99bf1f61334f6e6bb669e630d54cdce75e6d989150cd555e145",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913084.json"
+    },
+    {
+      "bytes": 17540,
+      "path": "data/lineups/3913085.json",
+      "sha256": "75dc6d7f890328a1bc8085d9f6c2c53c81e9154941db2fa35fce2e4a5ad2444e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913085.json"
+    },
+    {
+      "bytes": 21173,
+      "path": "data/lineups/3913086.json",
+      "sha256": "86850115bd55cb2bd17041aadca4ceac8d3a5ec45b2368ffaa251b344e8fed3f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913086.json"
+    },
+    {
+      "bytes": 18989,
+      "path": "data/lineups/3913087.json",
+      "sha256": "625e9fbdc81b1bb0cbd4be785a48b43b356f8bef9fe6b40623a5a4cb501178dc",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913087.json"
+    },
+    {
+      "bytes": 20598,
+      "path": "data/lineups/3913088.json",
+      "sha256": "2e193ff0c842c747555140ae825cb6ff6f42a5b924d67dd8fb78f4fb98602ad2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913088.json"
+    },
+    {
+      "bytes": 19234,
+      "path": "data/lineups/3913089.json",
+      "sha256": "ec06d51fe9fb0b6c4781be5f559c2f57c97bdf4d47d89768431a67957f3f345b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913089.json"
+    },
+    {
+      "bytes": 18721,
+      "path": "data/lineups/3913090.json",
+      "sha256": "66979f09a69e9e8cd84f288a8edb3f68c0087bd3f406f3a8d76b9a08d3f18cda",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913090.json"
+    },
+    {
+      "bytes": 21504,
+      "path": "data/lineups/3913091.json",
+      "sha256": "7460ddc43161cf4ade280a73ea9ed9e18cf07872bc52b5ee0917cadf2398d08b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913091.json"
+    },
+    {
+      "bytes": 20369,
+      "path": "data/lineups/3913092.json",
+      "sha256": "7389f02cf44fb598b21b0c7183abdecea65fb7f7547fce46f44581e787054cf2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913092.json"
+    },
+    {
+      "bytes": 18326,
+      "path": "data/lineups/3913093.json",
+      "sha256": "a4c11b3a03b556c55e6ef5d1bc9f869b3acaf3a8389560aa6d8253d1c969e08c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913093.json"
+    },
+    {
+      "bytes": 19814,
+      "path": "data/lineups/3913094.json",
+      "sha256": "3ed28b55899fefb1ba6e75977123d6470e620339c4855f3f45936768db12bc0d",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913094.json"
+    },
+    {
+      "bytes": 20587,
+      "path": "data/lineups/3913095.json",
+      "sha256": "f7bf181f4d6b3e7c5dc77c74a9e9cc7aa4ab26eb837056bb5cb4955b259062fd",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913095.json"
+    },
+    {
+      "bytes": 18446,
+      "path": "data/lineups/3913096.json",
+      "sha256": "9497f2a82c9649415c2787bb77f5b0461a53544a341e91395020b36c7a39a474",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913096.json"
+    },
+    {
+      "bytes": 19286,
+      "path": "data/lineups/3913097.json",
+      "sha256": "0ff7e9f54249fce0bc6bfe4498e52cb70ac57dd8e6574646a9e1ca310d822bff",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913097.json"
+    },
+    {
+      "bytes": 28861,
+      "path": "data/lineups/3913098.json",
+      "sha256": "9eff94005005324a60b620e343e757faf1a80327c89ee1bfc32b1f7c8b24eeae",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913098.json"
+    },
+    {
+      "bytes": 20780,
+      "path": "data/lineups/3913099.json",
+      "sha256": "358d8abc2ac91ee7d7974241f1cabf2fd9dfd4a46320312164200209c4a49fd9",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913099.json"
+    },
+    {
+      "bytes": 17212,
+      "path": "data/lineups/3913100.json",
+      "sha256": "95d33200f038c49269f17521727c7ae481af5204e8748f5ffbe7302f54c8806e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913100.json"
+    },
+    {
+      "bytes": 19237,
+      "path": "data/lineups/3913101.json",
+      "sha256": "0bbcc01ad75d159253bf79cd3463673ac33034d86b2556c59b1e9cc273d6d96f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913101.json"
+    },
+    {
+      "bytes": 21777,
+      "path": "data/lineups/3913102.json",
+      "sha256": "68f7ffe41496f1478f470708812259c91fb8c7eae62439c250ad82b7e737ad73",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913102.json"
+    },
+    {
+      "bytes": 20246,
+      "path": "data/lineups/3913103.json",
+      "sha256": "032344397cbf6a442f5091f3e1667133e1c543ef0fa567d473f5fa812e798a47",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913103.json"
+    },
+    {
+      "bytes": 20013,
+      "path": "data/lineups/3913104.json",
+      "sha256": "20dc1f1ea423df3bd131139e0a38d90553002709dbf81833e09ca79c9ed14207",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913104.json"
+    },
+    {
+      "bytes": 23498,
+      "path": "data/lineups/3913105.json",
+      "sha256": "3dc8ea8f0fa449f02d0053c21f05ad036d0b46b58e302fb06293644bb12a6c10",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913105.json"
+    },
+    {
+      "bytes": 18567,
+      "path": "data/lineups/3913106.json",
+      "sha256": "65dfc38b7ac4da6a8e6f0b166ded969f75960cc220e8770e48a6130751654923",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913106.json"
+    },
+    {
+      "bytes": 19131,
+      "path": "data/lineups/3913107.json",
+      "sha256": "c4d54cf8798b88410d153654b4cd50a65e526f726de721c7e6a37875a9764680",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913107.json"
+    },
+    {
+      "bytes": 20633,
+      "path": "data/lineups/3913108.json",
+      "sha256": "c98f908a1ffb72fdfd8ae457ec9c9be7c647df2df4f1fc38cc569e05779da03b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913108.json"
+    },
+    {
+      "bytes": 20749,
+      "path": "data/lineups/3913109.json",
+      "sha256": "2b4ceb652c65fc5de1c52b8bb7ef2fea16ee57570958f7a32012125893c6226c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913109.json"
+    },
+    {
+      "bytes": 21271,
+      "path": "data/lineups/3913110.json",
+      "sha256": "10bed882d9c030f330b6d79c8c2643f6f4463c077c98da9b522e6944019f2f50",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913110.json"
+    },
+    {
+      "bytes": 19279,
+      "path": "data/lineups/3913111.json",
+      "sha256": "ec77d829502496382f1c0f202fa9ac4ea75b4f825ab26d96ace122f0dbe381d6",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913111.json"
+    },
+    {
+      "bytes": 19154,
+      "path": "data/lineups/3913112.json",
+      "sha256": "42f5f8b684f6ab6a00b0bc827366db7e0c3b02b06ed0042a61400a2da704cf40",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913112.json"
+    },
+    {
+      "bytes": 20231,
+      "path": "data/lineups/3913113.json",
+      "sha256": "ea17faeb387e44ccc0efb973df60ac01a81524a2859f37c2bf9d0ddd1bf74544",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913113.json"
+    },
+    {
+      "bytes": 28661,
+      "path": "data/lineups/3913114.json",
+      "sha256": "30a7811bf3400eb3d53e751bd0d8ff53a1a21f49a86553d645c752fdaf1b0489",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913114.json"
+    },
+    {
+      "bytes": 23022,
+      "path": "data/lineups/3913115.json",
+      "sha256": "22c03d5d67f45bbcb193dbf8786a8ef2deb16e8d2fcfe45ea85453bac2dfe3b6",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913115.json"
+    },
+    {
+      "bytes": 22545,
+      "path": "data/lineups/3913116.json",
+      "sha256": "7f127663ef5fc71002a55fc8252877b432a73af9866726a5531d43ed43ac5f3e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913116.json"
+    },
+    {
+      "bytes": 19159,
+      "path": "data/lineups/3913117.json",
+      "sha256": "60a0055972330d453fba5beaaf3de2e88547d9789450e0fd39902a6e7213eef1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913117.json"
+    },
+    {
+      "bytes": 21161,
+      "path": "data/lineups/3913118.json",
+      "sha256": "ecf322dd90b42171d4c47ef7c7ad66b73bf867d543c89724af34387976ec28f9",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913118.json"
+    },
+    {
+      "bytes": 19270,
+      "path": "data/lineups/3913119.json",
+      "sha256": "4d422bdb30a8c097924774e480d85414d04586309702de2ba9dce7312e33871f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913119.json"
+    },
+    {
+      "bytes": 22574,
+      "path": "data/lineups/3913120.json",
+      "sha256": "0aca3b2a24ee7aeb85fe33824f08fb0b204009219ca42f5e5ad8e8fdbeb45310",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913120.json"
+    },
+    {
+      "bytes": 17454,
+      "path": "data/lineups/3913121.json",
+      "sha256": "46f098fc1b96ec6f971d4e687aa8710639e183d3cc8d1cf08dcfd85400aa93db",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913121.json"
+    },
+    {
+      "bytes": 20478,
+      "path": "data/lineups/3913122.json",
+      "sha256": "0133ae63cebd18a04179193b461922478842078afa7b5b39c3d8850603eacc3a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913122.json"
+    },
+    {
+      "bytes": 20044,
+      "path": "data/lineups/3913123.json",
+      "sha256": "285dccca1865e52074152011c268471866dd72a17fe81f949fc017a71140971f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913123.json"
+    },
+    {
+      "bytes": 22850,
+      "path": "data/lineups/3913124.json",
+      "sha256": "19571225ec9f5f11b361fe36d29157d6f89057b02138b29c77b39cc48f4a611e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913124.json"
+    },
+    {
+      "bytes": 22018,
+      "path": "data/lineups/3913125.json",
+      "sha256": "f23102e0f69fe06e6304c082b4c08163aabdb2d01777b68bcfc0955e74bf9deb",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913125.json"
+    },
+    {
+      "bytes": 19805,
+      "path": "data/lineups/3913126.json",
+      "sha256": "78dcc392cedcd805bd49cf262c0c7ba1953344b9eb32fd10e59c4737937f273a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913126.json"
+    },
+    {
+      "bytes": 18115,
+      "path": "data/lineups/3913127.json",
+      "sha256": "5795af5a82c19d8a1b4fd8b8f9682785982378780fdda83689cf0375979b75c2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913127.json"
+    },
+    {
+      "bytes": 22041,
+      "path": "data/lineups/3913128.json",
+      "sha256": "e4f59d18e69b4e39f35afe161b58efbf906c81fd08d4f5ed3cf880d2050c3481",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913128.json"
+    },
+    {
+      "bytes": 22946,
+      "path": "data/lineups/3913129.json",
+      "sha256": "615b2855be58ba0ab54a1cf36f7b4ff7dcb532d9e74ae4a4d1bbaddb773a83a0",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913129.json"
+    },
+    {
+      "bytes": 20129,
+      "path": "data/lineups/3913130.json",
+      "sha256": "09f9d8a4fe4c12fe66eb8720ae7314da9a2b1f73a9d58cd94e63011f1266013d",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913130.json"
+    },
+    {
+      "bytes": 19195,
+      "path": "data/lineups/3913131.json",
+      "sha256": "af1fa55f5302e8d06cd5c734b09359a1e4acda7814b95fda860b3e5d1a75f884",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913131.json"
+    },
+    {
+      "bytes": 20094,
+      "path": "data/lineups/3913132.json",
+      "sha256": "816e2dc743a6e7e3cfb0e2710167f19884b2ff57a2a4954bcff44ce8bca955f2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913132.json"
+    },
+    {
+      "bytes": 18786,
+      "path": "data/lineups/3913133.json",
+      "sha256": "6d3c5274c7f8c5d1b55c13a23527fcf68a045b3c2cc05d30b867c055c851ff3e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913133.json"
+    },
+    {
+      "bytes": 19227,
+      "path": "data/lineups/3913134.json",
+      "sha256": "44fa03e5e509260612b2abd7820c3e70c5e206368368e88b0f55d7de9aa1688b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913134.json"
+    },
+    {
+      "bytes": 21768,
+      "path": "data/lineups/3913135.json",
+      "sha256": "34288dce1c0d0b923e4ef45207b67b9d9eed383afd90b972aa7db1650ff1818c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913135.json"
+    },
+    {
+      "bytes": 23360,
+      "path": "data/lineups/3913136.json",
+      "sha256": "9607139f9d410c70170569c918b5bc9385c805bc13bdc2746ad6f54cfe1f1102",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913136.json"
+    },
+    {
+      "bytes": 18434,
+      "path": "data/lineups/3913137.json",
+      "sha256": "f2b53d68e3e054e5f68020ef1f9f6568cccd27681eee89eceb6f3f4a05308f20",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913137.json"
+    },
+    {
+      "bytes": 22541,
+      "path": "data/lineups/3913138.json",
+      "sha256": "e33e96ba18540ea98d37b9687db5aff65b90a54d928a8d53801736c10a02d5b6",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913138.json"
+    },
+    {
+      "bytes": 21953,
+      "path": "data/lineups/3913139.json",
+      "sha256": "d9feca357365a4117b87395f44e588a5f0f94bf792bd601d2baceb724efc0a37",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913139.json"
+    },
+    {
+      "bytes": 18481,
+      "path": "data/lineups/3913140.json",
+      "sha256": "caeba33ae9ea7a4e9bf4afd6f081847558c609c223ec9c48cce245e99f443b2c",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913140.json"
+    },
+    {
+      "bytes": 20610,
+      "path": "data/lineups/3913141.json",
+      "sha256": "ce64403345f502fff68cf3e09f378c23bca290af3841faaafbe640714bbd5770",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913141.json"
+    },
+    {
+      "bytes": 19684,
+      "path": "data/lineups/3913142.json",
+      "sha256": "24737de33d07b4e2df1806739681e8fbdcd397de5f67581a7d936a554881c86f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913142.json"
+    },
+    {
+      "bytes": 18262,
+      "path": "data/lineups/3913143.json",
+      "sha256": "87331af281b7005e5c7611b3daa1236c1c07e077d133968a905009b8d82dae3f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913143.json"
+    },
+    {
+      "bytes": 16693,
+      "path": "data/lineups/3913144.json",
+      "sha256": "59efb1972505b90c8dda56ecc7af75988bfb79bbef7ad98199d81b61bf5fae64",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913144.json"
+    },
+    {
+      "bytes": 20999,
+      "path": "data/lineups/3913145.json",
+      "sha256": "d61b1f63d54d441fc0e0ba337acd07ac7d492d6058b8b9c3861b5fc3eb946616",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913145.json"
+    },
+    {
+      "bytes": 24646,
+      "path": "data/lineups/3913146.json",
+      "sha256": "8d0c3c802db6e19dcaddfe5c1d7574f75e522c83e68d9e78bfac4eba35b4e15e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913146.json"
+    },
+    {
+      "bytes": 17773,
+      "path": "data/lineups/3913147.json",
+      "sha256": "bdec79f305c1ed91f07cbb5f79a03ef0c9eeee9dfe311c028b3b65d951e3e994",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913147.json"
+    },
+    {
+      "bytes": 20837,
+      "path": "data/lineups/3913148.json",
+      "sha256": "0ffa48949a6a3d0c26824771b437e35f11d46e81f6ab898765c1e1236fa043ff",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913148.json"
+    },
+    {
+      "bytes": 21898,
+      "path": "data/lineups/3913149.json",
+      "sha256": "5cfcd75797e31f87d0fc4c963969c4ce760a2a401a403dff9a45d897540179dd",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913149.json"
+    },
+    {
+      "bytes": 20948,
+      "path": "data/lineups/3913150.json",
+      "sha256": "b7516a5bc61e2465f3a52b13361ca6ab453380d662ed541dcfe3c904efc79a40",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913150.json"
+    },
+    {
+      "bytes": 20618,
+      "path": "data/lineups/3913151.json",
+      "sha256": "9c8b9f7d92e633424dc9bc08f5cb89075da1066f7c662b6e9ea43f669c7356a9",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913151.json"
+    },
+    {
+      "bytes": 19305,
+      "path": "data/lineups/3913152.json",
+      "sha256": "c3f057386dc5b3ca788ed9430fa1260be3100e970fe15da3ceb2128c13c531e2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913152.json"
+    },
+    {
+      "bytes": 23100,
+      "path": "data/lineups/3913153.json",
+      "sha256": "733ff116298f2af3c764a15a3f5765f02010d7df45f79e04ceb67b005142dace",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913153.json"
+    },
+    {
+      "bytes": 20383,
+      "path": "data/lineups/3913154.json",
+      "sha256": "8e30c36dace7b27a89fdd752c8354e1d128b3f2ac94e06642feff91288310339",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913154.json"
+    },
+    {
+      "bytes": 18630,
+      "path": "data/lineups/3913155.json",
+      "sha256": "62973b16874b09dad773c38ba776737d7902f2a3ce3d163cfd2bf5aca1824588",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913155.json"
+    },
+    {
+      "bytes": 20158,
+      "path": "data/lineups/3913156.json",
+      "sha256": "bcc0e37032d8299820fef336836722d552349f9b41bb98a93814212a7c830950",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913156.json"
+    },
+    {
+      "bytes": 20657,
+      "path": "data/lineups/3913157.json",
+      "sha256": "2727ce3567cdf26b35418feed1d2b57aa50985d9e1cad71136cda6958a8bc1c1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913157.json"
+    },
+    {
+      "bytes": 21388,
+      "path": "data/lineups/3913158.json",
+      "sha256": "6fc227f726e41e640a0b661e0d6482dc606965a9d4242721a23289431e228b06",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913158.json"
+    },
+    {
+      "bytes": 18729,
+      "path": "data/lineups/3913159.json",
+      "sha256": "f58b55bf28adee20927b49a016d623e14d8828a8d6de9373ff479c6e3da0dcc2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913159.json"
+    },
+    {
+      "bytes": 17927,
+      "path": "data/lineups/3913160.json",
+      "sha256": "d4244a857cd7a7a918abacb6c48ed5a78ebf1a123a3e52ca9eae64450ded5d71",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913160.json"
+    },
+    {
+      "bytes": 21565,
+      "path": "data/lineups/3913161.json",
+      "sha256": "f92db5a59480a4891961fb0291035d4b88bd7223c4fd81e929efa2a8768570fc",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913161.json"
+    },
+    {
+      "bytes": 18609,
+      "path": "data/lineups/3913162.json",
+      "sha256": "8ad79b02e28a81e14d7e16f2b1cd03a2c4046e24f426987fa0e99cf64813a3d4",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913162.json"
+    },
+    {
+      "bytes": 19013,
+      "path": "data/lineups/3913163.json",
+      "sha256": "7c0850895bf814da9b88a462f0edabed7f4fbee0d8f5b6d67d41b66d347d21d9",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913163.json"
+    },
+    {
+      "bytes": 18784,
+      "path": "data/lineups/3913164.json",
+      "sha256": "f508dcc398fc5cd1daa2bc0c5acb5d34e3ecd18b111e1d9496dfc4aa8772f6c9",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913164.json"
+    },
+    {
+      "bytes": 20101,
+      "path": "data/lineups/3913165.json",
+      "sha256": "d24e429a7b46ecc4c20d21ae0d01aa90d6c08e73c14dea3198d2eecdeec4fff9",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913165.json"
+    },
+    {
+      "bytes": 22004,
+      "path": "data/lineups/3913166.json",
+      "sha256": "c8fa5d730a83ad21f90036f60a41e8fd26f9450339d4f6c19909bcc85adc10d6",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913166.json"
+    },
+    {
+      "bytes": 19784,
+      "path": "data/lineups/3913167.json",
+      "sha256": "1689619ee2d94360d4a615e709be646f22c954dbd81ed2279756b7badc76972b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913167.json"
+    },
+    {
+      "bytes": 16453,
+      "path": "data/lineups/3913168.json",
+      "sha256": "98c14c97e98dec7eee6ef37f4ad907bb63ef1b10ac4e64439f7f32903af215f9",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913168.json"
+    },
+    {
+      "bytes": 19606,
+      "path": "data/lineups/3913169.json",
+      "sha256": "7d8d4f0f5ecf8c910d75e711a18b5e0f5401c26c33b14ec9403d5a614e42f36b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913169.json"
+    },
+    {
+      "bytes": 27177,
+      "path": "data/lineups/3913170.json",
+      "sha256": "fa58f30d033b55f507b3822f6da1dce83e713731c7ec36948dca2dd5876504a6",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913170.json"
+    },
+    {
+      "bytes": 19936,
+      "path": "data/lineups/3913171.json",
+      "sha256": "64670ae0cd8f0415c9484eaabce6814cd1342aa07acea0dcacb1f12e2e43c36a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913171.json"
+    },
+    {
+      "bytes": 22474,
+      "path": "data/lineups/3913172.json",
+      "sha256": "11eb55082a08fa2e3c7585ebf657d21f0a1bd9c94495f861edd72eef3cc76a63",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913172.json"
+    },
+    {
+      "bytes": 21338,
+      "path": "data/lineups/3913173.json",
+      "sha256": "ce1fddceb83066c0cbdf09c74392f4d6b675072fd447828f62f89140e892059f",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913173.json"
+    },
+    {
+      "bytes": 23044,
+      "path": "data/lineups/3913174.json",
+      "sha256": "ecd088c70a628188e247de3b5f37466c05b885035744fa80eeab92f47e395c53",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913174.json"
+    },
+    {
+      "bytes": 19006,
+      "path": "data/lineups/3913175.json",
+      "sha256": "cdf72c7cc480e2779e963b71d57546ade77c32cebe8ae26bd9b83b2ce741f41a",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913175.json"
+    },
+    {
+      "bytes": 20941,
+      "path": "data/lineups/3913176.json",
+      "sha256": "e7225bfc938361d111e7ea491c881234939c1aa98d4bffb43fb967e5625f9d1e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913176.json"
+    },
+    {
+      "bytes": 20379,
+      "path": "data/lineups/3913177.json",
+      "sha256": "41ee46fe74b787868bcaf9be59619312242af6188204c1144038fa17dd45bcf5",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913177.json"
+    },
+    {
+      "bytes": 19921,
+      "path": "data/lineups/3913178.json",
+      "sha256": "13abf65693181bc0dffac14eac8795cfce9e57e622e228cc491c3e420b9ba0cf",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913178.json"
+    },
+    {
+      "bytes": 18256,
+      "path": "data/lineups/3913179.json",
+      "sha256": "d83edccfe49b4681e2997c703e4a25f67913df6f465a8363d67da78fcde82804",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913179.json"
+    },
+    {
+      "bytes": 23009,
+      "path": "data/lineups/3913180.json",
+      "sha256": "8dd57f05b2c642f5e9c2ed7a78d87286cfe9157fc630d0be607d91818c2141b1",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913180.json"
+    },
+    {
+      "bytes": 23806,
+      "path": "data/lineups/3913181.json",
+      "sha256": "ff9ec2c710b93dbf16590ef4a930e61b7f4c7f2f0045141be65dedc7feeadff2",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913181.json"
+    },
+    {
+      "bytes": 21115,
+      "path": "data/lineups/3913182.json",
+      "sha256": "2b3028f5c1d3e3a70351928db9793eee44e3613de349f79d21b148ee4eea4e45",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913182.json"
+    },
+    {
+      "bytes": 23358,
+      "path": "data/lineups/3913183.json",
+      "sha256": "778ae3539857db13ca6685e55b4cff57c5190ce927931863f45131f68af2343b",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913183.json"
+    },
+    {
+      "bytes": 19977,
+      "path": "data/lineups/3913184.json",
+      "sha256": "5d81500732e35b38d1ea2f511d60f7c2c6a226fceb1aa850697feba19978a961",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913184.json"
+    },
+    {
+      "bytes": 22452,
+      "path": "data/lineups/3913185.json",
+      "sha256": "22617a370ede5d4009f06a50cfc99a1952b545c31930baa3564ff3d475da1bb0",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913185.json"
+    },
+    {
+      "bytes": 23231,
+      "path": "data/lineups/3913186.json",
+      "sha256": "0095c1e35069961ba49584c1333ef509944b4a215cfd6e2060814c317f792eb8",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913186.json"
+    },
+    {
+      "bytes": 20603,
+      "path": "data/lineups/3913187.json",
+      "sha256": "8c99fcf85d4d17da6a8d6c741692ff3ec2e123bf47848294a63fad227f264c70",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913187.json"
+    },
+    {
+      "bytes": 19733,
+      "path": "data/lineups/3913188.json",
+      "sha256": "920d7ffe0186a68f11ea59738e0f29935b10715107ec277415baec9960adff49",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3913188.json"
+    },
+    {
+      "bytes": 242312,
+      "path": "data/matches/37/281.json",
+      "sha256": "f0f3a5509f0ca9a1b5315b3a78d86d1c4c6909be5d16f2999c2d2295d6f3a22e",
+      "url": "https://raw.githubusercontent.com/statsbomb/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/37/281.json"
+    }
+  ],
+  "match_ids": [
+    3912592,
+    3912593,
+    3912594,
+    3912595,
+    3912596,
+    3912597,
+    3912598,
+    3912599,
+    3912600,
+    3912601,
+    3912602,
+    3912603,
+    3913069,
+    3913070,
+    3913071,
+    3913072,
+    3913073,
+    3913074,
+    3913075,
+    3913076,
+    3913077,
+    3913078,
+    3913079,
+    3913080,
+    3913081,
+    3913082,
+    3913083,
+    3913084,
+    3913085,
+    3913086,
+    3913087,
+    3913088,
+    3913089,
+    3913090,
+    3913091,
+    3913092,
+    3913093,
+    3913094,
+    3913095,
+    3913096,
+    3913097,
+    3913098,
+    3913099,
+    3913100,
+    3913101,
+    3913102,
+    3913103,
+    3913104,
+    3913107,
+    3913105,
+    3913106,
+    3913108,
+    3913109,
+    3913110,
+    3913113,
+    3913111,
+    3913112,
+    3913114,
+    3913115,
+    3913116,
+    3913119,
+    3913117,
+    3913118,
+    3913120,
+    3913121,
+    3913122,
+    3913123,
+    3913124,
+    3913125,
+    3913126,
+    3913127,
+    3913128,
+    3913129,
+    3913130,
+    3913131,
+    3913132,
+    3913133,
+    3913134,
+    3913138,
+    3913135,
+    3913136,
+    3913137,
+    3913139,
+    3913140,
+    3913143,
+    3913141,
+    3913142,
+    3913144,
+    3913145,
+    3913146,
+    3913152,
+    3913147,
+    3913148,
+    3913149,
+    3913150,
+    3913151,
+    3913155,
+    3913153,
+    3913154,
+    3913156,
+    3913157,
+    3913158,
+    3913159,
+    3913162,
+    3913161,
+    3913164,
+    3913160,
+    3913165,
+    3913166,
+    3913170,
+    3913167,
+    3913168,
+    3913169,
+    3913171,
+    3913172,
+    3913174,
+    3913175,
+    3913176,
+    3913173,
+    3913181,
+    3913182,
+    3913177,
+    3913178,
+    3913179,
+    3913180,
+    3913163,
+    3913183,
+    3913184,
+    3913185,
+    3913186,
+    3913187,
+    3913188
+  ],
+  "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "season": 281
+}

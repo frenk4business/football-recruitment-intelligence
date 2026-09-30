@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Football Recruitment Intelligence",
-    "description": "Phase 1 aggregate research contracts; no arbitrary SQL or predictive models.",
+    "description": "Versioned aggregate research contracts and precomputed player similarity; no arbitrary SQL.",
     "version": "0.1.0"
   },
   "paths": {
@@ -291,6 +291,180 @@
           }
         }
       }
+    },
+    "/api/v1/player-dna": {
+      "get": {
+        "summary": "Dna Index",
+        "operationId": "dna_index_api_v1_player_dna_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DNAIndex"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/player-dna/{player_id}": {
+      "get": {
+        "summary": "Dna Profile",
+        "operationId": "dna_profile_api_v1_player_dna__player_id__get",
+        "parameters": [
+          {
+            "name": "player_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Player Id"
+            }
+          },
+          {
+            "name": "threshold",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 900,
+              "title": "Threshold"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DNAProfile"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/player-dna/{player_id}/similar": {
+      "get": {
+        "summary": "Dna Similar",
+        "operationId": "dna_similar_api_v1_player_dna__player_id__similar_get",
+        "parameters": [
+          {
+            "name": "player_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Player Id"
+            }
+          },
+          {
+            "name": "threshold",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 900,
+              "title": "Threshold"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 20,
+              "minimum": 1,
+              "default": 10,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DNANeighbor"
+                  },
+                  "title": "Response Dna Similar Api V1 Player Dna  Player Id  Similar Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/similarity/evaluation": {
+      "get": {
+        "summary": "Dna Evaluation",
+        "operationId": "dna_evaluation_api_v1_similarity_evaluation_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DNAEvaluation"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/features": {
+      "get": {
+        "summary": "Dna Features",
+        "operationId": "dna_features_api_v1_features_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/FeatureDefinition"
+                  },
+                  "type": "array",
+                  "title": "Response Dna Features Api V1 Features Get"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -481,6 +655,552 @@
         ],
         "title": "CoverageRow"
       },
+      "DNAContribution": {
+        "properties": {
+          "feature": {
+            "type": "string",
+            "title": "Feature"
+          },
+          "standardized_difference": {
+            "type": "number",
+            "title": "Standardized Difference"
+          },
+          "squared_contribution": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Squared Contribution"
+          },
+          "share": {
+            "type": "number",
+            "maximum": 1.000001,
+            "minimum": 0.0,
+            "title": "Share"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "feature",
+          "standardized_difference",
+          "squared_contribution",
+          "share"
+        ],
+        "title": "DNAContribution"
+      },
+      "DNAEvaluation": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "default_method": {
+            "type": "string",
+            "title": "Default Method"
+          },
+          "bootstrap_samples": {
+            "type": "integer",
+            "title": "Bootstrap Samples"
+          },
+          "seed": {
+            "type": "integer",
+            "title": "Seed"
+          },
+          "rows": {
+            "items": {
+              "$ref": "#/components/schemas/DNAEvaluationRow"
+            },
+            "type": "array",
+            "title": "Rows"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "version",
+          "default_method",
+          "bootstrap_samples",
+          "seed",
+          "rows"
+        ],
+        "title": "DNAEvaluation"
+      },
+      "DNAEvaluationRow": {
+        "properties": {
+          "method": {
+            "type": "string",
+            "title": "Method"
+          },
+          "threshold": {
+            "type": "integer",
+            "title": "Threshold"
+          },
+          "eligible": {
+            "type": "integer",
+            "title": "Eligible"
+          },
+          "queries": {
+            "type": "integer",
+            "title": "Queries"
+          },
+          "recall1": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recall1"
+          },
+          "recall5": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recall5"
+          },
+          "recall10": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recall10"
+          },
+          "mrr": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mrr"
+          },
+          "bootstrap_jaccard": {
+            "type": "number",
+            "title": "Bootstrap Jaccard"
+          },
+          "random_recall5": {
+            "type": "number",
+            "title": "Random Recall5"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "method",
+          "threshold",
+          "eligible",
+          "queries",
+          "recall1",
+          "recall5",
+          "recall10",
+          "mrr",
+          "bootstrap_jaccard",
+          "random_recall5"
+        ],
+        "title": "DNAEvaluationRow"
+      },
+      "DNAFeatureValue": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "percentile": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Percentile"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "value",
+          "percentile"
+        ],
+        "title": "DNAFeatureValue"
+      },
+      "DNAIndex": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "cohort": {
+            "type": "string",
+            "title": "Cohort"
+          },
+          "competition": {
+            "type": "string",
+            "title": "Competition"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "thresholds": {
+            "items": {
+              "type": "integer"
+            },
+            "type": "array",
+            "title": "Thresholds"
+          },
+          "default_threshold": {
+            "type": "integer",
+            "title": "Default Threshold"
+          },
+          "matches": {
+            "type": "integer",
+            "title": "Matches"
+          },
+          "players": {
+            "items": {
+              "$ref": "#/components/schemas/DNAPlayer"
+            },
+            "type": "array",
+            "title": "Players"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "version",
+          "cohort",
+          "competition",
+          "season",
+          "thresholds",
+          "default_threshold",
+          "matches",
+          "players"
+        ],
+        "title": "DNAIndex"
+      },
+      "DNANeighbor": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "teams": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "minutes": {
+            "type": "number",
+            "title": "Minutes"
+          },
+          "rank": {
+            "type": "integer",
+            "title": "Rank"
+          },
+          "distance": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Distance"
+          },
+          "stability": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Stability"
+          },
+          "similar": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Similar"
+          },
+          "different": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Different"
+          },
+          "contributions": {
+            "items": {
+              "$ref": "#/components/schemas/DNAContribution"
+            },
+            "type": "array",
+            "title": "Contributions"
+          },
+          "family_contributions": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Family Contributions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "name",
+          "teams",
+          "role",
+          "minutes",
+          "rank",
+          "distance",
+          "stability",
+          "similar",
+          "different",
+          "contributions",
+          "family_contributions"
+        ],
+        "title": "DNANeighbor"
+      },
+      "DNAPlayer": {
+        "properties": {
+          "player_id": {
+            "type": "string",
+            "title": "Player Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "teams": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Teams"
+          },
+          "competition": {
+            "type": "string",
+            "title": "Competition"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "primary_role": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Role"
+          },
+          "secondary_role": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Role"
+          },
+          "role_shares": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Role Shares"
+          },
+          "multi_role": {
+            "type": "boolean",
+            "title": "Multi Role"
+          },
+          "minutes": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Minutes"
+          },
+          "appearances": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Appearances"
+          },
+          "unreliable_appearances": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Unreliable Appearances"
+          },
+          "eligibility": {
+            "additionalProperties": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "type": "object",
+            "title": "Eligibility"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player_id",
+          "name",
+          "teams",
+          "competition",
+          "season",
+          "primary_role",
+          "secondary_role",
+          "role_shares",
+          "multi_role",
+          "minutes",
+          "appearances",
+          "unreliable_appearances",
+          "eligibility"
+        ],
+        "title": "DNAPlayer"
+      },
+      "DNAProfile": {
+        "properties": {
+          "player": {
+            "$ref": "#/components/schemas/DNAPlayer"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "player-dna-v1"
+          },
+          "cohort": {
+            "type": "string",
+            "title": "Cohort"
+          },
+          "threshold": {
+            "type": "integer",
+            "title": "Threshold"
+          },
+          "eligible": {
+            "type": "boolean",
+            "title": "Eligible"
+          },
+          "exclusions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Exclusions"
+          },
+          "comparison_size": {
+            "type": "integer",
+            "title": "Comparison Size"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/DNAFeatureValue"
+            },
+            "type": "array",
+            "title": "Features"
+          },
+          "scaled_vector": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Scaled Vector"
+          },
+          "neighbors": {
+            "items": {
+              "$ref": "#/components/schemas/DNANeighbor"
+            },
+            "type": "array",
+            "title": "Neighbors"
+          },
+          "neighbor_jaccard": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Neighbor Jaccard"
+          },
+          "bootstrap_samples": {
+            "type": "integer",
+            "title": "Bootstrap Samples"
+          },
+          "bins": {
+            "items": {
+              "items": {
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Bins"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "player",
+          "cohort",
+          "threshold",
+          "eligible",
+          "exclusions",
+          "comparison_size",
+          "features",
+          "scaled_vector",
+          "neighbors",
+          "neighbor_jaccard",
+          "bootstrap_samples",
+          "bins"
+        ],
+        "title": "DNAProfile"
+      },
       "EventCount": {
         "properties": {
           "event_type": {
@@ -554,6 +1274,90 @@
           "tracking_snapshots"
         ],
         "title": "Explorer"
+      },
+      "FeatureDefinition": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label_en": {
+            "type": "string",
+            "title": "Label En"
+          },
+          "label_nl": {
+            "type": "string",
+            "title": "Label Nl"
+          },
+          "family": {
+            "type": "string",
+            "title": "Family"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "formula": {
+            "type": "string",
+            "title": "Formula"
+          },
+          "note_en": {
+            "type": "string",
+            "title": "Note En"
+          },
+          "note_nl": {
+            "type": "string",
+            "title": "Note Nl"
+          },
+          "core": {
+            "type": "boolean",
+            "title": "Core"
+          },
+          "intended_use": {
+            "type": "string",
+            "title": "Intended Use"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "default": "StatsBomb"
+          },
+          "higher_is": {
+            "type": "string",
+            "title": "Higher Is",
+            "default": "descriptive"
+          },
+          "eligibility": {
+            "type": "string",
+            "title": "Eligibility",
+            "default": "Reliable participation time; complete relevant event fields; role cohort; selected minute threshold."
+          },
+          "null_semantics": {
+            "type": "string",
+            "title": "Null Semantics",
+            "default": "Unavailable evidence or zero denominator is null; measured absence is zero."
+          },
+          "version": {
+            "type": "string",
+            "title": "Version",
+            "default": "features-v1"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "label_en",
+          "label_nl",
+          "family",
+          "unit",
+          "formula",
+          "note_en",
+          "note_nl",
+          "core",
+          "intended_use"
+        ],
+        "title": "FeatureDefinition"
       },
       "HTTPValidationError": {
         "properties": {

@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "pipeline_version": "0.1.0",
-  "generated_at": "2026-09-30T13:42:40.959742+00:00",
+  "generated_at": "2026-09-30T14:38:17.836438+00:00",
   "sources": [
     {
       "provider": "statsbomb",
@@ -106,10 +106,10 @@
   "parquet_sha256": {
     "competitions.parquet": "b8b6a4a2a69dc7a2ce5428826e0a51ec185dc70e246b4bc206da52c4aab6d7d0",
     "events.parquet": "093e6a757ae34c1466b53d041d81fa5402460be6737ad98c0aadc6f6ab9ab882",
-    "lineups.parquet": "71ce2dff9884be9f37d67903ab0c14ee63a96c95d5928e245f0ab3658db7f2b6",
+    "lineups.parquet": "d4252eab1cbbd8b539f10c68ffa2ad5e20b06ebbef1f52d56a9bd6e8a07d7f73",
     "matches.parquet": "004e15d77265078c86dc59404803b18f3ea9cc8cb14939b6d71d421c092716e6",
-    "player_match.parquet": "928e2162a11ad5e7c7effaa3ca8c8156b6b149fb07943d32c3d34a299f835b55",
-    "player_season.parquet": "0db267a8cee5eb134c5d7cca879a1bad188135707c45f1d1659a5141d1225f42",
+    "player_match.parquet": "7c5539992de6992b0e6123f2edaec07dbc31937fa51aa1ff8e3faf3c3454f688",
+    "player_season.parquet": "fe39d8c5ce4ba819feaadc0871fac63ee4a34def8d599ff65fd2613d11b31f90",
     "players.parquet": "d44f748e967b002aea00eb8faee7023768f3528a338af17269121005f69d83ba",
     "provider_entity_map.parquet": "9d46a713b09a0bfa4056a8eb325779f99536ce58504c51aafdda36f3f99d2c63",
     "seasons.parquet": "6cda0edca064d7fdc8d4a37597f9bda9942a2acf4d84407fae3300ce54f5e0ba",

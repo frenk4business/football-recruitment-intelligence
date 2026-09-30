@@ -6,6 +6,8 @@ from pathlib import Path
 
 from football_intelligence import contracts
 from football_intelligence.api import create_app
+from football_intelligence.dna import contracts as dna_contracts
+from football_intelligence.dna.registry import FeatureDefinition
 from football_intelligence.export import write_json
 
 MODELS = [
@@ -16,6 +18,12 @@ MODELS = [
     "MatchSummary",
     "PlayerSummary",
     "Explorer",
+    "DNAIndex",
+    "DNAProfile",
+    "DNAMap",
+    "DNAEvaluation",
+    "DNANeighbor",
+    "FeatureDefinition",
 ]
 
 
@@ -26,6 +34,8 @@ def ts(schema: dict) -> str:
         return " | ".join(ts(x) for x in schema["anyOf"])
     if "enum" in schema:
         return " | ".join(json.dumps(x) for x in schema["enum"])
+    if schema.get("type") == "object" and "properties" not in schema:
+        return f"Record<string, {ts(schema['additionalProperties'])}>"
     if schema.get("type") == "object":
         required = schema.get("required", [])
         return (
@@ -50,7 +60,12 @@ def ts(schema: dict) -> str:
 def generate(check: bool = False):
     schemas = {}
     for name in MODELS:
-        schema = getattr(contracts, name).model_json_schema()
+        model = (
+            FeatureDefinition
+            if name == "FeatureDefinition"
+            else getattr(dna_contracts if name.startswith("DNA") else contracts, name)
+        )
+        schema = model.model_json_schema()
         schemas.update(schema.pop("$defs", {}))
         schemas[name] = schema
     result = (

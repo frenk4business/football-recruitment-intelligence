@@ -18,3 +18,13 @@ Run `make api`; visit `http://127.0.0.1:8000/docs`. `artifacts/openapi.json` is 
 The public static preview reads `/data/data_coverage.json`, `/data/sources.json`, `/data/matches.json`, `/data/metrics.json` and `/data/explorer/{uuid}.json`. These are the exact response models, generated at data-build time. There is no public live API in Phase 1. Raw event and tracking storage paths are not API inputs.
 
 Contract version is 1.0.0. Breaking changes require incrementing the schema version and regenerating all artifacts and types together. Stale TypeScript generation fails CI. Field nullability expresses unavailable evidence, not zero.
+
+## Phase 2 contracts
+
+- `GET /api/v1/player-dna`: cohort/search index including all roster players and threshold exclusion reasons.
+- `GET /api/v1/player-dna/{player_id}?threshold=900`: derived profile and evidence; threshold is one of 450, 600, 900, 1200.
+- `GET /api/v1/player-dna/{player_id}/similar?threshold=900&limit=10`: at most 20 requested, currently up to 10 precomputed neighbours; excluded profiles return an empty list.
+- `GET /api/v1/similarity/evaluation`: public method/threshold retrieval and stability summary.
+- `GET /api/v1/features`: bilingual versioned registry.
+
+Invalid UUIDs/thresholds/limits return 422, unknown valid player UUIDs return 404, unavailable artifacts return 503. No arbitrary path or SQL endpoint. Static equivalents live at `/data/phase2/index.json`, `/<threshold>/<UUID>.json`, `/evaluation.json`, `/features.json` and `/map-<threshold>.json`. The FastAPI process remains local.
