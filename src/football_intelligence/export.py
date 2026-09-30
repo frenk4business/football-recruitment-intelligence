@@ -150,7 +150,10 @@ def export(
         ev = tables["events"].filter((pl.col("match_id") == row["id"]) & (pl.col("period") < 5))
         counts = [
             EventCount(event_type=e["event_type"], count=e["len"])
-            for e in ev.group_by("event_type").len().sort("len", descending=True).to_dicts()
+            for e in ev.group_by("event_type")
+            .len()
+            .sort(["len", "event_type"], descending=[True, False])
+            .to_dicts()
         ]
         # 12 x 8 broad bins aggregate all in-pitch actions; cannot reconstruct event feeds.
         located = ev.filter(pl.col("x").is_between(0, 105) & pl.col("y").is_between(0, 68))

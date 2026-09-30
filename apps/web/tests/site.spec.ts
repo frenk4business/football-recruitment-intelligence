@@ -7,6 +7,12 @@ for (const locale of ["en", "nl"]) {
   }) => {
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));
+    page.on("console", (m) => {
+      if (m.type() === "error") errors.push(m.text());
+    });
+    page.on("response", (r) => {
+      if (r.status() >= 400) errors.push(`${r.status()}: ${r.url()}`);
+    });
     for (const section of [
       "",
       "explorer/",
@@ -48,11 +54,15 @@ test("explorer controls, tracking slider, empty result and mobile overflow", asy
     .click();
   await expect(page).toHaveURL(/\/nl\/explorer\//);
   await page.setViewportSize({ width: 390, height: 844 });
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= window.innerWidth,
-    ),
-  ).toBeTruthy();
+  await expect(page.locator("html")).toHaveAttribute("lang", "nl");
+  await expect(page.getByRole("heading", { name: /Argentina/ })).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () => document.documentElement.scrollWidth <= window.innerWidth,
+      ),
+    )
+    .toBeTruthy();
   await page.screenshot({
     path: "../../artifacts/local-qa/mobile-explorer.png",
     fullPage: true,

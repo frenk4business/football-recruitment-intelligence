@@ -37,7 +37,7 @@ make contracts           # after public schema edits
 
 See `docs/api.md` and `artifacts/openapi.json`: health, coverage, sources, metrics, competitions, matches, players and explorer payloads only. The public product uses the same contracts as static JSON under `/data/`. Model version 1.0.0. English `/` and Dutch `/nl/` have overview, explorer, coverage, methodology and roadmap. The API is local, intentionally not deployed.
 
-The Render service/deployment verification and PR link are recorded in `docs/phase-1-qa.md` after final verification. `render.yaml` declares the intended static CDN configuration. Direct integration creation does not automatically apply every Blueprint setting. No paid compute, database or disk is part of this project.
+Live preview: https://football-recruitment-intelligence.onrender.com/ (Dutch `/nl/`). Render static service: `srv-dauh12hsrm7s73c7uiu0`, auto-deploy on commits to `phase/01-data-foundation`. Phase 1 review: https://github.com/frenk4business/football-recruitment-intelligence/pull/1. Final verification evidence is in `docs/phase-1-qa.md`: 46 Python tests, 4 frontend unit tests, 5 browser tests and remote CI. `render.yaml` declares the intended static CDN configuration. Direct integration creation does not automatically apply every Blueprint setting. No paid compute, database or disk is part of this project.
 
 ## Known evidence limits and technical debt
 

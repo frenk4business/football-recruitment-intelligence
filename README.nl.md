@@ -2,7 +2,7 @@
 
 Onderzoek met open voetbaldata, expliciete herkomst, canonieke event- en trackingcontracten en reproduceerbare analysetabellen.
 
-[English](README.md) · [Nederlands](README.nl.md) · [Bronnenonderzoek](docs/data-sources.md) · [Architectuur](docs/architecture.md)
+[Live preview](https://football-recruitment-intelligence.onrender.com/) · [Phase 1 PR](https://github.com/frenk4business/football-recruitment-intelligence/pull/1) · [English](README.md) · [Nederlands](README.nl.md) · [Bronnenonderzoek](docs/data-sources.md) · [Architectuur](docs/architecture.md)
 
 **Fase 1: datafundament.** De tweetalige dataverkenner gebruikt werkelijk ingelezen observaties. Spelersvergelijking, competitievertaling en recruitmentaanbevelingen zijn gepland en nog niet geïmplementeerd. Dit is onafhankelijk onderzoek; er worden geen bedrijfseigen methoden nagebouwd.
 

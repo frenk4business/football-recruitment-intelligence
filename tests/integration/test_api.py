@@ -63,6 +63,9 @@ def test_public_exports_have_no_raw_statsbomb_events_or_test_fixtures(root):
         text = (root / f"artifacts/explorer/{m['id']}.json").read_text()
         assert "TEST FIXTURE" not in text
         payload = json.loads(text)
+        assert payload["event_counts"] == sorted(
+            payload["event_counts"], key=lambda r: (-r["count"], r["event_type"])
+        )
         assert "events" not in payload
         assert "attributes_json" not in text
         assert "provider_id" not in text

@@ -845,11 +845,11 @@
       "count": 8
     },
     {
-      "event_type": "Half Start",
+      "event_type": "Half End",
       "count": 8
     },
     {
-      "event_type": "Half End",
+      "event_type": "Half Start",
       "count": 8
     },
     {
@@ -861,11 +861,11 @@
       "count": 2
     },
     {
-      "event_type": "Offside",
+      "event_type": "Bad Behaviour",
       "count": 1
     },
     {
-      "event_type": "Shield",
+      "event_type": "Offside",
       "count": 1
     },
     {
@@ -873,11 +873,11 @@
       "count": 1
     },
     {
-      "event_type": "Bad Behaviour",
+      "event_type": "Player On",
       "count": 1
     },
     {
-      "event_type": "Player On",
+      "event_type": "Shield",
       "count": 1
     }
   ],

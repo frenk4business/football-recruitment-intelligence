@@ -72,7 +72,13 @@ def test_build_is_idempotent_offline(tmp_path, root, fixtures, monkeypatch):
 
     monkeypatch.setattr("football_intelligence.pipeline.load_raw", fake_load)
     first = build(tmp_path)
+    first_public = {
+        p.name: p.read_bytes() for p in (tmp_path / "artifacts/explorer").glob("*.json")
+    }
     second = build(tmp_path)
+    assert first_public == {
+        p.name: p.read_bytes() for p in (tmp_path / "artifacts/explorer").glob("*.json")
+    }
     assert first["row_counts"] == second["row_counts"]
     assert first["parquet_sha256"] == second["parquet_sha256"]
     assert len(list((tmp_path / "artifacts/explorer").glob("*.json"))) == 2

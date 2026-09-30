@@ -2,7 +2,7 @@
 
 Open-data football research with explicit provenance, canonical event/tracking contracts and reproducible analytical tables.
 
-[English](README.md) · [Nederlands](README.nl.md) · [Data audit](docs/data-sources.md) · [Architecture](docs/architecture.md)
+[Live preview](https://football-recruitment-intelligence.onrender.com/) · [Phase 1 PR](https://github.com/frenk4business/football-recruitment-intelligence/pull/1) · [English](README.md) · [Nederlands](README.nl.md) · [Data audit](docs/data-sources.md) · [Architecture](docs/architecture.md)
 
 **Phase 1: data foundation.** The bilingual explorer uses real ingested observations. Player similarity, league translation and recruitment recommendations are planned, not implemented. This is independent research and does not reproduce any organisation's proprietary methods.
 
