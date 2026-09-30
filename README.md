@@ -4,7 +4,7 @@ Open football data → observed Player DNA → historical performance translatio
 
 [Live translation](https://football-recruitment-intelligence.onrender.com/translation/) · [Nederlands](README.nl.md) · [Player DNA](https://football-recruitment-intelligence.onrender.com/player-dna/) · [Research evaluation](docs/league-translation-evaluation.md) · [Model card](docs/model-card-phase3.md)
 
-Phase 3 is merged into `main` with green CI and is live in both languages. All 14 browser checks pass against production. **Release configuration remains pending:** Render currently tracks `phase/03-league-translation` and should track `main` for subsequent updates. [Release verification](docs/phase-3-qa.md) records the actual branch, deployed commit and live checks.
+Phase 3 is merged into `main` with green CI and is live in both languages. Render tracks `main`; all 14 browser checks pass against production. [Release verification](docs/phase-3-qa.md) records the deployed commit, content checks and test evidence.
 
 ## Phase 3: what the evidence supports
 
@@ -63,7 +63,7 @@ Raw StatsBomb event/lineup feeds, canonical Parquet and full posterior draws rem
 
 ## Delivery and next phase
 
-One existing Render Static Site serves committed aggregates. **No additional paid infrastructure was introduced beyond the existing Render workspace/Starter subscription.** No backend, worker, database or disk was added. Production is intended to track `main`; actual deployment verification is recorded in [deployment](docs/deployment.md) and [Phase 3 QA](docs/phase-3-qa.md). Completed phase PRs merge after checks; phase branches are not permanent review boundaries.
+One existing Render Static Site serves committed aggregates. **No additional paid infrastructure was introduced beyond the existing Render workspace/Starter subscription.** No backend, worker, database or disk was added. Production tracks `main`; actual deployment verification is recorded in [deployment](docs/deployment.md) and [Phase 3 QA](docs/phase-3-qa.md). Completed phase PRs merge after checks; phase branches are not permanent review boundaries.
 
 1. Data Foundation — complete.
 2. Player DNA & Similarity — complete.

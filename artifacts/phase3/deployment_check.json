@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-09-30T16:50:25.204130+00:00",
+  "checked_at": "2026-09-30T16:58:13.472582+00:00",
   "routes": [
     {
       "url": "https://football-recruitment-intelligence.onrender.com/",
       "http_status": 200,
       "expected_content_present": true,
       "bytes": 19428,
-      "sha256": "e78e43ca959b7a4b696962ecdd23b1bfbe7ceb2daec31049104b699f1d6862fd",
+      "sha256": "8015ca3646e3ab7ff2725155bffceaf81649c4159a37e5c7940451c7b5be9e40",
       "matches_local_visible_text": true
     },
     {
@@ -14,7 +14,7 @@
       "http_status": 200,
       "expected_content_present": true,
       "bytes": 166942,
-      "sha256": "0641594a160f6788cc320e545a94264df7fbb5b99b6459d3c4f90ff74b17e3fd",
+      "sha256": "48f99eb08d142b081a17f4a97cb5f832dd5cffed2ff53d7bf1006383684810ba",
       "matches_local_visible_text": true
     },
     {
@@ -22,7 +22,7 @@
       "http_status": 200,
       "expected_content_present": true,
       "bytes": 166039,
-      "sha256": "d4c296d731918e89e45436354f11524d68bb8909099fdef450d8df97c200d05a",
+      "sha256": "a3ed2cc22f28bdf5e9965101e5e58b18bcf299c0f9cf649108db9aa17e0a59b3",
       "matches_local_visible_text": true
     },
     {
@@ -44,19 +44,21 @@
   ],
   "html_comparison": "Visible text; build-specific Next.js IDs/chunk references are not byte-stable across builds.",
   "main_release": "7e2927a72544eb18f55aa269d42bde1cee27da4b",
-  "verified_main": "3ddbb38c09b24e24c41a1ff1d222e9348f065299",
-  "ci_run": 36746052777,
+  "verified_main": "9a92fcb2183b36f07c4aab178367bd1666b40ccf",
+  "ci_run": 36747505544,
   "ci_conclusion": "success",
-  "render_branch_change_pending": true,
+  "render_branch_change_pending": false,
   "service_id": "srv-dauh12hsrm7s73c7uiu0",
-  "actual_branch": "phase/03-league-translation",
+  "actual_branch": "main",
   "build_plan": "starter",
-  "live_deploy": "dep-daujo8hsrm7s73chap0g",
-  "live_commit": "52911e1137503f9e113c45a08346cd7b5004a375",
+  "live_deploy": "dep-daujukm7bikc73f1lscg",
+  "live_commit": "9a92fcb2183b36f07c4aab178367bd1666b40ccf",
   "incremental_paid_resources": 0,
   "live_browser_tests": {
     "passed": 14,
-    "seconds": 8.7
+    "seconds": 8.7,
+    "implementation_commit": "52911e1137503f9e113c45a08346cd7b5004a375",
+    "subsequent_main_difference": "Merge and release documentation only; production content and static data reverified."
   },
   "earlier_pre_activation_check": {
     "checked_at": "2026-09-30T16:39:31.730369+00:00",

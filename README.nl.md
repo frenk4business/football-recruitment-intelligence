@@ -4,7 +4,7 @@ Open voetbaldata → waargenomen spelers-DNA → historische prestatievertaling,
 
 [Live prestatievertaling](https://football-recruitment-intelligence.onrender.com/nl/translation/) · [English](README.md) · [Spelers-DNA](https://football-recruitment-intelligence.onrender.com/nl/player-dna/) · [Evaluatie](docs/league-translation-evaluation.md) · [Modelkaart](docs/model-card-phase3.md)
 
-Fase 3 is samengevoegd in `main` met geslaagde CI en is live in beide talen. Alle 14 browsertests slagen op productie. **De releaseconfiguratie staat nog open:** Render volgt momenteel `phase/03-league-translation` en moet voor volgende updates `main` volgen. [Releaseverificatie](docs/phase-3-qa.md) vermeldt de feitelijke branch, gepubliceerde commit en livecontroles.
+Fase 3 is samengevoegd in `main` met geslaagde CI en is live in beide talen. Render volgt `main`; alle 14 browsertests slagen op productie. [Releaseverificatie](docs/phase-3-qa.md) vermeldt de gepubliceerde commit, inhoudscontroles en testresultaten.
 
 ## Fase 3: wat de gegevens onderbouwen
 
@@ -63,7 +63,7 @@ Ruwe StatsBomb-events, selecties, canonieke Parquet en volledige posteriorsteekp
 
 ## Hosting en vervolg
 
-Eén bestaande statische Render-site serveert de aggregaten. **Er is geen aanvullende betaalde infrastructuur toegevoegd boven op het bestaande Render-workspace-/Starter-abonnement.** Er is geen backend, worker, database of schijf toegevoegd. Productie hoort `main` te volgen; de feitelijke verificatie staat in [hosting](docs/deployment.md) en [Fase 3 QA](docs/phase-3-qa.md). Voltooide fase-PR’s worden na geslaagde controles samengevoegd.
+Eén bestaande statische Render-site serveert de aggregaten. **Er is geen aanvullende betaalde infrastructuur toegevoegd boven op het bestaande Render-workspace-/Starter-abonnement.** Er is geen backend, worker, database of schijf toegevoegd. Productie volgt `main`; de feitelijke verificatie staat in [hosting](docs/deployment.md) en [Fase 3 QA](docs/phase-3-qa.md). Voltooide fase-PR’s worden na geslaagde controles samengevoegd.
 
 1. Datafundament — voltooid.
 2. Spelers-DNA en gelijkenis — voltooid.
