@@ -5,6 +5,8 @@ Open voetbaldata → spelers-DNA → historische vertaling → expliciete recrui
 [Live recruitment](https://football-recruitment-intelligence.onrender.com/nl/recruitment/) · [English](README.md) · [Spelers-DNA](https://football-recruitment-intelligence.onrender.com/nl/player-dna/) · [Evaluatie](docs/league-translation-evaluation.md) · [Modelkaart](docs/model-card-phase3.md)
 
 
+Fase 4 is samengevoegd en live in beide talen. CI en alle twintig browsertests op productie zijn geslaagd; [releaseverificatie](docs/phase-4-qa.md) legt commit en datahashes vast.
+
 ## Fase 4: expliciete eisen, waargenomen profielmatch
 
 [Recruitment openen](https://football-recruitment-intelligence.onrender.com/nl/recruitment/) · [Evaluatie](docs/recruitment-fit-evaluation.md) · [Modelkaart](docs/model-card-phase4.md) · [QA](docs/phase-4-qa.md)

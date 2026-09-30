@@ -4,6 +4,8 @@ Open football data → Player DNA → historical translation → explicit recrui
 
 [Live recruitment](https://football-recruitment-intelligence.onrender.com/recruitment/) · [Nederlands](README.nl.md) · [Evaluation](docs/recruitment-fit-evaluation.md) · [Model card](docs/model-card-phase4.md) · [QA](docs/phase-4-qa.md)
 
+Phase 4 is merged and live in both languages. PR/main CI and all twenty production browser tests passed; [release verification](docs/phase-4-qa.md) records the deployed commit and data hashes.
+
 ## Phase 4: explicit requirements, observed fit
 
 Find Candidates, Replace a Player and Club Context connect **138 eligible WSL 2023/24 profiles**, six roles, eighteen style features and twelve clubs. Custom requirements start neutral. Choose exact/minimum/maximum preferences, visible feature/family weights and hard constraints; inspect the top ten, compare up to three candidates and share/reset the scenario by URL. Club characteristics enter ranking only through explicit analyst adoption. Evidence and exclusions stay separate from fit.
