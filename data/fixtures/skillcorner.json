@@ -1,0 +1,103 @@
+{
+  "fixture_notice": "Synthetic fixture for automated tests ONLY. Never production evidence.",
+  "match": {
+    "id": 1,
+    "date_time": "2000-01-01T00:00:00Z",
+    "competition_edition": {
+      "competition": {
+        "id": 1,
+        "name": "TEST FIXTURE league",
+        "area": "TEST",
+        "gender": "mixed"
+      },
+      "season": {
+        "id": 1,
+        "name": "2000",
+        "start_year": 2000,
+        "end_year": 2000
+      }
+    },
+    "home_team": {
+      "id": 1,
+      "name": "TEST FIXTURE home"
+    },
+    "away_team": {
+      "id": 2,
+      "name": "TEST FIXTURE away"
+    },
+    "home_team_score": 0,
+    "away_team_score": 0,
+    "pitch_length": 106,
+    "pitch_width": 68,
+    "home_team_side": [
+      "left_to_right",
+      "right_to_left"
+    ],
+    "players": [
+      {
+        "id": 1,
+        "team_id": 1,
+        "first_name": "TEST FIXTURE",
+        "last_name": "1",
+        "birthday": null,
+        "player_role": {
+          "name": "Center Back"
+        },
+        "playing_time": {
+          "total": {
+            "minutes_played": 90
+          }
+        },
+        "start_time": "00:00:00",
+        "end_time": null
+      },
+      {
+        "id": 2,
+        "team_id": 2,
+        "first_name": "TEST FIXTURE",
+        "last_name": "2",
+        "birthday": null,
+        "player_role": {
+          "name": "Center Back"
+        },
+        "playing_time": {
+          "total": {
+            "minutes_played": 90
+          }
+        },
+        "start_time": "00:00:00",
+        "end_time": null
+      }
+    ]
+  },
+  "tracking": [
+    {
+      "frame": 0,
+      "period": 1,
+      "timestamp": "00:00:00.00",
+      "possession": {
+        "group": "home"
+      },
+      "player_data": [
+        {
+          "player_id": 1,
+          "x": -53,
+          "y": -34,
+          "is_detected": true
+        },
+        {
+          "player_id": 2,
+          "x": 10,
+          "y": 5,
+          "is_detected": false
+        }
+      ],
+      "ball_data": {
+        "x": 0,
+        "y": 0,
+        "z": 0.1,
+        "is_detected": true
+      }
+    }
+  ]
+}

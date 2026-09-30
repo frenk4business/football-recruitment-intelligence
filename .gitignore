@@ -22,3 +22,4 @@ playwright-report/
 test-results/
 .tools/
 artifacts/local-qa/
+apps/web/public/data/

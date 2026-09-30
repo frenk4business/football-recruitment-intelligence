@@ -1,0 +1,24 @@
+[
+  {
+    "id": "0f35de66-dcd5-597f-9c11-94a1da9b05de",
+    "provider": "skillcorner",
+    "competition": "A-League",
+    "season": "2024/2025",
+    "date": "2025-04-27",
+    "home": "Western United",
+    "away": "Sydney Football Club",
+    "score": "1–0",
+    "coverage": "60_second_tracking_sample_1hz_full_match_roster_metadata"
+  },
+  {
+    "id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+    "provider": "statsbomb",
+    "competition": "FIFA World Cup",
+    "season": "2022",
+    "date": "2022-12-18",
+    "home": "Argentina",
+    "away": "France",
+    "score": "3–3",
+    "coverage": "full_match_events_including_extra_time_and_shootout"
+  }
+]

@@ -1,0 +1,1044 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Football Recruitment Intelligence",
+    "description": "Phase 1 aggregate research contracts; no arbitrary SQL or predictive models.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/coverage": {
+      "get": {
+        "summary": "Coverage",
+        "operationId": "coverage_api_v1_coverage_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Coverage"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/sources": {
+      "get": {
+        "summary": "Sources",
+        "operationId": "sources_api_v1_sources_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Source"
+                  },
+                  "type": "array",
+                  "title": "Response Sources Api V1 Sources Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/metrics": {
+      "get": {
+        "summary": "Metrics",
+        "operationId": "metrics_api_v1_metrics_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/MetricDefinition"
+                  },
+                  "type": "array",
+                  "title": "Response Metrics Api V1 Metrics Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/competitions": {
+      "get": {
+        "summary": "Competitions",
+        "operationId": "competitions_api_v1_competitions_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/CompetitionSummary"
+                  },
+                  "type": "array",
+                  "title": "Response Competitions Api V1 Competitions Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/matches": {
+      "get": {
+        "summary": "Matches",
+        "operationId": "matches_api_v1_matches_get",
+        "parameters": [
+          {
+            "name": "provider",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "statsbomb",
+                    "skillcorner"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Provider"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MatchSummary"
+                  },
+                  "title": "Response Matches Api V1 Matches Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/explorer/{match_id}": {
+      "get": {
+        "summary": "Explorer",
+        "operationId": "explorer_api_v1_explorer__match_id__get",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Match Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Explorer"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/players": {
+      "get": {
+        "summary": "Players",
+        "operationId": "players_api_v1_players_get",
+        "parameters": [
+          {
+            "name": "match_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Match Id"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 25,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlayerSummary"
+                  },
+                  "title": "Response Players Api V1 Players Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CompetitionSummary": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "provider",
+          "name",
+          "season"
+        ],
+        "title": "CompetitionSummary"
+      },
+      "Coverage": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          },
+          "generated_at": {
+            "type": "string",
+            "title": "Generated At"
+          },
+          "providers": {
+            "items": {
+              "$ref": "#/components/schemas/CoverageRow"
+            },
+            "type": "array",
+            "title": "Providers"
+          },
+          "validation_status": {
+            "type": "string",
+            "title": "Validation Status"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema_version",
+          "generated_at",
+          "providers",
+          "validation_status",
+          "warnings"
+        ],
+        "title": "Coverage"
+      },
+      "CoverageRow": {
+        "properties": {
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "competitions": {
+            "type": "integer",
+            "title": "Competitions"
+          },
+          "seasons": {
+            "type": "integer",
+            "title": "Seasons"
+          },
+          "matches": {
+            "type": "integer",
+            "title": "Matches"
+          },
+          "teams": {
+            "type": "integer",
+            "title": "Teams"
+          },
+          "players": {
+            "type": "integer",
+            "title": "Players"
+          },
+          "events": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Events"
+          },
+          "tracking_frames": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tracking Frames"
+          },
+          "tracking_objects": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tracking Objects"
+          },
+          "date_start": {
+            "type": "string",
+            "title": "Date Start"
+          },
+          "date_end": {
+            "type": "string",
+            "title": "Date End"
+          },
+          "missing_player_events": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Missing Player Events"
+          },
+          "undetected_objects": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Undetected Objects"
+          },
+          "available_metrics": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Available Metrics"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "provider",
+          "competitions",
+          "seasons",
+          "matches",
+          "teams",
+          "players",
+          "events",
+          "tracking_frames",
+          "tracking_objects",
+          "date_start",
+          "date_end",
+          "missing_player_events",
+          "undetected_objects",
+          "available_metrics"
+        ],
+        "title": "CoverageRow"
+      },
+      "EventCount": {
+        "properties": {
+          "event_type": {
+            "type": "string",
+            "title": "Event Type"
+          },
+          "count": {
+            "type": "integer",
+            "title": "Count"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "event_type",
+          "count"
+        ],
+        "title": "EventCount"
+      },
+      "Explorer": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "title": "Schema Version"
+          },
+          "match": {
+            "$ref": "#/components/schemas/MatchSummary"
+          },
+          "players": {
+            "items": {
+              "$ref": "#/components/schemas/PlayerSummary"
+            },
+            "type": "array",
+            "title": "Players"
+          },
+          "event_counts": {
+            "items": {
+              "$ref": "#/components/schemas/EventCount"
+            },
+            "type": "array",
+            "title": "Event Counts"
+          },
+          "spatial_bins": {
+            "items": {
+              "$ref": "#/components/schemas/SpatialBin"
+            },
+            "type": "array",
+            "title": "Spatial Bins"
+          },
+          "spatial_sample_size": {
+            "type": "integer",
+            "title": "Spatial Sample Size"
+          },
+          "tracking_snapshots": {
+            "items": {
+              "$ref": "#/components/schemas/TrackingSnapshot"
+            },
+            "type": "array",
+            "title": "Tracking Snapshots"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema_version",
+          "match",
+          "players",
+          "event_counts",
+          "spatial_bins",
+          "spatial_sample_size",
+          "tracking_snapshots"
+        ],
+        "title": "Explorer"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Health": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "data_ready": {
+            "type": "boolean",
+            "title": "Data Ready"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "data_ready",
+          "version"
+        ],
+        "title": "Health"
+      },
+      "MatchSummary": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "competition": {
+            "type": "string",
+            "title": "Competition"
+          },
+          "season": {
+            "type": "string",
+            "title": "Season"
+          },
+          "date": {
+            "type": "string",
+            "title": "Date"
+          },
+          "home": {
+            "type": "string",
+            "title": "Home"
+          },
+          "away": {
+            "type": "string",
+            "title": "Away"
+          },
+          "score": {
+            "type": "string",
+            "title": "Score"
+          },
+          "coverage": {
+            "type": "string",
+            "title": "Coverage"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "provider",
+          "competition",
+          "season",
+          "date",
+          "home",
+          "away",
+          "score",
+          "coverage"
+        ],
+        "title": "MatchSummary"
+      },
+      "MetricDefinition": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "label_en": {
+            "type": "string",
+            "title": "Label En"
+          },
+          "label_nl": {
+            "type": "string",
+            "title": "Label Nl"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "derived",
+              "provider_estimate",
+              "observed"
+            ],
+            "title": "Kind"
+          },
+          "providers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Providers"
+          },
+          "description_en": {
+            "type": "string",
+            "title": "Description En"
+          },
+          "description_nl": {
+            "type": "string",
+            "title": "Description Nl"
+          },
+          "formula": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Formula"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "label_en",
+          "label_nl",
+          "unit",
+          "kind",
+          "providers",
+          "description_en",
+          "description_nl"
+        ],
+        "title": "MetricDefinition"
+      },
+      "PlayerSummary": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "match_id": {
+            "type": "string",
+            "title": "Match Id"
+          },
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "team": {
+            "type": "string",
+            "title": "Team"
+          },
+          "position": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position"
+          },
+          "minutes": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minutes"
+          },
+          "minutes_method": {
+            "type": "string",
+            "title": "Minutes Method"
+          },
+          "shots": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shots"
+          },
+          "passes": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Passes"
+          },
+          "xg": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Xg"
+          },
+          "shots_per90": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shots Per90"
+          },
+          "pass_completion": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pass Completion"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "match_id",
+          "provider",
+          "name",
+          "team",
+          "position",
+          "minutes",
+          "minutes_method",
+          "shots",
+          "passes",
+          "xg",
+          "shots_per90",
+          "pass_completion"
+        ],
+        "title": "PlayerSummary"
+      },
+      "Source": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "license": {
+            "type": "string",
+            "title": "License"
+          },
+          "license_url": {
+            "type": "string",
+            "title": "License Url"
+          },
+          "attribution": {
+            "type": "string",
+            "title": "Attribution"
+          },
+          "limitation_en": {
+            "type": "string",
+            "title": "Limitation En"
+          },
+          "limitation_nl": {
+            "type": "string",
+            "title": "Limitation Nl"
+          },
+          "revision": {
+            "type": "string",
+            "title": "Revision"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "url",
+          "license",
+          "license_url",
+          "attribution",
+          "limitation_en",
+          "limitation_nl",
+          "revision"
+        ],
+        "title": "Source"
+      },
+      "SpatialBin": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "count": {
+            "type": "integer",
+            "title": "Count"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "x",
+          "y",
+          "count"
+        ],
+        "title": "SpatialBin"
+      },
+      "TrackingPoint": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "team": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Team"
+          },
+          "object_type": {
+            "type": "string",
+            "title": "Object Type"
+          },
+          "is_detected": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Detected"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "x",
+          "y",
+          "name",
+          "team",
+          "object_type",
+          "is_detected"
+        ],
+        "title": "TrackingPoint"
+      },
+      "TrackingSnapshot": {
+        "properties": {
+          "frame": {
+            "type": "integer",
+            "title": "Frame"
+          },
+          "timestamp_seconds": {
+            "type": "number",
+            "title": "Timestamp Seconds"
+          },
+          "period": {
+            "type": "integer",
+            "title": "Period"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/TrackingPoint"
+            },
+            "type": "array",
+            "title": "Points"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "frame",
+          "timestamp_seconds",
+          "period",
+          "points"
+        ],
+        "title": "TrackingSnapshot"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+[
+  {
+    "id": "minutes",
+    "label_en": "Minutes",
+    "label_nl": "Minuten",
+    "unit": "minutes",
+    "kind": "derived",
+    "providers": [
+      "statsbomb",
+      "skillcorner"
+    ],
+    "description_en": "StatsBomb interval duration, or SkillCorner full-match metadata. Methods differ.",
+    "description_nl": "StatsBomb-intervallen of wedstrijdmetadata van SkillCorner. De methoden verschillen.",
+    "formula": null
+  },
+  {
+    "id": "shots",
+    "label_en": "Shots",
+    "label_nl": "Schoten",
+    "unit": "count",
+    "kind": "derived",
+    "providers": [
+      "statsbomb"
+    ],
+    "description_en": "Shot events excluding penalty shootouts.",
+    "description_nl": "Schoten, exclusief strafschoppenseries.",
+    "formula": null
+  },
+  {
+    "id": "passes",
+    "label_en": "Passes",
+    "label_nl": "Passes",
+    "unit": "count",
+    "kind": "derived",
+    "providers": [
+      "statsbomb"
+    ],
+    "description_en": "Pass events excluding penalty shootouts.",
+    "description_nl": "Pass-events, exclusief strafschoppenseries.",
+    "formula": null
+  },
+  {
+    "id": "xg",
+    "label_en": "Provider xG",
+    "label_nl": "xG van databron",
+    "unit": "expected goals",
+    "kind": "provider_estimate",
+    "providers": [
+      "statsbomb"
+    ],
+    "description_en": "Sum of StatsBomb model estimates supplied with shots, excluding shootouts; not a model built here.",
+    "description_nl": "Som van meegeleverde StatsBomb-modelschattingen, exclusief series; geen eigen model.",
+    "formula": null
+  },
+  {
+    "id": "shots_per90",
+    "label_en": "Shots / 90",
+    "label_nl": "Schoten / 90",
+    "unit": "per90",
+    "kind": "derived",
+    "providers": [
+      "statsbomb"
+    ],
+    "description_en": "Descriptive only. Null below 30 minutes; small samples remain unreliable.",
+    "description_nl": "Alleen beschrijvend. Ontbreekt onder 30 minuten; kleine steekproeven blijven onzeker.",
+    "formula": "shots / minutes * 90, if minutes >= 30"
+  },
+  {
+    "id": "tracking_frames",
+    "label_en": "Tracking frames",
+    "label_nl": "Trackingframes",
+    "unit": "count",
+    "kind": "observed",
+    "providers": [
+      "skillcorner"
+    ],
+    "description_en": "Retained frames at 1 Hz within a 60-second window.",
+    "description_nl": "Bewaarde frames op 1 Hz binnen een venster van 60 seconden.",
+    "formula": null
+  }
+]

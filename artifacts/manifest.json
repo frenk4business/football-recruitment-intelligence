@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "pipeline_version": "0.1.0",
+  "generated_at": "2026-09-30T13:42:40.959742+00:00",
+  "sources": [
+    {
+      "provider": "statsbomb",
+      "license": "StatsBomb Open Data User Agreement (non-commercial research)",
+      "ingestion_version": "0.1.0",
+      "transformation_version": "0.1.0",
+      "files": [
+        {
+          "key": "competitions",
+          "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/competitions.json",
+          "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+          "retrieved_at": "2026-09-30T13:08:30.786693+00:00",
+          "sha256": "e6cd42f5d8956d6aa30fb917ce8d4c3b3df1879a93f02f8feba820930a6971fa",
+          "bytes": 34887,
+          "selection": null
+        },
+        {
+          "key": "matches",
+          "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/matches/43/106.json",
+          "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+          "retrieved_at": "2026-09-30T13:08:30.974034+00:00",
+          "sha256": "b9d7516dc9919a825f04c204ca85487958c8a2431e84140a48e944934661efc7",
+          "bytes": 119132,
+          "selection": null
+        },
+        {
+          "key": "lineups",
+          "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3869685.json",
+          "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+          "retrieved_at": "2026-09-30T13:08:31.175039+00:00",
+          "sha256": "2b00c4cbf027b36ae2ce99f183a0943c649bb5bdcb8324683a8603785beffed5",
+          "bytes": 28432,
+          "selection": null
+        },
+        {
+          "key": "events",
+          "url": "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/events/3869685.json",
+          "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+          "retrieved_at": "2026-09-30T13:08:31.641523+00:00",
+          "sha256": "a0b0036d50c10a4c8879d1ee9f24a7502ec2cfb264a61951c8d500dfc897ec35",
+          "bytes": 3757121,
+          "selection": null
+        }
+      ],
+      "provenance_id": "1cec0e332731cf96006e47c835b212d8a3c2a09c36424a46dd92211332e63ff8"
+    },
+    {
+      "provider": "skillcorner",
+      "license": "MIT; Copyright (c) 2020 Skillcorner",
+      "ingestion_version": "0.1.0",
+      "transformation_version": "0.1.0",
+      "files": [
+        {
+          "key": "matches",
+          "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches.json",
+          "source_revision": "4340d274572876239c154c90bc507a9b3250a656",
+          "retrieved_at": "2026-09-30T13:08:31.897524+00:00",
+          "sha256": "4dd7a62f966046a8fde2563e69fd044997d471b213118aed436cb23ab1fdfad0",
+          "bytes": 6648,
+          "selection": null
+        },
+        {
+          "key": "match",
+          "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/2013725/2013725_match.json",
+          "source_revision": "4340d274572876239c154c90bc507a9b3250a656",
+          "retrieved_at": "2026-09-30T13:08:32.100249+00:00",
+          "sha256": "c8b9372fbd2e79ddcbb859b51b5086111ed7f3cd84ca0b457091c7d0e5209df3",
+          "bytes": 27899,
+          "selection": null
+        },
+        {
+          "key": "tracking",
+          "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/2013725/2013725_tracking_extrapolated.jsonl",
+          "source_revision": "4340d274572876239c154c90bc507a9b3250a656",
+          "retrieved_at": "2026-09-30T13:08:32.826758+00:00",
+          "sha256": "a3f5815adc1a25dd7f70e2a69d7b7c8d79b7db75269a6d4bbae6e78015eed6e0",
+          "bytes": 1140043,
+          "selection": {
+            "start_frame": 4040,
+            "stop_frame": 4640
+          }
+        }
+      ],
+      "provenance_id": "27ea7f71b87d894718d4b6d5ddf38b625d15cc15e098415f1a0d11d0ea212505"
+    }
+  ],
+  "row_counts": {
+    "competitions": 2,
+    "seasons": 2,
+    "teams": 4,
+    "players": 86,
+    "matches": 2,
+    "lineups": 86,
+    "events": 4407,
+    "tracking_frames": 60,
+    "tracking_objects": 1380,
+    "provider_entity_map": 6029,
+    "player_match": 86,
+    "player_season": 86,
+    "team_season": 4
+  },
+  "parquet_sha256": {
+    "competitions.parquet": "b8b6a4a2a69dc7a2ce5428826e0a51ec185dc70e246b4bc206da52c4aab6d7d0",
+    "events.parquet": "093e6a757ae34c1466b53d041d81fa5402460be6737ad98c0aadc6f6ab9ab882",
+    "lineups.parquet": "71ce2dff9884be9f37d67903ab0c14ee63a96c95d5928e245f0ab3658db7f2b6",
+    "matches.parquet": "004e15d77265078c86dc59404803b18f3ea9cc8cb14939b6d71d421c092716e6",
+    "player_match.parquet": "928e2162a11ad5e7c7effaa3ca8c8156b6b149fb07943d32c3d34a299f835b55",
+    "player_season.parquet": "0db267a8cee5eb134c5d7cca879a1bad188135707c45f1d1659a5141d1225f42",
+    "players.parquet": "d44f748e967b002aea00eb8faee7023768f3528a338af17269121005f69d83ba",
+    "provider_entity_map.parquet": "9d46a713b09a0bfa4056a8eb325779f99536ce58504c51aafdda36f3f99d2c63",
+    "seasons.parquet": "6cda0edca064d7fdc8d4a37597f9bda9942a2acf4d84407fae3300ce54f5e0ba",
+    "team_season.parquet": "6833963939845bb1811a087ed74be4133cf339f0036e085a0dce79e7825a715d",
+    "teams.parquet": "5b9385fce495e98f7f73d62bdab91e19f4ea8ad0f3c06775bf8433c6d365d161",
+    "tracking_frames.parquet": "7e05b23e9cc54b2ef0fa08ad25e991ae065661f67ebde5535097ddf67cb87591",
+    "tracking_objects.parquet": "2ab09561fe10260891e0ab18d3f6e5ab827a0aa0385bb2ffd1dcec26aa32abe2"
+  },
+  "lineage": {
+    "canonical": "source revisions + input checksums → typed canonical tables → Parquet",
+    "mart": "lineups + events + matches + players + teams → player_match → player_season / team_season",
+    "public": "canonical + marts → Pydantic contracts → aggregate JSON → API / static site"
+  }
+}

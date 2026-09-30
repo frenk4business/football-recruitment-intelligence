@@ -1,0 +1,329 @@
+audit_date: '2026-09-30'
+scope: Engineering source audit, not a legal opinion. Unknown permissions are not
+  assumed.
+sources:
+- id: statsbomb
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: No technical gate; agreement asks users to register interest
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: Commercial exploitation of data and derived analysis prohibited
+    by agreement
+  redistribution: Underlying data redistribution restricted; only derived research
+    summaries committed
+  physical_metrics: false
+  positional_data: true
+  lineup_data: true
+  player_metadata: true
+  competition_metadata: true
+  event_data: true
+  tracking_data: false
+  phase1: 'CORE: 2022-12-18 Argentina–France, 4407 events'
+  player_dna: Strong event features after multi-match expansion
+  league_translation: Selected coverage creates severe sampling bias
+  tracking_research: 360 is an event snapshot, not continuous tracking
+  transfer_modelling: No transfer outcomes
+  limitations: Six inconsistent lineup intervals in sample; two provider-index timestamp
+    inversions; provider xG is an estimate
+  name: StatsBomb Open Data
+  owner: StatsBomb / Hudl
+  official_source: https://github.com/hudl/open-data
+  license_source: https://github.com/hudl/open-data/blob/master/LICENSE.pdf
+  dataset_type: Events, lineups, competition metadata; selected 360 snapshots
+  seasons: Selected historical seasons; exact competition-season pairs in competitions.json
+  competitions: Selected club and international competitions; sample FIFA World Cup
+    2022
+  approximate_size: Selected inputs 3.94 MB; full catalogue intentionally not downloaded
+  format: Nested JSON
+  license: StatsBomb Public Data User Agreement, 2023-09-08
+  attribution: StatsBomb name and official logo on published analysis
+  recommendation: CORE
+- id: skillcorner
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: false
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: MIT permission, subject to retained notice
+  redistribution: Permitted with MIT notice
+  physical_metrics: Season aggregate products available, not ingested
+  positional_data: true
+  lineup_data: true
+  player_metadata: true
+  competition_metadata: true
+  event_data: Dynamic events available, not ingested
+  tracking_data: true
+  phase1: 'CORE: 60 seconds from Western United–Sydney FC, 2025-04-27; 10 Hz source
+    downsampled to 1 Hz'
+  player_dna: Potential spatial complement; sample too short
+  league_translation: Not sufficient alone
+  tracking_research: Strong small-sample format and coordinate validation
+  transfer_modelling: No transfer outcomes
+  limitations: README says 10 matches; pinned tree has 20 match directories. Detected
+    and extrapolated locations differ; no speed estimates from 1 Hz sample.
+  name: SkillCorner Open Data
+  owner: SkillCorner / PySport
+  official_source: https://github.com/SkillCorner/opendata
+  license_source: https://github.com/SkillCorner/opendata/blob/master/LICENSE
+  dataset_type: Broadcast tracking, dynamic events, aggregate physical data; optional
+    body pose
+  seasons: 2024/2025
+  competitions: Australian A-League sample
+  approximate_size: Sample tracking raw slice 1.14 MB; full tracking uses Git LFS;
+    body pose ~3.3 GB per match
+  format: JSON metadata, JSONL tracking, CSV aggregates
+  license: MIT; Copyright (c) 2020 Skillcorner
+  attribution: Retain copyright and MIT notice; credit SkillCorner / PySport
+  recommendation: CORE
+- id: metrica
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: false
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: License/redistribution terms require further verification
+  redistribution: License/redistribution terms require further verification
+  physical_metrics: false
+  positional_data: true
+  lineup_data: Anonymized player numbers
+  player_metadata: Anonymized
+  competition_metadata: false
+  event_data: true
+  tracking_data: true
+  phase1: 'Defer: clearer redistribution terms available elsewhere'
+  player_dna: Insufficient alone
+  league_translation: Not sufficient alone
+  tracking_research: Useful synchronized examples
+  transfer_modelling: No transfer outcomes
+  limitations: Anonymized identities and unclear redistribution grant
+  name: Metrica Sports Sample Data
+  owner: Metrica Sports
+  official_source: https://github.com/metrica-sports/sample-data
+  license_source: https://github.com/metrica-sports/sample-data#legal-stuff
+  dataset_type: Synchronized tracking and events
+  seasons: Not disclosed
+  competitions: Three anonymized sample games
+  approximate_size: Full-match tracking CSV; not downloaded or measured
+  format: CSV; game 3 FIFA EPTS plus JSON
+  license: README attribution request; no explicit broad redistribution licence verified
+  attribution: Acknowledge Metrica Sports
+  recommendation: SECONDARY
+- id: idsse
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: false
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: CC BY 4.0 permits commercial reuse
+  redistribution: Permitted with attribution and indication of changes
+  physical_metrics: false
+  positional_data: true
+  lineup_data: true
+  player_metadata: true
+  competition_metadata: true
+  event_data: true
+  tracking_data: true
+  phase1: Strong later adapter; XML adds another format but increases initial scope
+  player_dna: Insufficient alone
+  league_translation: Not sufficient alone
+  tracking_research: Strong synchronized research reference
+  transfer_modelling: No transfer outcomes
+  limitations: Seven matches cannot establish league translation; mirror is secondary
+    to official publication
+  name: IDSSE / DFL-Sportec
+  owner: Bassek et al.; DFL
+  official_source: https://github.com/spoho-datascience/idsse-data
+  license_source: https://github.com/spoho-datascience/idsse-data#license
+  dataset_type: Synchronized spatiotemporal and event data
+  seasons: Seven-match publication; consult match metadata before claiming seasons
+  competitions: German Bundesliga and 2. Bundesliga
+  approximate_size: Seven full matches at 25 Hz; not downloaded or measured
+  format: DFL XML and metadata
+  license: CC BY 4.0
+  attribution: Name Deutsche Fußball Liga; cite Bassek et al. 2025, doi:10.1038/s41597-025-04505-y
+  recommendation: SECONDARY
+- id: wyscout_figshare
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: false
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: CC BY 4.0 permits commercial reuse
+  redistribution: Permitted with attribution and indication of changes
+  physical_metrics: false
+  positional_data: true
+  lineup_data: true
+  player_metadata: true
+  competition_metadata: true
+  event_data: true
+  tracking_data: false
+  phase1: Good next event adapter
+  player_dna: Useful broader event cohorts; different event taxonomy
+  league_translation: Potential historical comparison, no ready transfer labels
+  tracking_research: Not applicable
+  transfer_modelling: No transfer outcomes
+  limitations: Historical static release; no continuous tracking or directly comparable
+    provider xG
+  name: Public Soccer Match Event Dataset
+  owner: Pappalardo, Massucco et al.; Wyscout collection
+  official_source: https://figshare.com/collections/Soccer_match_event_dataset/4415000
+  license_source: https://www.nature.com/articles/s41597-019-0247-7
+  dataset_type: Events and metadata
+  seasons: 2017/2018 domestic leagues; World Cup 2018; Euro 2016
+  competitions: Five major European domestic leagues and two international tournaments
+  approximate_size: Full-season JSON archives; not downloaded or measured
+  format: JSON / ZIP
+  license: CC BY 4.0
+  attribution: Cite dataset, data descriptor and PlayeRank paper as requested
+  recommendation: SECONDARY
+- id: openfootball
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: false
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: Public domain dedication
+  redistribution: Public domain dedication in repository
+  physical_metrics: false
+  positional_data: false
+  lineup_data: false
+  player_metadata: false
+  competition_metadata: true
+  event_data: false
+  tracking_data: false
+  phase1: Optional metadata, insufficient as second heterogeneous analytical source
+  player_dna: Insufficient alone
+  league_translation: Not sufficient alone
+  tracking_research: Not applicable
+  transfer_modelling: No transfer outcomes
+  limitations: No player events or tracking; manually maintained definitions and identifiers
+  name: OpenFootball / football.db
+  owner: OpenFootball contributors
+  official_source: https://github.com/openfootball/football.json
+  license_source: https://github.com/openfootball/football.json#license
+  dataset_type: Fixtures, scores and competition metadata
+  seasons: Repository-dependent historical and current season files
+  competitions: Many domestic leagues and tournaments; consult selected repository
+  approximate_size: Small season JSON files; not downloaded or measured
+  format: JSON / Football.TXT
+  license: Public domain dedication
+  attribution: Credit contributors as good practice
+  recommendation: SECONDARY
+- id: soccernet
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: Hugging Face account and accepted NDA for gated content
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: Not permitted for the dataset
+  redistribution: Protected video cannot be redistributed under NDA
+  physical_metrics: false
+  positional_data: Task-dependent
+  lineup_data: false
+  player_metadata: Task-dependent
+  competition_metadata: false
+  event_data: Action annotations
+  tracking_data: Task-specific tracklets
+  phase1: Out of scope
+  player_dna: Insufficient alone
+  league_translation: Not sufficient alone
+  tracking_research: Future computer-vision research only
+  transfer_modelling: No transfer outcomes
+  limitations: Dataset access is not a copyright licence for broadcasting video
+  name: SoccerNet
+  owner: SoccerNet research consortium
+  official_source: https://www.soccer-net.org/data
+  license_source: https://www.soccer-net.org/faq
+  dataset_type: Video understanding benchmarks, annotations and tracklets
+  seasons: Task-dependent; not comprehensively audited
+  competitions: European football benchmark collections
+  approximate_size: 550 broadcast games; video-scale, unsuitable for bootstrap
+  format: Video, features and task-specific annotations
+  license: Research/non-commercial; gated video NDA; per-subset terms
+  attribution: Cite relevant task papers
+  recommendation: RESEARCH EXTENSION
+- id: football_data_co_uk
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: false
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: License/redistribution terms require further verification
+  redistribution: License/redistribution terms require further verification
+  physical_metrics: false
+  positional_data: false
+  lineup_data: false
+  player_metadata: false
+  competition_metadata: true
+  event_data: false
+  tracking_data: false
+  phase1: Not used
+  player_dna: Insufficient alone
+  league_translation: Not sufficient alone
+  tracking_research: Not applicable
+  transfer_modelling: No transfer outcomes
+  limitations: No player event stream; betting odds irrelevant to Phase 1
+  name: football-data.co.uk
+  owner: Football-Data
+  official_source: https://football-data.co.uk/data.php
+  license_source: https://football-data.co.uk/data.php
+  dataset_type: Match results, match statistics and betting odds
+  seasons: Historical CSV files; coverage varies by league and metric
+  competitions: Multiple domestic leagues
+  approximate_size: Season CSV files; not downloaded or measured
+  format: CSV
+  license: License/redistribution terms require further verification
+  attribution: Link to Football-Data requested on link page
+  recommendation: REJECT
+- id: lastrow
+  checked_on: '2026-09-30'
+  payment_required: false
+  api_key_required: false
+  login_required: false
+  update_frequency: Irregular; pin a published version
+  reliability: Published research/sample source; no availability SLA
+  documentation_quality: Provider documentation reviewed
+  commercial_use: See source-specific terms
+  redistribution: License/redistribution terms require further verification
+  physical_metrics: false
+  positional_data: true
+  lineup_data: false
+  player_metadata: false
+  competition_metadata: false
+  event_data: false
+  tracking_data: true
+  phase1: Not used
+  player_dna: Insufficient alone
+  league_translation: Not sufficient alone
+  tracking_research: Educational sequence analysis
+  transfer_modelling: No transfer outcomes
+  limitations: Outcome-selected goal clips; severe selection bias
+  name: Last-Row tracking examples
+  owner: Ricardo Tavares / Friends of Tracking
+  official_source: https://github.com/Friends-of-Tracking-Data-FoTD/Last-Row
+  license_source: https://github.com/Friends-of-Tracking-Data-FoTD/Last-Row
+  dataset_type: Manually tracked goal sequences
+  seasons: 2019 examples
+  competitions: Liverpool goal sequences
+  approximate_size: Short sequences; not downloaded or measured
+  format: Repository example tracking files
+  license: License/redistribution terms require further verification
+  attribution: Ricardo Tavares / Last-Row
+  recommendation: RESEARCH EXTENSION

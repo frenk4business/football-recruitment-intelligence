@@ -1,0 +1,182 @@
+{
+  "fixture_notice": "Synthetic fixture for automated tests ONLY. Never production evidence.",
+  "competition": {
+    "competition_id": 1,
+    "competition_name": "TEST FIXTURE competition",
+    "country_name": "TEST",
+    "competition_gender": "mixed",
+    "season_id": 1,
+    "season_name": "2000"
+  },
+  "match": {
+    "match_id": 1,
+    "match_date": "2000-01-01",
+    "home_team": {
+      "home_team_id": 1,
+      "home_team_name": "TEST FIXTURE home"
+    },
+    "away_team": {
+      "away_team_id": 2,
+      "away_team_name": "TEST FIXTURE away"
+    },
+    "home_score": 1,
+    "away_score": 0
+  },
+  "lineups": [
+    {
+      "team_id": 1,
+      "lineup": [
+        {
+          "player_id": 1,
+          "player_name": "TEST FIXTURE player 1",
+          "positions": [
+            {
+              "position": "Center Forward",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "team_id": 2,
+      "lineup": [
+        {
+          "player_id": 2,
+          "player_name": "TEST FIXTURE player 2",
+          "positions": [
+            {
+              "position": "Center Forward",
+              "from": "00:00",
+              "to": null,
+              "from_period": 1,
+              "to_period": null,
+              "start_reason": "Starting XI",
+              "end_reason": "Final Whistle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "0",
+      "index": 0,
+      "period": 1,
+      "timestamp": "00:01:00.000",
+      "type": {
+        "name": "Pass"
+      },
+      "team": {
+        "id": 1
+      },
+      "player": {
+        "id": 1
+      },
+      "location": [
+        60,
+        40
+      ],
+      "pass": {
+        "end_location": [
+          120,
+          80
+        ]
+      }
+    },
+    {
+      "id": "1",
+      "index": 1,
+      "period": 1,
+      "timestamp": "00:02:00.000",
+      "type": {
+        "name": "Shot"
+      },
+      "team": {
+        "id": 1
+      },
+      "player": {
+        "id": 1
+      },
+      "location": [
+        60,
+        40
+      ],
+      "shot": {
+        "outcome": {
+          "name": "Goal"
+        },
+        "statsbomb_xg": 0.3
+      }
+    },
+    {
+      "id": "2",
+      "index": 2,
+      "period": 1,
+      "timestamp": "00:45:00.000",
+      "type": {
+        "name": "Half End"
+      },
+      "team": {
+        "id": 1
+      },
+      "player": {
+        "id": 1
+      },
+      "location": [
+        60,
+        40
+      ]
+    },
+    {
+      "id": "3",
+      "index": 3,
+      "period": 2,
+      "timestamp": "00:45:00.000",
+      "type": {
+        "name": "Half End"
+      },
+      "team": {
+        "id": 1
+      },
+      "player": {
+        "id": 1
+      },
+      "location": [
+        60,
+        40
+      ]
+    },
+    {
+      "id": "4",
+      "index": 4,
+      "period": 5,
+      "timestamp": "00:00:01.000",
+      "type": {
+        "name": "Shot"
+      },
+      "team": {
+        "id": 1
+      },
+      "player": {
+        "id": 1
+      },
+      "location": [
+        60,
+        40
+      ],
+      "shot": {
+        "outcome": {
+          "name": "Goal"
+        },
+        "statsbomb_xg": 0.8
+      }
+    }
+  ]
+}

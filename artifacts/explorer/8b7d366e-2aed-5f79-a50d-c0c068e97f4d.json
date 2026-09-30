@@ -1,0 +1,1368 @@
+{
+  "schema_version": "1.0.0",
+  "match": {
+    "id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+    "provider": "statsbomb",
+    "competition": "FIFA World Cup",
+    "season": "2022",
+    "date": "2022-12-18",
+    "home": "Argentina",
+    "away": "France",
+    "score": "3–3",
+    "coverage": "full_match_events_including_extra_time_and_shootout"
+  },
+  "players": [
+    {
+      "id": "a2771af3-2570-594b-b655-4061eab3eb29",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Adrien Rabiot",
+      "team": "France",
+      "position": "DM",
+      "minutes": 111.374833,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 1,
+      "passes": 51,
+      "xg": 0.09333491,
+      "shots_per90": 0.8080820197503686,
+      "pass_completion": 0.8431372549019608
+    },
+    {
+      "id": "537ce4b9-dd8a-53df-a9f4-cf60edbc5da9",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Alejandro Darío Gómez",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "3e603096-3248-5039-9a65-2c6715f454c0",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Alexis Mac Allister",
+      "team": "Argentina",
+      "position": "CM",
+      "minutes": 132.6523,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 3,
+      "passes": 52,
+      "xg": 0.054379339,
+      "shots_per90": 2.0353962954279723,
+      "pass_completion": 0.8653846153846154
+    },
+    {
+      "id": "3c0a789b-cef0-514b-ba3e-0f56e25ca341",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Alphonse Areola",
+      "team": "France",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "d6465e2c-4dbe-5258-8370-a7945cce26e2",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Antoine Griezmann",
+      "team": "France",
+      "position": "AM",
+      "minutes": 78.059483,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 30,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.7
+    },
+    {
+      "id": "fcee94ea-7444-5b33-9c0f-098387b673e2",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Aurélien Djani Tchouaméni",
+      "team": "France",
+      "position": "DM",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 69,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.8115942028985508
+    },
+    {
+      "id": "4564eedb-7793-50c6-9b9c-0a6e39834e29",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Axel Disasi",
+      "team": "France",
+      "position": "FB/WB",
+      "minutes": 3.5412,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "b1f96b9b-eab1-59df-a8c1-13793cec4869",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Benjamin Pavard",
+      "team": "France",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "ee426c33-9dfb-5575-9ed8-88cd17e246cf",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Cristian Gabriel Romero",
+      "team": "Argentina",
+      "position": "CB",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 71,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.8450704225352113
+    },
+    {
+      "id": "b3c99fc2-ce53-5789-81a3-d6b059a5b35d",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Damián Emiliano Martínez",
+      "team": "Argentina",
+      "position": "GK",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 33,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.5454545454545454
+    },
+    {
+      "id": "8734fb7a-a201-5589-9ac8-581745a83462",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Dayotchanculle Upamecano",
+      "team": "France",
+      "position": "CB",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 64,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.796875
+    },
+    {
+      "id": "2ea10ee9-e014-540b-889a-2fe3dadc1281",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Eduardo Camavinga",
+      "team": "France",
+      "position": "FB/WB",
+      "minutes": 63.384017,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 24,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.875
+    },
+    {
+      "id": "58dc4152-10c2-52d8-9476-41f6ea2f1ccd",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Enzo Fernandez",
+      "team": "Argentina",
+      "position": "DM",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 2,
+      "passes": 94,
+      "xg": 0.07174936,
+      "shots_per90": 1.2728929172398191,
+      "pass_completion": 0.8404255319148937
+    },
+    {
+      "id": "2a2fcac7-5621-5bce-b503-6d97b19f33db",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Exequiel Alejandro Palacios",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "b96b1f4a-6260-59d3-92bf-d3831bdfb882",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Franco Armani",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "ba0ddb98-2c97-523a-9f68-59de9369dc5b",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Germán Alejandro Pezzella",
+      "team": "Argentina",
+      "position": "CM",
+      "minutes": 8.757867,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 1,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": 1.0
+    },
+    {
+      "id": "021cd7e7-d22f-5c74-a49b-e27dacda6eae",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Gerónimo Rulli",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "c829f32f-c653-5517-b7e0-30df00d7a4d2",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Gonzalo Ariel Montiel",
+      "team": "Argentina",
+      "position": "FB/WB",
+      "minutes": null,
+      "minutes_method": "unavailable_inconsistent_lineup_intervals",
+      "shots": 1,
+      "passes": 13,
+      "xg": 0.020604363,
+      "shots_per90": null,
+      "pass_completion": 0.6153846153846154
+    },
+    {
+      "id": "93430d4f-d736-5890-90e1-763d261aedfa",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Guido Rodríguez",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "9dfd8bf9-6f23-5c95-8923-662e3b8343d0",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Hugo Lloris",
+      "team": "France",
+      "position": "GK",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 41,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.5609756097560976
+    },
+    {
+      "id": "b7c6c4c3-3113-5c72-9a1a-ef3a28013da6",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Ibrahima Konaté",
+      "team": "France",
+      "position": "CB",
+      "minutes": 11.657867,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 2,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": 0.5
+    },
+    {
+      "id": "4719a3ba-87fa-52d1-adcd-7e33f817f486",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Jordan Veretout",
+      "team": "France",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "e2e57632-5a5c-5fd7-9133-2fac7e68db7c",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Juan Marcos Foyth",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "eecbf162-5809-5a60-88da-8d287f85d9ee",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Jules Koundé",
+      "team": "France",
+      "position": "FB/WB",
+      "minutes": null,
+      "minutes_method": "unavailable_inconsistent_lineup_intervals",
+      "shots": 0,
+      "passes": 67,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": 0.7761194029850746
+    },
+    {
+      "id": "dbb965dc-0d76-5408-af62-2c3e0e9508dc",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Julián Álvarez",
+      "team": "Argentina",
+      "position": "ST",
+      "minutes": 118.024833,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 1,
+      "passes": 32,
+      "xg": 0.05953379,
+      "shots_per90": 0.7625513861138019,
+      "pass_completion": 0.8125
+    },
+    {
+      "id": "bad35938-af8f-5457-92d8-cbefec9a6e15",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Kingsley Coman",
+      "team": "France",
+      "position": "AM",
+      "minutes": 63.350683,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 15,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.3333333333333333
+    },
+    {
+      "id": "efaf6ad4-b3f7-57d6-bcd0-e287a49d4c82",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Kylian Mbappé Lottin",
+      "team": "France",
+      "position": "W",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 6,
+      "passes": 27,
+      "xg": 1.782553667,
+      "shots_per90": 3.818678751719457,
+      "pass_completion": 0.7037037037037037
+    },
+    {
+      "id": "b7d4da17-a3ff-5eec-8ec5-1d9b074cc19b",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Lautaro Javier Martínez",
+      "team": "Argentina",
+      "position": "ST",
+      "minutes": 23.385333,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 4,
+      "passes": 7,
+      "xg": 0.58352003,
+      "shots_per90": null,
+      "pass_completion": 0.7142857142857143
+    },
+    {
+      "id": "69c978a6-6f84-5955-b26d-cb409a9c9441",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Leandro Daniel Paredes",
+      "team": "Argentina",
+      "position": "CM",
+      "minutes": 23.585333,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 15,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": 1.0
+    },
+    {
+      "id": "43d374ef-3adf-5b27-a3a7-b02ff5be3f7d",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Lionel Andrés Messi Cuccittini",
+      "team": "Argentina",
+      "position": "W",
+      "minutes": null,
+      "minutes_method": "unavailable_inconsistent_lineup_intervals",
+      "shots": 5,
+      "passes": 60,
+      "xg": 1.455279741,
+      "shots_per90": null,
+      "pass_completion": 0.8166666666666667
+    },
+    {
+      "id": "e320b00d-9ab8-5f45-9ddc-1e8e447971f8",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Lisandro Martínez",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "703c6d85-fdf2-5818-a4c3-573df9d672f3",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Marcos Javier Acuña",
+      "team": "Argentina",
+      "position": "W",
+      "minutes": null,
+      "minutes_method": "unavailable_inconsistent_lineup_intervals",
+      "shots": 0,
+      "passes": 28,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": 0.6785714285714286
+    },
+    {
+      "id": "feee98b1-23ba-5e08-966a-e2b4af956431",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Marcus Thuram",
+      "team": "France",
+      "position": "ST",
+      "minutes": 100.3935,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 22,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.6818181818181818
+    },
+    {
+      "id": "a8be5b61-bfa0-5254-adb8-878b3d518d79",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Mattéo Guendouzi Olié",
+      "team": "France",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "24f542d1-4f95-513f-b865-b04d332819e6",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Nahuel Molina Lucero",
+      "team": "Argentina",
+      "position": "FB/WB",
+      "minutes": 106.208167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 56,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.6964285714285714
+    },
+    {
+      "id": "c2e82473-373c-5390-8f17-35dc00c7de4f",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Nicolás Alejandro Tagliafico",
+      "team": "Argentina",
+      "position": "FB/WB",
+      "minutes": 138.0523,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 56,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.7857142857142857
+    },
+    {
+      "id": "0878e4e4-1ea6-5b02-8098-418f9af6b5eb",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Nicolás Hernán Otamendi",
+      "team": "Argentina",
+      "position": "CB",
+      "minutes": 141.410167,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 75,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.92
+    },
+    {
+      "id": "e49d3f5a-d015-5822-a183-dfac52783e16",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Olivier Giroud",
+      "team": "France",
+      "position": "ST",
+      "minutes": 41.016667,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 9,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.5555555555555556
+    },
+    {
+      "id": "b7b879a8-e71a-5b20-8804-67989cf0595f",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Ousmane Dembélé",
+      "team": "France",
+      "position": "W",
+      "minutes": 40.533333,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 13,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.6923076923076923
+    },
+    {
+      "id": "848f4005-d3aa-54a1-ba66-f36e32ba6f80",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Paulo Bruno Exequiel Dybala",
+      "team": "Argentina",
+      "position": "FB/WB",
+      "minutes": 3.357867,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 3,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": 0.3333333333333333
+    },
+    {
+      "id": "ca4037e8-6b71-597c-8239-716cd02de09c",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Randal Kolo Muani",
+      "team": "France",
+      "position": "W",
+      "minutes": 100.876833,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 2,
+      "passes": 15,
+      "xg": 0.37369772,
+      "shots_per90": 1.7843541935936866,
+      "pass_completion": 0.7333333333333333
+    },
+    {
+      "id": "646520e2-2841-5849-8291-81ef10b65b45",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Raphaël Varane",
+      "team": "France",
+      "position": "CB",
+      "minutes": null,
+      "minutes_method": "unavailable_inconsistent_lineup_intervals",
+      "shots": 0,
+      "passes": 61,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": 0.9016393442622951
+    },
+    {
+      "id": "8a4e1ca7-cba6-5af1-a7dc-dd6cd60a9fb8",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Rodrigo Javier De Paul",
+      "team": "Argentina",
+      "position": "CM",
+      "minutes": 117.824833,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 2,
+      "passes": 68,
+      "xg": 0.103029609,
+      "shots_per90": 1.527691535111278,
+      "pass_completion": 0.8382352941176471
+    },
+    {
+      "id": "813f075d-78f8-5ebb-b6f5-1f140dee9b59",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Steve Mandanda",
+      "team": "France",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "606512fb-3004-5b5c-9ba8-a2995c973bb3",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Theo Bernard François Hernández",
+      "team": "France",
+      "position": "FB/WB",
+      "minutes": 78.02615,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 49,
+      "xg": 0.0,
+      "shots_per90": 0.0,
+      "pass_completion": 0.7755102040816326
+    },
+    {
+      "id": "901cc4f9-c021-502d-a567-fcbb2e27cefc",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Thiago Ezequiel Almada",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "f4926905-9c73-52fb-88e5-a56cc3c8b9ee",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "William Saliba",
+      "team": "France",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    },
+    {
+      "id": "73ced624-dfd6-5b1b-b3a1-799674a9bca2",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Youssouf Fofana",
+      "team": "France",
+      "position": "DM",
+      "minutes": 30.035333,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 1,
+      "passes": 11,
+      "xg": 0.023031652,
+      "shots_per90": 2.996470856507567,
+      "pass_completion": 0.8181818181818182
+    },
+    {
+      "id": "e8fe7266-15c5-5b50-9804-e4c10b95396c",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Ángel Fabián Di María Hernández",
+      "team": "Argentina",
+      "position": "W",
+      "minutes": 71.42615,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 2,
+      "passes": 29,
+      "xg": 0.410209694,
+      "shots_per90": 2.520085430896107,
+      "pass_completion": 0.8620689655172413
+    },
+    {
+      "id": "e66a7eb5-e350-58a0-b7c1-1ec587c69eb0",
+      "match_id": "8b7d366e-2aed-5f79-a50d-c0c068e97f4d",
+      "provider": "statsbomb",
+      "name": "Ángel Martín Correa",
+      "team": "Argentina",
+      "position": null,
+      "minutes": 0.0,
+      "minutes_method": "lineup_intervals_actual_period_lengths",
+      "shots": 0,
+      "passes": 0,
+      "xg": 0.0,
+      "shots_per90": null,
+      "pass_completion": null
+    }
+  ],
+  "event_counts": [
+    {
+      "event_type": "Pass",
+      "count": 1263
+    },
+    {
+      "event_type": "Ball Receipt*",
+      "count": 1114
+    },
+    {
+      "event_type": "Carry",
+      "count": 940
+    },
+    {
+      "event_type": "Pressure",
+      "count": 361
+    },
+    {
+      "event_type": "Ball Recovery",
+      "count": 115
+    },
+    {
+      "event_type": "Duel",
+      "count": 98
+    },
+    {
+      "event_type": "Dribble",
+      "count": 54
+    },
+    {
+      "event_type": "Block",
+      "count": 50
+    },
+    {
+      "event_type": "Foul Committed",
+      "count": 48
+    },
+    {
+      "event_type": "Clearance",
+      "count": 45
+    },
+    {
+      "event_type": "Foul Won",
+      "count": 44
+    },
+    {
+      "event_type": "Goal Keeper",
+      "count": 36
+    },
+    {
+      "event_type": "Miscontrol",
+      "count": 35
+    },
+    {
+      "event_type": "Dispossessed",
+      "count": 34
+    },
+    {
+      "event_type": "Dribbled Past",
+      "count": 31
+    },
+    {
+      "event_type": "Shot",
+      "count": 30
+    },
+    {
+      "event_type": "Interception",
+      "count": 28
+    },
+    {
+      "event_type": "Substitution",
+      "count": 13
+    },
+    {
+      "event_type": "Injury Stoppage",
+      "count": 9
+    },
+    {
+      "event_type": "50/50",
+      "count": 8
+    },
+    {
+      "event_type": "Half End",
+      "count": 8
+    },
+    {
+      "event_type": "Half Start",
+      "count": 8
+    },
+    {
+      "event_type": "Tactical Shift",
+      "count": 7
+    },
+    {
+      "event_type": "Starting XI",
+      "count": 2
+    },
+    {
+      "event_type": "Bad Behaviour",
+      "count": 1
+    },
+    {
+      "event_type": "Offside",
+      "count": 1
+    },
+    {
+      "event_type": "Player Off",
+      "count": 1
+    },
+    {
+      "event_type": "Player On",
+      "count": 1
+    },
+    {
+      "event_type": "Shield",
+      "count": 1
+    }
+  ],
+  "spatial_bins": [
+    {
+      "x": 4.375,
+      "y": 4.25,
+      "count": 17
+    },
+    {
+      "x": 4.375,
+      "y": 12.75,
+      "count": 30
+    },
+    {
+      "x": 4.375,
+      "y": 21.25,
+      "count": 24
+    },
+    {
+      "x": 4.375,
+      "y": 29.75,
+      "count": 54
+    },
+    {
+      "x": 4.375,
+      "y": 38.25,
+      "count": 43
+    },
+    {
+      "x": 4.375,
+      "y": 46.75,
+      "count": 12
+    },
+    {
+      "x": 4.375,
+      "y": 55.25,
+      "count": 13
+    },
+    {
+      "x": 4.375,
+      "y": 63.75,
+      "count": 9
+    },
+    {
+      "x": 13.125,
+      "y": 4.25,
+      "count": 16
+    },
+    {
+      "x": 13.125,
+      "y": 12.75,
+      "count": 24
+    },
+    {
+      "x": 13.125,
+      "y": 21.25,
+      "count": 38
+    },
+    {
+      "x": 13.125,
+      "y": 29.75,
+      "count": 36
+    },
+    {
+      "x": 13.125,
+      "y": 38.25,
+      "count": 36
+    },
+    {
+      "x": 13.125,
+      "y": 46.75,
+      "count": 12
+    },
+    {
+      "x": 13.125,
+      "y": 55.25,
+      "count": 24
+    },
+    {
+      "x": 13.125,
+      "y": 63.75,
+      "count": 21
+    },
+    {
+      "x": 21.875,
+      "y": 4.25,
+      "count": 38
+    },
+    {
+      "x": 21.875,
+      "y": 12.75,
+      "count": 30
+    },
+    {
+      "x": 21.875,
+      "y": 21.25,
+      "count": 49
+    },
+    {
+      "x": 21.875,
+      "y": 29.75,
+      "count": 55
+    },
+    {
+      "x": 21.875,
+      "y": 38.25,
+      "count": 39
+    },
+    {
+      "x": 21.875,
+      "y": 46.75,
+      "count": 57
+    },
+    {
+      "x": 21.875,
+      "y": 55.25,
+      "count": 29
+    },
+    {
+      "x": 21.875,
+      "y": 63.75,
+      "count": 20
+    },
+    {
+      "x": 30.625,
+      "y": 4.25,
+      "count": 67
+    },
+    {
+      "x": 30.625,
+      "y": 12.75,
+      "count": 50
+    },
+    {
+      "x": 30.625,
+      "y": 21.25,
+      "count": 68
+    },
+    {
+      "x": 30.625,
+      "y": 29.75,
+      "count": 42
+    },
+    {
+      "x": 30.625,
+      "y": 38.25,
+      "count": 56
+    },
+    {
+      "x": 30.625,
+      "y": 46.75,
+      "count": 81
+    },
+    {
+      "x": 30.625,
+      "y": 55.25,
+      "count": 48
+    },
+    {
+      "x": 30.625,
+      "y": 63.75,
+      "count": 36
+    },
+    {
+      "x": 39.375,
+      "y": 4.25,
+      "count": 85
+    },
+    {
+      "x": 39.375,
+      "y": 12.75,
+      "count": 83
+    },
+    {
+      "x": 39.375,
+      "y": 21.25,
+      "count": 72
+    },
+    {
+      "x": 39.375,
+      "y": 29.75,
+      "count": 82
+    },
+    {
+      "x": 39.375,
+      "y": 38.25,
+      "count": 47
+    },
+    {
+      "x": 39.375,
+      "y": 46.75,
+      "count": 98
+    },
+    {
+      "x": 39.375,
+      "y": 55.25,
+      "count": 75
+    },
+    {
+      "x": 39.375,
+      "y": 63.75,
+      "count": 91
+    },
+    {
+      "x": 48.125,
+      "y": 4.25,
+      "count": 62
+    },
+    {
+      "x": 48.125,
+      "y": 12.75,
+      "count": 65
+    },
+    {
+      "x": 48.125,
+      "y": 21.25,
+      "count": 52
+    },
+    {
+      "x": 48.125,
+      "y": 29.75,
+      "count": 70
+    },
+    {
+      "x": 48.125,
+      "y": 38.25,
+      "count": 69
+    },
+    {
+      "x": 48.125,
+      "y": 46.75,
+      "count": 81
+    },
+    {
+      "x": 48.125,
+      "y": 55.25,
+      "count": 91
+    },
+    {
+      "x": 48.125,
+      "y": 63.75,
+      "count": 94
+    },
+    {
+      "x": 56.875,
+      "y": 4.25,
+      "count": 84
+    },
+    {
+      "x": 56.875,
+      "y": 12.75,
+      "count": 63
+    },
+    {
+      "x": 56.875,
+      "y": 21.25,
+      "count": 45
+    },
+    {
+      "x": 56.875,
+      "y": 29.75,
+      "count": 55
+    },
+    {
+      "x": 56.875,
+      "y": 38.25,
+      "count": 49
+    },
+    {
+      "x": 56.875,
+      "y": 46.75,
+      "count": 44
+    },
+    {
+      "x": 56.875,
+      "y": 55.25,
+      "count": 71
+    },
+    {
+      "x": 56.875,
+      "y": 63.75,
+      "count": 90
+    },
+    {
+      "x": 65.625,
+      "y": 4.25,
+      "count": 73
+    },
+    {
+      "x": 65.625,
+      "y": 12.75,
+      "count": 66
+    },
+    {
+      "x": 65.625,
+      "y": 21.25,
+      "count": 43
+    },
+    {
+      "x": 65.625,
+      "y": 29.75,
+      "count": 17
+    },
+    {
+      "x": 65.625,
+      "y": 38.25,
+      "count": 23
+    },
+    {
+      "x": 65.625,
+      "y": 46.75,
+      "count": 28
+    },
+    {
+      "x": 65.625,
+      "y": 55.25,
+      "count": 67
+    },
+    {
+      "x": 65.625,
+      "y": 63.75,
+      "count": 102
+    },
+    {
+      "x": 74.375,
+      "y": 4.25,
+      "count": 40
+    },
+    {
+      "x": 74.375,
+      "y": 12.75,
+      "count": 41
+    },
+    {
+      "x": 74.375,
+      "y": 21.25,
+      "count": 50
+    },
+    {
+      "x": 74.375,
+      "y": 29.75,
+      "count": 29
+    },
+    {
+      "x": 74.375,
+      "y": 38.25,
+      "count": 29
+    },
+    {
+      "x": 74.375,
+      "y": 46.75,
+      "count": 43
+    },
+    {
+      "x": 74.375,
+      "y": 55.25,
+      "count": 54
+    },
+    {
+      "x": 74.375,
+      "y": 63.75,
+      "count": 78
+    },
+    {
+      "x": 83.125,
+      "y": 4.25,
+      "count": 30
+    },
+    {
+      "x": 83.125,
+      "y": 12.75,
+      "count": 23
+    },
+    {
+      "x": 83.125,
+      "y": 21.25,
+      "count": 43
+    },
+    {
+      "x": 83.125,
+      "y": 29.75,
+      "count": 19
+    },
+    {
+      "x": 83.125,
+      "y": 38.25,
+      "count": 31
+    },
+    {
+      "x": 83.125,
+      "y": 46.75,
+      "count": 56
+    },
+    {
+      "x": 83.125,
+      "y": 55.25,
+      "count": 56
+    },
+    {
+      "x": 83.125,
+      "y": 63.75,
+      "count": 54
+    },
+    {
+      "x": 91.875,
+      "y": 4.25,
+      "count": 22
+    },
+    {
+      "x": 91.875,
+      "y": 12.75,
+      "count": 14
+    },
+    {
+      "x": 91.875,
+      "y": 21.25,
+      "count": 16
+    },
+    {
+      "x": 91.875,
+      "y": 29.75,
+      "count": 16
+    },
+    {
+      "x": 91.875,
+      "y": 38.25,
+      "count": 25
+    },
+    {
+      "x": 91.875,
+      "y": 46.75,
+      "count": 29
+    },
+    {
+      "x": 91.875,
+      "y": 55.25,
+      "count": 37
+    },
+    {
+      "x": 91.875,
+      "y": 63.75,
+      "count": 36
+    },
+    {
+      "x": 100.625,
+      "y": 4.25,
+      "count": 22
+    },
+    {
+      "x": 100.625,
+      "y": 12.75,
+      "count": 20
+    },
+    {
+      "x": 100.625,
+      "y": 21.25,
+      "count": 6
+    },
+    {
+      "x": 100.625,
+      "y": 29.75,
+      "count": 8
+    },
+    {
+      "x": 100.625,
+      "y": 38.25,
+      "count": 8
+    },
+    {
+      "x": 100.625,
+      "y": 46.75,
+      "count": 18
+    },
+    {
+      "x": 100.625,
+      "y": 55.25,
+      "count": 28
+    },
+    {
+      "x": 100.625,
+      "y": 63.75,
+      "count": 44
+    }
+  ],
+  "spatial_sample_size": 4336,
+  "tracking_snapshots": []
+}

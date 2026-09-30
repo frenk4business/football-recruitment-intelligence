@@ -1,0 +1,24 @@
+[
+  {
+    "id": "statsbomb",
+    "name": "StatsBomb Open Data",
+    "url": "https://github.com/hudl/open-data",
+    "license": "StatsBomb Public Data User Agreement",
+    "license_url": "https://github.com/hudl/open-data/blob/master/LICENSE.pdf",
+    "attribution": "Data: StatsBomb. Independent, non-commercial research; no endorsement.",
+    "limitation_en": "One 2022 World Cup match. Event data only; no continuous tracking. Public output contains derived analysis.",
+    "limitation_nl": "Eén WK-wedstrijd uit 2022. Alleen events; geen doorlopende tracking. Publieke uitvoer bevat afgeleide analyses.",
+    "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb"
+  },
+  {
+    "id": "skillcorner",
+    "name": "SkillCorner Open Data",
+    "url": "https://github.com/SkillCorner/opendata",
+    "license": "MIT",
+    "license_url": "https://github.com/SkillCorner/opendata/blob/master/LICENSE",
+    "attribution": "Copyright (c) 2020 Skillcorner. Source: SkillCorner / PySport.",
+    "limitation_en": "60 seconds of broadcast tracking at 1 Hz. Includes extrapolated positions. Full-match minutes come from separate metadata.",
+    "limitation_nl": "60 seconden broadcasttracking op 1 Hz, inclusief geëxtrapoleerde posities. Wedstrijdminuten komen uit aparte metadata.",
+    "revision": "4340d274572876239c154c90bc507a9b3250a656"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "statsbomb": {
+    "repository": "hudl/open-data",
+    "revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+    "competition_id": 43,
+    "season_id": 106,
+    "match_id": 3869685,
+    "license": "StatsBomb Open Data User Agreement (non-commercial research)",
+    "files": {
+      "competitions": "data/competitions.json",
+      "matches": "data/matches/43/106.json",
+      "lineups": "data/lineups/3869685.json",
+      "events": "data/events/3869685.json"
+    },
+    "sha256": {
+      "competitions": "e6cd42f5d8956d6aa30fb917ce8d4c3b3df1879a93f02f8feba820930a6971fa",
+      "matches": "b9d7516dc9919a825f04c204ca85487958c8a2431e84140a48e944934661efc7",
+      "lineups": "2b00c4cbf027b36ae2ce99f183a0943c649bb5bdcb8324683a8603785beffed5",
+      "events": "a0b0036d50c10a4c8879d1ee9f24a7502ec2cfb264a61951c8d500dfc897ec35"
+    }
+  },
+  "skillcorner": {
+    "repository": "SkillCorner/opendata",
+    "revision": "4340d274572876239c154c90bc507a9b3250a656",
+    "match_id": 2013725,
+    "start_frame": 4040,
+    "stop_frame": 4640,
+    "stride": 10,
+    "license": "MIT; Copyright (c) 2020 Skillcorner",
+    "files": {
+      "matches": "data/matches.json",
+      "match": "data/matches/2013725/2013725_match.json",
+      "tracking": "data/matches/2013725/2013725_tracking_extrapolated.jsonl"
+    },
+    "sha256": {
+      "matches": "4dd7a62f966046a8fde2563e69fd044997d471b213118aed436cb23ab1fdfad0",
+      "match": "c8b9372fbd2e79ddcbb859b51b5086111ed7f3cd84ca0b457091c7d0e5209df3",
+      "tracking": "a3f5815adc1a25dd7f70e2a69d7b7c8d79b7db75269a6d4bbae6e78015eed6e0"
+    }
+  }
+}
