@@ -193,3 +193,5 @@ METRICS = [
         description_nl="Bewaarde frames op 1 Hz binnen een venster van 60 seconden.",
     ),
 ]
+
+from football_intelligence.dna.registry import FeatureDefinition  # noqa: E402, F401

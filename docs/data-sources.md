@@ -29,3 +29,7 @@ The chosen pair proves nested event and frame/object ingestion without pretendin
 | Pydantic / Pandera | Pydantic supplies row and public API contracts. Additional frame invariants use Polars; Pandera would duplicate the current small contract layer. |
 
 Read source terms again before expanding the use case or introducing commercial use. Repository code is MIT; data rights are separate.
+
+## Phase 2 source extension
+
+StatsBomb is now also the sole Player DNA provider, using the complete 132-match WSL 2023/24 cohort at the pinned official revision. The fetched license remained byte-identical to the Phase 1 audit. No cross-season identity claim, additional commercial source or raw redistribution was introduced. The existing SkillCorner source remains a tracking explorer sample. The Phase 2 socceraction/SPADL assessment is in [player features](player-features.md); it was not added as a runtime dependency.

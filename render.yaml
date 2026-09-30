@@ -4,7 +4,7 @@ services:
     runtime: static
     name: football-recruitment-intelligence
     repo: https://github.com/frenk4business/football-recruitment-intelligence
-    branch: phase/01-data-foundation
+    branch: phase/02-player-dna
     buildCommand: cd apps/web && npm ci && npm run build
     staticPublishPath: apps/web/out
     autoDeployTrigger: checksPass

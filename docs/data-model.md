@@ -42,3 +42,9 @@ erDiagram
 Position taxonomy: GK, CB, FB/WB, DM, CM, AM, W, ST. Ambiguous labels stay null. All original positions remain available; the first listed role is a convenience label, not a fixed tactical identity. Goalkeepers remain in tables but should form their own cohort in Phase 2.
 
 Canonical IDs are deterministic UUID5 (`fri:{provider}:{table}:{provider_id}`). Season IDs include competition ID. Match context is part of lineup/frame/object keys. Exact source IDs receive confidence 1 and verified=true only within that source namespace. Cross-provider resolution has not been performed.
+
+## Canonical v1.1.0 and Player DNA
+
+Lineups add `minutes_reliable`, `minutes_quality`, `minutes_quality_reason`, `role_minutes_json` and `participation_json`. When complete explicit Starting XI and Half End events are available, substitutions, tactical shifts, temporary exits/returns and red cards reconstruct active intervals. Contradictory participation evidence makes minutes null. Source intervals remain preserved. Older sparse fixtures retain their descriptive interval values but receive no Phase 2 reliability assertion.
+
+Cohort entities keep stable IDs and the earliest observation date, rejecting conflicting identity attributes across matches. Each match/date row retains its own context. Phase 2 event/lineup/map partitions are kept separate from the Phase 1 sample tables. The dedicated feature observation mart preserves counts and denominators for reaggregation, temporal splits and bootstrap sampling. Player profiles do not overwrite `player_season`; team/date context is retained at the observation level.

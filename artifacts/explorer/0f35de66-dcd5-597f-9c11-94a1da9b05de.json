@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "match": {
     "id": "0f35de66-dcd5-597f-9c11-94a1da9b05de",
     "provider": "skillcorner",

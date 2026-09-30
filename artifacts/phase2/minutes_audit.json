@@ -1,0 +1,85 @@
+{
+  "excluded_player_matches": [
+    {
+      "match_id": "0ad16ca9-fbe5-5537-8ac2-932c03b8c25c",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-10-01",
+      "player_id": "eb6a25c3-32a8-59ff-86ed-76e2f92cadaa",
+      "team_id": "acf863e0-94d3-5983-8b8c-56976c2b59dc"
+    },
+    {
+      "match_id": "0b26e0e1-6b6e-5f4d-9e12-71c8796db549",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-11-19",
+      "player_id": "7a4eea04-d4a2-5dfb-9a43-aaafc5bf1c59",
+      "team_id": "67cea9eb-8181-5982-ae0c-0e7f417144cb"
+    },
+    {
+      "match_id": "85bf8fce-945a-5c60-a2b1-576ebf02e46a",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2024-04-17",
+      "player_id": "09dab863-bc9d-574a-b304-9c420920145c",
+      "team_id": "acf863e0-94d3-5983-8b8c-56976c2b59dc"
+    },
+    {
+      "match_id": "8b68de8e-6473-5b2e-ba8b-3e6830054699",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-12-17",
+      "player_id": "d2ce9397-8a27-5d86-836f-a131b048b6ef",
+      "team_id": "3a6cf779-2270-5819-8cd8-e7a355a83a87"
+    },
+    {
+      "match_id": "b34e0e01-dab0-57dc-af2e-bb93cb9e0f15",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2024-03-17",
+      "player_id": "6af93d5e-ddfa-5057-885c-abe1f0efc403",
+      "team_id": "a6e40be4-0c03-548e-b313-3765c77638f4"
+    },
+    {
+      "match_id": "b36da81a-e2e8-5cf2-9ab6-e5dd36b88df2",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-10-01",
+      "player_id": "8941013d-58d4-5f9d-973c-28dcc99aaf46",
+      "team_id": "67cea9eb-8181-5982-ae0c-0e7f417144cb"
+    },
+    {
+      "match_id": "b5a9aac9-43e6-5037-b3fe-2d89772b7e44",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-10-08",
+      "player_id": "0e349c50-1579-5243-83f7-25e19f266ec9",
+      "team_id": "67cea9eb-8181-5982-ae0c-0e7f417144cb"
+    },
+    {
+      "match_id": "b5a9aac9-43e6-5037-b3fe-2d89772b7e44",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-10-08",
+      "player_id": "3dc9b6cd-ec51-5423-8f71-ff2289ca8966",
+      "team_id": "67cea9eb-8181-5982-ae0c-0e7f417144cb"
+    },
+    {
+      "match_id": "c5572396-64d1-5d20-bc2d-13070b7014f5",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-12-17",
+      "player_id": "df56f428-13ad-5765-ba3d-ba824c11a33c",
+      "team_id": "acf863e0-94d3-5983-8b8c-56976c2b59dc"
+    },
+    {
+      "match_id": "d6a2b7bb-4767-573f-8c44-0397a18155b5",
+      "minutes_quality": "conflicting",
+      "minutes_quality_reason": "tactical_player_not_registered",
+      "observed_on": "2023-12-17",
+      "player_id": "e49479c2-a7d8-5050-ab7f-37add83fec3a",
+      "team_id": "fd45bdfb-70d8-5ffe-8be7-b26723b6fa87"
+    }
+  ],
+  "policy": "Both numerator and minutes excluded for these conflicting observations. IDs are canonical; no provider lineup intervals or event feeds are published."
+}

@@ -7,7 +7,7 @@ from uuid import NAMESPACE_URL, uuid5
 import polars as pl
 from pydantic import BaseModel, ConfigDict, Field
 
-SCHEMA_VERSION = "1.0.0"
+SCHEMA_VERSION = "1.1.0"
 
 
 def canonical_id(provider: str, entity: str, provider_id: str | int) -> str:
@@ -69,6 +69,11 @@ class Lineup(Record):
     provider_positions_json: str
     minutes: float | None = Field(default=None, ge=0, le=160)
     minutes_method: str
+    minutes_reliable: bool = False
+    minutes_quality: str = "unavailable"
+    minutes_quality_reason: str = "not_reconciled"
+    role_minutes_json: str = "{}"
+    participation_json: str = "[]"
     substitution_in: str | None = None
     substitution_out: str | None = None
 

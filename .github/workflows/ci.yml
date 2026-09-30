@@ -1,8 +1,8 @@
-name: Phase 1 checks
+name: Research and product checks
 on:
   pull_request:
   push:
-    branches: [main, phase/01-data-foundation]
+    branches: [main, phase/01-data-foundation, phase/02-player-dna]
 permissions:
   contents: read
 concurrency:

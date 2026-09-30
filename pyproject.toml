@@ -4,9 +4,17 @@ version = "0.1.0"
 description = "Reproducible open football data research"
 requires-python = ">=3.12,<3.14"
 dependencies = [
-  "duckdb>=1.4,<2", "polars>=1.35,<2", "pyarrow>=22,<26",
-  "pydantic>=2.12,<3", "fastapi>=0.120,<1", "uvicorn>=0.38,<1",
-  "typer>=0.20,<1", "httpx>=0.28,<1", "pyyaml>=6,<7",
+  "duckdb>=1.4,<2",
+  "polars>=1.35,<2",
+  "pyarrow>=22,<26",
+  "pydantic>=2.12,<3",
+  "fastapi>=0.120,<1",
+  "uvicorn>=0.38,<1",
+  "typer>=0.20,<1",
+  "httpx>=0.28,<1",
+  "pyyaml>=6,<7",
+  "numpy>=2.2,<3",
+  "scikit-learn>=1.7,<2",
 ]
 
 [dependency-groups]

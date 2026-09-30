@@ -1,0 +1,5103 @@
+{
+  "appearances_quantiles": {
+    "max": 22.0,
+    "min": 0.0,
+    "p25": 4.75,
+    "p50": 12.0,
+    "p75": 19.0
+  },
+  "cohort": "wsl_2023_24",
+  "competition": "FA Women's Super League",
+  "complete": true,
+  "dates": [
+    "2023-10-01",
+    "2024-05-18"
+  ],
+  "feature_availability": {
+    "box_carries_per90": 296,
+    "box_passes_per90": 296,
+    "box_shots_per90": 296,
+    "carries_per90": 296,
+    "carry_distance_per90": 296,
+    "counterpressures_per90": 296,
+    "crosses_per90": 296,
+    "final_third_passes_per90": 296,
+    "goals": 296,
+    "interceptions_per100_opponent": 296,
+    "interceptions_per90": 296,
+    "long_passes_per90": 296,
+    "npxg_per90": 296,
+    "pass_completion": 292,
+    "passes_per90": 296,
+    "pressures_per100_opponent": 296,
+    "pressures_per90": 296,
+    "progressive_carries_per90": 296,
+    "progressive_passes_per100_team": 296,
+    "progressive_passes_per90": 296,
+    "recoveries_per90": 296,
+    "shot_assists_per90": 296,
+    "shots_per90": 296,
+    "tackles_per90": 296,
+    "team_pass_share": 295,
+    "xa_per90": 296,
+    "xg_per_shot": 240
+  },
+  "matches": 132,
+  "minimum_role_players": 12,
+  "minutes_quality": {
+    "conflicting": 10,
+    "reconciled": 25,
+    "reliable": 5067
+  },
+  "minutes_quantiles": {
+    "max": 2242.388084,
+    "min": 0.0,
+    "p25": 187.93044125,
+    "p50": 758.0393755,
+    "p75": 1481.51994925
+  },
+  "missing_player_ids": 0,
+  "players_with_reliable_minutes": 296,
+  "role_counts": {
+    "AM": 9,
+    "CB": 52,
+    "CM": 21,
+    "DM": 42,
+    "FB/WB": 49,
+    "GK": 28,
+    "ST": 36,
+    "W": 52,
+    "unknown": 47
+  },
+  "roster_players": 336,
+  "season": "2023/2024",
+  "source_revision": "4b73468fc5b0f1950f9f66fada70ad3a4f9327cb",
+  "teams": 12,
+  "thresholds": {
+    "1200": {
+      "before_role_size": {
+        "AM": 1,
+        "CB": 28,
+        "CM": 6,
+        "DM": 15,
+        "FB/WB": 20,
+        "ST": 12,
+        "W": 18
+      },
+      "eligible": 93,
+      "excluded": [
+        {
+          "player_id": "001414b2-dba4-551e-977c-6ad748213e0b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "00d434f9-248a-5a25-b0e3-0661f7aea8f2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "010d2a08-1524-5867-a8ce-ea6625ba37d9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01475d4f-c2d8-5d66-a9f7-dda3e1de41f6",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "018b6dda-4daa-5433-8367-7773ae90daa5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01be0398-0dca-585d-aba0-59d91006d723",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01f68f66-d8ed-5c77-a7c6-6f8812bdba3d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "024716e0-337e-5d6a-a305-b031da63b365",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "02e8ec0e-0204-5d73-a969-62ad84cc4f60",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "03565087-dc79-563e-8a3b-636f88a2149b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "03b6ee6a-07bf-5e04-9ba4-f405638b0083",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "03baed30-5a3a-5f99-90f4-43b833dbba7c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "084dd801-cbda-5449-b86e-3445d2bd7f65",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "09dab863-bc9d-574a-b304-9c420920145c",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "0aa270c1-f608-5999-b51f-17f141e9ac0a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0b2cd145-df66-5d88-9b5d-773d155214d8",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0b8b6e02-68b8-5ea5-97db-2f00e3545764",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0bb82ec3-c22b-55cf-8453-8ccdd0003fde",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0e05223a-54dc-547d-a7d8-a1f38ac3dc8b",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "0e51d7b3-dd1c-510b-8a98-dd405b7d01dd",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "0f95d335-39f5-5895-80fc-569140140d4e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1040b9b5-d310-5d60-ab82-24b4bfac76cc",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1050e109-e9fb-5190-98eb-26897f844132",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "114ea23a-96b6-5b63-8c68-c775f410568c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "11916714-4856-5479-97c9-59574caca846",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "12856689-9cbd-5add-bad3-462529024d41",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "128f29ff-b502-5b0e-ab93-d53b926e48bb",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "12b1f238-5cf1-51ce-93a9-a052afb7339e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "13f3ac07-8319-5aa7-8420-af2f1d75f44f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "14f954ea-23a2-547a-b2b0-94bd17ea79aa",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "1620f1f3-c536-569e-bcf3-819d77e1269f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "169667d2-8710-5908-9ff3-846760eadfca",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "18f81187-9ad0-5de5-b2e5-486295d379b6",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "19498f1c-113f-512f-9998-dd8435a420cf",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1b955bff-a05a-5af1-8052-31e3183af45c",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1c255a3d-acb3-5d5b-be41-cfb0955f3177",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1c343272-11cc-57d7-be23-1e2f4360d49c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1d53d5ec-3536-56cb-925c-a385272b798f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1da05eb7-b840-56c0-955d-7fe35d7b4f9d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1ddf9d08-571e-5bd8-860c-b824a22cae1d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2238a43c-e9ed-5116-acf0-79698e851716",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2315fee3-d264-55ee-b029-70819d1c8d22",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "234345df-2c17-57ae-8dea-cbe2217cb59a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "23712b00-7ed4-56e0-9334-2fcd4241cbec",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "25f13e23-0c55-523b-9a3b-1701dba8d78a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "27e1dda0-2682-5cb6-a476-b9c0a6bc4331",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "28786ae5-bb4b-5c79-9bbf-d4c0311772b5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "29135a1f-cc88-55ae-ac57-48e7c3b00b6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "291aabc2-d8dd-525f-9df9-17d00986eee5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "29d4c479-c7f6-5f23-a084-215a8a855910",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2a51f29e-87fb-52bd-a6d6-bad64850b3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "2ab47bc9-10f8-55b2-8851-8b4e860c79b9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2c19a078-41cd-57a0-a6f1-81ec48bbe021",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "2e4776c8-9c6c-5e15-8bcb-8ef32e771178",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2ee7c455-3dfd-5614-a775-f7b58295cbc4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2fb43143-98ff-59ec-8f35-b711269e8bd6",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "31e5bf5f-a239-5ba2-802b-4820ac0215c7",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "35f893f6-69ef-5eed-9dac-df7944e21e80",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "37427443-81fd-53d3-9cac-0c2278ee0f0a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "39ba0b04-40e1-5803-89b1-41b6de613a51",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b4615c4-96fc-5034-8559-7d2e72787216",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3b5f8b4d-40ec-5b3a-bee7-eb7761bc6aa1",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b8aec75-97b6-52cb-8109-446258b72695",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3be35a24-0d4a-509a-9e51-0133e55345d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "3c9a0584-ea08-51f8-b37b-c9a2accc2976",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "400b3d58-f570-5396-b13b-9f6a800f5a6e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "414ed7b7-015d-5916-acaf-0d1da29cfb83",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "425ef43c-bc79-5136-95c0-ddc91e2962f3",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "427fbc32-1c7f-59ca-94ea-eb361bd690b4",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "42d2610d-78c1-562e-9c2a-b75b591724f5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4368909e-0aa3-5864-998d-b46b7f3d4823",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "440dfb46-982a-59ef-bccc-9c368e266d7c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4483b516-5828-5a0e-a85d-a3c50fca2f50",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "462129be-761b-5442-852f-19898e83d44d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "465175d4-142c-5da7-a4d8-a4818f1bfcd5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "46586958-0a61-51bc-b466-32e10beb53dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "47e79c58-1976-5399-a121-9201d4d4f4ae",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "4835112e-d319-5f25-9518-c91acd7deabe",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4956d235-0af1-53dc-b9f1-4b9f327e6a92",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "49ba4449-d14e-56e8-99d3-ecd59cc86940",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4ab76ab1-776e-5c15-a490-f616bcbe45d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4babee9f-3ef1-5339-ac32-a792615ee9d8",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "4e5213d3-52bf-5a04-9451-8f83f8c58c0f",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "4edb42f3-245a-527f-88d7-61d3c99f0731",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4f1a9b52-1763-5bb0-8da3-3f59e0933e58",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "51d49606-3cbe-5e81-aa7a-3c8a20a9c5e0",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "52c63bc2-2ace-562c-9b6a-961002e26ac7",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "554caacb-9a86-5620-be6c-e7eb624c4b04",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "56bb7c2e-3720-5a26-a856-f9235d9df9e9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "56cd62e0-aa28-588a-a33e-cf902e08565f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5826f742-7030-51c1-99f3-1fa2d0ce746e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "592b2588-1492-59ca-a6b0-200816a18c42",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "5955c031-d1cb-585d-81e5-d926d816d1d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "598004ff-f6a9-5693-adb5-fbe02b1a3d67",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5a074f4d-e616-5ad8-9243-7b25bbebf1c5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5a85046b-1168-5561-ba77-f8910826fae9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5ca22b33-0be9-5c25-b11d-a787288778b7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5d916a10-ac32-5500-9188-4a1cf9444780",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "60ed4b92-7cfd-5f4f-8bb1-6cc94becf01e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "63c1333e-15c6-5f62-9c90-1accba36ed67",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "63cf1557-3ab0-5e24-8ebc-4d77201223a4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "64d67da1-61f1-5349-87e0-139975d3f2ae",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "65853d81-ac4e-5ebd-a6e2-2539de4c2628",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "664e66be-2df3-5ce9-9db2-2306d8429b90",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6765cbcd-c365-5f3f-9db1-50b8f8a61179",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "68034620-30d8-5315-a863-4bfabc7788b4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "68babf59-c054-5858-9b54-3f7f4f163ffb",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "6a376b4c-fa36-53ff-8a19-7d88dabf599d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6ae1e2a9-8eb5-5db1-8719-3acc226543e7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6d911876-ebc7-5a43-ac25-59084428db9d",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "6fec9f3d-1778-558a-82cb-0e552d9cd2dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7282ebc0-cc4a-5bb3-b41b-9c38187d3f74",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7477417a-f7eb-50fb-a9de-e45d31343ad5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "77105850-c233-5b1c-a806-13d44c90fc50",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "77fe4939-2666-5ef1-b251-660e5424c74d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "78078545-7500-55e1-b142-a0c54d21b1ce",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "780fcee8-ba27-5fc0-b615-ef302dcd2871",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "78ce10b0-8fbc-534d-ab2b-f91ea25aa2d2",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7952e9af-e3bb-549e-acea-85262085f95a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b030b8d-e49f-5e84-9723-ab7eac4f407e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b0da205-c908-5b7e-aab7-4bc51accab79",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7cac6929-e07a-5827-8c62-509c06666aa2",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7f762328-50f1-5701-b8b5-e2ee469c300b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7fbdce65-f7a8-5112-8040-6c4d9d064a1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "82593cdc-7764-5966-9c3e-ad7d612c1cbe",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "84fe3349-8d50-5964-a2ca-5e70401508f5",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "85dc16cf-9f22-5bec-be64-b565b4463e3f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "860d0a50-68d3-5c96-9296-fa3270e30f9b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "86ace10d-0470-5983-a0af-440a78bb2cca",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "890e0c79-2d5f-5988-b2f3-795b4fbde15c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8a9bd14f-78e1-5b79-af98-2ee99b5c04d8",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8c67e472-8e22-582d-be7f-67399a2cb6da",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8cf0bc5c-674d-5755-afc0-92bd0b1889d0",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8cf29e39-43fd-568e-a9b4-da03895035bb",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8e3a73fc-9514-586b-ab99-105065c481d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8eddb64f-6c00-540d-9c78-70556f4b177e",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8f49b1d6-2745-5c13-8ed9-ac3e435e4b18",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "90e184f1-0a1a-5052-b72c-027eb622940c",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "918ba908-6792-5a72-aaab-18f08e1c32ed",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9289a599-598d-55ab-a93f-98a837802284",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "95658d87-2269-5864-b595-1ecff193e9f7",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "96cebaf0-073e-5324-a7ed-a5ce76a3a256",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "975823d7-0e3b-5296-9c7f-87658ceb056e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "97ce6784-ec53-5c1a-982c-ba2a34c1fc54",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "99f83c07-9100-558b-9d4e-da061e9a5d47",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9b0cbb11-1f34-568f-9cbb-31dcc6f0a83b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9bcfec0c-c45c-5607-9c43-dcc9a06ebfe9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9c6a781e-9d20-582c-967a-46480ec0606c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9dbbe6c7-1842-5a5d-9958-5210be0e5924",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "9fbca0cd-69fd-5297-926e-018da0d48cde",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a16b3c5c-1918-56fd-a196-0838af365f1d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a18fe4be-bc8b-5a62-a41d-9f2bca0e0220",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a288f923-c404-560e-aa52-a66b51eb038c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a351abee-8cf5-52a7-bbff-99973882dfc0",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a3ce9b33-86ad-5055-ab5b-674214a2d655",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a3f930a6-5d68-570c-8872-61a0a53e6e90",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a513200a-18d7-5710-b409-ee0e71260c99",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a62546f5-38be-5e92-89ed-244546f71b35",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a6d101eb-8b6e-5ec7-9b5a-257a5b41bdf5",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "a715c396-321f-524f-aabe-9fa82cdc8d97",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a7dcded4-f79e-5ab7-878d-428618da7ec3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a83c008d-39aa-54d4-9b4f-7dceb24e24ee",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "aa2c0f44-3b29-51fe-842a-9fb01fca76ae",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ac95e658-4b12-5032-9056-8ea0e6e5fd66",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ae069218-ba87-5cdb-a43d-fb21002f3e3a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ae9664f7-841a-55c6-90a0-889234df1f7a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "af9bf51a-8fa7-5dc6-952d-6c79e3a49bb2",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b0b45faf-2576-5a31-9159-90cd6b8907e9",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "b158842a-8ce7-5b63-942e-e7cb075cd0f4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b28febb9-f1b5-5744-b452-834acc302dcc",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b35e0dfa-1e8e-517a-a4de-25f934fdb861",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b5279fbf-9ba7-5bb1-a92d-77748ecb959e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b64c2490-01df-5ab6-9e35-b5d0fad8ae47",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b65570f5-9a9f-5b4d-b9eb-46ed4a09bb14",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b8c61924-b4e4-57c1-9758-ac960b6bb09f",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b99eb753-b41e-52f8-8e9f-9b6d282ee9e4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bb6888e3-6001-5998-b307-971c3b8b6c6e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bbecf0cd-7617-565e-82ba-9094aedf0c61",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "bd4e610e-bdcd-50f3-abdc-d89edf5cd527",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bda29aa6-d3ac-534e-b6fe-02f63036575a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bf323d38-f820-5f49-8d5e-28aa0508d927",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "c06fe31e-444e-5ad9-8ecc-a87fd6bccddc",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c0bb1460-4b44-5320-9838-5fead97270c1",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c207afe5-ac51-5c55-a791-98625eb4de2c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c279bb99-ebb0-54d7-8b6f-20324bd16e05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c352a5d0-629e-51d2-98e6-540e7f21e874",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3dfa27c-1d88-5c44-94b1-2ed49e41820b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3f005df-f777-5923-b0cd-f075278da322",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c548d6ef-0657-5b4c-9221-0ca088e02bd7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c5d8cc59-6b7b-5146-9c4b-216b12ae655a",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "c5ff757d-ccdb-559a-9285-f55165671f76",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c6677b50-a3f3-5a7f-9922-58027609ee68",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c6ec4e3a-57fa-5877-8a67-098fc97bfbcb",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c81369b2-4a59-575c-95fa-b37fc6fb0a1e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "cb4b4be4-80d2-5722-885f-b69d58e57e78",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "cbfa118c-0a0c-5b83-ae55-ed794be6700a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "cd22f268-e693-5518-adc9-5805dd965367",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "cfc49a48-70bb-5079-842a-ea17d1293e2f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d234c421-2650-5795-aec6-fd35068cc2cf",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d53f9c10-8704-5f2b-8205-8d34fa755604",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d578b7fa-6768-59fd-a585-b64a268cb0b7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d5d05b04-c038-5c75-ad56-419deee0ca34",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "d71c868f-e83f-5397-83f6-d9dee7efe0af",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "d7863eb4-3436-52c8-8c76-bc80d0710515",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d8693bbd-baae-5422-9a0e-6bc02d741c17",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d8d103e5-18b5-5a15-b3e5-4a4a5d0c7cc5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dbbfaf89-1c9a-5102-a0ea-cbde8f1d2e73",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dcee09eb-cf8e-5e28-b97a-48d13e70b9c0",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "dd533227-5896-5b39-9c01-34f153e8f8bd",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ddf21f32-c851-51e4-9d3b-a96005535fd5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "de667958-cea1-5c2e-a0cf-c2ce58ad9d05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "de8db3ff-b560-5f4b-807d-bda4890b953e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "df56f428-13ad-5765-ba3d-ba824c11a33c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e14ed9ed-1184-5a8f-8de4-8a2b3c556395",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "e1870287-edfb-5740-ac0e-86c2786ded1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e422535c-0769-501a-ae95-02ebec5ab381",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e51adfee-1658-5e19-98ea-8cd8d916dd6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e626cd2a-03bb-59b3-a250-2cdf3f3eb709",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e67751f9-13ab-503a-b152-6df72b4af4cf",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e73beba7-86ae-51db-8721-7a959b4425a8",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e84fde6a-8a29-5c6c-9c43-9bc1f2c36c39",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e8f7baa5-b171-546f-8360-1ee38ac31074",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ea52c671-8d1c-5763-8454-df0eaa95a3e5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "eb6a25c3-32a8-59ff-86ed-76e2f92cadaa",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ec080a0e-ceb0-5521-9fc5-15cf0a5365dd",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef55342e-655e-51af-b52d-6ed73a9506c7",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "ef63eb51-c2b6-5019-9540-512c6baffeb4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef883e09-0b2f-588e-bd69-376d4f8ea3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f05c53bc-8213-56ef-89a8-1f80a126ed05",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f2adbb01-5286-5c99-b32b-fae983e84223",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "f2fe2484-9695-53cf-b670-ff3f1cd8d011",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f3b969e8-e276-521e-a8e9-897e6ee9257f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f45e6006-cd97-5504-a101-5448b2a877ca",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f630b33b-9ddc-5ec5-b2f4-729435eea100",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f6c96052-7287-59d7-83bd-1482c1e03ea9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f9a7a4ef-a72e-5bc2-8a0d-7db51dcf4781",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb143af4-46e1-5fcd-8b80-ebaf1003fd4a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb1caaa6-dc59-509b-b136-74ba024ea02c",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "fba3e533-5ebc-52b7-a60c-76d77ecc7768",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "fc2d1361-8107-5645-9046-cce50868e8c9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fd7f3eb4-a1b8-5fc4-a80e-53f6205035cf",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "ff8b9cf7-75a4-5428-aa85-d8b88e2f0bd2",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "ffbc1d0f-a864-56f3-8a60-6b223bfb3050",
+          "reasons": [
+            "below_minutes"
+          ]
+        }
+      ],
+      "roles": {
+        "CB": 28,
+        "DM": 15,
+        "FB/WB": 20,
+        "ST": 12,
+        "W": 18
+      }
+    },
+    "450": {
+      "before_role_size": {
+        "AM": 6,
+        "CB": 44,
+        "CM": 16,
+        "DM": 30,
+        "FB/WB": 37,
+        "ST": 24,
+        "W": 35
+      },
+      "eligible": 186,
+      "excluded": [
+        {
+          "player_id": "001414b2-dba4-551e-977c-6ad748213e0b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "00d434f9-248a-5a25-b0e3-0661f7aea8f2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "01be0398-0dca-585d-aba0-59d91006d723",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01f68f66-d8ed-5c77-a7c6-6f8812bdba3d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "024716e0-337e-5d6a-a305-b031da63b365",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "02e8ec0e-0204-5d73-a969-62ad84cc4f60",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "03565087-dc79-563e-8a3b-636f88a2149b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "03b6ee6a-07bf-5e04-9ba4-f405638b0083",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "084dd801-cbda-5449-b86e-3445d2bd7f65",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "09dab863-bc9d-574a-b304-9c420920145c",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "0b8b6e02-68b8-5ea5-97db-2f00e3545764",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "0bb82ec3-c22b-55cf-8453-8ccdd0003fde",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0e05223a-54dc-547d-a7d8-a1f38ac3dc8b",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "0e51d7b3-dd1c-510b-8a98-dd405b7d01dd",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "1040b9b5-d310-5d60-ab82-24b4bfac76cc",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1050e109-e9fb-5190-98eb-26897f844132",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "11916714-4856-5479-97c9-59574caca846",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "12856689-9cbd-5add-bad3-462529024d41",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "13f3ac07-8319-5aa7-8420-af2f1d75f44f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "14f954ea-23a2-547a-b2b0-94bd17ea79aa",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "1620f1f3-c536-569e-bcf3-819d77e1269f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "19498f1c-113f-512f-9998-dd8435a420cf",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1b955bff-a05a-5af1-8052-31e3183af45c",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1c255a3d-acb3-5d5b-be41-cfb0955f3177",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1ddf9d08-571e-5bd8-860c-b824a22cae1d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2315fee3-d264-55ee-b029-70819d1c8d22",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "23712b00-7ed4-56e0-9334-2fcd4241cbec",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "27e1dda0-2682-5cb6-a476-b9c0a6bc4331",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "28786ae5-bb4b-5c79-9bbf-d4c0311772b5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "29135a1f-cc88-55ae-ac57-48e7c3b00b6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "291aabc2-d8dd-525f-9df9-17d00986eee5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2a51f29e-87fb-52bd-a6d6-bad64850b3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "2ab47bc9-10f8-55b2-8851-8b4e860c79b9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2ee7c455-3dfd-5614-a775-f7b58295cbc4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2fb43143-98ff-59ec-8f35-b711269e8bd6",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "31e5bf5f-a239-5ba2-802b-4820ac0215c7",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "39ba0b04-40e1-5803-89b1-41b6de613a51",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b4615c4-96fc-5034-8559-7d2e72787216",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3b5f8b4d-40ec-5b3a-bee7-eb7761bc6aa1",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b8aec75-97b6-52cb-8109-446258b72695",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3be35a24-0d4a-509a-9e51-0133e55345d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "3c9a0584-ea08-51f8-b37b-c9a2accc2976",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "400b3d58-f570-5396-b13b-9f6a800f5a6e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "414ed7b7-015d-5916-acaf-0d1da29cfb83",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "427fbc32-1c7f-59ca-94ea-eb361bd690b4",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "42d2610d-78c1-562e-9c2a-b75b591724f5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "465175d4-142c-5da7-a4d8-a4818f1bfcd5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "46586958-0a61-51bc-b466-32e10beb53dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "47e79c58-1976-5399-a121-9201d4d4f4ae",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "4835112e-d319-5f25-9518-c91acd7deabe",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4956d235-0af1-53dc-b9f1-4b9f327e6a92",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4ab76ab1-776e-5c15-a490-f616bcbe45d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4babee9f-3ef1-5339-ac32-a792615ee9d8",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "4e5213d3-52bf-5a04-9451-8f83f8c58c0f",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "4edb42f3-245a-527f-88d7-61d3c99f0731",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4f1a9b52-1763-5bb0-8da3-3f59e0933e58",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "51d49606-3cbe-5e81-aa7a-3c8a20a9c5e0",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "52c63bc2-2ace-562c-9b6a-961002e26ac7",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "554caacb-9a86-5620-be6c-e7eb624c4b04",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "592b2588-1492-59ca-a6b0-200816a18c42",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "5955c031-d1cb-585d-81e5-d926d816d1d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5a85046b-1168-5561-ba77-f8910826fae9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5ca22b33-0be9-5c25-b11d-a787288778b7",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "60ed4b92-7cfd-5f4f-8bb1-6cc94becf01e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "664e66be-2df3-5ce9-9db2-2306d8429b90",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6765cbcd-c365-5f3f-9db1-50b8f8a61179",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "68babf59-c054-5858-9b54-3f7f4f163ffb",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "6a376b4c-fa36-53ff-8a19-7d88dabf599d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6d911876-ebc7-5a43-ac25-59084428db9d",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "6fec9f3d-1778-558a-82cb-0e552d9cd2dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7477417a-f7eb-50fb-a9de-e45d31343ad5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "78078545-7500-55e1-b142-a0c54d21b1ce",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "78ce10b0-8fbc-534d-ab2b-f91ea25aa2d2",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b030b8d-e49f-5e84-9723-ab7eac4f407e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b0da205-c908-5b7e-aab7-4bc51accab79",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7fbdce65-f7a8-5112-8040-6c4d9d064a1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "82593cdc-7764-5966-9c3e-ad7d612c1cbe",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "84fe3349-8d50-5964-a2ca-5e70401508f5",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "860d0a50-68d3-5c96-9296-fa3270e30f9b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "890e0c79-2d5f-5988-b2f3-795b4fbde15c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8a9bd14f-78e1-5b79-af98-2ee99b5c04d8",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8c67e472-8e22-582d-be7f-67399a2cb6da",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8cf29e39-43fd-568e-a9b4-da03895035bb",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8e3a73fc-9514-586b-ab99-105065c481d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8eddb64f-6c00-540d-9c78-70556f4b177e",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8f49b1d6-2745-5c13-8ed9-ac3e435e4b18",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "90e184f1-0a1a-5052-b72c-027eb622940c",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "9289a599-598d-55ab-a93f-98a837802284",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "95658d87-2269-5864-b595-1ecff193e9f7",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "96cebaf0-073e-5324-a7ed-a5ce76a3a256",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "975823d7-0e3b-5296-9c7f-87658ceb056e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "97ce6784-ec53-5c1a-982c-ba2a34c1fc54",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "99f83c07-9100-558b-9d4e-da061e9a5d47",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9b0cbb11-1f34-568f-9cbb-31dcc6f0a83b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9c6a781e-9d20-582c-967a-46480ec0606c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9dbbe6c7-1842-5a5d-9958-5210be0e5924",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "a288f923-c404-560e-aa52-a66b51eb038c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a3ce9b33-86ad-5055-ab5b-674214a2d655",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a62546f5-38be-5e92-89ed-244546f71b35",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a6d101eb-8b6e-5ec7-9b5a-257a5b41bdf5",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "a715c396-321f-524f-aabe-9fa82cdc8d97",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a83c008d-39aa-54d4-9b4f-7dceb24e24ee",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "aa2c0f44-3b29-51fe-842a-9fb01fca76ae",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ac95e658-4b12-5032-9056-8ea0e6e5fd66",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b0b45faf-2576-5a31-9159-90cd6b8907e9",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "b158842a-8ce7-5b63-942e-e7cb075cd0f4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b28febb9-f1b5-5744-b452-834acc302dcc",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b65570f5-9a9f-5b4d-b9eb-46ed4a09bb14",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b8c61924-b4e4-57c1-9758-ac960b6bb09f",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b99eb753-b41e-52f8-8e9f-9b6d282ee9e4",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "bda29aa6-d3ac-534e-b6fe-02f63036575a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bf323d38-f820-5f49-8d5e-28aa0508d927",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "c279bb99-ebb0-54d7-8b6f-20324bd16e05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c352a5d0-629e-51d2-98e6-540e7f21e874",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3dfa27c-1d88-5c44-94b1-2ed49e41820b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3f005df-f777-5923-b0cd-f075278da322",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c5d8cc59-6b7b-5146-9c4b-216b12ae655a",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "c5ff757d-ccdb-559a-9285-f55165671f76",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c6677b50-a3f3-5a7f-9922-58027609ee68",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c81369b2-4a59-575c-95fa-b37fc6fb0a1e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "cb4b4be4-80d2-5722-885f-b69d58e57e78",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "cfc49a48-70bb-5079-842a-ea17d1293e2f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d578b7fa-6768-59fd-a585-b64a268cb0b7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d5d05b04-c038-5c75-ad56-419deee0ca34",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "d71c868f-e83f-5397-83f6-d9dee7efe0af",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "d7863eb4-3436-52c8-8c76-bc80d0710515",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d8d103e5-18b5-5a15-b3e5-4a4a5d0c7cc5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dbbfaf89-1c9a-5102-a0ea-cbde8f1d2e73",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dcee09eb-cf8e-5e28-b97a-48d13e70b9c0",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "dd533227-5896-5b39-9c01-34f153e8f8bd",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "de667958-cea1-5c2e-a0cf-c2ce58ad9d05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "e14ed9ed-1184-5a8f-8de4-8a2b3c556395",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "e1870287-edfb-5740-ac0e-86c2786ded1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e422535c-0769-501a-ae95-02ebec5ab381",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e51adfee-1658-5e19-98ea-8cd8d916dd6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e8f7baa5-b171-546f-8360-1ee38ac31074",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef63eb51-c2b6-5019-9540-512c6baffeb4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef883e09-0b2f-588e-bd69-376d4f8ea3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f05c53bc-8213-56ef-89a8-1f80a126ed05",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f2adbb01-5286-5c99-b32b-fae983e84223",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "f2fe2484-9695-53cf-b670-ff3f1cd8d011",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "f45e6006-cd97-5504-a101-5448b2a877ca",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f630b33b-9ddc-5ec5-b2f4-729435eea100",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f6c96052-7287-59d7-83bd-1482c1e03ea9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb143af4-46e1-5fcd-8b80-ebaf1003fd4a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb1caaa6-dc59-509b-b136-74ba024ea02c",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "fba3e533-5ebc-52b7-a60c-76d77ecc7768",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "fd7f3eb4-a1b8-5fc4-a80e-53f6205035cf",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "ff8b9cf7-75a4-5428-aa85-d8b88e2f0bd2",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "ffbc1d0f-a864-56f3-8a60-6b223bfb3050",
+          "reasons": [
+            "below_minutes"
+          ]
+        }
+      ],
+      "roles": {
+        "CB": 44,
+        "CM": 16,
+        "DM": 30,
+        "FB/WB": 37,
+        "ST": 24,
+        "W": 35
+      }
+    },
+    "600": {
+      "before_role_size": {
+        "AM": 5,
+        "CB": 38,
+        "CM": 15,
+        "DM": 29,
+        "FB/WB": 33,
+        "ST": 21,
+        "W": 32
+      },
+      "eligible": 168,
+      "excluded": [
+        {
+          "player_id": "001414b2-dba4-551e-977c-6ad748213e0b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "00d434f9-248a-5a25-b0e3-0661f7aea8f2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "018b6dda-4daa-5433-8367-7773ae90daa5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01be0398-0dca-585d-aba0-59d91006d723",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01f68f66-d8ed-5c77-a7c6-6f8812bdba3d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "024716e0-337e-5d6a-a305-b031da63b365",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "02e8ec0e-0204-5d73-a969-62ad84cc4f60",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "03565087-dc79-563e-8a3b-636f88a2149b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "03b6ee6a-07bf-5e04-9ba4-f405638b0083",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "084dd801-cbda-5449-b86e-3445d2bd7f65",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "09dab863-bc9d-574a-b304-9c420920145c",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "0b2cd145-df66-5d88-9b5d-773d155214d8",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0b8b6e02-68b8-5ea5-97db-2f00e3545764",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "0bb82ec3-c22b-55cf-8453-8ccdd0003fde",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0e05223a-54dc-547d-a7d8-a1f38ac3dc8b",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "0e51d7b3-dd1c-510b-8a98-dd405b7d01dd",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "0f95d335-39f5-5895-80fc-569140140d4e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1040b9b5-d310-5d60-ab82-24b4bfac76cc",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1050e109-e9fb-5190-98eb-26897f844132",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "11916714-4856-5479-97c9-59574caca846",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "12856689-9cbd-5add-bad3-462529024d41",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "13f3ac07-8319-5aa7-8420-af2f1d75f44f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "14f954ea-23a2-547a-b2b0-94bd17ea79aa",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "1620f1f3-c536-569e-bcf3-819d77e1269f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "19498f1c-113f-512f-9998-dd8435a420cf",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1b955bff-a05a-5af1-8052-31e3183af45c",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1c255a3d-acb3-5d5b-be41-cfb0955f3177",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1da05eb7-b840-56c0-955d-7fe35d7b4f9d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1ddf9d08-571e-5bd8-860c-b824a22cae1d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2315fee3-d264-55ee-b029-70819d1c8d22",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "23712b00-7ed4-56e0-9334-2fcd4241cbec",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "27e1dda0-2682-5cb6-a476-b9c0a6bc4331",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "28786ae5-bb4b-5c79-9bbf-d4c0311772b5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "29135a1f-cc88-55ae-ac57-48e7c3b00b6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "291aabc2-d8dd-525f-9df9-17d00986eee5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2a51f29e-87fb-52bd-a6d6-bad64850b3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "2ab47bc9-10f8-55b2-8851-8b4e860c79b9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2ee7c455-3dfd-5614-a775-f7b58295cbc4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2fb43143-98ff-59ec-8f35-b711269e8bd6",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "31e5bf5f-a239-5ba2-802b-4820ac0215c7",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "37427443-81fd-53d3-9cac-0c2278ee0f0a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "39ba0b04-40e1-5803-89b1-41b6de613a51",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b4615c4-96fc-5034-8559-7d2e72787216",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3b5f8b4d-40ec-5b3a-bee7-eb7761bc6aa1",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b8aec75-97b6-52cb-8109-446258b72695",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3be35a24-0d4a-509a-9e51-0133e55345d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "3c9a0584-ea08-51f8-b37b-c9a2accc2976",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "400b3d58-f570-5396-b13b-9f6a800f5a6e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "414ed7b7-015d-5916-acaf-0d1da29cfb83",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "427fbc32-1c7f-59ca-94ea-eb361bd690b4",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "42d2610d-78c1-562e-9c2a-b75b591724f5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4483b516-5828-5a0e-a85d-a3c50fca2f50",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "465175d4-142c-5da7-a4d8-a4818f1bfcd5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "46586958-0a61-51bc-b466-32e10beb53dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "47e79c58-1976-5399-a121-9201d4d4f4ae",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "4835112e-d319-5f25-9518-c91acd7deabe",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4956d235-0af1-53dc-b9f1-4b9f327e6a92",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4ab76ab1-776e-5c15-a490-f616bcbe45d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4babee9f-3ef1-5339-ac32-a792615ee9d8",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "4e5213d3-52bf-5a04-9451-8f83f8c58c0f",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "4edb42f3-245a-527f-88d7-61d3c99f0731",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4f1a9b52-1763-5bb0-8da3-3f59e0933e58",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "51d49606-3cbe-5e81-aa7a-3c8a20a9c5e0",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "52c63bc2-2ace-562c-9b6a-961002e26ac7",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "554caacb-9a86-5620-be6c-e7eb624c4b04",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "56bb7c2e-3720-5a26-a856-f9235d9df9e9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "592b2588-1492-59ca-a6b0-200816a18c42",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "5955c031-d1cb-585d-81e5-d926d816d1d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "598004ff-f6a9-5693-adb5-fbe02b1a3d67",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5a85046b-1168-5561-ba77-f8910826fae9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5ca22b33-0be9-5c25-b11d-a787288778b7",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "5d916a10-ac32-5500-9188-4a1cf9444780",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "60ed4b92-7cfd-5f4f-8bb1-6cc94becf01e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "63c1333e-15c6-5f62-9c90-1accba36ed67",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "664e66be-2df3-5ce9-9db2-2306d8429b90",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6765cbcd-c365-5f3f-9db1-50b8f8a61179",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "68babf59-c054-5858-9b54-3f7f4f163ffb",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "6a376b4c-fa36-53ff-8a19-7d88dabf599d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6d911876-ebc7-5a43-ac25-59084428db9d",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "6fec9f3d-1778-558a-82cb-0e552d9cd2dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7282ebc0-cc4a-5bb3-b41b-9c38187d3f74",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7477417a-f7eb-50fb-a9de-e45d31343ad5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "78078545-7500-55e1-b142-a0c54d21b1ce",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "78ce10b0-8fbc-534d-ab2b-f91ea25aa2d2",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7952e9af-e3bb-549e-acea-85262085f95a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b030b8d-e49f-5e84-9723-ab7eac4f407e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b0da205-c908-5b7e-aab7-4bc51accab79",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7fbdce65-f7a8-5112-8040-6c4d9d064a1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "82593cdc-7764-5966-9c3e-ad7d612c1cbe",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "84fe3349-8d50-5964-a2ca-5e70401508f5",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "860d0a50-68d3-5c96-9296-fa3270e30f9b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "890e0c79-2d5f-5988-b2f3-795b4fbde15c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8a9bd14f-78e1-5b79-af98-2ee99b5c04d8",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8c67e472-8e22-582d-be7f-67399a2cb6da",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8cf29e39-43fd-568e-a9b4-da03895035bb",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8e3a73fc-9514-586b-ab99-105065c481d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8eddb64f-6c00-540d-9c78-70556f4b177e",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8f49b1d6-2745-5c13-8ed9-ac3e435e4b18",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "90e184f1-0a1a-5052-b72c-027eb622940c",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "9289a599-598d-55ab-a93f-98a837802284",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "95658d87-2269-5864-b595-1ecff193e9f7",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "96cebaf0-073e-5324-a7ed-a5ce76a3a256",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "975823d7-0e3b-5296-9c7f-87658ceb056e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "97ce6784-ec53-5c1a-982c-ba2a34c1fc54",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "99f83c07-9100-558b-9d4e-da061e9a5d47",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9b0cbb11-1f34-568f-9cbb-31dcc6f0a83b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9bcfec0c-c45c-5607-9c43-dcc9a06ebfe9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9c6a781e-9d20-582c-967a-46480ec0606c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9dbbe6c7-1842-5a5d-9958-5210be0e5924",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "a288f923-c404-560e-aa52-a66b51eb038c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a3ce9b33-86ad-5055-ab5b-674214a2d655",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a3f930a6-5d68-570c-8872-61a0a53e6e90",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a62546f5-38be-5e92-89ed-244546f71b35",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a6d101eb-8b6e-5ec7-9b5a-257a5b41bdf5",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "a715c396-321f-524f-aabe-9fa82cdc8d97",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a83c008d-39aa-54d4-9b4f-7dceb24e24ee",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "aa2c0f44-3b29-51fe-842a-9fb01fca76ae",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ac95e658-4b12-5032-9056-8ea0e6e5fd66",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ae9664f7-841a-55c6-90a0-889234df1f7a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b0b45faf-2576-5a31-9159-90cd6b8907e9",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "b158842a-8ce7-5b63-942e-e7cb075cd0f4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b28febb9-f1b5-5744-b452-834acc302dcc",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b65570f5-9a9f-5b4d-b9eb-46ed4a09bb14",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b8c61924-b4e4-57c1-9758-ac960b6bb09f",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b99eb753-b41e-52f8-8e9f-9b6d282ee9e4",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "bd4e610e-bdcd-50f3-abdc-d89edf5cd527",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bda29aa6-d3ac-534e-b6fe-02f63036575a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bf323d38-f820-5f49-8d5e-28aa0508d927",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "c279bb99-ebb0-54d7-8b6f-20324bd16e05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c352a5d0-629e-51d2-98e6-540e7f21e874",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3dfa27c-1d88-5c44-94b1-2ed49e41820b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3f005df-f777-5923-b0cd-f075278da322",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c5d8cc59-6b7b-5146-9c4b-216b12ae655a",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "c5ff757d-ccdb-559a-9285-f55165671f76",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c6677b50-a3f3-5a7f-9922-58027609ee68",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c81369b2-4a59-575c-95fa-b37fc6fb0a1e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "cb4b4be4-80d2-5722-885f-b69d58e57e78",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "cfc49a48-70bb-5079-842a-ea17d1293e2f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d578b7fa-6768-59fd-a585-b64a268cb0b7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d5d05b04-c038-5c75-ad56-419deee0ca34",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "d71c868f-e83f-5397-83f6-d9dee7efe0af",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "d7863eb4-3436-52c8-8c76-bc80d0710515",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d8d103e5-18b5-5a15-b3e5-4a4a5d0c7cc5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dbbfaf89-1c9a-5102-a0ea-cbde8f1d2e73",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dcee09eb-cf8e-5e28-b97a-48d13e70b9c0",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "dd533227-5896-5b39-9c01-34f153e8f8bd",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "de667958-cea1-5c2e-a0cf-c2ce58ad9d05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "e14ed9ed-1184-5a8f-8de4-8a2b3c556395",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "e1870287-edfb-5740-ac0e-86c2786ded1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e422535c-0769-501a-ae95-02ebec5ab381",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e51adfee-1658-5e19-98ea-8cd8d916dd6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e73beba7-86ae-51db-8721-7a959b4425a8",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e84fde6a-8a29-5c6c-9c43-9bc1f2c36c39",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e8f7baa5-b171-546f-8360-1ee38ac31074",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef63eb51-c2b6-5019-9540-512c6baffeb4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef883e09-0b2f-588e-bd69-376d4f8ea3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f05c53bc-8213-56ef-89a8-1f80a126ed05",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f2adbb01-5286-5c99-b32b-fae983e84223",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "f2fe2484-9695-53cf-b670-ff3f1cd8d011",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "f45e6006-cd97-5504-a101-5448b2a877ca",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f630b33b-9ddc-5ec5-b2f4-729435eea100",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f6c96052-7287-59d7-83bd-1482c1e03ea9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb143af4-46e1-5fcd-8b80-ebaf1003fd4a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb1caaa6-dc59-509b-b136-74ba024ea02c",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "fba3e533-5ebc-52b7-a60c-76d77ecc7768",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "fd7f3eb4-a1b8-5fc4-a80e-53f6205035cf",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "ff8b9cf7-75a4-5428-aa85-d8b88e2f0bd2",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "ffbc1d0f-a864-56f3-8a60-6b223bfb3050",
+          "reasons": [
+            "below_minutes"
+          ]
+        }
+      ],
+      "roles": {
+        "CB": 38,
+        "CM": 15,
+        "DM": 29,
+        "FB/WB": 33,
+        "ST": 21,
+        "W": 32
+      }
+    },
+    "900": {
+      "before_role_size": {
+        "AM": 4,
+        "CB": 36,
+        "CM": 12,
+        "DM": 22,
+        "FB/WB": 29,
+        "ST": 15,
+        "W": 24
+      },
+      "eligible": 138,
+      "excluded": [
+        {
+          "player_id": "001414b2-dba4-551e-977c-6ad748213e0b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "00d434f9-248a-5a25-b0e3-0661f7aea8f2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "010d2a08-1524-5867-a8ce-ea6625ba37d9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "018b6dda-4daa-5433-8367-7773ae90daa5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01be0398-0dca-585d-aba0-59d91006d723",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "01f68f66-d8ed-5c77-a7c6-6f8812bdba3d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "024716e0-337e-5d6a-a305-b031da63b365",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "02e8ec0e-0204-5d73-a969-62ad84cc4f60",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "03565087-dc79-563e-8a3b-636f88a2149b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "03b6ee6a-07bf-5e04-9ba4-f405638b0083",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "03baed30-5a3a-5f99-90f4-43b833dbba7c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "084dd801-cbda-5449-b86e-3445d2bd7f65",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "09dab863-bc9d-574a-b304-9c420920145c",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "0aa270c1-f608-5999-b51f-17f141e9ac0a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0b2cd145-df66-5d88-9b5d-773d155214d8",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0b8b6e02-68b8-5ea5-97db-2f00e3545764",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0bb82ec3-c22b-55cf-8453-8ccdd0003fde",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "0e05223a-54dc-547d-a7d8-a1f38ac3dc8b",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "0e51d7b3-dd1c-510b-8a98-dd405b7d01dd",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "0f95d335-39f5-5895-80fc-569140140d4e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1040b9b5-d310-5d60-ab82-24b4bfac76cc",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1050e109-e9fb-5190-98eb-26897f844132",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "11916714-4856-5479-97c9-59574caca846",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "12856689-9cbd-5add-bad3-462529024d41",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "13f3ac07-8319-5aa7-8420-af2f1d75f44f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "14f954ea-23a2-547a-b2b0-94bd17ea79aa",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "1620f1f3-c536-569e-bcf3-819d77e1269f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "19498f1c-113f-512f-9998-dd8435a420cf",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1b955bff-a05a-5af1-8052-31e3183af45c",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "1c255a3d-acb3-5d5b-be41-cfb0955f3177",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1c343272-11cc-57d7-be23-1e2f4360d49c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1da05eb7-b840-56c0-955d-7fe35d7b4f9d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "1ddf9d08-571e-5bd8-860c-b824a22cae1d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2238a43c-e9ed-5116-acf0-79698e851716",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2315fee3-d264-55ee-b029-70819d1c8d22",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "23712b00-7ed4-56e0-9334-2fcd4241cbec",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "27e1dda0-2682-5cb6-a476-b9c0a6bc4331",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "28786ae5-bb4b-5c79-9bbf-d4c0311772b5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "29135a1f-cc88-55ae-ac57-48e7c3b00b6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "291aabc2-d8dd-525f-9df9-17d00986eee5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2a51f29e-87fb-52bd-a6d6-bad64850b3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "2ab47bc9-10f8-55b2-8851-8b4e860c79b9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2ee7c455-3dfd-5614-a775-f7b58295cbc4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "2fb43143-98ff-59ec-8f35-b711269e8bd6",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "31e5bf5f-a239-5ba2-802b-4820ac0215c7",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "37427443-81fd-53d3-9cac-0c2278ee0f0a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "39ba0b04-40e1-5803-89b1-41b6de613a51",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b4615c4-96fc-5034-8559-7d2e72787216",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3b5f8b4d-40ec-5b3a-bee7-eb7761bc6aa1",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "3b8aec75-97b6-52cb-8109-446258b72695",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "3be35a24-0d4a-509a-9e51-0133e55345d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "3c9a0584-ea08-51f8-b37b-c9a2accc2976",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "400b3d58-f570-5396-b13b-9f6a800f5a6e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "414ed7b7-015d-5916-acaf-0d1da29cfb83",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "427fbc32-1c7f-59ca-94ea-eb361bd690b4",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "42d2610d-78c1-562e-9c2a-b75b591724f5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "440dfb46-982a-59ef-bccc-9c368e266d7c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4483b516-5828-5a0e-a85d-a3c50fca2f50",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "462129be-761b-5442-852f-19898e83d44d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "465175d4-142c-5da7-a4d8-a4818f1bfcd5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "46586958-0a61-51bc-b466-32e10beb53dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "47e79c58-1976-5399-a121-9201d4d4f4ae",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "4835112e-d319-5f25-9518-c91acd7deabe",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4956d235-0af1-53dc-b9f1-4b9f327e6a92",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4ab76ab1-776e-5c15-a490-f616bcbe45d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4babee9f-3ef1-5339-ac32-a792615ee9d8",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "4e5213d3-52bf-5a04-9451-8f83f8c58c0f",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "4edb42f3-245a-527f-88d7-61d3c99f0731",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "4f1a9b52-1763-5bb0-8da3-3f59e0933e58",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "51d49606-3cbe-5e81-aa7a-3c8a20a9c5e0",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "52c63bc2-2ace-562c-9b6a-961002e26ac7",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "554caacb-9a86-5620-be6c-e7eb624c4b04",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "56bb7c2e-3720-5a26-a856-f9235d9df9e9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "56cd62e0-aa28-588a-a33e-cf902e08565f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "592b2588-1492-59ca-a6b0-200816a18c42",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "5955c031-d1cb-585d-81e5-d926d816d1d5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "598004ff-f6a9-5693-adb5-fbe02b1a3d67",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5a074f4d-e616-5ad8-9243-7b25bbebf1c5",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5a85046b-1168-5561-ba77-f8910826fae9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "5ca22b33-0be9-5c25-b11d-a787288778b7",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "5d916a10-ac32-5500-9188-4a1cf9444780",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "60ed4b92-7cfd-5f4f-8bb1-6cc94becf01e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "63c1333e-15c6-5f62-9c90-1accba36ed67",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "63cf1557-3ab0-5e24-8ebc-4d77201223a4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "64d67da1-61f1-5349-87e0-139975d3f2ae",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "664e66be-2df3-5ce9-9db2-2306d8429b90",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6765cbcd-c365-5f3f-9db1-50b8f8a61179",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "68babf59-c054-5858-9b54-3f7f4f163ffb",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "6a376b4c-fa36-53ff-8a19-7d88dabf599d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6ae1e2a9-8eb5-5db1-8719-3acc226543e7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "6d911876-ebc7-5a43-ac25-59084428db9d",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "6fec9f3d-1778-558a-82cb-0e552d9cd2dc",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7282ebc0-cc4a-5bb3-b41b-9c38187d3f74",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7477417a-f7eb-50fb-a9de-e45d31343ad5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "77105850-c233-5b1c-a806-13d44c90fc50",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "78078545-7500-55e1-b142-a0c54d21b1ce",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "78ce10b0-8fbc-534d-ab2b-f91ea25aa2d2",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7952e9af-e3bb-549e-acea-85262085f95a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b030b8d-e49f-5e84-9723-ab7eac4f407e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7b0da205-c908-5b7e-aab7-4bc51accab79",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "7f762328-50f1-5701-b8b5-e2ee469c300b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "7fbdce65-f7a8-5112-8040-6c4d9d064a1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "82593cdc-7764-5966-9c3e-ad7d612c1cbe",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "84fe3349-8d50-5964-a2ca-5e70401508f5",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "860d0a50-68d3-5c96-9296-fa3270e30f9b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "890e0c79-2d5f-5988-b2f3-795b4fbde15c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8a9bd14f-78e1-5b79-af98-2ee99b5c04d8",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8c67e472-8e22-582d-be7f-67399a2cb6da",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8cf0bc5c-674d-5755-afc0-92bd0b1889d0",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8cf29e39-43fd-568e-a9b4-da03895035bb",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "8e3a73fc-9514-586b-ab99-105065c481d3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "8eddb64f-6c00-540d-9c78-70556f4b177e",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "8f49b1d6-2745-5c13-8ed9-ac3e435e4b18",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "90e184f1-0a1a-5052-b72c-027eb622940c",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "918ba908-6792-5a72-aaab-18f08e1c32ed",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9289a599-598d-55ab-a93f-98a837802284",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "95658d87-2269-5864-b595-1ecff193e9f7",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "96cebaf0-073e-5324-a7ed-a5ce76a3a256",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "975823d7-0e3b-5296-9c7f-87658ceb056e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "97ce6784-ec53-5c1a-982c-ba2a34c1fc54",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "99f83c07-9100-558b-9d4e-da061e9a5d47",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9b0cbb11-1f34-568f-9cbb-31dcc6f0a83b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9bcfec0c-c45c-5607-9c43-dcc9a06ebfe9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9c6a781e-9d20-582c-967a-46480ec0606c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "9dbbe6c7-1842-5a5d-9958-5210be0e5924",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "a18fe4be-bc8b-5a62-a41d-9f2bca0e0220",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a288f923-c404-560e-aa52-a66b51eb038c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a351abee-8cf5-52a7-bbff-99973882dfc0",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a3ce9b33-86ad-5055-ab5b-674214a2d655",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a3f930a6-5d68-570c-8872-61a0a53e6e90",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a62546f5-38be-5e92-89ed-244546f71b35",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "a6d101eb-8b6e-5ec7-9b5a-257a5b41bdf5",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "a715c396-321f-524f-aabe-9fa82cdc8d97",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a7dcded4-f79e-5ab7-878d-428618da7ec3",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "a83c008d-39aa-54d4-9b4f-7dceb24e24ee",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "aa2c0f44-3b29-51fe-842a-9fb01fca76ae",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ac95e658-4b12-5032-9056-8ea0e6e5fd66",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ae9664f7-841a-55c6-90a0-889234df1f7a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "af9bf51a-8fa7-5dc6-952d-6c79e3a49bb2",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b0b45faf-2576-5a31-9159-90cd6b8907e9",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "b158842a-8ce7-5b63-942e-e7cb075cd0f4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "b28febb9-f1b5-5744-b452-834acc302dcc",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b65570f5-9a9f-5b4d-b9eb-46ed4a09bb14",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b8c61924-b4e4-57c1-9758-ac960b6bb09f",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "b99eb753-b41e-52f8-8e9f-9b6d282ee9e4",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "bd4e610e-bdcd-50f3-abdc-d89edf5cd527",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bda29aa6-d3ac-534e-b6fe-02f63036575a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "bf323d38-f820-5f49-8d5e-28aa0508d927",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "c0bb1460-4b44-5320-9838-5fead97270c1",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c207afe5-ac51-5c55-a791-98625eb4de2c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c279bb99-ebb0-54d7-8b6f-20324bd16e05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c352a5d0-629e-51d2-98e6-540e7f21e874",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3dfa27c-1d88-5c44-94b1-2ed49e41820b",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c3f005df-f777-5923-b0cd-f075278da322",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c548d6ef-0657-5b4c-9221-0ca088e02bd7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c5d8cc59-6b7b-5146-9c4b-216b12ae655a",
+          "reasons": [
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "c5ff757d-ccdb-559a-9285-f55165671f76",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c6677b50-a3f3-5a7f-9922-58027609ee68",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "c6ec4e3a-57fa-5877-8a67-098fc97bfbcb",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "c81369b2-4a59-575c-95fa-b37fc6fb0a1e",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "cb4b4be4-80d2-5722-885f-b69d58e57e78",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "cd22f268-e693-5518-adc9-5805dd965367",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "cfc49a48-70bb-5079-842a-ea17d1293e2f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d53f9c10-8704-5f2b-8205-8d34fa755604",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d578b7fa-6768-59fd-a585-b64a268cb0b7",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d5d05b04-c038-5c75-ad56-419deee0ca34",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "d71c868f-e83f-5397-83f6-d9dee7efe0af",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "d7863eb4-3436-52c8-8c76-bc80d0710515",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d8693bbd-baae-5422-9a0e-6bc02d741c17",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "d8d103e5-18b5-5a15-b3e5-4a4a5d0c7cc5",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dbbfaf89-1c9a-5102-a0ea-cbde8f1d2e73",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "dcee09eb-cf8e-5e28-b97a-48d13e70b9c0",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "dd533227-5896-5b39-9c01-34f153e8f8bd",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "de667958-cea1-5c2e-a0cf-c2ce58ad9d05",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "de8db3ff-b560-5f4b-807d-bda4890b953e",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e14ed9ed-1184-5a8f-8de4-8a2b3c556395",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "e1870287-edfb-5740-ac0e-86c2786ded1c",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e422535c-0769-501a-ae95-02ebec5ab381",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e51adfee-1658-5e19-98ea-8cd8d916dd6d",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e73beba7-86ae-51db-8721-7a959b4425a8",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e84fde6a-8a29-5c6c-9c43-9bc1f2c36c39",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "e8f7baa5-b171-546f-8360-1ee38ac31074",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef63eb51-c2b6-5019-9540-512c6baffeb4",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "ef883e09-0b2f-588e-bd69-376d4f8ea3b2",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f05c53bc-8213-56ef-89a8-1f80a126ed05",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f2adbb01-5286-5c99-b32b-fae983e84223",
+          "reasons": [
+            "below_minutes",
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "f2fe2484-9695-53cf-b670-ff3f1cd8d011",
+          "reasons": [
+            "sparse_role"
+          ]
+        },
+        {
+          "player_id": "f3b969e8-e276-521e-a8e9-897e6ee9257f",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f45e6006-cd97-5504-a101-5448b2a877ca",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "f630b33b-9ddc-5ec5-b2f4-729435eea100",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "f6c96052-7287-59d7-83bd-1482c1e03ea9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb143af4-46e1-5fcd-8b80-ebaf1003fd4a",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fb1caaa6-dc59-509b-b136-74ba024ea02c",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role"
+          ]
+        },
+        {
+          "player_id": "fba3e533-5ebc-52b7-a60c-76d77ecc7768",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "fc2d1361-8107-5645-9046-cce50868e8c9",
+          "reasons": [
+            "below_minutes"
+          ]
+        },
+        {
+          "player_id": "fd7f3eb4-a1b8-5fc4-a80e-53f6205035cf",
+          "reasons": [
+            "below_minutes",
+            "uncertain_role",
+            "missing_core_features"
+          ]
+        },
+        {
+          "player_id": "ff8b9cf7-75a4-5428-aa85-d8b88e2f0bd2",
+          "reasons": [
+            "goalkeeper_excluded"
+          ]
+        },
+        {
+          "player_id": "ffbc1d0f-a864-56f3-8a60-6b223bfb3050",
+          "reasons": [
+            "below_minutes"
+          ]
+        }
+      ],
+      "roles": {
+        "CB": 36,
+        "CM": 12,
+        "DM": 22,
+        "FB/WB": 29,
+        "ST": 15,
+        "W": 24
+      }
+    }
+  }
+}

@@ -8,6 +8,9 @@ import {
   type Section,
 } from "@/lib/content";
 import { coverage, matches, sources, metrics, quality } from "@/lib/data";
+import { PlayerDNA, Evaluation } from "./player-dna";
+import { dnaCopy } from "@/lib/dna-copy";
+import { dnaIndex, dnaRegistry, dnaEvaluation } from "@/lib/data";
 import { Explorer } from "./explorer";
 const repo =
   "https://github.com/frenk4business/football-recruitment-intelligence";
@@ -83,7 +86,7 @@ export function Site({
                 <div className="hero-links">
                   <Link
                     className="primary-link"
-                    href={route(locale, "explorer")}
+                    href={route(locale, "player-dna")}
                   >
                     {c.open}
                     <span aria-hidden="true">↗</span>
@@ -98,7 +101,7 @@ export function Site({
               </div>
               <aside className="hero-aside">
                 <span className="large-number">
-                  01<span>/05</span>
+                  02<span>/05</span>
                 </span>
                 <p>{c.noModels}</p>
                 <div className="mini-field" aria-hidden="true">
@@ -195,24 +198,68 @@ export function Site({
           <div className="page-heading">
             <p className="eyebrow">{c.phase}</p>
             <h1>
-              {section === "explorer"
-                ? c.explorerTitle
-                : section === "coverage"
-                  ? c.coverageTitle
-                  : section === "methodology"
-                    ? c.methodologyTitle
-                    : c.roadmapTitle}
+              {section === "player-dna"
+                ? dnaCopy[locale].title
+                : section === "explorer"
+                  ? c.explorerTitle
+                  : section === "coverage"
+                    ? c.coverageTitle
+                    : section === "methodology"
+                      ? c.methodologyTitle
+                      : c.roadmapTitle}
             </h1>
             <p className="lead">
-              {section === "explorer"
-                ? c.explorerIntro
-                : section === "coverage"
-                  ? c.coverageIntro
-                  : section === "methodology"
-                    ? c.methodologyIntro
-                    : c.roadmapIntro}
+              {section === "player-dna"
+                ? dnaCopy[locale].intro
+                : section === "explorer"
+                  ? c.explorerIntro
+                  : section === "coverage"
+                    ? c.coverageIntro
+                    : section === "methodology"
+                      ? c.methodologyIntro
+                      : c.roadmapIntro}
             </p>
           </div>
+        )}
+        {section === "player-dna" && (
+          <PlayerDNA
+            locale={locale}
+            index={dnaIndex()}
+            registry={dnaRegistry()}
+            evaluation={dnaEvaluation()}
+          />
+        )}
+        {(section === "coverage" || section === "home") && (
+          <section className="provenance">
+            <h2>
+              {locale === "en"
+                ? "Player DNA cohort"
+                : "Cohort voor spelers-DNA"}
+            </h2>
+            <p>
+              {dnaIndex().competition} · {dnaIndex().season} ·{" "}
+              {dnaIndex().matches} {locale === "en" ? "matches" : "wedstrijden"}{" "}
+              · {dnaIndex().players.length}{" "}
+              {locale === "en" ? "roster profiles" : "selectieprofielen"}
+            </p>
+            <p>
+              {
+                dnaIndex().players.filter(
+                  (p) =>
+                    p.eligibility[String(dnaIndex().default_threshold)]
+                      .length === 0,
+                ).length
+              }{" "}
+              {locale === "en"
+                ? "eligible profiles at"
+                : "profielen met voldoende data bij"}{" "}
+              {dnaIndex().default_threshold}{" "}
+              {locale === "en" ? "reliable minutes." : "betrouwbare minuten."}{" "}
+              <Link href={route(locale, "player-dna")}>
+                {dnaCopy[locale].title} ↗
+              </Link>
+            </p>
+          </section>
         )}
         {section === "explorer" && (
           <Explorer matches={games} sources={providers} locale={locale} />
@@ -333,17 +380,45 @@ export function Site({
           </>
         )}
         {section === "methodology" && (
-          <div className="method-list">
-            {c.methodSections.map(([n, title, body]) => (
-              <section key={n}>
-                <span className="section-number">{n}</span>
-                <div>
-                  <h2>{title}</h2>
-                  <p>{body}</p>
-                </div>
-              </section>
-            ))}
-          </div>
+          <>
+            <section id="player-dna" className="method-list dna-methods">
+              <h2>{dnaCopy[locale].methodsTitle}</h2>
+              {dnaCopy[locale].methods.map(([title, body], i) => (
+                <section key={title}>
+                  <span className="section-number">{i + 1}</span>
+                  <div>
+                    <h3>{title}</h3>
+                    <p>{body}</p>
+                  </div>
+                </section>
+              ))}
+            </section>
+            <section className="dna-definitions">
+              <h2>{dnaCopy[locale].definitions}</h2>
+              <dl className="metric-list">
+                {dnaRegistry().map((f) => (
+                  <div key={f.id}>
+                    <dt>
+                      {locale === "nl" ? f.label_nl : f.label_en} · {f.unit}
+                    </dt>
+                    <dd>{locale === "nl" ? f.note_nl : f.note_en}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+            <Evaluation locale={locale} evaluation={dnaEvaluation()} />
+            <div className="method-list">
+              {c.methodSections.map(([n, title, body]) => (
+                <section key={n}>
+                  <span className="section-number">{n}</span>
+                  <div>
+                    <h2>{title}</h2>
+                    <p>{body}</p>
+                  </div>
+                </section>
+              ))}
+            </div>
+          </>
         )}
         {section === "roadmap" && (
           <ol className="roadmap-list">
@@ -351,8 +426,12 @@ export function Site({
               <li key={title}>
                 <span className="section-number">0{i + 1}</span>
                 <div>
-                  <span className={i === 0 ? "current-phase" : "planned-phase"}>
-                    {i === 0 ? c.current : c.planned}
+                  <span className={i < 2 ? "current-phase" : "planned-phase"}>
+                    {i < 2
+                      ? locale === "en"
+                        ? "Complete"
+                        : "Voltooid"
+                      : c.planned}
                   </span>
                   <h2>{title}</h2>
                   <p>{body}</p>

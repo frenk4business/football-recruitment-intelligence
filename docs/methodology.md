@@ -29,3 +29,9 @@ Duplicate IDs and broken references fail validation. Events without actors are r
 Tracking is downsampled to 1 Hz for exploration only. 448 of 1,380 object observations are flagged not detected. No distance, speed, acceleration, pressure model or physical capacity claim is derived from this sample. Detection flags are not calibrated confidence scores.
 
 Player-season and team-season tables describe **ingested observations**, not complete seasons. Teams, players and competitions remain namespaced per provider. Missing data, small samples, event-definition differences, selection bias and temporal coverage prevent cross-provider rankings or league-strength conclusions.
+
+## Phase 2 — evaluated behavioural similarity
+
+The earlier limitations above describe the Phase 1 sample. Phase 2 adds a separate complete WSL 2023/24 cohort, explicit event-based minutes reconciliation and versioned player features. The sample explorer remains separate. See [features](player-features.md), [similarity](player-similarity.md), [full evaluation](player-similarity-evaluation.md) and [cohort eligibility](phase-2-cohort.md). Public methodology is available in authored English and Dutch on `/methodology/#player-dna` and `/nl/methodology/#player-dna`.
+
+Similarity measures observed style under role/season/evidence constraints. It does not estimate player quality, future ability, tactical fit or transfer success. The default is family-balanced Euclidean distance with role-specific standard scaling, selected after experiments. Failed hypotheses and candidate-size inflation are documented. The one-minute tracking sample remains unsuitable for physical profiling.

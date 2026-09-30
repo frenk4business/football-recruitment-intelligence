@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0.0",
-  "generated_at": "2026-09-30T13:42:40.959742+00:00",
+  "schema_version": "1.1.0",
+  "generated_at": "2026-09-30T14:38:17.836438+00:00",
   "providers": [
     {
       "provider": "statsbomb",
@@ -46,7 +46,7 @@
   ],
   "validation_status": "passed",
   "warnings": [
-    "lineups: 11 unavailable minutes; absent metadata or inconsistent intervals",
+    "lineups: 7 unavailable minutes; absent metadata or inconsistent intervals",
     "events: 2 provider-index timestamp inversions retained; sort by period/time for timelines"
   ]
 }

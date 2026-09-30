@@ -20,7 +20,12 @@ class Provider(StrEnum):
 @data.command("discover")
 def discover(provider: Provider):
     """Show the deliberately pinned sample, its revision and retrieval paths."""
-    typer.echo(json.dumps(read_config(Path.cwd())[provider.value], indent=2))
+    if provider == Provider.statsbomb:
+        from football_intelligence.dna.cohort import discover as catalogue
+
+        typer.echo(json.dumps(catalogue(Path.cwd()), indent=2))
+    else:
+        typer.echo(json.dumps(read_config(Path.cwd())[provider.value], indent=2))
 
 
 @data.command("fetch")
@@ -48,3 +53,63 @@ def validate_command():
 @data.command("coverage")
 def coverage():
     typer.echo(Path("artifacts/data_coverage.json").read_text())
+
+
+cohort_app = typer.Typer(help="Pinned competition-season evidence.")
+feature_app = typer.Typer(help="Versioned player features and eligibility.")
+similarity_app = typer.Typer(help="Reproducible similarity research and static publication.")
+app.add_typer(cohort_app, name="cohort")
+app.add_typer(feature_app, name="features")
+app.add_typer(similarity_app, name="similarity")
+
+
+@cohort_app.command("build")
+def cohort_build(name: str = "wsl_2023_24", max_matches: int | None = typer.Option(None, min=1)):
+    from football_intelligence.dna.cohort import build_cohort
+
+    result = build_cohort(Path.cwd(), name, max_matches)
+    typer.echo(
+        json.dumps(
+            {k: v for k, v in result.items() if k not in ("dates", "match_ids", "warnings")},
+            indent=2,
+        )
+    )
+
+
+@cohort_app.command("inspect")
+def cohort_inspect(name: str = "wsl_2023_24"):
+    from football_intelligence.dna.cohort import local_cohort
+
+    typer.echo((local_cohort(Path.cwd(), name) / "cohort.json").read_text())
+
+
+@feature_app.command("build")
+def feature_build():
+    from football_intelligence.dna.features import build_features
+
+    build_features(Path.cwd())
+    feature_eligibility()
+
+
+@feature_app.command("eligibility")
+def feature_eligibility():
+    report = json.loads(Path("artifacts/phase2/cohort_eligibility.json").read_text())
+    for threshold, info in sorted(report["thresholds"].items(), key=lambda kv: int(kv[0])):
+        typer.echo(f"{threshold} minutes: {info['eligible']} eligible — {info['roles']}")
+
+
+@similarity_app.command("evaluate")
+def similarity_evaluate():
+    from football_intelligence.dna.evaluation import evaluate
+
+    evaluate(Path.cwd())
+
+
+@similarity_app.command("build")
+def similarity_build():
+    from football_intelligence.dna.publish import publish
+
+    manifest = publish(Path.cwd())
+    typer.echo(
+        f"Published {len(manifest['public_sha256'])} derived artifacts; {manifest['version']}"
+    )

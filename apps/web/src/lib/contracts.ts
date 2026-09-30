@@ -31,6 +31,115 @@ export type CoverageRow = {
   available_metrics: Array<string>;
 };
 
+export type DNAContribution = {
+  feature: string;
+  standardized_difference: number;
+  squared_contribution: number;
+  share: number;
+};
+
+export type DNAEvaluation = {
+  version: string;
+  default_method: string;
+  bootstrap_samples: number;
+  seed: number;
+  rows: Array<DNAEvaluationRow>;
+};
+
+export type DNAEvaluationRow = {
+  method: string;
+  threshold: number;
+  eligible: number;
+  queries: number;
+  recall1: number | null;
+  recall5: number | null;
+  recall10: number | null;
+  mrr: number | null;
+  bootstrap_jaccard: number;
+  random_recall5: number;
+};
+
+export type DNAFeatureValue = {
+  id: string;
+  value: number | null;
+  percentile: number | null;
+};
+
+export type DNAIndex = {
+  version: string;
+  cohort: string;
+  competition: string;
+  season: string;
+  thresholds: Array<number>;
+  default_threshold: number;
+  matches: number;
+  players: Array<DNAPlayer>;
+};
+
+export type DNAMap = {
+  threshold: number;
+  method: string;
+  explained_variance: Array<number>;
+  points: Array<DNAMapPoint>;
+};
+
+export type DNAMapPoint = {
+  player_id: string;
+  name: string;
+  teams: Array<string>;
+  role: string;
+  minutes: number;
+  x: number;
+  y: number;
+};
+
+export type DNANeighbor = {
+  player_id: string;
+  name: string;
+  teams: Array<string>;
+  role: string;
+  minutes: number;
+  rank: number;
+  distance: number;
+  stability: number;
+  similar: Array<string>;
+  different: Array<string>;
+  contributions: Array<DNAContribution>;
+  family_contributions: Record<string, number>;
+};
+
+export type DNAPlayer = {
+  player_id: string;
+  name: string;
+  teams: Array<string>;
+  competition: string;
+  season: string;
+  primary_role: string | null;
+  secondary_role: string | null;
+  role_shares: Record<string, number>;
+  multi_role: boolean;
+  minutes: number;
+  appearances: number;
+  unreliable_appearances: number;
+  eligibility: Record<string, Array<string>>;
+};
+
+export type DNAProfile = {
+  player: DNAPlayer;
+  version?: string;
+  cohort: string;
+  threshold: number;
+  eligible: boolean;
+  exclusions: Array<string>;
+  comparison_size: number;
+  features: Array<DNAFeatureValue>;
+  scaled_vector: Array<number> | null;
+  neighbors: Array<DNANeighbor>;
+  neighbor_jaccard: number | null;
+  bootstrap_samples: number;
+  bins: Array<Array<number>>;
+};
+
 export type EventCount = {
   event_type: string;
   count: number;
@@ -44,6 +153,24 @@ export type Explorer = {
   spatial_bins: Array<SpatialBin>;
   spatial_sample_size: number;
   tracking_snapshots: Array<TrackingSnapshot>;
+};
+
+export type FeatureDefinition = {
+  id: string;
+  label_en: string;
+  label_nl: string;
+  family: string;
+  unit: string;
+  formula: string;
+  note_en: string;
+  note_nl: string;
+  core: boolean;
+  intended_use: string;
+  source?: string;
+  higher_is?: string;
+  eligibility?: string;
+  null_semantics?: string;
+  version?: string;
 };
 
 export type MatchSummary = {

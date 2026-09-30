@@ -35,3 +35,19 @@ build:
 	cd apps/web && npm run build
 smoke:
 	cd apps/web && npm run test:smoke
+
+.PHONY: cohort features similarity similarity-evaluate phase2-build
+cohort:
+	uv run fri cohort build
+features:
+	uv run fri features build
+similarity-evaluate:
+	uv run fri similarity evaluate
+similarity:
+	uv run fri similarity build
+phase2-build:
+	uv run fri cohort build
+	uv run fri features build
+	uv run fri similarity evaluate
+	uv run fri similarity build
+	uv run python scripts/phase2_reports.py

@@ -36,7 +36,10 @@ export function Explorer({
         return r.json();
       })
       .then((value: ExplorerData) => {
-        if (value.schema_version !== "1.0.0" || value.match.id !== matchId)
+        if (
+          !["1.0.0", "1.1.0"].includes(value.schema_version) ||
+          value.match.id !== matchId
+        )
           throw new Error("Invalid contract");
         setData(value);
         setStatus("ready");

@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "warnings": [
-    "lineups: 11 unavailable minutes; absent metadata or inconsistent intervals",
+    "lineups: 7 unavailable minutes; absent metadata or inconsistent intervals",
     "events: 2 provider-index timestamp inversions retained; sort by period/time for timelines"
   ],
   "null_counts": {
@@ -74,8 +74,13 @@
       "starter": 0,
       "position": 21,
       "provider_positions_json": 0,
-      "minutes": 11,
+      "minutes": 7,
       "minutes_method": 0,
+      "minutes_reliable": 0,
+      "minutes_quality": 0,
+      "minutes_quality_reason": 0,
+      "role_minutes_json": 0,
+      "participation_json": 0,
       "substitution_in": 45,
       "substitution_out": 67
     },
