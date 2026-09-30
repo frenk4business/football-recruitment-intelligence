@@ -4,7 +4,7 @@ Open voetbaldata → waargenomen spelers-DNA → historische prestatievertaling,
 
 [Live prestatievertaling](https://football-recruitment-intelligence.onrender.com/nl/translation/) · [English](README.md) · [Spelers-DNA](https://football-recruitment-intelligence.onrender.com/nl/player-dna/) · [Evaluatie](docs/league-translation-evaluation.md) · [Modelkaart](docs/model-card-phase3.md)
 
-Fase 3 is samengevoegd in `main` met geslaagde CI. **Publicatie staat nog open:** de bestaande Render-dienst moet van branch `phase/02-player-dna` naar `main` worden gezet. De vertaalpagina’s hierboven zijn nog niet live; [releaseverificatie](docs/phase-3-qa.md) bevat de actuele 404-controles.
+Fase 3 is samengevoegd in `main` met geslaagde CI en is live in beide talen. Alle 14 browsertests slagen op productie. **De releaseconfiguratie staat nog open:** Render volgt momenteel `phase/03-league-translation` en moet voor volgende updates `main` volgen. [Releaseverificatie](docs/phase-3-qa.md) vermeldt de feitelijke branch, gepubliceerde commit en livecontroles.
 
 ## Fase 3: wat de gegevens onderbouwen
 

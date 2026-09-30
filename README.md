@@ -4,7 +4,7 @@ Open football data → observed Player DNA → historical performance translatio
 
 [Live translation](https://football-recruitment-intelligence.onrender.com/translation/) · [Nederlands](README.nl.md) · [Player DNA](https://football-recruitment-intelligence.onrender.com/player-dna/) · [Research evaluation](docs/league-translation-evaluation.md) · [Model card](docs/model-card-phase3.md)
 
-Phase 3 is merged into `main` with green CI. **Production activation is pending:** the existing Render service still needs its Branch setting changed from `phase/02-player-dna` to `main`. The translation links above are not yet live; [release verification](docs/phase-3-qa.md) records the current 404 checks.
+Phase 3 is merged into `main` with green CI and is live in both languages. All 14 browser checks pass against production. **Release configuration remains pending:** Render currently tracks `phase/03-league-translation` and should track `main` for subsequent updates. [Release verification](docs/phase-3-qa.md) records the actual branch, deployed commit and live checks.
 
 ## Phase 3: what the evidence supports
 
