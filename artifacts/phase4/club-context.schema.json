@@ -1,0 +1,304 @@
+{
+  "$defs": {
+    "ClubFeature": {
+      "additionalProperties": false,
+      "properties": {
+        "available_matches": {
+          "minimum": 0,
+          "title": "Available Matches",
+          "type": "integer"
+        },
+        "feature_id": {
+          "title": "Feature Id",
+          "type": "string"
+        },
+        "percentile": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Percentile"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "feature_id",
+        "value",
+        "percentile",
+        "available_matches"
+      ],
+      "title": "ClubFeature",
+      "type": "object"
+    },
+    "ClubRoleContext": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Maximum",
+          "type": "object"
+        },
+        "median": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Median",
+          "type": "object"
+        },
+        "minimum": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Minimum",
+          "type": "object"
+        },
+        "minutes_hhi": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Minutes Hhi"
+        },
+        "p25": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "P25",
+          "type": "object"
+        },
+        "p75": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "P75",
+          "type": "object"
+        },
+        "players": {
+          "items": {
+            "$ref": "#/$defs/RosterPlayer"
+          },
+          "title": "Players",
+          "type": "array"
+        },
+        "profile_depth": {
+          "minimum": 0,
+          "title": "Profile Depth",
+          "type": "integer"
+        },
+        "reliable_minutes": {
+          "minimum": 0,
+          "title": "Reliable Minutes",
+          "type": "number"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "roster_depth": {
+          "minimum": 0,
+          "title": "Roster Depth",
+          "type": "integer"
+        },
+        "top_player_minutes_share": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Top Player Minutes Share"
+        }
+      },
+      "required": [
+        "role",
+        "players",
+        "reliable_minutes",
+        "roster_depth",
+        "profile_depth",
+        "top_player_minutes_share",
+        "minutes_hhi",
+        "median",
+        "p25",
+        "p75",
+        "minimum",
+        "maximum"
+      ],
+      "title": "ClubRoleContext",
+      "type": "object"
+    },
+    "RosterPlayer": {
+      "additionalProperties": false,
+      "properties": {
+        "exclusions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Exclusions",
+          "type": "array"
+        },
+        "minutes": {
+          "minimum": 0,
+          "title": "Minutes",
+          "type": "number"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "percentiles": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Percentiles",
+          "type": "object"
+        },
+        "player_id": {
+          "title": "Player Id",
+          "type": "string"
+        },
+        "profile_eligible": {
+          "title": "Profile Eligible",
+          "type": "boolean"
+        },
+        "role": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Role"
+        }
+      },
+      "required": [
+        "player_id",
+        "name",
+        "minutes",
+        "role",
+        "profile_eligible",
+        "percentiles",
+        "exclusions"
+      ],
+      "title": "RosterPlayer",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "club_id": {
+      "title": "Club Id",
+      "type": "string"
+    },
+    "competition": {
+      "title": "Competition",
+      "type": "string"
+    },
+    "feature_version": {
+      "const": "features-v1",
+      "default": "features-v1",
+      "title": "Feature Version",
+      "type": "string"
+    },
+    "features": {
+      "items": {
+        "$ref": "#/$defs/ClubFeature"
+      },
+      "title": "Features",
+      "type": "array"
+    },
+    "matches": {
+      "minimum": 0,
+      "title": "Matches",
+      "type": "integer"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "observation_end": {
+      "title": "Observation End",
+      "type": "string"
+    },
+    "observation_start": {
+      "title": "Observation Start",
+      "type": "string"
+    },
+    "provider": {
+      "const": "statsbomb",
+      "default": "statsbomb",
+      "title": "Provider",
+      "type": "string"
+    },
+    "roles": {
+      "items": {
+        "$ref": "#/$defs/ClubRoleContext"
+      },
+      "title": "Roles",
+      "type": "array"
+    },
+    "season": {
+      "title": "Season",
+      "type": "string"
+    },
+    "source_revision": {
+      "title": "Source Revision",
+      "type": "string"
+    },
+    "team_minutes": {
+      "minimum": 0,
+      "title": "Team Minutes",
+      "type": "number"
+    },
+    "version": {
+      "const": "club-context-v1",
+      "default": "club-context-v1",
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "club_id",
+    "name",
+    "competition",
+    "season",
+    "observation_start",
+    "observation_end",
+    "matches",
+    "team_minutes",
+    "source_revision",
+    "features",
+    "roles"
+  ],
+  "title": "ClubContext",
+  "type": "object"
+}
