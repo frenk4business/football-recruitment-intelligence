@@ -12,6 +12,7 @@ import type {
 } from "@/lib/profile-contracts";
 import {
   defaults,
+  normalizeName,
   detailPath,
   filterProfiles,
   filterURL,
@@ -594,7 +595,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                                     state.compare2,
                                   ].includes(p.id) &&
                                   (names.get(p.id) ?? "").includes(
-                                    comparisonQuery.toLowerCase(),
+                                    normalizeName(comparisonQuery),
                                   ),
                               )
                               .slice(0, 50)

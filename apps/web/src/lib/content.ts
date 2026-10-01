@@ -1,5 +1,5 @@
 import release from "./release-version.json" with { type: "json" };
-export { route, sections, type Locale, type Section } from "./routes";
+export { route, sections, type Locale, type Section } from "./routes.ts";
 const en = {
   nav: {
     research: "Research",
