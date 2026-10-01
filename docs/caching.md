@@ -4,9 +4,9 @@ Render applies the rules in `config/http-headers.json`; `render.yaml` contains t
 
 | Resource | Cache-Control | Reason |
 | --- | --- | --- |
-| HTML, stable JSON, metadata, release manifest, favicon/logo/license | public, max-age=0, must-revalidate | Stable names must validate after release changes |
-| /_next/static/* | public, max-age=31536000, immutable | Framework content/build-addressed files |
-| /integrity/* | public, max-age=31536000, immutable | SHA-256 filename identifies exact bytes |
+| HTML, stable JSON, metadata, release manifest, favicon/logo/license | public, max-age=0, must-revalidate, no-transform | Stable names must validate after release changes |
+| /_next/static/* | public, max-age=31536000, immutable, no-transform | Framework content/build-addressed files |
+| /integrity/* | public, max-age=31536000, immutable, no-transform | SHA-256 filename identifies exact bytes |
 
 Cache rules use disjoint stable/content-addressed path classes. A complete live-file audit found inconsistent winners for overlapping global and specific Cache-Control rules, despite earlier sampled assets appearing correct. The global Cache-Control rule was removed; each public route and stable resource class has an explicit revalidation rule. Stable `/data` is never marked immutable. Runtime data requests also use `?v=<expected sha256>` and `cache: no-cache`; content verification fails closed even if an old intermediary returns stale data. A small verified hash manifest is cached in memory per directory; rejected manifest requests are evicted so Retry can recover. Selection cancellation does not poison shared manifest loading. Requests have 15-second deadlines and size bounds.
 
