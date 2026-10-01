@@ -1,6 +1,7 @@
 import release from "./release-version.json" with { type: "json" };
 export type Locale = "en" | "nl";
 export type Section =
+  | "research"
   | "home"
   | "players"
   | "player-dna"
@@ -12,6 +13,7 @@ export type Section =
   | "roadmap";
 export const sections: Section[] = [
   "home",
+  "research",
   "players",
   "player-dna",
   "translation",
@@ -25,6 +27,7 @@ export const route = (locale: Locale, section: Section) =>
   `${locale === "nl" ? "/nl" : ""}/${section === "home" ? "" : section + "/"}`;
 const en = {
   nav: {
+    research: "Research",
     home: "Overview",
     players: "Players",
     "player-dna": "Player DNA",
@@ -190,6 +193,7 @@ const en = {
 export type Copy = typeof en;
 const nl: Copy = {
   nav: {
+    research: "Onderzoek",
     home: "Overzicht",
     players: "Spelers",
     "player-dna": "Spelers-DNA",

@@ -1,3 +1,4 @@
+import { ProductNavigation } from "./product-navigation";
 import { Players } from "./players";
 import { ProfileCoverage, ProfileMethodology } from "./profile-coverage";
 import { playersCopy } from "@/lib/players-copy";
@@ -5,13 +6,7 @@ import release from "@/lib/release-version.json";
 import Link from "next/link";
 import Image from "next/image";
 import { brandName } from "@/lib/brand";
-import {
-  copy,
-  route,
-  sections,
-  type Locale,
-  type Section,
-} from "@/lib/content";
+import { copy, route, type Locale, type Section } from "@/lib/content";
 import { coverage, matches, sources, metrics, quality } from "@/lib/data";
 import { PlayerDNA, Evaluation } from "./player-dna";
 import { dnaCopy } from "@/lib/dna-copy";
@@ -65,36 +60,16 @@ export function Site({
               />
             </picture>
           </Link>
-          <div className="header-meta">
-            <span>
-              {locale === "en"
-                ? "RESEARCH / FRENK KESTER"
-                : "ONDERZOEK / FRENK KESTER"}
-            </span>
-            <a
-              className="language"
-              href={route(locale === "en" ? "nl" : "en", section)}
-              lang={locale === "en" ? "nl" : "en"}
-              aria-label={c.language}
-            >
-              {locale === "en" ? "NL" : "EN"} <span aria-hidden="true">↗</span>
-            </a>
-          </div>
+          <ProductNavigation locale={locale} section={section} />
+          <a
+            className="language"
+            href={route(locale === "en" ? "nl" : "en", section)}
+            lang={locale === "en" ? "nl" : "en"}
+            aria-label={c.language}
+          >
+            {locale === "en" ? "NL" : "EN"}
+          </a>
         </div>
-        <nav
-          aria-label={locale === "en" ? "Main navigation" : "Hoofdnavigatie"}
-        >
-          {sections.map((s) => (
-            <Link
-              prefetch={false}
-              key={s}
-              href={route(locale, s)}
-              aria-current={s === section ? "page" : undefined}
-            >
-              {c.nav[s]}
-            </Link>
-          ))}
-        </nav>
       </header>
       <main id="main" tabIndex={-1}>
         <noscript>
@@ -230,40 +205,47 @@ export function Site({
           </>
         ) : (
           <div className="page-heading">
-            <p className="eyebrow">{c.phase}</p>
             <h1>
-              {section === "players"
-                ? playersCopy[locale].title
-                : section === "recruitment"
-                  ? recruitmentCopy[locale].title
-                  : section === "translation"
-                    ? translationCopy[locale].title
-                    : section === "player-dna"
-                      ? dnaCopy[locale].title
-                      : section === "explorer"
-                        ? c.explorerTitle
-                        : section === "coverage"
-                          ? c.coverageTitle
-                          : section === "methodology"
-                            ? c.methodologyTitle
-                            : c.roadmapTitle}
+              {section === "research"
+                ? locale === "en"
+                  ? "Research & methods"
+                  : "Onderzoek & methoden"
+                : section === "players"
+                  ? playersCopy[locale].title
+                  : section === "recruitment"
+                    ? recruitmentCopy[locale].title
+                    : section === "translation"
+                      ? translationCopy[locale].title
+                      : section === "player-dna"
+                        ? dnaCopy[locale].title
+                        : section === "explorer"
+                          ? c.explorerTitle
+                          : section === "coverage"
+                            ? c.coverageTitle
+                            : section === "methodology"
+                              ? c.methodologyTitle
+                              : c.roadmapTitle}
             </h1>
             <p className="lead">
-              {section === "players"
-                ? playersCopy[locale].intro
-                : section === "recruitment"
-                  ? recruitmentCopy[locale].intro
-                  : section === "translation"
-                    ? translationCopy[locale].intro
-                    : section === "player-dna"
-                      ? dnaCopy[locale].intro
-                      : section === "explorer"
-                        ? c.explorerIntro
-                        : section === "coverage"
-                          ? c.coverageIntro
-                          : section === "methodology"
-                            ? c.methodologyIntro
-                            : c.roadmapIntro}
+              {section === "research"
+                ? locale === "en"
+                  ? "The evidence behind the profiles. Explore the methods, data and measured limits."
+                  : "De onderbouwing van de profielen. Bekijk de methoden, data en vastgestelde grenzen."
+                : section === "players"
+                  ? playersCopy[locale].intro
+                  : section === "recruitment"
+                    ? recruitmentCopy[locale].intro
+                    : section === "translation"
+                      ? translationCopy[locale].intro
+                      : section === "player-dna"
+                        ? dnaCopy[locale].intro
+                        : section === "explorer"
+                          ? c.explorerIntro
+                          : section === "coverage"
+                            ? c.coverageIntro
+                            : section === "methodology"
+                              ? c.methodologyIntro
+                              : c.roadmapIntro}
             </p>
           </div>
         )}
@@ -504,14 +486,25 @@ export function Site({
       <footer>
         <div className="footer-top">
           <p>
-            {c.footer}
+            <strong>{brandName}</strong>
             <br />
-            <span>{c.limitations}</span>
+            <span>
+              {locale === "en"
+                ? "Independent research by Frenk Kester"
+                : "Onafhankelijk onderzoek door Frenk Kester"}
+            </span>
           </p>
           <div>
-            <a href={repo}>{c.repo} ↗</a>
+            <a href={repo}>GitHub</a> ·{" "}
+            <Link prefetch={false} href={route(locale, "methodology")}>
+              {c.nav.methodology}
+            </Link>{" "}
+            ·{" "}
+            <Link prefetch={false} href={route(locale, "coverage")}>
+              {locale === "en" ? "Data sources" : "Databronnen"}
+            </Link>
             <p className="small">
-              <a href="/release-manifest.json">Release v{release.version}</a>
+              <a href="/release-manifest.json">v{release.version}</a>
             </p>
           </div>
         </div>
