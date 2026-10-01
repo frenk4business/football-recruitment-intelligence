@@ -70,7 +70,7 @@ test("explorer controls, tracking slider, empty result and mobile overflow", asy
   });
 });
 test("failed data requests have a retry state", async ({ page }) => {
-  await page.route("**/data/explorer/*.json", (r) => r.abort());
+  await page.route("**/data/explorer/*.json*", (r) => r.abort());
   await page.goto("/explorer/");
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "could not be loaded",

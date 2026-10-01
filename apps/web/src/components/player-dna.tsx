@@ -1,4 +1,5 @@
 "use client";
+import { fetchArtifact } from "@/lib/artifact";
 import { useEffect, useMemo, useState } from "react";
 import type {
   DNAIndex,
@@ -37,14 +38,10 @@ function useArtifact<T>(url: string | null, retry: number = 0) {
   useEffect(() => {
     if (!url) return;
     const controller = new AbortController();
-    fetch(url, { signal: controller.signal })
-      .then((r) => {
-        if (!r.ok) throw new Error("Unavailable");
-        return r.json() as Promise<T>;
-      })
+    fetchArtifact<T>(url, controller.signal)
       .then((data) => setState({ url, data }))
-      .catch((e) => {
-        if (e.name !== "AbortError") setState({ url, error: true });
+      .catch(() => {
+        if (!controller.signal.aborted) setState({ url, error: true });
       });
     return () => controller.abort();
   }, [url, retry]);

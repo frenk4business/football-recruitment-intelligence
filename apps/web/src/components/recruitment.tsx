@@ -1,4 +1,5 @@
 "use client";
+import { fetchArtifact } from "@/lib/artifact";
 
 import { useEffect, useMemo, useState } from "react";
 import type { Locale } from "@/lib/content";
@@ -34,17 +35,13 @@ function useArtifact<T>(path: string | null) {
   useEffect(() => {
     if (!path) return;
     const controller = new AbortController();
-    fetch(`/data/phase4/${path}`, { signal: controller.signal })
-      .then((r) => {
-        if (!r.ok) throw new Error("Unavailable artifact");
-        return r.json();
-      })
+    fetchArtifact<T>(`/data/phase4/${path}`, controller.signal)
       .then((value) => {
         setLoaded({ path, value });
         setFailed(null);
       })
-      .catch((e) => {
-        if (e.name !== "AbortError") setFailed(path);
+      .catch(() => {
+        if (!controller.signal.aborted) setFailed(path);
       });
     return () => controller.abort();
   }, [path, attempt]);

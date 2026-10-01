@@ -1,0 +1,22 @@
+name: Product defect
+description: Report a reproducible defect without sensitive data.
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+      description: Include the route and release version. Do not include tokens or provider raw files.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include browser/OS, language and a public scenario URL if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and impact
+      description: Include redacted screenshots or error text and whether retry/reload helps.

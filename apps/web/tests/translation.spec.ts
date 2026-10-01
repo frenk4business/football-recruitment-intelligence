@@ -90,12 +90,12 @@ test("translation withholds unsupported roles/seasons, empty search and mobile",
 test("translation data failure retries and loads one player lazily", async ({
   page,
 }) => {
-  await page.route("**/data/phase3/players/*.json", (r) => r.abort());
+  await page.route("**/data/phase3/players/*.json*", (r) => r.abort());
   await page.goto("/translation/");
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "could not be loaded",
   );
-  await page.unroute("**/data/phase3/players/*.json");
+  await page.unroute("**/data/phase3/players/*.json*");
   const requests: string[] = [];
   page.on("request", (r) => {
     if (r.url().includes("/data/phase3/players/")) requests.push(r.url());

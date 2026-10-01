@@ -13,7 +13,8 @@ export const recruitmentCopy = {
     principle:
       "Rankings organise evidence under the selected criteria; they do not make a transfer decision.",
     loading: "Loading the observed cohort…",
-    error: "The recruitment data could not be loaded.",
+    error:
+      "The recruitment data could not be loaded. Reload the page if retrying does not help.",
     retry: "Try again",
     invalid:
       "This shared scenario is invalid or uses unsupported data. Start a new scenario below.",
@@ -196,7 +197,8 @@ export const recruitmentCopy = {
     principle:
       "De ranglijst ordent de beschikbare data op basis van de gekozen criteria; ze neemt geen transferbeslissing.",
     loading: "De waargenomen spelersgroep laden…",
-    error: "De recruitmentdata kon niet worden geladen.",
+    error:
+      "De recruitmentdata kon niet worden geladen. Vernieuw de pagina als opnieuw proberen niet helpt.",
     retry: "Opnieuw proberen",
     invalid:
       "Dit gedeelde scenario is ongeldig of gebruikt niet-ondersteunde data. Begin hieronder een nieuw scenario.",

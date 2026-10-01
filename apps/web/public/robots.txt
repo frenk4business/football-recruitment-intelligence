@@ -1,2 +1,6 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /data/
+Disallow: /integrity/
+Disallow: /release-manifest.json
+Sitemap: https://football-recruitment-intelligence.onrender.com/sitemap.xml

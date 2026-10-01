@@ -80,12 +80,12 @@ test("Player DNA evidence thresholds, unavailable values, empty search and mobil
   });
 });
 test("Player DNA failed data request can retry", async ({ page }) => {
-  await page.route("**/data/phase2/900/*.json", (r) => r.abort());
+  await page.route("**/data/phase2/900/*.json*", (r) => r.abort());
   await page.goto("/player-dna/");
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "could not be loaded",
   );
-  await page.unroute("**/data/phase2/900/*.json");
+  await page.unroute("**/data/phase2/900/*.json*");
   await page.getByRole("button", { name: "Try again" }).click();
   await expect(page.locator(".dna-header h2")).toBeVisible();
 });

@@ -1,3 +1,4 @@
+import release from "./release-version.json" with { type: "json" };
 export type Locale = "en" | "nl";
 export type Section =
   | "home"
@@ -33,7 +34,7 @@ const en = {
   },
   skip: "Skip to content",
   language: "Taal wijzigen naar Nederlands",
-  phase: "PHASE 04 / RECRUITMENT INTELLIGENCE",
+  phase: `RELEASE v${release.version} / OPEN RESEARCH`,
   title: "Recruitment research starts with the evidence.",
   intro:
     "Explore what open football data can tell us — and where it stops. A research platform for player profiles, competition context and, eventually, recruitment decisions.",
@@ -67,7 +68,8 @@ const en = {
   unavailable: "Not available",
   noRows: "No players match these filters.",
   loading: "Loading the selected sample…",
-  error: "This sample could not be loaded.",
+  error:
+    "This sample could not be loaded. Reload the page if retrying does not help.",
   retry: "Try again",
   spatial: "Where actions were recorded",
   tracking: "A minute in position",
@@ -136,7 +138,7 @@ const en = {
     [
       "05",
       "Respect the publication boundary",
-      "StatsBomb raw events stay local. This preview publishes research aggregates and binned spatial analysis with the required attribution. SkillCorner samples retain their MIT notice. No transfer values, recommendations or invented scores are included.",
+      "StatsBomb raw events stay local. This release publishes research aggregates and binned spatial analysis with the required attribution. SkillCorner samples retain their MIT notice. No transfer values, recommendations or invented scores are included.",
     ],
     [
       "06",
@@ -146,7 +148,7 @@ const en = {
   ],
   roadmapTitle: "One foundation. Five research phases.",
   roadmapIntro:
-    "The sequence follows the evidence required for each question. Later phases are planned, not available features.",
+    "Five completed phases, with scientific limits preserved. A stable research release with explicit data and model limitations.",
   phases: [
     [
       "Data foundation",
@@ -165,8 +167,8 @@ const en = {
       "Explainable candidate comparison, tactical context and explicit uncertainty.",
     ],
     [
-      "Product & portfolio",
-      "Evaluation evidence, operational hardening and a complete bilingual case study.",
+      "Production hardening",
+      "Versioned release, artifact integrity, accessibility, browser validation and operational documentation.",
     ],
   ],
   current: "Current phase",
@@ -196,7 +198,7 @@ const nl: Copy = {
   },
   skip: "Ga naar inhoud",
   language: "Switch language to English",
-  phase: "FASE 04 / RECRUITMENT INTELLIGENCE",
+  phase: `RELEASE v${release.version} / OPEN ONDERZOEK`,
   title: "Recruitmentonderzoek begint bij de onderbouwing.",
   intro:
     "Onderzoek wat open voetbaldata ons vertelt — en waar de grenzen liggen. Een onderzoeksplatform voor spelersprofielen, competitiecontext en uiteindelijk recruitmentbeslissingen.",
@@ -230,7 +232,8 @@ const nl: Copy = {
   unavailable: "Niet beschikbaar",
   noRows: "Geen spelers gevonden met deze filters.",
   loading: "De geselecteerde steekproef wordt geladen…",
-  error: "Deze steekproef kon niet worden geladen.",
+  error:
+    "Deze steekproef kon niet worden geladen. Vernieuw de pagina als opnieuw proberen niet helpt.",
   retry: "Opnieuw proberen",
   spatial: "Waar acties plaatsvonden",
   tracking: "Een minuut in positie",
@@ -299,7 +302,7 @@ const nl: Copy = {
     [
       "05",
       "Respecteer publicatievoorwaarden",
-      "Ruwe StatsBomb-events blijven lokaal. Deze preview publiceert onderzoeksaggregaten en gegroepeerde veldanalyses met bronvermelding. SkillCorner behoudt de MIT-licentie. Er zijn geen transferwaarden, aanbevelingen of verzonnen scores.",
+      "Ruwe StatsBomb-events blijven lokaal. Deze release publiceert onderzoeksaggregaten en gegroepeerde veldanalyses met bronvermelding. SkillCorner behoudt de MIT-licentie. Er zijn geen transferwaarden, aanbevelingen of verzonnen scores.",
     ],
     [
       "06",
@@ -309,7 +312,7 @@ const nl: Copy = {
   ],
   roadmapTitle: "Eén fundament. Vijf onderzoeksfasen.",
   roadmapIntro:
-    "De volgorde volgt de onderbouwing die elke onderzoeksvraag nodig heeft. Latere fasen zijn gepland en nog niet beschikbaar.",
+    "Vijf afgeronde fasen met behoud van wetenschappelijke beperkingen. Een stabiele onderzoeksversie met expliciete beperkingen van data en modellen.",
   phases: [
     [
       "Datafundament",
@@ -328,8 +331,8 @@ const nl: Copy = {
       "Uitlegbare spelersvergelijking, tactische context en expliciete onzekerheid.",
     ],
     [
-      "Product en portfolio",
-      "Evaluatiebewijs, technische versteviging en een volledige tweetalige casus.",
+      "Productieversteviging",
+      "Een versiegebonden release, artifactintegriteit, toegankelijkheid, browsertests en operationele documentatie.",
     ],
   ],
   current: "Huidige fase",

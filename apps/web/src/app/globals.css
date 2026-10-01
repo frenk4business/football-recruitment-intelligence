@@ -2101,3 +2101,94 @@ footer {
 #shortlist-title {
   scroll-margin-top: 24px;
 }
+
+/* Release hardening: contain wide evidence tables and reserve async workspace. */
+main,
+section,
+.sample-section,
+.table-wrap {
+  min-width: 0;
+  max-width: 100%;
+}
+.recruitment-status {
+  min-height: 75vh;
+}
+.recovery {
+  max-width: 780px;
+  margin: 10vh auto;
+  padding: 24px;
+}
+button,
+input,
+select,
+summary {
+  scroll-margin-top: 24px;
+}
+@media print {
+  .site-header,
+  .hero-links,
+  button,
+  .filter-bar,
+  .recruitment-selectors {
+    display: none;
+  }
+  body {
+    color: #111;
+    background: white;
+  }
+  main,
+  footer {
+    width: 100%;
+    margin: 0;
+  }
+  .table-wrap {
+    overflow: visible;
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  details {
+    break-inside: avoid;
+  }
+}
+
+.footer-top a {
+  display: inline-block;
+  min-height: 28px;
+  padding-block: 5px;
+}
+
+/* Anchor visually hidden table labels inside their scroll container. */
+.table-wrap {
+  position: relative;
+}
+
+.hero > div {
+  min-width: 0;
+}
+h1 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+/* Container width also responds to text/page magnification. */
+.recruitment {
+  container-type: inline-size;
+}
+@container (max-width: 650px) {
+  .requirement-row {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+  }
+  .requirement-name,
+  .recruitment .hard-constraint {
+    grid-column: 1 / -1;
+  }
+  .recruitment-selectors,
+  .recruitment-filters > div {
+    grid-template-columns: 1fr;
+  }
+  .recruitment-section-heading {
+    flex-wrap: wrap;
+  }
+}

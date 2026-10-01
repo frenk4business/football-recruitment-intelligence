@@ -178,25 +178,25 @@ test("recruitment sharing, locale switch, reset, strict URLs and hard exclusions
 test("recruitment failed artifacts retry and do not invent profiles", async ({
   page,
 }) => {
-  await page.route("**/data/phase4/index.json", (r) => r.abort());
+  await page.route("**/data/phase4/index.json*", (r) => r.abort());
   await page.goto("/recruitment/");
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "could not be loaded",
   );
   await expect(page.locator(".recruitment-table")).toHaveCount(0);
-  await page.unroute("**/data/phase4/index.json");
+  await page.unroute("**/data/phase4/index.json*");
   await page.getByRole("button", { name: "Try again", exact: true }).click();
   await page
     .locator('[data-feature="pressures_per90"] select')
     .first()
     .selectOption("minimum");
-  await page.route("**/data/phase4/bootstrap/*.json", (r) => r.abort());
+  await page.route("**/data/phase4/bootstrap/*.json*", (r) => r.abort());
   await page.locator(".robustness-panel summary").click();
   await expect(
     page.locator(".robustness-panel").getByRole("alert"),
   ).toContainText("Profile sensitivity is unavailable");
   await expect(page.locator(".recruitment-table tbody tr")).toHaveCount(10);
-  await page.unroute("**/data/phase4/bootstrap/*.json");
+  await page.unroute("**/data/phase4/bootstrap/*.json*");
   await page
     .locator(".robustness-panel")
     .getByRole("button", { name: "Try again" })

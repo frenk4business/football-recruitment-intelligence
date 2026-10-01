@@ -1,7 +1,8 @@
+import { pageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Site } from "@/components/site";
-import { copy, sections, type Section } from "@/lib/content";
+import { sections, type Section } from "@/lib/content";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return sections.filter((s) => s !== "home").map((section) => ({ section }));
@@ -12,7 +13,10 @@ export async function generateMetadata({
   params: Promise<{ section: string }>;
 }): Promise<Metadata> {
   const { section } = await params;
-  return { title: copy.nl.nav[section as Section] ?? "Research" };
+  return pageMetadata(
+    "nl",
+    sections.includes(section as Section) ? (section as Section) : "home",
+  );
 }
 export default async function Page({
   params,

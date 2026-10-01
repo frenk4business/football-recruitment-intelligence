@@ -1,0 +1,9 @@
+# Monitoring
+
+This product is a static site, with no live model server, database or worker to monitor. Use the Render deployment/event history for build success and exact commit identity, and public HTTP/browser checks for product behavior. The connector exposes bandwidth but currently returns an empty request-count series for this static service; empty means unavailable, not zero. CPU/memory charts are not useful for CDN-hosted static pages.
+
+The `Production smoke` GitHub Actions workflow is manually dispatched after every release, dependency repair or rollback. It checks core EN/NL flows in Chromium/Firefox/WebKit, including failed-data recovery, scenario sharing, static metadata and actual headers. Failure screenshots/traces are retained for seven days. There is no uptime SLA or claim of continuous monitoring. Weekly scheduled checks can be enabled later by adding a cron only if the owner wants recurring bandwidth/build-minute consumption; no paid monitor is required for v1.
+
+For routine owner review: inspect deployment failures and GitHub security/Dependabot alerts weekly, compare live `/release-manifest.json` git_commit with main after releases, and review monthly bandwidth/build consumption in Render billing. The audit window returned approximately 50.53 MB of bandwidth; this mostly includes development/QA traffic and is not a forecast. The available integration does not expose invoices or remaining plan allowances.
+
+Triage a failed check: identify whether DNS/TLS, CDN, static asset, contract/hash, browser, or scientific integrity failed; follow [operations](operations.md) and [rollback](rollback.md). A 200 response alone does not prove controls work. No third-party analytics, cookies, visitor identifiers, error-reporting SDK or beacon is added. Render/GitHub may retain infrastructure logs under their own policies.

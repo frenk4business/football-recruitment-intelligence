@@ -5,6 +5,18 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    files: ["scripts/performance.mjs"],
+    languageOptions: {
+      globals: {
+        PerformanceObserver: "readonly",
+        document: "readonly",
+        innerWidth: "readonly",
+        performance: "readonly",
+        Event: "readonly",
+      },
+    },
+  },
+  {
     files: ["**/*.mjs"],
     languageOptions: {
       globals: {

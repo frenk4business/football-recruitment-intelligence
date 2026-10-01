@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Open voetbaldata, zichtbare herkomst en reproduceerbaar onderzoek.",
   icons: { icon: "/favicon.svg" },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

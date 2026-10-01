@@ -11,7 +11,8 @@ export const translationCopy = {
     selectNote:
       "Sources: 2019/20 · targets: 2020/21 · FA Women’s Super League. Other observed seasons remain visible with their exclusions.",
     loading: "Loading the player’s historical evidence…",
-    error: "This player could not be loaded.",
+    error:
+      "This player could not be loaded. Reload the page if retrying does not help.",
     retry: "Try again",
     empty: "No players match this search.",
     observed: "Observed source",
@@ -77,7 +78,8 @@ export const translationCopy = {
     selectNote:
       "Bronnen: 2019/20 · doelen: 2020/21 · FA Women’s Super League. Andere waargenomen seizoenen blijven zichtbaar met hun uitsluitingsredenen.",
     loading: "Historische spelersgegevens laden…",
-    error: "Deze speler kon niet worden geladen.",
+    error:
+      "Deze speler kon niet worden geladen. Vernieuw de pagina als opnieuw proberen niet helpt.",
     retry: "Opnieuw proberen",
     empty: "Geen spelers gevonden voor deze zoekopdracht.",
     observed: "Waargenomen bron",

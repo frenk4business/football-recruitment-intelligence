@@ -74,3 +74,15 @@ phase4-build:
 	uv run python scripts/generate_contracts.py
 recruitment-evaluate:
 	uv run python scripts/recruitment_reproduce.py
+
+.PHONY: release-build release-validate security-audit
+release-build:
+	uv run python scripts/generate_contracts.py --check
+	cd apps/web && npm run build
+release-validate:
+	uv run python scripts/generate_contracts.py --check
+	cd apps/web && npm run release:validate
+security-audit:
+	cd apps/web && npm audit --audit-level=high
+	uv export --frozen --no-emit-project --format requirements-txt --output-file /tmp/fri-audit-requirements.txt
+	uvx pip-audit==2.10.1 --no-deps --disable-pip -r /tmp/fri-audit-requirements.txt

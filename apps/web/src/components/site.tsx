@@ -1,3 +1,4 @@
+import release from "@/lib/release-version.json";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -39,7 +40,11 @@ export function Site({
       </a>
       <header className="site-header">
         <div className="header-inner">
-          <Link className="wordmark" href={route(locale, "home")}>
+          <Link
+            prefetch={false}
+            className="wordmark"
+            href={route(locale, "home")}
+          >
             <span className="brand-mark" aria-hidden="true">
               FR<span>I</span>
             </span>
@@ -70,6 +75,7 @@ export function Site({
         >
           {sections.map((s) => (
             <Link
+              prefetch={false}
               key={s}
               href={route(locale, s)}
               aria-current={s === section ? "page" : undefined}
@@ -80,6 +86,13 @@ export function Site({
         </nav>
       </header>
       <main id="main" tabIndex={-1}>
+        <noscript>
+          <p className="notice">
+            {locale === "en"
+              ? "Interactive exploration requires JavaScript. Methodology, coverage and research conclusions remain available below and in the repository."
+              : "Interactieve verkenning vereist JavaScript. Methodologie, dekking en onderzoeksconclusies blijven hieronder en in de repository beschikbaar."}
+          </p>
+        </noscript>
         {section === "home" ? (
           <>
             <section className="hero">
@@ -92,6 +105,7 @@ export function Site({
                 <p className="lead">{c.intro}</p>
                 <div className="hero-links">
                   <Link
+                    prefetch={false}
                     className="primary-link"
                     href={route(locale, "recruitment")}
                   >
@@ -99,6 +113,7 @@ export function Site({
                     <span aria-hidden="true">↗</span>
                   </Link>
                   <Link
+                    prefetch={false}
                     className="text-link"
                     href={route(locale, "methodology")}
                   >
@@ -108,7 +123,7 @@ export function Site({
               </div>
               <aside className="hero-aside">
                 <span className="large-number">
-                  04<span>/05</span>
+                  05<span>/05</span>
                 </span>
                 <p>{c.noModels}</p>
                 <div className="mini-field" aria-hidden="true">
@@ -176,6 +191,7 @@ export function Site({
                           </td>
                           <td>
                             <Link
+                              prefetch={false}
                               href={route(locale, "explorer")}
                               aria-label={`${c.open}: ${s.name}`}
                             >
@@ -274,7 +290,7 @@ export function Site({
                 : "profielen met voldoende data bij"}{" "}
               {dnaIndex().default_threshold}{" "}
               {locale === "en" ? "reliable minutes." : "betrouwbare minuten."}{" "}
-              <Link href={route(locale, "player-dna")}>
+              <Link prefetch={false} href={route(locale, "player-dna")}>
                 {dnaCopy[locale].title} ↗
               </Link>
             </p>
@@ -454,12 +470,8 @@ export function Site({
               <li key={title}>
                 <span className="section-number">0{i + 1}</span>
                 <div>
-                  <span className={i < 4 ? "current-phase" : "planned-phase"}>
-                    {i < 4
-                      ? locale === "en"
-                        ? "Complete"
-                        : "Voltooid"
-                      : c.planned}
+                  <span className="current-phase">
+                    {locale === "en" ? "Complete" : "Voltooid"}
                   </span>
                   <h2>{title}</h2>
                   <p>{body}</p>
@@ -476,7 +488,12 @@ export function Site({
             <br />
             <span>{c.limitations}</span>
           </p>
-          <a href={repo}>{c.repo} ↗</a>
+          <div>
+            <a href={repo}>{c.repo} ↗</a>
+            <p className="small">
+              <a href="/release-manifest.json">Release v{release.version}</a>
+            </p>
+          </div>
         </div>
         <div className="attribution">
           <Image
