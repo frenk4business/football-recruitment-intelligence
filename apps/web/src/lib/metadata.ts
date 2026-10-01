@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { brandName } from "./brand";
 import { copy, route, type Locale, type Section } from "./content";
 export const origin = "https://football-recruitment-intelligence.onrender.com";
 export function pageMetadata(locale: Locale, section: Section): Metadata {
@@ -27,6 +28,14 @@ export function pageMetadata(locale: Locale, section: Section): Metadata {
       url: origin + route(locale, section),
       locale: locale === "en" ? "en_GB" : "nl_NL",
       siteName: "Football Recruitment Intelligence",
+      images: [
+        {
+          url: origin + "/brand/fri-social.png",
+          width: 1200,
+          height: 499,
+          alt: brandName,
+        },
+      ],
     },
     robots: { index: true, follow: true },
   };

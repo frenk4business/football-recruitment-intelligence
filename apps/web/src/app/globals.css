@@ -77,31 +77,21 @@ p + p {
 .header-inner {
   max-width: 1240px;
   margin: auto;
-  padding: 27px 42px;
+  padding: 16px 42px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
 .wordmark {
-  display: flex;
-  align-items: center;
-  gap: 17px;
+  display: block;
+  flex-shrink: 0;
   text-decoration: none;
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
 }
-.brand-mark {
-  font-size: 30px;
-  letter-spacing: -0.13em;
-  padding-right: 14px;
-  border-right: 1px solid var(--rule);
-}
-.brand-mark span {
-  color: var(--green);
+.wordmark img {
+  display: block;
+  width: 196px;
+  height: 63px;
 }
 .header-meta {
   display: flex;
@@ -769,12 +759,6 @@ footer {
     padding: 0 20px;
     gap: 24px;
   }
-  .wordmark {
-    font-size: 12px;
-  }
-  .brand-mark {
-    font-size: 27px;
-  }
   .header-meta {
     gap: 0;
   }
@@ -932,6 +916,12 @@ footer {
   }
   .num {
     min-width: 65px;
+  }
+}
+@media (max-width: 480px) {
+  .wordmark img {
+    width: 44px;
+    height: 44px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

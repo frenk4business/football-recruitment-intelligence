@@ -4,6 +4,8 @@ Start with the [product and quick start](../README.md). This index separates cur
 
 ## Release v1
 
+[Phase 5 branding follow-up](phase-5-brand-integration.md) records the supplied assets and their web integration after the v1.0.0 release.
+
 [Release record](releases/v1.0.0.md) · [changelog](../CHANGELOG.md) · [production audit](phase-5-production-audit.md) · [preimplementation gate](release-gate-v1.md) · [completed QA](v1-release-qa.md) · [checklist](release-checklist.md).
 
 [Architecture](architecture.md) · [deployment](deployment.md) · [operations/incidents](operations.md) · [rollback](rollback.md) · [monitoring/costs/privacy](monitoring.md) · [cache policy](caching.md) · [contract/version policy](contract-versioning.md) · [dependency policy](dependency-policy.md).

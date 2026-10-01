@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Phase 5 — Brand integration
+
+Supplied horizontal logo and responsive compact emblem, shared English/Dutch favicon and Apple touch icons, and the supplied white lockup for dark social previews. Web exports retain the original artwork; source PNGs and their conversion recipe are preserved. See the [integration and verification record](docs/phase-5-brand-integration.md). Research content, scientific versions and modelling logic are unchanged.
+
 ## 1.0.0
 
 ### Data foundation

@@ -20,7 +20,13 @@ import {
 verifyScience();
 const staticAssets = new Set([
   "brand/statsbomb.png",
-  "favicon.svg",
+  "brand/fri-horizontal.webp",
+  "brand/fri-emblem.webp",
+  "brand/fri-social.png",
+  "brand/favicon-32.png",
+  "brand/favicon-192.png",
+  "brand/apple-touch-icon.png",
+  "favicon.ico",
   "robots.txt",
   "skillcorner-license.txt",
   "release-manifest.json",

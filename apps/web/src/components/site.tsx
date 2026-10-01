@@ -1,6 +1,7 @@
 import release from "@/lib/release-version.json";
 import Link from "next/link";
 import Image from "next/image";
+import { brandName } from "@/lib/brand";
 import {
   copy,
   route,
@@ -45,14 +46,21 @@ export function Site({
             className="wordmark"
             href={route(locale, "home")}
           >
-            <span className="brand-mark" aria-hidden="true">
-              FR<span>I</span>
-            </span>
-            <span>
-              Football Recruitment
-              <br />
-              Intelligence
-            </span>
+            <picture>
+              <source
+                media="(max-width: 480px)"
+                srcSet="/brand/fri-emblem.webp"
+                width={44}
+                height={44}
+              />
+              <Image
+                src="/brand/fri-horizontal.webp"
+                width={196}
+                height={63}
+                alt={brandName}
+                loading="eager"
+              />
+            </picture>
           </Link>
           <div className="header-meta">
             <span>
