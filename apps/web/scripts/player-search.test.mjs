@@ -141,3 +141,46 @@ test("cached and uncached search include the same club and competition matches",
       filterProfiles(index, { ...defaults, q }),
     );
 });
+
+test("three-profile URLs retain legacy comparison and reject duplicates or invalid identities", () => {
+  const [a, b, c] = index.profiles;
+  const state = readFilters(
+    new URLSearchParams({
+      profile: a.id,
+      compare: b.id,
+      compare2: c.id,
+      sort: "minutes",
+    }),
+    index,
+  );
+  assert.equal(state.compare2, c.id);
+  assert.equal(state.sort, "minutes");
+  assert.deepEqual(
+    readFilters(new URLSearchParams(filterURL(state)), index),
+    state,
+  );
+  assert.equal(
+    readFilters(new URLSearchParams({ profile: a.id, compare: b.id }), index)
+      .compare,
+    b.id,
+  );
+  assert.equal(
+    readFilters(
+      new URLSearchParams({ profile: a.id, compare: b.id, compare2: b.id }),
+      index,
+    ).compare2,
+    "",
+  );
+  assert.equal(
+    readFilters(
+      new URLSearchParams({
+        profile: a.id,
+        compare: b.id,
+        compare2: "invalid",
+        sort: "winner",
+      }),
+      index,
+    ).sort,
+    "name",
+  );
+});

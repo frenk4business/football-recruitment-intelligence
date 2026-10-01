@@ -9,6 +9,7 @@ export default tseslint.config(
       "scripts/performance.mjs",
       "scripts/players-performance.mjs",
       "scripts/ui-review.mjs",
+      "scripts/product-review.mjs",
     ],
     languageOptions: {
       globals: {
@@ -18,6 +19,8 @@ export default tseslint.config(
         innerWidth: "readonly",
         performance: "readonly",
         Event: "readonly",
+        URLSearchParams: "readonly",
+        location: "readonly",
       },
     },
   },

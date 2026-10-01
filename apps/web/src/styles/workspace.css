@@ -748,3 +748,31 @@ footer {
     padding-top: 10px;
   }
 }
+main#main {
+  container-type: inline-size;
+}
+@container (max-width: 760px) {
+  .recruitment-workspace,
+  .players-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .recruitment-setup {
+    min-width: 0;
+  }
+  .primary-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.profile-list .profile-name {
+  min-height: 28px;
+  padding: 2px 0;
+}
+.profile-list p {
+  margin: 2px 0 0;
+}
+.global-search input,
+.player-filters select,
+.recruitment select,
+.recruitment input[type="number"] {
+  border-radius: var(--radius-control);
+}

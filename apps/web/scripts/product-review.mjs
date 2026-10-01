@@ -75,6 +75,7 @@ for (const locale of ["en", "nl"])
         await page
           .locator('[aria-labelledby="filter-label-role"]')
           .selectOption("");
+        await page.locator(".player-filter-panel > summary").click();
       }
       if (route === "recruitment/") {
         const t = performance.now();

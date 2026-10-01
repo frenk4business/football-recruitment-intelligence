@@ -23,6 +23,7 @@ const staticAssets = new Set([
   "brand/fri-horizontal.webp",
   "brand/fri-emblem.webp",
   "brand/fri-social.png",
+  "brand/fri-sidebar.webp",
   "brand/favicon-32.png",
   "brand/favicon-192.png",
   "brand/apple-touch-icon.png",

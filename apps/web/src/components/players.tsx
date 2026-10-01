@@ -402,10 +402,14 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                   >
                     {p.name}
                   </button>
-                  <p className="small">{context(p)}</p>
                   <p className="small">
-                    {roleName(p.role ?? p.role_family)} · {number(p.minutes)}{" "}
-                    {c.minutes.toLowerCase()}
+                    {p.teams.map((t) => index.teams[t]).join(" / ")} ·{" "}
+                    {roleName(p.role ?? p.role_family)}
+                  </p>
+                  <p className="small">
+                    {scopes.get(p.scope)?.competition} ·{" "}
+                    {scopes.get(p.scope)?.season} · {number(p.minutes)} min ·{" "}
+                    {providerName(p.provider)}
                   </p>
                 </div>
                 {selected && (

@@ -38,7 +38,9 @@ export function GlobalSearch({ locale }: { locale: Locale }) {
     .slice(0, 2);
   const competitions = [
     ...new Map(
-      index?.scopes.map((s) => [s.competition_key, s.competition]),
+      index?.scopes
+        .filter((s) => matches(s.competition))
+        .map((s) => [s.competition_key, s.competition]),
     ).entries(),
   ]
     .filter(([, name]) => matches(name))
@@ -56,8 +58,8 @@ export function GlobalSearch({ locale }: { locale: Locale }) {
       }}
       onKeyDown={(e) => {
         if (e.key === "Escape") {
-          setActive(false);
           input.current?.focus();
+          setActive(false);
         }
       }}
     >

@@ -26,6 +26,12 @@ await logo("Football Recruitment Intelligence.png")
   .png({ compressionLevel: 9 })
   .toFile(fileURLToPath(new URL("fri-social.png", output)));
 
+// Small display copy of the existing reversed lockup for the dark app sidebar.
+await sharp(fileURLToPath(new URL("fri-social.png", output)))
+  .resize({ width: 360 })
+  .webp({ lossless: true })
+  .toFile(fileURLToPath(new URL("fri-sidebar.webp", output)));
+
 const favicon = (size) =>
   logo("Network Soccer Ball Icon.png")
     .extract({ left: 176, top: 184, width: 900, height: 900 })

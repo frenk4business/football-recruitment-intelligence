@@ -53,7 +53,7 @@ export function Site({
             <picture>
               <source
                 media="(min-width: 761px)"
-                srcSet="/brand/fri-social.png"
+                srcSet="/brand/fri-sidebar.webp"
                 width={180}
                 height={75}
               />

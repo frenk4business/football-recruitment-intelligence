@@ -82,6 +82,14 @@ for (const locale of ["en", "nl"] as const) {
       page.locator(`.recruitment-table [data-player="${reference}"]`),
     ).toHaveCount(0);
     await page.locator(".requirements-disclosure > summary").click();
+    await page
+      .getByLabel(
+        nl
+          ? "Geavanceerde eisen · alle 18 kenmerken"
+          : "Advanced requirements · all 18 features",
+        { exact: true },
+      )
+      .check();
     await progressive.locator("select").first().selectOption("maximum");
     await progressive.locator('input[type="number"]').fill("40");
     await expect(progressive).toContainText(nl ? "Jouw keuze" : "Your choice");
@@ -127,6 +135,9 @@ test("recruitment sharing, locale switch, reset, strict URLs and hard exclusions
   const feature = page.locator('[data-feature="progressive_passes_per90"]');
   await feature.locator("select").first().selectOption("minimum");
   await feature.locator('input[type="number"]').fill("100");
+  await page
+    .getByLabel("Advanced requirements · all 18 features", { exact: true })
+    .check();
   await feature.getByRole("checkbox").check();
   await expect(page.locator(".recruitment-empty")).toContainText(
     "No candidates",

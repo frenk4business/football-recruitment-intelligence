@@ -21,8 +21,8 @@ for (const locale of ["en", "nl"] as const) {
       "Alessia Russo",
     );
     await expect(
-      page.locator(".profile-style-bars").first().locator(":scope > div"),
-    ).toHaveCount(8);
+      page.locator(".style-families .profile-style-bars > div"),
+    ).toHaveCount(10);
     await page.locator("#similar-players button").first().click();
     await expect(
       page.locator(".profile-metrics").first().locator("thead th"),
@@ -60,7 +60,7 @@ for (const locale of ["en", "nl"] as const) {
     await feature.locator("input[type=number]").fill("70");
     await page
       .getByRole("link", {
-        name: nl ? "Kandidaten vinden →" : "Find candidates →",
+        name: nl ? "Vind kandidaten →" : "Find candidates →",
         exact: true,
       })
       .click();
