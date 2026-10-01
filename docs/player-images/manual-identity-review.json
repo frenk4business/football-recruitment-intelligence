@@ -1,0 +1,1883 @@
+[
+  {
+    "asset_sha256": "c7d13ae5e420da287edfe260ef5382333e2104f34f96f1acb5681e27cb0aadd1",
+    "bytes": 10816,
+    "commons": "https://commons.wikimedia.org/wiki/File:20250905-Alex_Greenwood_(cropped-J1).jpg",
+    "composition": "Inspected for safe proportional uncropped display only; source composition retained. Identity was checked from metadata, never from the image.",
+    "decision": "verified_metadata",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "statsbomb:10252",
+    "preview": "artifacts/local-qa/player-images/sample/statsbomb-10252.webp",
+    "qid": "Q17615791",
+    "reason": "Exact name; recorded female competition, England nationality and Manchester City WFC in 2020/21 agree with P21, England national-team context and P54 Manchester City from 2020. Same-name male player Q4717092 and non-football candidates rejected.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/wiki/User:KTC"
+      ],
+      "author": "Katie Chan",
+      "copyright_notice": "",
+      "credit": "Own work",
+      "license_id": "CC-BY-SA-4.0",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_sha256": "0f40108cf8348e3e521beededf08f1217430cf22dae87b43a443268faee156c8",
+    "visual_identity_inference": false,
+    "wikidata_response_sha256": "98543e12e7d73616727f8ff832fe5b80d538d6472c98ba935f7e243c8ed16ac3"
+  },
+  {
+    "decision": "withheld",
+    "final_image_status": "not_verified",
+    "final_match_status": "likely",
+    "identity": "statsbomb:15550",
+    "reason": "No matching candidate or insufficient independent historical-club support in inspected entity metadata; do not auto-publish.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "b81da41ed15315fcb6279b7a160684ea58f48664bdccbea0edc0f0bab2befc7b",
+    "bytes": 6490,
+    "commons": "https://commons.wikimedia.org/wiki/File:20250905-Lauren_Hemp.jpg",
+    "composition": "Inspected for safe proportional uncropped display only; source composition retained. Identity was checked from metadata, never from the image.",
+    "decision": "verified_metadata",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "statsbomb:15555",
+    "preview": "artifacts/local-qa/player-images/sample/statsbomb-15555.webp",
+    "qid": "Q48688219",
+    "reason": "Exact name; female competition, England source nationality and Manchester City WFC in 2020/21 agree with female association-footballer metadata and P54 Manchester City.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/wiki/User:KTC"
+      ],
+      "author": "Katie Chan",
+      "copyright_notice": "",
+      "credit": "Own work",
+      "license_id": "CC-BY-SA-4.0",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_sha256": "e7deea33df743ca2518a22bb4cd5309b3b8febd520529c9505d9b6d5cf4eba4e",
+    "visual_identity_inference": false,
+    "wikidata_response_sha256": "7158d3e451c7f24e416dba969d2cf6180c0276bcde745afdb6a713b27bd34592"
+  },
+  {
+    "decision": "withheld",
+    "final_image_status": "not_verified",
+    "final_match_status": "likely",
+    "identity": "statsbomb:15570",
+    "reason": "No matching candidate or insufficient independent historical-club support in inspected entity metadata; do not auto-publish.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "420a5f3d2908b11bf3464429e7bd35178caa03df9b1f56181aea3bc06ebf70c0",
+    "bytes": 6546,
+    "commons": "https://commons.wikimedia.org/wiki/File:Vivianne_Miedema_BL_FCB_gg._SGS_Essen_Muenchen-1_(cropped).jpg",
+    "composition": "Inspected for safe proportional uncropped display only; source composition retained. Identity was checked from metadata, never from the image.",
+    "decision": "verified_metadata",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "statsbomb:15623",
+    "preview": "artifacts/local-qa/player-images/sample/statsbomb-15623.webp",
+    "qid": "Q2754626",
+    "reason": "Exact name; female competition, Netherlands source nationality and Arsenal WFC in 2020/21 agree with Wikidata citizenship, occupation and historical Arsenal membership.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/wiki/User:Rufus46"
+      ],
+      "author": "Rufus46",
+      "copyright_notice": "",
+      "credit": "Own work",
+      "license_id": "CC-BY-SA-3.0",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_sha256": "38d3e25e11a2c25e94a59022b431ad580039cd97a917f7e4a01af437c072eef3",
+    "visual_identity_inference": false,
+    "wikidata_response_sha256": "05fb87d5da78aed08b43ed439d0f56bbe865382b4590b279a21d6ae76daf3296"
+  },
+  {
+    "asset_sha256": "2c46dfd420aab5653f1397e9eb67feb2611582dc7ca3ec6a3b72f5fa106c1be1",
+    "bytes": 8974,
+    "commons": "https://commons.wikimedia.org/wiki/File:Leah_Williamson_(cropped).jpg",
+    "composition": "Inspected for safe proportional uncropped display only; source composition retained. Identity was checked from metadata, never from the image.",
+    "decision": "verified_metadata",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "statsbomb:18999",
+    "preview": "artifacts/local-qa/player-images/sample/statsbomb-18999.webp",
+    "qid": "Q18129271",
+    "reason": "Exact name; female competition, England source nationality and Arsenal WFC in both supplied seasons agree with occupation, England national-team context and Arsenal membership.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Ryanasman1&action=edit&redlink=1"
+      ],
+      "author": "Ryanasman1",
+      "copyright_notice": "",
+      "credit": "Own work",
+      "license_id": "CC-BY-SA-4.0",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_sha256": "7143fa888803da3c29f328765b1303783187b65af129c64d75eab073453ba418",
+    "visual_identity_inference": false,
+    "wikidata_response_sha256": "9aa8860ffec4ae44bb40cec2100dd40106afc4b84a2f941f98bc45f7f4ed031c"
+  },
+  {
+    "asset_sha256": "a3a6e9fe09f197fa1313b1ceb9c71ef8accfbae984eda7c564f085d0c29bfb22",
+    "bytes": 9368,
+    "commons": "https://commons.wikimedia.org/wiki/File:Fran_Kirby_Lewes_FC_Women_1_Chelsea_Women_2_Conti_Cup_02_11_2019-519_(49006183211).jpg",
+    "composition": "Inspected for safe proportional uncropped display only; source composition retained. Identity was checked from metadata, never from the image.",
+    "decision": "verified_metadata",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "statsbomb:4641",
+    "preview": "artifacts/local-qa/player-images/sample/statsbomb-4641.webp",
+    "qid": "Q17602414",
+    "reason": "Source Francesca Kirby corresponds to the recorded Fran Kirby alias; female competition, England nationality and Chelsea in 2023/24 agree with Wikidata association-footballer and Chelsea 2015–2024 membership.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://www.flickr.com/people/37972999@N07",
+        "https://www.flickr.com/photos/jamesboyes/49006183211/"
+      ],
+      "author": "James Boyes from UK",
+      "copyright_notice": "",
+      "credit": "Lewes FC Women 1 Chelsea Women 2 Conti Cup 02 11 2019-519.jpg",
+      "license_id": "CC-BY-2.0",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_sha256": "e7deea33df743ca2518a22bb4cd5309b3b8febd520529c9505d9b6d5cf4eba4e",
+    "visual_identity_inference": false,
+    "wikidata_response_sha256": "a807d3cce958faf11b01c1b0c2a288b7d74fc987f2c705616c2ede38a19c93e0"
+  },
+  {
+    "asset_sha256": "0f1c84639825a30d205d273afc9e1884d22906bbf57b074b97ee0725b0826885",
+    "bytes": 6848,
+    "commons": "https://commons.wikimedia.org/wiki/File:Millie-Bright.jpg",
+    "composition": "Inspected for safe proportional uncropped display only; source composition retained. Identity was checked from metadata, never from the image.",
+    "decision": "verified_metadata",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "statsbomb:4642",
+    "preview": "artifacts/local-qa/player-images/sample/statsbomb-4642.webp",
+    "qid": "Q23021129",
+    "reason": "Exact name; female competition and Chelsea in 2023/24 agree with recorded female association-footballer and Chelsea membership 2015–2026; England source nationality is compatible with UK citizenship.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Ryanasman1&action=edit&redlink=1"
+      ],
+      "author": "Ryan Asman",
+      "copyright_notice": "",
+      "credit": "Own work",
+      "license_id": "CC-BY-SA-4.0",
+      "license_name": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_sha256": "e7deea33df743ca2518a22bb4cd5309b3b8febd520529c9505d9b6d5cf4eba4e",
+    "visual_identity_inference": false,
+    "wikidata_response_sha256": "afd83a52d415a71c56779a098b894f4bb0be5ac74a1fdde0abd977b539a144c7"
+  },
+  {
+    "asset_sha256": "ccfc660ce0b721d43759f9459dac79dc068676605f8b88507a330b30be10f8ef",
+    "bytes": 7892,
+    "commons": "https://commons.wikimedia.org/wiki/File:23_is_Alessia_Russo_Lewes_FC_Women_1_Manchester_Utd_Women_3_FAC_QF_19_03_2023-2132_(sq_cropped).jpg",
+    "composition": "Inspected for safe proportional uncropped display only; source composition retained. Identity was checked from metadata, never from the image.",
+    "decision": "verified_metadata",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "statsbomb:47521",
+    "preview": "artifacts/local-qa/player-images/sample/statsbomb-47521.webp",
+    "qid": "Q27450000",
+    "reason": "Exact name; female competition, England nationality and Arsenal in 2023/24 agree with Wikidata footballer, England national-team and Arsenal membership from 2023. Same-name gymnast Q16525261, academic and other entities rejected.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://www.flickr.com/photos/jamesboyes/52760247903/"
+      ],
+      "author": "James Boyes",
+      "copyright_notice": "",
+      "credit": "https://www.flickr.com/photos/jamesboyes/52760247903/",
+      "license_id": "CC-BY-2.0",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_sha256": "0e7177aa7f6ed2b2e85f88b6d5497da617f6f1f1eb85000c424d8b1fb62ede67",
+    "visual_identity_inference": false,
+    "wikidata_response_sha256": "12a748f6085cbd0dd64c464b10ca3a34510d342dc58cfd410a4059600f25c710"
+  },
+  {
+    "decision": "withheld",
+    "final_image_status": "not_verified",
+    "final_match_status": "likely",
+    "identity": "statsbomb:49697",
+    "reason": "No matching candidate or insufficient independent historical-club support in inspected entity metadata; do not auto-publish.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q175303": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1987-04-16T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q175303"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "ambiguous",
+    "identity": "wyscout:8284",
+    "reason": "Multiple-club source (Everton/Burnley). Exact name and 1987-04-16 DOB agree; source passport country Ireland Republic differs from Wikidata UK citizenship. Leave unresolved; no inferred citizenship correction.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1987-04-16",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Aaron  Lennon"
+    ],
+    "source_nationalities": [
+      "Ireland Republic"
+    ],
+    "source_teams": [
+      "Burnley",
+      "Everton"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q119562": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1988-06-02T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q119562"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "ambiguous",
+    "identity": "wyscout:8325",
+    "reason": "Accented full source name and 1988-06-02 DOB; source Spain passport country differs from retrieved Argentina citizenship. Withhold unless discrepancy is separately documented.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1988-06-02",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Sergio Leonel Agüero del Castillo"
+    ],
+    "source_nationalities": [
+      "Spain"
+    ],
+    "source_teams": [
+      "Manchester City"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q83488": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1988-10-15T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q83488"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "deferred_size_budget",
+    "final_match_status": "verified",
+    "identity": "wyscout:3319",
+    "reason": "Exact accented name and 1988-10-15 DOB, source Germany compatible with recorded Germany/Turkey citizenship; footballer and historical Arsenal membership. One search candidate. Retain deterministic decision subject to Commons rights checks.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1988-10-15",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Mesut Özil"
+    ],
+    "source_nationalities": [
+      "Germany"
+    ],
+    "source_teams": [
+      "Arsenal"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q28378399": [],
+      "Q43913": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1984-01-23T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q43913",
+      "Q28378399"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "likely",
+    "identity": "wyscout:14727",
+    "reason": "Exact name and 1984-01-23 DOB; search also returns a news item. More than one candidate means no automatic publication. No approval added merely because one result is plausible.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1984-01-23",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Arjen Robben"
+    ],
+    "source_nationalities": [
+      "Netherlands"
+    ],
+    "source_teams": [
+      "Bayern M\\u00fcnchen"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q357984": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1991-06-28T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q52835665": [],
+      "Q97619278": []
+    },
+    "candidate_qids": [
+      "Q357984",
+      "Q52835665",
+      "Q97619278"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "likely",
+    "identity": "wyscout:38021",
+    "reason": "Exact name, 1991-06-28 DOB, Belgium and Manchester City context; three search results including a namesake item and cup. No automatic publication or new override.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1991-06-28",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Kevin De Bruyne"
+    ],
+    "source_nationalities": [
+      "Belgium"
+    ],
+    "source_teams": [
+      "Manchester City"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q102249829": [],
+      "Q119997": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1952-12-01T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q2426220": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1953-01-16T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q2426226": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1981-11-05T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q43666": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1989-09-13T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q2426220",
+      "Q43666",
+      "Q119997",
+      "Q2426226",
+      "Q102249829"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "likely",
+    "identity": "wyscout:14732",
+    "reason": "Common accented name with five candidates. Athlete DOB 1989-09-13 differs from 1953, 1952 and 1981 candidates. Still requires explicit approval; no new override.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1989-09-13",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Thomas Müller"
+    ],
+    "source_nationalities": [
+      "Germany"
+    ],
+    "source_teams": [
+      "Bayern M\\u00fcnchen"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q108757683": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1987-09-14T00:00:00Z",
+          "timezone": 0
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 9,
+          "time": "+1987-01-01T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q117041741": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+2001-10-09T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q24061542": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1997-11-13T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q56509370": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 9,
+          "time": "+1962-01-01T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q89614452": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 9,
+          "time": "+1981-01-01T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q24061542",
+      "Q89614452",
+      "Q56509370",
+      "Q108757683",
+      "Q117041741"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "likely",
+    "identity": "wyscout:337647",
+    "reason": "Common accented name with five candidates including footballer, politician and other sports context. Matching 1997-11-13 DOB alone does not override the multiple-candidate review rule.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1997-11-13",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Florian Müller"
+    ],
+    "source_nationalities": [
+      "Germany"
+    ],
+    "source_teams": [
+      "Mainz 05"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q13125957": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 9,
+          "time": "+1864-01-01T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q4885507": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1988-12-30T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q4888470": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1858-01-06T00:00:00Z",
+          "timezone": 0
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 9,
+          "time": "+1858-01-17T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q723161": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1981-05-27T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q93555": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1993-04-24T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q93555",
+      "Q4888470",
+      "Q13125957",
+      "Q723161",
+      "Q4885507"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "ambiguous",
+    "identity": "wyscout:136441",
+    "reason": "Common name: Welsh player DOB 1993-04-24 versus other footballer DOB 1981-05-27, singer and other contexts. Tottenham source context supports Q93555 but automatic publication remains blocked.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1993-04-24",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Ben Davies"
+    ],
+    "source_nationalities": [
+      "Wales"
+    ],
+    "source_teams": [
+      "Tottenham Hotspur"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q116480911": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1989-04-14T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q123707670": [],
+      "Q23844124": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1998-06-30T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q47129314": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1941-04-10T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q7815524": []
+    },
+    "candidate_qids": [
+      "Q23844124",
+      "Q47129314",
+      "Q7815524",
+      "Q116480911",
+      "Q123707670"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "ambiguous",
+    "identity": "wyscout:353236",
+    "reason": "Five search candidates; footballer source DOB 1998-06-30 versus other namesakes. No new manual approval; initials retained.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1998-06-30",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Tom Davies"
+    ],
+    "source_nationalities": [
+      "England"
+    ],
+    "source_teams": [
+      "Everton"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q59194": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1987-07-16T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q59194"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "ambiguous",
+    "identity": "wyscout:11152",
+    "reason": "Full accented name and 1987-07-16 DOB but source Mali passport country differs from retrieved Belgium citizenship. Withhold; do not silently repair provider metadata.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1987-07-16",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Moussa Sidi Yaya Dembélé"
+    ],
+    "source_nationalities": [
+      "Mali"
+    ],
+    "source_teams": [
+      "Tottenham Hotspur"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q141269840": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 9,
+          "time": "+1975-00-00T00:00:00Z",
+          "timezone": 0
+        }
+      ],
+      "Q20851003": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1997-05-15T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q20851003",
+      "Q141269840"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "ambiguous",
+    "identity": "wyscout:286390",
+    "reason": "Accented name, 1997-05-15 DOB, source Mauritania passport country versus retrieved France citizenship and an additional search candidate. Withhold.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1997-05-15",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Ousmane Dembélé"
+    ],
+    "source_nationalities": [
+      "Mauritania"
+    ],
+    "source_teams": [
+      "Barcelona"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q222151": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1986-09-08T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q222151"
+    ],
+    "decision": "excluded_metadata_quality",
+    "final_image_status": "not_verified",
+    "final_match_status": "excluded",
+    "identity": "wyscout:70093",
+    "reason": "Inspected Wikidata English label contains Moutinh0 (zero), a metadata-quality anomaly. Withhold imagery pending a separate metadata refresh/review; do not silently repair or trust a questionable record.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1986-09-08",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "João Filipe Iria Santos Moutinho"
+    ],
+    "source_nationalities": [
+      "Portugal"
+    ],
+    "source_teams": [
+      "Monaco"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "candidate_dobs": {
+      "Q5550103": [
+        {
+          "after": 0,
+          "before": 0,
+          "calendarmodel": "http://www.wikidata.org/entity/Q1985727",
+          "precision": 11,
+          "time": "+1992-04-07T00:00:00Z",
+          "timezone": 0
+        }
+      ]
+    },
+    "candidate_qids": [
+      "Q5550103"
+    ],
+    "decision": "metadata_inspected_no_override_added",
+    "final_image_status": "not_verified",
+    "final_match_status": "none",
+    "identity": "wyscout:5400",
+    "reason": "Full source name Gerard Moreno Balaguero; retrieved shorter label Gerard Moreno. Source DOB 1992-04-07, Spain and historical Espanyol context checked. Exact recorded alias must satisfy rule; no fuzzy-name exception.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata inspection",
+    "source_dob": "1992-04-07",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_names": [
+      "Gerard Moreno Balaguero"
+    ],
+    "source_nationalities": [
+      "Spain"
+    ],
+    "source_teams": [
+      "Espanyol"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "e5f9b652a4d824e506594066946ec9ff7db6ea0f11a98e3d7cb963e98acc8df2",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "Abha",
+        "Al Jazira Club",
+        "Barcelona S.C.",
+        "Ecuador men's national football team",
+        "FC Basel",
+        "FC Lokomotiv Moscow",
+        "Genoa CFC",
+        "Inter Milan",
+        "Levante UD",
+        "Manchester City F.C.",
+        "Málaga CF",
+        "RCD Espanyol de Barcelona",
+        "SS Lazio",
+        "Sporting CP"
+      ],
+      "club_qids": [
+        "Q189671",
+        "Q2074",
+        "Q248782",
+        "Q2609",
+        "Q2620016",
+        "Q29115",
+        "Q429630",
+        "Q50602",
+        "Q631",
+        "Q75729",
+        "Q8780",
+        "Q8823",
+        "Q8857",
+        "Q987584"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Ecuador",
+        "Spain"
+      ],
+      "country_qids": [
+        "Q29",
+        "Q736"
+      ],
+      "credible": true,
+      "dob": [
+        "1988-09-05"
+      ],
+      "images": [
+        "Felipe Caicedo 2015.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "felipe salvador caicedo corozo"
+      ],
+      "names": [
+        "Felipe Caicedo"
+      ],
+      "qid": "Q351473",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Felipe_Caicedo_2015.jpg",
+    "commons_metadata_sha256": "89a8763d73b199d39429da6445ed02d1eeb5c85a811c05f0105437e247d1521a",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:101635",
+    "name": "Felipe Salvador Caicedo Corozo",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "Guayaquil, 27 de may (Andes).-En el estadio Monumental de Guayaquil se enfrentarán el Barcelona de Ecuador contra el equipo español Real Club Deportivo Spanyol en el marco de la Copa Euroamericana, en la gráfica Felipe Caicedo y Sergio Gonzales DT.del Spanyol, durante la rueda de prensa. Foto:César Muñoz/Andes",
+      "attribution_links": [
+        "https://www.flickr.com/people/75116651@N03",
+        "https://www.flickr.com/photos/agenciaandes_ec/17982734309/"
+      ],
+      "author": "Agencia de Noticias ANDES",
+      "copyright_notice": "",
+      "credit": "COPA EUROAMERICANA",
+      "license_id": "CC-BY-SA-2.0",
+      "license_name": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1988-09-05",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Spain"
+    ],
+    "source_teams": [
+      "Lazio"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "02417489d56bb41dc557075715c2f588dabb661e6ee1fc02aa621771c43e52cb",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "Beşiktaş J.K.",
+        "Brazil national under-20 football team",
+        "FC Girondins de Bordeaux",
+        "Hannover 96",
+        "Olympique Lyonnais",
+        "PSV Eindhoven",
+        "Santos F.C.",
+        "Western Sydney Wanderers FC",
+        "Wisła Kraków"
+      ],
+      "club_qids": [
+        "Q11938",
+        "Q172476",
+        "Q172567",
+        "Q190943",
+        "Q2308235",
+        "Q33748",
+        "Q704",
+        "Q80955",
+        "Q999035"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Brazil"
+      ],
+      "country_qids": [
+        "Q155"
+      ],
+      "credible": true,
+      "dob": [
+        "1987-05-20"
+      ],
+      "images": [
+        "Marcelo Antônio Guedes Filho.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "marcelo antonio guedes filho"
+      ],
+      "names": [
+        "Marcelo Antônio Guedes Filho"
+      ],
+      "qid": "Q721804",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Marcelo_Ant%C3%B4nio_Guedes_Filho.jpg",
+    "commons_metadata_sha256": "61bce7a82e9ced01121b5c55ac5e90a77361ba9e0838dc4c8d4eb042bb4e5bd6",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:102",
+    "name": "Marcelo Antônio Guedes Filho",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/wiki/Flickr",
+        "https://www.flickr.com/people/61136163@N07",
+        "https://www.flickr.com/photos/61136163@N07/6170491062"
+      ],
+      "author": "nikontino",
+      "copyright_notice": "",
+      "credit": "Flickr : ALG_0528 (Large)",
+      "license_id": "CC-BY-2.0",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1987-05-20",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Brazil"
+    ],
+    "source_teams": [
+      "Olympique Lyonnais"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "9e6b29b779661b2fcfad9c0e8e728d31788bad6e80b116718c2b3c78b0989bce",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "AC Sparta Prague",
+        "Burnley F.C.",
+        "Esbjerg fB",
+        "FC Slovan Liberec",
+        "Manchester United F.C.",
+        "MŠK Žilina",
+        "Newcastle United F.C.",
+        "Slovakia men's national football team",
+        "Slovakia national under-19 football team",
+        "Slovakia national under-21 football team",
+        "Tottenham Hotspur F.C."
+      ],
+      "club_qids": [
+        "Q14749501",
+        "Q174512",
+        "Q18656",
+        "Q18716",
+        "Q18741",
+        "Q193481",
+        "Q19458",
+        "Q1969085",
+        "Q209640",
+        "Q221671",
+        "Q389879"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Slovakia"
+      ],
+      "country_qids": [
+        "Q214"
+      ],
+      "credible": true,
+      "dob": [
+        "1989-01-15"
+      ],
+      "images": [
+        "Martin Dubravka 2018.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "martin dubravka"
+      ],
+      "names": [
+        "Martin Dúbravka"
+      ],
+      "qid": "Q510401",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Martin_Dubravka_2018.jpg",
+    "commons_metadata_sha256": "9825e3f83d94ae0f9ea285b0620e53be895e151c02fbce667984580cb379578e",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:104851",
+    "name": "Martin Dúbravka",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://www.flickr.com/photos/cfcunofficial/42145808391/in/album-72157666990345507/"
+      ],
+      "author": "@cfcunofficial (Chelsea Debs) London",
+      "copyright_notice": "",
+      "credit": "https://www.flickr.com/photos/cfcunofficial/42145808391/in/album-72157666990345507/",
+      "license_id": "CC-BY-SA-2.0",
+      "license_name": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1989-01-15",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Slovakia"
+    ],
+    "source_teams": [
+      "Newcastle United"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "80f4e10a5d0b92ad49c4b9b9e0a1bbb4f9b14c75a96bcb1672b945ffa82178da",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "AS Roma",
+        "Armenia men's national football team",
+        "Armenia national under-17 football team",
+        "Armenia national under-19 football team",
+        "Armenia national under-21 football team",
+        "Arsenal F.C.",
+        "Borussia Dortmund",
+        "FC Metalurh Donetsk",
+        "FC Pyunik",
+        "FC Shakhtar Donetsk",
+        "Inter Milan",
+        "Manchester United F.C."
+      ],
+      "club_qids": [
+        "Q172969",
+        "Q183326",
+        "Q18656",
+        "Q244317",
+        "Q2739",
+        "Q3589745",
+        "Q388972",
+        "Q4139993",
+        "Q41420",
+        "Q631",
+        "Q684132",
+        "Q9617"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Armenia"
+      ],
+      "country_qids": [
+        "Q399"
+      ],
+      "credible": true,
+      "dob": [
+        "1989-01-21"
+      ],
+      "images": [
+        "Henrikh Mkhitaryan 2017.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "henrikh mkhitaryan"
+      ],
+      "names": [
+        "Henrikh Mkhitaryan"
+      ],
+      "qid": "Q196219",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Henrikh_Mkhitaryan_2017.jpg",
+    "commons_metadata_sha256": "4e62f5810cfaf3f52805058bde51b5608a6be2450794a2502bd3ec7bf44516df",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:105338",
+    "name": "Henrikh Mkhitaryan",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://www.soccer0010.com/galery/1013397/photo/673146"
+      ],
+      "author": "Дмитрий Голубович",
+      "copyright_notice": "",
+      "credit": "https://www.soccer0010.com/galery/1013397/photo/673146",
+      "license_id": "CC-BY-SA-3.0",
+      "license_name": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1989-01-21",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Armenia"
+    ],
+    "source_teams": [
+      "Arsenal",
+      "Manchester United"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "d188068a12f767d6abf782636b2826baf952f92cf98b5835bb88b3f502464faf",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "Antalyaspor",
+        "Bayer 04 Leverkusen",
+        "FC Dynamo Kyiv",
+        "FC Winterthur",
+        "FC Zürich",
+        "SC Freiburg",
+        "Switzerland men's national football team",
+        "Switzerland national under-16 association football team",
+        "Switzerland national under-17 association football team",
+        "Switzerland national under-19 association football team",
+        "Switzerland national under-20 association football team",
+        "Switzerland national under-21 football team",
+        "Switzerland national under-23 football team",
+        "VfL Wolfsburg"
+      ],
+      "club_qids": [
+        "Q101859",
+        "Q104761",
+        "Q106394",
+        "Q165141",
+        "Q179075",
+        "Q201969",
+        "Q206692",
+        "Q3873550",
+        "Q4140019",
+        "Q43710",
+        "Q650273",
+        "Q678582",
+        "Q7659182",
+        "Q769632"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Switzerland"
+      ],
+      "country_qids": [
+        "Q39"
+      ],
+      "credible": true,
+      "dob": [
+        "1991-03-16"
+      ],
+      "images": [
+        "Admir Mehmedi sign to Antalyaspor 20220114 2.jpg",
+        "Admir Mehmedi Switzerland.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "admir mehmedi"
+      ],
+      "names": [
+        "Admir Mehmedi"
+      ],
+      "qid": "Q358862",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Admir_Mehmedi_sign_to_Antalyaspor_20220114_2.jpg",
+    "commons_metadata_sha256": "00b235e0c74937f42f54b248253fc87154aa61a1d516288ac12139f49ed2d823",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:105619",
+    "name": "Admir Mehmedi",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://www.flickr.com/people/194383345@N04",
+        "https://www.flickr.com/photos/194383345@N04/51887264243/"
+      ],
+      "author": "Antalyaspor A.Ş.",
+      "copyright_notice": "",
+      "credit": "mehmedi (4)",
+      "license_id": "CC-BY-2.0",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1991-03-16",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Switzerland"
+    ],
+    "source_teams": [
+      "Bayer Leverkusen",
+      "Wolfsburg"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "7ad87983ad4adc915eb1d0f06def45afc41b1b4a652048aee5f75b252e545d2f",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "Al Hilal SFC",
+        "Atlético Madrid",
+        "Atlético Madrid B",
+        "Girona FC",
+        "Morocco men's national football team",
+        "Morocco national under-20 association football team",
+        "Morocco national under-21 football team",
+        "Real Zaragoza",
+        "Sevilla FC",
+        "Wydad Athletic Club"
+      ],
+      "club_qids": [
+        "Q10308",
+        "Q10329",
+        "Q1139095",
+        "Q11945",
+        "Q207337",
+        "Q2686567",
+        "Q3590714",
+        "Q73965",
+        "Q780539",
+        "Q8701"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Canada",
+        "Morocco"
+      ],
+      "country_qids": [
+        "Q1028",
+        "Q16"
+      ],
+      "credible": true,
+      "dob": [
+        "1991-04-05"
+      ],
+      "images": [
+        "Yassine Bono (cropped).jpg",
+        "Yassine Bounou Brazil V Morocco 13 June 2026-169.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "yassine bounou"
+      ],
+      "names": [
+        "Yassine Bounou"
+      ],
+      "qid": "Q3571952",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Yassine_Bono_(cropped).jpg",
+    "commons_metadata_sha256": "d8a30df12f0c3321fb2335af69274b3bfc5036c5b68b9e71dc64fa2df293e20e",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:120631",
+    "name": "Yassine Bounou",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [],
+      "author": "Laloumance",
+      "copyright_notice": "",
+      "credit": "Photo de Laloumance , transmise à l’utilisateur A.Nawfel ; autorisation envoyée à permissions-commons@wikimedia.org le 2025-09-10.",
+      "license_id": "CC-BY-4.0",
+      "license_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1991-04-05",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Morocco"
+    ],
+    "source_teams": [
+      "Girona"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "3d47698e8c574aafdc24e11d9769743db3ddcaa77993b6173a951bf033bc38f7",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "FK Borac Čačak",
+        "FK Crvena zvezda",
+        "Genoa CFC",
+        "Serbia men's national football team",
+        "Serbia national under-21 football team"
+      ],
+      "club_qids": [
+        "Q173009",
+        "Q182740",
+        "Q2074",
+        "Q2272209",
+        "Q754310"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Serbia"
+      ],
+      "country_qids": [
+        "Q403"
+      ],
+      "credible": true,
+      "dob": [
+        "1990-09-15"
+      ],
+      "images": [
+        "Darko Lazovic.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "darko lazovic"
+      ],
+      "names": [
+        "Darko Lazović"
+      ],
+      "qid": "Q63687",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Darko_Lazovic.jpg",
+    "commons_metadata_sha256": "f3dfe2ee8632e1c1731e15b20fa22c50b65e045adb5a4ca5b85dc43245501d23",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:127534",
+    "name": "Darko Lazović",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/wiki/User:Micki",
+        "https://en.wikipedia.org/wiki/sr:",
+        "https://en.wikipedia.org/wiki/sr:User:Walker",
+        "https://sr.wikipedia.org",
+        "https://tools.wikimedia.de/~magnus/commonshelper.php"
+      ],
+      "author": "Walker at Serbian Wikipedia",
+      "copyright_notice": "",
+      "credit": "Transferred from sr.wikipedia to Commons by Micki using CommonsHelper .",
+      "license_id": "PUBLIC-DOMAIN",
+      "license_name": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1990-09-15",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Serbia"
+    ],
+    "source_teams": [
+      "Genoa"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "b685e971031cf84d9f99923698417e6f3dac06c7eb1a659dd0954a9eeb4546b7",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "Empoli FC",
+        "Italy national under-17 football team",
+        "Italy national under-18 football team",
+        "Italy national under-19 football team",
+        "Italy national under-20 football team",
+        "Italy national under-21 football team",
+        "Juventus FC"
+      ],
+      "club_qids": [
+        "Q1422",
+        "Q2266580",
+        "Q2331232",
+        "Q3873513",
+        "Q3873548",
+        "Q6703",
+        "Q922698"
+      ],
+      "conflict": false,
+      "country_names": [
+        "Italy"
+      ],
+      "country_qids": [
+        "Q38"
+      ],
+      "credible": true,
+      "dob": [
+        "1994-07-29"
+      ],
+      "images": [
+        "Norway Italy - June 2025 A 27 (Daniele Rugani).jpg"
+      ],
+      "matched_names_or_aliases": [
+        "daniele rugani"
+      ],
+      "names": [
+        "Daniele Rugani"
+      ],
+      "qid": "Q15830919",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": true,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Norway_Italy_-_June_2025_A_27_(Daniele_Rugani).jpg",
+    "commons_metadata_sha256": "1f7132b53fc8c4b4850a263fc7ec2b01dd5bcea930e2c8974f4ef6a52ceb9854",
+    "composition": "Full supplied composition retained with proportional padding; no destructive crop. Full-body/event compositions remain uncropped.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:134427",
+    "name": "Daniele Rugani",
+    "reason": "Source name/recorded alias, exact DOB, compatible citizenship, footballer occupation and historical source club context inspected. Single candidate; no contradictory signal. Commons exact licence/URL and author/credit inspected. Image inspected only for composition and proportional uncropped rendering, never for identity or personal attributes.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/wiki/User:MichaelEmilio"
+      ],
+      "author": "MichaelEmilio",
+      "copyright_notice": "",
+      "credit": "Own work",
+      "license_id": "CC-BY-4.0",
+      "license_name": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_dob": "1994-07-29",
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "source_nationalities": [
+      "Italy"
+    ],
+    "source_teams": [
+      "Juventus"
+    ],
+    "visual_identity_inference": false
+  },
+  {
+    "asset_sha256": "39b897125b1e82c0f9b6a6453791bdd6cb8b27f1ebb3c1ca9fde7402b65b85e7",
+    "candidate": {
+      "automatic": true,
+      "club_names": [
+        "AS Monaco FC",
+        "France national under-17 association football team",
+        "France national under-18 association football team",
+        "France national under-19 association football team",
+        "France national under-20 association football team",
+        "France national under-21 association football team",
+        "Leicester City F.C.",
+        "OGC Nice"
+      ],
+      "club_qids": [
+        "Q1277549",
+        "Q1344163",
+        "Q1450557",
+        "Q1450568",
+        "Q180305",
+        "Q185163",
+        "Q19481",
+        "Q2701714"
+      ],
+      "conflict": false,
+      "country_names": [
+        "France",
+        "Senegal"
+      ],
+      "country_qids": [
+        "Q1041",
+        "Q142"
+      ],
+      "credible": true,
+      "dob": [
+        "1992-06-23"
+      ],
+      "images": [
+        "Nampalys Mendy ASSE RCL 2324.jpg"
+      ],
+      "matched_names_or_aliases": [
+        "nampalys mendy"
+      ],
+      "names": [
+        "Nampalys Mendy"
+      ],
+      "qid": "Q3335491",
+      "signals": {
+        "dob_conflict": false,
+        "dob_match": true,
+        "footballer": true,
+        "gender_conflict": false,
+        "historical_club_match": false,
+        "label_name_compatible": true,
+        "name_or_alias": true,
+        "nationality_conflict": false,
+        "nationality_match": true,
+        "uk_constituent_country_compatible": false
+      }
+    },
+    "commons": "https://commons.wikimedia.org/wiki/File:Nampalys_Mendy_ASSE_RCL_2324.jpg",
+    "composition": "Full supplied composition retained with proportional padding; no crop.",
+    "decision": "automatic_acceptance_audited",
+    "final_image_status": "published",
+    "final_match_status": "verified",
+    "identity": "wyscout:134542",
+    "name": "Nampalys Mendy",
+    "reason": "Exact name and 1992-06-23 birth date; source Senegal is included in France/Senegal citizenship metadata. Single footballer candidate. Source Nice agrees with historical OGC Nice context despite differing label strings. Explicit CC0 with official deed.en URL, named author, own-work credit and no restrictions. Full composition retained; no identity inferred from image. Photo date/kit is independent of the 2017/18 dataset season.",
+    "reviewed_at": "2026-10-01",
+    "reviewer": "Codex — explicit metadata and composition inspection",
+    "rights": {
+      "attribution": "",
+      "attribution_links": [
+        "https://commons.wikimedia.org/wiki/User:Pat%C3%A9_kroute"
+      ],
+      "author": "Paté kroute",
+      "copyright_notice": "",
+      "credit": "Own work",
+      "license_id": "CC0-1.0",
+      "license_name": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "transformation": "EXIF orientation; proportional resize and padding to 256×256; WebP conversion; no crop. Derived image retains the source licence."
+    },
+    "source_files": [
+      {
+        "path": "wyscout/players.json",
+        "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e"
+      }
+    ],
+    "visual_identity_inference": false
+  }
+]

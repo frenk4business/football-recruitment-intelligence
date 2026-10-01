@@ -1,0 +1,14 @@
+{
+  "approved_asset_files": 482,
+  "approved_image_bytes": 3964182,
+  "approved_manifest_bytes": 2896344,
+  "review_bytes": 5728624,
+  "all_enrichment_artifact_bytes": 12593201,
+  "new_working_files": 503,
+  "new_working_bytes": 12767261,
+  "approx_new_blob_zlib_bytes": 5258739,
+  "baseline_export_bytes": 57324260,
+  "export_bytes": 62541902,
+  "export_growth_bytes": 5217642,
+  "photo_profiles": 485
+}

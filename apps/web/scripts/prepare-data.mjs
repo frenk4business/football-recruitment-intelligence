@@ -1,3 +1,4 @@
+import { publishImages } from "./player-image-guard.mjs";
 import {
   validatePublication,
   validatePublicationPaths,
@@ -18,6 +19,7 @@ import {
   verifyScience,
 } from "./release-common.mjs";
 verifyScience();
+const playerImages = publishImages(root);
 const staticAssets = new Set([
   "brand/statsbomb.png",
   "brand/fri-horizontal.webp",
@@ -31,6 +33,9 @@ const staticAssets = new Set([
   "robots.txt",
   "skillcorner-license.txt",
   "release-manifest.json",
+  playerImages.path,
+  ...playerImages.creditPaths,
+  ...Object.values(playerImages.manifest.assets).map((a) => a.path),
 ]);
 const publicRoot = join(root, "apps/web/public");
 for (const path of walk(publicRoot)) {

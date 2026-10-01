@@ -1,4 +1,5 @@
 "use client";
+import { PlayerAvatar } from "./player-avatar";
 import { fetchArtifact } from "@/lib/artifact";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -910,7 +911,12 @@ function RecruitmentBoard({
                               <td className="rank-number">
                                 {r.rank.toString().padStart(2, "0")}
                               </td>
-                              <th scope="row">
+                              <th scope="row" className="candidate-identity">
+                                <PlayerAvatar
+                                  id={p.player_id}
+                                  name={p.name}
+                                  locale={locale}
+                                />
                                 <button
                                   className="candidate-name"
                                   onClick={() => {
@@ -1109,7 +1115,15 @@ function RecruitmentBoard({
                         <span className="eyebrow">
                           {p.role} · {p.teams.join(" / ")}
                         </span>
-                        <h3>{p.name}</h3>
+                        <h3 className="candidate-photo-heading">
+                          <PlayerAvatar
+                            id={p.player_id}
+                            name={p.name}
+                            locale={locale}
+                            size="medium"
+                          />
+                          {p.name}
+                        </h3>
                         {r.frontier && (
                           <p title={c.frontierNote}>{c.frontier}</p>
                         )}

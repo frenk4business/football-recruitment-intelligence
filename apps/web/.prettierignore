@@ -7,3 +7,5 @@ src/lib/recruitment-spec.json
 src/lib/release-version.json
 src/lib/artifact-integrity.json
 src/lib/profile-contracts.ts
+
+src/lib/player-image-reference.json

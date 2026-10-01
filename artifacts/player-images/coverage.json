@@ -1,0 +1,169 @@
+{
+  "groups": {
+    "statsbomb": {
+      "ambiguous": 23,
+      "images_not_verified": 1111,
+      "images_published": 7,
+      "likely": 1073,
+      "none": 15,
+      "verified": 7
+    },
+    "statsbomb-11-27": {
+      "ambiguous": 4,
+      "images_not_verified": 212,
+      "likely": 206,
+      "none": 2
+    },
+    "statsbomb-12-27": {
+      "ambiguous": 2,
+      "images_not_verified": 104,
+      "likely": 102
+    },
+    "statsbomb-135-281": {
+      "ambiguous": 2,
+      "images_not_verified": 167,
+      "likely": 162,
+      "none": 3
+    },
+    "statsbomb-2-27": {
+      "ambiguous": 11,
+      "images_not_verified": 317,
+      "likely": 302,
+      "none": 4
+    },
+    "statsbomb-37-281": {
+      "ambiguous": 4,
+      "images_not_verified": 196,
+      "images_published": 4,
+      "likely": 189,
+      "none": 3,
+      "verified": 4
+    },
+    "statsbomb-37-90": {
+      "ambiguous": 1,
+      "images_not_verified": 174,
+      "images_published": 4,
+      "likely": 169,
+      "none": 4,
+      "verified": 4
+    },
+    "wyscout": {
+      "ambiguous": 394,
+      "excluded": 1,
+      "images_deferred_size_budget": 390,
+      "images_error": 22,
+      "images_no_image": 87,
+      "images_not_verified": 836,
+      "images_published": 475,
+      "images_rejected_licence": 77,
+      "likely": 333,
+      "none": 108,
+      "verified": 1051
+    },
+    "wyscout-364-181150": {
+      "ambiguous": 113,
+      "images_deferred_size_budget": 93,
+      "images_error": 1,
+      "images_no_image": 2,
+      "images_not_verified": 217,
+      "images_published": 52,
+      "images_rejected_licence": 11,
+      "likely": 80,
+      "none": 24,
+      "verified": 159
+    },
+    "wyscout-412-181189": {
+      "ambiguous": 102,
+      "excluded": 1,
+      "images_deferred_size_budget": 57,
+      "images_error": 13,
+      "images_no_image": 17,
+      "images_not_verified": 164,
+      "images_published": 122,
+      "images_rejected_licence": 13,
+      "likely": 47,
+      "none": 14,
+      "verified": 222
+    },
+    "wyscout-426-181137": {
+      "ambiguous": 55,
+      "images_deferred_size_budget": 49,
+      "images_error": 3,
+      "images_no_image": 11,
+      "images_not_verified": 146,
+      "images_published": 100,
+      "images_rejected_licence": 34,
+      "likely": 79,
+      "none": 12,
+      "verified": 197
+    },
+    "wyscout-524-181248": {
+      "ambiguous": 59,
+      "images_deferred_size_budget": 58,
+      "images_error": 4,
+      "images_no_image": 29,
+      "images_not_verified": 137,
+      "images_published": 141,
+      "images_rejected_licence": 14,
+      "likely": 67,
+      "none": 11,
+      "verified": 246
+    },
+    "wyscout-795-181144": {
+      "ambiguous": 66,
+      "images_deferred_size_budget": 136,
+      "images_error": 1,
+      "images_no_image": 28,
+      "images_not_verified": 174,
+      "images_published": 62,
+      "images_rejected_licence": 7,
+      "likely": 60,
+      "none": 48,
+      "verified": 234
+    }
+  },
+  "identities_processed": 3005,
+  "image_status": {
+    "deferred_size_budget": 390,
+    "error": 22,
+    "no_image": 87,
+    "not_verified": 1947,
+    "published": 482,
+    "rejected_licence": 77
+  },
+  "licences": {
+    "CC-BY-2.0": 37,
+    "CC-BY-3.0": 26,
+    "CC-BY-4.0": 15,
+    "CC-BY-SA-2.0": 28,
+    "CC-BY-SA-3.0": 197,
+    "CC-BY-SA-4.0": 147,
+    "CC0-1.0": 23,
+    "PUBLIC-DOMAIN": 9
+  },
+  "match_status": {
+    "ambiguous": 417,
+    "excluded": 1,
+    "likely": 1406,
+    "none": 123,
+    "verified": 1058
+  },
+  "overrides_sha256": "e3e8b9ac4413c06c763f36bdc61c25fa761f7b9963b74237cc05591dac107e40",
+  "profiles": 3074,
+  "published_assets": 482,
+  "published_bytes": 3964182,
+  "published_identities": 482,
+  "rejected_licences": {
+    "Attribution": 4,
+    "CC BY 3.0": 2,
+    "CC BY 3.0 br": 2,
+    "CC BY 4.0": 1,
+    "CC BY-SA 3.0": 5,
+    "CC BY-SA 3.0 at": 9,
+    "CC BY-SA 3.0 ch": 2,
+    "CC BY-SA 4.0": 50,
+    "Copyrighted free use": 2
+  },
+  "source_index_sha256": "d1b1228c89de3fefcadc869b34bf67115d8168c3bd8e63289e1a1051710bff65",
+  "version": "player-images-v1"
+}

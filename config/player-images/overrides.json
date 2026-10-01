@@ -1,0 +1,88 @@
+{
+  "players": {
+    "statsbomb:10252": {
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/22936.json",
+        "https://www.wikidata.org/wiki/Q17615791"
+      ],
+      "reason": "Exact name; recorded female competition, England nationality and Manchester City WFC in 2020/21 agree with P21, England national-team context and P54 Manchester City from 2020. Same-name male player Q4717092 and non-football candidates rejected. Source has no DOB; explicit metadata review only, no face-based identity inference.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "verified",
+      "wikidata_id": "Q17615791"
+    },
+    "statsbomb:15555": {
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/19714.json",
+        "https://www.wikidata.org/wiki/Q48688219"
+      ],
+      "reason": "Exact name; female competition, England source nationality and Manchester City WFC in 2020/21 agree with female association-footballer metadata and P54 Manchester City. Source has no DOB; explicit metadata review only, no face-based identity inference.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "verified",
+      "wikidata_id": "Q48688219"
+    },
+    "statsbomb:15623": {
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/19717.json",
+        "https://www.wikidata.org/wiki/Q2754626"
+      ],
+      "reason": "Exact name; female competition, Netherlands source nationality and Arsenal WFC in 2020/21 agree with Wikidata citizenship, occupation and historical Arsenal membership. Source has no DOB; explicit metadata review only, no face-based identity inference.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "verified",
+      "wikidata_id": "Q2754626"
+    },
+    "statsbomb:18999": {
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/19722.json",
+        "https://www.wikidata.org/wiki/Q18129271"
+      ],
+      "reason": "Exact name; female competition, England source nationality and Arsenal WFC in both supplied seasons agree with occupation, England national-team context and Arsenal membership. Source has no DOB; explicit metadata review only, no face-based identity inference.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "verified",
+      "wikidata_id": "Q18129271"
+    },
+    "statsbomb:4641": {
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/19714.json",
+        "https://www.wikidata.org/wiki/Q17602414"
+      ],
+      "reason": "Source Francesca Kirby corresponds to the recorded Fran Kirby alias; female competition, England nationality and Chelsea in 2023/24 agree with Wikidata association-footballer and Chelsea 2015–2024 membership. Source has no DOB; explicit metadata review only, no face-based identity inference.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "verified",
+      "wikidata_id": "Q17602414"
+    },
+    "statsbomb:4642": {
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/19714.json",
+        "https://www.wikidata.org/wiki/Q23021129"
+      ],
+      "reason": "Exact name; female competition and Chelsea in 2023/24 agree with recorded female association-footballer and Chelsea membership 2015–2026; England source nationality is compatible with UK citizenship. Source has no DOB; explicit metadata review only, no face-based identity inference.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "verified",
+      "wikidata_id": "Q23021129"
+    },
+    "statsbomb:47521": {
+      "evidence_urls": [
+        "https://raw.githubusercontent.com/hudl/open-data/4b73468fc5b0f1950f9f66fada70ad3a4f9327cb/data/lineups/3764237.json",
+        "https://www.wikidata.org/wiki/Q27450000"
+      ],
+      "reason": "Exact name; female competition, England nationality and Arsenal in 2023/24 agree with Wikidata footballer, England national-team and Arsenal membership from 2023. Same-name gymnast Q16525261, academic and other entities rejected. Source has no DOB; explicit metadata review only, no face-based identity inference.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "verified",
+      "wikidata_id": "Q27450000"
+    },
+    "wyscout:70093": {
+      "reason": "Inspected Wikidata English label contains Moutinh0 (zero), a metadata-quality anomaly. Withhold imagery pending a separate metadata refresh/review; do not silently repair or trust a questionable record.",
+      "reviewed_at": "2026-10-01",
+      "reviewer": "Codex — explicit metadata inspection",
+      "status": "excluded"
+    }
+  },
+  "version": 1
+}
