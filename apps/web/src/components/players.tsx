@@ -19,6 +19,7 @@ import {
   readFilters,
   type PlayerFilters,
 } from "@/lib/player-search";
+import { ProfileStyle } from "./profile-style";
 import { playersCopy } from "@/lib/players-copy";
 const repo =
   "https://github.com/frenk4business/football-recruitment-intelligence";
@@ -406,10 +407,15 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     : "Terug naar resultaten"}
                 </button>
               </div>
-              <p>{context(selected)}</p>
-              <p className="small">
+              <p>
+                {selected.teams.map((t) => index.teams[t]).join(" / ")} ·{" "}
                 {roleName(selected.role ?? selected.role_family)} ·{" "}
-                {number(selected.minutes)} {c.minutes.toLowerCase()}
+                {scopes.get(selected.scope)?.competition} ·{" "}
+                {scopes.get(selected.scope)?.season}
+              </p>
+              <p className="small">
+                {number(selected.minutes)} {c.minutes.toLowerCase()} ·{" "}
+                {providerName(selected.provider)}
               </p>
               {(profile?.error || registry?.error || comparison?.error) && (
                 <p role="alert">
@@ -427,24 +433,6 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     {profile.data.first_date} – {profile.data.last_date}.{" "}
                     {selected.teams.length > 1 && c.shared}
                   </p>
-                  <div
-                    className="profile-capabilities"
-                    aria-label={c.capabilities}
-                  >
-                    {(
-                      [
-                        [c.native, true],
-                        [c.common, selected.capabilities.common],
-                        [c.similarity, selected.capabilities.similarity],
-                        [c.dna, selected.capabilities.validated_dna],
-                        [c.translation, selected.capabilities.translation],
-                      ] as const
-                    ).map(([label, available]) => (
-                      <p key={label}>
-                        {label}: <strong>{available ? c.yes : c.no}</strong>
-                      </p>
-                    ))}
-                  </div>
                   {state.compare && (
                     <div className="notice">
                       <h3>
@@ -464,40 +452,86 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                       )}
                     </div>
                   )}
-                  <h3>{c.common}</h3>
-                  <p>{c.commonNote}</p>
-                  {profile.data.common ? (
-                    comparison?.data && !comparison.data.common ? (
-                      <p className="notice">{c.unsupported}</p>
-                    ) : (
-                      metrics(
-                        registry.data.features,
-                        profile.data.common,
-                        comparison?.data?.common ?? undefined,
-                      )
-                    )
-                  ) : (
-                    <p className="notice">
-                      {state.compare ? c.unsupported : c.unavailableCommon}
+                  <nav
+                    className="profile-sections"
+                    aria-label={
+                      locale === "en" ? "Profile sections" : "Profielonderdelen"
+                    }
+                  >
+                    <a href="#profile-detail">
+                      {locale === "en" ? "Overview" : "Overzicht"}
+                    </a>
+                    <a href="#playing-style">
+                      {locale === "en" ? "Playing style" : "Speelstijl"}
+                    </a>
+                    <a href="#similar-players">
+                      {locale === "en"
+                        ? "Similar players"
+                        : "Vergelijkbare spelers"}
+                    </a>
+                    <a href="#profile-quality">
+                      {locale === "en" ? "Data quality" : "Datakwaliteit"}
+                    </a>
+                  </nav>
+                  <section id="playing-style">
+                    <h3>{locale === "en" ? "Playing style" : "Speelstijl"}</h3>
+                    {profile.data.dna_player_id &&
+                      selected.capabilities.validated_dna && (
+                        <ProfileStyle
+                          locale={locale}
+                          id={profile.data.dna_player_id}
+                        />
+                      )}
+                    <h4>{c.common}</h4>
+                    <p className="small">
+                      {locale === "en"
+                        ? "Three harmonised metrics. Cross-provider rankings are not available."
+                        : "Drie geharmoniseerde kenmerken. Ranglijsten tussen providers zijn niet beschikbaar."}
                     </p>
-                  )}
-                  <p className="small">{c.disclaimer}</p>
-                  <details className="native-details">
-                    <summary>
-                      {c.native} · {profile.data.version}
-                    </summary>
-                    <p>{c.nativeNote}</p>
-                    {metrics(
-                      registry.data[selected.provider],
-                      profile.data.native,
-                      comparison?.data?.identity.provider === selected.provider
-                        ? comparison.data.native
-                        : undefined,
+                    {profile.data.common ? (
+                      comparison?.data && !comparison.data.common ? (
+                        <p className="notice">{c.unsupported}</p>
+                      ) : (
+                        metrics(
+                          registry.data.features,
+                          profile.data.common,
+                          comparison?.data?.common ?? undefined,
+                        )
+                      )
+                    ) : (
+                      <p className="notice">
+                        {state.compare ? c.unsupported : c.unavailableCommon}
+                      </p>
                     )}
-                  </details>
-                  <details>
-                    <summary>{c.neighbours}</summary>
-                    <p>{c.neighboursNote}</p>
+
+                    <details
+                      className="native-details"
+                      open={
+                        !state.compare && !selected.capabilities.validated_dna
+                      }
+                    >
+                      <summary>
+                        {locale === "en"
+                          ? "All provider metrics"
+                          : "Alle providerkenmerken"}
+                      </summary>
+                      <p>{c.nativeNote}</p>
+                      {metrics(
+                        registry.data[selected.provider],
+                        profile.data.native,
+                        comparison?.data?.identity.provider ===
+                          selected.provider
+                          ? comparison.data.native
+                          : undefined,
+                      )}
+                    </details>
+                  </section>
+                  <section id="similar-players">
+                    <h3>
+                      {locale === "en"
+                        ? "Similar players"
+                        : "Vergelijkbare spelers"}
+                    </h3>
                     {profile.data.neighbours.length ? (
                       <ol className="profile-neighbours">
                         {profile.data.neighbours.map((n) => (
@@ -505,7 +539,10 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                             <button onClick={() => update({ compare: n.id })}>
                               {byId.get(n.id)?.name}
                             </button>{" "}
-                            · {c.distance}: {number(n.distance, 3)}
+                            <details>
+                              <summary>{c.distance}</summary>
+                              {number(n.distance, 3)}
+                            </details>
                             <small>
                               {byId.has(n.id) && context(byId.get(n.id)!)}
                             </small>
@@ -515,9 +552,46 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     ) : (
                       <p>{c.noNeighbours}</p>
                     )}
-                  </details>
-                  <details>
-                    <summary>{c.source}</summary>
+                    <details>
+                      <summary>
+                        {locale === "en"
+                          ? "How these profiles are compared"
+                          : "Hoe deze profielen worden vergeleken"}
+                      </summary>
+                      <p>{c.neighboursNote}</p>
+                    </details>
+                  </section>
+                  <details id="profile-quality">
+                    <summary>
+                      {locale === "en"
+                        ? "Data quality & methodology"
+                        : "Datakwaliteit & methodologie"}
+                    </summary>{" "}
+                    <div
+                      className="profile-capabilities"
+                      aria-label={c.capabilities}
+                    >
+                      {(
+                        [
+                          [c.native, true],
+                          [c.common, selected.capabilities.common],
+                          [c.similarity, selected.capabilities.similarity],
+                          [c.dna, selected.capabilities.validated_dna],
+                          [
+                            locale === "en"
+                              ? "Recruitment validation"
+                              : "Recruitmentvalidatie",
+                            selected.capabilities.validated_dna,
+                          ],
+                          [c.translation, selected.capabilities.translation],
+                        ] as const
+                      ).map(([label, available]) => (
+                        <p key={label}>
+                          {label}: <strong>{available ? c.yes : c.no}</strong>
+                        </p>
+                      ))}
+                    </div>
+                    <p>{c.disclaimer}</p>
                     <dl>
                       <dt>{c.nativeVersion}</dt>
                       <dd>{profile.data.version}</dd>
@@ -560,7 +634,15 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                   </details>
                   {profile.data.dna_player_id && (
                     <p>
-                      <a href={route(locale, "player-dna")}>{c.dna} ↗</a>
+                      <a
+                        href={
+                          route(locale, "player-dna") +
+                          "?player=" +
+                          profile.data.dna_player_id
+                        }
+                      >
+                        {c.dna} ↗
+                      </a>
                     </p>
                   )}
                 </>
