@@ -74,10 +74,12 @@ export async function fetchArtifact<T>(
   const hashes = await manifest;
   boundedSignal.throwIfAborted();
   if (!Object.hasOwn(hashes, path)) throw new Error("Unknown artifact");
-  return (await verifiedJSON(
+  const value = await verifiedJSON(
     `${path}?v=${hashes[path]}`,
     hashes[path],
     boundedSignal,
     3_000_000,
-  )) as T;
+  );
+  boundedSignal.throwIfAborted();
+  return value as T;
 }

@@ -1,5 +1,27 @@
 import { expect, type Page } from "@playwright/test";
 export async function expectNoOverflow(page: Page) {
+  const removals = await page.evaluate(() => {
+    if (document.documentElement.scrollWidth <= innerWidth) return [];
+    const result = [];
+    for (const e of document.querySelectorAll<HTMLElement>(
+      "main section,main div,main select,main svg,main details,main table,main input,main h2,main h3",
+    )) {
+      const old = e.style.getPropertyValue("display"),
+        priority = e.style.getPropertyPriority("display");
+      e.style.setProperty("display", "none", "important");
+      const width = document.documentElement.scrollWidth;
+      if (old) e.style.setProperty("display", old, priority);
+      else e.style.removeProperty("display");
+      if (width <= innerWidth)
+        result.push({
+          tag: e.tagName,
+          class: e.className,
+          label: e.getAttribute("aria-label"),
+          text: e.textContent?.slice(0, 80),
+        });
+    }
+    return result.slice(-15);
+  });
   const report = await page.evaluate(() => ({
     route: location.pathname,
     viewport: innerWidth,
@@ -54,7 +76,8 @@ export async function expectNoOverflow(page: Page) {
             }))
         : [],
   }));
-  expect(report.scrollWidth, JSON.stringify(report)).toBeLessThanOrEqual(
-    report.viewport,
-  );
+  expect(
+    report.scrollWidth,
+    JSON.stringify({ ...report, removals }),
+  ).toBeLessThanOrEqual(report.viewport);
 }
