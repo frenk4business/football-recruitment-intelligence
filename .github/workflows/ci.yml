@@ -89,6 +89,10 @@ jobs:
         with:
           name: static-release
           path: apps/web/out
+      - name: Use official Ubuntu HTTPS package mirrors
+        # Azure's preferred mirror can stall for over 25 minutes (runner-images#12949).
+        # Retain the runner's signed Ubuntu archive/security mirrors and all checks.
+        run: sudo sed -i '\|^http://azure\.archive\.ubuntu\.com/ubuntu/|d' /etc/apt/apt-mirrors.txt
       - run: npx playwright install --with-deps ${{ matrix.browser }}
       - run: npm run test:smoke -- --project=${{ matrix.browser }}
       - uses: actions/upload-artifact@v4
