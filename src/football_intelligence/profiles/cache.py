@@ -16,9 +16,17 @@ def checksum(path: Path, algorithm: str = "sha256") -> str:
 
 def write_json(path: Path, value, *, compact: bool = False):
     path.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(value, ensure_ascii=False, allow_nan=False, sort_keys=True,
-                      separators=(",", ":") if compact else None,
-                      indent=None if compact else 2) + "\n"
+    text = (
+        json.dumps(
+            value,
+            ensure_ascii=False,
+            allow_nan=False,
+            sort_keys=True,
+            separators=(",", ":") if compact else None,
+            indent=None if compact else 2,
+        )
+        + "\n"
+    )
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(text)
     temporary.replace(path)
@@ -29,9 +37,16 @@ class Cache:
         self.root = root
         self.client = httpx.Client(timeout=120, follow_redirects=True)
 
-    def get(self, relative: str, url: str, *, sha256: str | None = None,
-            md5: str | None = None, limit: int = 30_000_000,
-            seed: Path | None = None) -> Path:
+    def get(
+        self,
+        relative: str,
+        url: str,
+        *,
+        sha256: str | None = None,
+        md5: str | None = None,
+        limit: int = 30_000_000,
+        seed: Path | None = None,
+    ) -> Path:
         path = self.root / relative
         if Path(relative).is_absolute() or ".." in Path(relative).parts:
             raise ValueError("Unsafe cache path")
@@ -44,8 +59,9 @@ class Cache:
                 raise ValueError(f"Unverifiable cached source: {relative}")
             expected = sha256 or record["sha256"]
         elif seed and seed.exists() and (sha256 or md5):
-            if ((not sha256 or checksum(seed) == sha256)
-                    and (not md5 or checksum(seed, "md5") == md5)):
+            if (not sha256 or checksum(seed) == sha256) and (
+                not md5 or checksum(seed, "md5") == md5
+            ):
                 shutil.copyfile(seed, path)
         if not path.exists():
             partial = path.with_suffix(path.suffix + ".part")
@@ -59,7 +75,9 @@ class Cache:
                             continue
                         response.raise_for_status()
                         resume = response.status_code == 206 and offset > 0
-                        if resume and not response.headers.get("content-range", "").startswith(f"bytes {offset}-"):
+                        if resume and not response.headers.get("content-range", "").startswith(
+                            f"bytes {offset}-"
+                        ):
                             raise ValueError("Invalid resume range")
                         total = offset if resume else 0
                         with partial.open("ab" if resume else "wb") as stream:
@@ -81,8 +99,9 @@ class Cache:
             raise ValueError(f"Source SHA256 mismatch: {relative}")
         if md5 and checksum(path, "md5") != md5:
             raise ValueError(f"Upstream MD5 mismatch: {relative}")
-        write_json(sidecar, dict(url=url, sha256=digest, bytes=path.stat().st_size,
-                                upstream_md5=md5))
+        write_json(
+            sidecar, dict(url=url, sha256=digest, bytes=path.stat().st_size, upstream_md5=md5)
+        )
         return path
 
     def json(self, relative: str, url: str, **kwargs):
