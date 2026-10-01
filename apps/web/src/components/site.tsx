@@ -1,3 +1,4 @@
+import { ProductHome, ResearchHub } from "./product-home";
 import { ProductNavigation } from "./product-navigation";
 import { Players } from "./players";
 import { ProfileCoverage, ProfileMethodology } from "./profile-coverage";
@@ -80,129 +81,7 @@ export function Site({
           </p>
         </noscript>
         {section === "home" ? (
-          <>
-            <section className="hero">
-              <div>
-                <p className="eyebrow">
-                  <span className="status-dot" />
-                  {c.phase}
-                </p>
-                <h1>{c.title}</h1>
-                <p className="lead">{c.intro}</p>
-                <div className="hero-links">
-                  <Link
-                    prefetch={false}
-                    className="primary-link"
-                    href={route(locale, "players")}
-                  >
-                    {c.open}
-                    <span aria-hidden="true">↗</span>
-                  </Link>
-                  <Link
-                    prefetch={false}
-                    className="text-link"
-                    href={route(locale, "methodology")}
-                  >
-                    {c.methods}
-                  </Link>
-                </div>
-              </div>
-              <aside className="hero-aside">
-                <span className="large-number">
-                  05<span>/05</span>
-                </span>
-                <p>{c.noModels}</p>
-                <div className="mini-field" aria-hidden="true">
-                  <span />
-                </div>
-                <p className="small">{c.limitations}</p>
-              </aside>
-            </section>
-            <section className="sample-section">
-              <div className="section-heading">
-                <p className="eyebrow">
-                  {locale === "en" ? "SOURCE REGISTER" : "BRONNENREGISTER"}
-                </p>
-                <h2>{c.sample}</h2>
-                <p>{c.sampleIntro}</p>
-              </div>
-              <div className="table-wrap">
-                <table className="source-table">
-                  <caption className="sr-only">{c.sample}</caption>
-                  <thead>
-                    <tr>
-                      <th>{c.source}</th>
-                      <th>{c.match}</th>
-                      <th>{c.competition}</th>
-                      <th>{c.records}</th>
-                      <th>
-                        <span className="sr-only">{c.open}</span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {providers.map((s) => {
-                      const m = games.find((g) => g.provider === s.id)!,
-                        v = cov.providers.find((v) => v.provider === s.id)!;
-                      return (
-                        <tr key={s.id}>
-                          <th scope="row">
-                            {s.name}
-                            <small>
-                              {s.id === "statsbomb"
-                                ? "JSON / Events"
-                                : "JSONL / Tracking"}
-                            </small>
-                          </th>
-                          <td>
-                            {m.home}
-                            <br />
-                            {m.away}
-                          </td>
-                          <td>
-                            {m.competition}
-                            <small>{m.season}</small>
-                          </td>
-                          <td>
-                            <strong>
-                              {(
-                                v.events ??
-                                v.tracking_frames ??
-                                0
-                              ).toLocaleString(locale)}
-                            </strong>
-                            <small>
-                              {v.events !== null ? c.eventRecords : c.frames}
-                            </small>
-                          </td>
-                          <td>
-                            <Link
-                              prefetch={false}
-                              href={route(locale, "explorer")}
-                              aria-label={`${c.open}: ${s.name}`}
-                            >
-                              ↗
-                            </Link>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </section>
-            <section className="pipeline-section">
-              <h2>{c.pipelineTitle}</h2>
-              <ol>
-                {c.pipeline.map((p, i) => (
-                  <li key={p}>
-                    <span>0{i + 1}</span>
-                    {p}
-                  </li>
-                ))}
-              </ol>
-            </section>
-          </>
+          <ProductHome locale={locale} />
         ) : (
           <div className="page-heading">
             <h1>
@@ -249,10 +128,104 @@ export function Site({
             </p>
           </div>
         )}
-        {section === "players" && <Players locale={locale} />}
-        {(section === "home" || section === "coverage") && (
-          <ProfileCoverage locale={locale} compact={section === "home"} />
+        {section === "research" && (
+          <>
+            <ResearchHub locale={locale} />
+            <details className="research-register">
+              <summary>
+                {locale === "en"
+                  ? "Source register & ingestion pipeline"
+                  : "Bronnenregister & dataverwerking"}
+              </summary>{" "}
+              <section className="sample-section">
+                <div className="section-heading">
+                  <p className="eyebrow">
+                    {locale === "en" ? "SOURCE REGISTER" : "BRONNENREGISTER"}
+                  </p>
+                  <h2>{c.sample}</h2>
+                  <p>{c.sampleIntro}</p>
+                </div>
+                <div className="table-wrap">
+                  <table className="source-table">
+                    <caption className="sr-only">{c.sample}</caption>
+                    <thead>
+                      <tr>
+                        <th>{c.source}</th>
+                        <th>{c.match}</th>
+                        <th>{c.competition}</th>
+                        <th>{c.records}</th>
+                        <th>
+                          <span className="sr-only">{c.open}</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {providers.map((s) => {
+                        const m = games.find((g) => g.provider === s.id)!,
+                          v = cov.providers.find((v) => v.provider === s.id)!;
+                        return (
+                          <tr key={s.id}>
+                            <th scope="row">
+                              {s.name}
+                              <small>
+                                {s.id === "statsbomb"
+                                  ? "JSON / Events"
+                                  : "JSONL / Tracking"}
+                              </small>
+                            </th>
+                            <td>
+                              {m.home}
+                              <br />
+                              {m.away}
+                            </td>
+                            <td>
+                              {m.competition}
+                              <small>{m.season}</small>
+                            </td>
+                            <td>
+                              <strong>
+                                {(
+                                  v.events ??
+                                  v.tracking_frames ??
+                                  0
+                                ).toLocaleString(locale)}
+                              </strong>
+                              <small>
+                                {v.events !== null ? c.eventRecords : c.frames}
+                              </small>
+                            </td>
+                            <td>
+                              <Link
+                                prefetch={false}
+                                href={route(locale, "explorer")}
+                                aria-label={`${c.open}: ${s.name}`}
+                              >
+                                ↗
+                              </Link>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section className="pipeline-section">
+                <h2>{c.pipelineTitle}</h2>
+                <ol>
+                  {c.pipeline.map((p, i) => (
+                    <li key={p}>
+                      <span>0{i + 1}</span>
+                      {p}
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            </details>
+          </>
         )}
+        {section === "players" && <Players locale={locale} />}
+        {section === "coverage" && <ProfileCoverage locale={locale} />}
         {section === "methodology" && <ProfileMethodology locale={locale} />}
         {section === "recruitment" && <Recruitment locale={locale} />}
         {section === "translation" && (
@@ -266,7 +239,7 @@ export function Site({
             evaluation={dnaEvaluation()}
           />
         )}
-        {(section === "coverage" || section === "home") && (
+        {section === "coverage" && (
           <section className="provenance">
             <h2>
               {locale === "en"
