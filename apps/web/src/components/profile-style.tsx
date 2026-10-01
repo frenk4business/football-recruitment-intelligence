@@ -43,7 +43,7 @@ export function ProfileStyle({ id, locale }: { id: string; locale: Locale }) {
     );
   if (loaded?.id !== id)
     return (
-      <p role="status">
+      <p className="detail-skeleton" role="status">
         {locale === "en" ? "Loading playing style…" : "Speelstijl laden…"}
       </p>
     );
@@ -52,6 +52,25 @@ export function ProfileStyle({ id, locale }: { id: string; locale: Locale }) {
   const features = loaded.profile.features.filter(
     (f) => f.percentile !== null && definitions.get(f.id)?.core,
   );
+  const families: Record<string, [string, string]> = {
+    creation: ["Chance creation", "Kansen creëren"],
+    shooting: ["Shooting", "Schieten"],
+    passing: ["Passing", "Passing"],
+    carrying: ["Ball carrying", "Dribbelen"],
+    defending: ["Defensive activity", "Verdedigende acties"],
+    possession: ["Possession", "Balbezit"],
+    pressing: ["Pressing", "Druk zetten"],
+  };
+  // Presentation selection only: two observed core metrics per family, up to ten.
+  const seen = new Map<string, number>();
+  const featured = features
+    .filter((f) => {
+      const family = definitions.get(f.id)!.family;
+      const n = seen.get(family) ?? 0;
+      seen.set(family, n + 1);
+      return n < 2;
+    })
+    .slice(0, 10);
   const bars = (items: typeof features) => (
     <div className="profile-style-bars">
       {items.map((f) => (
@@ -82,14 +101,27 @@ export function ProfileStyle({ id, locale }: { id: string; locale: Locale }) {
           ? "Role-relative percentiles · WSL 2023/24"
           : "Percentielen binnen de rol · WSL 2023/24"}
       </p>
-      {bars(features.slice(0, 8))}
+      <div className="style-families">
+        {[...new Set(featured.map((f) => definitions.get(f.id)!.family))].map(
+          (family) => (
+            <section key={family}>
+              <h4>{families[family]?.[locale === "en" ? 0 : 1] ?? family}</h4>
+              {bars(
+                featured.filter(
+                  (f) => definitions.get(f.id)!.family === family,
+                ),
+              )}
+            </section>
+          ),
+        )}
+      </div>
       <details>
         <summary>
           {locale === "en"
             ? "Show all metrics & observed rates"
             : "Alle kenmerken & geobserveerde waarden"}
         </summary>
-        {bars(features.slice(8))}
+        {bars(features.filter((f) => !featured.includes(f)))}
         <dl>
           {features.map((f) => (
             <div key={f.id}>

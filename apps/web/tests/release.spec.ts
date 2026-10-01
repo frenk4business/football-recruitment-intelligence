@@ -35,14 +35,12 @@ for (const locale of ["en", "nl"]) {
           ),
         )
         .toBe(
-          width <= 760
-            ? "/brand/fri-emblem.webp"
-            : "/brand/fri-horizontal.webp",
+          width <= 760 ? "/brand/fri-emblem.webp" : "/brand/fri-sidebar.webp",
         );
       const box = (await mark.boundingBox())!;
       expect(box.width).toBeLessThanOrEqual(200);
       expect(box.height).toBeGreaterThanOrEqual(40);
-      expect(box.height).toBeLessThanOrEqual(64);
+      expect(box.height).toBeLessThanOrEqual(width <= 760 ? 44 : 75);
       const aspect = await mark.evaluate(
         (e: HTMLImageElement) => e.naturalWidth / e.naturalHeight,
       );

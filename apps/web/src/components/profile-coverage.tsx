@@ -46,7 +46,12 @@ export function ProfileCoverage({
       </p>
       {!compact && (
         <>
-          <div className="table-wrap">
+          <div
+            className="table-wrap"
+            tabIndex={0}
+            role="region"
+            aria-label={locale === "en" ? "Coverage table" : "Dekkingstabel"}
+          >
             <table>
               <caption className="sr-only">{c.coverageTitle}</caption>
               <thead>

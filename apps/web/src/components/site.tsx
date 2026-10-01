@@ -1,4 +1,5 @@
 import { ProductHome, ResearchHub } from "./product-home";
+import { GlobalSearch } from "./global-search";
 import { ProductNavigation } from "./product-navigation";
 import {
   Players,
@@ -51,6 +52,12 @@ export function Site({
           >
             <picture>
               <source
+                media="(min-width: 761px)"
+                srcSet="/brand/fri-sidebar.webp"
+                width={180}
+                height={75}
+              />
+              <source
                 media="(max-width: 760px)"
                 srcSet="/brand/fri-emblem.webp"
                 width={44}
@@ -76,6 +83,9 @@ export function Site({
           </a>
         </div>
       </header>
+      <div className="app-topbar">
+        <GlobalSearch locale={locale} />
+      </div>
       <main id="main" tabIndex={-1}>
         <noscript>
           <p className="notice">

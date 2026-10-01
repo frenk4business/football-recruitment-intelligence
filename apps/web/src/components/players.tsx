@@ -12,6 +12,7 @@ import type {
 } from "@/lib/profile-contracts";
 import {
   defaults,
+  normalizeName,
   detailPath,
   filterProfiles,
   filterURL,
@@ -70,6 +71,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
       : readFilters(new URLSearchParams(window.location.search), index),
   );
   const [retry, setRetry] = useState(0);
+  const [comparisonQuery, setComparisonQuery] = useState("");
   const detailRef = useRef<HTMLElement>(null);
   const lastOpened = useRef("");
   useEffect(() => {
@@ -82,10 +84,11 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   useEffect(() => {
     if (
       state.profile &&
-      `${state.profile}:${state.compare}` !== lastOpened.current
+      `${state.profile}:${state.compare}:${state.compare2}` !==
+        lastOpened.current
     ) {
       detailRef.current?.focus();
-      lastOpened.current = `${state.profile}:${state.compare}`;
+      lastOpened.current = `${state.profile}:${state.compare}:${state.compare2}`;
     }
     if (!state.profile && lastOpened.current) {
       const previous = lastOpened.current.split(":")[0];
@@ -113,10 +116,15 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
       new Map(index.profiles.map((p) => [p.id, profileSearchText(index, p)])),
     [index],
   );
-  const results = useMemo(
-    () => filterProfiles(index, state, names),
-    [index, state, names],
-  );
+  const results = useMemo(() => {
+    const found = filterProfiles(index, state, names);
+    return state.sort === "minutes"
+      ? found.toSorted(
+          (a, b) =>
+            b.minutes - a.minutes || a.name.localeCompare(b.name, locale),
+        )
+      : found.toSorted((a, b) => a.name.localeCompare(b.name, locale));
+  }, [index, state, names, locale]);
   const pages = Math.max(1, Math.ceil(results.length / 50));
   const page = Math.min(state.page, pages);
   const rows = results.slice((page - 1) * 50, page * 50);
@@ -137,6 +145,21 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
     state.compare && selected ? detailPath(state.compare) : null,
     retry,
   );
+  const comparison2 = useData<ProfileDetail>(
+    state.compare2 && selected ? detailPath(state.compare2) : null,
+    retry,
+  );
+  const addComparison = (id: string) => {
+    if (
+      !id ||
+      id === state.profile ||
+      id === state.compare ||
+      id === state.compare2
+    )
+      return;
+    if (!state.compare) update({ compare: id }, true);
+    else if (!state.compare2) update({ compare2: id }, true);
+  };
   const registry = useData<ProfileRegistry>(
     selected ? "/data/v11/registry.json" : null,
     retry,
@@ -148,9 +171,15 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   const roleName = (key: string) => c.roles[key as keyof typeof c.roles] ?? key;
   const context = (p: ProfileIndexEntry) =>
     `${providerName(p.provider)} · ${scopes.get(p.scope)?.competition} ${scopes.get(p.scope)?.season} · ${p.teams.map((t) => index.teams[t]).join(" / ")}`;
-  const open = (id: string) => update({ profile: id, compare: "" }, true);
+  const open = (id: string) =>
+    update({ profile: id, compare: "", compare2: "" }, true);
   const reset = () =>
-    update({ ...defaults, profile: state.profile, compare: state.compare });
+    update({
+      ...defaults,
+      profile: state.profile,
+      compare: state.compare,
+      compare2: state.compare2,
+    });
   const optionCounts = (get: (p: ProfileIndexEntry) => string[]) => {
     const counts = new Map<string, number>();
     index.profiles.forEach((p) =>
@@ -195,6 +224,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
     definitions: ProfileMetricDefinition[],
     a: Record<string, number | null>,
     b?: Record<string, number | null>,
+    third?: Record<string, number | null>,
   ) => (
     <div className="table-wrap">
       <table className="profile-metrics">
@@ -206,6 +236,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
             <th scope="col">{c.metric}</th>
             <th scope="col">{selected?.name}</th>
             {b && <th scope="col">{comparison?.data?.identity.name}</th>}
+            {third && <th scope="col">{comparison2?.data?.identity.name}</th>}
           </tr>
         </thead>
         <tbody>
@@ -232,6 +263,13 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     : number(b[d.id])}
                 </td>
               )}
+              {third && (
+                <td>
+                  {d.unit === "fraction" && third[d.id] != null
+                    ? `${number(third[d.id]! * 100)}%`
+                    : number(third[d.id])}
+                </td>
+              )}
             </tr>
           ))}
         </tbody>
@@ -250,34 +288,38 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
           onChange={(e) => update({ q: e.target.value, page: 1 })}
         />
       </label>
+      <div className="player-filters primary-filters">
+        {" "}
+        {choices("provider", c.provider, providers, providerName)}
+        {choices(
+          "competition",
+          c.competition,
+          competitions,
+          (key) =>
+            index.scopes.find((s) => s.competition_key === key)!.competition,
+        )}
+        {choices("season", c.season, seasons, (v) => v)}
+        {choices("team", c.team, teams, (key) => index.teams[key])}
+        {choices("role", c.role, roles, roleName)}
+        <label>
+          <span id="filter-label-minutes">{c.evidence}</span>
+          <select
+            aria-labelledby="filter-label-minutes"
+            value={state.minutes}
+            onChange={(e) => update({ minutes: e.target.value, page: 1 })}
+          >
+            {[450, 600, 900].map((n) => (
+              <option key={n} value={n}>
+                {n}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
       <details className="player-filter-panel">
-        <summary>{locale === "en" ? "Filters" : "Filters"}</summary>
+        <summary>{locale === "en" ? "More filters" : "Meer filters"}</summary>
         <div className="player-filters">
-          {choices("provider", c.provider, providers, providerName)}
-          {choices(
-            "competition",
-            c.competition,
-            competitions,
-            (key) =>
-              index.scopes.find((s) => s.competition_key === key)!.competition,
-          )}
-          {choices("season", c.season, seasons, (v) => v)}
-          {choices("team", c.team, teams, (key) => index.teams[key])}
-          {choices("role", c.role, roles, roleName)}
-          <label>
-            <span id="filter-label-minutes">{c.evidence}</span>
-            <select
-              aria-labelledby="filter-label-minutes"
-              value={state.minutes}
-              onChange={(e) => update({ minutes: e.target.value, page: 1 })}
-            >
-              {[450, 600, 900].map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
-          </label>
+          {" "}
           <label>
             <span id="filter-label-kind">{c.kind}</span>
             <select
@@ -325,6 +367,20 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
           {" "}
           <div className="profile-actions">
             <h2 id="player-results-heading">{c.title}</h2>
+            <label className="result-sort">
+              <span className="sr-only">
+                {locale === "en" ? "Sort results" : "Resultaten sorteren"}
+              </span>
+              <select
+                value={state.sort}
+                onChange={(e) => update({ sort: e.target.value, page: 1 })}
+              >
+                <option value="name">
+                  {locale === "en" ? "Name" : "Naam"}
+                </option>
+                <option value="minutes">{c.minutes} ↓</option>
+              </select>
+            </label>
             <p
               role="status"
               aria-live="polite"
@@ -348,19 +404,25 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                   >
                     {p.name}
                   </button>
-                  <p className="small">{context(p)}</p>
                   <p className="small">
-                    {roleName(p.role ?? p.role_family)} · {number(p.minutes)}{" "}
-                    {c.minutes.toLowerCase()}
+                    {p.teams.map((t) => index.teams[t]).join(" / ")} ·{" "}
+                    {roleName(p.role ?? p.role_family)}
+                  </p>
+                  <p className="small">
+                    {scopes.get(p.scope)?.competition} ·{" "}
+                    {scopes.get(p.scope)?.season} · {number(p.minutes)} min ·{" "}
+                    {providerName(p.provider)}
                   </p>
                 </div>
                 {selected && (
                   <div className="profile-row-actions">
                     <button
-                      disabled={p.id === state.profile}
-                      onClick={() =>
-                        selected ? update({ compare: p.id }, true) : open(p.id)
+                      disabled={
+                        [state.profile, state.compare, state.compare2].includes(
+                          p.id,
+                        ) || Boolean(state.compare && state.compare2)
                       }
+                      onClick={() => addComparison(p.id)}
                     >
                       {selected ? c.compare : c.open}
                     </button>
@@ -369,7 +431,14 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
               </li>
             ))}
           </ul>
-          {!rows.length && <p className="notice">{c.empty}</p>}
+          {!rows.length && (
+            <p className="notice">
+              {c.empty}{" "}
+              {locale === "en"
+                ? "Try a shorter search or clear the filters."
+                : "Probeer een kortere zoekterm of wis de filters."}
+            </p>
+          )}
           <nav className="profile-pagination" aria-label={c.page}>
             <button
               disabled={page === 1}
@@ -401,7 +470,9 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
               <div className="profile-actions">
                 <h2>{selected.name}</h2>
                 <button
-                  onClick={() => update({ profile: "", compare: "" }, true)}
+                  onClick={() =>
+                    update({ profile: "", compare: "", compare2: "" }, true)
+                  }
                 >
                   {locale === "en"
                     ? "Back to results"
@@ -418,7 +489,10 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                 {number(selected.minutes)} {c.minutes.toLowerCase()} ·{" "}
                 {providerName(selected.provider)}
               </p>
-              {(profile?.error || registry?.error || comparison?.error) && (
+              {(profile?.error ||
+                registry?.error ||
+                comparison?.error ||
+                comparison2?.error) && (
                 <p role="alert">
                   {c.error}{" "}
                   <button onClick={() => setRetry(retry + 1)}>{c.retry}</button>
@@ -426,7 +500,11 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
               )}
               {(!profile?.data || !registry?.data) &&
                 !profile?.error &&
-                !registry?.error && <p role="status">{c.loading}</p>}
+                !registry?.error && (
+                  <p className="detail-skeleton" role="status">
+                    {c.loading}
+                  </p>
+                )}
               {profile?.data && registry?.data && (
                 <>
                   <p className="small">
@@ -434,25 +512,121 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     {profile.data.first_date} – {profile.data.last_date}.{" "}
                     {selected.teams.length > 1 && c.shared}
                   </p>
-                  {state.compare && (
-                    <div className="notice">
-                      <h3>
-                        {c.comparison}:{" "}
-                        {comparison?.data?.identity.name ??
-                          byId.get(state.compare)?.name}
-                      </h3>
-                      <p>
-                        {byId.has(state.compare) &&
-                          context(byId.get(state.compare)!)}
-                      </p>
-                      <button onClick={() => update({ compare: "" })}>
-                        {c.removeComparison}
-                      </button>
-                      {!comparison?.data && !comparison?.error && (
-                        <p role="status">{c.loading}</p>
-                      )}
+                  <details
+                    className="comparison-selection"
+                    key={Boolean(state.compare || state.compare2).toString()}
+                    open={Boolean(state.compare || state.compare2)}
+                  >
+                    <summary>
+                      {locale === "en"
+                        ? "Compare players · up to 3"
+                        : "Spelers vergelijken · maximaal 3"}
+                    </summary>
+                    <div className="profile-actions">
+                      <h3>{c.comparison}</h3>
+                      <span className="small">
+                        {1 +
+                          Number(Boolean(state.compare)) +
+                          Number(Boolean(state.compare2))}{" "}
+                        / 3
+                      </span>
                     </div>
-                  )}
+                    <p className="small">
+                      {locale === "en"
+                        ? "Compare observed rates alongside each player's minutes. More is not necessarily better; no winner is assigned."
+                        : "Vergelijk geobserveerde waarden en de minuten per speler. Meer is niet noodzakelijk beter; er wordt geen winnaar aangewezen."}
+                    </p>
+                    {[state.compare, state.compare2]
+                      .filter(Boolean)
+                      .map((id) => (
+                        <div className="comparison-member" key={id}>
+                          <span>
+                            <strong>{byId.get(id)?.name}</strong>
+                            <small>
+                              {context(byId.get(id)!)} ·{" "}
+                              {number(byId.get(id)?.minutes)} min
+                            </small>
+                          </span>
+                          <button
+                            onClick={() =>
+                              update(
+                                id === state.compare
+                                  ? { compare: state.compare2, compare2: "" }
+                                  : { compare2: "" },
+                                true,
+                              )
+                            }
+                            aria-label={`${c.removeComparison}: ${byId.get(id)?.name}`}
+                          >
+                            ×
+                          </button>
+                        </div>
+                      ))}
+                    {!(state.compare && state.compare2) && (
+                      <div className="comparison-picker">
+                        <label>
+                          {locale === "en"
+                            ? "Search comparison profiles"
+                            : "Vergelijkingsprofielen zoeken"}
+                          <input
+                            type="search"
+                            value={comparisonQuery}
+                            onChange={(e) => setComparisonQuery(e.target.value)}
+                          />
+                        </label>
+                        <label>
+                          {locale === "en"
+                            ? "Add a player to compare"
+                            : "Voeg een speler toe om te vergelijken"}
+                          <select
+                            value=""
+                            onChange={(e) => addComparison(e.target.value)}
+                          >
+                            <option value="">
+                              {locale === "en"
+                                ? "Select a profile…"
+                                : "Selecteer een profiel…"}
+                            </option>
+                            {index.profiles
+                              .filter(
+                                (p) =>
+                                  ![
+                                    state.profile,
+                                    state.compare,
+                                    state.compare2,
+                                  ].includes(p.id) &&
+                                  (names.get(p.id) ?? "").includes(
+                                    normalizeName(comparisonQuery),
+                                  ),
+                              )
+                              .slice(0, 50)
+                              .map((p) => (
+                                <option key={p.id} value={p.id}>
+                                  {p.name} · {scopes.get(p.scope)?.season} ·{" "}
+                                  {providerName(p.provider)}
+                                </option>
+                              ))}
+                          </select>
+                        </label>
+                        <small>
+                          {locale === "en"
+                            ? "Up to 50 choices. Search to narrow the list."
+                            : "Maximaal 50 keuzes. Zoek om de lijst te verkleinen."}
+                        </small>
+                      </div>
+                    )}
+                    {((state.compare &&
+                      !comparison?.data &&
+                      !comparison?.error) ||
+                      (state.compare2 &&
+                        !comparison2?.data &&
+                        !comparison2?.error)) && (
+                      <p className="detail-skeleton" role="status">
+                        {c.loading}
+                      </p>
+                    )}
+                    <a href={route(locale, "methodology")}>{c.methods} ↗</a>
+                  </details>
                   <nav
                     className="profile-sections"
                     aria-label={
@@ -478,25 +652,39 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     <h3>{locale === "en" ? "Playing style" : "Speelstijl"}</h3>
                     {profile.data.dna_player_id &&
                       selected.capabilities.validated_dna && (
-                        <ProfileStyle
-                          locale={locale}
-                          id={profile.data.dna_player_id}
-                        />
+                        <details
+                          className="single-player-style"
+                          key={Boolean(state.compare).toString()}
+                          open={!state.compare}
+                        >
+                          <summary>
+                            {locale === "en"
+                              ? "Role-relative percentiles"
+                              : "Percentielen binnen de rol"}{" "}
+                            · {selected.name}
+                          </summary>
+                          <ProfileStyle
+                            locale={locale}
+                            id={profile.data.dna_player_id}
+                          />
+                        </details>
                       )}
                     <h4>{c.common}</h4>
                     <p className="small">
                       {locale === "en"
-                        ? "Three harmonised metrics. Cross-provider rankings are not available."
-                        : "Drie geharmoniseerde kenmerken. Ranglijsten tussen providers zijn niet beschikbaar."}
+                        ? "Three harmonised metrics. Cross-provider rankings are unavailable because provider measurement differences remain detectable."
+                        : "Drie geharmoniseerde kenmerken. Ranglijsten tussen providers ontbreken omdat meetverschillen aantoonbaar blijven."}
                     </p>
                     {profile.data.common ? (
-                      comparison?.data && !comparison.data.common ? (
+                      (comparison?.data && !comparison.data.common) ||
+                      (comparison2?.data && !comparison2.data.common) ? (
                         <p className="notice">{c.unsupported}</p>
                       ) : (
                         metrics(
                           registry.data.features,
                           profile.data.common,
                           comparison?.data?.common ?? undefined,
+                          comparison2?.data?.common ?? undefined,
                         )
                       )
                     ) : (
@@ -513,8 +701,8 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     >
                       <summary>
                         {locale === "en"
-                          ? "All provider metrics"
-                          : "Alle providerkenmerken"}
+                          ? "Full provider profile"
+                          : "Volledig providerprofiel"}
                       </summary>
                       <p>{c.nativeNote}</p>
                       {metrics(
@@ -523,6 +711,10 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                         comparison?.data?.identity.provider ===
                           selected.provider
                           ? comparison.data.native
+                          : undefined,
+                        comparison2?.data?.identity.provider ===
+                          selected.provider
+                          ? comparison2.data.native
                           : undefined,
                       )}
                     </details>
@@ -537,7 +729,14 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                       <ol className="profile-neighbours">
                         {profile.data.neighbours.map((n) => (
                           <li key={n.id}>
-                            <button onClick={() => update({ compare: n.id })}>
+                            <button
+                              disabled={
+                                [state.compare, state.compare2].includes(
+                                  n.id,
+                                ) || Boolean(state.compare && state.compare2)
+                              }
+                              onClick={() => addComparison(n.id)}
+                            >
                               {byId.get(n.id)?.name}
                             </button>{" "}
                             <details>
@@ -545,7 +744,11 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                               {number(n.distance, 3)}
                             </details>
                             <small>
-                              {byId.has(n.id) && context(byId.get(n.id)!)}
+                              {byId
+                                .get(n.id)
+                                ?.teams.map((t) => index.teams[t])
+                                .join(" / ")}{" "}
+                              · {number(byId.get(n.id)?.minutes)} min
                             </small>
                           </li>
                         ))}

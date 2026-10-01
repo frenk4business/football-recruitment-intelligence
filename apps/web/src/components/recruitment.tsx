@@ -164,7 +164,32 @@ function RecruitmentBoard({
     if (languageLink)
       languageLink.href = `${route(locale === "en" ? "nl" : "en", "recruitment")}?${query}`;
   }, [query, locale]);
+  useEffect(() => {
+    const restore = () => {
+      try {
+        const restored = decodeScenario(window.location.search, index);
+        setScenario(restored);
+        setView(restored.mode);
+        setInvalid(false);
+      } catch {
+        setScenario(defaultScenario(index));
+        setInvalid(true);
+      }
+      setSelected([]);
+      setShared("");
+      setCopied(false);
+    };
+    window.addEventListener("popstate", restore);
+    return () => window.removeEventListener("popstate", restore);
+  }, [index]);
   function update(next: Scenario) {
+    const nextQuery = encodeScenario(next, index);
+    if (nextQuery !== query)
+      window.history.pushState(
+        null,
+        "",
+        `${window.location.pathname}?${nextQuery}`,
+      );
     setScenario(next);
     setShared("");
     setCopied(false);
@@ -466,6 +491,19 @@ function RecruitmentBoard({
                       players.get(scenario.replacement_player_id)
                         ?.multi_club && <p className="note">{c.multiClub}</p>}
 
+                    {!advanced &&
+                      (scenario.requirements.some(
+                        (r) => r.hard_constraint || r.weight !== 1,
+                      ) ||
+                        Object.values(scenario.family_weights).some(
+                          (w) => w !== 1,
+                        )) && (
+                        <p className="small">
+                          {locale === "en"
+                            ? "This scenario includes advanced weights or constraints. Open Advanced requirements to inspect them."
+                            : "Dit scenario bevat geavanceerde wegingen of voorwaarden. Open Geavanceerde eisen om ze te bekijken."}
+                        </p>
+                      )}
                     <div className="requirement-groups">
                       {Object.entries(recruitmentFamilies).map(
                         ([family, names]) => {
@@ -572,7 +610,11 @@ function RecruitmentBoard({
                                       </details>
                                     </div>
                                     <label>
-                                      {c.preference}
+                                      {advanced
+                                        ? c.preference
+                                        : locale === "en"
+                                          ? "Looking for"
+                                          : "Gezocht profiel"}
                                       <select
                                         aria-label={`${label(f.id)}: ${c.preference}`}
                                         value={r.preference}
@@ -590,11 +632,18 @@ function RecruitmentBoard({
                                             "minimum",
                                             "maximum",
                                           ] as const
-                                        ).map((p) => (
-                                          <option key={p} value={p}>
-                                            {c[p]}
-                                          </option>
-                                        ))}
+                                        )
+                                          .filter(
+                                            (p) =>
+                                              advanced ||
+                                              p !== "maximum" ||
+                                              r.preference === "maximum",
+                                          )
+                                          .map((p) => (
+                                            <option key={p} value={p}>
+                                              {c[p]}
+                                            </option>
+                                          ))}
                                       </select>
                                     </label>
                                     <label>
@@ -642,7 +691,10 @@ function RecruitmentBoard({
                                         )}
                                       </select>
                                     </label>
-                                    <label className="check-label hard-constraint">
+                                    <label
+                                      className="check-label hard-constraint"
+                                      hidden={!advanced}
+                                    >
                                       <input
                                         aria-label={`${label(f.id)}: ${c.required}`}
                                         type="checkbox"
@@ -795,7 +847,7 @@ function RecruitmentBoard({
                 className="primary-action shortlist-action"
                 href="#shortlist-title"
               >
-                {locale === "en" ? "Find candidates" : "Kandidaten vinden"} →
+                {locale === "en" ? "Find candidates" : "Vind kandidaten"} →
               </a>
               <span className="live-hint">
                 {locale === "en"
@@ -1040,7 +1092,13 @@ function RecruitmentBoard({
               ref={comparisonRef}
               tabIndex={-1}
             >
-              <h2>{c.compareTitle}</h2>
+              <h2>
+                {selectedRanks.length === 1
+                  ? locale === "en"
+                    ? "Why this player appears here"
+                    : "Waarom deze speler hier verschijnt"
+                  : c.compareTitle}
+              </h2>
               <p>{c.compareNote}</p>
               <div className="comparison-grid">
                 {selectedRanks.map((r) => {
