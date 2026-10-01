@@ -1,7 +1,7 @@
 "use client";
 import { fetchArtifact } from "@/lib/artifact";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Locale } from "@/lib/content";
 import { route } from "@/lib/content";
 import type {
@@ -93,6 +93,14 @@ function RecruitmentBoard({
       return { scenario: defaultScenario(index), invalid: true };
     }
   }, [index]);
+  const comparisonRef = useRef<HTMLElement>(null);
+  const [inspect, setInspect] = useState(false);
+  useEffect(() => {
+    if (inspect) {
+      comparisonRef.current?.focus();
+      setInspect(false);
+    }
+  }, [inspect]);
   const [scenario, setScenario] = useState<Scenario>(initial.scenario);
   const [invalid, setInvalid] = useState(initial.invalid);
   const [view, setView] = useState<"find" | "replace" | "context">(
@@ -406,604 +414,627 @@ function RecruitmentBoard({
       )}
       {view !== "context" ? (
         <>
-          {view === "replace" && !references.length ? (
-            <p role="status" className="recruitment-warning">
-              {c.noReference}
-            </p>
-          ) : (
-            <details
-              key={view}
-              open={view !== "replace"}
-              className="requirements-disclosure"
-            >
-              <summary>
-                {view === "replace"
-                  ? locale === "en"
-                    ? "Adjust requirements"
-                    : "Eisen aanpassen"
-                  : locale === "en"
-                    ? "3. What are you looking for?"
-                    : "3. Wat zoek je?"}
-              </summary>
-              <section
-                className="requirements-panel"
-                aria-labelledby="requirements-title"
-              >
-                <div className="recruitment-section-heading">
-                  <div>
-                    <h2 id="requirements-title">{c.custom}</h2>
-                  </div>
+          <div className="recruitment-workspace">
+            <div className="recruitment-setup">
+              {view === "replace" && !references.length ? (
+                <p role="status" className="recruitment-warning">
+                  {c.noReference}
+                </p>
+              ) : (
+                <details
+                  key={view}
+                  open={view !== "replace"}
+                  className="requirements-disclosure"
+                >
+                  <summary>
+                    {view === "replace"
+                      ? locale === "en"
+                        ? "Adjust requirements"
+                        : "Eisen aanpassen"
+                      : locale === "en"
+                        ? "3. What are you looking for?"
+                        : "3. Wat zoek je?"}
+                  </summary>
+                  <section
+                    className="requirements-panel"
+                    aria-labelledby="requirements-title"
+                  >
+                    <div className="recruitment-section-heading">
+                      <div>
+                        <h2 id="requirements-title">{c.custom}</h2>
+                      </div>
+                      <label className="check-label">
+                        <input
+                          type="checkbox"
+                          checked={advanced}
+                          onChange={(e) => setAdvanced(e.target.checked)}
+                        />
+                        {c.advanced}
+                      </label>
+                    </div>
+                    <p className="section-intro">
+                      {scenario.mode === "replace"
+                        ? c.replacementNote
+                        : c.customNote}
+                    </p>
+                    {scenario.replacement_player_id &&
+                      players.get(scenario.replacement_player_id)
+                        ?.multi_club && <p className="note">{c.multiClub}</p>}
+
+                    <div className="requirement-groups">
+                      {Object.entries(recruitmentFamilies).map(
+                        ([family, names]) => {
+                          const visible = index.features.filter(
+                            (f) =>
+                              f.core &&
+                              f.family === family &&
+                              (advanced ||
+                                index.features
+                                  .filter(
+                                    (feature) =>
+                                      feature.core &&
+                                      feature.default_visibility.includes(
+                                        scenario.target_role,
+                                      ),
+                                  )
+                                  .slice(0, 5)
+                                  .some((feature) => feature.id === f.id) ||
+                                scenario.requirements.some(
+                                  (r) =>
+                                    r.feature_id === f.id &&
+                                    r.preference !== "neutral",
+                                )),
+                          );
+                          if (!visible.length) return null;
+                          return (
+                            <fieldset
+                              className="requirement-family"
+                              key={family}
+                            >
+                              <legend>{names[language]}</legend>
+                              <label className="family-weight">
+                                {c.familyImportance}
+                                <select
+                                  value={scenario.family_weights[family] ?? 1}
+                                  onChange={(e) =>
+                                    update({
+                                      ...scenario,
+                                      family_weights: {
+                                        ...scenario.family_weights,
+                                        [family]: Number(e.target.value) as
+                                          1 | 2 | 3,
+                                      },
+                                    })
+                                  }
+                                >
+                                  {[c.low, c.medium, c.high].map((name, i) => (
+                                    <option key={name} value={i + 1}>
+                                      {name}
+                                    </option>
+                                  ))}
+                                </select>
+                              </label>
+                              {visible.map((f) => {
+                                const r =
+                                    scenario.requirements.find(
+                                      (r) => r.feature_id === f.id,
+                                    ) ?? newRequirement(f.id),
+                                  median = roleContext?.median[f.id];
+                                return (
+                                  <div
+                                    key={f.id}
+                                    className={`requirement-row ${r.preference !== "neutral" ? "is-active" : ""}`}
+                                    data-feature={f.id}
+                                  >
+                                    <div className="requirement-name">
+                                      <strong>{label(f.id)}</strong>
+                                      <details className="requirement-context">
+                                        <summary>
+                                          {locale === "en"
+                                            ? "Club reference & source"
+                                            : "Clubreferentie & bron"}
+                                        </summary>
+                                        <small>
+                                          {c.source}:{" "}
+                                          {
+                                            requirementSources[r.source][
+                                              language
+                                            ]
+                                          }
+                                        </small>
+                                        {median !== undefined && (
+                                          <small>
+                                            {c.roleMedian}: {number(median)} ·{" "}
+                                            {c.roleRange}:{" "}
+                                            {number(roleContext!.minimum[f.id])}
+                                            –
+                                            {number(roleContext!.maximum[f.id])}{" "}
+                                            <button
+                                              className="inline-button"
+                                              onClick={() =>
+                                                adopt(
+                                                  f.id,
+                                                  median,
+                                                  "derived_roster_gap",
+                                                  "exact",
+                                                )
+                                              }
+                                            >
+                                              {c.useMedian}
+                                            </button>
+                                          </small>
+                                        )}
+                                      </details>
+                                    </div>
+                                    <label>
+                                      {c.preference}
+                                      <select
+                                        aria-label={`${label(f.id)}: ${c.preference}`}
+                                        value={r.preference}
+                                        onChange={(e) =>
+                                          editRequirement(f.id, {
+                                            preference: e.target
+                                              .value as Requirement["preference"],
+                                          })
+                                        }
+                                      >
+                                        {(
+                                          [
+                                            "neutral",
+                                            "exact",
+                                            "minimum",
+                                            "maximum",
+                                          ] as const
+                                        ).map((p) => (
+                                          <option key={p} value={p}>
+                                            {c[p]}
+                                          </option>
+                                        ))}
+                                      </select>
+                                    </label>
+                                    <label>
+                                      {c.target}
+                                      <input
+                                        aria-label={`${label(f.id)}: ${c.target}`}
+                                        type="number"
+                                        min={0}
+                                        max={100}
+                                        step="any"
+                                        disabled={r.preference === "neutral"}
+                                        value={r.value}
+                                        onChange={(e) =>
+                                          editRequirement(f.id, {
+                                            value: Math.min(
+                                              100,
+                                              Math.max(
+                                                0,
+                                                Number(e.target.value),
+                                              ),
+                                            ),
+                                          })
+                                        }
+                                      />
+                                    </label>
+                                    <label>
+                                      {c.importance}
+                                      <select
+                                        aria-label={`${label(f.id)}: ${c.importance}`}
+                                        disabled={r.preference === "neutral"}
+                                        value={r.weight}
+                                        onChange={(e) =>
+                                          editRequirement(f.id, {
+                                            weight: Number(e.target.value) as
+                                              1 | 2 | 3,
+                                          })
+                                        }
+                                      >
+                                        {[c.low, c.medium, c.high].map(
+                                          (name, i) => (
+                                            <option key={name} value={i + 1}>
+                                              {name}
+                                            </option>
+                                          ),
+                                        )}
+                                      </select>
+                                    </label>
+                                    <label className="check-label hard-constraint">
+                                      <input
+                                        aria-label={`${label(f.id)}: ${c.required}`}
+                                        type="checkbox"
+                                        checked={r.hard_constraint}
+                                        disabled={
+                                          !["minimum", "maximum"].includes(
+                                            r.preference,
+                                          )
+                                        }
+                                        onChange={(e) =>
+                                          editRequirement(f.id, {
+                                            hard_constraint: e.target.checked,
+                                          })
+                                        }
+                                      />
+                                      {c.required}
+                                    </label>
+                                  </div>
+                                );
+                              })}
+                            </fieldset>
+                          );
+                        },
+                      )}
+                    </div>
+                    <details className="feature-definitions">
+                      <summary>{c.definitions}</summary>
+                      <p>{c.defaultWeights}</p>
+                      {index.features
+                        .filter((f) => f.core)
+                        .map((f) => (
+                          <p key={f.id}>
+                            <strong>
+                              {label(f.id)} · {f.unit}
+                            </strong>
+                            <br />
+                            {locale === "en" ? f.note_en : f.note_nl}
+                          </p>
+                        ))}
+                    </details>
+                  </section>
+                </details>
+              )}
+              <details className="recruitment-filters">
+                <summary>{c.constraints}</summary>
+                <div>
+                  <label>
+                    {c.minimumMinutes}
+                    <select
+                      value={scenario.hard_constraints.minimum_minutes}
+                      onChange={(e) =>
+                        update({
+                          ...scenario,
+                          hard_constraints: {
+                            ...scenario.hard_constraints,
+                            minimum_minutes: Number(e.target.value),
+                          },
+                        })
+                      }
+                    >
+                      {[
+                        ...new Set([
+                          900,
+                          1200,
+                          1800,
+                          scenario.hard_constraints.minimum_minutes,
+                        ]),
+                      ]
+                        .sort((a, b) => a - b)
+                        .map((n) => (
+                          <option key={n} value={n}>
+                            {n}
+                          </option>
+                        ))}
+                    </select>
+                  </label>
+                  <label>
+                    {c.evidenceThreshold}
+                    <select
+                      value={
+                        scenario.hard_constraints.minimum_neighbor_stability
+                      }
+                      onChange={(e) =>
+                        update({
+                          ...scenario,
+                          hard_constraints: {
+                            ...scenario.hard_constraints,
+                            minimum_neighbor_stability: Number(e.target.value),
+                          },
+                        })
+                      }
+                    >
+                      {[
+                        ...new Set([
+                          0,
+                          0.5,
+                          0.7,
+                          scenario.hard_constraints.minimum_neighbor_stability,
+                        ]),
+                      ]
+                        .sort((a, b) => a - b)
+                        .map((n) => (
+                          <option key={n} value={n}>
+                            {n === 0 ? c.anyEvidence : number(n, 2)}
+                          </option>
+                        ))}
+                    </select>
+                  </label>
+                  <label>
+                    {c.candidateTeam}
+                    <select
+                      value={scenario.hard_constraints.candidate_team_id ?? ""}
+                      onChange={(e) =>
+                        update({
+                          ...scenario,
+                          hard_constraints: {
+                            ...scenario.hard_constraints,
+                            candidate_team_id: e.target.value || null,
+                          },
+                        })
+                      }
+                    >
+                      <option value="">{c.allTeams}</option>
+                      {index.clubs.map((club) => (
+                        <option key={club.club_id} value={club.club_id}>
+                          {club.name}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
                   <label className="check-label">
                     <input
                       type="checkbox"
-                      checked={advanced}
-                      onChange={(e) => setAdvanced(e.target.checked)}
+                      checked={scenario.hard_constraints.exclude_same_club}
+                      onChange={(e) =>
+                        update({
+                          ...scenario,
+                          hard_constraints: {
+                            ...scenario.hard_constraints,
+                            exclude_same_club: e.target.checked,
+                          },
+                        })
+                      }
                     />
-                    {c.advanced}
+                    {c.excludeClub}
                   </label>
                 </div>
-                <p className="section-intro">
-                  {scenario.mode === "replace"
-                    ? c.replacementNote
-                    : c.customNote}
-                </p>
-                {scenario.replacement_player_id &&
-                  players.get(scenario.replacement_player_id)?.multi_club && (
-                    <p className="note">{c.multiClub}</p>
-                  )}
-
-                <div className="requirement-groups">
-                  {Object.entries(recruitmentFamilies).map(
-                    ([family, names]) => {
-                      const visible = index.features.filter(
-                        (f) =>
-                          f.core &&
-                          f.family === family &&
-                          (advanced ||
-                            index.features
-                              .filter(
-                                (feature) =>
-                                  feature.core &&
-                                  feature.default_visibility.includes(
-                                    scenario.target_role,
-                                  ),
-                              )
-                              .slice(0, 5)
-                              .some((feature) => feature.id === f.id) ||
-                            scenario.requirements.some(
-                              (r) =>
-                                r.feature_id === f.id &&
-                                r.preference !== "neutral",
-                            )),
-                      );
-                      if (!visible.length) return null;
-                      return (
-                        <fieldset className="requirement-family" key={family}>
-                          <legend>{names[language]}</legend>
-                          <label className="family-weight">
-                            {c.familyImportance}
-                            <select
-                              value={scenario.family_weights[family] ?? 1}
-                              onChange={(e) =>
-                                update({
-                                  ...scenario,
-                                  family_weights: {
-                                    ...scenario.family_weights,
-                                    [family]: Number(e.target.value) as
-                                      1 | 2 | 3,
-                                  },
-                                })
-                              }
-                            >
-                              {[c.low, c.medium, c.high].map((name, i) => (
-                                <option key={name} value={i + 1}>
-                                  {name}
-                                </option>
-                              ))}
-                            </select>
-                          </label>
-                          {visible.map((f) => {
-                            const r =
-                                scenario.requirements.find(
-                                  (r) => r.feature_id === f.id,
-                                ) ?? newRequirement(f.id),
-                              median = roleContext?.median[f.id];
-                            return (
-                              <div
-                                key={f.id}
-                                className={`requirement-row ${r.preference !== "neutral" ? "is-active" : ""}`}
-                                data-feature={f.id}
-                              >
-                                <div className="requirement-name">
-                                  <strong>{label(f.id)}</strong>
-                                  <details className="requirement-context">
-                                    <summary>
-                                      {locale === "en"
-                                        ? "Club reference & source"
-                                        : "Clubreferentie & bron"}
-                                    </summary>
-                                    <small>
-                                      {c.source}:{" "}
-                                      {requirementSources[r.source][language]}
-                                    </small>
-                                    {median !== undefined && (
-                                      <small>
-                                        {c.roleMedian}: {number(median)} ·{" "}
-                                        {c.roleRange}:{" "}
-                                        {number(roleContext!.minimum[f.id])}–
-                                        {number(roleContext!.maximum[f.id])}{" "}
-                                        <button
-                                          className="inline-button"
-                                          onClick={() =>
-                                            adopt(
-                                              f.id,
-                                              median,
-                                              "derived_roster_gap",
-                                              "exact",
-                                            )
-                                          }
-                                        >
-                                          {c.useMedian}
-                                        </button>
-                                      </small>
-                                    )}
-                                  </details>
-                                </div>
-                                <label>
-                                  {c.preference}
-                                  <select
-                                    aria-label={`${label(f.id)}: ${c.preference}`}
-                                    value={r.preference}
-                                    onChange={(e) =>
-                                      editRequirement(f.id, {
-                                        preference: e.target
-                                          .value as Requirement["preference"],
-                                      })
-                                    }
-                                  >
-                                    {(
-                                      [
-                                        "neutral",
-                                        "exact",
-                                        "minimum",
-                                        "maximum",
-                                      ] as const
-                                    ).map((p) => (
-                                      <option key={p} value={p}>
-                                        {c[p]}
-                                      </option>
-                                    ))}
-                                  </select>
-                                </label>
-                                <label>
-                                  {c.target}
-                                  <input
-                                    aria-label={`${label(f.id)}: ${c.target}`}
-                                    type="number"
-                                    min={0}
-                                    max={100}
-                                    step="any"
-                                    disabled={r.preference === "neutral"}
-                                    value={r.value}
-                                    onChange={(e) =>
-                                      editRequirement(f.id, {
-                                        value: Math.min(
-                                          100,
-                                          Math.max(0, Number(e.target.value)),
-                                        ),
-                                      })
-                                    }
-                                  />
-                                </label>
-                                <label>
-                                  {c.importance}
-                                  <select
-                                    aria-label={`${label(f.id)}: ${c.importance}`}
-                                    disabled={r.preference === "neutral"}
-                                    value={r.weight}
-                                    onChange={(e) =>
-                                      editRequirement(f.id, {
-                                        weight: Number(e.target.value) as
-                                          1 | 2 | 3,
-                                      })
-                                    }
-                                  >
-                                    {[c.low, c.medium, c.high].map(
-                                      (name, i) => (
-                                        <option key={name} value={i + 1}>
-                                          {name}
-                                        </option>
-                                      ),
-                                    )}
-                                  </select>
-                                </label>
-                                <label className="check-label hard-constraint">
-                                  <input
-                                    aria-label={`${label(f.id)}: ${c.required}`}
-                                    type="checkbox"
-                                    checked={r.hard_constraint}
-                                    disabled={
-                                      !["minimum", "maximum"].includes(
-                                        r.preference,
-                                      )
-                                    }
-                                    onChange={(e) =>
-                                      editRequirement(f.id, {
-                                        hard_constraint: e.target.checked,
-                                      })
-                                    }
-                                  />
-                                  {c.required}
-                                </label>
-                              </div>
-                            );
-                          })}
-                        </fieldset>
-                      );
-                    },
-                  )}
+              </details>
+              <a
+                className="primary-action shortlist-action"
+                href="#shortlist-title"
+              >
+                {locale === "en" ? "Find candidates" : "Kandidaten vinden"} →
+              </a>
+              <span className="live-hint">
+                {locale === "en"
+                  ? "Updates as you adjust requirements"
+                  : "Werkt bij zodra je eisen aanpast"}
+              </span>
+            </div>
+            <section
+              className="recruitment-results"
+              aria-labelledby="shortlist-title"
+            >
+              <div className="recruitment-section-heading">
+                <div>
+                  <h2 id="shortlist-title">{c.shortlist}</h2>
                 </div>
-                <details className="feature-definitions">
-                  <summary>{c.definitions}</summary>
-                  <p>{c.defaultWeights}</p>
-                  {index.features
-                    .filter((f) => f.core)
-                    .map((f) => (
-                      <p key={f.id}>
-                        <strong>
-                          {label(f.id)} · {f.unit}
-                        </strong>
-                        <br />
-                        {locale === "en" ? f.note_en : f.note_nl}
-                      </p>
-                    ))}
-                </details>
-              </section>
-            </details>
-          )}
-          <details className="recruitment-filters">
-            <summary>{c.constraints}</summary>
-            <div>
-              <label>
-                {c.minimumMinutes}
-                <select
-                  value={scenario.hard_constraints.minimum_minutes}
-                  onChange={(e) =>
-                    update({
-                      ...scenario,
-                      hard_constraints: {
-                        ...scenario.hard_constraints,
-                        minimum_minutes: Number(e.target.value),
-                      },
-                    })
-                  }
-                >
-                  {[
-                    ...new Set([
-                      900,
-                      1200,
-                      1800,
-                      scenario.hard_constraints.minimum_minutes,
-                    ]),
-                  ]
-                    .sort((a, b) => a - b)
-                    .map((n) => (
-                      <option key={n} value={n}>
-                        {n}
-                      </option>
-                    ))}
-                </select>
-              </label>
-              <label>
-                {c.evidenceThreshold}
-                <select
-                  value={scenario.hard_constraints.minimum_neighbor_stability}
-                  onChange={(e) =>
-                    update({
-                      ...scenario,
-                      hard_constraints: {
-                        ...scenario.hard_constraints,
-                        minimum_neighbor_stability: Number(e.target.value),
-                      },
-                    })
-                  }
-                >
-                  {[
-                    ...new Set([
-                      0,
-                      0.5,
-                      0.7,
-                      scenario.hard_constraints.minimum_neighbor_stability,
-                    ]),
-                  ]
-                    .sort((a, b) => a - b)
-                    .map((n) => (
-                      <option key={n} value={n}>
-                        {n === 0 ? c.anyEvidence : number(n, 2)}
-                      </option>
-                    ))}
-                </select>
-              </label>
-              <label>
-                {c.candidateTeam}
-                <select
-                  value={scenario.hard_constraints.candidate_team_id ?? ""}
-                  onChange={(e) =>
-                    update({
-                      ...scenario,
-                      hard_constraints: {
-                        ...scenario.hard_constraints,
-                        candidate_team_id: e.target.value || null,
-                      },
-                    })
-                  }
-                >
-                  <option value="">{c.allTeams}</option>
-                  {index.clubs.map((club) => (
-                    <option key={club.club_id} value={club.club_id}>
-                      {club.name}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="check-label">
-                <input
-                  type="checkbox"
-                  checked={scenario.hard_constraints.exclude_same_club}
-                  onChange={(e) =>
-                    update({
-                      ...scenario,
-                      hard_constraints: {
-                        ...scenario.hard_constraints,
-                        exclude_same_club: e.target.checked,
-                      },
-                    })
-                  }
-                />
-                {c.excludeClub}
-              </label>
-            </div>
-          </details>
-          <a
-            className="primary-action shortlist-action"
-            href="#shortlist-title"
-          >
-            {locale === "en" ? "Find candidates" : "Kandidaten vinden"} →
-          </a>
-          <span className="live-hint">
-            {locale === "en"
-              ? "Updates as you adjust requirements"
-              : "Werkt bij zodra je eisen aanpast"}
-          </span>
-          <section
-            className="recruitment-results"
-            aria-labelledby="shortlist-title"
-          >
-            <div className="recruitment-section-heading">
-              <div>
-                <h2 id="shortlist-title">{c.shortlist}</h2>
+                <p className="candidate-count" role="status">
+                  <strong>{result.eligible_count}</strong> {c.available}
+                  <br />
+                  <small>
+                    {result.exclusions.length} {c.excluded}
+                  </small>
+                </p>
               </div>
-              <p className="candidate-count" role="status">
-                <strong>{result.eligible_count}</strong> {c.available}
-                <br />
-                <small>
-                  {result.exclusions.length} {c.excluded}
-                </small>
-              </p>
-            </div>
-            <p className="section-intro">{c.shortlistNote}</p>
+              <p className="section-intro">{c.shortlistNote}</p>
 
-            {result.status !== "ok" ? (
-              <div className="recruitment-empty" role="status">
-                {result.status === "no_requirements"
-                  ? c.noRequirements
-                  : c.noCandidates}
-              </div>
-            ) : (
-              <>
-                <div className="table-wrap recruitment-table">
-                  <table>
-                    <caption className="sr-only">{c.shortlist}</caption>
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>{c.player}</th>
-                        <th>{c.fit}</th>
-                        <th>{c.evidence}</th>
-                        <th>
-                          {c.keyMatch} / {c.mismatch}
-                        </th>
-                        <th>{c.compare}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {result.rankings.slice(0, 10).map((r) => {
-                        const p = players.get(r.player_id)!,
-                          strong = r.contributions.find(
-                            (x) => x.feature_id === r.strong_matches[0],
-                          ),
-                          weak = r.contributions.find(
-                            (x) => x.feature_id === r.main_mismatches[0],
-                          );
-                        return (
-                          <tr key={p.player_id} data-player={p.player_id}>
-                            <td className="rank-number">
-                              {r.rank.toString().padStart(2, "0")}
-                            </td>
-                            <th scope="row">
-                              <button
-                                className="candidate-name"
-                                onClick={() => setSelected([p.player_id])}
-                                aria-label={`${locale === "en" ? "Why this player matches" : "Waarom deze speler past"}: ${p.name}`}
-                              >
-                                {p.name}
-                              </button>
-                              <small>
-                                {p.teams.join(" · ")} · {p.role}
-                              </small>
-                              {p.multi_club && <small>{c.multiClub}</small>}
-                            </th>
-                            <td>
-                              <strong className="fit-distance">
-                                {number(r.distance)}
-                              </strong>
-                              <small>{c.gap}</small>
-                            </td>
-                            <td>
-                              {number(p.minutes, 0)} {c.minutes.toLowerCase()}
-                              <details>
-                                <summary>
-                                  {locale === "en"
-                                    ? "Profile stability"
-                                    : "Profielstabiliteit"}
-                                </summary>
+              {result.status !== "ok" ? (
+                <div className="recruitment-empty" role="status">
+                  {result.status === "no_requirements"
+                    ? c.noRequirements
+                    : c.noCandidates}
+                </div>
+              ) : (
+                <>
+                  <div className="table-wrap recruitment-table">
+                    <table>
+                      <caption className="sr-only">{c.shortlist}</caption>
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>{c.player}</th>
+                          <th>{c.fit}</th>
+                          <th>{c.evidence}</th>
+                          <th>
+                            {c.keyMatch} / {c.mismatch}
+                          </th>
+                          <th>{c.compare}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {result.rankings.slice(0, 10).map((r) => {
+                          const p = players.get(r.player_id)!,
+                            strong = r.contributions.find(
+                              (x) => x.feature_id === r.strong_matches[0],
+                            ),
+                            weak = r.contributions.find(
+                              (x) => x.feature_id === r.main_mismatches[0],
+                            );
+                          return (
+                            <tr key={p.player_id} data-player={p.player_id}>
+                              <td className="rank-number">
+                                {r.rank.toString().padStart(2, "0")}
+                              </td>
+                              <th scope="row">
+                                <button
+                                  className="candidate-name"
+                                  onClick={() => {
+                                    setSelected([p.player_id]);
+                                    setInspect(true);
+                                  }}
+                                  aria-label={`${locale === "en" ? "Why this player matches" : "Waarom deze speler past"}: ${p.name}`}
+                                >
+                                  {p.name}
+                                </button>
                                 <small>
-                                  {c.neighbor}:{" "}
-                                  {p.neighbor_stability === null
-                                    ? c.unavailable
-                                    : number(p.neighbor_stability, 2)}
+                                  {p.teams.join(" · ")} · {p.role}
                                 </small>
-                              </details>
-                            </td>
-                            <td className="match-explanation">
-                              <span>
-                                +{" "}
-                                {strong
-                                  ? `${label(strong.feature_id)} · ${number(strong.mismatch)} ${c.gap}`
-                                  : c.unavailable}
-                              </span>
-                              <small>
-                                ↔{" "}
-                                {weak
-                                  ? `${label(weak.feature_id)} · ${number(weak.mismatch)} ${c.gap}`
-                                  : c.none}
-                              </small>
-                            </td>
-                            <td>
-                              <input
-                                type="checkbox"
-                                aria-label={`${c.compare}: ${p.name}`}
-                                checked={selectedRanks.some(
-                                  (x) => x.player_id === p.player_id,
-                                )}
-                                disabled={
-                                  selectedRanks.length >= 3 &&
-                                  !selected.includes(p.player_id)
-                                }
-                                onChange={(e) =>
-                                  setSelected(
-                                    e.target.checked
-                                      ? [
-                                          ...selectedRanks.map(
-                                            (x) => x.player_id,
-                                          ),
-                                          p.player_id,
-                                        ]
-                                      : selected.filter(
-                                          (id) => id !== p.player_id,
-                                        ),
-                                  )
-                                }
-                              />
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
-                <p className="note">
-                  {c.compareMax} · {selectedRanks.length} {c.selected}
-                </p>
-                <details className="frontier-explanation">
-                  <summary>
-                    {result.frontier_count} / {result.eligible_count}{" "}
-                    {c.frontierCount}
-                  </summary>
-                  <p>{c.frontierNote}</p>
-                  <p>{c.cohortNote}</p>
-                  {result.frontier_count > result.eligible_count / 2 && (
-                    <p>{c.frontierMany}</p>
-                  )}
-                </details>
-                <details
-                  className="robustness-panel"
-                  open={robustOpen}
-                  onToggle={(e) => setRobustOpen(e.currentTarget.open)}
-                >
-                  <summary>{c.robustness}</summary>
-                  <div className="robustness-notes">
-                    <p>
-                      <strong>{c.weights}</strong>
-                      <br />
-                      {c.weightNote}
-                    </p>
-                    <p>
-                      <strong>{c.profiles}</strong>
-                      <br />
-                      {c.profileNote}
-                    </p>
-                  </div>
-                  {result.eligible_count <= 10 && (
-                    <p className="recruitment-warning">{c.smallPool}</p>
-                  )}
-                  {bootstrap.error ? (
-                    <p role="alert">
-                      {c.profileError}{" "}
-                      <button onClick={bootstrap.retry}>{c.retry}</button>
-                    </p>
-                  ) : (
-                    !bootstrap.data && <p role="status">{c.profileLoading}</p>
-                  )}
-                  {stability && (
-                    <div
-                      className="table-wrap"
-                      tabIndex={0}
-                      role="region"
-                      aria-label={c.evidence}
-                    >
-                      <table>
-                        <caption>
-                          {c.inclusion} · {c.rankRange}
-                        </caption>
-                        <thead>
-                          <tr>
-                            <th>{c.player}</th>
-                            <th>{c.weights}</th>
-                            <th>{c.profiles}</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {result.rankings.slice(0, 10).map((r) => {
-                            const w = stability.weight.players[r.player_id],
-                              p = stability.profile?.players[r.player_id];
-                            return (
-                              <tr key={r.player_id}>
-                                <th scope="row">
-                                  {players.get(r.player_id)!.name}
-                                </th>
-                                <td>
-                                  {percent(w.top_k_inclusion)} ·{" "}
-                                  {number(w.rank_p10)}–{number(w.rank_p90)}
-                                </td>
-                                <td>
-                                  {p
-                                    ? `${percent(p.top_k_inclusion)} · ${number(p.rank_p10)}–${number(p.rank_p90)}`
+                                {p.multi_club && <small>{c.multiClub}</small>}
+                              </th>
+                              <td>
+                                <strong className="fit-distance">
+                                  {number(r.distance)}
+                                </strong>
+                                <small>{c.gap}</small>
+                              </td>
+                              <td>
+                                {number(p.minutes, 0)} {c.minutes.toLowerCase()}
+                                <details>
+                                  <summary>
+                                    {locale === "en"
+                                      ? "Profile stability"
+                                      : "Profielstabiliteit"}
+                                  </summary>
+                                  <small>
+                                    {c.neighbor}:{" "}
+                                    {p.neighbor_stability === null
+                                      ? c.unavailable
+                                      : number(p.neighbor_stability, 2)}
+                                  </small>
+                                </details>
+                              </td>
+                              <td className="match-explanation">
+                                <span>
+                                  +{" "}
+                                  {strong
+                                    ? `${label(strong.feature_id)} · ${number(strong.mismatch)} ${c.gap}`
                                     : c.unavailable}
-                                </td>
-                              </tr>
-                            );
-                          })}
-                        </tbody>
-                      </table>
+                                </span>
+                                <small>
+                                  ↔{" "}
+                                  {weak
+                                    ? `${label(weak.feature_id)} · ${number(weak.mismatch)} ${c.gap}`
+                                    : c.none}
+                                </small>
+                              </td>
+                              <td>
+                                <input
+                                  type="checkbox"
+                                  aria-label={`${c.compare}: ${p.name}`}
+                                  checked={selectedRanks.some(
+                                    (x) => x.player_id === p.player_id,
+                                  )}
+                                  disabled={
+                                    selectedRanks.length >= 3 &&
+                                    !selected.includes(p.player_id)
+                                  }
+                                  onChange={(e) =>
+                                    setSelected(
+                                      e.target.checked
+                                        ? [
+                                            ...selectedRanks.map(
+                                              (x) => x.player_id,
+                                            ),
+                                            p.player_id,
+                                          ]
+                                        : selected.filter(
+                                            (id) => id !== p.player_id,
+                                          ),
+                                    )
+                                  }
+                                />
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="note">
+                    {c.compareMax} · {selectedRanks.length} {c.selected}
+                  </p>
+                  <details className="frontier-explanation">
+                    <summary>
+                      {result.frontier_count} / {result.eligible_count}{" "}
+                      {c.frontierCount}
+                    </summary>
+                    <p>{c.frontierNote}</p>
+                    <p>{c.cohortNote}</p>
+                    {result.frontier_count > result.eligible_count / 2 && (
+                      <p>{c.frontierMany}</p>
+                    )}
+                  </details>
+                  <details
+                    className="robustness-panel"
+                    open={robustOpen}
+                    onToggle={(e) => setRobustOpen(e.currentTarget.open)}
+                  >
+                    <summary>{c.robustness}</summary>
+                    <div className="robustness-notes">
+                      <p>
+                        <strong>{c.weights}</strong>
+                        <br />
+                        {c.weightNote}
+                      </p>
+                      <p>
+                        <strong>{c.profiles}</strong>
+                        <br />
+                        {c.profileNote}
+                      </p>
                     </div>
-                  )}
-                </details>
-              </>
-            )}
-          </section>
+                    {result.eligible_count <= 10 && (
+                      <p className="recruitment-warning">{c.smallPool}</p>
+                    )}
+                    {bootstrap.error ? (
+                      <p role="alert">
+                        {c.profileError}{" "}
+                        <button onClick={bootstrap.retry}>{c.retry}</button>
+                      </p>
+                    ) : (
+                      !bootstrap.data && <p role="status">{c.profileLoading}</p>
+                    )}
+                    {stability && (
+                      <div
+                        className="table-wrap"
+                        tabIndex={0}
+                        role="region"
+                        aria-label={c.evidence}
+                      >
+                        <table>
+                          <caption>
+                            {c.inclusion} · {c.rankRange}
+                          </caption>
+                          <thead>
+                            <tr>
+                              <th>{c.player}</th>
+                              <th>{c.weights}</th>
+                              <th>{c.profiles}</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {result.rankings.slice(0, 10).map((r) => {
+                              const w = stability.weight.players[r.player_id],
+                                p = stability.profile?.players[r.player_id];
+                              return (
+                                <tr key={r.player_id}>
+                                  <th scope="row">
+                                    {players.get(r.player_id)!.name}
+                                  </th>
+                                  <td>
+                                    {percent(w.top_k_inclusion)} ·{" "}
+                                    {number(w.rank_p10)}–{number(w.rank_p90)}
+                                  </td>
+                                  <td>
+                                    {p
+                                      ? `${percent(p.top_k_inclusion)} · ${number(p.rank_p10)}–${number(p.rank_p90)}`
+                                      : c.unavailable}
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </details>
+                </>
+              )}
+            </section>
+          </div>
           {selectedRanks.length > 0 && (
-            <section className="candidate-comparison">
+            <section
+              className="candidate-comparison"
+              ref={comparisonRef}
+              tabIndex={-1}
+            >
               <h2>{c.compareTitle}</h2>
               <p>{c.compareNote}</p>
               <div className="comparison-grid">

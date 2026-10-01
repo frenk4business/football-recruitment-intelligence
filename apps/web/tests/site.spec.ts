@@ -20,6 +20,7 @@ for (const locale of ["en", "nl"]) {
       "coverage/",
       "methodology/",
       "roadmap/",
+      "research/",
     ]) {
       const response = await page.goto(`${base}/${section}`);
       expect(response?.status()).toBe(200);

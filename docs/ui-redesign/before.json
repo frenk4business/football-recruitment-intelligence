@@ -1,0 +1,230 @@
+[
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "",
+    "initial": {
+      "lcp": 64,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "players/",
+    "initial": {
+      "lcp": 24,
+      "js": 642085,
+      "json": 859981
+    },
+    "search_ms": 37.83266600000002,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 20,
+      "js": 642085,
+      "json": 234534
+    },
+    "recruitment_ms": 29.15137500000037,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "translation/",
+    "initial": {
+      "lcp": 28,
+      "js": 642085,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 32,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "",
+    "initial": {
+      "lcp": 24,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "players/",
+    "initial": {
+      "lcp": 72,
+      "js": 642085,
+      "json": 859981
+    },
+    "search_ms": 23.045750000000226,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 20,
+      "js": 642085,
+      "json": 234534
+    },
+    "recruitment_ms": 29.06708400000025,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "translation/",
+    "initial": {
+      "lcp": 24,
+      "js": 642085,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 28,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "",
+    "initial": {
+      "lcp": 28,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "players/",
+    "initial": {
+      "lcp": 24,
+      "js": 642085,
+      "json": 859981
+    },
+    "search_ms": 19.708417000000736,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 24,
+      "js": 642085,
+      "json": 234534
+    },
+    "recruitment_ms": 29.158250000000407,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "translation/",
+    "initial": {
+      "lcp": 28,
+      "js": 642085,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 36,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "",
+    "initial": {
+      "lcp": 24,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "players/",
+    "initial": {
+      "lcp": 68,
+      "js": 642085,
+      "json": 859981
+    },
+    "search_ms": 21.565833999999086,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 20,
+      "js": 642085,
+      "json": 234534
+    },
+    "recruitment_ms": 20.3872080000001,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "translation/",
+    "initial": {
+      "lcp": 24,
+      "js": 642085,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 28,
+      "js": 642085,
+      "json": 0
+    },
+    "overflow": false
+  }
+]

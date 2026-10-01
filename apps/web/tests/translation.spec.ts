@@ -35,6 +35,7 @@ for (const locale of ["en", "nl"]) {
       .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
       .analyze();
     expect(result.violations).toEqual([]);
+    await page.locator(".translation-limits summary").click();
     await page.locator(".translation-limits a").click();
     await expect(page).toHaveURL(/methodology\/#translation/);
     await expect(page.locator(".translation-calibration > div")).toHaveCount(4);

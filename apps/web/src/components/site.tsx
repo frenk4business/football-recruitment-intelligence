@@ -1,6 +1,14 @@
 import { ProductHome, ResearchHub } from "./product-home";
 import { ProductNavigation } from "./product-navigation";
-import { Players } from "./players";
+import {
+  Players,
+  Recruitment,
+  PlayerDNA,
+  Evaluation,
+  Translation,
+  TranslationEvaluation,
+  Explorer,
+} from "./product-tools";
 import { ProfileCoverage, ProfileMethodology } from "./profile-coverage";
 import { playersCopy } from "@/lib/players-copy";
 import release from "@/lib/release-version.json";
@@ -9,17 +17,13 @@ import Image from "next/image";
 import { brandName } from "@/lib/brand";
 import { copy, route, type Locale, type Section } from "@/lib/content";
 import { coverage, matches, sources, metrics, quality } from "@/lib/data";
-import { PlayerDNA, Evaluation } from "./player-dna";
 import { dnaCopy } from "@/lib/dna-copy";
 import { dnaIndex, dnaRegistry, dnaEvaluation } from "@/lib/data";
-import { Translation, TranslationEvaluation } from "./translation";
 import { translationCopy } from "@/lib/translation-copy";
 import { translationIndex, translationEvaluation } from "@/lib/data";
-import { Recruitment } from "./recruitment";
 import { RecruitmentEvaluation } from "./recruitment-evaluation";
 import { recruitmentCopy } from "@/lib/recruitment-copy";
 import { recruitmentEvaluation } from "@/lib/data";
-import { Explorer } from "./explorer";
 const repo =
   "https://github.com/frenk4business/football-recruitment-intelligence";
 export function Site({
@@ -47,7 +51,7 @@ export function Site({
           >
             <picture>
               <source
-                media="(max-width: 480px)"
+                media="(max-width: 760px)"
                 srcSet="/brand/fri-emblem.webp"
                 width={44}
                 height={44}

@@ -15,7 +15,7 @@ import {
   detailPath,
   filterProfiles,
   filterURL,
-  normalizeName,
+  profileSearchText,
   readFilters,
   type PlayerFilters,
 } from "@/lib/player-search";
@@ -83,7 +83,13 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
       detailRef.current?.focus();
       lastOpened.current = `${state.profile}:${state.compare}`;
     }
-    if (!state.profile) lastOpened.current = "";
+    if (!state.profile && lastOpened.current) {
+      const previous = lastOpened.current.split(":")[0];
+      document
+        .querySelector<HTMLButtonElement>(`button[data-profile="${previous}"]`)
+        ?.focus();
+      lastOpened.current = "";
+    }
     const link = document.querySelector<HTMLAnchorElement>("a.language");
     if (link)
       link.href =
@@ -100,19 +106,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   };
   const names = useMemo(
     () =>
-      new Map(
-        index.profiles.map((p) => [
-          p.id,
-          normalizeName(
-            [
-              p.name,
-              ...p.teams.map((id) => index.teams[id]),
-              index.scopes.find((scope) => scope.id === p.scope)?.competition,
-              index.scopes.find((scope) => scope.id === p.scope)?.season,
-            ].join(" "),
-          ),
-        ]),
-      ),
+      new Map(index.profiles.map((p) => [p.id, profileSearchText(index, p)])),
     [index],
   );
   const results = useMemo(
@@ -241,7 +235,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
     </div>
   );
   return (
-    <div className="player-database">
+    <div className={`player-database ${selected ? "profile-is-open" : ""}`}>
       <label className="player-search">
         {c.search}
         <input
@@ -344,6 +338,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                 <div>
                   <button
                     className="profile-name"
+                    data-profile={p.id}
                     onClick={() => open(p.id)}
                     aria-label={`${c.open}: ${p.name}, ${context(p)}`}
                   >
@@ -355,16 +350,18 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     {c.minutes.toLowerCase()}
                   </p>
                 </div>
-                <div className="profile-row-actions">
-                  <button
-                    disabled={p.id === state.profile}
-                    onClick={() =>
-                      selected ? update({ compare: p.id }, true) : open(p.id)
-                    }
-                  >
-                    {selected ? c.compare : c.open}
-                  </button>
-                </div>
+                {selected && (
+                  <div className="profile-row-actions">
+                    <button
+                      disabled={p.id === state.profile}
+                      onClick={() =>
+                        selected ? update({ compare: p.id }, true) : open(p.id)
+                      }
+                    >
+                      {selected ? c.compare : c.open}
+                    </button>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -577,12 +574,6 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                           [c.common, selected.capabilities.common],
                           [c.similarity, selected.capabilities.similarity],
                           [c.dna, selected.capabilities.validated_dna],
-                          [
-                            locale === "en"
-                              ? "Recruitment validation"
-                              : "Recruitmentvalidatie",
-                            selected.capabilities.validated_dna,
-                          ],
                           [c.translation, selected.capabilities.translation],
                         ] as const
                       ).map(([label, available]) => (
@@ -591,6 +582,11 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                         </p>
                       ))}
                     </div>
+                    <p>
+                      {locale === "en"
+                        ? "Recruitment: a separate validated WSL research cohort. Database eligibility alone does not establish recruitment eligibility."
+                        : "Recruitment: een afzonderlijk gevalideerd WSL-onderzoekscohort. Beschikbaarheid in de database betekent niet automatisch geschiktheid voor recruitmentanalyse."}
+                    </p>
                     <p>{c.disclaimer}</p>
                     <dl>
                       <dt>{c.nativeVersion}</dt>

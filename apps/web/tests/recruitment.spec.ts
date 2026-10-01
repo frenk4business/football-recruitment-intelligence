@@ -81,6 +81,7 @@ for (const locale of ["en", "nl"] as const) {
     await expect(
       page.locator(`.recruitment-table [data-player="${reference}"]`),
     ).toHaveCount(0);
+    await page.locator(".requirements-disclosure > summary").click();
     await progressive.locator("select").first().selectOption("maximum");
     await progressive.locator('input[type="number"]').fill("40");
     await expect(progressive).toContainText(nl ? "Jouw keuze" : "Your choice");

@@ -1,8 +1,7 @@
 export const playersCopy = {
   en: {
     title: "Player database",
-    intro:
-      "Explore observed player-season profiles across open football datasets. Provider, season and evidence stay visible.",
+    intro: "Find a player, explore their playing style and compare profiles.",
     profiles: "player-season profiles",
     identities: "unique provider identities",
     providers: "providers",
@@ -123,8 +122,7 @@ export const playersCopy = {
   },
   nl: {
     title: "Spelersdatabase",
-    intro:
-      "Verken geobserveerde speler-seizoensprofielen uit open voetbaldatasets. Provider, seizoen en onderbouwing blijven zichtbaar.",
+    intro: "Zoek een speler, bekijk de speelstijl en vergelijk profielen.",
     profiles: "speler-seizoensprofielen",
     identities: "unieke provideridentiteiten",
     providers: "providers",
