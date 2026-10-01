@@ -93,7 +93,17 @@ export function filterProfiles(
           ? p.capabilities.common
           : p.capabilities.similarity)) &&
       tokens.every((t) =>
-        (names?.get(p.id) ?? normalizeName(p.name)).includes(t),
+        (
+          names?.get(p.id) ??
+          normalizeName(
+            [
+              p.name,
+              ...p.teams.map((id) => index.teams[id]),
+              scope.competition,
+              scope.season,
+            ].join(" "),
+          )
+        ).includes(t),
       )
     );
   });
