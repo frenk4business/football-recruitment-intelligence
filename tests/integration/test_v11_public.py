@@ -7,7 +7,7 @@ from pathlib import Path
 from football_intelligence.profiles import contracts
 from football_intelligence.profiles.cache import checksum
 from football_intelligence.profiles.features import COMMON_IDS
-from football_intelligence.profiles.publish import profile_path
+from football_intelligence.profiles.publish import pipeline_hash, profile_path
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "artifacts/v11/public"
@@ -62,6 +62,7 @@ def test_source_and_definition_provenance():
     assert manifest["source_manifest_sha256"] == checksum(ROOT / "config/v11-sources.json")
     assert manifest["feature_manifest_sha256"] == checksum(PUBLIC / "registry.json")
     assert manifest["evaluation_sha256"] == checksum(ROOT / "artifacts/v11/evaluation.json")
+    assert manifest["pipeline_sha256"] == pipeline_hash(ROOT)
     files = {r["path"] for r in json.loads((ROOT / "config/v11-sources.json").read_text())["files"]}
     for p in PUBLIC.glob("profiles/*/*.json"):
         detail = json.loads(p.read_text())

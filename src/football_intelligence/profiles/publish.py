@@ -90,6 +90,8 @@ def registry(root: Path, threshold: int):
                 + (
                     "completed attempts / attempts with fully known outcomes."
                     if numerator == "open_completion"
+                    else "sum of provider non-penalty shot xG × 90 / reliable nominal regulation minutes."
+                    if numerator == "npxg"
                     else "count × 90 / reliable nominal regulation minutes."
                 )
                 + " Not a harmonised cross-provider metric.",
@@ -97,6 +99,8 @@ def registry(root: Path, threshold: int):
                 + (
                     "geslaagde pogingen / pogingen met volledig bekende uitkomsten."
                     if numerator == "open_completion"
+                    else "som van provider-xG voor schoten zonder strafschoppen × 90 / betrouwbare nominale reguliere minuten."
+                    if numerator == "npxg"
                     else "aantal × 90 / betrouwbare nominale reguliere minuten."
                 )
                 + " Geen geharmoniseerd kenmerk voor vergelijking tussen providers.",

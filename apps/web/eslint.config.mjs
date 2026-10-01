@@ -5,7 +5,7 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    files: ["scripts/performance.mjs"],
+    files: ["scripts/performance.mjs", "scripts/players-performance.mjs"],
     languageOptions: {
       globals: {
         PerformanceObserver: "readonly",

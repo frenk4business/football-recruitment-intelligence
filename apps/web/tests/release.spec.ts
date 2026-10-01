@@ -236,7 +236,7 @@ test("static 404, robots, sitemap and JavaScript-disabled content", async ({
     "Disallow: /\n",
   );
   const sitemap = await (await request.get("/sitemap.xml")).text();
-  expect(sitemap.match(/<loc>/g)).toHaveLength(16);
+  expect(sitemap.match(/<loc>/g)).toHaveLength(18);
   const context = await browser.newContext({ javaScriptEnabled: false });
   const noJS = await context.newPage();
   await noJS.goto(new URL("/methodology/", page.url()).href);

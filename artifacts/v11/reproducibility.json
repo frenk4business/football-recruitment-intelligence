@@ -1,0 +1,32 @@
+{
+  "compared_files": 25,
+  "unchanged": true,
+  "files": {
+    "config/v11-public-artifacts.json": "008426cba9f44dcb26514a9fad60372a69890c88b51509a3cf1a277067f648a2",
+    "artifacts/v11/evaluation.json": "ccacd7a76e5f7f2d989c0287c40a7f02c6ac17fea4f87cacb0e571eefcf8a3c2",
+    "artifacts/v11/provider-pca.png": "9b151d4c86063fabf516d866081ccf00f3afe285d5951b69221fb0cde1230b47",
+    "data/processed/v11/full/provider=statsbomb/competition=37/season=281/events.parquet": "7dab75674a616ca5b2dceab37f341859eb93fc8c18be71efbab12e13f43acaa5",
+    "data/processed/v11/full/provider=statsbomb/competition=37/season=90/events.parquet": "4a2f0150e0a79e05f534d5c0a8d81da05d01eeb0bf9198036455b79bb34eecbd",
+    "data/processed/v11/full/provider=statsbomb/competition=12/season=27/events.parquet": "4029efab31110f5dec7b1e1446b7e39073d479a613f405b650acadf081ddd831",
+    "data/processed/v11/full/provider=statsbomb/competition=2/season=27/events.parquet": "746bea60668fcd8e021802b4324a53b3fee2aced13b7b7bf7432440369bf344e",
+    "data/processed/v11/full/provider=statsbomb/competition=135/season=281/events.parquet": "ebc476148cbc3f7934e2b7d58f56286d25063211323382f27ed00d4dad6f6547",
+    "data/processed/v11/full/provider=statsbomb/competition=11/season=27/events.parquet": "1182e411ec9dbcd5a462947dc83d6c96b0b1e4aceca004812f5119424ea27805",
+    "data/processed/v11/full/provider=wyscout/competition=426/season=181137/events.parquet": "35adaf97df9fc5c754bb1bf94a3df3d395d4d2f7c07e03e27a0a91d1aba369fc",
+    "data/processed/v11/full/provider=wyscout/competition=795/season=181144/events.parquet": "611c2663084c2e07c95f300cfe67bab2805819771c9bbc979a720b36991ed773",
+    "data/processed/v11/full/provider=wyscout/competition=524/season=181248/events.parquet": "5feb76150cbc0ba9caf38811f1e05ee0e2bc758563b444e35988c3d47fa76338",
+    "data/processed/v11/full/provider=wyscout/competition=412/season=181189/events.parquet": "a55fcbaa049153710b09218a80c069321f97e4495a54c2f465ca3128caea69cc",
+    "data/processed/v11/full/provider=wyscout/competition=364/season=181150/events.parquet": "6694b2de418a2089b12b439db130c5adac8dfb620de225cde12afa7655469451",
+    "data/processed/v11/full/provider=statsbomb/competition=37/season=281/observations.parquet": "3d753a657ace9dad1944067dbe6a0736586d8ef0f1272f89c31cecad803d6eff",
+    "data/processed/v11/full/provider=statsbomb/competition=37/season=90/observations.parquet": "16f7977108582730264df66109b85f77cebb75962d1b53740a2ced2f709ec709",
+    "data/processed/v11/full/provider=statsbomb/competition=12/season=27/observations.parquet": "7d9d5ed0304822b3a2f7fe0354e33fa585e2c1a4b61d355cedd1d21d08e49bf3",
+    "data/processed/v11/full/provider=statsbomb/competition=2/season=27/observations.parquet": "d38618692e0a012d1f3bf96bae1e21b818b28fdc75084b1ea34f7812837a727d",
+    "data/processed/v11/full/provider=statsbomb/competition=135/season=281/observations.parquet": "394f6a6c3e86822aebb1c843d852fcf2f6a1d76123be2451a703dddcec5eb39b",
+    "data/processed/v11/full/provider=statsbomb/competition=11/season=27/observations.parquet": "2d1b2019239d1c00bfe214c6127b4779c475e7674a493cc9494d49ab2bd37d8b",
+    "data/processed/v11/full/provider=wyscout/competition=426/season=181137/observations.parquet": "bad2d086bdaacdc73e70b3e2fc80d2231efaa63ebe6d9797727e3cbcd8339982",
+    "data/processed/v11/full/provider=wyscout/competition=795/season=181144/observations.parquet": "e8e59c0997bb4d41c206531ed75127c19e75b3f2b5625137bf016e01ee5406c3",
+    "data/processed/v11/full/provider=wyscout/competition=524/season=181248/observations.parquet": "a53528868231b6be589f572a11dd0c1654ba04d795e6e3b1141fdd1208e8a7b2",
+    "data/processed/v11/full/provider=wyscout/competition=412/season=181189/observations.parquet": "44622f0b27b7b97c512e97f4c7e95429f8c1cf122d65eb51724e511ca756a25d",
+    "data/processed/v11/full/provider=wyscout/competition=364/season=181150/observations.parquet": "c7e0fa2d50f4847f8b0568fdad3110373c3dd5ac6df3df88cb72d4202e0d83ee"
+  },
+  "verification": "Second full make v11-data-build, pinned caches reused, identical public inventory/evaluation/PCA and all 22 canonical event/observation partitions"
+}
