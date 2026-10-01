@@ -865,3 +865,8 @@ main#main {
     scroll-margin-top: 16px;
   }
 }
+/* Reserve the first workspace viewport while the verified index loads. */
+.profile-loading,
+.player-database {
+  min-height: calc(100svh - 180px);
+}
