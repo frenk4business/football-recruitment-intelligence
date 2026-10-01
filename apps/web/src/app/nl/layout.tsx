@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { brandIcons } from "@/lib/brand";
 import "../globals.css";
 import "@/styles/product.css";
+import "@/styles/workspace.css";
 export const metadata: Metadata = {
   title: {
     default: "Football Recruitment Intelligence",
