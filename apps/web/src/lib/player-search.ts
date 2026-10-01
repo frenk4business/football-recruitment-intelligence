@@ -11,6 +11,8 @@ export type PlayerFilters = {
   page: number;
   profile: string;
   compare: string;
+  compare2: string;
+  sort: string;
 };
 export const defaults: PlayerFilters = {
   q: "",
@@ -24,6 +26,8 @@ export const defaults: PlayerFilters = {
   page: 1,
   profile: "",
   compare: "",
+  compare2: "",
+  sort: "name",
 };
 export const normalizeName = (s: string) =>
   s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
@@ -54,6 +58,8 @@ export function readFilters(
     "kind",
     "profile",
     "compare",
+    "compare2",
+    "sort",
   ] as const)
     state[key] = (params.get(key) ?? state[key]).slice(0, 100);
   if (!["", "statsbomb", "wyscout"].includes(state.provider))
@@ -76,6 +82,16 @@ export function readFilters(
     state.compare === state.profile
   )
     state.compare = "";
+  if (
+    !index.profiles.some((p) => p.id === state.compare2) ||
+    [state.profile, state.compare].includes(state.compare2)
+  )
+    state.compare2 = "";
+  if (!state.compare && state.compare2) {
+    state.compare = state.compare2;
+    state.compare2 = "";
+  }
+  if (!["name", "minutes"].includes(state.sort)) state.sort = "name";
   const page = Number(params.get("page"));
   state.page =
     Number.isSafeInteger(page) && page >= 1
