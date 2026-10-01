@@ -120,6 +120,8 @@ The existing player-search budget also passes in the additive `--images` audit m
 - npm audit: zero known vulnerabilities; Python dependency audit: no known vulnerabilities. Focused secret scan: no findings in reachable history or working files. This scanner is not a claim of exhaustive secret detection.
 - Offline deterministic resume: 485 identical files, zero requests.
 
+Live verification additionally checks all 20 routes and 5,870 exported file hashes. It exposed a pointer-test race: independently loaded playing-style/club context could move a disclosure between mouse-down and mouse-up. Those tests now explicitly await the relevant rendered content before clicking; they retain all image, attribution and recovery assertions, with no test retries. The five affected scenarios passed five repetitions in both Firefox and WebKit (50 checks).
+
 ## O. Scientific integrity
 
 The baseline comparison covers **28,064 existing data/artifact/scientific-source/brand files**. Only `src/football_intelligence/cli.py` differs, to register the isolated image commands; **28,063 files are byte-identical**. All 2,146 frozen research files validate. Player DNA, similarity, league translation, recruitment mathematics, scientific schemas, provider identity joins, source football data, branding and favicon are unchanged. No scientific release version or existing tag is modified. See [integrity.json](integrity.json).

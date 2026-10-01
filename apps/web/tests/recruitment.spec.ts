@@ -207,6 +207,8 @@ test("recruitment failed artifacts retry and do not invent profiles", async ({
   await expect(page.locator(".recruitment-table")).toHaveCount(0);
   await page.unroute("**/data/phase4/index.json*");
   await page.getByRole("button", { name: "Try again", exact: true }).click();
+  // Club context is a separate request that inserts content above the panel.
+  await expect(page.locator(".club-summary")).toBeVisible();
   await page
     .locator('[data-feature="pressures_per90"] select')
     .first()

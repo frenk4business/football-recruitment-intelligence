@@ -116,6 +116,9 @@ for (const locale of ["en", "nl"] as const) {
       }
       expect((await avatar.boundingBox())!.width).toBe(96);
       expect((await avatar.boundingBox())!.height).toBe(96);
+      // The independent DNA request expands the section above the credits.
+      // Wait for that content before a pointer click can race its layout shift.
+      await expect(page.locator(".integrated-style")).toBeVisible();
       await page.locator("#profile-quality > summary").click();
       await expect(
         page
