@@ -181,7 +181,7 @@ export function ResearchHub({ locale }: { locale: Locale }) {
           </p>
           <Link
             prefetch={false}
-            href={route(locale, "methodology") + "#evaluation"}
+            href={route(locale, "methodology") + "#player-dna"}
           >
             {nl ? "Volledige evaluatie" : "Full evaluation"} →
           </Link>
@@ -195,7 +195,7 @@ export function ResearchHub({ locale }: { locale: Locale }) {
           </p>
           <Link
             prefetch={false}
-            href={route(locale, "methodology") + "#translation-evaluation"}
+            href={route(locale, "methodology") + "#translation"}
           >
             {nl ? "Volledige evaluatie" : "Full evaluation"} →
           </Link>
@@ -209,7 +209,7 @@ export function ResearchHub({ locale }: { locale: Locale }) {
           </p>
           <Link
             prefetch={false}
-            href={route(locale, "methodology") + "#recruitment-evaluation"}
+            href={route(locale, "methodology") + "#recruitment"}
           >
             {nl ? "Volledige evaluatie" : "Full evaluation"} →
           </Link>
