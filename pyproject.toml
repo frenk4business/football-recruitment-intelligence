@@ -17,6 +17,7 @@ dependencies = [
   "scikit-learn>=1.7,<2",
   "pymc>=5.25,<6",
   "arviz>=0.22,<1",
+  "pillow==12.3.0",
 ]
 
 [dependency-groups]

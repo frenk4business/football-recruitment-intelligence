@@ -1,3 +1,4 @@
+import { validatePublishedImages } from "./player-image-guard.mjs";
 import { readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 import {
@@ -65,6 +66,7 @@ if (!check) {
   );
 }
 verifyScience();
+validatePublishedImages(root, out);
 const manifest = JSON.parse(readFileSync(join(out, "release-manifest.json")));
 if (
   manifest.version !== version ||

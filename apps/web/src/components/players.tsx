@@ -20,6 +20,7 @@ import {
   readFilters,
   type PlayerFilters,
 } from "@/lib/player-search";
+import { PlayerAvatar, PhotoAttribution } from "./player-avatar";
 import { ProfileStyle } from "./profile-style";
 import { playersCopy } from "@/lib/players-copy";
 const repo =
@@ -239,9 +240,39 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
         <thead>
           <tr>
             <th scope="col">{c.metric}</th>
-            <th scope="col">{selected?.name}</th>
-            {b && <th scope="col">{comparison?.data?.identity.name}</th>}
-            {third && <th scope="col">{comparison2?.data?.identity.name}</th>}
+            <th scope="col">
+              {selected && (
+                <PlayerAvatar
+                  id={selected.id}
+                  name={selected.name}
+                  locale={locale}
+                  size="medium"
+                />
+              )}
+              {selected?.name}
+            </th>
+            {b && comparison?.data && (
+              <th scope="col">
+                <PlayerAvatar
+                  id={comparison.data.identity.id}
+                  name={comparison.data.identity.name}
+                  locale={locale}
+                  size="medium"
+                />
+                {comparison.data.identity.name}
+              </th>
+            )}
+            {third && comparison2?.data && (
+              <th scope="col">
+                <PlayerAvatar
+                  id={comparison2.data.identity.id}
+                  name={comparison2.data.identity.name}
+                  locale={locale}
+                  size="medium"
+                />
+                {comparison2.data.identity.name}
+              </th>
+            )}
           </tr>
         </thead>
         <tbody>
@@ -418,6 +449,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
               >
                 <div className="profile-row-data">
                   <div className="profile-row-identity">
+                    <PlayerAvatar id={p.id} name={p.name} locale={locale} />
                     <button
                       className="profile-name"
                       data-profile={p.id}
@@ -501,28 +533,39 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
               tabIndex={-1}
               aria-label={`${c.open}: ${selected.name}`}
             >
-              <div className="profile-actions">
-                <h2>{selected.name}</h2>
-                <button
-                  onClick={() =>
-                    update({ profile: "", compare: "", compare2: "" }, true)
-                  }
-                >
-                  {locale === "en"
-                    ? "Back to results"
-                    : "Terug naar resultaten"}
-                </button>
+              <div className="profile-identity-header">
+                <PlayerAvatar
+                  id={selected.id}
+                  name={selected.name}
+                  locale={locale}
+                  size="large"
+                  decorative={false}
+                />
+                <div className="profile-identity-copy">
+                  <div className="profile-actions">
+                    <h2>{selected.name}</h2>
+                    <button
+                      onClick={() =>
+                        update({ profile: "", compare: "", compare2: "" }, true)
+                      }
+                    >
+                      {locale === "en"
+                        ? "Back to results"
+                        : "Terug naar resultaten"}
+                    </button>
+                  </div>
+                  <p>
+                    {selected.teams.map((t) => index.teams[t]).join(" / ")} ·{" "}
+                    {roleName(selected.role ?? selected.role_family)} ·{" "}
+                    {scopes.get(selected.scope)?.competition} ·{" "}
+                    {scopes.get(selected.scope)?.season}
+                  </p>
+                  <p className="small">
+                    {number(selected.minutes)} {c.minutes.toLowerCase()} ·{" "}
+                    {providerName(selected.provider)}
+                  </p>
+                </div>
               </div>
-              <p>
-                {selected.teams.map((t) => index.teams[t]).join(" / ")} ·{" "}
-                {roleName(selected.role ?? selected.role_family)} ·{" "}
-                {scopes.get(selected.scope)?.competition} ·{" "}
-                {scopes.get(selected.scope)?.season}
-              </p>
-              <p className="small">
-                {number(selected.minutes)} {c.minutes.toLowerCase()} ·{" "}
-                {providerName(selected.provider)}
-              </p>
               {(profile?.error ||
                 registry?.error ||
                 comparison?.error ||
@@ -813,6 +856,20 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                         ? "Data quality & methodology"
                         : "Datakwaliteit & methodologie"}
                     </summary>{" "}
+                    {[
+                      selected,
+                      byId.get(state.compare),
+                      byId.get(state.compare2),
+                    ]
+                      .filter((p): p is ProfileIndexEntry => Boolean(p))
+                      .map((p) => (
+                        <PhotoAttribution
+                          key={p.id}
+                          id={p.id}
+                          name={p.name}
+                          locale={locale}
+                        />
+                      ))}
                     <div
                       className="profile-capabilities"
                       aria-label={c.capabilities}

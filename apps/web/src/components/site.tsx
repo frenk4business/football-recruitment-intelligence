@@ -1,3 +1,4 @@
+import { ImageCredits } from "./image-credits";
 import { ProductHome, ResearchHub } from "./product-home";
 import { GlobalSearch } from "./global-search";
 import { ProductNavigation } from "./product-navigation";
@@ -145,6 +146,7 @@ export function Site({
         {section === "research" && (
           <>
             <ResearchHub locale={locale} />
+            <ImageCredits locale={locale} />
             <details className="research-register">
               <summary>
                 {locale === "en"
@@ -515,6 +517,10 @@ export function Site({
           </p>
           <div>
             <a href={repo}>GitHub</a> ·{" "}
+            <a href={`${route(locale, "research")}#image-credits`}>
+              {locale === "en" ? "Image credits" : "Afbeeldingscredits"}
+            </a>{" "}
+            ·{" "}
             <Link prefetch={false} href={route(locale, "methodology")}>
               {c.nav.methodology}
             </Link>{" "}

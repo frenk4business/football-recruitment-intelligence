@@ -209,3 +209,28 @@ def expand(max_matches: int | None = typer.Option(None, min=1)):
         return
     evaluate(root, destination)
     publish(root)
+
+
+images_app = typer.Typer(help="Offline, verified Wikimedia player-image presentation enrichment.")
+app.add_typer(images_app, name="images")
+
+
+@images_app.command("enrich")
+def images_enrich(refresh_metadata: bool = False, refresh_player: str | None = None):
+    from football_intelligence.images.pipeline import enrich
+
+    typer.echo(
+        json.dumps(
+            enrich(Path.cwd(), refresh_metadata=refresh_metadata, refresh_player=refresh_player),
+            indent=2,
+        )
+    )
+
+
+@images_app.command("review")
+def images_review():
+    """Show coverage and the editable override/review locations; never changes approvals."""
+    typer.echo(Path("artifacts/player-images/coverage.json").read_text())
+    typer.echo(
+        "Review: artifacts/player-images/review.json\nDecisions: config/player-images/overrides.json"
+    )

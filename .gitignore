@@ -30,3 +30,8 @@ apps/web/public/integrity/
 apps/web/public/release-manifest.json
 apps/web/src/lib/artifact-integrity.json
 apps/web/src/lib/release-version.json
+
+# Verified image publication is generated from the separate enrichment manifest
+apps/web/public/players/images/
+apps/web/src/lib/player-image-reference.json
+artifacts/player-images/identity-input.json

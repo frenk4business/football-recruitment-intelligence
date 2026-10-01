@@ -10,6 +10,7 @@ export default tseslint.config(
       "scripts/players-performance.mjs",
       "scripts/ui-review.mjs",
       "scripts/product-review.mjs",
+      "scripts/player-image-review.mjs",
     ],
     languageOptions: {
       globals: {
