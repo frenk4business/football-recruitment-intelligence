@@ -50,6 +50,9 @@ test("explorer controls, tracking slider, empty result and mobile overflow", asy
   ).toBeVisible();
   await page.getByRole("slider").fill("30");
   await expect(page.locator(".time-control")).toContainText("30 s");
+  await page.getByRole("slider").focus();
+  await page.keyboard.press("ArrowRight");
+  await expect(page.locator(".time-control")).toContainText("31 s");
   await page
     .getByRole("link", { name: "Taal wijzigen naar Nederlands" })
     .click();

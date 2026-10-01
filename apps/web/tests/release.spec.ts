@@ -1,3 +1,4 @@
+import { expectNoOverflow } from "./layout-check";
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { readFileSync } from "node:fs";
@@ -33,11 +34,7 @@ for (const locale of ["en", "nl"]) {
           "content",
           /noindex/,
         );
-        expect(
-          await page.evaluate(
-            () => document.documentElement.scrollWidth <= innerWidth,
-          ),
-        ).toBe(true);
+        await expectNoOverflow(page);
       }
     }
     await page.goto(`${base}/recruitment/`);
@@ -167,4 +164,34 @@ test("security headers enforce same-origin resources and stable data revalidatio
   const asset = await request.get(script!);
   expect(asset.headers()["cache-control"]).toContain("immutable");
   expect(errors).toEqual([]);
+});
+
+test("clipboard denial retains a selectable share URL", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: async () => {
+          throw new DOMException("Denied", "NotAllowedError");
+        },
+      },
+    });
+  });
+  await page.goto("/recruitment/");
+  await page
+    .locator('[data-feature="pressures_per90"] select')
+    .first()
+    .selectOption("minimum");
+  await page
+    .getByRole("button", { name: "Copy scenario link", exact: false })
+    .click();
+  const fallback = page.getByLabel("Copy this scenario link", { exact: true });
+  await expect(fallback).toHaveValue(/v=1/);
+  await fallback.focus();
+  await expect(fallback).toBeFocused();
+  await expect(
+    page.getByText("Copy the link below to share this scenario.", {
+      exact: false,
+    }),
+  ).toBeVisible();
 });
