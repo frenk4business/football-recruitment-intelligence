@@ -378,7 +378,12 @@ function RecruitmentBoard({
               })
             }
           >
-            {["CB", "FB/WB", "DM", "CM", "AM", "W", "ST"].map((role) => (
+            {!index.roles.includes(scenario.target_role) && (
+              <option value={scenario.target_role} disabled>
+                {c.sparseRole}
+              </option>
+            )}
+            {index.roles.map((role) => (
               <option key={role} value={role}>
                 {role === "AM" ? c.sparseRole : role}
               </option>
