@@ -72,11 +72,14 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   );
   const [retry, setRetry] = useState(0);
   const [comparisonQuery, setComparisonQuery] = useState("");
+  const [comparisonStarter, setComparisonStarter] = useState("");
   const detailRef = useRef<HTMLElement>(null);
   const lastOpened = useRef("");
   useEffect(() => {
-    const restore = () =>
+    const restore = () => {
+      setComparisonStarter("");
       setState(readFilters(new URLSearchParams(window.location.search), index));
+    };
     restore();
     window.addEventListener("popstate", restore);
     return () => window.removeEventListener("popstate", restore);
@@ -171,8 +174,10 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   const roleName = (key: string) => c.roles[key as keyof typeof c.roles] ?? key;
   const context = (p: ProfileIndexEntry) =>
     `${providerName(p.provider)} · ${scopes.get(p.scope)?.competition} ${scopes.get(p.scope)?.season} · ${p.teams.map((t) => index.teams[t]).join(" / ")}`;
-  const open = (id: string) =>
+  const open = (id: string) => {
+    setComparisonStarter("");
     update({ profile: id, compare: "", compare2: "" }, true);
+  };
   const reset = () =>
     update({
       ...defaults,
@@ -389,45 +394,74 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
               {number(results.length, 0)} {c.results}
             </p>
           </div>
+          {!selected && (
+            <p className="discovery-hint small">
+              {locale === "en"
+                ? "Open a profile to explore playing style, or compare up to three players."
+                : "Open een profiel om de speelstijl te bekijken, of vergelijk maximaal drie spelers."}
+            </p>
+          )}
+          <div className="profile-list-columns" aria-hidden="true">
+            <span>{locale === "en" ? "Player / team" : "Speler / club"}</span>
+            <span>{c.role}</span>
+            <span>
+              {c.competition} / {c.season.toLowerCase()}
+            </span>
+            <span>{c.minutes}</span>
+            <span>{locale === "en" ? "Action" : "Actie"}</span>
+          </div>
           <ul className="profile-list" aria-labelledby="player-results-heading">
             {rows.map((p) => (
               <li
                 key={p.id}
                 className={p.id === state.profile ? "is-selected" : undefined}
               >
-                <div>
-                  <button
-                    className="profile-name"
-                    data-profile={p.id}
-                    onClick={() => open(p.id)}
-                    aria-label={`${c.open}: ${p.name}, ${context(p)}`}
-                  >
-                    {p.name}
-                  </button>
-                  <p className="small">
-                    {p.teams.map((t) => index.teams[t]).join(" / ")} ·{" "}
+                <div className="profile-row-data">
+                  <div className="profile-row-identity">
+                    <button
+                      className="profile-name"
+                      data-profile={p.id}
+                      onClick={() => open(p.id)}
+                      aria-label={`${c.open}: ${p.name}, ${context(p)}`}
+                    >
+                      {p.name}
+                    </button>
+                    <p className="small">
+                      {p.teams.map((t) => index.teams[t]).join(" / ")}
+                    </p>
+                  </div>
+                  <p className="profile-row-role small">
+                    <span className="sr-only">{c.role}: </span>
                     {roleName(p.role ?? p.role_family)}
                   </p>
-                  <p className="small">
+                  <p className="profile-row-scope small">
                     {scopes.get(p.scope)?.competition} ·{" "}
-                    {scopes.get(p.scope)?.season} · {number(p.minutes)} min ·{" "}
-                    {providerName(p.provider)}
+                    {scopes.get(p.scope)?.season}
+                    <span>{providerName(p.provider)}</span>
+                  </p>
+                  <p className="profile-row-minutes small">
+                    {number(p.minutes)} <span>min</span>
                   </p>
                 </div>
-                {selected && (
-                  <div className="profile-row-actions">
-                    <button
-                      disabled={
-                        [state.profile, state.compare, state.compare2].includes(
-                          p.id,
-                        ) || Boolean(state.compare && state.compare2)
+                <div className="profile-row-actions">
+                  <button
+                    disabled={
+                      [state.profile, state.compare, state.compare2].includes(
+                        p.id,
+                      ) || Boolean(state.compare && state.compare2)
+                    }
+                    aria-label={`${c.compare}: ${p.name}, ${context(p)}`}
+                    onClick={() => {
+                      if (selected) addComparison(p.id);
+                      else {
+                        open(p.id);
+                        setComparisonStarter(p.id);
                       }
-                      onClick={() => addComparison(p.id)}
-                    >
-                      {selected ? c.compare : c.open}
-                    </button>
-                  </div>
-                )}
+                    }}
+                  >
+                    {c.compare}
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
@@ -514,8 +548,16 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                   </p>
                   <details
                     className="comparison-selection"
-                    key={Boolean(state.compare || state.compare2).toString()}
-                    open={Boolean(state.compare || state.compare2)}
+                    key={Boolean(
+                      state.compare ||
+                      state.compare2 ||
+                      comparisonStarter === state.profile,
+                    ).toString()}
+                    open={Boolean(
+                      state.compare ||
+                      state.compare2 ||
+                      comparisonStarter === state.profile,
+                    )}
                   >
                     <summary>
                       {locale === "en"

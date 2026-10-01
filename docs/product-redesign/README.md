@@ -6,7 +6,7 @@ Baseline: `5c939eafa43cbf467edbc36f06909559dabe46aa` (scientific release 1.1.0).
 
 The existing Next.js static export has 20 EN/NL routes, a shared server shell and route-specific client tools. Compact SHA-verified public indices support local search; individual profiles and WSL percentiles load on selection. Recruitment uses the original validated WSL cohort and unchanged pure TypeScript scoring with Python parity. Existing provider restrictions, thresholds and legacy routes remain authoritative.
 
-The current horizontal header, large home typography, hidden primary filters, two-profile comparison and visible hard-constraint controls obstruct the requested workstation flow. Preserve the native mobile menu, keyboard focus, no-JavaScript research navigation, artifact retries and query-string compatibility. There is no supplied mockup file in the latest attachment directory; the written brief is the available design reference.
+The current horizontal header, large home typography, hidden primary filters, two-profile comparison and visible hard-constraint controls obstruct the requested workstation flow. Preserve the native mobile menu, keyboard focus, no-JavaScript research navigation, artifact retries and query-string compatibility. The mockup was unavailable during the initial implementation, so that implementation used the written brief. The user subsequently supplied the visual reference; the refinement below records the resulting changes.
 
 1. Introduce a 212px dark sidebar, compact search bar and native mobile navigation; keep supplied branding intact.
 2. Compact the home entry and show factual generated coverage.
@@ -93,3 +93,14 @@ Branch: `feature/product-ui-redesign`. Separate commits cover shell/search, disc
 ### Q. Remaining UX limitations
 
 The referenced mockup image was not present in the attachment directory, so visual review follows the written brief and actual product capabilities. This is not a field usability study. Most expanded profiles have observed rates rather than validated WSL percentiles; manual comparison is constrained by available providers/features. Recruitment remains historical WSL research rather than a current transfer market. The mobile advanced editor is necessarily long, and three-way comparisons can require table scrolling on very narrow screens. Search results are capped for scanability, with full database search available. Existing analytical CSS is preserved under the new workspace layer; further consolidation is possible without changing this release. Performance samples are local observations, not field Core Web Vitals or proof of a statistically significant speed improvement.
+
+
+## Supplied visual reference: discovery refinement
+
+Follow-up baseline: `468eb47234627c762e636abdfae8151d095fa1a9` (PR #16).
+
+The supplied image confirms the dark navigation, compact search, structured player results and direct comparison direction. Discovery now uses the full workspace until a profile is selected. At desktop widths, aligned player/team, role, competition/season/provider, reliable minutes and action columns improve scanning. These remain real source-qualified profiles; no ages, market values, faces or fit percentages were added. Narrow screens retain labelled list rows, and selecting a player restores the existing detail workspace.
+
+Every result offers a comparison action. Starting from discovery opens that player's existing comparison controls immediately; the existing three-player limit, provider boundaries, URL contract and back/forward behavior remain unchanged. Accessible action names include the player and source context. The original name button continues to open the profile normally.
+
+Validation: lint, typecheck, format, 148 Python tests, 28 frontend unit tests, 186 Chromium/Firefox/WebKit checks, production build and release validation pass. The six additional browser checks cover EN/NL desktop workspace width, direct comparison, history/focus restoration and mobile layout. Local before/after captures are in `artifacts/local-qa/product-redesign/reference-{before,after}-*`; the comparison retains list semantics rather than presenting unsupported data as table columns. Existing brand assets, scientific content, data and model logic are unchanged.
