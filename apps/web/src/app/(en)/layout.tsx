@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { brandIcons } from "@/lib/brand";
 import "../globals.css";
 export const metadata: Metadata = {
   title: {
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   },
   description:
     "Open football data, explicit provenance and reproducible research.",
-  icons: { icon: "/favicon.svg" },
+  icons: brandIcons,
   robots: { index: true, follow: true },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {

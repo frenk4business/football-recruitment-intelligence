@@ -8,7 +8,12 @@ export const read = (path) =>
 export const json = (path) => JSON.parse(read(path));
 export const sha = (data) => createHash("sha256").update(data).digest("hex");
 export const version = read("VERSION").toString().trim();
-export const inventory = json("config/public-artifacts.json");
+export const inventory = {
+  files: [
+    ...json("config/public-artifacts.json").files,
+    ...json("config/v11-public-artifacts.json").files,
+  ],
+};
 export const science = json("config/scientific-lock.json");
 export const git = (...args) =>
   execFileSync("git", args, { cwd: root, encoding: "utf8" }).trim();

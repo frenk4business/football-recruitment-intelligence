@@ -2,7 +2,13 @@
 
 Start with the [product and quick start](../README.md). This index separates current operations from the preserved chronological research record.
 
+## Release v1.1
+
+[Source audit](v1.1-data-expansion-audit.md) · [feature semantics](provider-feature-semantics.md) · [registered plan](v1.1-experiment-plan.md) · [common-profile evaluation](common-profile-evaluation.md) · [engineering, performance and publication](v1.1-engineering.md).
+
 ## Release v1
+
+[Phase 5 branding follow-up](phase-5-brand-integration.md) records the supplied assets and their web integration after the v1.0.0 release.
 
 [Release record](releases/v1.0.0.md) · [changelog](../CHANGELOG.md) · [production audit](phase-5-production-audit.md) · [preimplementation gate](release-gate-v1.md) · [completed QA](v1-release-qa.md) · [checklist](release-checklist.md).
 

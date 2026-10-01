@@ -188,3 +188,24 @@ def similarity_build():
     typer.echo(
         f"Published {len(manifest['public_sha256'])} derived artifacts; {manifest['version']}"
     )
+
+
+@data.command("expand")
+def expand(max_matches: int | None = typer.Option(None, min=1)):
+    """Build v1.1 from pinned sources; bounded development runs never publish."""
+    from football_intelligence.profiles.aggregate import aggregate
+    from football_intelligence.profiles.evaluate import evaluate
+    from football_intelligence.profiles.ingest import ingest
+    from football_intelligence.profiles.publish import publish
+    from football_intelligence.profiles.sources import Sources
+
+    root = Path.cwd()
+    if max_matches is None:
+        Sources(root).audit_catalogue()
+    destination = ingest(root, max_matches)
+    aggregate(destination)
+    if max_matches is not None:
+        typer.echo(f"Development output only: {destination}; production artifacts untouched.")
+        return
+    evaluate(root, destination)
+    publish(root)

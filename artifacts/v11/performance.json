@@ -1,0 +1,381 @@
+{
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M5 Pro",
+    "node": "v24.19.0",
+    "network": "localhost, unthrottled Chromium; gzip sizes estimated from decoded bodies",
+    "interaction_measurement": "Playwright fill-to-render wall clock, includes automation overhead; no CPU throttling"
+  },
+  "profiles": 3074,
+  "index_bytes": 859605,
+  "index_gzip_bytes": 85530,
+  "pure_filter_p50_ms": 0.10879200000002243,
+  "pure_filter_p95_ms": 0.17420799999999304,
+  "browser": [
+    {
+      "locale": "en",
+      "width": 1440,
+      "initial_decoded_bytes": 1716479,
+      "initial_estimated_gzip_bytes": 441985,
+      "initial_profile_requests": 0,
+      "index_gzip_bytes": 85530,
+      "interaction_p50_ms": 7.613249999999994,
+      "interaction_p95_ms": 41.426458000000025,
+      "profile_visible_ms": 71.70629200000008,
+      "profile_resources": [
+        {
+          "duration_ms": 1.5,
+          "transfer_bytes": 1344,
+          "decoded_bytes": 2283
+        }
+      ],
+      "horizontal_overflow": false,
+      "initial_resources": [
+        {
+          "path": "/_next/static/css/8f6b26ad1abe3e59.css",
+          "decoded": 34627,
+          "gzip": 7429
+        },
+        {
+          "path": "/players/",
+          "decoded": 20325,
+          "gzip": 4636
+        },
+        {
+          "path": "/brand/fri-horizontal.webp",
+          "decoded": 38668,
+          "gzip": 38701
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-39d0264fd52661c7.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/228-a6fc37e9e7998193.js",
+          "decoded": 171898,
+          "gzip": 52970
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "decoded": 120793,
+          "gzip": 112311
+        },
+        {
+          "path": "/integrity/c8b9c6af466b510963267c3dfa77bdda032fcff19fca18ca6cfc31e77218b5b7.json",
+          "decoded": 376,
+          "gzip": 245
+        },
+        {
+          "path": "/data/v11/index.json",
+          "decoded": 859605,
+          "gzip": 85530
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "initial_decoded_bytes": 1689849,
+      "initial_estimated_gzip_bytes": 415345,
+      "initial_profile_requests": 0,
+      "index_gzip_bytes": 85530,
+      "interaction_p50_ms": 7.322708999999804,
+      "interaction_p95_ms": 14.95008299999995,
+      "profile_visible_ms": 111.57783399999994,
+      "profile_resources": [
+        {
+          "duration_ms": 1.399999976158142,
+          "transfer_bytes": 1344,
+          "decoded_bytes": 2283
+        }
+      ],
+      "horizontal_overflow": false,
+      "initial_resources": [
+        {
+          "path": "/players/",
+          "decoded": 20325,
+          "gzip": 4636
+        },
+        {
+          "path": "/_next/static/css/8f6b26ad1abe3e59.css",
+          "decoded": 34627,
+          "gzip": 7429
+        },
+        {
+          "path": "/brand/fri-emblem.webp",
+          "decoded": 12038,
+          "gzip": 12061
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "decoded": 120793,
+          "gzip": 112311
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-39d0264fd52661c7.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/228-a6fc37e9e7998193.js",
+          "decoded": 171898,
+          "gzip": 52970
+        },
+        {
+          "path": "/integrity/c8b9c6af466b510963267c3dfa77bdda032fcff19fca18ca6cfc31e77218b5b7.json",
+          "decoded": 376,
+          "gzip": 245
+        },
+        {
+          "path": "/data/v11/index.json",
+          "decoded": 859605,
+          "gzip": 85530
+        }
+      ]
+    },
+    {
+      "locale": "nl",
+      "width": 1440,
+      "initial_decoded_bytes": 1715614,
+      "initial_estimated_gzip_bytes": 441960,
+      "initial_profile_requests": 0,
+      "index_gzip_bytes": 85530,
+      "interaction_p50_ms": 8.51179100000013,
+      "interaction_p95_ms": 15.24391700000001,
+      "profile_visible_ms": 70.84841699999993,
+      "profile_resources": [
+        {
+          "duration_ms": 1.399999976158142,
+          "transfer_bytes": 1344,
+          "decoded_bytes": 2283
+        }
+      ],
+      "horizontal_overflow": false,
+      "initial_resources": [
+        {
+          "path": "/nl/players/",
+          "decoded": 19460,
+          "gzip": 4612
+        },
+        {
+          "path": "/_next/static/css/8f6b26ad1abe3e59.css",
+          "decoded": 34627,
+          "gzip": 7429
+        },
+        {
+          "path": "/brand/fri-horizontal.webp",
+          "decoded": 38668,
+          "gzip": 38701
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "decoded": 120793,
+          "gzip": 112311
+        },
+        {
+          "path": "/_next/static/chunks/app/nl/%5Bsection%5D/page-db54e49e62e160aa.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/app/nl/error-a4c0ff6cadb42951.js",
+          "decoded": 1136,
+          "gzip": 636
+        },
+        {
+          "path": "/_next/static/chunks/228-a6fc37e9e7998193.js",
+          "decoded": 171898,
+          "gzip": 52970
+        },
+        {
+          "path": "/integrity/c8b9c6af466b510963267c3dfa77bdda032fcff19fca18ca6cfc31e77218b5b7.json",
+          "decoded": 376,
+          "gzip": 245
+        },
+        {
+          "path": "/data/v11/index.json",
+          "decoded": 859605,
+          "gzip": 85530
+        }
+      ]
+    },
+    {
+      "locale": "nl",
+      "width": 375,
+      "initial_decoded_bytes": 1688984,
+      "initial_estimated_gzip_bytes": 415320,
+      "initial_profile_requests": 0,
+      "index_gzip_bytes": 85530,
+      "interaction_p50_ms": 7.601125000000138,
+      "interaction_p95_ms": 15.192332999999962,
+      "profile_visible_ms": 63.95754099999999,
+      "profile_resources": [
+        {
+          "duration_ms": 1.100000023841858,
+          "transfer_bytes": 1344,
+          "decoded_bytes": 2283
+        }
+      ],
+      "horizontal_overflow": false,
+      "initial_resources": [
+        {
+          "path": "/nl/players/",
+          "decoded": 19460,
+          "gzip": 4612
+        },
+        {
+          "path": "/_next/static/css/8f6b26ad1abe3e59.css",
+          "decoded": 34627,
+          "gzip": 7429
+        },
+        {
+          "path": "/brand/fri-emblem.webp",
+          "decoded": 12038,
+          "gzip": 12061
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/nl/error-a4c0ff6cadb42951.js",
+          "decoded": 1136,
+          "gzip": 636
+        },
+        {
+          "path": "/_next/static/chunks/app/nl/%5Bsection%5D/page-db54e49e62e160aa.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "decoded": 120793,
+          "gzip": 112311
+        },
+        {
+          "path": "/_next/static/chunks/228-a6fc37e9e7998193.js",
+          "decoded": 171898,
+          "gzip": 52970
+        },
+        {
+          "path": "/integrity/c8b9c6af466b510963267c3dfa77bdda032fcff19fca18ca6cfc31e77218b5b7.json",
+          "decoded": 376,
+          "gzip": 245
+        },
+        {
+          "path": "/data/v11/index.json",
+          "decoded": 859605,
+          "gzip": 85530
+        }
+      ]
+    }
+  ]
+}

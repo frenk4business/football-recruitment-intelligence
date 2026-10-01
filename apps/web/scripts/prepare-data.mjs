@@ -20,7 +20,13 @@ import {
 verifyScience();
 const staticAssets = new Set([
   "brand/statsbomb.png",
-  "favicon.svg",
+  "brand/fri-horizontal.webp",
+  "brand/fri-emblem.webp",
+  "brand/fri-social.png",
+  "brand/favicon-32.png",
+  "brand/favicon-192.png",
+  "brand/apple-touch-icon.png",
+  "favicon.ico",
   "robots.txt",
   "skillcorner-license.txt",
   "release-manifest.json",
@@ -41,12 +47,16 @@ if (
   json("apps/web/package-lock.json").version !== version
 )
   throw new Error("Package version must mirror VERSION");
-const schemas = json("artifacts/contracts.schema.json");
+const schemas = {
+  ...json("artifacts/contracts.schema.json"),
+  ...json("artifacts/v11/contracts.schema.json"),
+};
 const ajv = new Ajv({ strict: false, validateFormats: false });
 const validators = new Map();
 const listed = new Set(inventory.files.map((f) => f.source));
 for (const dir of [
   "artifacts/explorer",
+  "artifacts/v11/public",
   ...[2, 3, 4].map((n) => `artifacts/phase${n}/public`),
 ]) {
   for (const path of walk(join(root, dir))) {
@@ -89,7 +99,7 @@ for (const file of inventory.files) {
       : parts.slice(0, parts.length - 1).join("/") + "/";
   (groups[`/${prefix}`] ??= {})[`/${file.path}`] = file.sha256;
 }
-if (total > 40_000_000) throw new Error("Public JSON budget exceeded");
+if (total > 55_000_000) throw new Error("Public JSON budget exceeded");
 const groupIndex = [];
 mkdirSync(join(root, "apps/web/public/integrity"), { recursive: true });
 for (const [prefix, hashes] of Object.entries(groups)) {
@@ -118,7 +128,17 @@ const manifest = {
   build_timestamp: git("show", "-s", "--format=%cI", "HEAD"),
   timestamp_policy: "Git commit time; deterministic, not wall-clock build time",
   scientific_versions: science.versions,
+  expanded_profile_versions: [
+    "statsbomb-profile-v2",
+    "wyscout-profile-v1",
+    "common-profile-v1",
+    "common-similarity-v1",
+  ],
   source_revisions: {
+    v11: {
+      revision: json("config/v11-sources.json").statsbomb_revision,
+      config_sha256: sha(read("config/v11-sources.json")),
+    },
     sample: Object.fromEntries(
       ["statsbomb", "skillcorner"].map((p) => [
         p,

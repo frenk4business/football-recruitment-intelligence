@@ -12,6 +12,7 @@ typecheck:
 test: lint typecheck
 	uv run pytest -q
 	uv run python scripts/generate_contracts.py --check
+	uv run python scripts/generate_profile_contracts.py --check
 	cd apps/web && npm test
 data-bootstrap:
 	uv run fri data bootstrap
@@ -78,11 +79,22 @@ recruitment-evaluate:
 .PHONY: release-build release-validate security-audit
 release-build:
 	uv run python scripts/generate_contracts.py --check
+	uv run python scripts/generate_profile_contracts.py --check
 	cd apps/web && npm run build
 release-validate:
 	uv run python scripts/generate_contracts.py --check
+	uv run python scripts/generate_profile_contracts.py --check
 	cd apps/web && npm run release:validate
 security-audit:
 	cd apps/web && npm audit --audit-level=high
 	uv export --frozen --no-emit-project --format requirements-txt --output-file /tmp/fri-audit-requirements.txt
 	uvx pip-audit==2.10.1 --no-deps --disable-pip -r /tmp/fri-audit-requirements.txt
+
+.PHONY: v11-data-build v11-contracts
+v11-data-build:
+	uv run fri data expand
+	uv run python scripts/generate_profile_contracts.py
+	uv run python scripts/v11_storage_audit.py
+	uv run python scripts/v11_reports.py
+v11-contracts:
+	uv run python scripts/generate_profile_contracts.py

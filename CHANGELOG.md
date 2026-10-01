@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 — 2026-10-01
+
+- Add an EN/NL player database with 3,074 observed player-season profiles and 2,840 common profiles from 3,361 matches across StatsBomb and Pappalardo/Wyscout open datasets.
+- Add audited native registries, nominal-minute reconstruction, three conservative common features, held-out provider-bias evaluation, temporal retrieval and explicit eligibility/provenance. Provider identities and old scientific versions stay separate.
+- Add lazy profile comparison, bounded search/filter/pagination, strict publication contracts, reproducible cached Parquet/DuckDB builds and isolated five-match development runs. No expanded translation/recruitment claims or cross-provider nearest-neighbour ranking.
+
+
+### Phase 5 — Brand integration
+
+Supplied horizontal logo and responsive compact emblem, shared English/Dutch favicon and Apple touch icons, and the supplied white lockup for dark social previews. Web exports retain the original artwork; source PNGs and their conversion recipe are preserved. See the [integration and verification record](docs/phase-5-brand-integration.md). Research content, scientific versions and modelling logic are unchanged.
+
 ## 1.0.0
 
 ### Data foundation

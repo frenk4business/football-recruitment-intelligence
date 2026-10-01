@@ -1,6 +1,10 @@
+import { Players } from "./players";
+import { ProfileCoverage, ProfileMethodology } from "./profile-coverage";
+import { playersCopy } from "@/lib/players-copy";
 import release from "@/lib/release-version.json";
 import Link from "next/link";
 import Image from "next/image";
+import { brandName } from "@/lib/brand";
 import {
   copy,
   route,
@@ -45,14 +49,21 @@ export function Site({
             className="wordmark"
             href={route(locale, "home")}
           >
-            <span className="brand-mark" aria-hidden="true">
-              FR<span>I</span>
-            </span>
-            <span>
-              Football Recruitment
-              <br />
-              Intelligence
-            </span>
+            <picture>
+              <source
+                media="(max-width: 480px)"
+                srcSet="/brand/fri-emblem.webp"
+                width={44}
+                height={44}
+              />
+              <Image
+                src="/brand/fri-horizontal.webp"
+                width={196}
+                height={63}
+                alt={brandName}
+                loading="eager"
+              />
+            </picture>
           </Link>
           <div className="header-meta">
             <span>
@@ -107,7 +118,7 @@ export function Site({
                   <Link
                     prefetch={false}
                     className="primary-link"
-                    href={route(locale, "recruitment")}
+                    href={route(locale, "players")}
                   >
                     {c.open}
                     <span aria-hidden="true">↗</span>
@@ -221,37 +232,46 @@ export function Site({
           <div className="page-heading">
             <p className="eyebrow">{c.phase}</p>
             <h1>
-              {section === "recruitment"
-                ? recruitmentCopy[locale].title
-                : section === "translation"
-                  ? translationCopy[locale].title
-                  : section === "player-dna"
-                    ? dnaCopy[locale].title
-                    : section === "explorer"
-                      ? c.explorerTitle
-                      : section === "coverage"
-                        ? c.coverageTitle
-                        : section === "methodology"
-                          ? c.methodologyTitle
-                          : c.roadmapTitle}
+              {section === "players"
+                ? playersCopy[locale].title
+                : section === "recruitment"
+                  ? recruitmentCopy[locale].title
+                  : section === "translation"
+                    ? translationCopy[locale].title
+                    : section === "player-dna"
+                      ? dnaCopy[locale].title
+                      : section === "explorer"
+                        ? c.explorerTitle
+                        : section === "coverage"
+                          ? c.coverageTitle
+                          : section === "methodology"
+                            ? c.methodologyTitle
+                            : c.roadmapTitle}
             </h1>
             <p className="lead">
-              {section === "recruitment"
-                ? recruitmentCopy[locale].intro
-                : section === "translation"
-                  ? translationCopy[locale].intro
-                  : section === "player-dna"
-                    ? dnaCopy[locale].intro
-                    : section === "explorer"
-                      ? c.explorerIntro
-                      : section === "coverage"
-                        ? c.coverageIntro
-                        : section === "methodology"
-                          ? c.methodologyIntro
-                          : c.roadmapIntro}
+              {section === "players"
+                ? playersCopy[locale].intro
+                : section === "recruitment"
+                  ? recruitmentCopy[locale].intro
+                  : section === "translation"
+                    ? translationCopy[locale].intro
+                    : section === "player-dna"
+                      ? dnaCopy[locale].intro
+                      : section === "explorer"
+                        ? c.explorerIntro
+                        : section === "coverage"
+                          ? c.coverageIntro
+                          : section === "methodology"
+                            ? c.methodologyIntro
+                            : c.roadmapIntro}
             </p>
           </div>
         )}
+        {section === "players" && <Players locale={locale} />}
+        {(section === "home" || section === "coverage") && (
+          <ProfileCoverage locale={locale} compact={section === "home"} />
+        )}
+        {section === "methodology" && <ProfileMethodology locale={locale} />}
         {section === "recruitment" && <Recruitment locale={locale} />}
         {section === "translation" && (
           <Translation locale={locale} index={translationIndex()} />
@@ -510,7 +530,12 @@ export function Site({
             <a href="https://github.com/hudl/open-data/blob/master/LICENSE.pdf">
               StatsBomb {locale === "en" ? "terms" : "voorwaarden"}
             </a>{" "}
-            · <a href="/skillcorner-license.txt">SkillCorner MIT</a>
+            · <a href="/skillcorner-license.txt">SkillCorner MIT</a> ·{" "}
+            <a href="https://doi.org/10.1038/s41597-019-0247-7">
+              Pappalardo / Wyscout
+            </a>{" "}
+            ·{" "}
+            <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
           </p>
         </div>
       </footer>

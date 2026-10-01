@@ -1,8 +1,9 @@
 {
   "name": "football-recruitment-intelligence-web",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
+    "brand:generate": "node scripts/prepare-brand.mjs",
     "dev": "next dev",
     "build": "node scripts/prepare-data.mjs && next build --webpack && node scripts/release-output.mjs",
     "typecheck": "tsc --noEmit",

@@ -1,0 +1,120 @@
+{
+  "stage": "availability_screen_before_successful_threshold_or_provider_classification_evaluation",
+  "reason": "any_unknown_pass_outcome_withholds_completion_and_completed_pass_rates",
+  "policy": "do_not_impute_unknown_outcomes_or_change_denominators",
+  "seven_candidate_coverage": {
+    "statsbomb-11-27": {
+      "searchable_outfield_450": 197,
+      "complete_seven": 16,
+      "unavailable": {
+        "pass_completion_all": 181,
+        "progressive_passes_all_per90": 181,
+        "final_third_entries_all_per90": 181,
+        "box_entries_all_per90": 181,
+        "long_passes_all_per90": 2
+      }
+    },
+    "statsbomb-12-27": {
+      "searchable_outfield_450": 96,
+      "complete_seven": 6,
+      "unavailable": {
+        "pass_completion_all": 90,
+        "progressive_passes_all_per90": 90,
+        "final_third_entries_all_per90": 90,
+        "box_entries_all_per90": 90
+      }
+    },
+    "statsbomb-135-281": {
+      "searchable_outfield_450": 155,
+      "complete_seven": 36,
+      "unavailable": {
+        "pass_completion_all": 119,
+        "progressive_passes_all_per90": 119,
+        "final_third_entries_all_per90": 119,
+        "box_entries_all_per90": 119
+      }
+    },
+    "statsbomb-2-27": {
+      "searchable_outfield_450": 291,
+      "complete_seven": 30,
+      "unavailable": {
+        "pass_completion_all": 261,
+        "progressive_passes_all_per90": 261,
+        "final_third_entries_all_per90": 261,
+        "box_entries_all_per90": 261,
+        "long_passes_all_per90": 2
+      }
+    },
+    "statsbomb-37-281": {
+      "searchable_outfield_450": 181,
+      "complete_seven": 48,
+      "unavailable": {
+        "pass_completion_all": 133,
+        "progressive_passes_all_per90": 133,
+        "final_third_entries_all_per90": 133,
+        "box_entries_all_per90": 133
+      }
+    },
+    "statsbomb-37-90": {
+      "searchable_outfield_450": 163,
+      "complete_seven": 23,
+      "unavailable": {
+        "pass_completion_all": 140,
+        "progressive_passes_all_per90": 140,
+        "final_third_entries_all_per90": 140,
+        "box_entries_all_per90": 140
+      }
+    },
+    "wyscout-364-181150": {
+      "searchable_outfield_450": 350,
+      "complete_seven": 346,
+      "unavailable": {
+        "pass_completion_all": 4,
+        "progressive_passes_all_per90": 4,
+        "final_third_entries_all_per90": 4,
+        "box_entries_all_per90": 4
+      }
+    },
+    "wyscout-412-181189": {
+      "searchable_outfield_450": 359,
+      "complete_seven": 353,
+      "unavailable": {
+        "pass_completion_all": 6,
+        "progressive_passes_all_per90": 6,
+        "final_third_entries_all_per90": 6,
+        "box_entries_all_per90": 6
+      }
+    },
+    "wyscout-426-181137": {
+      "searchable_outfield_450": 322,
+      "complete_seven": 319,
+      "unavailable": {
+        "pass_completion_all": 2,
+        "progressive_passes_all_per90": 3,
+        "final_third_entries_all_per90": 3,
+        "box_entries_all_per90": 3,
+        "long_passes_all_per90": 1
+      }
+    },
+    "wyscout-524-181248": {
+      "searchable_outfield_450": 356,
+      "complete_seven": 347,
+      "unavailable": {
+        "pass_completion_all": 9,
+        "progressive_passes_all_per90": 9,
+        "final_third_entries_all_per90": 9,
+        "box_entries_all_per90": 9
+      }
+    },
+    "wyscout-795-181144": {
+      "searchable_outfield_450": 375,
+      "complete_seven": 371,
+      "unavailable": {
+        "pass_completion_all": 4,
+        "progressive_passes_all_per90": 4,
+        "final_third_entries_all_per90": 4,
+        "box_entries_all_per90": 4
+      }
+    }
+  }
+}

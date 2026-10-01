@@ -1,0 +1,11 @@
+{
+  "version": "player-database-v1",
+  "statsbomb_seasons": [[2, 27], [11, 27], [12, 27], [37, 90], [37, 281], [135, 281]],
+  "wyscout_members": ["England", "France", "Germany", "Italy", "Spain"],
+  "search_min_minutes": 450,
+  "candidate_thresholds": [450, 600, 900],
+  "development_scopes": ["statsbomb-2-27", "wyscout-364-181150"],
+  "minimum_similarity_cohort": 20,
+  "provider_bias_gate": 0.75,
+  "seed": 1102026
+}

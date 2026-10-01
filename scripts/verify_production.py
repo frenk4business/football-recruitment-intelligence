@@ -16,6 +16,7 @@ BASE = "https://football-recruitment-intelligence.onrender.com"
 SECTIONS = [
     "",
     "explorer",
+    "players",
     "player-dna",
     "translation",
     "recruitment",
@@ -57,6 +58,7 @@ def main():
     assert manifest["git_commit"] == args.commit, "Deployed release SHA differs"
     assert manifest["version"] == Path("VERSION").read_text().strip(), "Release version differs"
     inventory = json.loads(Path("config/public-artifacts.json").read_text())["files"]
+    inventory += json.loads(Path("config/v11-public-artifacts.json").read_text())["files"]
     expected = [{k: row[k] for k in ["path", "bytes", "sha256", "schema"]} for row in inventory]
     assert manifest["public_artifacts"] == expected, "Public scientific artifacts differ"
     assert (
@@ -92,7 +94,7 @@ def main():
     code, _, robots = fetch("/robots.txt")
     assert code == 200 and b"Disallow: /\n" not in robots, "Indexing blocked"
     code, _, sitemap = fetch("/sitemap.xml")
-    assert code == 200 and sitemap.count(b"<loc>") == 16, "Sitemap routes missing"
+    assert code == 200 and sitemap.count(b"<loc>") == 18, "Sitemap routes missing"
 
     def verify(item):
         path, metadata = item

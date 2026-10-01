@@ -1,0 +1,1151 @@
+{
+  "CommonMetrics": {
+    "additionalProperties": false,
+    "properties": {
+      "long_passes_all_per90": {
+        "minimum": 0,
+        "title": "Long Passes All Per90",
+        "type": "number"
+      },
+      "non_penalty_shots_per90": {
+        "minimum": 0,
+        "title": "Non Penalty Shots Per90",
+        "type": "number"
+      },
+      "passes_all_per90": {
+        "minimum": 0,
+        "title": "Passes All Per90",
+        "type": "number"
+      }
+    },
+    "required": [
+      "non_penalty_shots_per90",
+      "passes_all_per90",
+      "long_passes_all_per90"
+    ],
+    "title": "CommonMetrics",
+    "type": "object"
+  },
+  "ProfileBiasSummary": {
+    "additionalProperties": false,
+    "properties": {
+      "auc": {
+        "minimum": 0,
+        "title": "Auc",
+        "type": "number"
+      },
+      "balanced_accuracy": {
+        "minimum": 0,
+        "title": "Balanced Accuracy",
+        "type": "number"
+      },
+      "heldout_profiles": {
+        "title": "Heldout Profiles",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "auc",
+      "balanced_accuracy",
+      "heldout_profiles"
+    ],
+    "title": "ProfileBiasSummary",
+    "type": "object"
+  },
+  "ProfileBuildManifest": {
+    "additionalProperties": false,
+    "properties": {
+      "code_commit": {
+        "title": "Code Commit",
+        "type": "string"
+      },
+      "counts": {
+        "$ref": "#/$defs/ProfileCounts"
+      },
+      "evaluation_sha256": {
+        "title": "Evaluation Sha256",
+        "type": "string"
+      },
+      "feature_manifest_sha256": {
+        "title": "Feature Manifest Sha256",
+        "type": "string"
+      },
+      "index_bytes": {
+        "title": "Index Bytes",
+        "type": "integer"
+      },
+      "index_gzip_bytes": {
+        "title": "Index Gzip Bytes",
+        "type": "integer"
+      },
+      "largest_profile_bytes": {
+        "title": "Largest Profile Bytes",
+        "type": "integer"
+      },
+      "partial": {
+        "const": false,
+        "title": "Partial",
+        "type": "boolean"
+      },
+      "pipeline_sha256": {
+        "title": "Pipeline Sha256",
+        "type": "string"
+      },
+      "public_bytes": {
+        "title": "Public Bytes",
+        "type": "integer"
+      },
+      "public_files": {
+        "title": "Public Files",
+        "type": "integer"
+      },
+      "source_manifest_sha256": {
+        "title": "Source Manifest Sha256",
+        "type": "string"
+      },
+      "version": {
+        "const": "player-database-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "code_commit",
+      "pipeline_sha256",
+      "source_manifest_sha256",
+      "feature_manifest_sha256",
+      "evaluation_sha256",
+      "public_files",
+      "public_bytes",
+      "index_bytes",
+      "index_gzip_bytes",
+      "largest_profile_bytes",
+      "counts",
+      "partial"
+    ],
+    "title": "ProfileBuildManifest",
+    "type": "object"
+  },
+  "ProfileCapabilities": {
+    "additionalProperties": false,
+    "properties": {
+      "common": {
+        "title": "Common",
+        "type": "boolean"
+      },
+      "similarity": {
+        "title": "Similarity",
+        "type": "boolean"
+      },
+      "translation": {
+        "title": "Translation",
+        "type": "boolean"
+      },
+      "validated_dna": {
+        "title": "Validated Dna",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "common",
+      "similarity",
+      "translation",
+      "validated_dna"
+    ],
+    "title": "ProfileCapabilities",
+    "type": "object"
+  },
+  "ProfileCounts": {
+    "additionalProperties": false,
+    "properties": {
+      "common_profiles": {
+        "title": "Common Profiles",
+        "type": "integer"
+      },
+      "competition_seasons": {
+        "title": "Competition Seasons",
+        "type": "integer"
+      },
+      "competitions": {
+        "title": "Competitions",
+        "type": "integer"
+      },
+      "events": {
+        "title": "Events",
+        "type": "integer"
+      },
+      "matches": {
+        "title": "Matches",
+        "type": "integer"
+      },
+      "native_profiles": {
+        "title": "Native Profiles",
+        "type": "integer"
+      },
+      "profiles": {
+        "title": "Profiles",
+        "type": "integer"
+      },
+      "provider_competitions": {
+        "title": "Provider Competitions",
+        "type": "integer"
+      },
+      "provider_identities": {
+        "title": "Provider Identities",
+        "type": "integer"
+      },
+      "providers": {
+        "title": "Providers",
+        "type": "integer"
+      },
+      "seasons": {
+        "title": "Seasons",
+        "type": "integer"
+      },
+      "similarity_profiles": {
+        "title": "Similarity Profiles",
+        "type": "integer"
+      },
+      "translation_profiles": {
+        "title": "Translation Profiles",
+        "type": "integer"
+      },
+      "validated_dna_profiles": {
+        "title": "Validated Dna Profiles",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "providers",
+      "competitions",
+      "provider_competitions",
+      "competition_seasons",
+      "seasons",
+      "matches",
+      "events",
+      "profiles",
+      "provider_identities",
+      "native_profiles",
+      "common_profiles",
+      "similarity_profiles",
+      "translation_profiles",
+      "validated_dna_profiles"
+    ],
+    "title": "ProfileCounts",
+    "type": "object"
+  },
+  "ProfileCoverage": {
+    "additionalProperties": false,
+    "properties": {
+      "common_features": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Common Features",
+        "type": "array"
+      },
+      "common_threshold": {
+        "title": "Common Threshold",
+        "type": "integer"
+      },
+      "counts": {
+        "$ref": "#/$defs/ProfileCounts"
+      },
+      "cross_provider_ranking_enabled": {
+        "title": "Cross Provider Ranking Enabled",
+        "type": "boolean"
+      },
+      "excluded_profiles": {
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "title": "Excluded Profiles",
+        "type": "object"
+      },
+      "provider_bias": {
+        "$ref": "#/$defs/ProfileBiasSummary"
+      },
+      "scopes": {
+        "items": {
+          "$ref": "#/$defs/ProfileScope"
+        },
+        "title": "Scopes",
+        "type": "array"
+      },
+      "temporal_mrr": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Temporal Mrr",
+        "type": "object"
+      },
+      "threshold_counts": {
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "title": "Threshold Counts",
+        "type": "object"
+      },
+      "version": {
+        "const": "player-database-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "counts",
+      "scopes",
+      "common_threshold",
+      "common_features",
+      "provider_bias",
+      "cross_provider_ranking_enabled",
+      "temporal_mrr",
+      "excluded_profiles",
+      "threshold_counts"
+    ],
+    "title": "ProfileCoverage",
+    "type": "object"
+  },
+  "ProfileDetail": {
+    "additionalProperties": false,
+    "properties": {
+      "appearances": {
+        "minimum": 1,
+        "title": "Appearances",
+        "type": "integer"
+      },
+      "common": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/CommonMetrics"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "common_unavailable_reasons": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Common Unavailable Reasons",
+        "type": "array"
+      },
+      "dna_player_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Dna Player Id"
+      },
+      "first_date": {
+        "title": "First Date",
+        "type": "string"
+      },
+      "identity": {
+        "$ref": "#/$defs/ProfileIndexEntry"
+      },
+      "last_date": {
+        "title": "Last Date",
+        "type": "string"
+      },
+      "minute_methods": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Minute Methods",
+        "type": "array"
+      },
+      "native": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/StatsBombMetrics"
+          },
+          {
+            "$ref": "#/$defs/WyscoutMetrics"
+          }
+        ],
+        "title": "Native"
+      },
+      "neighbours": {
+        "items": {
+          "$ref": "#/$defs/ProfileNeighbour"
+        },
+        "maxItems": 10,
+        "title": "Neighbours",
+        "type": "array"
+      },
+      "provenance": {
+        "$ref": "#/$defs/ProfileProvenance"
+      },
+      "provider_player_id": {
+        "title": "Provider Player Id",
+        "type": "integer"
+      },
+      "provider_role": {
+        "title": "Provider Role",
+        "type": "string"
+      },
+      "similarity_scaling": {
+        "const": "shared_first_half_development_zscore",
+        "title": "Similarity Scaling",
+        "type": "string"
+      },
+      "similarity_scope": {
+        "const": "same_provider_competition_season_role",
+        "title": "Similarity Scope",
+        "type": "string"
+      },
+      "similarity_version": {
+        "const": "common-similarity-v1",
+        "title": "Similarity Version",
+        "type": "string"
+      },
+      "version": {
+        "enum": [
+          "statsbomb-profile-v2",
+          "wyscout-profile-v1"
+        ],
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "identity",
+      "provider_player_id",
+      "provider_role",
+      "appearances",
+      "first_date",
+      "last_date",
+      "minute_methods",
+      "native",
+      "common",
+      "common_unavailable_reasons",
+      "similarity_version",
+      "similarity_scope",
+      "similarity_scaling",
+      "neighbours",
+      "dna_player_id",
+      "provenance"
+    ],
+    "title": "ProfileDetail",
+    "type": "object"
+  },
+  "ProfileIndex": {
+    "additionalProperties": false,
+    "properties": {
+      "common_threshold": {
+        "title": "Common Threshold",
+        "type": "integer"
+      },
+      "common_version": {
+        "const": "common-profile-v1",
+        "title": "Common Version",
+        "type": "string"
+      },
+      "counts": {
+        "$ref": "#/$defs/ProfileCounts"
+      },
+      "profiles": {
+        "items": {
+          "$ref": "#/$defs/ProfileIndexEntry"
+        },
+        "title": "Profiles",
+        "type": "array"
+      },
+      "scopes": {
+        "items": {
+          "$ref": "#/$defs/ProfileScope"
+        },
+        "title": "Scopes",
+        "type": "array"
+      },
+      "search_threshold": {
+        "const": 450,
+        "title": "Search Threshold",
+        "type": "integer"
+      },
+      "teams": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "object"
+      },
+      "version": {
+        "const": "player-database-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "common_version",
+      "common_threshold",
+      "search_threshold",
+      "counts",
+      "scopes",
+      "teams",
+      "profiles"
+    ],
+    "title": "ProfileIndex",
+    "type": "object"
+  },
+  "ProfileIndexEntry": {
+    "additionalProperties": false,
+    "properties": {
+      "capabilities": {
+        "$ref": "#/$defs/ProfileCapabilities"
+      },
+      "id": {
+        "pattern": "^(statsbomb|wyscout)-[0-9]+-[0-9]+-[0-9]+$",
+        "title": "Id",
+        "type": "string"
+      },
+      "minutes": {
+        "minimum": 0,
+        "title": "Minutes",
+        "type": "number"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "provider": {
+        "enum": [
+          "statsbomb",
+          "wyscout"
+        ],
+        "title": "Provider",
+        "type": "string"
+      },
+      "role": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Role"
+      },
+      "role_family": {
+        "enum": [
+          "GK",
+          "DEF",
+          "MID",
+          "FWD"
+        ],
+        "title": "Role Family",
+        "type": "string"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "provider",
+      "scope",
+      "teams",
+      "role",
+      "role_family",
+      "minutes",
+      "capabilities"
+    ],
+    "title": "ProfileIndexEntry",
+    "type": "object"
+  },
+  "ProfileMetricDefinition": {
+    "additionalProperties": false,
+    "properties": {
+      "definition_en": {
+        "title": "Definition En",
+        "type": "string"
+      },
+      "definition_nl": {
+        "title": "Definition Nl",
+        "type": "string"
+      },
+      "en": {
+        "title": "En",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "nl": {
+        "title": "Nl",
+        "type": "string"
+      },
+      "statsbomb_mapping": {
+        "title": "Statsbomb Mapping",
+        "type": "string"
+      },
+      "unit": {
+        "enum": [
+          "per90",
+          "fraction"
+        ],
+        "title": "Unit",
+        "type": "string"
+      },
+      "wyscout_mapping": {
+        "title": "Wyscout Mapping",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "en",
+      "nl",
+      "unit",
+      "definition_en",
+      "definition_nl",
+      "statsbomb_mapping",
+      "wyscout_mapping"
+    ],
+    "title": "ProfileMetricDefinition",
+    "type": "object"
+  },
+  "ProfileNeighbour": {
+    "additionalProperties": false,
+    "properties": {
+      "distance": {
+        "minimum": 0,
+        "title": "Distance",
+        "type": "number"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "distance"
+    ],
+    "title": "ProfileNeighbour",
+    "type": "object"
+  },
+  "ProfileProvenance": {
+    "additionalProperties": false,
+    "properties": {
+      "build_manifest": {
+        "const": "/data/v11/build-manifest.json",
+        "title": "Build Manifest",
+        "type": "string"
+      },
+      "code_commit": {
+        "pattern": "^[0-9a-f]{40}$",
+        "title": "Code Commit",
+        "type": "string"
+      },
+      "feature_manifest_sha256": {
+        "pattern": "^[0-9a-f]{64}$",
+        "title": "Feature Manifest Sha256",
+        "type": "string"
+      },
+      "pipeline_sha256": {
+        "pattern": "^[0-9a-f]{64}$",
+        "title": "Pipeline Sha256",
+        "type": "string"
+      },
+      "source_files": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Source Files",
+        "type": "array"
+      },
+      "source_manifest_sha256": {
+        "pattern": "^[0-9a-f]{64}$",
+        "title": "Source Manifest Sha256",
+        "type": "string"
+      },
+      "source_revision": {
+        "title": "Source Revision",
+        "type": "string"
+      }
+    },
+    "required": [
+      "source_revision",
+      "source_files",
+      "source_manifest_sha256",
+      "feature_manifest_sha256",
+      "build_manifest",
+      "code_commit",
+      "pipeline_sha256"
+    ],
+    "title": "ProfileProvenance",
+    "type": "object"
+  },
+  "ProfileRegistry": {
+    "additionalProperties": false,
+    "properties": {
+      "coordinate_convention": {
+        "title": "Coordinate Convention",
+        "type": "string"
+      },
+      "definitions_sha256": {
+        "title": "Definitions Sha256",
+        "type": "string"
+      },
+      "denominator": {
+        "title": "Denominator",
+        "type": "string"
+      },
+      "evidence_threshold": {
+        "title": "Evidence Threshold",
+        "type": "integer"
+      },
+      "excluded_concepts": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Excluded Concepts",
+        "type": "array"
+      },
+      "features": {
+        "items": {
+          "$ref": "#/$defs/ProfileMetricDefinition"
+        },
+        "title": "Features",
+        "type": "array"
+      },
+      "scaler_policy": {
+        "title": "Scaler Policy",
+        "type": "string"
+      },
+      "source_versions": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Source Versions",
+        "type": "object"
+      },
+      "statsbomb": {
+        "items": {
+          "$ref": "#/$defs/ProfileMetricDefinition"
+        },
+        "title": "Statsbomb",
+        "type": "array"
+      },
+      "validation_date": {
+        "title": "Validation Date",
+        "type": "string"
+      },
+      "version": {
+        "const": "common-profile-v1",
+        "title": "Version",
+        "type": "string"
+      },
+      "wyscout": {
+        "items": {
+          "$ref": "#/$defs/ProfileMetricDefinition"
+        },
+        "title": "Wyscout",
+        "type": "array"
+      }
+    },
+    "required": [
+      "version",
+      "features",
+      "statsbomb",
+      "wyscout",
+      "coordinate_convention",
+      "denominator",
+      "excluded_concepts",
+      "scaler_policy",
+      "evidence_threshold",
+      "validation_date",
+      "source_versions",
+      "definitions_sha256"
+    ],
+    "title": "ProfileRegistry",
+    "type": "object"
+  },
+  "ProfileScope": {
+    "additionalProperties": false,
+    "properties": {
+      "common_profiles": {
+        "minimum": 0,
+        "title": "Common Profiles",
+        "type": "integer"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "competition_key": {
+        "title": "Competition Key",
+        "type": "string"
+      },
+      "coverage": {
+        "title": "Coverage",
+        "type": "string"
+      },
+      "first_date": {
+        "title": "First Date",
+        "type": "string"
+      },
+      "gender": {
+        "enum": [
+          "male",
+          "female"
+        ],
+        "title": "Gender",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "last_date": {
+        "title": "Last Date",
+        "type": "string"
+      },
+      "matches": {
+        "minimum": 1,
+        "title": "Matches",
+        "type": "integer"
+      },
+      "profiles": {
+        "minimum": 0,
+        "title": "Profiles",
+        "type": "integer"
+      },
+      "provider": {
+        "enum": [
+          "statsbomb",
+          "wyscout"
+        ],
+        "title": "Provider",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "similarity_profiles": {
+        "minimum": 0,
+        "title": "Similarity Profiles",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "id",
+      "provider",
+      "competition",
+      "competition_key",
+      "season",
+      "gender",
+      "matches",
+      "profiles",
+      "common_profiles",
+      "similarity_profiles",
+      "coverage",
+      "first_date",
+      "last_date"
+    ],
+    "title": "ProfileScope",
+    "type": "object"
+  },
+  "StatsBombMetrics": {
+    "additionalProperties": false,
+    "properties": {
+      "carries_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Carries Per90"
+      },
+      "crosses_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Crosses Per90"
+      },
+      "dribbles_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Dribbles Per90"
+      },
+      "interceptions_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Interceptions Per90"
+      },
+      "non_penalty_xg_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Non Penalty Xg Per90"
+      },
+      "open_play_completion": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Open Play Completion"
+      },
+      "open_play_passes_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Open Play Passes Per90"
+      },
+      "pressures_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Pressures Per90"
+      },
+      "recoveries_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Recoveries Per90"
+      },
+      "tackles_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Tackles Per90"
+      }
+    },
+    "required": [
+      "open_play_passes_per90",
+      "open_play_completion",
+      "crosses_per90",
+      "pressures_per90",
+      "carries_per90",
+      "dribbles_per90",
+      "tackles_per90",
+      "interceptions_per90",
+      "recoveries_per90",
+      "non_penalty_xg_per90"
+    ],
+    "title": "StatsBombMetrics",
+    "type": "object"
+  },
+  "WyscoutMetrics": {
+    "additionalProperties": false,
+    "properties": {
+      "accelerations_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Accelerations Per90"
+      },
+      "attacking_duels_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Attacking Duels Per90"
+      },
+      "clearances_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Clearances Per90"
+      },
+      "crosses_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Crosses Per90"
+      },
+      "duels_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Duels Per90"
+      },
+      "interceptions_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Interceptions Per90"
+      },
+      "key_passes_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Key Passes Per90"
+      },
+      "pass_event_completion": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Pass Event Completion"
+      },
+      "pass_events_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Pass Events Per90"
+      },
+      "sliding_tackles_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Sliding Tackles Per90"
+      }
+    },
+    "required": [
+      "pass_events_per90",
+      "pass_event_completion",
+      "crosses_per90",
+      "key_passes_per90",
+      "duels_per90",
+      "attacking_duels_per90",
+      "sliding_tackles_per90",
+      "interceptions_per90",
+      "accelerations_per90",
+      "clearances_per90"
+    ],
+    "title": "WyscoutMetrics",
+    "type": "object"
+  }
+}

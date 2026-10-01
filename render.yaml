@@ -64,7 +64,7 @@ services:
       - path: "/brand/*"
         name: Cache-Control
         value: "public, max-age=0, must-revalidate, no-transform"
-      - path: "/favicon.svg"
+      - path: "/favicon.ico"
         name: Cache-Control
         value: "public, max-age=0, must-revalidate, no-transform"
       - path: "/release-manifest.json"
@@ -77,6 +77,9 @@ services:
         name: Cache-Control
         value: "public, max-age=0, must-revalidate, no-transform"
       - path: "/explorer*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/players*"
         name: Cache-Control
         value: "public, max-age=0, must-revalidate, no-transform"
       - path: "/player-dna*"

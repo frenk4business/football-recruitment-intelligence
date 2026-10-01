@@ -9,6 +9,103 @@ const version = readFileSync(
 
 for (const locale of ["en", "nl"]) {
   const base = locale === "en" ? "" : "/nl";
+  test(`${locale}: responsive brand, favicon and sharing artwork`, async ({
+    page,
+    request,
+  }) => {
+    await page.goto(`${base}/`);
+    const header = page.locator(".site-header");
+    const home = header.getByRole("link", {
+      name: "Football Recruitment Intelligence",
+      exact: true,
+    });
+    await expect(home).toHaveCount(1);
+    await expect(home).toHaveAttribute("href", `${base}/`);
+    await expect(header.getByRole("img")).toHaveCount(1);
+    const mark = home.getByRole("img");
+    for (const width of [320, 375, 480, 481, 768, 1280]) {
+      await page.setViewportSize({ width, height: 812 });
+      await expect(mark).toBeVisible();
+      await expect
+        .poll(() =>
+          mark.evaluate((e: HTMLImageElement) =>
+            e.complete && e.naturalWidth > 0
+              ? new URL(e.currentSrc).pathname
+              : "",
+          ),
+        )
+        .toBe(
+          width <= 480
+            ? "/brand/fri-emblem.webp"
+            : "/brand/fri-horizontal.webp",
+        );
+      const box = (await mark.boundingBox())!;
+      expect(box.width).toBeLessThanOrEqual(200);
+      expect(box.height).toBeGreaterThanOrEqual(40);
+      expect(box.height).toBeLessThanOrEqual(64);
+      const aspect = await mark.evaluate(
+        (e: HTMLImageElement) => e.naturalWidth / e.naturalHeight,
+      );
+      expect(box.width / box.height).toBeCloseTo(aspect, 2);
+      const language = (await header.locator(".language").boundingBox())!;
+      expect(box.x + box.width + 24).toBeLessThanOrEqual(language.x);
+      await expectNoOverflow(page);
+    }
+    await home.focus();
+    await expect(home).toBeFocused();
+    await header.locator(".language").click();
+    await expect(page.locator("html")).toHaveAttribute(
+      "lang",
+      locale === "en" ? "nl" : "en",
+    );
+    await page.goto(`${base}/`);
+    for (const [rel, path, type, sizes] of [
+      ["icon", "/favicon.ico", "image/x-icon", "16x16 32x32 48x48"],
+      ["icon", "/brand/favicon-32.png", "image/png", "32x32"],
+      ["icon", "/brand/favicon-192.png", "image/png", "192x192"],
+      [
+        "apple-touch-icon",
+        "/brand/apple-touch-icon.png",
+        "image/png",
+        "180x180",
+      ],
+    ]) {
+      const link = page.locator(`link[rel="${rel}"][href="${path}"]`);
+      await expect(link).toHaveCount(1);
+      await expect(link).toHaveAttribute("sizes", sizes);
+      await expect(link).toHaveAttribute("type", type);
+      const asset = await request.get(path);
+      expect(asset.status()).toBe(200);
+      expect(asset.headers()["content-type"]).toMatch(
+        type === "image/png"
+          ? /^image\/png/
+          : /^image\/(?:x-icon|vnd\.microsoft\.icon)/,
+      );
+      expect(asset.headers()["cache-control"]).toContain("must-revalidate");
+      if (type === "image/png") {
+        const png = await asset.body();
+        const [w, h] = sizes.split("x").map(Number);
+        expect(png.readUInt32BE(16)).toBe(w);
+        expect(png.readUInt32BE(20)).toBe(h);
+      } else {
+        const ico = await asset.body();
+        expect(ico.readUInt16LE(2)).toBe(1);
+        expect(ico.readUInt16LE(4)).toBe(3);
+      }
+    }
+    await expect(page.locator('link[href="/favicon.svg"]')).toHaveCount(0);
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+      "content",
+      "https://football-recruitment-intelligence.onrender.com/brand/fri-social.png",
+    );
+    await expect(page.locator('meta[property="og:image:alt"]')).toHaveAttribute(
+      "content",
+      "Football Recruitment Intelligence",
+    );
+    const social = await request.get("/brand/fri-social.png");
+    expect(social.status()).toBe(200);
+    expect(social.headers()["content-type"]).toContain("image/png");
+  });
   test(`${locale}: release metadata, keyboard, responsive layout and reduced motion`, async ({
     page,
     browserName,
@@ -124,6 +221,10 @@ test("static 404, robots, sitemap and JavaScript-disabled content", async ({
 }) => {
   const response = await page.goto("/not-a-real-route/");
   expect(response?.status()).toBe(404);
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute(
+    "href",
+    "/favicon.ico",
+  );
   await expect(
     page.getByRole("link", { name: "English overview" }),
   ).toBeVisible();
@@ -135,7 +236,7 @@ test("static 404, robots, sitemap and JavaScript-disabled content", async ({
     "Disallow: /\n",
   );
   const sitemap = await (await request.get("/sitemap.xml")).text();
-  expect(sitemap.match(/<loc>/g)).toHaveLength(16);
+  expect(sitemap.match(/<loc>/g)).toHaveLength(18);
   const context = await browser.newContext({ javaScriptEnabled: false });
   const noJS = await context.newPage();
   await noJS.goto(new URL("/methodology/", page.url()).href);

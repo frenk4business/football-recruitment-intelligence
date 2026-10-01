@@ -6,3 +6,4 @@ src/lib/contracts.ts
 src/lib/recruitment-spec.json
 src/lib/release-version.json
 src/lib/artifact-integrity.json
+src/lib/profile-contracts.ts

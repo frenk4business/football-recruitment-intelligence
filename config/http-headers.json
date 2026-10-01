@@ -80,7 +80,7 @@
     "value": "public, max-age=0, must-revalidate, no-transform"
   },
   {
-    "path": "/favicon.svg",
+    "path": "/favicon.ico",
     "name": "Cache-Control",
     "value": "public, max-age=0, must-revalidate, no-transform"
   },
@@ -131,6 +131,11 @@
   },
   {
     "path": "/roadmap*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/players*",
     "name": "Cache-Control",
     "value": "public, max-age=0, must-revalidate, no-transform"
   }

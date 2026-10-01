@@ -1,0 +1,44 @@
+{
+  "raw_participating_player_seasons": 5125,
+  "provider_participating_identities": {
+    "statsbomb": 2358,
+    "wyscout": 2571
+  },
+  "raw_profile_exclusion_reasons": {
+    "unreconciled_match": 592,
+    "unresolved_participation_conflict": 809,
+    "tactical_player_not_registered": 205,
+    "event_outside_match": 26,
+    "action_outside_participation": 72,
+    "backward_participation": 1,
+    "no_reliable_minutes": 32,
+    "unknown_or_ambiguous_role": 8,
+    "on_without_off": 1,
+    "red_card_without_time": 1,
+    "conflicting_substitution": 8
+  },
+  "source_bytes": {
+    "statsbomb": 4701192209,
+    "wyscout": 79737225
+  },
+  "processed_bytes": {
+    "statsbomb": 308561959,
+    "wyscout": 93458412
+  },
+  "wyscout_all_metadata_players": 3603,
+  "wyscout_all_competition_matches": {
+    "matches_England.json": 380,
+    "matches_European_Championship.json": 51,
+    "matches_France.json": 380,
+    "matches_Germany.json": 306,
+    "matches_Italy.json": 380,
+    "matches_Spain.json": 380,
+    "matches_World_Cup.json": 64
+  },
+  "wyscout_additional_international_events": {
+    "events_European_Championship.json": 78140,
+    "events_World_Cup.json": 101759
+  },
+  "canonical_parquet_files": 11,
+  "observations_parquet_files": 11
+}

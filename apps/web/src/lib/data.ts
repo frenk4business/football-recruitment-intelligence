@@ -37,3 +37,8 @@ export const recruitmentEvaluation = () =>
   load<import("./contracts").RecruitmentEvaluation>(
     "phase4/public/evaluation.json",
   );
+
+export const profileCoverage = () =>
+  load<import("./profile-contracts").ProfileCoverage>(
+    "v11/public/coverage.json",
+  );

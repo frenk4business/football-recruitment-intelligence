@@ -2,6 +2,7 @@ import release from "./release-version.json" with { type: "json" };
 export type Locale = "en" | "nl";
 export type Section =
   | "home"
+  | "players"
   | "player-dna"
   | "recruitment"
   | "translation"
@@ -11,6 +12,7 @@ export type Section =
   | "roadmap";
 export const sections: Section[] = [
   "home",
+  "players",
   "player-dna",
   "translation",
   "recruitment",
@@ -24,6 +26,7 @@ export const route = (locale: Locale, section: Section) =>
 const en = {
   nav: {
     home: "Overview",
+    players: "Players",
     "player-dna": "Player DNA",
     translation: "Translation",
     recruitment: "Recruitment",
@@ -38,7 +41,7 @@ const en = {
   title: "Recruitment research starts with the evidence.",
   intro:
     "Explore what open football data can tell us — and where it stops. A research platform for player profiles, competition context and, eventually, recruitment decisions.",
-  open: "Build a recruitment scenario",
+  open: "Explore the player database",
   methods: "Read the methodology",
   sample: "The working sample",
   sampleIntro:
@@ -188,6 +191,7 @@ export type Copy = typeof en;
 const nl: Copy = {
   nav: {
     home: "Overzicht",
+    players: "Spelers",
     "player-dna": "Spelers-DNA",
     translation: "Prestatievertaling",
     recruitment: "Recruitment",
@@ -202,7 +206,7 @@ const nl: Copy = {
   title: "Recruitmentonderzoek begint bij de onderbouwing.",
   intro:
     "Onderzoek wat open voetbaldata ons vertelt — en waar de grenzen liggen. Een onderzoeksplatform voor spelersprofielen, competitiecontext en uiteindelijk recruitmentbeslissingen.",
-  open: "Stel een recruitmentscenario samen",
+  open: "Verken de spelersdatabase",
   methods: "Lees de methodologie",
   sample: "De gebruikte steekproef",
   sampleIntro:
