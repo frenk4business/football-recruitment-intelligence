@@ -28,5 +28,12 @@
     "data/processed/v11/full/provider=wyscout/competition=412/season=181189/observations.parquet": "44622f0b27b7b97c512e97f4c7e95429f8c1cf122d65eb51724e511ca756a25d",
     "data/processed/v11/full/provider=wyscout/competition=364/season=181150/observations.parquet": "c7e0fa2d50f4847f8b0568fdad3110373c3dd5ac6df3df88cb72d4202e0d83ee"
   },
-  "verification": "Second full make v11-data-build, pinned caches reused, identical public inventory/evaluation/PCA and all 22 canonical event/observation partitions"
+  "verification": "Second full make v11-data-build, pinned caches reused, identical public inventory/evaluation/PCA and all 22 canonical event/observation partitions",
+  "publication_refresh": {
+    "code_commit": "0b5000eadf0c43119866888c21aa761469cb5d19",
+    "reason": "Clarify native xG numerator as summed provider xG, not event count; numerical features unchanged",
+    "inventory_sha256": "6669bb936e0956da3774e9fd9a399a677e52604857dd998a65d33577851c0785",
+    "repeated_export_identical": true
+  },
+  "development_run_preserved_public_inventory": true
 }
