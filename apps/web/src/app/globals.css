@@ -2192,3 +2192,8 @@ h1 {
     flex-wrap: wrap;
   }
 }
+/* Normalize closed disclosure layout across Linux WebKit/Firefox. Hidden
+   research tables must not contribute intrinsic document overflow. */
+details:not([open]) > :not(summary) {
+  display: none;
+}
