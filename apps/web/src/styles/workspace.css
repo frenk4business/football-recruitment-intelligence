@@ -873,3 +873,81 @@ main#main {
 .translation-workflow > .state[role="status"] {
   min-height: calc(100svh - 180px);
 }
+/* The supplied reference prioritises scanning results before opening detail. */
+.players-workspace:not(.has-selection) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.players-workspace:not(.has-selection) .player-results {
+  border-right: 0;
+  padding-right: 0;
+}
+.players-workspace:not(.has-selection) .player-profile-pane {
+  display: none;
+}
+.discovery-hint {
+  margin: 12px 0;
+  color: var(--text-secondary);
+}
+.profile-list-columns {
+  display: none;
+}
+.profile-row-data {
+  min-width: 0;
+}
+.profile-row-scope > span {
+  display: block;
+  color: var(--text-secondary);
+}
+.profile-row-minutes {
+  font-variant-numeric: tabular-nums;
+}
+.profile-row-role {
+  color: var(--text-secondary);
+}
+.profile-row-actions button {
+  min-height: 32px;
+}
+@container (min-width: 760px) {
+  .players-workspace:not(.has-selection) .profile-list-columns,
+  .players-workspace:not(.has-selection) .profile-list > li {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.65fr) minmax(
+        0,
+        1.5fr
+      ) 72px 92px;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 12px;
+  }
+  .players-workspace:not(.has-selection) .profile-list-columns {
+    background: var(--surface-muted);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    padding-right: 28px;
+  }
+  .players-workspace:not(.has-selection) .profile-list {
+    margin-top: 0;
+    scrollbar-gutter: stable;
+  }
+  .players-workspace:not(.has-selection) .profile-row-data {
+    display: contents;
+  }
+  .players-workspace:not(.has-selection) .profile-list .profile-name {
+    line-height: 1.35;
+  }
+  .players-workspace:not(.has-selection) .profile-row-minutes {
+    text-align: right;
+  }
+  .profile-list-columns > :nth-last-child(-n + 2) {
+    text-align: right;
+  }
+}
+@container (max-width: 759px) {
+  .profile-list > li {
+    padding: 12px 0;
+  }
+  .profile-row-actions button {
+    min-height: 40px;
+  }
+}

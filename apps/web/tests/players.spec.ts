@@ -175,3 +175,42 @@ for (const locale of ["en", "nl"] as const) {
     );
   });
 }
+
+for (const locale of ["en", "nl"] as const) {
+  test(`${locale}: discovery uses the workspace and starts comparison directly`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1440, height: 960 });
+    await page.goto(locale === "en" ? "/players/" : "/nl/players/");
+    const rows = page.locator(".profile-list > li");
+    await expect(rows).toHaveCount(50);
+    await expect(page.locator(".profile-list-columns")).toBeVisible();
+    const workspace = await page.locator(".players-workspace").boundingBox();
+    const results = await page.locator(".player-results").boundingBox();
+    expect(results!.width).toBeGreaterThan(workspace!.width * 0.95);
+    const name = await rows.first().locator(".profile-name").textContent();
+    await rows.first().locator(".profile-row-actions button").click();
+    await expect(page.locator("#profile-detail h2")).toHaveText(name!);
+    await expect(page.locator(".comparison-selection")).toHaveAttribute(
+      "open",
+      "",
+    );
+    await page.locator(".comparison-picker select").selectOption({ index: 1 });
+    await expect(page).toHaveURL(/compare=/);
+    await expect(page.locator(".comparison-member")).toHaveCount(1);
+    await page.goBack();
+    await expect(page).not.toHaveURL(/compare=/);
+    await page.goBack();
+    await expect(page.locator("#profile-detail")).toHaveCount(0);
+    await expect(page.locator(".profile-name").first()).toBeFocused();
+    await page.setViewportSize({ width: 375, height: 812 });
+    await expect(page.locator(".profile-list-columns")).toBeHidden();
+    await rows.first().locator(".profile-row-actions button").click();
+    await expect(page.locator(".comparison-picker select")).toBeVisible();
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  });
+}
