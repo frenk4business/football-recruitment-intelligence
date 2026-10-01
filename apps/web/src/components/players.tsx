@@ -64,7 +64,11 @@ export function Players({ locale }: { locale: Locale }) {
 }
 function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   const c = playersCopy[locale];
-  const [state, setState] = useState<PlayerFilters>(defaults);
+  const [state, setState] = useState<PlayerFilters>(() =>
+    typeof window === "undefined"
+      ? defaults
+      : readFilters(new URLSearchParams(window.location.search), index),
+  );
   const [retry, setRetry] = useState(0);
   const detailRef = useRef<HTMLElement>(null);
   const lastOpened = useRef("");
