@@ -66,6 +66,8 @@ def main():
             assert "camera=()" in headers.get("permissions-policy", ""), path
             assert "max-age=" in headers.get("strict-transport-security", ""), path
             assert "max-age=0" in headers.get("cache-control", ""), path
+            assert "must-revalidate" in headers["cache-control"], path
+            assert "no-transform" in headers["cache-control"], path
             assert "noindex" not in headers.get("x-robots-tag", ""), path
             routes.append({"path": path, "status": code, "headers": headers})
     code, _, missing = fetch("/not-a-real-release-route/")
@@ -83,6 +85,7 @@ def main():
         assert hashlib.sha256(content).hexdigest() == metadata["sha256"], (
             f"Asset hash mismatch: {path}"
         )
+        assert "no-transform" in headers.get("cache-control", ""), path
         if path.startswith("data/"):
             assert headers.get("x-robots-tag") == "noindex", path
             assert "application/json" in headers.get("content-type", ""), path

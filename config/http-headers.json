@@ -50,81 +50,6 @@
     "value": "public, max-age=0, must-revalidate, no-transform"
   },
   {
-    "path": "/explorer/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/player-dna/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/translation/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/recruitment/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/methodology/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/coverage/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/roadmap/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/explorer/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/player-dna/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/translation/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/recruitment/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/methodology/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/coverage/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
-    "path": "/nl/roadmap/",
-    "name": "Cache-Control",
-    "value": "public, max-age=0, must-revalidate, no-transform"
-  },
-  {
     "path": "/*.html",
     "name": "Cache-Control",
     "value": "public, max-age=0, must-revalidate, no-transform"
@@ -166,6 +91,46 @@
   },
   {
     "path": "/sitemap.xml",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/nl*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/explorer*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/player-dna*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/translation*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/recruitment*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/methodology*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/coverage*",
+    "name": "Cache-Control",
+    "value": "public, max-age=0, must-revalidate, no-transform"
+  },
+  {
+    "path": "/roadmap*",
     "name": "Cache-Control",
     "value": "public, max-age=0, must-revalidate, no-transform"
   }
