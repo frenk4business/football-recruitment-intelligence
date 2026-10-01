@@ -1,0 +1,163 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "url": "https://football-recruitment-intelligence.onrender.com/",
+    "headers": {
+      "Date": "Thu, 01 Oct 2026 06:27:27 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Cache-Control": "public, max-age=0, s-maxage=300",
+      "Age": "0",
+      "etag": "W/\"43fe79b78b7d1f69e18a0e6fa1977978\"",
+      "last-modified": "Wed, 30 Sep 2026 18:29:01 UTC",
+      "rndr-id": "14d205c9-326c-4482",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=315360000; includeSubdomains; preload",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "cf-cache-status": "HIT",
+      "Content-Encoding": "gzip",
+      "CF-RAY": "a43966cecff738ee-AMS",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    }
+  },
+  {
+    "path": "/recruitment/",
+    "status": 200,
+    "url": "https://football-recruitment-intelligence.onrender.com/recruitment/",
+    "headers": {
+      "Date": "Thu, 01 Oct 2026 06:27:27 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "cache-control": "public, max-age=0, s-maxage=300",
+      "Age": "0",
+      "etag": "W/\"524343ffd90feb3344555c2728ed2ba2\"",
+      "last-modified": "Wed, 30 Sep 2026 18:29:02 UTC",
+      "rndr-id": "a84805bf-9467-4007",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=315360000; includeSubdomains; preload",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "cf-cache-status": "HIT",
+      "Content-Encoding": "gzip",
+      "CF-RAY": "a43966d029ca299d-AMS",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    }
+  },
+  {
+    "path": "/nl/recruitment/",
+    "status": 200,
+    "url": "https://football-recruitment-intelligence.onrender.com/nl/recruitment/",
+    "headers": {
+      "Date": "Thu, 01 Oct 2026 06:27:27 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "cache-control": "public, max-age=0, s-maxage=300",
+      "cf-cache-status": "EXPIRED",
+      "etag": "W/\"330a4c23fb163a9fc18404f1e9c43bad\"",
+      "last-modified": "Wed, 30 Sep 2026 18:29:01 UTC",
+      "rndr-id": "3eff074e-9383-4095",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=315360000; includeSubdomains; preload",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "Content-Encoding": "gzip",
+      "CF-RAY": "a43966d0ac79e00a-AMS",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    }
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "url": "https://football-recruitment-intelligence.onrender.com/robots.txt",
+    "headers": {
+      "Date": "Thu, 01 Oct 2026 06:27:28 GMT",
+      "Content-Type": "text/plain; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Cache-Control": "public, max-age=0, s-maxage=300",
+      "cf-cache-status": "MISS",
+      "etag": "W/\"f71d20196d4caf35b6a670db8c70b03d\"",
+      "last-modified": "Wed, 30 Sep 2026 18:29:02 UTC",
+      "rndr-id": "530c8bb1-50e4-477e",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=315360000; includeSubdomains; preload",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "CF-RAY": "a43966d28be7aa76-AMS",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    }
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 404,
+    "url": "https://football-recruitment-intelligence.onrender.com/sitemap.xml",
+    "headers": {
+      "Date": "Thu, 01 Oct 2026 06:27:28 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Cache-Control": "public, max-age=0, s-maxage=300",
+      "etag": "W/\"9b3688699aac3b0393f12bcf55ef9ab3\"",
+      "last-modified": "Wed, 30 Sep 2026 18:28:54 UTC",
+      "rndr-id": "3910a036-385d-44e5",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=315360000; includeSubdomains; preload",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "cf-cache-status": "BYPASS",
+      "CF-RAY": "a43966d47fdbfeb3-AMS",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    }
+  },
+  {
+    "path": "/this-route-does-not-exist/",
+    "status": 404,
+    "url": "https://football-recruitment-intelligence.onrender.com/this-route-does-not-exist/",
+    "headers": {
+      "Date": "Thu, 01 Oct 2026 06:27:28 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Cache-Control": "public, max-age=0, s-maxage=300",
+      "etag": "W/\"9b3688699aac3b0393f12bcf55ef9ab3\"",
+      "last-modified": "Wed, 30 Sep 2026 18:28:54 UTC",
+      "rndr-id": "023e37fc-d322-4468",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=315360000; includeSubdomains; preload",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "cf-cache-status": "BYPASS",
+      "CF-RAY": "a43966d668b31229-AMS",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    }
+  },
+  {
+    "path": "/data/phase4/index.json",
+    "status": 200,
+    "url": "https://football-recruitment-intelligence.onrender.com/data/phase4/index.json",
+    "headers": {
+      "Date": "Thu, 01 Oct 2026 06:27:28 GMT",
+      "Content-Type": "application/json",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "cache-control": "public, max-age=0, s-maxage=300",
+      "Age": "0",
+      "etag": "W/\"affc3d8bf56bec12330444fc63b5d7e1\"",
+      "last-modified": "Wed, 30 Sep 2026 18:29:01 UTC",
+      "rndr-id": "82cabc44-b3d9-4da8",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=315360000; includeSubdomains; preload",
+      "vary": "Accept-Encoding",
+      "x-content-type-options": "nosniff",
+      "cf-cache-status": "HIT",
+      "Content-Encoding": "gzip",
+      "CF-RAY": "a43966d86fb48b46-AMS",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    }
+  }
+]

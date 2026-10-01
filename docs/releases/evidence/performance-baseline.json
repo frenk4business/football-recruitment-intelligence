@@ -1,0 +1,635 @@
+{
+  "profile": "375x812, cold Chromium cache, 4x CPU, 1.6Mbps download, 750Kbps upload, 150ms latency; 5s after load",
+  "rows": [
+    {
+      "lcp": 624,
+      "cls": 0,
+      "longTasks": 18,
+      "requests": [
+        {
+          "path": "/_next/static/css/f1d917fd6e4e5296.css",
+          "encoded": 6857,
+          "decoded": 29977
+        },
+        {
+          "path": "/_next/static/chunks/main-app-20449c604db41b35.js",
+          "encoded": 209,
+          "decoded": 513
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "encoded": 1640,
+          "decoded": 3253
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "encoded": 64118,
+          "decoded": 201054
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "encoded": 65780,
+          "decoded": 241299
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-6a73094502084bdf.js",
+          "encoded": 101,
+          "decoded": 128
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "encoded": 8626,
+          "decoded": 22805
+        },
+        {
+          "path": "/_next/static/chunks/316-d16395b3b3812d6e.js",
+          "encoded": 37817,
+          "decoded": 122532
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "encoded": 96118,
+          "decoded": 96118
+        },
+        {
+          "path": "/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/player-dna/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/translation/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/recruitment/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/__next._tree.txt",
+          "encoded": 189,
+          "decoded": 320
+        },
+        {
+          "path": "/player-dna/__next._tree.txt",
+          "encoded": 252,
+          "decoded": 468
+        },
+        {
+          "path": "/translation/__next._tree.txt",
+          "encoded": 249,
+          "decoded": 469
+        },
+        {
+          "path": "/recruitment/__next._tree.txt",
+          "encoded": 251,
+          "decoded": 469
+        },
+        {
+          "path": "/methodology/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/__next.!KGVuKQ.__PAGE__.txt",
+          "encoded": 3298,
+          "decoded": 11421
+        },
+        {
+          "path": "/player-dna/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 30843,
+          "decoded": 198785
+        },
+        {
+          "path": "/translation/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 28264,
+          "decoded": 100197
+        },
+        {
+          "path": "/methodology/__next._tree.txt",
+          "encoded": 253,
+          "decoded": 469
+        },
+        {
+          "path": "/recruitment/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 2393,
+          "decoded": 7427
+        },
+        {
+          "path": "/methodology/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 37417,
+          "decoded": 148305
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-209e8087983ff25a.js",
+          "encoded": 101,
+          "decoded": 128
+        }
+      ],
+      "overflow": true,
+      "path": "/",
+      "transfer": 395052
+    },
+    {
+      "lcp": 636,
+      "cls": 0,
+      "longTasks": 20,
+      "requests": [
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "encoded": 1640,
+          "decoded": 3253
+        },
+        {
+          "path": "/_next/static/css/f1d917fd6e4e5296.css",
+          "encoded": 6857,
+          "decoded": 29977
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "encoded": 64118,
+          "decoded": 201054
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-209e8087983ff25a.js",
+          "encoded": 101,
+          "decoded": 128
+        },
+        {
+          "path": "/_next/static/chunks/main-app-20449c604db41b35.js",
+          "encoded": 209,
+          "decoded": 513
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "encoded": 8626,
+          "decoded": 22805
+        },
+        {
+          "path": "/_next/static/chunks/316-d16395b3b3812d6e.js",
+          "encoded": 37817,
+          "decoded": 122532
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "encoded": 65780,
+          "decoded": 241299
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "encoded": 96118,
+          "decoded": 96118
+        },
+        {
+          "path": "/data/phase2/900/83125b48-0dd6-55bc-b422-023ae9142f64.json",
+          "encoded": 6321,
+          "decoded": 30476
+        },
+        {
+          "path": "/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/player-dna/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/translation/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/recruitment/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/__next._tree.txt",
+          "encoded": 189,
+          "decoded": 320
+        },
+        {
+          "path": "/player-dna/__next._tree.txt",
+          "encoded": 252,
+          "decoded": 468
+        },
+        {
+          "path": "/translation/__next._tree.txt",
+          "encoded": 249,
+          "decoded": 469
+        },
+        {
+          "path": "/recruitment/__next._tree.txt",
+          "encoded": 251,
+          "decoded": 469
+        },
+        {
+          "path": "/__next.!KGVuKQ.__PAGE__.txt",
+          "encoded": 3298,
+          "decoded": 11421
+        },
+        {
+          "path": "/player-dna/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 30843,
+          "decoded": 198785
+        },
+        {
+          "path": "/translation/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 28264,
+          "decoded": 100197
+        },
+        {
+          "path": "/recruitment/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 2393,
+          "decoded": 7427
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-6a73094502084bdf.js",
+          "encoded": 101,
+          "decoded": 128
+        }
+      ],
+      "overflow": false,
+      "path": "/player-dna/",
+      "transfer": 406939
+    },
+    {
+      "lcp": 628,
+      "cls": 0,
+      "longTasks": 14,
+      "requests": [
+        {
+          "path": "/_next/static/css/f1d917fd6e4e5296.css",
+          "encoded": 6857,
+          "decoded": 29977
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "encoded": 1640,
+          "decoded": 3253
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "encoded": 64118,
+          "decoded": 201054
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "encoded": 65780,
+          "decoded": 241299
+        },
+        {
+          "path": "/_next/static/chunks/main-app-20449c604db41b35.js",
+          "encoded": 209,
+          "decoded": 513
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "encoded": 8626,
+          "decoded": 22805
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-209e8087983ff25a.js",
+          "encoded": 101,
+          "decoded": 128
+        },
+        {
+          "path": "/_next/static/chunks/316-d16395b3b3812d6e.js",
+          "encoded": 37817,
+          "decoded": 122532
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "encoded": 96118,
+          "decoded": 96118
+        },
+        {
+          "path": "/data/phase3/players/2c720618-fb12-5f8a-959e-8303b0455cdd.json",
+          "encoded": 7117,
+          "decoded": 118916
+        },
+        {
+          "path": "/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/player-dna/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/translation/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/recruitment/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/__next._tree.txt",
+          "encoded": 189,
+          "decoded": 320
+        },
+        {
+          "path": "/player-dna/__next._tree.txt",
+          "encoded": 252,
+          "decoded": 468
+        },
+        {
+          "path": "/translation/__next._tree.txt",
+          "encoded": 249,
+          "decoded": 469
+        },
+        {
+          "path": "/recruitment/__next._tree.txt",
+          "encoded": 251,
+          "decoded": 469
+        },
+        {
+          "path": "/__next.!KGVuKQ.__PAGE__.txt",
+          "encoded": 3298,
+          "decoded": 11421
+        },
+        {
+          "path": "/player-dna/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 30843,
+          "decoded": 198785
+        },
+        {
+          "path": "/translation/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 28264,
+          "decoded": 100197
+        },
+        {
+          "path": "/recruitment/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 2393,
+          "decoded": 7427
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-6a73094502084bdf.js",
+          "encoded": 101,
+          "decoded": 128
+        }
+      ],
+      "overflow": false,
+      "path": "/translation/",
+      "transfer": 409071
+    },
+    {
+      "lcp": 592,
+      "cls": 0.22536945812807882,
+      "longTasks": 21,
+      "requests": [
+        {
+          "path": "/_next/static/css/f1d917fd6e4e5296.css",
+          "encoded": 6857,
+          "decoded": 29977
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "encoded": 1640,
+          "decoded": 3253
+        },
+        {
+          "path": "/_next/static/chunks/main-app-20449c604db41b35.js",
+          "encoded": 209,
+          "decoded": 513
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "encoded": 8626,
+          "decoded": 22805
+        },
+        {
+          "path": "/_next/static/chunks/316-d16395b3b3812d6e.js",
+          "encoded": 37817,
+          "decoded": 122532
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "encoded": 64118,
+          "decoded": 201054
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "encoded": 65780,
+          "decoded": 241299
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-209e8087983ff25a.js",
+          "encoded": 101,
+          "decoded": 128
+        },
+        {
+          "path": "/brand/statsbomb.png",
+          "encoded": 96118,
+          "decoded": 96118
+        },
+        {
+          "path": "/data/phase4/index.json",
+          "encoded": 32959,
+          "decoded": 206564
+        },
+        {
+          "path": "/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/player-dna/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/translation/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/recruitment/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/__next._tree.txt",
+          "encoded": 189,
+          "decoded": 320
+        },
+        {
+          "path": "/player-dna/__next._tree.txt",
+          "encoded": 252,
+          "decoded": 468
+        },
+        {
+          "path": "/translation/__next._tree.txt",
+          "encoded": 249,
+          "decoded": 469
+        },
+        {
+          "path": "/recruitment/__next._tree.txt",
+          "encoded": 251,
+          "decoded": 469
+        },
+        {
+          "path": "/__next.!KGVuKQ.__PAGE__.txt",
+          "encoded": 3298,
+          "decoded": 11421
+        },
+        {
+          "path": "/player-dna/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 30843,
+          "decoded": 198785
+        },
+        {
+          "path": "/translation/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 28264,
+          "decoded": 100197
+        },
+        {
+          "path": "/recruitment/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 2393,
+          "decoded": 7427
+        },
+        {
+          "path": "/data/phase4/clubs/3a6cf779-2270-5819-8cd8-e7a355a83a87.json",
+          "encoded": 4850,
+          "decoded": 26217
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-6a73094502084bdf.js",
+          "encoded": 101,
+          "decoded": 128
+        }
+      ],
+      "overflow": false,
+      "path": "/recruitment/",
+      "transfer": 393747
+    },
+    {
+      "lcp": 656,
+      "cls": 0,
+      "longTasks": 21,
+      "requests": [
+        {
+          "path": "/_next/static/css/f1d917fd6e4e5296.css",
+          "encoded": 6857,
+          "decoded": 29977
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "encoded": 1640,
+          "decoded": 3253
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "encoded": 64118,
+          "decoded": 201054
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "encoded": 65780,
+          "decoded": 241299
+        },
+        {
+          "path": "/_next/static/chunks/main-app-20449c604db41b35.js",
+          "encoded": 209,
+          "decoded": 513
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "encoded": 8626,
+          "decoded": 22805
+        },
+        {
+          "path": "/_next/static/chunks/316-d16395b3b3812d6e.js",
+          "encoded": 37817,
+          "decoded": 122532
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-209e8087983ff25a.js",
+          "encoded": 101,
+          "decoded": 128
+        },
+        {
+          "path": "/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/player-dna/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/translation/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/recruitment/",
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "path": "/__next._tree.txt",
+          "encoded": 189,
+          "decoded": 320
+        },
+        {
+          "path": "/player-dna/__next._tree.txt",
+          "encoded": 252,
+          "decoded": 468
+        },
+        {
+          "path": "/translation/__next._tree.txt",
+          "encoded": 249,
+          "decoded": 469
+        },
+        {
+          "path": "/recruitment/__next._tree.txt",
+          "encoded": 251,
+          "decoded": 469
+        },
+        {
+          "path": "/__next.!KGVuKQ.__PAGE__.txt",
+          "encoded": 3298,
+          "decoded": 11421
+        },
+        {
+          "path": "/player-dna/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 30843,
+          "decoded": 198785
+        },
+        {
+          "path": "/translation/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 28264,
+          "decoded": 100197
+        },
+        {
+          "path": "/recruitment/__next.!KGVuKQ.$d$section.__PAGE__.txt",
+          "encoded": 2393,
+          "decoded": 7427
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-6a73094502084bdf.js",
+          "encoded": 101,
+          "decoded": 128
+        }
+      ],
+      "overflow": false,
+      "path": "/methodology/",
+      "transfer": 300100
+    }
+  ]
+}
