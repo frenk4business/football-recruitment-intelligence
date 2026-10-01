@@ -34,13 +34,25 @@ def fetch(path):
         return response.status, {k.lower(): v for k, v in response.headers.items()}, response.read()
 
 
+def verify_cache(path, headers):
+    immutable = path.lstrip("/").startswith(("_next/static/", "integrity/"))
+    expected = {"public", "no-transform"} | (
+        {"max-age=31536000", "immutable"} if immutable else {"max-age=0", "must-revalidate"}
+    )
+    actual = {part.strip().lower() for part in headers.get("cache-control", "").split(",")}
+    assert actual == expected, f"Cache policy mismatch: {path}: {actual}"
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--commit", required=True)
     parser.add_argument("--output", default="/tmp/fri-production-verification.json")
     args = parser.parse_args()
-    status, _, body = fetch("/release-manifest.json")
+    status, manifest_headers, body = fetch("/release-manifest.json")
     assert status == 200, "Missing release manifest"
+    verify_cache("/release-manifest.json", manifest_headers)
+    assert manifest_headers.get("x-robots-tag") == "noindex", "Manifest indexing policy differs"
+    assert "application/json" in manifest_headers.get("content-type", ""), "Manifest MIME differs"
     manifest = json.loads(body)
     assert manifest["git_commit"] == args.commit, "Deployed release SHA differs"
     assert manifest["version"] == Path("VERSION").read_text().strip(), "Release version differs"
@@ -65,11 +77,18 @@ def main():
             assert headers.get("referrer-policy") == "strict-origin-when-cross-origin", path
             assert "camera=()" in headers.get("permissions-policy", ""), path
             assert "max-age=" in headers.get("strict-transport-security", ""), path
-            assert "max-age=0" in headers.get("cache-control", ""), path
+            verify_cache(path, headers)
             assert "noindex" not in headers.get("x-robots-tag", ""), path
             routes.append({"path": path, "status": code, "headers": headers})
-    code, _, missing = fetch("/not-a-real-release-route/")
+    code, missing_headers, missing = fetch("/not-a-real-release-route/")
     assert code == 404 and b"Pagina niet gevonden" in missing, "404 recovery missing"
+    missing_cache = dict(
+        (part.strip().lower().split("=", 1) + [""])[:2]
+        for part in missing_headers.get("cache-control", "").split(",")
+    )
+    assert missing_cache.get("max-age") == "0", "404 must revalidate in the browser"
+    assert "immutable" not in missing_cache, "Unknown route must not be immutable"
+    assert int(missing_cache.get("s-maxage", "0")) <= 300, "404 shared cache exceeds five minutes"
     code, _, robots = fetch("/robots.txt")
     assert code == 200 and b"Disallow: /\n" not in robots, "Indexing blocked"
     code, _, sitemap = fetch("/sitemap.xml")
@@ -83,12 +102,10 @@ def main():
         assert hashlib.sha256(content).hexdigest() == metadata["sha256"], (
             f"Asset hash mismatch: {path}"
         )
+        verify_cache(path, headers)
         if path.startswith("data/"):
             assert headers.get("x-robots-tag") == "noindex", path
             assert "application/json" in headers.get("content-type", ""), path
-            assert "max-age=0" in headers.get("cache-control", ""), path
-        if path.startswith(("_next/static/", "integrity/")):
-            assert "immutable" in headers.get("cache-control", ""), path
         return len(content)
 
     sizes = []
@@ -108,6 +125,9 @@ def main():
         "public_artifacts": len(inventory),
         "all_hashes_match": True,
         "unknown_route_status": 404,
+        "unknown_route_headers": missing_headers,
+        "complete_cache_policies_match": True,
+        "manifest_headers": manifest_headers,
         "passed": True,
     }
     Path(args.output).write_text(json.dumps(report, indent=2) + "\n")

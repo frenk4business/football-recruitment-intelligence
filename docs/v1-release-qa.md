@@ -25,3 +25,13 @@ The post-merge record is attached to the GitHub release: `production-verificatio
 ## Limits of the review
 
 No real screen-reader certification, physical lower-end handset test, penetration test, field INP/RUM population, sustained uptime SLA or disruptive rollback drill was performed. WebKit is an engine test, not every Safari/device version. CSP retains documented inline-script/style exceptions for static Next hydration/charts. Pattern/advisory audits have finite coverage. Exact Render subscription charges/remaining quota are unavailable; existing billing applies. These limits do not change the scientific no-go/negative findings or permit claims of predictive transfer utility.
+
+## Post-merge findings before tagging
+
+The first live validation withheld the tag: CDN image recompression changed the attribution logo bytes, and two Chromium accessibility snapshots raced recruitment loading. The follow-up preserves exported representations with Cache-Control no-transform and explicitly awaits loaded controls before responsive/semantic assertions; all original assertions remain. Final production evidence uses the corrected deployed main.
+
+Repeated clean exports are byte-identical, but warm-workspace versus fresh-checkout framework chunks/HTML differ (66 common files and 12 renamed chunks); all public scientific bytes remain identical. The release reproduction attachment records this boundary. Universal cross-directory/platform binary identity is not claimed.
+
+The required Release gate and locked dependency audits passed. Separately, initial Dependabot updater jobs could not resolve a proposed PyMC 6.3.2/ArviZ major upgrade and an npm update within its package-age window. No update was applied. These maintenance limitations are recorded in the release operations attachment; they are not successful update checks. Render checksPass can be held by such unrelated updater jobs. After verifying every required release job, an operator can deploy that exact main SHA manually while retaining checksPass; review scientific-stack majors separately and retry npm after the age window.
+
+The exhaustive cache audit also exposed inconsistent Cache-Control selection between overlapping global and immutable rules. Stable-route/resource rules now avoid the immutable path classes entirely; the complete live inventory, rather than sampled responses, is the acceptance check.

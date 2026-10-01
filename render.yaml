@@ -16,33 +16,84 @@ services:
       - key: NEXT_TELEMETRY_DISABLED
         value: "1"
     headers:
-      - path: /*
+      - path: "/*"
         name: Content-Security-Policy
         value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
-      - path: /*
+      - path: "/*"
         name: X-Content-Type-Options
-        value: nosniff
-      - path: /*
+        value: "nosniff"
+      - path: "/*"
         name: Referrer-Policy
-        value: strict-origin-when-cross-origin
-      - path: /*
+        value: "strict-origin-when-cross-origin"
+      - path: "/*"
         name: Permissions-Policy
-        value: camera=(), microphone=(), geolocation=(), payment=(), usb=()
-      - path: /*
+        value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+      - path: "/_next/static/*"
         name: Cache-Control
-        value: public, max-age=0, must-revalidate
-      - path: /_next/static/*
+        value: "public, max-age=31536000, immutable, no-transform"
+      - path: "/integrity/*"
         name: Cache-Control
-        value: public, max-age=31536000, immutable
-      - path: /integrity/*
+        value: "public, max-age=31536000, immutable, no-transform"
+      - path: "/data/*"
+        name: X-Robots-Tag
+        value: "noindex"
+      - path: "/integrity/*"
+        name: X-Robots-Tag
+        value: "noindex"
+      - path: "/release-manifest.json"
+        name: X-Robots-Tag
+        value: "noindex"
+      - path: "/"
         name: Cache-Control
-        value: public, max-age=31536000, immutable
-      - path: /data/*
-        name: X-Robots-Tag
-        value: noindex
-      - path: /integrity/*
-        name: X-Robots-Tag
-        value: noindex
-      - path: /release-manifest.json
-        name: X-Robots-Tag
-        value: noindex
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/*.html"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/**/*.html"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/*.txt"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/**/*.txt"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/data/*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/brand/*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/favicon.svg"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/release-manifest.json"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/sitemap.xml"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/nl*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/explorer*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/player-dna*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/translation*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/recruitment*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/methodology*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/coverage*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/roadmap*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
