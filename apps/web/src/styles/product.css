@@ -38,7 +38,7 @@ h2 {
   padding: 12px 0;
   font-size: 14px;
 }
-.menu-toggle {
+.mobile-menu {
   display: none;
 }
 .page-heading {
@@ -80,25 +80,36 @@ footer {
     gap: 20px;
     flex-wrap: wrap;
   }
-  .menu-toggle {
+  .site-header .desktop-navigation {
+    display: none;
+  }
+  .mobile-menu {
     display: block;
     margin-left: auto;
+  }
+  .mobile-menu > summary {
+    cursor: pointer;
     background: white;
     border: 1px solid var(--rule);
+    border-radius: 3px;
     padding: 8px 14px;
+    font-size: 14px;
   }
-  .site-header .product-nav {
-    display: none;
+  .site-header .mobile-menu .product-nav {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    z-index: 20;
     margin: 0;
-    order: 3;
-    flex-basis: 100%;
+    padding: 8px;
+    background: white;
+    border: 1px solid var(--rule);
     flex-direction: column;
     gap: 0;
   }
-  .site-header .product-nav.is-open {
-    display: flex;
-  }
-  .site-header .product-nav a {
+  .site-header .mobile-menu .product-nav a {
     padding: 12px;
   }
   .page-heading {

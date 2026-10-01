@@ -4,8 +4,8 @@
     "width": 1440,
     "route": "",
     "initial": {
-      "lcp": 56,
-      "js": 488794,
+      "lcp": 48,
+      "js": 474646,
       "json": 0
     },
     "overflow": false
@@ -15,11 +15,11 @@
     "width": 1440,
     "route": "players/",
     "initial": {
-      "lcp": 104,
-      "js": 542456,
+      "lcp": 88,
+      "js": 541601,
       "json": 859981
     },
-    "search_ms": 30.647500000000036,
+    "search_ms": 24.045624999999973,
     "overflow": false
   },
   {
@@ -27,11 +27,11 @@
     "width": 1440,
     "route": "recruitment/",
     "initial": {
-      "lcp": 20,
-      "js": 563652,
+      "lcp": 24,
+      "js": 562825,
       "json": 234534
     },
-    "recruitment_ms": 21.565999999999804,
+    "recruitment_ms": 21.547250000000076,
     "overflow": false
   },
   {
@@ -40,7 +40,7 @@
     "route": "translation/",
     "initial": {
       "lcp": 68,
-      "js": 534415,
+      "js": 533506,
       "json": 206037
     },
     "overflow": false
@@ -51,7 +51,7 @@
     "route": "methodology/",
     "initial": {
       "lcp": 32,
-      "js": 562815,
+      "js": 561906,
       "json": 0
     },
     "overflow": false
@@ -62,7 +62,7 @@
     "route": "research/",
     "initial": {
       "lcp": 24,
-      "js": 488794,
+      "js": 474646,
       "json": 0
     },
     "overflow": false
@@ -72,8 +72,8 @@
     "width": 375,
     "route": "",
     "initial": {
-      "lcp": 56,
-      "js": 488794,
+      "lcp": 24,
+      "js": 474646,
       "json": 0
     },
     "overflow": false
@@ -84,10 +84,10 @@
     "route": "players/",
     "initial": {
       "lcp": 20,
-      "js": 542456,
+      "js": 541601,
       "json": 859981
     },
-    "search_ms": 17.46154200000001,
+    "search_ms": 14.440875000000233,
     "overflow": false
   },
   {
@@ -96,10 +96,10 @@
     "route": "recruitment/",
     "initial": {
       "lcp": 20,
-      "js": 563652,
+      "js": 562825,
       "json": 234534
     },
-    "recruitment_ms": 18.780249999999796,
+    "recruitment_ms": 21.05383299999994,
     "overflow": false
   },
   {
@@ -108,7 +108,7 @@
     "route": "translation/",
     "initial": {
       "lcp": 64,
-      "js": 534415,
+      "js": 533506,
       "json": 206037
     },
     "overflow": false
@@ -119,7 +119,7 @@
     "route": "methodology/",
     "initial": {
       "lcp": 28,
-      "js": 562815,
+      "js": 561906,
       "json": 0
     },
     "overflow": false
@@ -130,7 +130,7 @@
     "route": "research/",
     "initial": {
       "lcp": 20,
-      "js": 488794,
+      "js": 474646,
       "json": 0
     },
     "overflow": false
@@ -141,7 +141,7 @@
     "route": "",
     "initial": {
       "lcp": 24,
-      "js": 488794,
+      "js": 474646,
       "json": 0
     },
     "overflow": false
@@ -152,10 +152,10 @@
     "route": "players/",
     "initial": {
       "lcp": 72,
-      "js": 542456,
+      "js": 541601,
       "json": 859981
     },
-    "search_ms": 13.096083000000363,
+    "search_ms": 13.605792000000292,
     "overflow": false
   },
   {
@@ -163,11 +163,11 @@
     "width": 1440,
     "route": "recruitment/",
     "initial": {
-      "lcp": 20,
-      "js": 563652,
+      "lcp": 24,
+      "js": 562825,
       "json": 234534
     },
-    "recruitment_ms": 18.502042000000074,
+    "recruitment_ms": 21.59166599999935,
     "overflow": false
   },
   {
@@ -176,7 +176,7 @@
     "route": "translation/",
     "initial": {
       "lcp": 64,
-      "js": 534415,
+      "js": 533506,
       "json": 206037
     },
     "overflow": false
@@ -186,8 +186,8 @@
     "width": 1440,
     "route": "methodology/",
     "initial": {
-      "lcp": 28,
-      "js": 562815,
+      "lcp": 32,
+      "js": 561906,
       "json": 0
     },
     "overflow": false
@@ -198,7 +198,7 @@
     "route": "research/",
     "initial": {
       "lcp": 24,
-      "js": 488794,
+      "js": 474646,
       "json": 0
     },
     "overflow": false
@@ -208,8 +208,8 @@
     "width": 375,
     "route": "",
     "initial": {
-      "lcp": 20,
-      "js": 488794,
+      "lcp": 24,
+      "js": 474646,
       "json": 0
     },
     "overflow": false
@@ -220,10 +220,10 @@
     "route": "players/",
     "initial": {
       "lcp": 20,
-      "js": 542456,
+      "js": 541601,
       "json": 859981
     },
-    "search_ms": 12.840708000001541,
+    "search_ms": 13.478291999999783,
     "overflow": false
   },
   {
@@ -232,10 +232,10 @@
     "route": "recruitment/",
     "initial": {
       "lcp": 20,
-      "js": 563652,
+      "js": 562825,
       "json": 234534
     },
-    "recruitment_ms": 17.9587500000016,
+    "recruitment_ms": 21.94037500000013,
     "overflow": false
   },
   {
@@ -244,7 +244,7 @@
     "route": "translation/",
     "initial": {
       "lcp": 24,
-      "js": 534415,
+      "js": 533506,
       "json": 206037
     },
     "overflow": false
@@ -255,7 +255,7 @@
     "route": "methodology/",
     "initial": {
       "lcp": 28,
-      "js": 562815,
+      "js": 561906,
       "json": 0
     },
     "overflow": false
@@ -265,8 +265,8 @@
     "width": 375,
     "route": "research/",
     "initial": {
-      "lcp": 24,
-      "js": 488794,
+      "lcp": 20,
+      "js": 474646,
       "json": 0
     },
     "overflow": false

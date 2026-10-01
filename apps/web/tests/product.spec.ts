@@ -84,7 +84,7 @@ for (const locale of ["en", "nl"] as const) {
   }) => {
     await page.setViewportSize({ width: 375, height: 812 });
     await page.goto(`${base}/`);
-    await page.getByRole("button", { name: "Menu", exact: true }).click();
+    await page.locator(".mobile-menu > summary").click();
     await page
       .locator("#product-navigation")
       .getByRole("link", { name: nl ? "Onderzoek" : "Research", exact: true })
@@ -141,3 +141,38 @@ test("native homepage search is allowed by CSP even without JavaScript", async (
   await expect(page.locator("h1")).toHaveText("Player database");
   await context.close();
 });
+
+for (const locale of ["en", "nl"]) {
+  test(`${locale}: mobile navigation works without JavaScript`, async ({
+    browser,
+    baseURL,
+  }) => {
+    const context = await browser.newContext({
+      javaScriptEnabled: false,
+      viewport: { width: 375, height: 812 },
+    });
+    const page = await context.newPage();
+    await page.goto(baseURL + (locale === "nl" ? "/nl/" : "/"));
+    const menu = page.locator(".mobile-menu > summary");
+    await menu.focus();
+    await page.keyboard.press("Enter");
+    await expect(page.locator("#product-navigation")).toBeVisible();
+    await expect(page.locator("#product-navigation a")).toHaveCount(3);
+    await page
+      .locator("#product-navigation")
+      .getByRole("link", {
+        name: locale === "nl" ? "Onderzoek" : "Research",
+        exact: true,
+      })
+      .click();
+    await expect(page.locator("h1")).toHaveText(
+      locale === "nl" ? "Onderzoek & methoden" : "Research & methods",
+    );
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBeTruthy();
+    await context.close();
+  });
+}
