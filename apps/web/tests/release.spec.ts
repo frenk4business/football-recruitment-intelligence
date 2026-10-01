@@ -24,6 +24,12 @@ for (const locale of ["en", "nl"]) {
         "methodology/",
       ]) {
         await page.goto(`${base}/${route}`);
+        if (route === "player-dna/")
+          await expect(page.locator(".dna-header h2")).toBeVisible();
+        if (route === "translation/")
+          await expect(page.locator(".translation-player")).toBeVisible();
+        if (route === "recruitment/")
+          await expect(page.locator(".recruitment-empty")).toBeVisible();
         await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
           "href",
           `https://football-recruitment-intelligence.onrender.com${base}/${route}`,
@@ -38,6 +44,7 @@ for (const locale of ["en", "nl"]) {
       }
     }
     await page.goto(`${base}/recruitment/`);
+    await expect(page.locator(".recruitment-empty")).toBeVisible();
     await page.keyboard.press(browserName === "webkit" ? "Alt+Tab" : "Tab");
     await expect(page.locator(".skip-link")).toBeFocused();
     await page.keyboard.press("Enter");
