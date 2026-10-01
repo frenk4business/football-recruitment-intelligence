@@ -1,8 +1,8 @@
 export const translationCopy = {
   en: {
-    title: "Performance changes with context.",
+    title: "Historical translation",
     intro:
-      "Explore a historical WSL season scenario, with an expected rate, a visible prediction range and the evidence behind it. This study does not support translation between leagues.",
+      "Historical WSL research only. This is not a current or cross-league forecast.",
     search: "Find a player",
     player: "Player",
     source: "Observed source environment",

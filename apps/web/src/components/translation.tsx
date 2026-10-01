@@ -323,7 +323,6 @@ export function Translation({
           ) : (
             <>
               <section className="translation-results">
-                <p className="eyebrow">{c.supported}</p>
                 <h2>{c.results}</h2>
                 <p>{c.intervalNote}</p>
                 <Ranges
@@ -331,12 +330,19 @@ export function Translation({
                   index={index}
                   locale={locale}
                 />
-                <p className="note">{c.baselineNote}</p>
-                <p className="translation-caution">{c.calibrationNote}</p>
+                <details>
+                  <summary>
+                    {locale === "en"
+                      ? "Range calculation & calibration"
+                      : "Berekening & kalibratie van de bandbreedte"}
+                  </summary>
+                  <p className="note">{c.baselineNote}</p>
+                  <p className="translation-caution">{c.calibrationNote}</p>
+                </details>
               </section>
               {evidence && (
-                <section className="translation-evidence">
-                  <h2>{c.evidence}</h2>
+                <details className="translation-evidence">
+                  <summary>{c.evidence}</summary>
                   <dl>
                     <div>
                       <dd>{evidence.direct_episodes}</dd>
@@ -365,7 +371,7 @@ export function Translation({
                     {evidence.target_context_matches} {c.contextMatches}.{" "}
                     {evidence.unseen_target_team ? c.unseen : ""}
                   </p>
-                </section>
+                </details>
               )}
               <details className="translation-research">
                 <summary>{c.research}</summary>
@@ -378,13 +384,13 @@ export function Translation({
               </details>
             </>
           )}
-          <section className="translation-limits">
-            <h2>{c.limits}</h2>
+          <details className="translation-limits">
+            <summary>{c.limits}</summary>
             <p>{c.limitsBody}</p>
             <a href={`${route(locale, "methodology")}#translation`}>
               {c.methodology} ↗
             </a>
-          </section>
+          </details>
         </>
       )}
     </section>

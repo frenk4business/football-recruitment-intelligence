@@ -236,13 +236,15 @@ test("static 404, robots, sitemap and JavaScript-disabled content", async ({
     "Disallow: /\n",
   );
   const sitemap = await (await request.get("/sitemap.xml")).text();
-  expect(sitemap.match(/<loc>/g)).toHaveLength(18);
+  expect(sitemap.match(/<loc>/g)).toHaveLength(20);
   const context = await browser.newContext({ javaScriptEnabled: false });
   const noJS = await context.newPage();
   await noJS.goto(new URL("/methodology/", page.url()).href);
   await expect(noJS.locator("noscript p")).toContainText("requires JavaScript");
   await expect(noJS.locator("main h1")).toBeVisible();
-  await expect(noJS.getByRole("navigation")).toBeVisible();
+  await expect(
+    noJS.getByRole("navigation", { name: "Main navigation" }),
+  ).toBeVisible();
   await context.close();
 });
 

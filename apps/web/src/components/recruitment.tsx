@@ -460,17 +460,16 @@ function RecruitmentBoard({
                           f.core &&
                           f.family === family &&
                           (advanced ||
-                            (f.default_visibility.includes(
-                              scenario.target_role,
-                            ) &&
-                              [
-                                "progressive_passes_per90",
-                                "progressive_carries_per90",
-                                "pressures_per90",
-                                "key_passes_per90",
-                                "interceptions_per90",
-                                "tackles_per90",
-                              ].includes(f.id)) ||
+                            index.features
+                              .filter(
+                                (feature) =>
+                                  feature.core &&
+                                  feature.default_visibility.includes(
+                                    scenario.target_role,
+                                  ),
+                              )
+                              .slice(0, 5)
+                              .some((feature) => feature.id === f.id) ||
                             scenario.requirements.some(
                               (r) =>
                                 r.feature_id === f.id &&
@@ -849,11 +848,6 @@ function RecruitmentBoard({
                                 {number(r.distance)}
                               </strong>
                               <small>{c.gap}</small>
-                              {false && r.frontier && (
-                                <span className="frontier-badge">
-                                  {c.frontier}
-                                </span>
-                              )}
                             </td>
                             <td>
                               {number(p.minutes, 0)} {c.minutes.toLowerCase()}

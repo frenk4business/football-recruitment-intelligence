@@ -226,7 +226,31 @@ export function Site({
         )}
         {section === "players" && <Players locale={locale} />}
         {section === "coverage" && <ProfileCoverage locale={locale} />}
-        {section === "methodology" && <ProfileMethodology locale={locale} />}
+        {section === "methodology" && (
+          <>
+            <nav
+              className="research-toc"
+              aria-label={locale === "en" ? "On this page" : "Op deze pagina"}
+            >
+              <a href="#data-methods">
+                {locale === "en" ? "Data & definitions" : "Data & definities"}
+              </a>
+              <a href="#evaluation">
+                {locale === "en" ? "Evaluation" : "Evaluatie"}
+              </a>
+              <a href="#recruitment">Recruitment</a>
+              <a href="#translation">
+                {locale === "en"
+                  ? "Historical translation"
+                  : "Historische vertaling"}
+              </a>
+              <a href="#player-dna">{c.nav["player-dna"]}</a>
+            </nav>
+            <div id="data-methods">
+              <ProfileMethodology locale={locale} />
+            </div>
+          </>
+        )}
         {section === "recruitment" && <Recruitment locale={locale} />}
         {section === "translation" && (
           <Translation locale={locale} index={translationIndex()} />
@@ -391,6 +415,14 @@ export function Site({
         )}
         {section === "methodology" && (
           <>
+            <section id="evaluation" className="research-conclusion">
+              <h2>
+                {locale === "en"
+                  ? "What the evaluation shows"
+                  : "Wat de evaluatie laat zien"}
+              </h2>
+              <p>{recruitmentCopy[locale].evaluationNote}</p>
+            </section>
             <RecruitmentEvaluation
               locale={locale}
               evaluation={recruitmentEvaluation()}
