@@ -12,6 +12,8 @@ concurrency:
 jobs:
   python:
     name: Python ${{ matrix.python }}
+    env:
+      UV_PYTHON: ${{ matrix.python }}
     runs-on: ubuntu-latest
     timeout-minutes: 12
     strategy:
@@ -25,6 +27,14 @@ jobs:
           version: '0.12.21'
           enable-cache: true
       - run: uv sync --frozen --python ${{ matrix.python }}
+      - name: Verify selected Python interpreter
+        run: |
+          uv run python - <<'PY'
+          import os, sys
+          actual = f"{sys.version_info.major}.{sys.version_info.minor}"
+          print(f"Python {sys.version}; expected {os.environ['UV_PYTHON']}")
+          assert actual == os.environ["UV_PYTHON"], (actual, os.environ["UV_PYTHON"])
+          PY
       - run: uv run ruff check src tests scripts && uv run ruff format --check src tests scripts
       - run: uv run mypy src
       - run: uv run pytest -q
