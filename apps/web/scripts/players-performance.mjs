@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { gzipSync } from "node:zlib";
 import { cpus, platform, arch } from "node:os";
 import { performance } from "node:perf_hooks";
@@ -10,6 +10,10 @@ import {
 } from "../src/lib/player-search.ts";
 const imageAudit = process.argv.includes("--images");
 const root = new URL("../../../", import.meta.url);
+if (imageAudit)
+  mkdirSync(new URL("artifacts/local-qa/player-images/", root), {
+    recursive: true,
+  });
 const index = JSON.parse(
   readFileSync(new URL("artifacts/v11/public/index.json", root)),
 );
