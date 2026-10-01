@@ -1,0 +1,274 @@
+[
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "",
+    "initial": {
+      "lcp": 48,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "players/",
+    "initial": {
+      "lcp": 88,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 24.045624999999973,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 24,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 21.547250000000076,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "translation/",
+    "initial": {
+      "lcp": 68,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 32,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "research/",
+    "initial": {
+      "lcp": 24,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "",
+    "initial": {
+      "lcp": 24,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "players/",
+    "initial": {
+      "lcp": 20,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 14.440875000000233,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 20,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 21.05383299999994,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "translation/",
+    "initial": {
+      "lcp": 64,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 28,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "research/",
+    "initial": {
+      "lcp": 20,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "",
+    "initial": {
+      "lcp": 24,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "players/",
+    "initial": {
+      "lcp": 72,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 13.605792000000292,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 24,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 21.59166599999935,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "translation/",
+    "initial": {
+      "lcp": 64,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 32,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "research/",
+    "initial": {
+      "lcp": 24,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "",
+    "initial": {
+      "lcp": 24,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "players/",
+    "initial": {
+      "lcp": 20,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 13.478291999999783,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 20,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 21.94037500000013,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "translation/",
+    "initial": {
+      "lcp": 24,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 28,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "research/",
+    "initial": {
+      "lcp": 20,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  }
+]

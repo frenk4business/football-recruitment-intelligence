@@ -1,8 +1,7 @@
 export const playersCopy = {
   en: {
     title: "Player database",
-    intro:
-      "Explore observed player-season profiles across open football datasets. Provider, season and evidence stay visible.",
+    intro: "Find a player, explore their playing style and compare profiles.",
     profiles: "player-season profiles",
     identities: "unique provider identities",
     providers: "providers",
@@ -10,8 +9,8 @@ export const playersCopy = {
     seasons: "competition-seasons",
     matches: "matches",
     commonCount: "common profiles",
-    search: "Player name",
-    searchHint: "Search names, including without accents",
+    search: "Search players",
+    searchHint: "Search player, club or competition",
     provider: "Provider",
     competition: "Competition",
     season: "Season",
@@ -81,7 +80,7 @@ export const playersCopy = {
       "Three common features, shared development scaling and Euclidean distance. Same provider, competition-season and broad role only. This is not a talent, recruitment or transfer ranking.",
     noNeighbours:
       "This cohort does not have sufficient split-half evidence for similarity.",
-    distance: "Distance",
+    distance: "Profile distance",
     rankingNote:
       "Cross-provider nearest-neighbour rankings are not published. Three shared measures and detectable provider effects do not establish player-style equivalence.",
     coverageTitle: "Expanded observed-profile coverage",
@@ -123,8 +122,7 @@ export const playersCopy = {
   },
   nl: {
     title: "Spelersdatabase",
-    intro:
-      "Verken geobserveerde speler-seizoensprofielen uit open voetbaldatasets. Provider, seizoen en onderbouwing blijven zichtbaar.",
+    intro: "Zoek een speler, bekijk de speelstijl en vergelijk profielen.",
     profiles: "speler-seizoensprofielen",
     identities: "unieke provideridentiteiten",
     providers: "providers",
@@ -132,8 +130,8 @@ export const playersCopy = {
     seasons: "competitie-seizoenen",
     matches: "wedstrijden",
     commonCount: "gedeelde profielen",
-    search: "Spelersnaam",
-    searchHint: "Zoek namen, ook zonder accenten",
+    search: "Spelers zoeken",
+    searchHint: "Zoek op speler, club of competitie",
     provider: "Provider",
     competition: "Competitie",
     season: "Seizoen",
@@ -203,7 +201,7 @@ export const playersCopy = {
       "Drie gemeenschappelijke kenmerken, gedeelde schaling uit ontwikkeldata en euclidische afstand. Alleen dezelfde provider, competitie, seizoen en brede rol. Dit is geen ranglijst voor talent, recruitment of transfers.",
     noNeighbours:
       "Dit cohort heeft onvoldoende onderbouwing uit seizoenshelften voor gelijkenisvergelijking.",
-    distance: "Afstand",
+    distance: "Profielafstand",
     rankingNote:
       "Ranglijsten met naaste buren over providers heen worden niet gepubliceerd. Drie gedeelde maten en aantoonbare providerverschillen bewijzen geen gelijkwaardig spelersprofiel.",
     coverageTitle: "Dekking van de uitgebreide profielendatabase",

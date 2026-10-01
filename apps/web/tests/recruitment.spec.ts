@@ -81,6 +81,7 @@ for (const locale of ["en", "nl"] as const) {
     await expect(
       page.locator(`.recruitment-table [data-player="${reference}"]`),
     ).toHaveCount(0);
+    await page.locator(".requirements-disclosure > summary").click();
     await progressive.locator("select").first().selectOption("maximum");
     await progressive.locator('input[type="number"]').fill("40");
     await expect(progressive).toContainText(nl ? "Jouw keuze" : "Your choice");
@@ -164,9 +165,18 @@ test("recruitment sharing, locale switch, reset, strict URLs and hard exclusions
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "shared scenario is invalid",
   );
-  await page
-    .getByRole("combobox", { name: "Target role", exact: true })
-    .selectOption("AM");
+  await expect(
+    page
+      .getByRole("combobox", { name: "Target role", exact: true })
+      .locator('option[value="AM"]'),
+  ).toHaveCount(0);
+  // Existing shared URLs for unsupported roles remain readable and fail closed.
+  const unsupported = new URL(page.url());
+  unsupported.searchParams.set("role", "AM");
+  await page.goto(unsupported.href);
+  await expect(
+    page.getByRole("combobox", { name: "Target role", exact: true }),
+  ).toHaveValue("AM");
   await page
     .locator('[data-feature="pressures_per90"] select')
     .first()

@@ -9,6 +9,7 @@ import {
   filterProfiles,
   filterURL,
   normalizeName,
+  profileSearchText,
   readFilters,
 } from "../src/lib/player-search.ts";
 const index = JSON.parse(
@@ -100,7 +101,7 @@ test("5,000-row searches remain bounded and deterministic", () => {
     })),
   };
   const names = new Map(
-    large.profiles.map((p) => [p.id, normalizeName(p.name)]),
+    large.profiles.map((p) => [p.id, profileSearchText(index, p)]),
   );
   const state = { ...defaults, provider: "wyscout", minutes: "900", q: "a" };
   const start = performance.now();
@@ -113,4 +114,30 @@ test("5,000-row searches remain bounded and deterministic", () => {
     (performance.now() - start) / 25 < 100,
     "Typical filter exceeds 100 ms budget",
   );
+});
+
+test("player search also matches clubs and competitions without changing result order", () => {
+  const p = index.profiles[0];
+  for (const q of [
+    index.teams[p.teams[0]],
+    index.scopes.find((s) => s.id === p.scope).competition,
+  ]) {
+    const rows = filterProfiles(index, { ...defaults, q });
+    assert(rows.some((r) => r.id === p.id));
+    assert.deepEqual(
+      rows.map((r) => r.id),
+      index.profiles.filter((r) => rows.includes(r)).map((r) => r.id),
+    );
+  }
+});
+
+test("cached and uncached search include the same club and competition matches", () => {
+  const names = new Map(
+    index.profiles.map((p) => [p.id, profileSearchText(index, p)]),
+  );
+  for (const q of ["Arsenal", "Premier League", "Hemp", "2017"])
+    assert.deepEqual(
+      filterProfiles(index, { ...defaults, q }, names),
+      filterProfiles(index, { ...defaults, q }),
+    );
 });

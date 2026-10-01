@@ -1,6 +1,6 @@
 export const recruitmentCopy = {
   en: {
-    title: "Recruitment starts with your requirements.",
+    title: "Build a shortlist",
     intro:
       "Build an explicit profile, compare observed playing styles and inspect the evidence behind the ordering. WSL 2023/24 only.",
     find: "Find Candidates",
@@ -30,7 +30,7 @@ export const recruitmentCopy = {
       "The reference player's whole-season profile sets exact targets. Adjust any preference to create an adjusted replacement; the reference player is excluded.",
     noReference:
       "No eligible replacement profile exists at this club and role. Choose another role or build custom requirements.",
-    advanced: "Show all 18 features",
+    advanced: "Advanced requirements · all 18 features",
     preference: "Preference",
     target: "Target percentile",
     importance: "Importance",
@@ -71,7 +71,7 @@ export const recruitmentCopy = {
       "No candidates satisfy these constraints. Review the filters or choose a supported role.",
     player: "Player / team",
     minutes: "Minutes",
-    fit: "Profile fit",
+    fit: "Fit distance",
     gap: "pt mismatch",
     evidence: "Evidence",
     neighbor: "Neighbour stability",
@@ -81,7 +81,7 @@ export const recruitmentCopy = {
     compare: "Compare",
     compareMax: "Select up to three candidates",
     selected: "selected",
-    frontier: "On trade-off frontier",
+    frontier: "Trade-off candidate",
     frontierCount: "on the trade-off frontier",
     frontierNote:
       "No eligible candidate is at least as close on every selected criterion and closer on at least one. Ties can share the frontier; this is not an optimal-player label.",
@@ -184,7 +184,7 @@ export const recruitmentCopy = {
       "Mean top-10 Jaccard across 205 scenarios: weights 0.950; profile sampling 0.723. Fourteen scenarios have at most ten candidates, which inflates inclusion. Context gains are mixed and do not establish recruitment value.",
   },
   nl: {
-    title: "Recruitment begint bij jouw eisen.",
+    title: "Stel een shortlist samen",
     intro:
       "Stel een expliciet profiel samen, vergelijk waargenomen speelstijlen en bekijk de onderbouwing van de ranglijst. Alleen WSL 2023/24.",
     find: "Kandidaten zoeken",
@@ -214,7 +214,7 @@ export const recruitmentCopy = {
       "Het volledige seizoensprofiel van de referentiespeler bepaalt de exacte doelen. Pas een voorkeur aan voor een aangepaste vervanging; de referentiespeler wordt uitgesloten.",
     noReference:
       "Deze club en rol hebben geen geschikt referentieprofiel. Kies een andere rol of stel eigen eisen samen.",
-    advanced: "Alle 18 kenmerken tonen",
+    advanced: "Geavanceerde eisen · alle 18 kenmerken",
     preference: "Voorkeur",
     target: "Doelpercentiel",
     importance: "Belang",
@@ -255,7 +255,7 @@ export const recruitmentCopy = {
       "Geen kandidaten voldoen aan deze voorwaarden. Bekijk de filters of kies een ondersteunde rol.",
     player: "Speler / club",
     minutes: "Minuten",
-    fit: "Profielmatch",
+    fit: "Profielafstand",
     gap: "pt afwijking",
     evidence: "Onderbouwing",
     neighbor: "Stabiliteit van buren",
@@ -265,7 +265,7 @@ export const recruitmentCopy = {
     compare: "Vergelijken",
     compareMax: "Selecteer maximaal drie kandidaten",
     selected: "geselecteerd",
-    frontier: "Op de afwegingsgrens",
+    frontier: "Kandidaat met afwegingen",
     frontierCount: "op de afwegingsgrens",
     frontierNote:
       "Geen geschikte kandidaat is op elk gekozen criterium minstens even dichtbij én op minstens één criterium dichterbij. Gelijke profielen kunnen de grens delen; dit betekent geen optimale speler.",

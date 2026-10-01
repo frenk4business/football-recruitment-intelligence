@@ -89,35 +89,42 @@ export function RecruitmentEvaluation({
       </div>
       <h3>{c.evaluationTitle}</h3>
       <p>{c.evaluationNote}</p>
-      {table(
-        evaluation.rows.filter(
-          (r) => r.stage === "final" && r.task === "temporal",
-        ),
-        `${c.final} · ${c.temporal}`,
-      )}
-      <p className="note">
-        {locale === "en"
-          ? "* Selected on development queries before the final query evaluation. MRR is mean reciprocal rank: higher means the designated peer appears earlier. This peer is a representation-derived label, not an expert judgement."
-          : "* Geselecteerd op ontwikkelvragen vóór de finale evaluatie. MRR is de gemiddelde reciproke rang: hoger betekent dat de aangewezen buur eerder verschijnt. Deze buur komt uit het profielmodel, niet uit een expertoordeel."}
-      </p>
-      <details>
-        <summary>{c.allMethods}</summary>
-        {(["development", "final"] as const).map((stage) => (
-          <div key={stage}>
-            {(["temporal", "roster", "context_ablation"] as const)
-              .filter((task) => stage !== "final" || task !== "temporal")
-              .map((task) => (
-                <div key={task}>
-                  {table(
-                    evaluation.rows.filter(
-                      (r) => r.stage === stage && r.task === task,
-                    ),
-                    `${c[stage]} · ${task === "temporal" ? c.temporal : task === "roster" ? c.rosterTest : c.ablation}`,
-                  )}
-                </div>
-              ))}
-          </div>
-        ))}
+      <details className="evaluation-complete">
+        <summary>
+          {locale === "en"
+            ? "View complete evaluation"
+            : "Volledige evaluatie bekijken"}
+        </summary>
+        {table(
+          evaluation.rows.filter(
+            (r) => r.stage === "final" && r.task === "temporal",
+          ),
+          `${c.final} · ${c.temporal}`,
+        )}
+        <p className="note">
+          {locale === "en"
+            ? "* Selected on development queries before the final query evaluation. MRR is mean reciprocal rank: higher means the designated peer appears earlier. This peer is a representation-derived label, not an expert judgement."
+            : "* Geselecteerd op ontwikkelvragen vóór de finale evaluatie. MRR is de gemiddelde reciproke rang: hoger betekent dat de aangewezen buur eerder verschijnt. Deze buur komt uit het profielmodel, niet uit een expertoordeel."}
+        </p>
+        <details>
+          <summary>{c.allMethods}</summary>
+          {(["development", "final"] as const).map((stage) => (
+            <div key={stage}>
+              {(["temporal", "roster", "context_ablation"] as const)
+                .filter((task) => stage !== "final" || task !== "temporal")
+                .map((task) => (
+                  <div key={task}>
+                    {table(
+                      evaluation.rows.filter(
+                        (r) => r.stage === stage && r.task === task,
+                      ),
+                      `${c[stage]} · ${task === "temporal" ? c.temporal : task === "roster" ? c.rosterTest : c.ablation}`,
+                    )}
+                  </div>
+                ))}
+            </div>
+          ))}
+        </details>
       </details>
       <p className="recruitment-warning">{c.robustSummary}</p>
       <p>

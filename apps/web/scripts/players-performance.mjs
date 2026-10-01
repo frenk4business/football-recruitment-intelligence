@@ -6,13 +6,15 @@ import { performance } from "node:perf_hooks";
 import {
   filterProfiles,
   defaults,
-  normalizeName,
+  profileSearchText,
 } from "../src/lib/player-search.ts";
 const root = new URL("../../../", import.meta.url);
 const index = JSON.parse(
   readFileSync(new URL("artifacts/v11/public/index.json", root)),
 );
-const names = new Map(index.profiles.map((p) => [p.id, normalizeName(p.name)]));
+const names = new Map(
+  index.profiles.map((p) => [p.id, profileSearchText(index, p)]),
+);
 const quantile = (rows, p) =>
   [...rows].sort((a, b) => a - b)[
     Math.min(rows.length - 1, Math.floor(rows.length * p))
@@ -67,7 +69,7 @@ try {
       const initial = [...responses];
       const interactions = [];
       const input = page.getByLabel(
-        locale === "en" ? "Player name" : "Spelersnaam",
+        locale === "en" ? "Search players" : "Spelers zoeken",
         { exact: true },
       );
       for (const q of ["a", "e", "i", "o", "n", "s", "t", "r", "an", "zzzz"]) {

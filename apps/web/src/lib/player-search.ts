@@ -27,6 +27,17 @@ export const defaults: PlayerFilters = {
 };
 export const normalizeName = (s: string) =>
   s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+export function profileSearchText(index: ProfileIndex, p: ProfileIndexEntry) {
+  const scope = index.scopes.find((s) => s.id === p.scope);
+  return normalizeName(
+    [
+      p.name,
+      ...p.teams.map((id) => index.teams[id]),
+      scope?.competition,
+      scope?.season,
+    ].join(" "),
+  );
+}
 export function readFilters(
   params: URLSearchParams,
   index: ProfileIndex,
@@ -93,7 +104,7 @@ export function filterProfiles(
           ? p.capabilities.common
           : p.capabilities.similarity)) &&
       tokens.every((t) =>
-        (names?.get(p.id) ?? normalizeName(p.name)).includes(t),
+        (names?.get(p.id) ?? profileSearchText(index, p)).includes(t),
       )
     );
   });

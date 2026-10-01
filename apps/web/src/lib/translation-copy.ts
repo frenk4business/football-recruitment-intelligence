@@ -1,8 +1,8 @@
 export const translationCopy = {
   en: {
-    title: "Performance changes with context.",
+    title: "Historical translation",
     intro:
-      "Explore a historical WSL season scenario, with an expected rate, a visible prediction range and the evidence behind it. This study does not support translation between leagues.",
+      "Historical WSL research only. This is not a current or cross-league forecast.",
     search: "Find a player",
     player: "Player",
     source: "Observed source environment",
@@ -67,9 +67,9 @@ export const translationCopy = {
       "Ridge was selected for shots and progressive passes. Unchanged source rates were selected for carries and pressures. Changing the target team therefore does not change those two default point estimates. No Bayesian target met all validation rules; later results did not change that decision.",
   },
   nl: {
-    title: "Prestaties veranderen met de context.",
+    title: "Historische vertaling",
     intro:
-      "Verken een historisch WSL-seizoensscenario met een verwachte waarde, een zichtbare voorspellingsband en de bijbehorende onderbouwing. Dit onderzoek ondersteunt geen vertaling tussen competities.",
+      "Alleen historisch WSL-onderzoek. Dit is geen actuele voorspelling of voorspelling tussen competities.",
     search: "Zoek een speler",
     player: "Speler",
     source: "Waargenomen bronomgeving",

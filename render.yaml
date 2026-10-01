@@ -18,7 +18,7 @@ services:
     headers:
       - path: "/*"
         name: Content-Security-Policy
-        value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
       - path: "/*"
         name: X-Content-Type-Options
         value: "nosniff"
@@ -98,5 +98,8 @@ services:
         name: Cache-Control
         value: "public, max-age=0, must-revalidate, no-transform"
       - path: "/roadmap*"
+        name: Cache-Control
+        value: "public, max-age=0, must-revalidate, no-transform"
+      - path: "/research*"
         name: Cache-Control
         value: "public, max-age=0, must-revalidate, no-transform"

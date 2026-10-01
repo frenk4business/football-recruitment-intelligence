@@ -68,6 +68,11 @@ export function PlayerDNA({
     .filter((p) => p.eligibility[String(index.default_threshold)].length === 0)
     .sort((a, b) => b.minutes - a.minutes)[0];
   const [selected, setSelected] = useState(initial.player_id);
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("player");
+    if (requested && index.players.some((p) => p.player_id === requested))
+      setSelected(requested);
+  }, [index]);
   const [comparison, setComparison] = useState<string | null>(null);
   const [retry, setRetry] = useState(0);
   const [mapOpen, setMapOpen] = useState(false);

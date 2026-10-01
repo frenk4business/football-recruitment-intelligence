@@ -23,6 +23,7 @@ SECTIONS = [
     "methodology",
     "coverage",
     "roadmap",
+    "research",
 ]
 
 
@@ -94,7 +95,7 @@ def main():
     code, _, robots = fetch("/robots.txt")
     assert code == 200 and b"Disallow: /\n" not in robots, "Indexing blocked"
     code, _, sitemap = fetch("/sitemap.xml")
-    assert code == 200 and sitemap.count(b"<loc>") == 18, "Sitemap routes missing"
+    assert code == 200 and sitemap.count(b"<loc>") == 20, "Sitemap routes missing"
 
     def verify(item):
         path, metadata = item

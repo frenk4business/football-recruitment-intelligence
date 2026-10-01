@@ -23,7 +23,7 @@ for (const locale of ["en", "nl"]) {
     await expect(home).toHaveAttribute("href", `${base}/`);
     await expect(header.getByRole("img")).toHaveCount(1);
     const mark = home.getByRole("img");
-    for (const width of [320, 375, 480, 481, 768, 1280]) {
+    for (const width of [320, 375, 480, 481, 760, 761, 768, 1280]) {
       await page.setViewportSize({ width, height: 812 });
       await expect(mark).toBeVisible();
       await expect
@@ -35,7 +35,7 @@ for (const locale of ["en", "nl"]) {
           ),
         )
         .toBe(
-          width <= 480
+          width <= 760
             ? "/brand/fri-emblem.webp"
             : "/brand/fri-horizontal.webp",
         );
@@ -147,7 +147,7 @@ for (const locale of ["en", "nl"]) {
     await page.keyboard.press("Enter");
     await expect(page.locator("#main")).toBeFocused();
     await expect(
-      page.getByRole("link", { name: `Release v${version}` }),
+      page.getByRole("link", { name: `v${version}`, exact: true }),
     ).toBeVisible();
     expect(
       await page
@@ -236,13 +236,15 @@ test("static 404, robots, sitemap and JavaScript-disabled content", async ({
     "Disallow: /\n",
   );
   const sitemap = await (await request.get("/sitemap.xml")).text();
-  expect(sitemap.match(/<loc>/g)).toHaveLength(18);
+  expect(sitemap.match(/<loc>/g)).toHaveLength(20);
   const context = await browser.newContext({ javaScriptEnabled: false });
   const noJS = await context.newPage();
   await noJS.goto(new URL("/methodology/", page.url()).href);
   await expect(noJS.locator("noscript p")).toContainText("requires JavaScript");
   await expect(noJS.locator("main h1")).toBeVisible();
-  await expect(noJS.getByRole("navigation")).toBeVisible();
+  await expect(
+    noJS.getByRole("navigation", { name: "Main navigation" }),
+  ).toBeVisible();
   await context.close();
 });
 

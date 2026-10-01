@@ -15,10 +15,11 @@ import {
   detailPath,
   filterProfiles,
   filterURL,
-  normalizeName,
+  profileSearchText,
   readFilters,
   type PlayerFilters,
 } from "@/lib/player-search";
+import { ProfileStyle } from "./profile-style";
 import { playersCopy } from "@/lib/players-copy";
 const repo =
   "https://github.com/frenk4business/football-recruitment-intelligence";
@@ -49,7 +50,10 @@ export function Players({ locale }: { locale: Locale }) {
   const data = useData<ProfileIndex>("/data/v11/index.json", retry);
   if (!data?.data)
     return (
-      <div className="notice" role={data?.error ? "alert" : "status"}>
+      <div
+        className={data?.error ? "notice" : "profile-loading"}
+        role={data?.error ? "alert" : "status"}
+      >
         {data?.error ? c.error : c.loading}
         {data?.error && (
           <button onClick={() => setRetry(retry + 1)}>{c.retry}</button>
@@ -60,7 +64,11 @@ export function Players({ locale }: { locale: Locale }) {
 }
 function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   const c = playersCopy[locale];
-  const [state, setState] = useState<PlayerFilters>(defaults);
+  const [state, setState] = useState<PlayerFilters>(() =>
+    typeof window === "undefined"
+      ? defaults
+      : readFilters(new URLSearchParams(window.location.search), index),
+  );
   const [retry, setRetry] = useState(0);
   const detailRef = useRef<HTMLElement>(null);
   const lastOpened = useRef("");
@@ -79,8 +87,18 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
       detailRef.current?.focus();
       lastOpened.current = `${state.profile}:${state.compare}`;
     }
-    if (!state.profile) lastOpened.current = "";
-  }, [state.profile, state.compare]);
+    if (!state.profile && lastOpened.current) {
+      const previous = lastOpened.current.split(":")[0];
+      document
+        .querySelector<HTMLButtonElement>(`button[data-profile="${previous}"]`)
+        ?.focus();
+      lastOpened.current = "";
+    }
+    const link = document.querySelector<HTMLAnchorElement>("a.language");
+    if (link)
+      link.href =
+        route(locale === "en" ? "nl" : "en", "players") + filterURL(state);
+  }, [state, locale]);
   const update = (patch: Partial<PlayerFilters>, push = false) => {
     const next = { ...state, ...patch };
     setState(next);
@@ -91,7 +109,8 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
     );
   };
   const names = useMemo(
-    () => new Map(index.profiles.map((p) => [p.id, normalizeName(p.name)])),
+    () =>
+      new Map(index.profiles.map((p) => [p.id, profileSearchText(index, p)])),
     [index],
   );
   const results = useMemo(
@@ -220,318 +239,430 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
     </div>
   );
   return (
-    <div className="player-database">
-      <div className="profile-counts" aria-label={c.coverageTitle}>
-        <p>
-          <strong>{number(index.counts.profiles, 0)}</strong> {c.profiles}
-        </p>
-        <p>
-          <strong>{number(index.counts.provider_identities, 0)}</strong>{" "}
-          {c.identities}
-        </p>
-        <p>
-          <strong>{number(index.counts.common_profiles, 0)}</strong>{" "}
-          {c.commonCount}
-        </p>
-      </div>
-      <p className="small">{c.coverageNote}</p>
-      <div className="player-filters">
-        <label className="player-search">
-          {c.search}
-          <input
-            type="search"
-            value={state.q}
-            placeholder={c.searchHint}
-            maxLength={100}
-            onChange={(e) => update({ q: e.target.value, page: 1 })}
-          />
-        </label>
-        {choices("provider", c.provider, providers, providerName)}
-        {choices(
-          "competition",
-          c.competition,
-          competitions,
-          (key) =>
-            index.scopes.find((s) => s.competition_key === key)!.competition,
-        )}
-        {choices("season", c.season, seasons, (v) => v)}
-        {choices("team", c.team, teams, (key) => index.teams[key])}
-        {choices("role", c.role, roles, roleName)}
-        <label>
-          <span id="filter-label-minutes">{c.evidence}</span>
-          <select
-            aria-labelledby="filter-label-minutes"
-            value={state.minutes}
-            onChange={(e) => update({ minutes: e.target.value, page: 1 })}
-          >
-            {[450, 600, 900].map((n) => (
-              <option key={n} value={n}>
-                {n}
+    <div className={`player-database ${selected ? "profile-is-open" : ""}`}>
+      <label className="player-search">
+        {c.search}
+        <input
+          type="search"
+          value={state.q}
+          placeholder={c.searchHint}
+          maxLength={100}
+          onChange={(e) => update({ q: e.target.value, page: 1 })}
+        />
+      </label>
+      <details className="player-filter-panel">
+        <summary>{locale === "en" ? "Filters" : "Filters"}</summary>
+        <div className="player-filters">
+          {choices("provider", c.provider, providers, providerName)}
+          {choices(
+            "competition",
+            c.competition,
+            competitions,
+            (key) =>
+              index.scopes.find((s) => s.competition_key === key)!.competition,
+          )}
+          {choices("season", c.season, seasons, (v) => v)}
+          {choices("team", c.team, teams, (key) => index.teams[key])}
+          {choices("role", c.role, roles, roleName)}
+          <label>
+            <span id="filter-label-minutes">{c.evidence}</span>
+            <select
+              aria-labelledby="filter-label-minutes"
+              value={state.minutes}
+              onChange={(e) => update({ minutes: e.target.value, page: 1 })}
+            >
+              {[450, 600, 900].map((n) => (
+                <option key={n} value={n}>
+                  {n}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            <span id="filter-label-kind">{c.kind}</span>
+            <select
+              aria-labelledby="filter-label-kind"
+              value={state.kind}
+              onChange={(e) => update({ kind: e.target.value, page: 1 })}
+            >
+              <option value="">
+                {c.native} ({number(index.counts.native_profiles, 0)})
               </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          <span id="filter-label-kind">{c.kind}</span>
-          <select
-            aria-labelledby="filter-label-kind"
-            value={state.kind}
-            onChange={(e) => update({ kind: e.target.value, page: 1 })}
-          >
-            <option value="">
-              {c.native} ({number(index.counts.native_profiles, 0)})
-            </option>
-            <option value="common">
-              {c.common} ({number(index.counts.common_profiles, 0)})
-            </option>
-            <option value="similarity">
-              {c.similarity} ({number(index.counts.similarity_profiles, 0)})
-            </option>
-          </select>
-        </label>
-      </div>
-      <div className="profile-actions">
+              <option value="common">
+                {c.common} ({number(index.counts.common_profiles, 0)})
+              </option>
+              <option value="similarity">
+                {c.similarity} ({number(index.counts.similarity_profiles, 0)})
+              </option>
+            </select>
+          </label>
+        </div>
+      </details>
+      <div className="profile-actions filter-summary">
         <button type="button" onClick={reset}>
           {c.clear}
         </button>
-        <p className="small">{c.filterCount}</p>
+        <p className="small">
+          {[
+            state.q,
+            state.provider && providerName(state.provider),
+            state.competition &&
+              index.scopes.find((s) => s.competition_key === state.competition)
+                ?.competition,
+            state.season,
+            state.team && index.teams[state.team],
+            state.role && roleName(state.role),
+            `≥${state.minutes} min`,
+            state.kind && c[state.kind === "common" ? "common" : "similarity"],
+          ]
+            .filter(Boolean)
+            .join(" · ")}
+        </p>
         <a href={route(locale, "methodology")}>{c.methods} ↗</a>
       </div>
-      {selected && (
-        <section
-          id="profile-detail"
-          className="profile-detail"
-          ref={detailRef}
-          tabIndex={-1}
-          aria-label={`${c.open}: ${selected.name}`}
-        >
+      <div className={`players-workspace ${selected ? "has-selection" : ""}`}>
+        <section className="player-results">
+          {" "}
           <div className="profile-actions">
-            <h2>{selected.name}</h2>
-            <button onClick={() => update({ profile: "", compare: "" }, true)}>
-              {c.close}
-            </button>
-          </div>
-          <p>{context(selected)}</p>
-          <p className="small">
-            {roleName(selected.role ?? selected.role_family)} ·{" "}
-            {number(selected.minutes)} {c.minutes.toLowerCase()}
-          </p>
-          {(profile?.error || registry?.error || comparison?.error) && (
-            <p role="alert">
-              {c.error}{" "}
-              <button onClick={() => setRetry(retry + 1)}>{c.retry}</button>
+            <h2 id="player-results-heading">{c.title}</h2>
+            <p
+              role="status"
+              aria-live="polite"
+              data-testid="player-result-count"
+            >
+              {number(results.length, 0)} {c.results}
             </p>
-          )}
-          {(!profile?.data || !registry?.data) &&
-            !profile?.error &&
-            !registry?.error && <p role="status">{c.loading}</p>}
-          {profile?.data && registry?.data && (
-            <>
-              <p className="small">
-                {profile.data.appearances} {c.appearances.toLowerCase()} ·{" "}
-                {profile.data.first_date} – {profile.data.last_date}.{" "}
-                {selected.teams.length > 1 && c.shared}
-              </p>
-              <div className="profile-capabilities" aria-label={c.capabilities}>
-                {(
-                  [
-                    [c.native, true],
-                    [c.common, selected.capabilities.common],
-                    [c.similarity, selected.capabilities.similarity],
-                    [c.dna, selected.capabilities.validated_dna],
-                    [c.translation, selected.capabilities.translation],
-                  ] as const
-                ).map(([label, available]) => (
-                  <p key={label}>
-                    {label}: <strong>{available ? c.yes : c.no}</strong>
-                  </p>
-                ))}
-              </div>
-              {state.compare && (
-                <div className="notice">
-                  <h3>
-                    {c.comparison}:{" "}
-                    {comparison?.data?.identity.name ??
-                      byId.get(state.compare)?.name}
-                  </h3>
-                  <p>
-                    {byId.has(state.compare) &&
-                      context(byId.get(state.compare)!)}
-                  </p>
-                  <button onClick={() => update({ compare: "" })}>
-                    {c.removeComparison}
-                  </button>
-                  {!comparison?.data && !comparison?.error && (
-                    <p role="status">{c.loading}</p>
-                  )}
-                </div>
-              )}
-              <h3>{c.common}</h3>
-              <p>{c.commonNote}</p>
-              {profile.data.common ? (
-                comparison?.data && !comparison.data.common ? (
-                  <p className="notice">{c.unsupported}</p>
-                ) : (
-                  metrics(
-                    registry.data.features,
-                    profile.data.common,
-                    comparison?.data?.common ?? undefined,
-                  )
-                )
-              ) : (
-                <p className="notice">
-                  {state.compare ? c.unsupported : c.unavailableCommon}
-                </p>
-              )}
-              <p className="small">{c.disclaimer}</p>
-              <details className="native-details">
-                <summary>
-                  {c.native} · {profile.data.version}
-                </summary>
-                <p>{c.nativeNote}</p>
-                {metrics(
-                  registry.data[selected.provider],
-                  profile.data.native,
-                  comparison?.data?.identity.provider === selected.provider
-                    ? comparison.data.native
-                    : undefined,
-                )}
-              </details>
-              <details>
-                <summary>{c.neighbours}</summary>
-                <p>{c.neighboursNote}</p>
-                {profile.data.neighbours.length ? (
-                  <ol className="profile-neighbours">
-                    {profile.data.neighbours.map((n) => (
-                      <li key={n.id}>
-                        <button onClick={() => update({ compare: n.id })}>
-                          {byId.get(n.id)?.name}
-                        </button>{" "}
-                        · {c.distance}: {number(n.distance, 3)}
-                        <small>
-                          {byId.has(n.id) && context(byId.get(n.id)!)}
-                        </small>
-                      </li>
-                    ))}
-                  </ol>
-                ) : (
-                  <p>{c.noNeighbours}</p>
-                )}
-              </details>
-              <details>
-                <summary>{c.source}</summary>
-                <dl>
-                  <dt>{c.nativeVersion}</dt>
-                  <dd>{profile.data.version}</dd>
-                  <dt>{c.commonVersion}</dt>
-                  <dd>common-profile-v1</dd>
-                  <dt>{c.broadRole}</dt>
-                  <dd>
-                    {profile.data.provider_role} / {selected.role_family}
-                  </dd>
-                  <dt>{c.source}</dt>
-                  <dd className="break-text">
-                    {profile.data.provenance.source_revision}
-                  </dd>
-                </dl>
-                <p>{c.evidenceNote}</p>
-                <p>{c.rolesNote}</p>
-                <p>
-                  <a href={profile.data.provenance.build_manifest}>{c.build}</a>{" "}
-                  ·{" "}
-                  <a
-                    href={`${repo}/blob/${profile.data.provenance.code_commit}/config/v11-sources.json`}
+          </div>
+          <ul className="profile-list" aria-labelledby="player-results-heading">
+            {rows.map((p) => (
+              <li
+                key={p.id}
+                className={p.id === state.profile ? "is-selected" : undefined}
+              >
+                <div>
+                  <button
+                    className="profile-name"
+                    data-profile={p.id}
+                    onClick={() => open(p.id)}
+                    aria-label={`${c.open}: ${p.name}, ${context(p)}`}
                   >
-                    {c.sourceManifest}
-                  </a>
-                </p>
-                <p>
-                  {selected.provider === "statsbomb" ? (
-                    <a href="https://github.com/hudl/open-data">
-                      StatsBomb Open Data
-                    </a>
-                  ) : (
-                    <a href="https://doi.org/10.1038/s41597-019-0247-7">
-                      Pappalardo et al. (2019), Soccer Match Event Dataset · CC
-                      BY 4.0
-                    </a>
-                  )}
-                </p>
-              </details>
-              {profile.data.dna_player_id && (
-                <p>
-                  <a href={route(locale, "player-dna")}>{c.dna} ↗</a>
+                    {p.name}
+                  </button>
+                  <p className="small">{context(p)}</p>
+                  <p className="small">
+                    {roleName(p.role ?? p.role_family)} · {number(p.minutes)}{" "}
+                    {c.minutes.toLowerCase()}
+                  </p>
+                </div>
+                {selected && (
+                  <div className="profile-row-actions">
+                    <button
+                      disabled={p.id === state.profile}
+                      onClick={() =>
+                        selected ? update({ compare: p.id }, true) : open(p.id)
+                      }
+                    >
+                      {selected ? c.compare : c.open}
+                    </button>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+          {!rows.length && <p className="notice">{c.empty}</p>}
+          <nav className="profile-pagination" aria-label={c.page}>
+            <button
+              disabled={page === 1}
+              onClick={() => update({ page: page - 1 }, true)}
+            >
+              {c.previous}
+            </button>
+            <span>
+              {c.page} {page} {c.of} {pages}
+            </span>
+            <button
+              disabled={page === pages}
+              onClick={() => update({ page: page + 1 }, true)}
+            >
+              {c.next}
+            </button>
+          </nav>
+        </section>
+        <div className="player-profile-pane">
+          {" "}
+          {selected && (
+            <section
+              id="profile-detail"
+              className="profile-detail"
+              ref={detailRef}
+              tabIndex={-1}
+              aria-label={`${c.open}: ${selected.name}`}
+            >
+              <div className="profile-actions">
+                <h2>{selected.name}</h2>
+                <button
+                  onClick={() => update({ profile: "", compare: "" }, true)}
+                >
+                  {locale === "en"
+                    ? "Back to results"
+                    : "Terug naar resultaten"}
+                </button>
+              </div>
+              <p>
+                {selected.teams.map((t) => index.teams[t]).join(" / ")} ·{" "}
+                {roleName(selected.role ?? selected.role_family)} ·{" "}
+                {scopes.get(selected.scope)?.competition} ·{" "}
+                {scopes.get(selected.scope)?.season}
+              </p>
+              <p className="small">
+                {number(selected.minutes)} {c.minutes.toLowerCase()} ·{" "}
+                {providerName(selected.provider)}
+              </p>
+              {(profile?.error || registry?.error || comparison?.error) && (
+                <p role="alert">
+                  {c.error}{" "}
+                  <button onClick={() => setRetry(retry + 1)}>{c.retry}</button>
                 </p>
               )}
-            </>
+              {(!profile?.data || !registry?.data) &&
+                !profile?.error &&
+                !registry?.error && <p role="status">{c.loading}</p>}
+              {profile?.data && registry?.data && (
+                <>
+                  <p className="small">
+                    {profile.data.appearances} {c.appearances.toLowerCase()} ·{" "}
+                    {profile.data.first_date} – {profile.data.last_date}.{" "}
+                    {selected.teams.length > 1 && c.shared}
+                  </p>
+                  {state.compare && (
+                    <div className="notice">
+                      <h3>
+                        {c.comparison}:{" "}
+                        {comparison?.data?.identity.name ??
+                          byId.get(state.compare)?.name}
+                      </h3>
+                      <p>
+                        {byId.has(state.compare) &&
+                          context(byId.get(state.compare)!)}
+                      </p>
+                      <button onClick={() => update({ compare: "" })}>
+                        {c.removeComparison}
+                      </button>
+                      {!comparison?.data && !comparison?.error && (
+                        <p role="status">{c.loading}</p>
+                      )}
+                    </div>
+                  )}
+                  <nav
+                    className="profile-sections"
+                    aria-label={
+                      locale === "en" ? "Profile sections" : "Profielonderdelen"
+                    }
+                  >
+                    <a href="#profile-detail">
+                      {locale === "en" ? "Overview" : "Overzicht"}
+                    </a>
+                    <a href="#playing-style">
+                      {locale === "en" ? "Playing style" : "Speelstijl"}
+                    </a>
+                    <a href="#similar-players">
+                      {locale === "en"
+                        ? "Similar players"
+                        : "Vergelijkbare spelers"}
+                    </a>
+                    <a href="#profile-quality">
+                      {locale === "en" ? "Data quality" : "Datakwaliteit"}
+                    </a>
+                  </nav>
+                  <section id="playing-style">
+                    <h3>{locale === "en" ? "Playing style" : "Speelstijl"}</h3>
+                    {profile.data.dna_player_id &&
+                      selected.capabilities.validated_dna && (
+                        <ProfileStyle
+                          locale={locale}
+                          id={profile.data.dna_player_id}
+                        />
+                      )}
+                    <h4>{c.common}</h4>
+                    <p className="small">
+                      {locale === "en"
+                        ? "Three harmonised metrics. Cross-provider rankings are not available."
+                        : "Drie geharmoniseerde kenmerken. Ranglijsten tussen providers zijn niet beschikbaar."}
+                    </p>
+                    {profile.data.common ? (
+                      comparison?.data && !comparison.data.common ? (
+                        <p className="notice">{c.unsupported}</p>
+                      ) : (
+                        metrics(
+                          registry.data.features,
+                          profile.data.common,
+                          comparison?.data?.common ?? undefined,
+                        )
+                      )
+                    ) : (
+                      <p className="notice">
+                        {state.compare ? c.unsupported : c.unavailableCommon}
+                      </p>
+                    )}
+
+                    <details
+                      className="native-details"
+                      open={
+                        !state.compare && !selected.capabilities.validated_dna
+                      }
+                    >
+                      <summary>
+                        {locale === "en"
+                          ? "All provider metrics"
+                          : "Alle providerkenmerken"}
+                      </summary>
+                      <p>{c.nativeNote}</p>
+                      {metrics(
+                        registry.data[selected.provider],
+                        profile.data.native,
+                        comparison?.data?.identity.provider ===
+                          selected.provider
+                          ? comparison.data.native
+                          : undefined,
+                      )}
+                    </details>
+                  </section>
+                  <section id="similar-players">
+                    <h3>
+                      {locale === "en"
+                        ? "Similar players"
+                        : "Vergelijkbare spelers"}
+                    </h3>
+                    {profile.data.neighbours.length ? (
+                      <ol className="profile-neighbours">
+                        {profile.data.neighbours.map((n) => (
+                          <li key={n.id}>
+                            <button onClick={() => update({ compare: n.id })}>
+                              {byId.get(n.id)?.name}
+                            </button>{" "}
+                            <details>
+                              <summary>{c.distance}</summary>
+                              {number(n.distance, 3)}
+                            </details>
+                            <small>
+                              {byId.has(n.id) && context(byId.get(n.id)!)}
+                            </small>
+                          </li>
+                        ))}
+                      </ol>
+                    ) : (
+                      <p>{c.noNeighbours}</p>
+                    )}
+                    <details>
+                      <summary>
+                        {locale === "en"
+                          ? "How these profiles are compared"
+                          : "Hoe deze profielen worden vergeleken"}
+                      </summary>
+                      <p>{c.neighboursNote}</p>
+                    </details>
+                  </section>
+                  <details id="profile-quality">
+                    <summary>
+                      {locale === "en"
+                        ? "Data quality & methodology"
+                        : "Datakwaliteit & methodologie"}
+                    </summary>{" "}
+                    <div
+                      className="profile-capabilities"
+                      aria-label={c.capabilities}
+                    >
+                      {(
+                        [
+                          [c.native, true],
+                          [c.common, selected.capabilities.common],
+                          [c.similarity, selected.capabilities.similarity],
+                          [c.dna, selected.capabilities.validated_dna],
+                          [c.translation, selected.capabilities.translation],
+                        ] as const
+                      ).map(([label, available]) => (
+                        <p key={label}>
+                          {label}: <strong>{available ? c.yes : c.no}</strong>
+                        </p>
+                      ))}
+                    </div>
+                    <p>
+                      {locale === "en"
+                        ? "Recruitment: a separate validated WSL research cohort. Database eligibility alone does not establish recruitment eligibility."
+                        : "Recruitment: een afzonderlijk gevalideerd WSL-onderzoekscohort. Beschikbaarheid in de database betekent niet automatisch geschiktheid voor recruitmentanalyse."}
+                    </p>
+                    <p>{c.disclaimer}</p>
+                    <dl>
+                      <dt>{c.nativeVersion}</dt>
+                      <dd>{profile.data.version}</dd>
+                      <dt>{c.commonVersion}</dt>
+                      <dd>common-profile-v1</dd>
+                      <dt>{c.broadRole}</dt>
+                      <dd>
+                        {profile.data.provider_role} / {selected.role_family}
+                      </dd>
+                      <dt>{c.source}</dt>
+                      <dd className="break-text">
+                        {profile.data.provenance.source_revision}
+                      </dd>
+                    </dl>
+                    <p>{c.evidenceNote}</p>
+                    <p>{c.rolesNote}</p>
+                    <p>
+                      <a href={profile.data.provenance.build_manifest}>
+                        {c.build}
+                      </a>{" "}
+                      ·{" "}
+                      <a
+                        href={`${repo}/blob/${profile.data.provenance.code_commit}/config/v11-sources.json`}
+                      >
+                        {c.sourceManifest}
+                      </a>
+                    </p>
+                    <p>
+                      {selected.provider === "statsbomb" ? (
+                        <a href="https://github.com/hudl/open-data">
+                          StatsBomb Open Data
+                        </a>
+                      ) : (
+                        <a href="https://doi.org/10.1038/s41597-019-0247-7">
+                          Pappalardo et al. (2019), Soccer Match Event Dataset ·
+                          CC BY 4.0
+                        </a>
+                      )}
+                    </p>
+                  </details>
+                  {profile.data.dna_player_id && (
+                    <p>
+                      <a
+                        href={
+                          route(locale, "player-dna") +
+                          "?player=" +
+                          profile.data.dna_player_id
+                        }
+                      >
+                        {c.dna} ↗
+                      </a>
+                    </p>
+                  )}
+                </>
+              )}
+            </section>
           )}
-        </section>
-      )}
-      <div className="profile-actions">
-        <h2 id="player-results-heading">{c.title}</h2>
-        <p role="status" aria-live="polite" data-testid="player-result-count">
-          {number(results.length, 0)} {c.results}
-        </p>
-      </div>
-      <p className="small">{c.selectFirst}</p>
-      <ul className="profile-list" aria-labelledby="player-results-heading">
-        {rows.map((p) => (
-          <li key={p.id}>
-            <div>
-              <button
-                className="profile-name"
-                onClick={() => open(p.id)}
-                aria-label={`${c.open}: ${p.name}, ${context(p)}`}
-              >
-                {p.name}
-              </button>
-              <p className="small">{context(p)}</p>
-              <p className="small">
-                {roleName(p.role ?? p.role_family)} · {number(p.minutes)}{" "}
-                {c.minutes.toLowerCase()}
-                {p.minutes < 900 ? ` · ${c.limited}` : ""}
+          {!selected && (
+            <section className="profile-placeholder">
+              <h2>
+                {locale === "en" ? "Select a player" : "Selecteer een speler"}
+              </h2>
+              <p>
+                {locale === "en"
+                  ? "Search by name, club or competition. Open a profile to explore their playing style and compare similar players."
+                  : "Zoek op naam, club of competitie. Open een profiel om de speelstijl te bekijken en vergelijkbare spelers te vergelijken."}
               </p>
-            </div>
-            <div className="profile-row-actions">
-              <span className="small">
-                {p.capabilities.common ? c.common : c.native}
-              </span>
-              <button
-                disabled={p.id === state.profile}
-                onClick={() =>
-                  selected ? update({ compare: p.id }, true) : open(p.id)
-                }
-              >
-                {selected ? c.compare : c.open}
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      {!rows.length && <p className="notice">{c.empty}</p>}
-      <nav className="profile-pagination" aria-label={c.page}>
-        <button
-          disabled={page === 1}
-          onClick={() => update({ page: page - 1 }, true)}
-        >
-          {c.previous}
-        </button>
-        <span>
-          {c.page} {page} {c.of} {pages}
-        </span>
-        <button
-          disabled={page === pages}
-          onClick={() => update({ page: page + 1 }, true)}
-        >
-          {c.next}
-        </button>
-      </nav>
-      <p className="small">{c.rankingNote}</p>
-      <p>
-        <a href={`${repo}/blob/main/docs/common-profile-evaluation.md`}>
-          {c.research} ↗
-        </a>
-      </p>
+            </section>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

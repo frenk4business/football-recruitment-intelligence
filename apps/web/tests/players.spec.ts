@@ -23,7 +23,7 @@ for (const locale of ["en", "nl"] as const) {
     locale === "en"
       ? {
           title: "Player database",
-          search: "Player name",
+          search: "Search players",
           provider: "Provider",
           competition: "Competition",
           season: "Season",
@@ -40,7 +40,7 @@ for (const locale of ["en", "nl"] as const) {
         }
       : {
           title: "Spelersdatabase",
-          search: "Spelersnaam",
+          search: "Spelers zoeken",
           provider: "Provider",
           competition: "Competitie",
           season: "Seizoen",
@@ -73,6 +73,7 @@ for (const locale of ["en", "nl"] as const) {
     await page
       .getByRole("button", { name: labels.previous, exact: true })
       .click();
+    await page.locator(".player-filter-panel > summary").click();
     await page
       .getByLabel(labels.provider, { exact: true })
       .selectOption("wyscout");
