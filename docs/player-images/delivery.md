@@ -80,7 +80,7 @@ Pillow 12.3.0 and the encoder version/parameters are recorded. Source SHA1/SHA25
 
 Approved images add 3.96 MB. The complete enrichment artifacts (including the 2.90 MB manifest and 5.73 MB review JSON) occupy 12.59 MB uncompressed. The measured pre-commit new-file set was 12.77 MB; individually zlib-compressed new blobs total approximately **5.26 MB**, an estimate of incremental clone impact before Git tree/pack/delta overhead. The implementation commit’s actual incremental Git pack measures **5,407,237 bytes (5.41 MB)** against the baseline; see [git-impact.json](git-impact.json). This measurement precedes the small documentation-only audit commit. Raw originals and API cache are excluded. No Git LFS, object store, new service or paid infrastructure is needed.
 
-Static export: **57,324,260 → 62,541,902 bytes (+5,217,642; +9.1%)**, below the unchanged 65 MB ceiling. Scientific public JSON remains 47,430,174 bytes. Credits are generated once per language as static HTML rather than duplicated through Next.js RSC; the original full React listing exceeded the limit and was replaced before completion. The final export contains 20 application routes and 5,870 checksummed build files, including two secondary credits documents.
+Static export: **57,324,260 → 62,541,968 bytes (+5,217,708; +9.1%)**, below the unchanged 65 MB ceiling. Scientific public JSON remains 47,430,174 bytes. Credits are generated once per language as static HTML rather than duplicated through Next.js RSC; the original full React listing exceeded the limit and was replaced before completion. The final export contains 20 application routes and 5,870 checksummed build files, including two secondary credits documents.
 
 ## J. Frontend
 
@@ -90,7 +90,7 @@ EN/NL desktop/mobile captures cover lists, profile, comparison and actual shortl
 
 ## K. Fallbacks
 
-**2,523 identities / 2,589 profiles** use initials. Missing/unverified/excluded/budget-deferred images, unavailable image index and broken WebP requests all fail closed to the same geometry. Initials are deterministic Unicode first/last letter tokens; mononyms use one initial and empty input uses `?`. No stock, generated or inferred human appearance. Duplicate row/comparison marks are decorative; the larger profile mark has localized accessible text.
+**2,523 identities / 2,589 profiles** use initials. Missing/unverified/excluded/budget-deferred images, unavailable image index and broken WebP requests all fail closed to the same geometry. Initials also remain visible behind pending image requests, so slow lazy loading never creates an empty avatar. Delayed-download checks cover both languages in all three browsers. Initials are deterministic Unicode first/last letter tokens; mononyms use one initial and empty input uses `?`. No stock, generated or inferred human appearance. Duplicate row/comparison marks are decorative; the larger profile mark has localized accessible text.
 
 ## L. Attribution
 
@@ -98,24 +98,24 @@ Profile Data quality & methodology contains Commons source, original file title,
 
 ## M. Performance
 
-Same baseline commit, Chromium on Apple M5 Pro, localhost, fresh context per observation, no CPU/network throttling. Each cell is the median of EN/NL × 1440/375px. Ready time ends when the requested analytical view is visible; screenshots follow a short settling period. Comparison and shortlist are scrolled into view. This is a local lab sample, not field Core Web Vitals or statistically significant latency evidence.
+Same baseline commit, Chromium on Apple M5 Pro, localhost, fresh context per observation, no CPU/network throttling. Each cell is the median of EN/NL × 1440/375px. Ready time ends when the requested analytical view is visible. Both baseline and final runs then scroll comparison/shortlist into view and wait for network activity to settle before recording traffic/screenshots. The final run explicitly waits for its single image-index response; all sixteen final observations count its complete 462,436 decoded bytes. This transfer measurement does not redefine readiness as network-idle time. This is a local lab sample, not field Core Web Vitals or statistically significant latency evidence.
 
 | View | Transfer before → after (bytes) | Ready before → after (ms) | Maximum CLS before → after |
 | --- | --- | --- | --- |
-| players | 408,995 → 576,862 | 80.8 → 80.4 | 0.00000 → 0.00000 |
-| profile | 445,109 → 548,046 | 149.2 → 148.6 | 0.00000 → 0.00000 |
-| comparison | 451,159 → 591,689 | 125.2 → 125.6 | 0.00000 → 0.00000 |
-| recruitment | 368,228 → 462,705 | 80.7 → 83.7 | 0.09144 → 0.09144 |
+| players | 408,995 → 576,866 | 84.3 → 84.0 | 0.00000 → 0.00000 |
+| profile | 445,109 → 548,050 | 146.3 → 147.9 | 0.00000 → 0.00000 |
+| comparison | 451,159 → 591,693 | 127.9 → 130.0 | 0.00000 → 0.00000 |
+| recruitment | 368,228 → 462,709 | 83.5 → 84.9 | 0.09144 → 0.09144 |
 
-Profile click-to-visible median: **63.5 → 72.6 ms**. Photos add about 95–168 KB transfer to these views; the additional bandwidth is real, even though local readiness stays similar. Player/profile/comparison CLS remains zero; the existing Recruitment shift is unchanged at 0.09144 in the final comparable capture. **Zero runtime Wikimedia requests**, all views.
+Profile click-to-visible median: **68.2 → 70.2 ms**. Photos add about 95–168 KB transfer to these views; the additional bandwidth is real, even though local readiness stays similar. Player/profile/comparison CLS remains zero; the existing Recruitment shift is unchanged at 0.09144 in the final comparable capture. **Zero runtime Wikimedia requests**, all views.
 
-The existing player-search budget also passes: per-viewport median fill-to-render **8.3–10.8 ms (<100 ms)**, no initial full-profile requests and no page overflow. [before.json](before.json), [after.json](after.json), [search-performance.json](search-performance.json) retain observations and environment details. Content-hashed photos use the existing `/players*` revalidation/ETag policy; no immutable header is applied to changing credit documents.
+The existing player-search budget also passes in the additive `--images` audit mode, which waits for the image index and settled initial traffic, writes only image-task QA output and leaves the frozen v1.1 performance report untouched: per-viewport median fill-to-render **8.5–9.8 ms (<100 ms)**, no initial full-profile requests and no page overflow. Each of its four locale/viewport observations includes the complete 462,436-byte photo index; an earlier incomplete NL desktop snapshot was replaced after review. [before.json](before.json), [after.json](after.json), [search-performance.json](search-performance.json) retain observations and environment details. Content-hashed photos use the existing `/players*` revalidation/ETag policy; no immutable header is applied to changing credit documents.
 
 ## N. Tests and release gate
 
 - **205 Python tests**; Ruff lint/format; mypy across 62 source files.
 - **55 frontend unit tests**; ESLint; TypeScript; Prettier.
-- **210 Chromium/Firefox/WebKit tests**, including EN/NL, mobile, keyboard, accessibility, blocked index, broken images, local-only requests and static credits. All pass.
+- **216 Chromium/Firefox/WebKit tests**, including EN/NL, mobile, keyboard, accessibility, blocked index, broken images, local-only requests and static credits. All pass.
 - Production build and release validation pass: all image identity/source/licence/hash/dimension checks, exact published-file inventory, no unexpected image files, 2,146 frozen research hashes and existing public-data allowlist.
 - npm audit: zero known vulnerabilities; Python dependency audit: no known vulnerabilities. Focused secret scan: no findings in reachable history or working files. This scanner is not a claim of exhaustive secret detection.
 - Offline deterministic resume: 485 identical files, zero requests.

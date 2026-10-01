@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { gzipSync } from "node:zlib";
 import { cpus, platform, arch } from "node:os";
 import { performance } from "node:perf_hooks";
@@ -8,7 +8,12 @@ import {
   defaults,
   profileSearchText,
 } from "../src/lib/player-search.ts";
+const imageAudit = process.argv.includes("--images");
 const root = new URL("../../../", import.meta.url);
+if (imageAudit)
+  mkdirSync(new URL("artifacts/local-qa/player-images/", root), {
+    recursive: true,
+  });
 const index = JSON.parse(
   readFileSync(new URL("artifacts/v11/public/index.json", root)),
 );
@@ -63,10 +68,35 @@ try {
       const url =
         (process.env.PREVIEW_URL ?? "http://127.0.0.1:4173") +
         (locale === "en" ? "/players/" : "/nl/players/");
+      const imageIndexReady = imageAudit
+        ? page
+            .waitForResponse((r) =>
+              /\/players\/images\/index-[a-f0-9]+\.json$/.test(r.url()),
+            )
+            .then(async (response) => {
+              if (!response.ok())
+                throw new Error("Image index unavailable during audit");
+              await response.finished();
+            })
+        : Promise.resolve();
       await page.goto(url);
       await page.locator(".profile-list > li").nth(49).waitFor();
+      if (imageAudit) {
+        await imageIndexReady;
+        // This measures complete initial traffic, not time-to-interactive.
+        await page.waitForLoadState("networkidle");
+      }
       await Promise.all(bodies);
       const initial = [...responses];
+      if (
+        imageAudit &&
+        initial.filter((r) =>
+          /\/players\/images\/index-[a-f0-9]+\.json$/.test(r.path),
+        ).length !== 1
+      )
+        throw new Error(
+          "Initial image index is missing or duplicated in traffic audit",
+        );
       const interactions = [];
       const input = page.getByLabel(
         locale === "en" ? "Search players" : "Spelers zoeken",
@@ -162,7 +192,12 @@ const report = {
   browser: rows,
 };
 writeFileSync(
-  new URL("artifacts/v11/performance.json", root),
+  new URL(
+    imageAudit
+      ? "artifacts/local-qa/player-images/search-performance.json"
+      : "artifacts/v11/performance.json",
+    root,
+  ),
   JSON.stringify(report, null, 2) + "\n",
 );
 console.log(

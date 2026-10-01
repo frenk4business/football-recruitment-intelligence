@@ -53,7 +53,7 @@ Approved derivatives, their manifest and review/coverage reports live in `artifa
 
 ## UI, accessibility and attribution
 
-Players lists use 32px avatars, comparisons 64px, and profile headers 96px. Recruitment uses the same boxes and exact existing provider UUID mapping. Missing, excluded, ambiguous, failed or unavailable images use understated navy initials in identical geometry. List/comparison avatars are decorative beside names; the profile avatar has a localized description. Broken image requests fall back to initials. All image requests are local and lazy; one SHA256-verified presentation index is shared per page. Image failures never block football data or analytics.
+Players lists use 32px avatars, comparisons 64px, and profile headers 96px. Recruitment uses the same boxes and exact existing provider UUID mapping. Missing, excluded, ambiguous, failed or unavailable images use understated navy initials in identical geometry. List/comparison avatars are decorative beside names; the profile avatar has a localized description. Initials stay visible beneath pending images, and broken image requests fall back to those same initials. All image requests are local and lazy; one SHA256-verified presentation index is shared per page. Image failures never block football data or analytics.
 
 Initials use Unicode letter tokens, first letter of the first and last token, uppercased deterministically. A mononym uses one initial; empty or non-letter input uses `?`. Multi-part/hyphenated surnames and punctuation follow the same documented rule, without attempting cultural name inference.
 
@@ -70,8 +70,11 @@ uv run fri images enrich --refresh-metadata
 make test release-build release-validate
 npm --prefix apps/web run check:format
 npm --prefix apps/web run test:smoke
+node --experimental-strip-types apps/web/scripts/players-performance.mjs --images
 ```
 
 The raw football metadata must already be present from the pinned existing data pipeline. Do not rerun football research to generate images. Routine website builds are offline and consume only the reviewed committed enrichment. A deliberate metadata refresh is separate from the core build. New derivatives are staged in the ignored cache while network/decoding work runs; the approved asset directory is only updated after the batch completes. On an identity lookup, Commons retrieval or global API failure, the previous publication remains intact and `run-error.json` explains the interrupted stage; rerunning resumes from verified HTTP-cache entries. Remove an approved image by adding an exclusion and rerunning enrichment. A stale publication conflicting with that exclusion fails the release gate.
 
 Actual coverage, sampled review findings, final size/performance and release validation are recorded separately in `delivery.md` after the real batch and UI checks complete.
+
+The `--images` performance audit waits for the complete presentation index and settled initial network traffic, then checks the existing search-latency/overflow budgets. It writes `artifacts/local-qa/player-images/search-performance.json` and does not overwrite the frozen scientific performance report. `player-image-review.mjs before|after` uses the same settled-traffic collection for both versions while measuring visible-view readiness separately.

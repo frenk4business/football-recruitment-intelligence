@@ -127,3 +127,44 @@ for (const locale of ["en", "nl"] as const) {
     });
   }
 }
+
+for (const locale of ["en", "nl"] as const) {
+  test(`${locale}: pending photos keep initials visible in the same box`, async ({
+    page,
+  }) => {
+    let release!: () => void;
+    const pending = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    let requests = 0;
+    await page.route("**/players/images/*.webp", async (route) => {
+      requests += 1;
+      await pending;
+      await route.continue();
+    });
+    try {
+      await page.goto(
+        `${locale === "en" ? "" : "/nl"}/players/?q=Alessia+Russo`,
+      );
+      await page.locator(".profile-name").first().click();
+      const avatar = page.locator("#profile-detail .avatar-large");
+      await expect.poll(() => requests).toBeGreaterThan(0);
+      await expect(avatar.locator(":scope > span")).toHaveText("AR");
+      await expect(avatar.locator(":scope > span")).toBeVisible();
+      await expect(avatar.locator("img")).toHaveJSProperty("naturalWidth", 0);
+      const before = await avatar.boundingBox();
+      await page.screenshot({
+        path: `../../artifacts/local-qa/player-images/loading-${locale}.png`,
+      });
+      release();
+      await expect(avatar.locator("img")).toHaveJSProperty("naturalWidth", 256);
+      const after = await avatar.boundingBox();
+      expect(after?.width).toBe(before?.width);
+      expect(after?.height).toBe(before?.height);
+      expect(after?.width).toBe(96);
+    } finally {
+      release();
+      await page.unrouteAll({ behavior: "wait" });
+    }
+  });
+}
