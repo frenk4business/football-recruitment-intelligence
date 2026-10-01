@@ -37,6 +37,8 @@ createServer(async (request, response) => {
     } catch {
       file = resolve(root, "404.html");
       status = 404;
+      // Match Render's bounded fallback policy for unknown request paths.
+      response.setHeader("Cache-Control", "public, max-age=0, s-maxage=300");
     }
     for (const h of json("config/http-headers.json")) {
       const pattern =

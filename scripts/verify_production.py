@@ -80,8 +80,15 @@ def main():
             verify_cache(path, headers)
             assert "noindex" not in headers.get("x-robots-tag", ""), path
             routes.append({"path": path, "status": code, "headers": headers})
-    code, _, missing = fetch("/not-a-real-release-route/")
+    code, missing_headers, missing = fetch("/not-a-real-release-route/")
     assert code == 404 and b"Pagina niet gevonden" in missing, "404 recovery missing"
+    missing_cache = dict(
+        (part.strip().lower().split("=", 1) + [""])[:2]
+        for part in missing_headers.get("cache-control", "").split(",")
+    )
+    assert missing_cache.get("max-age") == "0", "404 must revalidate in the browser"
+    assert "immutable" not in missing_cache, "Unknown route must not be immutable"
+    assert int(missing_cache.get("s-maxage", "0")) <= 300, "404 shared cache exceeds five minutes"
     code, _, robots = fetch("/robots.txt")
     assert code == 200 and b"Disallow: /\n" not in robots, "Indexing blocked"
     code, _, sitemap = fetch("/sitemap.xml")
@@ -118,6 +125,7 @@ def main():
         "public_artifacts": len(inventory),
         "all_hashes_match": True,
         "unknown_route_status": 404,
+        "unknown_route_headers": missing_headers,
         "complete_cache_policies_match": True,
         "manifest_headers": manifest_headers,
         "passed": True,
