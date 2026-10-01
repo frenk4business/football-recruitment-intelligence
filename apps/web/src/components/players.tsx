@@ -120,10 +120,11 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
     const found = filterProfiles(index, state, names);
     return state.sort === "minutes"
       ? found.toSorted(
-          (a, b) => b.minutes - a.minutes || a.name.localeCompare(b.name),
+          (a, b) =>
+            b.minutes - a.minutes || a.name.localeCompare(b.name, locale),
         )
-      : found;
-  }, [index, state, names]);
+      : found.toSorted((a, b) => a.name.localeCompare(b.name, locale));
+  }, [index, state, names, locale]);
   const pages = Math.max(1, Math.ceil(results.length / 50));
   const page = Math.min(state.page, pages);
   const rows = results.slice((page - 1) * 50, page * 50);
