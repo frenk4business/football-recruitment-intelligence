@@ -37,6 +37,18 @@ for (const locale of ["en", "nl"])
           : view === "comparison"
             ? `?profile=${profiles[0]}&compare=${profiles[1]}&compare2=${profiles[2]}`
             : "";
+      const imageIndexReady =
+        phase === "before"
+          ? Promise.resolve()
+          : page
+              .waitForResponse((r) =>
+                /\/players\/images\/index-[a-f0-9]+\.json$/.test(r.url()),
+              )
+              .then(async (response) => {
+                if (!response.ok())
+                  throw new Error("Image index unavailable during audit");
+                await response.finished();
+              });
       const started = performance.now();
       await page.goto(
         `${process.env.PREVIEW_URL ?? "http://127.0.0.1:4173"}/${locale === "nl" ? "nl/" : ""}${path}${query}`,
@@ -68,9 +80,11 @@ for (const locale of ["en", "nl"])
       const ready = performance.now() - started;
       if (view === "recruitment")
         await page.locator(".recruitment-table").scrollIntoViewIfNeeded();
-      await page.waitForTimeout(400);
       if (view === "comparison")
         await page.locator(".profile-metrics").first().scrollIntoViewIfNeeded();
+      await imageIndexReady;
+      // Readiness was recorded above; now include all settled visible-view traffic.
+      await page.waitForLoadState("networkidle");
       await page.screenshot({
         path: `${dir}${phase}-${locale}-${width}-${view}.png`,
       });
@@ -78,6 +92,17 @@ for (const locale of ["en", "nl"])
         cls: window.imageCLS,
         lcp_ms: window.imageLCP,
         overflow: document.documentElement.scrollWidth > innerWidth,
+        imageIndexRequests: performance
+          .getEntriesByType("resource")
+          .filter((r) =>
+            /\/players\/images\/index-[a-f0-9]+\.json$/.test(r.name),
+          ).length,
+        imageIndexDecodedBytes: performance
+          .getEntriesByType("resource")
+          .filter((r) =>
+            /\/players\/images\/index-[a-f0-9]+\.json$/.test(r.name),
+          )
+          .reduce((n, r) => n + r.decodedBodySize, 0),
         transfer: [
           ...performance.getEntriesByType("navigation"),
           ...performance.getEntriesByType("resource"),
@@ -96,6 +121,10 @@ for (const locale of ["en", "nl"])
           )
           .reduce((a, r) => a + r.transferSize, 0),
       }));
+      if (phase !== "before" && metrics.imageIndexRequests !== 1)
+        throw new Error(
+          "Image index missing or duplicated in view traffic audit",
+        );
       report.push({
         locale,
         width,

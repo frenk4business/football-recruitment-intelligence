@@ -98,18 +98,18 @@ Profile Data quality & methodology contains Commons source, original file title,
 
 ## M. Performance
 
-Same baseline commit, Chromium on Apple M5 Pro, localhost, fresh context per observation, no CPU/network throttling. Each cell is the median of EN/NL × 1440/375px. Ready time ends when the requested analytical view is visible; screenshots follow a short settling period. Comparison and shortlist are scrolled into view. This is a local lab sample, not field Core Web Vitals or statistically significant latency evidence.
+Same baseline commit, Chromium on Apple M5 Pro, localhost, fresh context per observation, no CPU/network throttling. Each cell is the median of EN/NL × 1440/375px. Ready time ends when the requested analytical view is visible. Both baseline and final runs then scroll comparison/shortlist into view and wait for network activity to settle before recording traffic/screenshots. The final run explicitly waits for its single image-index response; all sixteen final observations count its complete 462,436 decoded bytes. This transfer measurement does not redefine readiness as network-idle time. This is a local lab sample, not field Core Web Vitals or statistically significant latency evidence.
 
 | View | Transfer before → after (bytes) | Ready before → after (ms) | Maximum CLS before → after |
 | --- | --- | --- | --- |
-| players | 408,995 → 576,866 | 80.8 → 83.1 | 0.00000 → 0.00000 |
-| profile | 445,109 → 548,050 | 149.2 → 147.8 | 0.00000 → 0.00000 |
-| comparison | 451,159 → 591,693 | 125.2 → 127.7 | 0.00000 → 0.00000 |
-| recruitment | 368,228 → 462,709 | 80.7 → 86.0 | 0.09144 → 0.09144 |
+| players | 408,995 → 576,866 | 84.3 → 84.0 | 0.00000 → 0.00000 |
+| profile | 445,109 → 548,050 | 146.3 → 147.9 | 0.00000 → 0.00000 |
+| comparison | 451,159 → 591,693 | 127.9 → 130.0 | 0.00000 → 0.00000 |
+| recruitment | 368,228 → 462,709 | 83.5 → 84.9 | 0.09144 → 0.09144 |
 
-Profile click-to-visible median: **63.5 → 71.0 ms**. Photos add about 95–168 KB transfer to these views; the additional bandwidth is real, even though local readiness stays similar. Player/profile/comparison CLS remains zero; the existing Recruitment shift is unchanged at 0.09144 in the final comparable capture. **Zero runtime Wikimedia requests**, all views.
+Profile click-to-visible median: **68.2 → 70.2 ms**. Photos add about 95–168 KB transfer to these views; the additional bandwidth is real, even though local readiness stays similar. Player/profile/comparison CLS remains zero; the existing Recruitment shift is unchanged at 0.09144 in the final comparable capture. **Zero runtime Wikimedia requests**, all views.
 
-The existing player-search budget also passes: per-viewport median fill-to-render **8.2–9.5 ms (<100 ms)**, no initial full-profile requests and no page overflow. [before.json](before.json), [after.json](after.json), [search-performance.json](search-performance.json) retain observations and environment details. Content-hashed photos use the existing `/players*` revalidation/ETag policy; no immutable header is applied to changing credit documents.
+The existing player-search budget also passes in the additive `--images` audit mode, which waits for the image index and settled initial traffic, writes only image-task QA output and leaves the frozen v1.1 performance report untouched: per-viewport median fill-to-render **8.5–9.8 ms (<100 ms)**, no initial full-profile requests and no page overflow. Each of its four locale/viewport observations includes the complete 462,436-byte photo index; an earlier incomplete NL desktop snapshot was replaced after review. [before.json](before.json), [after.json](after.json), [search-performance.json](search-performance.json) retain observations and environment details. Content-hashed photos use the existing `/players*` revalidation/ETag policy; no immutable header is applied to changing credit documents.
 
 ## N. Tests and release gate
 

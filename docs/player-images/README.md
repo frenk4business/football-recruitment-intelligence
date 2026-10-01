@@ -70,8 +70,11 @@ uv run fri images enrich --refresh-metadata
 make test release-build release-validate
 npm --prefix apps/web run check:format
 npm --prefix apps/web run test:smoke
+node --experimental-strip-types apps/web/scripts/players-performance.mjs --images
 ```
 
 The raw football metadata must already be present from the pinned existing data pipeline. Do not rerun football research to generate images. Routine website builds are offline and consume only the reviewed committed enrichment. A deliberate metadata refresh is separate from the core build. New derivatives are staged in the ignored cache while network/decoding work runs; the approved asset directory is only updated after the batch completes. On an identity lookup, Commons retrieval or global API failure, the previous publication remains intact and `run-error.json` explains the interrupted stage; rerunning resumes from verified HTTP-cache entries. Remove an approved image by adding an exclusion and rerunning enrichment. A stale publication conflicting with that exclusion fails the release gate.
 
 Actual coverage, sampled review findings, final size/performance and release validation are recorded separately in `delivery.md` after the real batch and UI checks complete.
+
+The `--images` performance audit waits for the complete presentation index and settled initial network traffic, then checks the existing search-latency/overflow budgets. It writes `artifacts/local-qa/player-images/search-performance.json` and does not overwrite the frozen scientific performance report. `player-image-review.mjs before|after` uses the same settled-traffic collection for both versions while measuring visible-view readiness separately.
