@@ -252,7 +252,9 @@ function RecruitmentBoard({
     </aside>
   );
   return (
-    <div className="recruitment">
+    <div
+      className={`recruitment ${advanced ? "requirements-advanced" : "requirements-simple"}`}
+    >
       <div className="recruitment-toolbar">
         <p className="eyebrow">
           {index.competition} · {c.observed}
@@ -301,7 +303,7 @@ function RecruitmentBoard({
           locale === "en" ? "Recruitment views" : "Recruitmentweergaven"
         }
       >
-        {(["find", "replace", "context"] as const).map((mode, i) => (
+        {(["find", "replace", "context"] as const).map((mode) => (
           <button
             key={mode}
             aria-pressed={view === mode}
@@ -319,11 +321,30 @@ function RecruitmentBoard({
               if (mode === "replace") choose(scenario, mode);
             }}
           >
-            <span>0{i + 1}</span>
             {c[mode]}
           </button>
         ))}
       </div>
+      <ol
+        className="recruitment-steps"
+        aria-label={
+          locale === "en" ? "Build a shortlist" : "Shortlist samenstellen"
+        }
+      >
+        <li>1. {locale === "en" ? "Club" : "Club"}</li>
+        <li>2. {locale === "en" ? "Position" : "Positie"}</li>
+        <li>
+          3.{" "}
+          {view === "replace"
+            ? locale === "en"
+              ? "Reference player"
+              : "Referentiespeler"
+            : locale === "en"
+              ? "Requirements"
+              : "Eisen"}
+        </li>
+        <li>4. {c.shortlist}</li>
+      </ol>
       <div className="recruitment-selectors">
         <label>
           {c.club}
@@ -377,6 +398,12 @@ function RecruitmentBoard({
           </label>
         )}
       </div>
+      {context.data && view !== "context" && (
+        <p className="club-summary">
+          {context.data.name} · {scenario.target_role} · {context.data.matches}{" "}
+          {c.matches} · 2023/24
+        </p>
+      )}
       {view !== "context" ? (
         <>
           {view === "replace" && !references.length ? (
@@ -384,216 +411,259 @@ function RecruitmentBoard({
               {c.noReference}
             </p>
           ) : (
-            <section
-              className="requirements-panel"
-              aria-labelledby="requirements-title"
+            <details
+              key={view}
+              open={view !== "replace"}
+              className="requirements-disclosure"
             >
-              <div className="recruitment-section-heading">
-                <div>
-                  <span className="eyebrow">01 / {c.assumption}</span>
-                  <h2 id="requirements-title">{c.custom}</h2>
+              <summary>
+                {view === "replace"
+                  ? locale === "en"
+                    ? "Adjust requirements"
+                    : "Eisen aanpassen"
+                  : locale === "en"
+                    ? "3. What are you looking for?"
+                    : "3. Wat zoek je?"}
+              </summary>
+              <section
+                className="requirements-panel"
+                aria-labelledby="requirements-title"
+              >
+                <div className="recruitment-section-heading">
+                  <div>
+                    <h2 id="requirements-title">{c.custom}</h2>
+                  </div>
+                  <label className="check-label">
+                    <input
+                      type="checkbox"
+                      checked={advanced}
+                      onChange={(e) => setAdvanced(e.target.checked)}
+                    />
+                    {c.advanced}
+                  </label>
                 </div>
-                <label className="check-label">
-                  <input
-                    type="checkbox"
-                    checked={advanced}
-                    onChange={(e) => setAdvanced(e.target.checked)}
-                  />
-                  {c.advanced}
-                </label>
-              </div>
-              <p className="section-intro">
-                {scenario.mode === "replace" ? c.replacementNote : c.customNote}
-              </p>
-              {scenario.replacement_player_id &&
-                players.get(scenario.replacement_player_id)?.multi_club && (
-                  <p className="note">{c.multiClub}</p>
-                )}
-              <p className="note">{c.defaultWeights}</p>
-              <div className="requirement-groups">
-                {Object.entries(recruitmentFamilies).map(([family, names]) => {
-                  const visible = index.features.filter(
-                    (f) =>
-                      f.core &&
-                      f.family === family &&
-                      (advanced ||
-                        f.default_visibility.includes(scenario.target_role) ||
-                        scenario.requirements.some(
-                          (r) =>
-                            r.feature_id === f.id && r.preference !== "neutral",
-                        )),
-                  );
-                  if (!visible.length) return null;
-                  return (
-                    <fieldset className="requirement-family" key={family}>
-                      <legend>{names[language]}</legend>
-                      <label className="family-weight">
-                        {c.familyImportance}
-                        <select
-                          value={scenario.family_weights[family] ?? 1}
-                          onChange={(e) =>
-                            update({
-                              ...scenario,
-                              family_weights: {
-                                ...scenario.family_weights,
-                                [family]: Number(e.target.value) as 1 | 2 | 3,
-                              },
-                            })
-                          }
-                        >
-                          {[c.low, c.medium, c.high].map((name, i) => (
-                            <option key={name} value={i + 1}>
-                              {name}
-                            </option>
-                          ))}
-                        </select>
-                      </label>
-                      {visible.map((f) => {
-                        const r =
-                            scenario.requirements.find(
-                              (r) => r.feature_id === f.id,
-                            ) ?? newRequirement(f.id),
-                          median = roleContext?.median[f.id];
-                        return (
-                          <div
-                            key={f.id}
-                            className={`requirement-row ${r.preference !== "neutral" ? "is-active" : ""}`}
-                            data-feature={f.id}
-                          >
-                            <div className="requirement-name">
-                              <strong>{label(f.id)}</strong>
-                              <small>
-                                {c.source}:{" "}
-                                {requirementSources[r.source][language]}
-                              </small>
-                              {median !== undefined && (
-                                <small>
-                                  {c.roleMedian}: {number(median)} ·{" "}
-                                  {c.roleRange}:{" "}
-                                  {number(roleContext!.minimum[f.id])}–
-                                  {number(roleContext!.maximum[f.id])}{" "}
-                                  <button
-                                    className="inline-button"
-                                    onClick={() =>
-                                      adopt(
-                                        f.id,
-                                        median,
-                                        "derived_roster_gap",
-                                        "exact",
-                                      )
+                <p className="section-intro">
+                  {scenario.mode === "replace"
+                    ? c.replacementNote
+                    : c.customNote}
+                </p>
+                {scenario.replacement_player_id &&
+                  players.get(scenario.replacement_player_id)?.multi_club && (
+                    <p className="note">{c.multiClub}</p>
+                  )}
+
+                <div className="requirement-groups">
+                  {Object.entries(recruitmentFamilies).map(
+                    ([family, names]) => {
+                      const visible = index.features.filter(
+                        (f) =>
+                          f.core &&
+                          f.family === family &&
+                          (advanced ||
+                            (f.default_visibility.includes(
+                              scenario.target_role,
+                            ) &&
+                              [
+                                "progressive_passes_per90",
+                                "progressive_carries_per90",
+                                "pressures_per90",
+                                "key_passes_per90",
+                                "interceptions_per90",
+                                "tackles_per90",
+                              ].includes(f.id)) ||
+                            scenario.requirements.some(
+                              (r) =>
+                                r.feature_id === f.id &&
+                                r.preference !== "neutral",
+                            )),
+                      );
+                      if (!visible.length) return null;
+                      return (
+                        <fieldset className="requirement-family" key={family}>
+                          <legend>{names[language]}</legend>
+                          <label className="family-weight">
+                            {c.familyImportance}
+                            <select
+                              value={scenario.family_weights[family] ?? 1}
+                              onChange={(e) =>
+                                update({
+                                  ...scenario,
+                                  family_weights: {
+                                    ...scenario.family_weights,
+                                    [family]: Number(e.target.value) as
+                                      1 | 2 | 3,
+                                  },
+                                })
+                              }
+                            >
+                              {[c.low, c.medium, c.high].map((name, i) => (
+                                <option key={name} value={i + 1}>
+                                  {name}
+                                </option>
+                              ))}
+                            </select>
+                          </label>
+                          {visible.map((f) => {
+                            const r =
+                                scenario.requirements.find(
+                                  (r) => r.feature_id === f.id,
+                                ) ?? newRequirement(f.id),
+                              median = roleContext?.median[f.id];
+                            return (
+                              <div
+                                key={f.id}
+                                className={`requirement-row ${r.preference !== "neutral" ? "is-active" : ""}`}
+                                data-feature={f.id}
+                              >
+                                <div className="requirement-name">
+                                  <strong>{label(f.id)}</strong>
+                                  <details className="requirement-context">
+                                    <summary>
+                                      {locale === "en"
+                                        ? "Club reference & source"
+                                        : "Clubreferentie & bron"}
+                                    </summary>
+                                    <small>
+                                      {c.source}:{" "}
+                                      {requirementSources[r.source][language]}
+                                    </small>
+                                    {median !== undefined && (
+                                      <small>
+                                        {c.roleMedian}: {number(median)} ·{" "}
+                                        {c.roleRange}:{" "}
+                                        {number(roleContext!.minimum[f.id])}–
+                                        {number(roleContext!.maximum[f.id])}{" "}
+                                        <button
+                                          className="inline-button"
+                                          onClick={() =>
+                                            adopt(
+                                              f.id,
+                                              median,
+                                              "derived_roster_gap",
+                                              "exact",
+                                            )
+                                          }
+                                        >
+                                          {c.useMedian}
+                                        </button>
+                                      </small>
+                                    )}
+                                  </details>
+                                </div>
+                                <label>
+                                  {c.preference}
+                                  <select
+                                    aria-label={`${label(f.id)}: ${c.preference}`}
+                                    value={r.preference}
+                                    onChange={(e) =>
+                                      editRequirement(f.id, {
+                                        preference: e.target
+                                          .value as Requirement["preference"],
+                                      })
                                     }
                                   >
-                                    {c.useMedian}
-                                  </button>
-                                </small>
-                              )}
-                            </div>
-                            <label>
-                              {c.preference}
-                              <select
-                                aria-label={`${label(f.id)}: ${c.preference}`}
-                                value={r.preference}
-                                onChange={(e) =>
-                                  editRequirement(f.id, {
-                                    preference: e.target
-                                      .value as Requirement["preference"],
-                                  })
-                                }
-                              >
-                                {(
-                                  [
-                                    "neutral",
-                                    "exact",
-                                    "minimum",
-                                    "maximum",
-                                  ] as const
-                                ).map((p) => (
-                                  <option key={p} value={p}>
-                                    {c[p]}
-                                  </option>
-                                ))}
-                              </select>
-                            </label>
-                            <label>
-                              {c.target}
-                              <input
-                                aria-label={`${label(f.id)}: ${c.target}`}
-                                type="number"
-                                min={0}
-                                max={100}
-                                step="any"
-                                disabled={r.preference === "neutral"}
-                                value={r.value}
-                                onChange={(e) =>
-                                  editRequirement(f.id, {
-                                    value: Math.min(
-                                      100,
-                                      Math.max(0, Number(e.target.value)),
-                                    ),
-                                  })
-                                }
-                              />
-                            </label>
-                            <label>
-                              {c.importance}
-                              <select
-                                aria-label={`${label(f.id)}: ${c.importance}`}
-                                disabled={r.preference === "neutral"}
-                                value={r.weight}
-                                onChange={(e) =>
-                                  editRequirement(f.id, {
-                                    weight: Number(e.target.value) as 1 | 2 | 3,
-                                  })
-                                }
-                              >
-                                {[c.low, c.medium, c.high].map((name, i) => (
-                                  <option key={name} value={i + 1}>
-                                    {name}
-                                  </option>
-                                ))}
-                              </select>
-                            </label>
-                            <label className="check-label hard-constraint">
-                              <input
-                                aria-label={`${label(f.id)}: ${c.required}`}
-                                type="checkbox"
-                                checked={r.hard_constraint}
-                                disabled={
-                                  !["minimum", "maximum"].includes(r.preference)
-                                }
-                                onChange={(e) =>
-                                  editRequirement(f.id, {
-                                    hard_constraint: e.target.checked,
-                                  })
-                                }
-                              />
-                              {c.required}
-                            </label>
-                          </div>
-                        );
-                      })}
-                    </fieldset>
-                  );
-                })}
-              </div>
-              <details className="feature-definitions">
-                <summary>{c.definitions}</summary>
-                {index.features
-                  .filter((f) => f.core)
-                  .map((f) => (
-                    <p key={f.id}>
-                      <strong>
-                        {label(f.id)} · {f.unit}
-                      </strong>
-                      <br />
-                      {locale === "en" ? f.note_en : f.note_nl}
-                    </p>
-                  ))}
-              </details>
-            </section>
+                                    {(
+                                      [
+                                        "neutral",
+                                        "exact",
+                                        "minimum",
+                                        "maximum",
+                                      ] as const
+                                    ).map((p) => (
+                                      <option key={p} value={p}>
+                                        {c[p]}
+                                      </option>
+                                    ))}
+                                  </select>
+                                </label>
+                                <label>
+                                  {c.target}
+                                  <input
+                                    aria-label={`${label(f.id)}: ${c.target}`}
+                                    type="number"
+                                    min={0}
+                                    max={100}
+                                    step="any"
+                                    disabled={r.preference === "neutral"}
+                                    value={r.value}
+                                    onChange={(e) =>
+                                      editRequirement(f.id, {
+                                        value: Math.min(
+                                          100,
+                                          Math.max(0, Number(e.target.value)),
+                                        ),
+                                      })
+                                    }
+                                  />
+                                </label>
+                                <label>
+                                  {c.importance}
+                                  <select
+                                    aria-label={`${label(f.id)}: ${c.importance}`}
+                                    disabled={r.preference === "neutral"}
+                                    value={r.weight}
+                                    onChange={(e) =>
+                                      editRequirement(f.id, {
+                                        weight: Number(e.target.value) as
+                                          1 | 2 | 3,
+                                      })
+                                    }
+                                  >
+                                    {[c.low, c.medium, c.high].map(
+                                      (name, i) => (
+                                        <option key={name} value={i + 1}>
+                                          {name}
+                                        </option>
+                                      ),
+                                    )}
+                                  </select>
+                                </label>
+                                <label className="check-label hard-constraint">
+                                  <input
+                                    aria-label={`${label(f.id)}: ${c.required}`}
+                                    type="checkbox"
+                                    checked={r.hard_constraint}
+                                    disabled={
+                                      !["minimum", "maximum"].includes(
+                                        r.preference,
+                                      )
+                                    }
+                                    onChange={(e) =>
+                                      editRequirement(f.id, {
+                                        hard_constraint: e.target.checked,
+                                      })
+                                    }
+                                  />
+                                  {c.required}
+                                </label>
+                              </div>
+                            );
+                          })}
+                        </fieldset>
+                      );
+                    },
+                  )}
+                </div>
+                <details className="feature-definitions">
+                  <summary>{c.definitions}</summary>
+                  <p>{c.defaultWeights}</p>
+                  {index.features
+                    .filter((f) => f.core)
+                    .map((f) => (
+                      <p key={f.id}>
+                        <strong>
+                          {label(f.id)} · {f.unit}
+                        </strong>
+                        <br />
+                        {locale === "en" ? f.note_en : f.note_nl}
+                      </p>
+                    ))}
+                </details>
+              </section>
+            </details>
           )}
-          <section className="recruitment-filters">
-            <h2>{c.constraints}</h2>
+          <details className="recruitment-filters">
+            <summary>{c.constraints}</summary>
             <div>
               <label>
                 {c.minimumMinutes}
@@ -694,14 +764,24 @@ function RecruitmentBoard({
                 {c.excludeClub}
               </label>
             </div>
-          </section>
+          </details>
+          <a
+            className="primary-action shortlist-action"
+            href="#shortlist-title"
+          >
+            {locale === "en" ? "Find candidates" : "Kandidaten vinden"} →
+          </a>
+          <span className="live-hint">
+            {locale === "en"
+              ? "Updates as you adjust requirements"
+              : "Werkt bij zodra je eisen aanpast"}
+          </span>
           <section
             className="recruitment-results"
             aria-labelledby="shortlist-title"
           >
             <div className="recruitment-section-heading">
               <div>
-                <span className="eyebrow">02 / {c.cohort}</span>
                 <h2 id="shortlist-title">{c.shortlist}</h2>
               </div>
               <p className="candidate-count" role="status">
@@ -713,7 +793,7 @@ function RecruitmentBoard({
               </p>
             </div>
             <p className="section-intro">{c.shortlistNote}</p>
-            <p className="note">{c.cohortNote}</p>
+
             {result.status !== "ok" ? (
               <div className="recruitment-empty" role="status">
                 {result.status === "no_requirements"
@@ -752,7 +832,13 @@ function RecruitmentBoard({
                               {r.rank.toString().padStart(2, "0")}
                             </td>
                             <th scope="row">
-                              {p.name}
+                              <button
+                                className="candidate-name"
+                                onClick={() => setSelected([p.player_id])}
+                                aria-label={`${locale === "en" ? "Why this player matches" : "Waarom deze speler past"}: ${p.name}`}
+                              >
+                                {p.name}
+                              </button>
                               <small>
                                 {p.teams.join(" · ")} · {p.role}
                               </small>
@@ -763,7 +849,7 @@ function RecruitmentBoard({
                                 {number(r.distance)}
                               </strong>
                               <small>{c.gap}</small>
-                              {r.frontier && (
+                              {false && r.frontier && (
                                 <span className="frontier-badge">
                                   {c.frontier}
                                 </span>
@@ -771,12 +857,19 @@ function RecruitmentBoard({
                             </td>
                             <td>
                               {number(p.minutes, 0)} {c.minutes.toLowerCase()}
-                              <small>
-                                {c.neighbor}:{" "}
-                                {p.neighbor_stability === null
-                                  ? c.unavailable
-                                  : number(p.neighbor_stability, 2)}
-                              </small>
+                              <details>
+                                <summary>
+                                  {locale === "en"
+                                    ? "Profile stability"
+                                    : "Profielstabiliteit"}
+                                </summary>
+                                <small>
+                                  {c.neighbor}:{" "}
+                                  {p.neighbor_stability === null
+                                    ? c.unavailable
+                                    : number(p.neighbor_stability, 2)}
+                                </small>
+                              </details>
                             </td>
                             <td className="match-explanation">
                               <span>
@@ -834,6 +927,7 @@ function RecruitmentBoard({
                     {c.frontierCount}
                   </summary>
                   <p>{c.frontierNote}</p>
+                  <p>{c.cohortNote}</p>
                   {result.frontier_count > result.eligible_count / 2 && (
                     <p>{c.frontierMany}</p>
                   )}
@@ -916,7 +1010,6 @@ function RecruitmentBoard({
           </section>
           {selectedRanks.length > 0 && (
             <section className="candidate-comparison">
-              <span className="eyebrow">03 / {c.compare}</span>
               <h2>{c.compareTitle}</h2>
               <p>{c.compareNote}</p>
               <div className="comparison-grid">
@@ -929,6 +1022,9 @@ function RecruitmentBoard({
                           {p.role} · {p.teams.join(" / ")}
                         </span>
                         <h3>{p.name}</h3>
+                        {r.frontier && (
+                          <p title={c.frontierNote}>{c.frontier}</p>
+                        )}
                         <p>
                           {number(r.distance)} {c.gap} · {number(p.minutes, 0)}{" "}
                           {c.minutes.toLowerCase()}
@@ -991,7 +1087,13 @@ function RecruitmentBoard({
                           ),
                         )}
                       </details>
-                      <a href={route(locale, "player-dna")}>{c.fullDNA} ↗</a>
+                      <a
+                        href={
+                          route(locale, "player-dna") + "?player=" + p.player_id
+                        }
+                      >
+                        {c.fullDNA} ↗
+                      </a>
                     </article>
                   );
                 })}

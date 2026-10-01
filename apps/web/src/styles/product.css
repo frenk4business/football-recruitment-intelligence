@@ -451,3 +451,252 @@ footer {
   padding-top: 20px;
   margin-top: 28px;
 }
+.recruitment {
+  background: white;
+  padding: 24px;
+}
+.recruitment-toolbar {
+  padding: 0 0 16px;
+}
+.recruitment-toolbar .eyebrow {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: 0;
+  font-size: 12px;
+}
+.recruitment-modes {
+  gap: 24px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 24px;
+}
+.recruitment-modes button {
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+}
+.recruitment-modes button[aria-pressed="true"] {
+  background: transparent;
+  color: var(--green);
+  border-color: var(--green);
+}
+.recruitment-steps {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  gap: 24px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.recruitment-selectors {
+  padding: 12px 0;
+  max-width: 850px;
+}
+.club-summary {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.requirements-disclosure > summary {
+  font-size: 18px;
+  font-weight: 650;
+  cursor: pointer;
+  padding: 12px 0;
+}
+.requirements-panel {
+  border: 0;
+  padding: 16px 0;
+}
+.requirements-panel .recruitment-section-heading {
+  margin-bottom: 12px;
+}
+.requirements-panel h2 {
+  font-size: 18px;
+}
+.requirements-panel .section-intro {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.requirement-family {
+  padding: 12px 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+.requirement-family legend {
+  font-size: 13px;
+  color: var(--muted);
+}
+.requirement-row {
+  padding: 12px 0;
+  border: 0;
+  gap: 14px;
+}
+.requirement-row label {
+  font-size: 11px;
+}
+.requirement-name strong {
+  font-size: 14px;
+}
+.requirement-context {
+  margin-top: 5px;
+  font-size: 11px;
+}
+.requirement-context summary {
+  cursor: pointer;
+}
+.requirements-simple .family-weight {
+  display: none;
+}
+.requirements-simple .requirement-row > label:nth-last-child(2) {
+  display: none;
+}
+.recruitment-filters {
+  border: 0;
+  padding: 12px 0 20px;
+}
+.recruitment-filters > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.recruitment-filters > div {
+  margin-top: 16px;
+}
+.shortlist-action {
+  display: inline-block;
+  margin: 8px 12px 24px 0;
+}
+.live-hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+.recruitment-results {
+  border-top: 1px solid var(--rule);
+  padding-top: 24px;
+}
+.recruitment-table td,
+.recruitment-table th {
+  padding: 12px 10px;
+}
+.recruitment-table details {
+  font-size: 11px;
+}
+.candidate-name {
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-weight: 650;
+  color: var(--green);
+  cursor: pointer;
+}
+.recruitment-translation {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin-top: 28px;
+  padding: 20px 0;
+}
+.recruitment-translation .eyebrow {
+  display: none;
+}
+.recruitment-translation p,
+.recruitment-bottom {
+  font-size: 12px;
+}
+.recruitment-translation small {
+  display: none;
+}
+.candidate-comparison {
+  padding-top: 24px;
+}
+@media (max-width: 760px) {
+  .recruitment {
+    padding: 16px;
+    margin-inline: -8px;
+  }
+  .recruitment-modes {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .recruitment-modes button {
+    font-size: 13px;
+    flex: 0 1 auto;
+  }
+  .recruitment-steps {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .recruitment-selectors {
+    grid-template-columns: 1fr;
+  }
+  .requirement-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .requirement-name {
+    grid-column: 1 / -1;
+  }
+  .requirements-panel .recruitment-section-heading {
+    align-items: start;
+    gap: 12px;
+  }
+  .requirements-panel .check-label {
+    font-size: 12px;
+  }
+  .live-hint {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .recruitment-table table,
+  .recruitment-table tbody {
+    display: block;
+    min-width: 0;
+    width: 100%;
+  }
+  .recruitment-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .recruitment-table tbody tr {
+    display: grid;
+    grid-template-columns: 30px 1fr 1fr;
+    gap: 4px 8px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .recruitment-table th,
+  .recruitment-table td {
+    border: 0;
+    padding: 4px 0;
+  }
+  .recruitment-table th {
+    grid-column: 2 / -1;
+  }
+  .recruitment-table td:nth-child(3) {
+    grid-column: 2;
+  }
+  .recruitment-table td:nth-child(3)::before {
+    content: "Fit distance";
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  html[lang="nl"] .recruitment-table td:nth-child(3)::before {
+    content: "Profielafstand";
+  }
+  .recruitment-table .match-explanation {
+    grid-column: 2 / -1;
+  }
+  .recruitment-table td:last-child {
+    grid-column: 2 / -1;
+  }
+  .recruitment-table td:last-child::before {
+    content: "Compare ";
+    font-size: 12px;
+  }
+  html[lang="nl"] .recruitment-table td:last-child::before {
+    content: "Vergelijken ";
+  }
+}
