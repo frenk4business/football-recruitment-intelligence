@@ -1,0 +1,11 @@
+# Contract and release versioning
+
+`VERSION` is the canonical application version. Python reads it through Hatch; the npm package/lock mirrors it and the release build rejects a mismatch. The footer and release manifest are generated from it. MAJOR means a breaking public contract, scientific or product semantic change; MINOR adds compatible functionality; PATCH fixes bugs/security/docs while preserving meaning. Research versions remain independent.
+
+The release retains features-v1, player-dna-v1, translation-model-v1, translated-profile-v1, club-context-v1, requirements-v1 and recruitment-fit-v1. `config/scientific-lock.json` fixes research source, configuration, public aggregates, evaluation outputs, model cards and preregistered plans to Phase 4. Updating the lock requires an explicit research/version review; it is not an automatic response to a failing build.
+
+Pydantic is the contract source. `scripts/generate_contracts.py --check` verifies generated TypeScript, flattened JSON Schema, OpenAPI and recruitment specification. New required properties, changed units/nullability, dropped fields/IDs, changed scoring, eligibility or tie behavior are breaking. Adding a field is not automatically compatible with strict consumers. Keep old version readers or provide an explicit migration; never silently reinterpret an old scenario.
+
+Recruitment URL `v=1` remains unchanged. Ten saved Phase 4 query strings in `tests/fixtures/recruitment-urls-v1.json` retain exact encoding and ranked results. Tests reject unsupported versions/features/player IDs, duplicate parameters, nonfinite/out-of-range/excessive values and unavailable roles. Invalid URLs show an explanation and reset safely; no new URL schema or migration is needed in this release. EN/NL switches preserve the current scenario.
+
+At runtime a small index embedded in the JS bundle pins SHA-256 manifests by directory. Each fetched artifact must match the hash of bytes already schema-validated during build. Unknown, malformed, mismatched, oversized, timed-out or wrong-MIME responses enter a retry state; no partially trusted object reaches scoring/rendering. An old open tab may require a page reload after deployment. This protects release consistency; it is not a signature against a compromised origin.

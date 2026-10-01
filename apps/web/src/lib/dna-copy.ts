@@ -43,7 +43,8 @@ const en = {
     "Fewer than 12 eligible players share this role. Similarity is unavailable.",
   unavailable: "Not available",
   loading: "Loading player evidence…",
-  error: "The player evidence could not be loaded.",
+  error:
+    "The player evidence could not be loaded. Reload the page if retrying does not help.",
   retry: "Try again",
   empty: "No players match these filters.",
   methodology: "View methodology",
@@ -145,7 +146,8 @@ const nl: typeof en = {
     "Minder dan 12 spelers met voldoende data delen deze rol. Vergelijking is niet beschikbaar.",
   unavailable: "Niet beschikbaar",
   loading: "Spelersgegevens worden geladen…",
-  error: "De spelersgegevens konden niet worden geladen.",
+  error:
+    "De spelersgegevens konden niet worden geladen. Vernieuw de pagina als opnieuw proberen niet helpt.",
   retry: "Opnieuw proberen",
   empty: "Geen spelers gevonden met deze filters.",
   methodology: "Bekijk methodologie",

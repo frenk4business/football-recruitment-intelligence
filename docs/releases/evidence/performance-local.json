@@ -1,0 +1,999 @@
+{
+  "commit": "a8f05d6415328bbcd255c58aeb952aec97757710",
+  "base": "http://127.0.0.1:4173",
+  "timestamp": "2026-10-01T07:13:36.973Z",
+  "profile": "Chromium, 375x812, cold cache, 4x CPU, 1.6Mbps down/750Kbps up,150ms latency; 5 seconds after load; 3 runs; gzip bytes recomputed at default level",
+  "summary": [
+    {
+      "path": "/",
+      "lcp_median_ms": 516,
+      "cls_max": 0,
+      "blocking_median_ms": 21,
+      "js_gzip_max": 179131,
+      "json_decoded_max": 0,
+      "transfer_max": 311294,
+      "interaction_median_ms": null,
+      "overflow": false
+    },
+    {
+      "path": "/player-dna/",
+      "lcp_median_ms": 532,
+      "cls_max": 0,
+      "blocking_median_ms": 14,
+      "js_gzip_max": 179131,
+      "json_decoded_max": 73485,
+      "transfer_max": 382873,
+      "interaction_median_ms": null,
+      "overflow": false
+    },
+    {
+      "path": "/translation/",
+      "lcp_median_ms": 520,
+      "cls_max": 0,
+      "blocking_median_ms": 13,
+      "js_gzip_max": 179131,
+      "json_decoded_max": 206037,
+      "transfer_max": 406617,
+      "interaction_median_ms": null,
+      "overflow": false
+    },
+    {
+      "path": "/recruitment/",
+      "lcp_median_ms": 496,
+      "cls_max": 0,
+      "blocking_median_ms": 19,
+      "js_gzip_max": 179131,
+      "json_decoded_max": 234534,
+      "transfer_max": 351716,
+      "interaction_median_ms": 32.199999928474426,
+      "overflow": false
+    },
+    {
+      "path": "/methodology/",
+      "lcp_median_ms": 544,
+      "cls_max": 0,
+      "blocking_median_ms": 18,
+      "js_gzip_max": 179131,
+      "json_decoded_max": 0,
+      "transfer_max": 239442,
+      "interaction_median_ms": null,
+      "overflow": false
+    }
+  ],
+  "rows": [
+    {
+      "lcp": 516,
+      "cls": 0,
+      "blocking": 38,
+      "overflow": false,
+      "requests": 10,
+      "path": "/",
+      "run": 1,
+      "transfer_bytes": 311294,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-b91a1143d5110c2f.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 488,
+      "cls": 0,
+      "blocking": 21,
+      "overflow": false,
+      "requests": 10,
+      "path": "/",
+      "run": 2,
+      "transfer_bytes": 311294,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-b91a1143d5110c2f.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 516,
+      "cls": 0,
+      "blocking": 21,
+      "overflow": false,
+      "requests": 10,
+      "path": "/",
+      "run": 3,
+      "transfer_bytes": 311294,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-b91a1143d5110c2f.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 544,
+      "cls": 0,
+      "blocking": 14,
+      "overflow": false,
+      "requests": 12,
+      "path": "/player-dna/",
+      "run": 1,
+      "transfer_bytes": 382873,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 73485,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/c73876b043306be254928ad3514c3d5af970057103d2d7e1ea4a0ebf12e41b2b.json",
+          "decoded": 43009,
+          "gzip": 19815
+        },
+        {
+          "path": "/data/phase2/900/83125b48-0dd6-55bc-b422-023ae9142f64.json",
+          "decoded": 30476,
+          "gzip": 6400
+        }
+      ]
+    },
+    {
+      "lcp": 528,
+      "cls": 0,
+      "blocking": 13,
+      "overflow": false,
+      "requests": 12,
+      "path": "/player-dna/",
+      "run": 2,
+      "transfer_bytes": 382873,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 73485,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/c73876b043306be254928ad3514c3d5af970057103d2d7e1ea4a0ebf12e41b2b.json",
+          "decoded": 43009,
+          "gzip": 19815
+        },
+        {
+          "path": "/data/phase2/900/83125b48-0dd6-55bc-b422-023ae9142f64.json",
+          "decoded": 30476,
+          "gzip": 6400
+        }
+      ]
+    },
+    {
+      "lcp": 532,
+      "cls": 0,
+      "blocking": 16,
+      "overflow": false,
+      "requests": 12,
+      "path": "/player-dna/",
+      "run": 3,
+      "transfer_bytes": 382873,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 73485,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/c73876b043306be254928ad3514c3d5af970057103d2d7e1ea4a0ebf12e41b2b.json",
+          "decoded": 43009,
+          "gzip": 19815
+        },
+        {
+          "path": "/data/phase2/900/83125b48-0dd6-55bc-b422-023ae9142f64.json",
+          "decoded": 30476,
+          "gzip": 6400
+        }
+      ]
+    },
+    {
+      "lcp": 528,
+      "cls": 0,
+      "blocking": 13,
+      "overflow": false,
+      "requests": 12,
+      "path": "/translation/",
+      "run": 1,
+      "transfer_bytes": 406617,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 206037,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/0021ce8501da3b7a7d8eac7c8947de708c5290c5fbe9ab25fcda5924cc17410b.json",
+          "decoded": 87121,
+          "gzip": 38947
+        },
+        {
+          "path": "/data/phase3/players/2c720618-fb12-5f8a-959e-8303b0455cdd.json",
+          "decoded": 118916,
+          "gzip": 7598
+        }
+      ]
+    },
+    {
+      "lcp": 512,
+      "cls": 0,
+      "blocking": 12,
+      "overflow": false,
+      "requests": 12,
+      "path": "/translation/",
+      "run": 2,
+      "transfer_bytes": 406617,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 206037,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/0021ce8501da3b7a7d8eac7c8947de708c5290c5fbe9ab25fcda5924cc17410b.json",
+          "decoded": 87121,
+          "gzip": 38947
+        },
+        {
+          "path": "/data/phase3/players/2c720618-fb12-5f8a-959e-8303b0455cdd.json",
+          "decoded": 118916,
+          "gzip": 7598
+        }
+      ]
+    },
+    {
+      "lcp": 520,
+      "cls": 0,
+      "blocking": 20,
+      "overflow": false,
+      "requests": 12,
+      "path": "/translation/",
+      "run": 3,
+      "transfer_bytes": 406617,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 206037,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/0021ce8501da3b7a7d8eac7c8947de708c5290c5fbe9ab25fcda5924cc17410b.json",
+          "decoded": 87121,
+          "gzip": 38947
+        },
+        {
+          "path": "/data/phase3/players/2c720618-fb12-5f8a-959e-8303b0455cdd.json",
+          "decoded": 118916,
+          "gzip": 7598
+        }
+      ]
+    },
+    {
+      "lcp": 496,
+      "cls": 0,
+      "blocking": 19,
+      "overflow": false,
+      "requests": 14,
+      "path": "/recruitment/",
+      "run": 1,
+      "transfer_bytes": 351716,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 234534,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/519e7f811a53cfaa7d660880bdb12a5405c6cd611e132deb28e2900410f632fe.json",
+          "decoded": 192,
+          "gzip": 156
+        },
+        {
+          "path": "/data/phase4/index.json",
+          "decoded": 206564,
+          "gzip": 33128
+        },
+        {
+          "path": "/integrity/861df673e5e2314ce21b55067c2a3c917cacb8a52b168d3739fcf14f28c503ca.json",
+          "decoded": 1561,
+          "gzip": 757
+        },
+        {
+          "path": "/data/phase4/clubs/3a6cf779-2270-5819-8cd8-e7a355a83a87.json",
+          "decoded": 26217,
+          "gzip": 4890
+        }
+      ],
+      "interaction_ms": 37.799999952316284
+    },
+    {
+      "lcp": 464,
+      "cls": 0,
+      "blocking": 20,
+      "overflow": false,
+      "requests": 14,
+      "path": "/recruitment/",
+      "run": 2,
+      "transfer_bytes": 351716,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 234534,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/519e7f811a53cfaa7d660880bdb12a5405c6cd611e132deb28e2900410f632fe.json",
+          "decoded": 192,
+          "gzip": 156
+        },
+        {
+          "path": "/data/phase4/index.json",
+          "decoded": 206564,
+          "gzip": 33128
+        },
+        {
+          "path": "/integrity/861df673e5e2314ce21b55067c2a3c917cacb8a52b168d3739fcf14f28c503ca.json",
+          "decoded": 1561,
+          "gzip": 757
+        },
+        {
+          "path": "/data/phase4/clubs/3a6cf779-2270-5819-8cd8-e7a355a83a87.json",
+          "decoded": 26217,
+          "gzip": 4890
+        }
+      ],
+      "interaction_ms": 32.199999928474426
+    },
+    {
+      "lcp": 500,
+      "cls": 0,
+      "blocking": 14,
+      "overflow": false,
+      "requests": 14,
+      "path": "/recruitment/",
+      "run": 3,
+      "transfer_bytes": 351716,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 234534,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/519e7f811a53cfaa7d660880bdb12a5405c6cd611e132deb28e2900410f632fe.json",
+          "decoded": 192,
+          "gzip": 156
+        },
+        {
+          "path": "/data/phase4/index.json",
+          "decoded": 206564,
+          "gzip": 33128
+        },
+        {
+          "path": "/integrity/861df673e5e2314ce21b55067c2a3c917cacb8a52b168d3739fcf14f28c503ca.json",
+          "decoded": 1561,
+          "gzip": 757
+        },
+        {
+          "path": "/data/phase4/clubs/3a6cf779-2270-5819-8cd8-e7a355a83a87.json",
+          "decoded": 26217,
+          "gzip": 4890
+        }
+      ],
+      "interaction_ms": 31.699999928474426
+    },
+    {
+      "lcp": 540,
+      "cls": 0,
+      "blocking": 18,
+      "overflow": false,
+      "requests": 9,
+      "path": "/methodology/",
+      "run": 1,
+      "transfer_bytes": 239442,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 544,
+      "cls": 0,
+      "blocking": 17,
+      "overflow": false,
+      "requests": 9,
+      "path": "/methodology/",
+      "run": 2,
+      "transfer_bytes": 239442,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 544,
+      "cls": 0,
+      "blocking": 19,
+      "overflow": false,
+      "requests": 9,
+      "path": "/methodology/",
+      "run": 3,
+      "transfer_bytes": 239442,
+      "js_gzip_bytes": 179131,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-52d428ccd66bfe75.js",
+          "decoded": 3253,
+          "gzip": 1643
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-fd70e85476537227.js",
+          "decoded": 127,
+          "gzip": 123
+        },
+        {
+          "path": "/_next/static/chunks/256-a8a557284ab64c62.js",
+          "decoded": 22805,
+          "gzip": 8429
+        },
+        {
+          "path": "/_next/static/chunks/120-77a24b62f8c687bb.js",
+          "decoded": 126390,
+          "gzip": 38968
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

@@ -92,3 +92,27 @@ test("Recruitment translations expose the same controls and explanations", async
   assert.equal(recruitmentCopy.en.methodDefinitions.length, 6);
   assert.equal(recruitmentCopy.nl.methodDefinitions.length, 6);
 });
+
+test("Phase 4 saved scenario URLs retain exact encoding and results", () => {
+  const saved = JSON.parse(
+    readFileSync(
+      new URL(
+        "../../../tests/fixtures/recruitment-urls-v1.json",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  );
+  for (const item of saved.cases) {
+    const fixture = fixtures.cases.find((f) => f.name === item.name);
+    assert.equal(encodeScenario(fixture.scenario, index), item.query);
+    equivalent(
+      rankCandidates(
+        index.players,
+        decodeScenario(item.query, index),
+        index.method,
+      ),
+      fixture.result,
+    );
+  }
+});

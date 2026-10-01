@@ -383,7 +383,22 @@ input[type="search"] {
   width: 100%;
 }
 select {
+  /* Linux WebKit's native popup text can overflow a constrained grid cell.
+     Keep the native select interaction, with a CSS chevron and bounded text. */
+  appearance: none;
+  min-width: 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
   padding-right: 28px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-size: 4px 4px;
+  background-repeat: no-repeat;
 }
 .match-select {
   flex: 1;
@@ -2100,4 +2115,121 @@ footer {
 }
 #shortlist-title {
   scroll-margin-top: 24px;
+}
+
+/* Release hardening: contain wide evidence tables and reserve async workspace. */
+main,
+section,
+.sample-section,
+.table-wrap {
+  min-width: 0;
+  max-width: 100%;
+}
+.recruitment-status {
+  min-height: 75vh;
+}
+.recovery {
+  max-width: 780px;
+  margin: 10vh auto;
+  padding: 24px;
+}
+button,
+input,
+select,
+summary {
+  scroll-margin-top: 24px;
+}
+@media print {
+  .site-header,
+  .hero-links,
+  button,
+  .filter-bar,
+  .recruitment-selectors {
+    display: none;
+  }
+  body {
+    color: #111;
+    background: white;
+  }
+  main,
+  footer {
+    width: 100%;
+    margin: 0;
+  }
+  .table-wrap {
+    overflow: visible;
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  details {
+    break-inside: avoid;
+  }
+}
+
+.footer-top a {
+  display: inline-block;
+  min-height: 28px;
+  padding-block: 5px;
+}
+
+/* Anchor visually hidden table labels inside their scroll container. */
+.table-wrap {
+  position: relative;
+}
+
+.hero > div {
+  min-width: 0;
+}
+h1 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+/* Container width also responds to text/page magnification. */
+.recruitment {
+  container-type: inline-size;
+}
+@container (max-width: 650px) {
+  .requirement-row {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px;
+  }
+  .requirement-name,
+  .recruitment .hard-constraint {
+    grid-column: 1 / -1;
+  }
+  .recruitment-selectors,
+  .recruitment-filters > div {
+    grid-template-columns: 1fr;
+  }
+  .recruitment-section-heading {
+    flex-wrap: wrap;
+  }
+}
+/* Normalize closed disclosure layout across Linux WebKit/Firefox. Hidden
+   research tables must not contribute intrinsic document overflow. */
+details:not([open]) > :not(summary) {
+  display: none;
+}
+/* Wide evidence tables scroll within their own layout/paint boundary. */
+.table-wrap {
+  contain: inline-size layout paint;
+}
+@media print {
+  .table-wrap {
+    contain: none;
+    overflow: visible;
+  }
+  table,
+  .recruitment-table {
+    min-width: 0;
+    white-space: normal;
+    font-size: 9px;
+  }
+}
+/* Long technical labels and Dutch compound words may exceed a narrow text box
+   even when the element's own rectangle fits. Preserve all text by wrapping. */
+body {
+  overflow-wrap: anywhere;
 }

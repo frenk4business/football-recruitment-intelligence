@@ -1,4 +1,5 @@
 "use client";
+import { fetchArtifact } from "@/lib/artifact";
 import { useEffect, useState } from "react";
 import type {
   Explorer as ExplorerData,
@@ -30,11 +31,10 @@ export function Explorer({
     [frame, setFrame] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`/data/explorer/${matchId}.json`, { signal: controller.signal })
-      .then((r) => {
-        if (!r.ok) throw new Error("Unavailable");
-        return r.json();
-      })
+    fetchArtifact<ExplorerData>(
+      `/data/explorer/${matchId}.json`,
+      controller.signal,
+    )
       .then((value: ExplorerData) => {
         if (
           !["1.0.0", "1.1.0"].includes(value.schema_version) ||

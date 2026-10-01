@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Open football data, explicit provenance and reproducible research.",
   icons: { icon: "/favicon.svg" },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

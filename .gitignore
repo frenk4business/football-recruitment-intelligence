@@ -24,3 +24,9 @@ test-results/
 artifacts/local-qa/
 apps/web/public/data/
 artifacts/phase3/posterior/
+
+# Deterministic release build outputs
+apps/web/public/integrity/
+apps/web/public/release-manifest.json
+apps/web/src/lib/artifact-integrity.json
+apps/web/src/lib/release-version.json

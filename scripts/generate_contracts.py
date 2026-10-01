@@ -101,6 +101,10 @@ def generate(check: bool = False):
     spec_path = Path("apps/web/src/lib/recruitment-spec.json")
     spec_text = json.dumps({**specification(Path.cwd()), "families": FAMILIES}, indent=2) + "\n"
     if check:
+        if json.loads(Path("artifacts/contracts.schema.json").read_text()) != schemas:
+            raise SystemExit("JSON schemas are stale")
+        if json.loads(Path("artifacts/openapi.json").read_text()) != create_app().openapi():
+            raise SystemExit("OpenAPI contract is stale")
         if path.read_text() != result:
             raise SystemExit("TypeScript contracts are stale")
         if not spec_path.exists() or spec_path.read_text() != spec_text:

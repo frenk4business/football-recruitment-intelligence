@@ -1,4 +1,5 @@
 "use client";
+import { fetchArtifact } from "@/lib/artifact";
 import { useEffect, useState } from "react";
 import type {
   TranslationIndex,
@@ -146,17 +147,15 @@ export function Translation({
     : filtered[0]?.player_id;
   useEffect(() => {
     if (!playerId) return;
+    setState({ id: playerId });
     const controller = new AbortController();
-    fetch(`/data/phase3/players/${playerId}.json`, {
-      signal: controller.signal,
-    })
-      .then((r) => {
-        if (!r.ok) throw new Error("Unavailable");
-        return r.json() as Promise<TranslationPlayerDetail>;
-      })
+    fetchArtifact<TranslationPlayerDetail>(
+      `/data/phase3/players/${playerId}.json`,
+      controller.signal,
+    )
       .then((data) => setState({ id: playerId, data }))
-      .catch((e) => {
-        if (e.name !== "AbortError") setState({ id: playerId, error: true });
+      .catch(() => {
+        if (!controller.signal.aborted) setState({ id: playerId, error: true });
       });
     return () => controller.abort();
   }, [playerId, retry]);

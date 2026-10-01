@@ -1,6 +1,6 @@
 [project]
 name = "football-recruitment-intelligence"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Reproducible open football data research"
 requires-python = ">=3.12,<3.14"
 dependencies = [
@@ -28,6 +28,10 @@ fri = "football_intelligence.cli:app"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "VERSION"
+pattern = "(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+)"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/football_intelligence"]

@@ -52,3 +52,23 @@ The unchanged 2023/24 DNA profiles feed a compact candidate index. Canonical mat
 A shared declarative scoring specification drives Python reference scoring and generated browser metadata. Strict fixture comparisons verify preference losses, weights, constraints, explanations, ties, frontier membership and separate ranking sensitivities. Scenario calculation stays in the browser over observed derived aggregates: initial index + one club detail, then one role bootstrap on demand. URL state supplies bounded, versioned share/reset without a server account or database. No LLM sits in the decision path.
 
 Research evaluation is registered and committed before method selection/final queries. Frozen result/selection hashes are checked during publication; a research rerun compares rather than overwrites them. Public export stages twenty allowlisted JSON files. Global schemas/OpenAPI/TypeScript are generated. A static deployment needs only committed aggregates and Node; no football-source access, Python, Bayesian sampler or heavy evaluation runs on Render.
+
+## v1 release boundary
+
+```mermaid
+flowchart LR
+  R[Local pinned-source research] --> F[Frozen versioned aggregate JSON]
+  F --> G[Schema + allowlist + SHA-256 + scientific lock]
+  V[VERSION + Git commit/time] --> B[Next.js static build]
+  G --> B
+  B --> M[Release manifest + hashed integrity indexes]
+  B --> C[Protected main / CI gates]
+  C --> D[Existing Render static CDN]
+  M --> D
+  D --> U[EN/NL browser: verify bytes, then render/score]
+  U --> E[Retry / reload / accessible recovery]
+```
+
+The release build is independent of raw/canonical/posterior caches. Pydantic remains the source for TypeScript/JSON Schema/OpenAPI. Node validates every explicit public artifact and frozen research input before export. Small content-addressed directory manifests bind lazy client fetches to exact release bytes; integrity validation completes before typed data is used. No external runtime library is added to the browser for schema validation; Ajv is a build-only development dependency. Standard system fonts and static SVG/HTML charts require no remote asset service.
+
+`VERSION` generates Python/package/footer/release metadata; commit time is the deterministic build timestamp. The final manifest excludes its own hash to avoid recursion, but hashes every other exported file. CI validates supported Python minors, frontend contracts/parity and three browser engines. Protected main and Render checksPass determine deployment; version tags validate and identify the already-verified deployment. See [operations](operations.md) and [contract versioning](contract-versioning.md).
