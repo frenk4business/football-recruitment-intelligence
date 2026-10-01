@@ -177,8 +177,10 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                 # First non-deprecated P18 only; a poor composition can be excluded manually.
                 title = images[0]
                 client.refresh = refresh_metadata or key == refresh_player
+                retrieving = True
                 try:
                     page, commons_source = client.commons(title)
+                    retrieving = False
                     info = page["imageinfo"][0]
                     record["commons_filename"] = page["title"]
                     record["license_name"] = (
@@ -199,6 +201,7 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                     url = safe_url(info["url"])
                     if urlparse(url).hostname != "upload.wikimedia.org":
                         raise ValueError("Original must be a Commons upload")
+                    retrieving = True
                     raw, source = client.get(url, refresh=False)
                     # Commons exposes SHA1 for the original file; compare before conversion.
                     import hashlib
@@ -207,6 +210,7 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                         raw, source = client.get(url, refresh=True)
                         if hashlib.sha1(raw).hexdigest() != info.get("sha1"):
                             raise ValueError("Commons original checksum differs")
+                    retrieving = False
                     reused = next(
                         (
                             a
@@ -286,6 +290,18 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                         ] = key
                         record.update(image_status="published", asset=hashed)
                 except Exception as error:
+                    if retrieving:
+                        write_json(
+                            output / "run-error.json",
+                            {
+                                "stage": "image_retrieval",
+                                "identity": key,
+                                "error": f"{type(error).__name__}: {error}",
+                            },
+                        )
+                        raise ValueError(
+                            "Image retrieval failed; previous publication retained; resume later"
+                        ) from error
                     record.update(image_status="error", error=f"{type(error).__name__}: {error}")
         records.append(record)
     manifest = {

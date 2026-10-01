@@ -400,7 +400,17 @@ def test_related_labels_are_bounded_and_never_replace_identity_claims(tmp_path, 
 
 
 @pytest.mark.parametrize(
-    "scenario", ["resume", "partial_failure", "shared_image", "rights_collision"]
+    "scenario",
+    [
+        "resume",
+        "partial_failure",
+        "shared_image",
+        "rights_collision",
+        "commons_timeout",
+        "download_timeout",
+        "commons_unavailable",
+        "download_unavailable",
+    ],
 )
 def test_pipeline_end_to_end_isolated_from_football_data(tmp_path, monkeypatch, scenario):
     import hashlib
@@ -475,6 +485,32 @@ def test_pipeline_end_to_end_isolated_from_football_data(tmp_path, monkeypatch, 
     assert first["published_assets"] == 1 and first["identities_processed"] == 1
     manifest_path = tmp_path / "artifacts/player-images/manifest.json"
     original = manifest_path.read_bytes()
+    if scenario.endswith(("_timeout", "_unavailable")):
+        published = tmp_path / "artifacts/player-images"
+        before = {
+            str(f.relative_to(published)): f.read_bytes()
+            for f in published.rglob("*")
+            if f.is_file()
+        }
+
+        def unavailable(*args, **kwargs):
+            if scenario.endswith("_timeout"):
+                raise httpx.ReadTimeout("Temporary network timeout")
+            raise ValueError("Wikimedia unavailable after bounded retries")
+
+        monkeypatch.setattr(
+            Fake, "commons" if scenario.startswith("commons") else "get", unavailable
+        )
+        with pytest.raises(ValueError, match="previous publication retained"):
+            pipeline.enrich(tmp_path)
+        after = {
+            str(f.relative_to(published)): f.read_bytes()
+            for f in published.rglob("*")
+            if f.is_file() and f.name != "run-error.json"
+        }
+        assert after == before
+        assert json.loads((published / "run-error.json").read_text())["stage"] == "image_retrieval"
+        return
     if scenario == "partial_failure":
         published = tmp_path / "artifacts/player-images"
         before = {f.name: f.read_bytes() for f in published.rglob("*") if f.is_file()}

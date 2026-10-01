@@ -74,7 +74,7 @@ Seven StatsBomb identities without DOB were explicitly confirmed from named sour
 
 **482 × 256px WebP, 3,964,182 bytes total**; one source per approved image for 32/64/96px display. Each file is under 40 KB. Originals are limited to 12 MB, 32 million pixels, 12,000px maximum side; only verified JPEG/PNG single-frame input is decoded. EXIF orientation is applied, aspect ratio preserved, full composition padded without cropping. Twenty MIME/decoded-format rejections were MPO multi-image files labelled JPEG; two other sources exceeded supported source limits. There were no unresolved network-download failures in the final report.
 
-Pillow 12.3.0 and the encoder version/parameters are recorded. Source SHA1/SHA256, metadata-response hashes, derivative SHA256, dimensions, bytes, retrieval time, source title, author, credit, copyright/byline notices and original links are retained. Wikidata provenance is stored per provider identity, including QID, URL, response hash and P18 title, so independently verified identities can safely share the same Commons asset. Different original/rights snapshots producing the same derivative are withheld for review. Any failed identity search prevents promotion and retains all approved artifacts; regression tests cover partial failures, shared derivatives and provenance collisions. A cached rerun reproduced **all 485 enrichment files byte-for-byte with zero network requests**; see [reproducibility.json](reproducibility.json).
+Pillow 12.3.0 and the encoder version/parameters are recorded. Source SHA1/SHA256, metadata-response hashes, derivative SHA256, dimensions, bytes, retrieval time, source title, author, credit, copyright/byline notices and original links are retained. Wikidata provenance is stored per provider identity, including QID, URL, response hash and P18 title, so independently verified identities can safely share the same Commons asset. Different original/rights snapshots producing the same derivative are withheld for review. Any failed identity search or Commons metadata/original retrieval prevents promotion and retains all approved artifacts; regression tests cover partial search/Commons/download failures, shared derivatives and provenance collisions. A cached rerun reproduced **all 485 enrichment files byte-for-byte with zero network requests**; see [reproducibility.json](reproducibility.json).
 
 ## I. Repository / deployment size
 
@@ -113,7 +113,7 @@ The existing player-search budget also passes: per-viewport median fill-to-rende
 
 ## N. Tests and release gate
 
-- **201 Python tests**; Ruff lint/format; mypy across 62 source files.
+- **205 Python tests**; Ruff lint/format; mypy across 62 source files.
 - **55 frontend unit tests**; ESLint; TypeScript; Prettier.
 - **210 Chromium/Firefox/WebKit tests**, including EN/NL, mobile, keyboard, accessibility, blocked index, broken images, local-only requests and static credits. All pass.
 - Production build and release validation pass: all image identity/source/licence/hash/dimension checks, exact published-file inventory, no unexpected image files, 2,146 frozen research hashes and existing public-data allowlist.
