@@ -2197,3 +2197,7 @@ h1 {
 details:not([open]) > :not(summary) {
   display: none;
 }
+/* Wide evidence tables scroll within their own layout/paint boundary. */
+.table-wrap {
+  contain: inline-size layout paint;
+}

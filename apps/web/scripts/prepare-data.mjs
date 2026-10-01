@@ -18,6 +18,24 @@ import {
   verifyScience,
 } from "./release-common.mjs";
 verifyScience();
+const staticAssets = new Set([
+  "brand/statsbomb.png",
+  "favicon.svg",
+  "robots.txt",
+  "skillcorner-license.txt",
+  "release-manifest.json",
+]);
+const publicRoot = join(root, "apps/web/public");
+for (const path of walk(publicRoot)) {
+  const name = path.slice(publicRoot.length + 1);
+  if (
+    !name.startsWith("data/") &&
+    !name.startsWith("integrity/") &&
+    !staticAssets.has(name)
+  ) {
+    throw new Error(`Unlisted static publication asset: ${name}`);
+  }
+}
 if (
   json("apps/web/package.json").version !== version ||
   json("apps/web/package-lock.json").version !== version
