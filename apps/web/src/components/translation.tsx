@@ -147,6 +147,7 @@ export function Translation({
     : filtered[0]?.player_id;
   useEffect(() => {
     if (!playerId) return;
+    setState({ id: playerId });
     const controller = new AbortController();
     fetchArtifact<TranslationPlayerDetail>(
       `/data/phase3/players/${playerId}.json`,

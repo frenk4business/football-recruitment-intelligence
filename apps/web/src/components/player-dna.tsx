@@ -37,6 +37,7 @@ function useArtifact<T>(url: string | null, retry: number = 0) {
   }>();
   useEffect(() => {
     if (!url) return;
+    setState({ url });
     const controller = new AbortController();
     fetchArtifact<T>(url, controller.signal)
       .then((data) => setState({ url, data }))

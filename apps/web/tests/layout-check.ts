@@ -4,6 +4,28 @@ export async function expectNoOverflow(page: Page) {
     route: location.pathname,
     viewport: innerWidth,
     scrollWidth: document.documentElement.scrollWidth,
+    textOverflow:
+      document.documentElement.scrollWidth > innerWidth
+        ? Array.from(
+            document.querySelectorAll(
+              "main h2,main h3,main p,main code,main span",
+            ),
+          )
+            .filter((e) => {
+              const r = document.createRange();
+              r.selectNodeContents(e);
+              return (
+                r.getBoundingClientRect().right > innerWidth + 1 &&
+                e.getBoundingClientRect().right <= innerWidth + 1
+              );
+            })
+            .slice(0, 10)
+            .map((e) => ({
+              tag: e.tagName,
+              class: e.className,
+              text: e.textContent?.slice(0, 100),
+            }))
+        : [],
     offenders:
       document.documentElement.scrollWidth > innerWidth
         ? Array.from(document.querySelectorAll("body *"))

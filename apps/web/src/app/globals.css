@@ -2201,3 +2201,20 @@ details:not([open]) > :not(summary) {
 .table-wrap {
   contain: inline-size layout paint;
 }
+@media print {
+  .table-wrap {
+    contain: none;
+    overflow: visible;
+  }
+  table,
+  .recruitment-table {
+    min-width: 0;
+    white-space: normal;
+    font-size: 9px;
+  }
+}
+/* Long technical labels and Dutch compound words may exceed a narrow text box
+   even when the element's own rectangle fits. Preserve all text by wrapping. */
+body {
+  overflow-wrap: anywhere;
+}
