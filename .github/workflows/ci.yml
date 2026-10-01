@@ -29,6 +29,7 @@ jobs:
       - run: uv run mypy src
       - run: uv run pytest -q
       - run: uv run python scripts/generate_contracts.py --check
+      - run: uv run python scripts/generate_profile_contracts.py --check
   web:
     name: Frontend and release build
     runs-on: ubuntu-latest
