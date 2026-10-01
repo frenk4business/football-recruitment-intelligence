@@ -831,3 +831,37 @@ main#main {
     margin-block: 10px;
   }
 }
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 25;
+}
+.player-results > .profile-actions {
+  top: 72px;
+}
+.profile-detail,
+#playing-style,
+#similar-players,
+#profile-quality,
+#shortlist-title {
+  scroll-margin-top: 88px;
+}
+.single-player-style > summary {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+@media (max-width: 760px) {
+  .app-topbar {
+    position: relative;
+  }
+  .player-results > .profile-actions {
+    top: 0;
+  }
+  .profile-detail,
+  #playing-style,
+  #similar-players,
+  #profile-quality,
+  #shortlist-title {
+    scroll-margin-top: 16px;
+  }
+}

@@ -16,12 +16,10 @@ for (const locale of ["en", "nl"]) {
     expect(details).toHaveLength(0);
     await page.locator("#home-query").fill("Premier League");
     await expect(
-      page
-        .locator(".global-search-results")
-        .getByRole("heading", {
-          name: nl ? "Competities" : "Competitions",
-          exact: true,
-        }),
+      page.locator(".global-search-results").getByRole("heading", {
+        name: nl ? "Competities" : "Competitions",
+        exact: true,
+      }),
     ).toBeVisible();
     await page.keyboard.press("Escape");
     await expect(page.locator(".global-search-results")).toHaveCount(0);
@@ -30,6 +28,7 @@ for (const locale of ["en", "nl"]) {
     await expect(page.locator("#profile-detail h2")).toHaveText(
       "Alessia Russo",
     );
+    await expect(page.locator(".profile-metrics").first()).toBeVisible();
     expect(details).toHaveLength(1);
   });
   test(`${locale}: three-player comparison survives language and browser history on mobile`, async ({

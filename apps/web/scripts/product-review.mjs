@@ -102,6 +102,35 @@ for (const locale of ["en", "nl"])
       report.push(row);
       await page.close();
     }
+if (phase === "after") {
+  for (const locale of ["en", "nl"])
+    for (const width of [1440, 768, 375]) {
+      const page = await browser.newPage({ viewport: { width, height: 960 } });
+      const root =
+        (process.env.PREVIEW_URL ?? "http://127.0.0.1:4173") +
+        (locale === "nl" ? "/nl" : "");
+      await page.goto(root + "/players/?q=Alessia+Russo");
+      await page.locator(".profile-name").first().click();
+      await page.locator(".style-families").waitFor();
+      await page.locator("#profile-detail").scrollIntoViewIfNeeded();
+      await page.screenshot({
+        path: `${dir}/${phase}-${locale}-${width}-wsl-profile.png`,
+      });
+      await page.locator("#similar-players button").nth(0).click();
+      await page.locator("#similar-players button").nth(1).click();
+      await page.waitForFunction(
+        () =>
+          document
+            .querySelector(".profile-metrics thead")
+            ?.querySelectorAll("th").length === 4,
+      );
+      await page.locator(".profile-metrics").first().scrollIntoViewIfNeeded();
+      await page.screenshot({
+        path: `${dir}/${phase}-${locale}-${width}-comparison.png`,
+      });
+      await page.close();
+    }
+}
 await browser.close();
 writeFileSync(`${dir}/${phase}.json`, JSON.stringify(report, null, 2));
 console.log(report);

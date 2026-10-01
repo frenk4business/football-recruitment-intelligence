@@ -651,10 +651,22 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     <h3>{locale === "en" ? "Playing style" : "Speelstijl"}</h3>
                     {profile.data.dna_player_id &&
                       selected.capabilities.validated_dna && (
-                        <ProfileStyle
-                          locale={locale}
-                          id={profile.data.dna_player_id}
-                        />
+                        <details
+                          className="single-player-style"
+                          key={Boolean(state.compare).toString()}
+                          open={!state.compare}
+                        >
+                          <summary>
+                            {locale === "en"
+                              ? "Role-relative percentiles"
+                              : "Percentielen binnen de rol"}{" "}
+                            · {selected.name}
+                          </summary>
+                          <ProfileStyle
+                            locale={locale}
+                            id={profile.data.dna_player_id}
+                          />
+                        </details>
                       )}
                     <h4>{c.common}</h4>
                     <p className="small">
