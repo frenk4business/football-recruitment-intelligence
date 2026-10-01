@@ -1,0 +1,326 @@
+[
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "",
+    "initial": {
+      "lcp": 68,
+      "cls": 0,
+      "transfer": 310678,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "players/",
+    "initial": {
+      "lcp": 108,
+      "cls": 0.19270833333333334,
+      "transfer": 419314,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 25.34345899999994,
+    "filter_ms": 18.26404199999979,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 24,
+      "cls": 0.011419524581344041,
+      "transfer": 378803,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 26.56166600000006,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "translation/",
+    "initial": {
+      "lcp": 72,
+      "cls": 0.22734128141991886,
+      "transfer": 426106,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 32,
+      "cls": 0,
+      "transfer": 272221,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "route": "research/",
+    "initial": {
+      "lcp": 24,
+      "cls": 0,
+      "transfer": 311465,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "",
+    "initial": {
+      "lcp": 24,
+      "cls": 0,
+      "transfer": 284038,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "players/",
+    "initial": {
+      "lcp": 20,
+      "cls": 0.23345989583333335,
+      "transfer": 392674,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 13.901667000000089,
+    "filter_ms": 5.967208000000028,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 20,
+      "cls": 0.013782402615017359,
+      "transfer": 352163,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 19.14037499999995,
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "translation/",
+    "initial": {
+      "lcp": 68,
+      "cls": 0.247184375,
+      "transfer": 399466,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 28,
+      "cls": 0,
+      "transfer": 245581,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "en",
+    "width": 375,
+    "route": "research/",
+    "initial": {
+      "lcp": 20,
+      "cls": 0,
+      "transfer": 284825,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "",
+    "initial": {
+      "lcp": 28,
+      "cls": 0,
+      "transfer": 310688,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "players/",
+    "initial": {
+      "lcp": 76,
+      "cls": 0.19270833333333334,
+      "transfer": 419297,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 14.52966699999979,
+    "filter_ms": 5.971166000000267,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 24,
+      "cls": 0.011428255104724273,
+      "transfer": 378791,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 18.52720799999952,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "translation/",
+    "initial": {
+      "lcp": 68,
+      "cls": 0.22734128141991886,
+      "transfer": 426113,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 32,
+      "cls": 0,
+      "transfer": 272837,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "route": "research/",
+    "initial": {
+      "lcp": 24,
+      "cls": 0,
+      "transfer": 311478,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "",
+    "initial": {
+      "lcp": 24,
+      "cls": 0,
+      "transfer": 284048,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "players/",
+    "initial": {
+      "lcp": 20,
+      "cls": 0.23349701171875,
+      "transfer": 392657,
+      "js": 541601,
+      "json": 859981
+    },
+    "search_ms": 15.475209000000177,
+    "filter_ms": 6.392291999998633,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "recruitment/",
+    "initial": {
+      "lcp": 20,
+      "cls": 0.01058157140661169,
+      "transfer": 352151,
+      "js": 562825,
+      "json": 234534
+    },
+    "recruitment_ms": 20.869416999999885,
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "translation/",
+    "initial": {
+      "lcp": 24,
+      "cls": 0.24303569010416667,
+      "transfer": 399473,
+      "js": 533506,
+      "json": 206037
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "methodology/",
+    "initial": {
+      "lcp": 32,
+      "cls": 0,
+      "transfer": 246197,
+      "js": 561906,
+      "json": 0
+    },
+    "overflow": false
+  },
+  {
+    "locale": "nl",
+    "width": 375,
+    "route": "research/",
+    "initial": {
+      "lcp": 20,
+      "cls": 0,
+      "transfer": 284838,
+      "js": 474646,
+      "json": 0
+    },
+    "overflow": false
+  }
+]
