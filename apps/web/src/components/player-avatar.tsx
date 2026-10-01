@@ -79,7 +79,8 @@ export function PlayerAvatar({
       aria-label={!decorative ? label : undefined}
       style={{ width: dimensions, height: dimensions }}
     >
-      {available ? (
+      <span>{initials(name)}</span>
+      {available && (
         <Image
           src={`/${record.path}`}
           width={dimensions}
@@ -88,8 +89,6 @@ export function PlayerAvatar({
           loading="lazy"
           onError={() => setFailed(record.path)}
         />
-      ) : (
-        <span>{initials(name)}</span>
       )}
     </span>
   );

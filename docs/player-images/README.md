@@ -53,7 +53,7 @@ Approved derivatives, their manifest and review/coverage reports live in `artifa
 
 ## UI, accessibility and attribution
 
-Players lists use 32px avatars, comparisons 64px, and profile headers 96px. Recruitment uses the same boxes and exact existing provider UUID mapping. Missing, excluded, ambiguous, failed or unavailable images use understated navy initials in identical geometry. List/comparison avatars are decorative beside names; the profile avatar has a localized description. Broken image requests fall back to initials. All image requests are local and lazy; one SHA256-verified presentation index is shared per page. Image failures never block football data or analytics.
+Players lists use 32px avatars, comparisons 64px, and profile headers 96px. Recruitment uses the same boxes and exact existing provider UUID mapping. Missing, excluded, ambiguous, failed or unavailable images use understated navy initials in identical geometry. List/comparison avatars are decorative beside names; the profile avatar has a localized description. Initials stay visible beneath pending images, and broken image requests fall back to those same initials. All image requests are local and lazy; one SHA256-verified presentation index is shared per page. Image failures never block football data or analytics.
 
 Initials use Unicode letter tokens, first letter of the first and last token, uppercased deterministically. A mononym uses one initial; empty or non-letter input uses `?`. Multi-part/hyphenated surnames and punctuation follow the same documented rule, without attempting cultural name inference.
 
