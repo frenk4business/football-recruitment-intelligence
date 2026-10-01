@@ -870,3 +870,6 @@ main#main {
 .player-database {
   min-height: calc(100svh - 180px);
 }
+.translation-workflow > .state[role="status"] {
+  min-height: calc(100svh - 180px);
+}
