@@ -74,11 +74,11 @@ Seven StatsBomb identities without DOB were explicitly confirmed from named sour
 
 **482 × 256px WebP, 3,964,182 bytes total**; one source per approved image for 32/64/96px display. Each file is under 40 KB. Originals are limited to 12 MB, 32 million pixels, 12,000px maximum side; only verified JPEG/PNG single-frame input is decoded. EXIF orientation is applied, aspect ratio preserved, full composition padded without cropping. Twenty MIME/decoded-format rejections were MPO multi-image files labelled JPEG; two other sources exceeded supported source limits. There were no unresolved network-download failures in the final report.
 
-Pillow 12.3.0 and the encoder version/parameters are recorded. Source SHA1/SHA256, metadata-response hashes, derivative SHA256, dimensions, bytes, retrieval time, source title, author, credit, copyright/byline notices and original links are retained. A cached rerun reproduced **all 485 enrichment files byte-for-byte with zero network requests**; see [reproducibility.json](reproducibility.json).
+Pillow 12.3.0 and the encoder version/parameters are recorded. Source SHA1/SHA256, metadata-response hashes, derivative SHA256, dimensions, bytes, retrieval time, source title, author, credit, copyright/byline notices and original links are retained. Wikidata provenance is stored per provider identity, including QID, URL, response hash and P18 title, so independently verified identities can safely share the same Commons asset. Different original/rights snapshots producing the same derivative are withheld for review. Any failed identity search prevents promotion and retains all approved artifacts; regression tests cover partial failures, shared derivatives and provenance collisions. A cached rerun reproduced **all 485 enrichment files byte-for-byte with zero network requests**; see [reproducibility.json](reproducibility.json).
 
 ## I. Repository / deployment size
 
-Approved images add 3.96 MB. The complete enrichment artifacts (including the 2.88 MB manifest and 5.73 MB review JSON) occupy 12.58 MB uncompressed. The measured pre-commit new-file set was 12.77 MB; individually zlib-compressed new blobs total approximately **5.26 MB**, an estimate of incremental clone impact before Git tree/pack/delta overhead. The implementation commit’s actual incremental Git pack measures **5,407,237 bytes (5.41 MB)** against the baseline; see [git-impact.json](git-impact.json). This measurement precedes the small documentation-only audit commit. Raw originals and API cache are excluded. No Git LFS, object store, new service or paid infrastructure is needed.
+Approved images add 3.96 MB. The complete enrichment artifacts (including the 2.90 MB manifest and 5.73 MB review JSON) occupy 12.59 MB uncompressed. The measured pre-commit new-file set was 12.77 MB; individually zlib-compressed new blobs total approximately **5.26 MB**, an estimate of incremental clone impact before Git tree/pack/delta overhead. The implementation commit’s actual incremental Git pack measures **5,407,237 bytes (5.41 MB)** against the baseline; see [git-impact.json](git-impact.json). This measurement precedes the small documentation-only audit commit. Raw originals and API cache are excluded. No Git LFS, object store, new service or paid infrastructure is needed.
 
 Static export: **57,324,260 → 62,541,902 bytes (+5,217,642; +9.1%)**, below the unchanged 65 MB ceiling. Scientific public JSON remains 47,430,174 bytes. Credits are generated once per language as static HTML rather than duplicated through Next.js RSC; the original full React listing exceeded the limit and was replaced before completion. The final export contains 20 application routes and 5,870 checksummed build files, including two secondary credits documents.
 
@@ -113,8 +113,8 @@ The existing player-search budget also passes: per-viewport median fill-to-rende
 
 ## N. Tests and release gate
 
-- **198 Python tests**; Ruff lint/format; mypy across 62 source files.
-- **51 frontend unit tests**; ESLint; TypeScript; Prettier.
+- **201 Python tests**; Ruff lint/format; mypy across 62 source files.
+- **55 frontend unit tests**; ESLint; TypeScript; Prettier.
 - **210 Chromium/Firefox/WebKit tests**, including EN/NL, mobile, keyboard, accessibility, blocked index, broken images, local-only requests and static credits. All pass.
 - Production build and release validation pass: all image identity/source/licence/hash/dimension checks, exact published-file inventory, no unexpected image files, 2,146 frozen research hashes and existing public-data allowlist.
 - npm audit: zero known vulnerabilities; Python dependency audit: no known vulnerabilities. Focused secret scan: no findings in reachable history or working files. This scanner is not a claim of exhaustive secret detection.

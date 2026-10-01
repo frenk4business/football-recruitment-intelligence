@@ -85,6 +85,9 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
             # Do not hammer an unavailable service. Preserve current published output.
             write_json(output / "run-error.json", {"stage": "search", "errors": errors})
             raise ValueError("Wikimedia unavailable; previous publication retained; resume later")
+    if errors:
+        write_json(output / "run-error.json", {"stage": "search", "errors": errors})
+        raise ValueError("Identity lookup failed; previous publication retained; resume later")
     qids = sorted({m["id"] for matches in searches.values() for m in matches})
     client.refresh = refresh_metadata
     for start in range(0, len(qids), 20):
@@ -159,9 +162,6 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
             "common_name_review": person.get("common_name_review", False),
             "image_status": "not_verified",
         }
-        if key in errors:
-            match.update(status="ambiguous", reason="lookup_failed_identity_unresolved")
-            record.update(image_status="error", error=errors[key])
         if match["status"] == "verified":
             qid = match["qid"]
             images = values(all_entities[qid], "P18")
@@ -228,6 +228,16 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                         encoded = thumbnail(raw, source["mime"], page["title"])
                     hashed = digest(encoded)
                     path = f"players/images/{hashed}.webp"
+                    if hashed in assets and (
+                        assets[hashed]["source_hash"] != digest(raw)
+                        or assets[hashed]["commons_metadata_sha256"] != commons_source["sha256"]
+                    ):
+                        record.update(
+                            image_status="source_collision_requires_review",
+                            error="Identical derivative has different source/rights provenance",
+                        )
+                        records.append(record)
+                        continue
                     if hashed not in assets and total_bytes + len(encoded) > BUDGET:
                         record["image_status"] = "deferred_size_budget"
                     else:
@@ -240,8 +250,6 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                                 "width": 256,
                                 "height": 256,
                                 "source": "Wikimedia Commons",
-                                "wikidata_id": qid,
-                                "wikidata_url": f"https://www.wikidata.org/wiki/{qid}",
                                 "commons_filename": page["title"],
                                 "commons_page_url": info["descriptionurl"],
                                 "original_image_url": url,
@@ -253,7 +261,6 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                                 "source_mime": info["mime"],
                                 "retrieved_at": commons_source["retrieved_at"],
                                 "commons_metadata_sha256": commons_source["sha256"],
-                                "wikidata_metadata_sha256": entity_sources[qid]["sha256"],
                                 "licence_metadata": info["extmetadata"],
                                 **rights,
                             }
@@ -261,6 +268,9 @@ def enrich(root: Path, *, refresh_metadata: bool = False, refresh_player: str | 
                         mapping[key] = {
                             "asset": hashed,
                             "wikidata_id": qid,
+                            "wikidata_url": f"https://www.wikidata.org/wiki/{qid}",
+                            "wikidata_metadata_sha256": entity_sources[qid]["sha256"],
+                            "wikidata_image_title": title,
                             "match_status": "verified",
                             "match_method": match["method"],
                             "name": person["names"][0],

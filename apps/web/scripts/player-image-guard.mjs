@@ -161,8 +161,18 @@ export function validateImages(root) {
       );
     }
     check(
-      manifest.assets[person.asset]?.wikidata_id === person.wikidata_id,
-      "identity/image QID differs",
+      manifest.assets[person.asset] &&
+        person.wikidata_url ===
+          `https://www.wikidata.org/wiki/${person.wikidata_id}` &&
+        hex.test(person.wikidata_metadata_sha256) &&
+        review.get(id)?.wikidata_metadata_sha256?.[person.wikidata_id] ===
+          person.wikidata_metadata_sha256 &&
+        match.candidates.some(
+          (candidate) =>
+            candidate.qid === person.wikidata_id &&
+            candidate.images?.includes(person.wikidata_image_title),
+        ),
+      "missing per-identity image provenance",
     );
     referenced.add(person.asset);
   }
@@ -256,11 +266,7 @@ export function validateImages(root) {
       ),
       "commercial photo agency provenance",
     );
-    for (const key of [
-      "source_hash",
-      "commons_metadata_sha256",
-      "wikidata_metadata_sha256",
-    ])
+    for (const key of ["source_hash", "commons_metadata_sha256"])
       check(hex.test(asset[key]), "missing source hash");
     check(
       asset.transformation &&
@@ -278,7 +284,6 @@ export function validateImages(root) {
       ),
       "non-Commons source",
     );
-    https(asset.wikidata_url, "www.wikidata.org");
     asset.attribution_links.forEach((u) => https(u));
     bytes += data.length;
   }

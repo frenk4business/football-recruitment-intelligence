@@ -40,16 +40,13 @@ function fixture() {
         bytes: bytes.length,
         width: 256,
         height: 256,
-        wikidata_id: "Q123",
         source: "Wikimedia Commons",
-        wikidata_url: "https://www.wikidata.org/wiki/Q123",
         commons_page_url: "https://commons.wikimedia.org/wiki/File:Test.png",
         commons_filename: "File:Test.png",
         original_image_url:
           "https://upload.wikimedia.org/wikipedia/commons/a/ab/Test.png",
         source_hash: hash,
         commons_metadata_sha256: hash,
-        wikidata_metadata_sha256: hash,
         retrieved_at: "2026-10-01T00:00:00Z",
         license_id: "CC-BY-SA-4.0",
         license_name: "CC BY-SA 4.0",
@@ -72,6 +69,9 @@ function fixture() {
       "statsbomb:1": {
         asset: hash,
         wikidata_id: "Q123",
+        wikidata_url: "https://www.wikidata.org/wiki/Q123",
+        wikidata_metadata_sha256: hash,
+        wikidata_image_title: "Test.png",
         match_status: "verified",
         match_method: "manual_metadata_review",
         profiles: ["statsbomb-1-1-1"],
@@ -108,7 +108,12 @@ function fixture() {
     {
       identity: "statsbomb:1",
       asset: hash,
-      match: { status: "verified", qid: "Q123" },
+      wikidata_metadata_sha256: { Q123: hash },
+      match: {
+        status: "verified",
+        qid: "Q123",
+        candidates: [{ qid: "Q123", images: ["Test.png"] }],
+      },
     },
   ]);
   writeFileSync(
@@ -170,6 +175,21 @@ for (const [name, mutate] of [
   [
     "unverified identity",
     (f) => (f.manifest.identities["statsbomb:1"].match_status = "likely"),
+  ],
+  [
+    "missing identity snapshot",
+    (f) => delete f.manifest.identities["statsbomb:1"].wikidata_metadata_sha256,
+  ],
+  [
+    "wrong identity snapshot",
+    (f) =>
+      (f.manifest.identities["statsbomb:1"].wikidata_metadata_sha256 =
+        "0".repeat(64)),
+  ],
+  [
+    "unreviewed P18 image",
+    (f) =>
+      (f.manifest.identities["statsbomb:1"].wikidata_image_title = "Other.png"),
   ],
   [
     "unsafe licence",
@@ -253,6 +273,66 @@ test("unlisted public images are rejected before copy and in export", () => {
     assert.throws(
       () => validatePublishedImages(f.root, join(f.root, "apps/web/public")),
       /unexpected/,
+    );
+  } finally {
+    f.clean();
+  }
+});
+
+test("different reviewed QIDs share one asset while retaining independent identity evidence", () => {
+  const f = fixture();
+  try {
+    const secondHash = "b".repeat(64);
+    f.manifest.identities["statsbomb:2"] = {
+      ...f.manifest.identities["statsbomb:1"],
+      wikidata_id: "Q456",
+      wikidata_url: "https://www.wikidata.org/wiki/Q456",
+      wikidata_metadata_sha256: secondHash,
+      profiles: ["statsbomb-1-1-2"],
+    };
+    f.manual.players["statsbomb:2"] = {
+      ...f.manual.players["statsbomb:1"],
+      wikidata_id: "Q456",
+      evidence_urls: [
+        "https://example.org/second",
+        "https://www.wikidata.org/wiki/Q456",
+      ],
+    };
+    f.write("config/player-images/overrides.json", f.manual);
+    f.write("artifacts/player-images/manifest.json", f.manifest);
+    f.write("artifacts/v11/public/index.json", {
+      profiles: [{ id: "statsbomb-1-1-1" }, { id: "statsbomb-1-1-2" }],
+    });
+    f.write("artifacts/player-images/review.json", [
+      {
+        identity: "statsbomb:1",
+        asset: hash,
+        wikidata_metadata_sha256: { Q123: hash },
+        match: {
+          status: "verified",
+          qid: "Q123",
+          candidates: [{ qid: "Q123", images: ["Test.png"] }],
+        },
+      },
+      {
+        identity: "statsbomb:2",
+        asset: hash,
+        wikidata_metadata_sha256: { Q456: secondHash },
+        match: {
+          status: "verified",
+          qid: "Q456",
+          candidates: [{ qid: "Q456", images: ["Test.png"] }],
+        },
+      },
+    ]);
+    publishImages(f.root);
+    validatePublishedImages(f.root, join(f.root, "apps/web/public"));
+    assert.equal(Object.keys(validateImages(f.root).assets).length, 1);
+    f.manifest.identities["statsbomb:2"].wikidata_metadata_sha256 = hash;
+    f.write("artifacts/player-images/manifest.json", f.manifest);
+    assert.throws(
+      () => validateImages(f.root),
+      /per-identity image provenance/,
     );
   } finally {
     f.clean();

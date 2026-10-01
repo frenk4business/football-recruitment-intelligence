@@ -399,7 +399,10 @@ def test_related_labels_are_bounded_and_never_replace_identity_claims(tmp_path, 
     assert requested[-1] == ("Q2", "labels|aliases|claims")
 
 
-def test_pipeline_end_to_end_isolated_from_football_data(tmp_path, monkeypatch):
+@pytest.mark.parametrize(
+    "scenario", ["resume", "partial_failure", "shared_image", "rights_collision"]
+)
+def test_pipeline_end_to_end_isolated_from_football_data(tmp_path, monkeypatch, scenario):
     import hashlib
     import json
 
@@ -472,6 +475,82 @@ def test_pipeline_end_to_end_isolated_from_football_data(tmp_path, monkeypatch):
     assert first["published_assets"] == 1 and first["identities_processed"] == 1
     manifest_path = tmp_path / "artifacts/player-images/manifest.json"
     original = manifest_path.read_bytes()
+    if scenario == "partial_failure":
+        published = tmp_path / "artifacts/player-images"
+        before = {f.name: f.read_bytes() for f in published.rglob("*") if f.is_file()}
+        other = {**p, "id": "wyscout:2", "names": ["Eva Other"]}
+        monkeypatch.setattr(pipeline, "identities", lambda root: [p, other])
+
+        def partially_failed_search(self, name):
+            if name == "Éva Example":
+                raise httpx.ReadTimeout("Temporary lookup failure")
+            return [], source
+
+        monkeypatch.setattr(Fake, "search", partially_failed_search)
+        with pytest.raises(ValueError, match="previous publication retained"):
+            pipeline.enrich(tmp_path)
+        after = {
+            f.name: f.read_bytes()
+            for f in published.rglob("*")
+            if f.is_file() and f.name != "run-error.json"
+        }
+        assert after == before
+        return
+    if scenario in {"shared_image", "rights_collision"}:
+        other = {
+            **p,
+            "id": "wyscout:2",
+            "provider_player_id": "2",
+            "names": ["Eva Other"],
+            "profiles": ["wyscout-1-1-2"],
+        }
+        other_entity = deepcopy(e)
+        other_entity.update(id="Q456", labels={"en": {"value": "Eva Other"}})
+        if scenario == "rights_collision":
+            other_entity["claims"]["P18"] = [claim("Other.jpg")]
+        monkeypatch.setattr(pipeline, "identities", lambda root: [p, other])
+        monkeypatch.setattr(
+            Fake,
+            "search",
+            lambda self, name: ([{"id": "Q123" if name == "Éva Example" else "Q456"}], source),
+        )
+        monkeypatch.setattr(
+            Fake,
+            "entities",
+            lambda self, ids: (
+                {q: {"Q123": e, "Q456": other_entity, **RELATED}[q] for q in ids},
+                {
+                    **source,
+                    "entity_sources": {
+                        q: {**source, "sha256": ("b" if q == "Q456" else "a") * 64} for q in ids
+                    },
+                },
+            ),
+        )
+        monkeypatch.setattr(
+            Fake,
+            "commons",
+            lambda self, title: (
+                {"title": f"File:{title}", "imageinfo": [image_info]},
+                {**source, "sha256": ("c" if title == "Other.jpg" else "a") * 64},
+            ),
+        )
+        result = pipeline.enrich(tmp_path)
+        manifest = json.loads(manifest_path.read_text())
+        assert result["published_assets"] == 1
+        assert result["published_identities"] == (2 if scenario == "shared_image" else 1)
+        assert "wikidata_id" not in next(iter(manifest["assets"].values()))
+        if scenario == "shared_image":
+            assert manifest["identities"]["wyscout:2"]["wikidata_id"] == "Q456"
+            assert manifest["identities"]["wyscout:2"]["wikidata_metadata_sha256"] == "b" * 64
+            assert manifest["identities"]["wyscout:1"]["wikidata_metadata_sha256"] == "a" * 64
+            assert (
+                manifest["identities"]["wyscout:1"]["asset"]
+                == manifest["identities"]["wyscout:2"]["asset"]
+            )
+        else:
+            assert result["image_status"]["source_collision_requires_review"] == 1
+        return
     monkeypatch.setattr(
         pipeline, "thumbnail", lambda *a: pytest.fail("verified derived image must be reused")
     )
