@@ -2,7 +2,8 @@ name: Research and product checks
 on:
   pull_request:
   push:
-    branches: [main, phase/01-data-foundation, phase/02-player-dna]
+    branches: [main, 'phase/**']
+    tags: ['v*']
 permissions:
   contents: read
 concurrency:
@@ -10,22 +11,28 @@ concurrency:
   cancel-in-progress: true
 jobs:
   python:
+    name: Python ${{ matrix.python }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.12', '3.13']
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
-          version: "0.12.21"
+          version: '0.12.21'
           enable-cache: true
-      - run: uv sync --frozen --python 3.12
+      - run: uv sync --frozen --python ${{ matrix.python }}
       - run: uv run ruff check src tests scripts && uv run ruff format --check src tests scripts
       - run: uv run mypy src
       - run: uv run pytest -q
       - run: uv run python scripts/generate_contracts.py --check
   web:
+    name: Frontend and release build
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     defaults:
       run:
         working-directory: apps/web
@@ -38,14 +45,82 @@ jobs:
           cache-dependency-path: apps/web/package-lock.json
       - run: npm ci
       - run: npm run lint && npm run typecheck && npm test
-      - run: npm run build
+      - run: npm run build && npm run release:validate
         env:
-          NEXT_TELEMETRY_DISABLED: "1"
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:smoke
+          NEXT_TELEMETRY_DISABLED: '1'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: static-release
+          path: apps/web/out
+          retention-days: 7
+  browsers:
+    name: Browser ${{ matrix.browser }}
+    needs: web
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    defaults:
+      run:
+        working-directory: apps/web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: static-release
+          path: apps/web/out
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+      - run: npm run test:smoke -- --project=${{ matrix.browser }}
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: browser-failure-evidence
-          path: apps/web/test-results
+          name: browser-failure-${{ matrix.browser }}
+          path: |
+            apps/web/test-results
+            apps/web/playwright-report
           retention-days: 7
+  dependencies:
+    name: Dependency audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: npm --prefix apps/web audit --audit-level=high
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.21'
+          enable-cache: true
+      - run: uv export --frozen --no-emit-project --format requirements-txt --output-file /tmp/fri-audit.txt
+      - run: uvx pip-audit==2.10.1 --no-deps --disable-pip -r /tmp/fri-audit.txt
+  release-gate:
+    name: Release gate
+    needs: [python, web, browsers, dependencies]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Require all validation jobs
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          assert all(job['result'] == 'success' for job in json.loads(os.environ['RESULTS']).values())
+          PY
+      - uses: actions/checkout@v4
+      - name: Validate tag only; Render deploys main independently
+        if: startsWith(github.ref, 'refs/tags/')
+        run: test "$GITHUB_REF_NAME" = "v$(cat VERSION)"
