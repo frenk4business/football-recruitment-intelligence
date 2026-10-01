@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { fetchArtifact } from "@/lib/artifact";
-import { route, type Locale } from "@/lib/content";
+import { route, type Locale } from "@/lib/routes";
 import { normalizeName, profileSearchText } from "@/lib/player-search";
 import type { ProfileIndex } from "@/lib/profile-contracts";
 
@@ -14,10 +13,21 @@ export function GlobalSearch({ locale }: { locale: Locale }) {
   const [failed, setFailed] = useState(false);
   const [retry, setRetry] = useState(0);
   const input = useRef<HTMLInputElement>(null);
+  const form = useRef<HTMLFormElement>(null);
+  useEffect(() => {
+    const outside = (event: PointerEvent) => {
+      if (!form.current?.contains(event.target as Node)) setActive(false);
+    };
+    document.addEventListener("pointerdown", outside);
+    return () => document.removeEventListener("pointerdown", outside);
+  }, []);
   useEffect(() => {
     if (!active || index) return;
     const controller = new AbortController();
-    fetchArtifact<ProfileIndex>("/data/v11/index.json", controller.signal)
+    import("@/lib/artifact")
+      .then(({ fetchArtifact }) =>
+        fetchArtifact<ProfileIndex>("/data/v11/index.json", controller.signal),
+      )
       .then(setIndex)
       .catch(() => {
         if (!controller.signal.aborted) setFailed(true);
@@ -49,12 +59,16 @@ export function GlobalSearch({ locale }: { locale: Locale }) {
     route(locale, "players") + "?" + new URLSearchParams({ [key]: value });
   return (
     <form
+      ref={form}
       className="global-search"
       role="search"
       action={route(locale, "players")}
       method="get"
       onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget)) setActive(false);
+        // Safari pointer clicks can blur the input without focusing the link.
+        // Outside pointerdown handles that path without unmounting a pending link click.
+        if (e.relatedTarget && !e.currentTarget.contains(e.relatedTarget))
+          setActive(false);
       }}
       onKeyDown={(e) => {
         if (e.key === "Escape") {

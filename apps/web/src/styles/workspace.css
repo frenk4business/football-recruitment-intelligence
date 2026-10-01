@@ -776,3 +776,58 @@ main#main {
 .recruitment input[type="number"] {
   border-radius: var(--radius-control);
 }
+.requirements-simple .requirement-context {
+  display: none;
+}
+.requirements-simple .requirement-row:not(.is-active) > label:nth-child(3) {
+  display: none;
+}
+.requirements-simple .requirement-row:not(.is-active) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.table-wrap:focus-visible {
+  outline: 3px solid #5686b1;
+  outline-offset: 3px;
+}
+@media (max-width: 760px) {
+  .recruitment-toolbar {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .recruitment-toolbar > div {
+    gap: 6px;
+  }
+  .recruitment-toolbar button {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+  .recruitment-modes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .recruitment-modes button {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+  .recruitment-selectors {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 12px;
+  }
+  .recruitment-selectors > label:nth-child(3) {
+    grid-column: 1/-1;
+  }
+  .recruitment-selectors select {
+    width: 100%;
+    min-width: 0;
+    font-size: 12px;
+  }
+  .club-summary {
+    margin-block: 10px;
+    font-size: 12px;
+  }
+  .requirements-simple .requirements-panel .section-intro {
+    margin-block: 10px;
+  }
+}

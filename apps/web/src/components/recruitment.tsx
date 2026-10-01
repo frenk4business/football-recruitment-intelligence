@@ -1092,7 +1092,13 @@ function RecruitmentBoard({
               ref={comparisonRef}
               tabIndex={-1}
             >
-              <h2>{c.compareTitle}</h2>
+              <h2>
+                {selectedRanks.length === 1
+                  ? locale === "en"
+                    ? "Why this player appears here"
+                    : "Waarom deze speler hier verschijnt"
+                  : c.compareTitle}
+              </h2>
               <p>{c.compareNote}</p>
               <div className="comparison-grid">
                 {selectedRanks.map((r) => {
