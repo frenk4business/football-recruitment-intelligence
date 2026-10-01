@@ -78,7 +78,7 @@ Pillow 12.3.0 and the encoder version/parameters are recorded. Source SHA1/SHA25
 
 ## I. Repository / deployment size
 
-Approved images add 3.96 MB. The complete enrichment artifacts (including the 2.88 MB manifest and 5.73 MB review JSON) occupy 12.58 MB uncompressed. The measured pre-commit new-file set was 12.77 MB; individually zlib-compressed new blobs total approximately **5.26 MB**, an estimate of incremental clone impact before Git tree/pack/delta overhead. Raw originals and API cache are excluded. No Git LFS, object store, new service or paid infrastructure is needed.
+Approved images add 3.96 MB. The complete enrichment artifacts (including the 2.88 MB manifest and 5.73 MB review JSON) occupy 12.58 MB uncompressed. The measured pre-commit new-file set was 12.77 MB; individually zlib-compressed new blobs total approximately **5.26 MB**, an estimate of incremental clone impact before Git tree/pack/delta overhead. The implementation commit’s actual incremental Git pack measures **5,407,237 bytes (5.41 MB)** against the baseline; see [git-impact.json](git-impact.json). This measurement precedes the small documentation-only audit commit. Raw originals and API cache are excluded. No Git LFS, object store, new service or paid infrastructure is needed.
 
 Static export: **57,324,260 → 62,541,902 bytes (+5,217,642; +9.1%)**, below the unchanged 65 MB ceiling. Scientific public JSON remains 47,430,174 bytes. Credits are generated once per language as static HTML rather than duplicated through Next.js RSC; the original full React listing exceeded the limit and was replaced before completion. The final export contains 20 application routes and 5,870 checksummed build files, including two secondary credits documents.
 
