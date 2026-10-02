@@ -54,6 +54,16 @@ for (const locale of ["en", "nl"] as const) {
     await page.goto(route);
     await expect(page.locator(".profile-list > li")).toHaveCount(50);
     await page.locator(".profile-name").first().click();
+    // The first profile's native comparison loads above the credits disclosure.
+    // Wait for its table before a pointer click can race that layout shift.
+    await expect(
+      page.getByText(
+        locale === "en"
+          ? "Wyscout native comparison · 24 features"
+          : "Wyscout-vergelijking · 24 providerkenmerken",
+        { exact: true },
+      ),
+    ).toBeVisible();
     await page.locator("#profile-quality > summary").click();
     await expect(page.locator(".photo-attribution").first()).toBeVisible();
     await page

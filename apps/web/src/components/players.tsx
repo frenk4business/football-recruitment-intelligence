@@ -941,8 +941,8 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     </div>
                     <p>
                       {locale === "en"
-                        ? "Recruitment: a separate validated WSL research cohort. Database eligibility alone does not establish recruitment eligibility."
-                        : "Recruitment: een afzonderlijk gevalideerd WSL-onderzoekscohort. Beschikbaarheid in de database betekent niet automatisch geschiktheid voor recruitmentanalyse."}
+                        ? "Recruitment eligibility is evaluated separately for the WSL and each Big Five Wyscout league. Database availability alone does not establish recruitment eligibility."
+                        : "Geschiktheid voor recruitment wordt afzonderlijk geëvalueerd voor de WSL en elke Wyscout-competitie uit de Big Five. Beschikbaarheid in de database betekent niet automatisch geschiktheid voor recruitmentanalyse."}
                     </p>
                     <p>{c.disclaimer}</p>
                     <dl>
