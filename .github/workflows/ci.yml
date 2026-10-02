@@ -21,7 +21,7 @@ jobs:
       matrix:
         python: ['3.12', '3.13']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v6
         with:
           version: '0.12.21'
@@ -48,7 +48,7 @@ jobs:
       run:
         working-directory: apps/web
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
@@ -78,7 +78,7 @@ jobs:
       run:
         working-directory: apps/web
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
@@ -108,7 +108,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
@@ -136,7 +136,7 @@ jobs:
           import json, os
           assert all(job['result'] == 'success' for job in json.loads(os.environ['RESULTS']).values())
           PY
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate tag only; Render deploys main independently
         if: startsWith(github.ref, 'refs/tags/')
         run: test "$GITHUB_REF_NAME" = "v$(cat VERSION)"
