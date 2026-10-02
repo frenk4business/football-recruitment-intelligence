@@ -1,0 +1,21 @@
+{
+  "version": "v12-expansion-plan-v1",
+  "baseline_commit": "15f84263a447b0eb5f77d927693abca1b03eb5d6",
+  "search_min_minutes": 450,
+  "candidate_thresholds": [450, 600, 900, 1200],
+  "minimum_role_pairs": 20,
+  "minimum_roster_players": 2,
+  "minimum_enabled_outfield_roles": 2,
+  "minimum_median_feature_spearman": 0.35,
+  "minimum_recall5_over_random": 1.5,
+  "minimum_mrr_over_random": 1.5,
+  "bootstrap_repeats": 1000,
+  "seed": 1202026,
+  "normalization": "provider_competition_season_role",
+  "cross_league": "raw_observed_rates_scaled_by_target_league_role; own_league_percentiles_descriptive_only",
+  "translation": false,
+  "selection_policy": "lowest_registered_threshold_with_at_least_two_passing_outfield_roles; failing_roles_disabled",
+  "statsbomb_selection": "all_mens_European_domestic_and_UEFA_scopes_plus_World_Cup_Euro_Copa_America_Africa_Cup_and_Indian_Super_League; separate_scope_profiles; no_automatic_recruitment",
+  "openfootball_selection": "all_Europe_club_and_player_files; Europe_fixture_files; European_football_json_scopes; separate_metadata_identity",
+  "skillcorner_selection": "official_A_League_season_aggregates_only; specialist_research; no_name_join"
+}
