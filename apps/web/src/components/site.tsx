@@ -11,6 +11,7 @@ import {
   TranslationEvaluation,
   Explorer,
 } from "./product-tools";
+import { ExpansionCoverage } from "./discovery";
 import { ProfileCoverage, ProfileMethodology } from "./profile-coverage";
 import { playersCopy } from "@/lib/players-copy";
 import release from "@/lib/release-version.json";
@@ -241,7 +242,19 @@ export function Site({
           </>
         )}
         {section === "players" && <Players locale={locale} />}
-        {section === "coverage" && <ProfileCoverage locale={locale} />}
+        {section === "coverage" && (
+          <>
+            <ExpansionCoverage locale={locale} />
+            <details>
+              <summary>
+                {locale === "en"
+                  ? "Frozen v1.1 research coverage"
+                  : "Vastgelegde v1.1-onderzoeksdekking"}
+              </summary>
+              <ProfileCoverage locale={locale} />
+            </details>
+          </>
+        )}
         {section === "methodology" && (
           <>
             <nav

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { route, type Locale, type Section } from "@/lib/content";
-import { profileCoverage } from "@/lib/data";
+import expansion from "../../../../artifacts/v12/public/build-manifest.json";
 export function ProductHome({ locale }: { locale: Locale }) {
   const nl = locale === "nl";
   return (
@@ -31,16 +31,17 @@ export function ProductHome({ locale }: { locale: Locale }) {
       </section>
       <div className="coverage-strip">
         <span>
-          <strong>
-            {profileCoverage().counts.profiles.toLocaleString(locale)}
-          </strong>{" "}
+          <strong>{expansion.counts.profiles.toLocaleString(locale)}</strong>{" "}
           {nl ? "speler-seizoensprofielen" : "player-season profiles"}
         </span>
         <span>
-          <strong>{profileCoverage().scopes.length}</strong>{" "}
+          <strong>{expansion.counts.competition_seasons}</strong>{" "}
           {nl ? "provider-competitieseizoenen" : "provider competition-seasons"}
         </span>
-        <span>StatsBomb · Pappalardo/Wyscout</span>
+        <span>
+          StatsBomb · Pappalardo/Wyscout · {expansion.counts.recruitment_clubs}{" "}
+          {nl ? "clubseizoenen met recruitment" : "recruitment club-seasons"}
+        </span>
       </div>
       <div className="task-links">
         {(nl

@@ -12,6 +12,7 @@ export const inventory = {
   files: [
     ...json("config/public-artifacts.json").files,
     ...json("config/v11-public-artifacts.json").files,
+    ...json("config/v12-public-artifacts.json").files,
   ],
 };
 export const science = json("config/scientific-lock.json");

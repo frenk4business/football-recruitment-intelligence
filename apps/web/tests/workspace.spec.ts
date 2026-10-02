@@ -71,7 +71,7 @@ for (const locale of ["en", "nl"]) {
   test(`${locale}: simple and advanced recruitment preserve rankings and restore scenarios`, async ({
     page,
   }) => {
-    await page.goto(`${base}/recruitment/`);
+    await page.goto(`${base}/recruitment/?dataset=wsl`);
     const feature = page.locator('[data-feature="progressive_passes_per90"]');
     await feature.locator("select").first().selectOption("minimum");
     await feature.locator('input[type="number"]').fill("70");

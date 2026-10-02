@@ -102,7 +102,7 @@ for (const f of inventory.files)
   if (sha(readFileSync(join(out, f.path))) !== f.sha256)
     throw new Error(`Public checksum mismatch: ${f.path}`);
 let total = walk(out).reduce((n, p) => n + statSync(p).size, 0);
-if (total > 65_000_000)
+if (total > 115_000_000)
   throw new Error(`Export size budget exceeded: ${total}`);
 for (const locale of ["", "nl/"])
   for (const section of sections)

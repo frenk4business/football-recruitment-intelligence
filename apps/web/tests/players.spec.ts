@@ -153,12 +153,12 @@ for (const locale of ["en", "nl"] as const) {
   test(`${locale}: network and integrity failures are recoverable`, async ({
     page,
   }) => {
-    await page.route("**/data/v11/index.json*", (r) =>
+    await page.route("**/data/v12/index.json*", (r) =>
       r.fulfill({ status: 503, contentType: "application/json", body: "{}" }),
     );
     await page.goto(route);
     await expect(page.locator("main").getByRole("alert")).toBeVisible();
-    await page.unroute("**/data/v11/index.json*");
+    await page.unroute("**/data/v12/index.json*");
     await page.getByRole("button", { name: labels.error, exact: true }).click();
     await expect(page.locator(".profile-list > li")).toHaveCount(50);
     await page.route("**/data/v11/profiles/**", (r) =>

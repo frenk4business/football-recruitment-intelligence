@@ -1,4 +1,5 @@
 "use client";
+import { WyscoutRecruitment } from "./wyscout-recruitment";
 import { PlayerAvatar } from "./player-avatar";
 import { fetchArtifact } from "@/lib/artifact";
 
@@ -55,7 +56,7 @@ function useArtifact<T>(path: string | null) {
     },
   };
 }
-export function Recruitment({ locale }: { locale: Locale }) {
+function LegacyRecruitment({ locale }: { locale: Locale }) {
   const c = recruitmentCopy[locale],
     resource = useArtifact<RecruitmentIndex>("index.json");
   if (resource.error)
@@ -86,7 +87,12 @@ function RecruitmentBoard({
     try {
       return {
         scenario: window.location.search
-          ? decodeScenario(window.location.search, index)
+          ? decodeScenario(
+              window.location.search === "?dataset=wsl"
+                ? ""
+                : window.location.search,
+              index,
+            )
           : defaultScenario(index),
         invalid: false,
       };
@@ -168,7 +174,12 @@ function RecruitmentBoard({
   useEffect(() => {
     const restore = () => {
       try {
-        const restored = decodeScenario(window.location.search, index);
+        const restored = decodeScenario(
+          window.location.search === "?dataset=wsl"
+            ? ""
+            : window.location.search,
+          index,
+        );
         setScenario(restored);
         setView(restored.mode);
         setInvalid(false);
@@ -1386,6 +1397,66 @@ function RecruitmentBoard({
           {c.methods} ↗
         </a>
       </div>
+    </div>
+  );
+}
+
+export function Recruitment({ locale }: { locale: Locale }) {
+  const [dataset, setDataset] = useState("pending");
+  useEffect(() => {
+    const restore = () => {
+      const params = new URLSearchParams(window.location.search);
+      setDataset(
+        params.get("dataset") === "wyscout" || !window.location.search
+          ? "wyscout"
+          : "wsl",
+      );
+    };
+    restore();
+    window.addEventListener("popstate", restore);
+    return () => window.removeEventListener("popstate", restore);
+  }, []);
+  const [changed, setChanged] = useState(false);
+  return (
+    <div className="recruitment-workspace">
+      <label className="dataset-selector">
+        {locale === "en" ? "Dataset / provider" : "Dataset / provider"}
+        <select
+          value={dataset === "pending" ? "wyscout" : dataset}
+          onChange={(e) => {
+            setDataset(e.target.value);
+            setChanged(true);
+            window.history.replaceState(
+              null,
+              "",
+              e.target.value === "wyscout"
+                ? "?dataset=wyscout"
+                : "?dataset=wsl",
+            );
+          }}
+        >
+          <option value="wyscout">
+            Wyscout / Pappalardo — Big Five 2017/18
+          </option>
+          <option value="wsl">StatsBomb — WSL 2023/24</option>
+        </select>
+      </label>
+      {changed && (
+        <p role="status">
+          {locale === "en"
+            ? "Available recruitment features have changed for this dataset. Incompatible requirements were reset."
+            : "De beschikbare recruitmentkenmerken zijn gewijzigd voor deze dataset. Incompatibele criteria zijn gewist."}
+        </p>
+      )}
+      {dataset === "pending" ? (
+        <p role="status">
+          {locale === "en" ? "Loading dataset…" : "Dataset laden…"}
+        </p>
+      ) : dataset === "wyscout" ? (
+        <WyscoutRecruitment locale={locale} />
+      ) : (
+        <LegacyRecruitment locale={locale} />
+      )}
     </div>
   );
 }

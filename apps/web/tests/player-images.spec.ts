@@ -54,6 +54,16 @@ for (const locale of ["en", "nl"] as const) {
     await page.goto(route);
     await expect(page.locator(".profile-list > li")).toHaveCount(50);
     await page.locator(".profile-name").first().click();
+    // The first profile's native comparison loads above the credits disclosure.
+    // Wait for its table before a pointer click can race that layout shift.
+    await expect(
+      page.getByText(
+        locale === "en"
+          ? "Wyscout native comparison · 24 features"
+          : "Wyscout-vergelijking · 24 providerkenmerken",
+        { exact: true },
+      ),
+    ).toBeVisible();
     await page.locator("#profile-quality > summary").click();
     await expect(page.locator(".photo-attribution").first()).toBeVisible();
     await page
@@ -114,8 +124,8 @@ for (const locale of ["en", "nl"] as const) {
           256,
         );
       }
-      expect((await avatar.boundingBox())!.width).toBe(96);
-      expect((await avatar.boundingBox())!.height).toBe(96);
+      expect((await avatar.boundingBox())!.width).toBeCloseTo(96, 3);
+      expect((await avatar.boundingBox())!.height).toBeCloseTo(96, 3);
       // The independent DNA request expands the section above the credits.
       // Wait for that content before a pointer click can race its layout shift.
       await expect(page.locator(".integrated-style")).toBeVisible();

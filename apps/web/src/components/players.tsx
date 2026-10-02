@@ -4,9 +4,6 @@ import { fetchArtifact } from "@/lib/artifact";
 import type { Locale } from "@/lib/content";
 import { route } from "@/lib/content";
 import type {
-  ProfileDetail,
-  ProfileIndex,
-  ProfileIndexEntry,
   ProfileMetricDefinition,
   ProfileRegistry,
 } from "@/lib/profile-contracts";
@@ -22,6 +19,13 @@ import {
 } from "@/lib/player-search";
 import { PlayerAvatar, PhotoAttribution } from "./player-avatar";
 import { ProfileStyle } from "./profile-style";
+import type {
+  ProfileDetail,
+  ProfileIndex,
+  ProfileIndexEntry,
+} from "@/lib/player-view";
+import { Discovery } from "./discovery";
+import { NativeComparison } from "./wyscout-recruitment";
 import { playersCopy } from "@/lib/players-copy";
 const repo =
   "https://github.com/frenk4business/football-recruitment-intelligence";
@@ -49,7 +53,7 @@ function useData<T>(path: string | null, retry: number) {
 export function Players({ locale }: { locale: Locale }) {
   const c = playersCopy[locale];
   const [retry, setRetry] = useState(0);
-  const data = useData<ProfileIndex>("/data/v11/index.json", retry);
+  const data = useData<ProfileIndex>("/data/v12/index.json", retry);
   if (!data?.data)
     return (
       <div
@@ -62,7 +66,12 @@ export function Players({ locale }: { locale: Locale }) {
         )}
       </div>
     );
-  return <Database locale={locale} index={data.data} />;
+  return (
+    <>
+      <Discovery locale={locale} index={data.data} />
+      <Database locale={locale} index={data.data} />
+    </>
+  );
 }
 function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   const c = playersCopy[locale];
@@ -142,15 +151,19 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   );
   const selected = byId.get(state.profile);
   const profile = useData<ProfileDetail>(
-    selected ? detailPath(selected.id) : null,
+    selected ? (selected.detail_path ?? detailPath(selected.id)) : null,
     retry,
   );
   const comparison = useData<ProfileDetail>(
-    state.compare && selected ? detailPath(state.compare) : null,
+    state.compare && selected
+      ? (byId.get(state.compare)?.detail_path ?? detailPath(state.compare))
+      : null,
     retry,
   );
   const comparison2 = useData<ProfileDetail>(
-    state.compare2 && selected ? detailPath(state.compare2) : null,
+    state.compare2 && selected
+      ? (byId.get(state.compare2)?.detail_path ?? detailPath(state.compare2))
+      : null,
     retry,
   );
   const addComparison = (id: string) => {
@@ -197,6 +210,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
   const competitions = optionCounts((p) => [
     scopes.get(p.scope)!.competition_key,
   ]);
+  const countries = optionCounts((p) => [scopes.get(p.scope)?.country ?? ""]);
   const seasons = optionCounts((p) => [scopes.get(p.scope)!.season]);
   const teams = optionCounts((p) => p.teams);
   const roles = optionCounts((p) => [
@@ -334,6 +348,12 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
           (key) =>
             index.scopes.find((s) => s.competition_key === key)!.competition,
         )}
+        {choices(
+          "country",
+          locale === "en" ? "Country" : "Land",
+          countries,
+          (v) => v,
+        )}
         {choices("season", c.season, seasons, (v) => v)}
         {choices("team", c.team, teams, (key) => index.teams[key])}
         {choices("role", c.role, roles, roleName)}
@@ -344,7 +364,7 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
             value={state.minutes}
             onChange={(e) => update({ minutes: e.target.value, page: 1 })}
           >
-            {[450, 600, 900].map((n) => (
+            {[450, 600, 900, 1200].map((n) => (
               <option key={n} value={n}>
                 {n}
               </option>
@@ -369,6 +389,10 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
               <option value="common">
                 {c.common} ({number(index.counts.common_profiles, 0)})
               </option>
+              <option value="recruitment">Recruitment</option>
+              <option value="translation">
+                {locale === "en" ? "Translation" : "Vertaling"}
+              </option>
               <option value="similarity">
                 {c.similarity} ({number(index.counts.similarity_profiles, 0)})
               </option>
@@ -391,7 +415,14 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
             state.team && index.teams[state.team],
             state.role && roleName(state.role),
             `≥${state.minutes} min`,
-            state.kind && c[state.kind === "common" ? "common" : "similarity"],
+            state.kind &&
+              (state.kind === "recruitment"
+                ? "Recruitment"
+                : state.kind === "translation"
+                  ? locale === "en"
+                    ? "Translation"
+                    : "Vertaling"
+                  : c[state.kind === "common" ? "common" : "similarity"]),
           ]
             .filter(Boolean)
             .join(" · ")}
@@ -561,7 +592,16 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     {scopes.get(selected.scope)?.season}
                   </p>
                   <p className="small">
-                    {number(selected.minutes)} {c.minutes.toLowerCase()} ·{" "}
+                    {scopes.get(selected.scope)?.coverage} ·{" "}
+                    {scopes.get(selected.scope)?.scope_label ===
+                    "Domestic league observations"
+                      ? locale === "en"
+                        ? "Historical domestic observations"
+                        : "Historische competitiewaarnemingen"
+                      : locale === "en"
+                        ? "Tournament/sample observations only"
+                        : "Alleen toernooi-/steekproefwaarnemingen"}{" "}
+                    · {number(selected.minutes)} {c.minutes.toLowerCase()} ·{" "}
                     {providerName(selected.provider)}
                   </p>
                 </div>
@@ -734,6 +774,17 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     </a>
                   </nav>
                   <section id="playing-style">
+                    {selected.provider === "wyscout" && (
+                      <NativeComparison
+                        locale={locale}
+                        ids={[
+                          selected.id,
+                          state.compare,
+                          state.compare2,
+                        ].filter(Boolean)}
+                        entries={index.profiles}
+                      />
+                    )}
                     <h3>{locale === "en" ? "Playing style" : "Speelstijl"}</h3>
                     {profile.data.dna_player_id &&
                       selected.capabilities.validated_dna && (
@@ -890,8 +941,8 @@ function Database({ locale, index }: { locale: Locale; index: ProfileIndex }) {
                     </div>
                     <p>
                       {locale === "en"
-                        ? "Recruitment: a separate validated WSL research cohort. Database eligibility alone does not establish recruitment eligibility."
-                        : "Recruitment: een afzonderlijk gevalideerd WSL-onderzoekscohort. Beschikbaarheid in de database betekent niet automatisch geschiktheid voor recruitmentanalyse."}
+                        ? "Recruitment eligibility is evaluated separately for the WSL and each Big Five Wyscout league. Database availability alone does not establish recruitment eligibility."
+                        : "Geschiktheid voor recruitment wordt afzonderlijk geëvalueerd voor de WSL en elke Wyscout-competitie uit de Big Five. Beschikbaarheid in de database betekent niet automatisch geschiktheid voor recruitmentanalyse."}
                     </p>
                     <p>{c.disclaimer}</p>
                     <dl>

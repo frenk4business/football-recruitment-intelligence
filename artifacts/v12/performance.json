@@ -1,0 +1,1307 @@
+{
+  "commit": "5787d2642486b0ce6d91e98eab5fb31172f2530e",
+  "base": "http://127.0.0.1:4173",
+  "timestamp": "2026-10-02T07:32:22.637Z",
+  "profile": "Chromium, 375x812, cold cache, 4x CPU, 1.6Mbps down/750Kbps up,150ms latency; 5 seconds after load; 3 runs; gzip bytes recomputed at default level",
+  "summary": [
+    {
+      "path": "/",
+      "lcp_median_ms": 704,
+      "cls_max": 0,
+      "blocking_median_ms": 21,
+      "js_gzip_max": 184601,
+      "json_decoded_max": 0,
+      "transfer_max": 335748,
+      "interaction_median_ms": null,
+      "overflow": false
+    },
+    {
+      "path": "/players/",
+      "lcp_median_ms": 672,
+      "cls_max": 0,
+      "blocking_median_ms": 54,
+      "js_gzip_max": 195851,
+      "json_decoded_max": 2478265,
+      "transfer_max": 596204,
+      "interaction_median_ms": null,
+      "overflow": false
+    },
+    {
+      "path": "/player-dna/",
+      "lcp_median_ms": 764,
+      "cls_max": 0.04280459770114942,
+      "blocking_median_ms": 19,
+      "js_gzip_max": 194068,
+      "json_decoded_max": 73485,
+      "transfer_max": 418586,
+      "interaction_median_ms": null,
+      "overflow": false
+    },
+    {
+      "path": "/translation/",
+      "lcp_median_ms": 748,
+      "cls_max": 0,
+      "blocking_median_ms": 22,
+      "js_gzip_max": 192027,
+      "json_decoded_max": 206037,
+      "transfer_max": 440156,
+      "interaction_median_ms": null,
+      "overflow": false
+    },
+    {
+      "path": "/recruitment/",
+      "lcp_median_ms": 700,
+      "cls_max": 0.004711405073325406,
+      "blocking_median_ms": 27,
+      "js_gzip_max": 201150,
+      "json_decoded_max": 1150258,
+      "transfer_max": 583243,
+      "interaction_median_ms": 33.10000002384186,
+      "overflow": false
+    },
+    {
+      "path": "/methodology/",
+      "lcp_median_ms": 776,
+      "cls_max": 0,
+      "blocking_median_ms": 21,
+      "js_gzip_max": 201494,
+      "json_decoded_max": 0,
+      "transfer_max": 285395,
+      "interaction_median_ms": null,
+      "overflow": false
+    }
+  ],
+  "rows": [
+    {
+      "lcp": 728,
+      "cls": 0,
+      "blocking": 42,
+      "overflow": false,
+      "requests": 11,
+      "path": "/",
+      "run": 1,
+      "transfer_bytes": 335748,
+      "js_gzip_bytes": 184601,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-2bf0540118b9559c.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 704,
+      "cls": 0,
+      "blocking": 21,
+      "overflow": false,
+      "requests": 11,
+      "path": "/",
+      "run": 2,
+      "transfer_bytes": 335748,
+      "js_gzip_bytes": 184601,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-2bf0540118b9559c.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 680,
+      "cls": 0,
+      "blocking": 17,
+      "overflow": false,
+      "requests": 11,
+      "path": "/",
+      "run": 3,
+      "transfer_bytes": 335748,
+      "js_gzip_bytes": 184601,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/page-2bf0540118b9559c.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        }
+      ]
+    },
+    {
+      "lcp": 696,
+      "cls": 0,
+      "blocking": 74,
+      "overflow": false,
+      "requests": 16,
+      "path": "/players/",
+      "run": 1,
+      "transfer_bytes": 596204,
+      "js_gzip_bytes": 195851,
+      "json_decoded_bytes": 2478265,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/530.76e15ff1e29ffab8.js",
+          "decoded": 34841,
+          "gzip": 11250
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/f3c489c00d43e391b041aa14b5fa67642768f9f9eea2d05fcb3de91013b8187a.json",
+          "decoded": 190,
+          "gzip": 155
+        },
+        {
+          "path": "/data/v12/index.json",
+          "decoded": 2015639,
+          "gzip": 146693
+        },
+        {
+          "path": "/players/images/index-d4e06ed21a8b101a9d6e652ef782d7e50a7e8fc56d4d34ae92a0b8abb7adb416.json",
+          "decoded": 462436,
+          "gzip": 91547
+        }
+      ]
+    },
+    {
+      "lcp": 664,
+      "cls": 0,
+      "blocking": 49,
+      "overflow": false,
+      "requests": 16,
+      "path": "/players/",
+      "run": 2,
+      "transfer_bytes": 596204,
+      "js_gzip_bytes": 195851,
+      "json_decoded_bytes": 2478265,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/530.76e15ff1e29ffab8.js",
+          "decoded": 34841,
+          "gzip": 11250
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/f3c489c00d43e391b041aa14b5fa67642768f9f9eea2d05fcb3de91013b8187a.json",
+          "decoded": 190,
+          "gzip": 155
+        },
+        {
+          "path": "/data/v12/index.json",
+          "decoded": 2015639,
+          "gzip": 146693
+        },
+        {
+          "path": "/players/images/index-d4e06ed21a8b101a9d6e652ef782d7e50a7e8fc56d4d34ae92a0b8abb7adb416.json",
+          "decoded": 462436,
+          "gzip": 91547
+        }
+      ]
+    },
+    {
+      "lcp": 672,
+      "cls": 0,
+      "blocking": 54,
+      "overflow": false,
+      "requests": 16,
+      "path": "/players/",
+      "run": 3,
+      "transfer_bytes": 596204,
+      "js_gzip_bytes": 195851,
+      "json_decoded_bytes": 2478265,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/530.76e15ff1e29ffab8.js",
+          "decoded": 34841,
+          "gzip": 11250
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/f3c489c00d43e391b041aa14b5fa67642768f9f9eea2d05fcb3de91013b8187a.json",
+          "decoded": 190,
+          "gzip": 155
+        },
+        {
+          "path": "/data/v12/index.json",
+          "decoded": 2015639,
+          "gzip": 146693
+        },
+        {
+          "path": "/players/images/index-d4e06ed21a8b101a9d6e652ef782d7e50a7e8fc56d4d34ae92a0b8abb7adb416.json",
+          "decoded": 462436,
+          "gzip": 91547
+        }
+      ]
+    },
+    {
+      "lcp": 764,
+      "cls": 0.04280459770114942,
+      "blocking": 20,
+      "overflow": false,
+      "requests": 14,
+      "path": "/player-dna/",
+      "run": 1,
+      "transfer_bytes": 418586,
+      "js_gzip_bytes": 194068,
+      "json_decoded_bytes": 73485,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/357.2e068991f32f965e.js",
+          "decoded": 28412,
+          "gzip": 9467
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/integrity/c73876b043306be254928ad3514c3d5af970057103d2d7e1ea4a0ebf12e41b2b.json",
+          "decoded": 43009,
+          "gzip": 19815
+        },
+        {
+          "path": "/data/phase2/900/83125b48-0dd6-55bc-b422-023ae9142f64.json",
+          "decoded": 30476,
+          "gzip": 6400
+        }
+      ]
+    },
+    {
+      "lcp": 768,
+      "cls": 0.04280459770114942,
+      "blocking": 15,
+      "overflow": false,
+      "requests": 14,
+      "path": "/player-dna/",
+      "run": 2,
+      "transfer_bytes": 418586,
+      "js_gzip_bytes": 194068,
+      "json_decoded_bytes": 73485,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/357.2e068991f32f965e.js",
+          "decoded": 28412,
+          "gzip": 9467
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/integrity/c73876b043306be254928ad3514c3d5af970057103d2d7e1ea4a0ebf12e41b2b.json",
+          "decoded": 43009,
+          "gzip": 19815
+        },
+        {
+          "path": "/data/phase2/900/83125b48-0dd6-55bc-b422-023ae9142f64.json",
+          "decoded": 30476,
+          "gzip": 6400
+        }
+      ]
+    },
+    {
+      "lcp": 756,
+      "cls": 0.04280459770114942,
+      "blocking": 19,
+      "overflow": false,
+      "requests": 14,
+      "path": "/player-dna/",
+      "run": 3,
+      "transfer_bytes": 418586,
+      "js_gzip_bytes": 194068,
+      "json_decoded_bytes": 73485,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/357.2e068991f32f965e.js",
+          "decoded": 28412,
+          "gzip": 9467
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/integrity/c73876b043306be254928ad3514c3d5af970057103d2d7e1ea4a0ebf12e41b2b.json",
+          "decoded": 43009,
+          "gzip": 19815
+        },
+        {
+          "path": "/data/phase2/900/83125b48-0dd6-55bc-b422-023ae9142f64.json",
+          "decoded": 30476,
+          "gzip": 6400
+        }
+      ]
+    },
+    {
+      "lcp": 748,
+      "cls": 0,
+      "blocking": 21,
+      "overflow": false,
+      "requests": 14,
+      "path": "/translation/",
+      "run": 1,
+      "transfer_bytes": 440156,
+      "js_gzip_bytes": 192027,
+      "json_decoded_bytes": 206037,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/736.2b08ec6fce77b0d6.js",
+          "decoded": 21507,
+          "gzip": 7426
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/integrity/0021ce8501da3b7a7d8eac7c8947de708c5290c5fbe9ab25fcda5924cc17410b.json",
+          "decoded": 87121,
+          "gzip": 38947
+        },
+        {
+          "path": "/data/phase3/players/2c720618-fb12-5f8a-959e-8303b0455cdd.json",
+          "decoded": 118916,
+          "gzip": 7598
+        }
+      ]
+    },
+    {
+      "lcp": 748,
+      "cls": 0,
+      "blocking": 24,
+      "overflow": false,
+      "requests": 14,
+      "path": "/translation/",
+      "run": 2,
+      "transfer_bytes": 440156,
+      "js_gzip_bytes": 192027,
+      "json_decoded_bytes": 206037,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/736.2b08ec6fce77b0d6.js",
+          "decoded": 21507,
+          "gzip": 7426
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/integrity/0021ce8501da3b7a7d8eac7c8947de708c5290c5fbe9ab25fcda5924cc17410b.json",
+          "decoded": 87121,
+          "gzip": 38947
+        },
+        {
+          "path": "/data/phase3/players/2c720618-fb12-5f8a-959e-8303b0455cdd.json",
+          "decoded": 118916,
+          "gzip": 7598
+        }
+      ]
+    },
+    {
+      "lcp": 768,
+      "cls": 0,
+      "blocking": 22,
+      "overflow": false,
+      "requests": 14,
+      "path": "/translation/",
+      "run": 3,
+      "transfer_bytes": 440156,
+      "js_gzip_bytes": 192027,
+      "json_decoded_bytes": 206037,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/736.2b08ec6fce77b0d6.js",
+          "decoded": 21507,
+          "gzip": 7426
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/integrity/0021ce8501da3b7a7d8eac7c8947de708c5290c5fbe9ab25fcda5924cc17410b.json",
+          "decoded": 87121,
+          "gzip": 38947
+        },
+        {
+          "path": "/data/phase3/players/2c720618-fb12-5f8a-959e-8303b0455cdd.json",
+          "decoded": 118916,
+          "gzip": 7598
+        }
+      ]
+    },
+    {
+      "lcp": 680,
+      "cls": 0.004711405073325406,
+      "blocking": 22,
+      "overflow": false,
+      "requests": 16,
+      "path": "/recruitment/",
+      "run": 1,
+      "transfer_bytes": 583243,
+      "js_gzip_bytes": 201150,
+      "json_decoded_bytes": 1150258,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/95.14ff1be289c8ce6f.js",
+          "decoded": 53351,
+          "gzip": 16549
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/edbdc831e0e2661e9205a55bb183a58bb026dd8dd1b56bb31f732cbfaafbac84.json",
+          "decoded": 678,
+          "gzip": 339
+        },
+        {
+          "path": "/data/v12/recruitment/index.json",
+          "decoded": 16749,
+          "gzip": 2027
+        },
+        {
+          "path": "/data/v12/recruitment/wyscout-364-181150.json",
+          "decoded": 670395,
+          "gzip": 133761
+        },
+        {
+          "path": "/players/images/index-d4e06ed21a8b101a9d6e652ef782d7e50a7e8fc56d4d34ae92a0b8abb7adb416.json",
+          "decoded": 462436,
+          "gzip": 91547
+        }
+      ],
+      "interaction_ms": 36.39999997615814
+    },
+    {
+      "lcp": 712,
+      "cls": 0.004711405073325406,
+      "blocking": 27,
+      "overflow": false,
+      "requests": 16,
+      "path": "/recruitment/",
+      "run": 2,
+      "transfer_bytes": 583243,
+      "js_gzip_bytes": 201150,
+      "json_decoded_bytes": 1150258,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/95.14ff1be289c8ce6f.js",
+          "decoded": 53351,
+          "gzip": 16549
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/edbdc831e0e2661e9205a55bb183a58bb026dd8dd1b56bb31f732cbfaafbac84.json",
+          "decoded": 678,
+          "gzip": 339
+        },
+        {
+          "path": "/data/v12/recruitment/index.json",
+          "decoded": 16749,
+          "gzip": 2027
+        },
+        {
+          "path": "/data/v12/recruitment/wyscout-364-181150.json",
+          "decoded": 670395,
+          "gzip": 133761
+        },
+        {
+          "path": "/players/images/index-d4e06ed21a8b101a9d6e652ef782d7e50a7e8fc56d4d34ae92a0b8abb7adb416.json",
+          "decoded": 462436,
+          "gzip": 91547
+        }
+      ],
+      "interaction_ms": 33.10000002384186
+    },
+    {
+      "lcp": 700,
+      "cls": 0.004711405073325406,
+      "blocking": 29,
+      "overflow": false,
+      "requests": 16,
+      "path": "/recruitment/",
+      "run": 3,
+      "transfer_bytes": 583243,
+      "js_gzip_bytes": 201150,
+      "json_decoded_bytes": 1150258,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/95.14ff1be289c8ce6f.js",
+          "decoded": 53351,
+          "gzip": 16549
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/integrity/edbdc831e0e2661e9205a55bb183a58bb026dd8dd1b56bb31f732cbfaafbac84.json",
+          "decoded": 678,
+          "gzip": 339
+        },
+        {
+          "path": "/data/v12/recruitment/index.json",
+          "decoded": 16749,
+          "gzip": 2027
+        },
+        {
+          "path": "/data/v12/recruitment/wyscout-364-181150.json",
+          "decoded": 670395,
+          "gzip": 133761
+        },
+        {
+          "path": "/players/images/index-d4e06ed21a8b101a9d6e652ef782d7e50a7e8fc56d4d34ae92a0b8abb7adb416.json",
+          "decoded": 462436,
+          "gzip": 91547
+        }
+      ],
+      "interaction_ms": 31.399999976158142
+    },
+    {
+      "lcp": 776,
+      "cls": 0,
+      "blocking": 21,
+      "overflow": false,
+      "requests": 12,
+      "path": "/methodology/",
+      "run": 1,
+      "transfer_bytes": 285395,
+      "js_gzip_bytes": 201494,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/736.2b08ec6fce77b0d6.js",
+          "decoded": 21507,
+          "gzip": 7426
+        },
+        {
+          "path": "/_next/static/chunks/357.2e068991f32f965e.js",
+          "decoded": 28412,
+          "gzip": 9467
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        }
+      ]
+    },
+    {
+      "lcp": 784,
+      "cls": 0,
+      "blocking": 22,
+      "overflow": false,
+      "requests": 12,
+      "path": "/methodology/",
+      "run": 2,
+      "transfer_bytes": 285395,
+      "js_gzip_bytes": 201494,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/736.2b08ec6fce77b0d6.js",
+          "decoded": 21507,
+          "gzip": 7426
+        },
+        {
+          "path": "/_next/static/chunks/357.2e068991f32f965e.js",
+          "decoded": 28412,
+          "gzip": 9467
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        }
+      ]
+    },
+    {
+      "lcp": 776,
+      "cls": 0,
+      "blocking": 20,
+      "overflow": false,
+      "requests": 12,
+      "path": "/methodology/",
+      "run": 3,
+      "transfer_bytes": 285395,
+      "js_gzip_bytes": 201494,
+      "json_decoded_bytes": 0,
+      "responses": [
+        {
+          "path": "/_next/static/chunks/webpack-4c3adf77610beebc.js",
+          "decoded": 3473,
+          "gzip": 1802
+        },
+        {
+          "path": "/_next/static/chunks/main-app-7d59ed80360bc834.js",
+          "decoded": 513,
+          "gzip": 221
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/error-ce42e154a8fe8f14.js",
+          "decoded": 1136,
+          "gzip": 637
+        },
+        {
+          "path": "/_next/static/chunks/app/(en)/%5Bsection%5D/page-a856c0f81b9fe516.js",
+          "decoded": 128,
+          "gzip": 124
+        },
+        {
+          "path": "/_next/static/chunks/500-d16fbaf1019be1e0.js",
+          "decoded": 26383,
+          "gzip": 9253
+        },
+        {
+          "path": "/_next/static/chunks/736.2b08ec6fce77b0d6.js",
+          "decoded": 21507,
+          "gzip": 7426
+        },
+        {
+          "path": "/_next/static/chunks/357.2e068991f32f965e.js",
+          "decoded": 28412,
+          "gzip": 9467
+        },
+        {
+          "path": "/_next/static/chunks/4bd1b696-92152b0f5947070d.js",
+          "decoded": 201054,
+          "gzip": 63299
+        },
+        {
+          "path": "/_next/static/chunks/794-71ff2c1735abeddf.js",
+          "decoded": 241299,
+          "gzip": 65811
+        },
+        {
+          "path": "/_next/static/chunks/574-a71d8dc5ba16122a.js",
+          "decoded": 155153,
+          "gzip": 43454
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

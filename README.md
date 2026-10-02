@@ -5,12 +5,14 @@
 
 A bilingual, non-commercial football research product: open-data provenance, observed Player DNA, historical translation evidence, and explicit recruitment requirements. Rankings describe observed similarity under chosen criteria; they are not transfer recommendations or success predictions.
 
-**[Open the product](https://football-recruitment-intelligence.onrender.com/)** · [Nederlands](https://football-recruitment-intelligence.onrender.com/nl/) · [v1.1 data audit](docs/v1.1-data-expansion-audit.md) · [v1 release record](docs/releases/v1.0.0.md) · [Documentation](docs/README.md)
+**[Open the product](https://football-recruitment-intelligence.onrender.com/)** · [Nederlands](https://football-recruitment-intelligence.onrender.com/nl/) · [v1.2 coverage](docs/v1.2-platform-coverage.md) · [v1 release record](docs/releases/v1.0.0.md) · [Documentation](docs/README.md)
 
 ## What it does
 
-- Search **3,074 observed player-season profiles** (3,005 provider identities) across seven competitions, with native StatsBomb/Pappalardo-Wyscout definitions, 2,840 conservative common profiles and lazy detail comparison in English/Dutch. [Player database](https://football-recruitment-intelligence.onrender.com/players/) · [evaluation and limits](docs/common-profile-evaluation.md).
+- Search **3,739 observed player-season profiles** (3,527 provider identities) across 18 competition families / 21 provider competitions, with native StatsBomb/Pappalardo-Wyscout definitions, 3,381 conservative common profiles and lazy detail comparison in English/Dutch. [Player database](https://football-recruitment-intelligence.onrender.com/players/) · [evaluation and limits](docs/common-profile-evaluation.md).
 
+- Analyse men’s Big Five recruitment in **98 club-seasons** (1,761 eligible Wyscout profiles, 24 native features), preserving the 12-club WSL mode. Same-league defaults; optional wider discovery uses observations without league translation. [Evaluation](docs/v1.2-recruitment-expansion-evaluation.md).
+- Browse **3,736 OpenFootball club records**, 25,885 separate player metadata records and 473 source fixture scopes. Metadata is not performance data. Explore 290 separate Australian SkillCorner specialist profiles.
 - Explore an attributed event/tracking sample and inspect coverage.
 - Compare eighteen observed Player DNA features across six roles in WSL 2023/24: 138 eligible profiles at the default ≥900-minute threshold.
 - Inspect a narrower historical WSL translation study, its simple baselines, uncertainty and unsupported cases.
@@ -34,13 +36,13 @@ make smoke
 make dev
 ```
 
-Expanded data reproduction uses `make v11-data-build`; `uv run fri data expand --max-matches 5` writes isolated development output. [v1.1 engineering and publication](docs/v1.1-engineering.md).
+v1.2 uses the pinned audit, `make v12-fetch v12-data-build v12-recruitment-build v12-evaluate v12-public v12-reports`; see [reproduction](docs/v1.2-reproduction.md). Earlier data reproduction uses `make v11-data-build`; `uv run fri data expand --max-matches 5` writes isolated development output. [v1.1 engineering and publication](docs/v1.1-engineering.md).
 
 `make build` remains the static product build. `make api` runs the optional local FastAPI interface on 127.0.0.1; it is not hosted in production. Explicit research ingestion/reproduction commands are documented in the [research workflow](docs/research-workflow.md), separate from routine release CI.
 
 ## Release and operation
 
-One existing Render Static Site serves 18 EN/NL routes from protected `main`, after checks pass. The release validates all 5,119 public JSON artifacts and 2,146 frozen research files; browser fetches verify release hashes and recover safely from stale/corrupt data. `/release-manifest.json` records the exact deployed commit, deterministic commit timestamp, source revisions and artifact/build hashes. Scientific versions remain independent of the canonical application `VERSION`.
+One existing Render Static Site serves 20 EN/NL routes from protected `main`, after checks pass. The release validates all 10,345 public JSON artifacts and 2,146 frozen research files; browser fetches verify release hashes and recover safely from stale/corrupt data. `/release-manifest.json` records the exact deployed commit, deterministic commit timestamp, source revisions and artifact/build hashes. Scientific versions remain independent of the canonical application `VERSION`.
 
 [Release gate](docs/release-gate-v1.md) · [QA evidence](docs/v1-release-qa.md) · [Performance](docs/performance-v1.md) · [Accessibility](docs/accessibility-v1.md) · [Security](docs/security-v1.md) · [Operations](docs/operations.md) · [Rollback](docs/rollback.md) · [Contributing](CONTRIBUTING.md).
 

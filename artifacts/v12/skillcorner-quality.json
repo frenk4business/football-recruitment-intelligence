@@ -1,0 +1,13 @@
+{
+  "league": "Australian A-League",
+  "not_european_recruitment": true,
+  "player_seasons": 290,
+  "provider_identities": 290,
+  "season": "2024/2025",
+  "source_rows": {
+    "obr": 407,
+    "passing": 407,
+    "physical": 406
+  },
+  "units": "Retain original field names and records: average-match physical minutes are NOT summed as season minutes; OBR p30tip is per 30 possession minutes."
+}

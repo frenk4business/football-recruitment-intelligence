@@ -2,7 +2,7 @@ export const recruitmentCopy = {
   en: {
     title: "Build a shortlist",
     intro:
-      "Build an explicit profile, compare observed playing styles and inspect the evidence behind the ordering. WSL 2023/24 only.",
+      "Build an explicit profile, compare observed playing styles and inspect the evidence behind the ordering. Historical Big Five 2017/18 and WSL 2023/24.",
     find: "Find Candidates",
     replace: "Replace a Player",
     context: "Club Context",
@@ -186,7 +186,7 @@ export const recruitmentCopy = {
   nl: {
     title: "Stel een shortlist samen",
     intro:
-      "Stel een expliciet profiel samen, vergelijk waargenomen speelstijlen en bekijk de onderbouwing van de ranglijst. Alleen WSL 2023/24.",
+      "Stel een expliciet profiel samen, vergelijk waargenomen speelstijlen en bekijk de onderbouwing van de ranglijst. Historische Big Five 2017/18 en WSL 2023/24.",
     find: "Kandidaten zoeken",
     replace: "Speler vervangen",
     context: "Clubcontext",
