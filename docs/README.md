@@ -29,3 +29,11 @@ Start with the [product and quick start](../README.md). This index separates cur
 [Phase 1 QA](phase-1-qa.md) · [Phase 2 QA](phase-2-qa.md) · [Phase 3 QA](phase-3-qa.md) · [Phase 4 QA](phase-4-qa.md). These are dated evidence, not current operating instructions. Frozen plans, selections, evaluations and scientific claims are intentionally preserved.
 
 The old [Phase 5 hand-off](phase-5-handoff.md) describes the pre-Phase-5 starting point; the actual production-only scope is in the audit/release gate. [Future portfolio notes](portfolio-integration-notes.md) are a separate, unexecuted task.
+
+## v1.2 expansion
+
+- [Open-data landscape and source rights](v1.2-open-data-landscape.md)
+- [Preregistered Wyscout recruitment plan](v1.2-wyscout-recruitment-plan.md)
+- [League-specific evaluation and robustness](v1.2-recruitment-expansion-evaluation.md)
+- [Authoritative capability and coverage map](v1.2-platform-coverage.md)
+- [Reproduction, budgets and operations](v1.2-reproduction.md)

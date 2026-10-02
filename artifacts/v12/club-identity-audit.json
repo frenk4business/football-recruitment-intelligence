@@ -1,0 +1,4682 @@
+[
+  {
+    "candidates": [
+      "openfootball-club-b291c99d4c707e3b54d8"
+    ],
+    "provider_club": "statsbomb:1041",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-508f91d20693414a6c0a"
+    ],
+    "provider_club": "statsbomb:208",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-959178f11a71e8da1fad"
+    ],
+    "provider_club": "statsbomb:322",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-99c92811b84479d5d844"
+    ],
+    "provider_club": "statsbomb:360",
+    "scope": "statsbomb-11-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e3286f592f60465ef68f"
+    ],
+    "provider_club": "statsbomb:1683",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b746a608594b7f77edf5"
+    ],
+    "provider_club": "statsbomb:224",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0d71c038dcf681c82e6"
+    ],
+    "provider_club": "statsbomb:2256",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-95fb96bab58d532dd331"
+    ],
+    "provider_club": "statsbomb:226",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9f6d1e04adb9521cb67e"
+    ],
+    "provider_club": "statsbomb:227",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-17c73f1cec9412d1144a"
+    ],
+    "provider_club": "statsbomb:228",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-680b1d03c3049a7b993f"
+    ],
+    "provider_club": "statsbomb:229",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a38a371f7380ab8d99f5"
+    ],
+    "provider_club": "statsbomb:230",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2fa8541e52b01fedbea1"
+    ],
+    "provider_club": "statsbomb:231",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8a3cf335fd3223d78a3f"
+    ],
+    "provider_club": "statsbomb:232",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-29b7e66c49d51337c266"
+    ],
+    "provider_club": "statsbomb:233",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1080cdd4f89eaee0bdf4"
+    ],
+    "provider_club": "statsbomb:234",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a6a0044aa5092d22591"
+    ],
+    "provider_club": "statsbomb:236",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f0acde8dd3823ad40059"
+    ],
+    "provider_club": "statsbomb:238",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bc88849b95c97d4d2bf6"
+    ],
+    "provider_club": "statsbomb:239",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-68c0804bb720d3b53180"
+    ],
+    "provider_club": "statsbomb:240",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5bcb23391f185cf4a63e"
+    ],
+    "provider_club": "statsbomb:241",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b4c25647223b30682b7e"
+    ],
+    "provider_club": "statsbomb:243",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b3eaa3bdd5f708328d5c"
+    ],
+    "provider_club": "statsbomb:290",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0575d4189f63d9dd2411"
+    ],
+    "provider_club": "statsbomb:291",
+    "scope": "statsbomb-12-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8ef3fb1897948c9afa9d"
+    ],
+    "provider_club": "statsbomb:1",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5bb211d470390cbca538"
+    ],
+    "provider_club": "statsbomb:22",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-20b25c07566b45b7610d"
+    ],
+    "provider_club": "statsbomb:23",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-ad81ec722548cccb56c1"
+    ],
+    "provider_club": "statsbomb:24",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3a4cae2ea828a6d8eb9f"
+    ],
+    "provider_club": "statsbomb:25",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-fixture-club-ccc82dcbcf1eb4fc2d6e"
+    ],
+    "provider_club": "statsbomb:26",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9e4d2903de06666fe9f7"
+    ],
+    "provider_club": "statsbomb:27",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3387d22ea8a9588badd0"
+    ],
+    "provider_club": "statsbomb:28",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d2f1602966e73851c8ba"
+    ],
+    "provider_club": "statsbomb:29",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bd955cdf7a586234e3d3"
+    ],
+    "provider_club": "statsbomb:30",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1b691e2c58155b6849d7"
+    ],
+    "provider_club": "statsbomb:31",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1ee3ea6cea163bb70650"
+    ],
+    "provider_club": "statsbomb:33",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3f541eacb4771610a0e1"
+    ],
+    "provider_club": "statsbomb:36",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a290c8a48c25b2d6a59b"
+    ],
+    "provider_club": "statsbomb:37",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-da522fe5f7c8094d57a2"
+    ],
+    "provider_club": "statsbomb:38",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4c7aebde5624525373f9"
+    ],
+    "provider_club": "statsbomb:39",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-60892de2ab369737de98"
+    ],
+    "provider_club": "statsbomb:40",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-58f2aa79799355e60d0e"
+    ],
+    "provider_club": "statsbomb:41",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5af52b1a78949037910e"
+    ],
+    "provider_club": "statsbomb:56",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b99b08b7a6a22f53986c"
+    ],
+    "provider_club": "statsbomb:59",
+    "scope": "statsbomb-2-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-fixture-club-ccc82dcbcf1eb4fc2d6e"
+    ],
+    "provider_club": "wyscout:10531",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8ef3fb1897948c9afa9d"
+    ],
+    "provider_club": "wyscout:1609",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1ee3ea6cea163bb70650"
+    ],
+    "provider_club": "wyscout:1610",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4c7aebde5624525373f9"
+    ],
+    "provider_club": "wyscout:1611",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-ad81ec722548cccb56c1"
+    ],
+    "provider_club": "wyscout:1612",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a290c8a48c25b2d6a59b"
+    ],
+    "provider_club": "wyscout:1613",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3a4cae2ea828a6d8eb9f"
+    ],
+    "provider_club": "wyscout:1619",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d2f1602966e73851c8ba"
+    ],
+    "provider_club": "wyscout:1623",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-da522fe5f7c8094d57a2"
+    ],
+    "provider_club": "wyscout:1624",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3f541eacb4771610a0e1"
+    ],
+    "provider_club": "wyscout:1625",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9e4d2903de06666fe9f7"
+    ],
+    "provider_club": "wyscout:1627",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1b691e2c58155b6849d7"
+    ],
+    "provider_club": "wyscout:1628",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5bb211d470390cbca538"
+    ],
+    "provider_club": "wyscout:1631",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-60892de2ab369737de98"
+    ],
+    "provider_club": "wyscout:1633",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bd955cdf7a586234e3d3"
+    ],
+    "provider_club": "wyscout:1639",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-20b25c07566b45b7610d"
+    ],
+    "provider_club": "wyscout:1644",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-87a8686fbb8476f4a555"
+    ],
+    "provider_club": "wyscout:1646",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-113fb46f184783e9e310"
+    ],
+    "provider_club": "wyscout:1651",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3387d22ea8a9588badd0"
+    ],
+    "provider_club": "wyscout:1659",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-030e9966876d785f9cd6"
+    ],
+    "provider_club": "wyscout:1673",
+    "scope": "wyscout-364-181150",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [],
+    "provider_club": "wyscout:19830",
+    "scope": "wyscout-412-181189",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1e1e86cb55e516853ca9"
+    ],
+    "provider_club": "wyscout:3766",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [],
+    "provider_club": "wyscout:3767",
+    "scope": "wyscout-412-181189",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f52ece8463479f50419d"
+    ],
+    "provider_club": "wyscout:3770",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2c7b3e90350df93caf9b"
+    ],
+    "provider_club": "wyscout:3771",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfdaa075f0935b7c7f46"
+    ],
+    "provider_club": "wyscout:3772",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a335cd1800e26f47f186"
+    ],
+    "provider_club": "wyscout:3774",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-74c2b8c5ed8ce99663b7"
+    ],
+    "provider_club": "wyscout:3775",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2da171ee3802ed9b2589"
+    ],
+    "provider_club": "wyscout:3776",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e82731dcc8b7154566f2"
+    ],
+    "provider_club": "wyscout:3777",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bf158d0fb03823b91bd3"
+    ],
+    "provider_club": "wyscout:3779",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0b9215196406491cc727"
+    ],
+    "provider_club": "wyscout:3780",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7daf32910eda639b0439"
+    ],
+    "provider_club": "wyscout:3782",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-47febedde6024e7527ad"
+    ],
+    "provider_club": "wyscout:3783",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-63d2cbc91985948a88d9"
+    ],
+    "provider_club": "wyscout:3785",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-beaba73a8ff51169332b"
+    ],
+    "provider_club": "wyscout:3787",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-00f394429700f39685bc"
+    ],
+    "provider_club": "wyscout:3789",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4ad49e2ec9e3facdc071"
+    ],
+    "provider_club": "wyscout:3795",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0c34572c99cce160b99c"
+    ],
+    "provider_club": "wyscout:3799",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-115bcd779b577851138c"
+    ],
+    "provider_club": "wyscout:3804",
+    "scope": "wyscout-412-181189",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e85224e73b1b920f01bb"
+    ],
+    "provider_club": "wyscout:2443",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-ceb3052ccdc3633c0c05"
+    ],
+    "provider_club": "wyscout:2444",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-23a1403dafb78a55d698"
+    ],
+    "provider_club": "wyscout:2445",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d7f2e96317af6db24af1"
+    ],
+    "provider_club": "wyscout:2446",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0ca747e7995067495f98"
+    ],
+    "provider_club": "wyscout:2447",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-befcfa66deb3fbc6aa69"
+    ],
+    "provider_club": "wyscout:2449",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-128a46758f1ddd31c851"
+    ],
+    "provider_club": "wyscout:2450",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-06d72462489eca61311e"
+    ],
+    "provider_club": "wyscout:2451",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7e9f42626ecb8879c50c"
+    ],
+    "provider_club": "wyscout:2453",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-180a3cae8aefe6a43a0b"
+    ],
+    "provider_club": "wyscout:2454",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-edc5f8ba6bcde23bf521"
+    ],
+    "provider_club": "wyscout:2455",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a217447a99cf336fe8c7"
+    ],
+    "provider_club": "wyscout:2457",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-439ac2347ff036805c77"
+    ],
+    "provider_club": "wyscout:2460",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9c71ec589d89b464dc5a"
+    ],
+    "provider_club": "wyscout:2462",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-93be53306ecc0a80f043"
+    ],
+    "provider_club": "wyscout:2463",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bb08dc80bc297413fa11"
+    ],
+    "provider_club": "wyscout:2481",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3134940e909e79bb37d8"
+    ],
+    "provider_club": "wyscout:2482",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-39ec0c2904a54b601056"
+    ],
+    "provider_club": "wyscout:2975",
+    "scope": "wyscout-426-181137",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b4c25647223b30682b7e"
+    ],
+    "provider_club": "wyscout:3157",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-680b1d03c3049a7b993f"
+    ],
+    "provider_club": "wyscout:3158",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b746a608594b7f77edf5"
+    ],
+    "provider_club": "wyscout:3159",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f0acde8dd3823ad40059"
+    ],
+    "provider_club": "wyscout:3161",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a6a0044aa5092d22591"
+    ],
+    "provider_club": "wyscout:3162",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a38a371f7380ab8d99f5"
+    ],
+    "provider_club": "wyscout:3163",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1080cdd4f89eaee0bdf4"
+    ],
+    "provider_club": "wyscout:3164",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2fa8541e52b01fedbea1"
+    ],
+    "provider_club": "wyscout:3165",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-68c0804bb720d3b53180"
+    ],
+    "provider_club": "wyscout:3166",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-17c73f1cec9412d1144a"
+    ],
+    "provider_club": "wyscout:3172",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c695a3dbaa7fea9eff79"
+    ],
+    "provider_club": "wyscout:3173",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bc88849b95c97d4d2bf6"
+    ],
+    "provider_club": "wyscout:3176",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5bcb23391f185cf4a63e"
+    ],
+    "provider_club": "wyscout:3185",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9f6d1e04adb9521cb67e"
+    ],
+    "provider_club": "wyscout:3187",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-29b7e66c49d51337c266"
+    ],
+    "provider_club": "wyscout:3193",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-95fb96bab58d532dd331"
+    ],
+    "provider_club": "wyscout:3194",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5c09fff088af8b491dd1"
+    ],
+    "provider_club": "wyscout:3197",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7b52a259eaf80a32445c"
+    ],
+    "provider_club": "wyscout:3204",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bc9f8269fb783fd4d581"
+    ],
+    "provider_club": "wyscout:3219",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8a3cf335fd3223d78a3f"
+    ],
+    "provider_club": "wyscout:3315",
+    "scope": "wyscout-524-181248",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "wyscout:674",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "wyscout:675",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "wyscout:676",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "wyscout:677",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "wyscout:678",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "wyscout:679",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "wyscout:680",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "wyscout:682",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "wyscout:683",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "wyscout:684",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "wyscout:687",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "wyscout:691",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "wyscout:692",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "wyscout:695",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfd04491593464f73172"
+    ],
+    "provider_club": "wyscout:696",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "wyscout:698",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-959178f11a71e8da1fad"
+    ],
+    "provider_club": "wyscout:701",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c605789d5326cdaec0f0"
+    ],
+    "provider_club": "wyscout:712",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-508f91d20693414a6c0a"
+    ],
+    "provider_club": "wyscout:714",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-de1836600674db1d334d"
+    ],
+    "provider_club": "wyscout:756",
+    "scope": "wyscout-795-181144",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:169",
+    "scope": "statsbomb-9-281",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bb08dc80bc297413fa11"
+    ],
+    "provider_club": "statsbomb:172",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-23a1403dafb78a55d698"
+    ],
+    "provider_club": "statsbomb:174",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3134940e909e79bb37d8"
+    ],
+    "provider_club": "statsbomb:175",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e85224e73b1b920f01bb"
+    ],
+    "provider_club": "statsbomb:176",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-439ac2347ff036805c77"
+    ],
+    "provider_club": "statsbomb:177",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-06d72462489eca61311e"
+    ],
+    "provider_club": "statsbomb:179",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0ca747e7995067495f98"
+    ],
+    "provider_club": "statsbomb:180",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-39ec0c2904a54b601056"
+    ],
+    "provider_club": "statsbomb:182",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7e9f42626ecb8879c50c"
+    ],
+    "provider_club": "statsbomb:183",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9c71ec589d89b464dc5a"
+    ],
+    "provider_club": "statsbomb:184",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-180a3cae8aefe6a43a0b"
+    ],
+    "provider_club": "statsbomb:185",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-93be53306ecc0a80f043"
+    ],
+    "provider_club": "statsbomb:186",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-21125c54f90e2d4f2f36"
+    ],
+    "provider_club": "statsbomb:190",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-02f7212378d679a84933"
+    ],
+    "provider_club": "statsbomb:201",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-eed522a609f39d392891"
+    ],
+    "provider_club": "statsbomb:868",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-85d6ff898b673c246d0a"
+    ],
+    "provider_club": "statsbomb:872",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d7f2e96317af6db24af1"
+    ],
+    "provider_club": "statsbomb:904",
+    "scope": "statsbomb-9-281",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:169",
+    "scope": "statsbomb-9-27",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [
+      "openfootball-club-128a46758f1ddd31c851"
+    ],
+    "provider_club": "statsbomb:171",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bb08dc80bc297413fa11"
+    ],
+    "provider_club": "statsbomb:172",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a217447a99cf336fe8c7"
+    ],
+    "provider_club": "statsbomb:173",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-23a1403dafb78a55d698"
+    ],
+    "provider_club": "statsbomb:174",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3134940e909e79bb37d8"
+    ],
+    "provider_club": "statsbomb:175",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e85224e73b1b920f01bb"
+    ],
+    "provider_club": "statsbomb:176",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-439ac2347ff036805c77"
+    ],
+    "provider_club": "statsbomb:177",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-edc5f8ba6bcde23bf521"
+    ],
+    "provider_club": "statsbomb:178",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-06d72462489eca61311e"
+    ],
+    "provider_club": "statsbomb:179",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0ca747e7995067495f98"
+    ],
+    "provider_club": "statsbomb:180",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-befcfa66deb3fbc6aa69"
+    ],
+    "provider_club": "statsbomb:181",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9c71ec589d89b464dc5a"
+    ],
+    "provider_club": "statsbomb:184",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-180a3cae8aefe6a43a0b"
+    ],
+    "provider_club": "statsbomb:185",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-93be53306ecc0a80f043"
+    ],
+    "provider_club": "statsbomb:186",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bc3c7870819d48657f4f"
+    ],
+    "provider_club": "statsbomb:189",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-85d6ff898b673c246d0a"
+    ],
+    "provider_club": "statsbomb:872",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d7f2e96317af6db24af1"
+    ],
+    "provider_club": "statsbomb:904",
+    "scope": "statsbomb-9-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:2021",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7282",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7283",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7284",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7285",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7286",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7287",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7288",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7289",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7290",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:7291",
+    "scope": "statsbomb-1238-108",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a4dd97f93e15aba21f7e"
+    ],
+    "provider_club": "statsbomb:1042",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfd04491593464f73172"
+    ],
+    "provider_club": "statsbomb:206",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d9cdb140482648aacb16"
+    ],
+    "provider_club": "statsbomb:552",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-18f93845553754152fb9"
+    ],
+    "provider_club": "statsbomb:902",
+    "scope": "statsbomb-11-90",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c605789d5326cdaec0f0"
+    ],
+    "provider_club": "statsbomb:205",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfd04491593464f73172"
+    ],
+    "provider_club": "statsbomb:206",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-959178f11a71e8da1fad"
+    ],
+    "provider_club": "statsbomb:322",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-42",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c605789d5326cdaec0f0"
+    ],
+    "provider_club": "statsbomb:205",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfd04491593464f73172"
+    ],
+    "provider_club": "statsbomb:206",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-de1836600674db1d334d"
+    ],
+    "provider_club": "statsbomb:211",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-959178f11a71e8da1fad"
+    ],
+    "provider_club": "statsbomb:322",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-99c92811b84479d5d844"
+    ],
+    "provider_club": "statsbomb:360",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-18f93845553754152fb9"
+    ],
+    "provider_club": "statsbomb:902",
+    "scope": "statsbomb-11-4",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c605789d5326cdaec0f0"
+    ],
+    "provider_club": "statsbomb:205",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfd04491593464f73172"
+    ],
+    "provider_club": "statsbomb:206",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-508f91d20693414a6c0a"
+    ],
+    "provider_club": "statsbomb:208",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-de1836600674db1d334d"
+    ],
+    "provider_club": "statsbomb:211",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-959178f11a71e8da1fad"
+    ],
+    "provider_club": "statsbomb:322",
+    "scope": "statsbomb-11-1",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b291c99d4c707e3b54d8"
+    ],
+    "provider_club": "statsbomb:1041",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c605789d5326cdaec0f0"
+    ],
+    "provider_club": "statsbomb:205",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfd04491593464f73172"
+    ],
+    "provider_club": "statsbomb:206",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-508f91d20693414a6c0a"
+    ],
+    "provider_club": "statsbomb:208",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-959178f11a71e8da1fad"
+    ],
+    "provider_club": "statsbomb:322",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-2",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a4dd97f93e15aba21f7e"
+    ],
+    "provider_club": "statsbomb:1042",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-959178f11a71e8da1fad"
+    ],
+    "provider_club": "statsbomb:322",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-99c92811b84479d5d844"
+    ],
+    "provider_club": "statsbomb:360",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-dfc78a9fbe565d1e5de5"
+    ],
+    "provider_club": "statsbomb:373",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ee9471bb55087699201"
+    ],
+    "provider_club": "statsbomb:403",
+    "scope": "statsbomb-11-26",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a4dd97f93e15aba21f7e"
+    ],
+    "provider_club": "statsbomb:1042",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-99c92811b84479d5d844"
+    ],
+    "provider_club": "statsbomb:360",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ee9471bb55087699201"
+    ],
+    "provider_club": "statsbomb:403",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-25",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-99c92811b84479d5d844"
+    ],
+    "provider_club": "statsbomb:360",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a8a17068f95c5e80b17"
+    ],
+    "provider_club": "statsbomb:395",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-24",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b291c99d4c707e3b54d8"
+    ],
+    "provider_club": "statsbomb:1041",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-42cb08534d68899218a8"
+    ],
+    "provider_club": "statsbomb:1049",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-acec17f36bf9ba23aee4"
+    ],
+    "provider_club": "statsbomb:1217",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-99c92811b84479d5d844"
+    ],
+    "provider_club": "statsbomb:360",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a8a17068f95c5e80b17"
+    ],
+    "provider_club": "statsbomb:395",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-23",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b291c99d4c707e3b54d8"
+    ],
+    "provider_club": "statsbomb:1041",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-acec17f36bf9ba23aee4"
+    ],
+    "provider_club": "statsbomb:1217",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-25dedbec45699ada2d9f"
+    ],
+    "provider_club": "statsbomb:1218",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a8a17068f95c5e80b17"
+    ],
+    "provider_club": "statsbomb:395",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ee9471bb55087699201"
+    ],
+    "provider_club": "statsbomb:403",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-22",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b291c99d4c707e3b54d8"
+    ],
+    "provider_club": "statsbomb:1041",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-acec17f36bf9ba23aee4"
+    ],
+    "provider_club": "statsbomb:1217",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-ec12ce03841f1292e36d"
+    ],
+    "provider_club": "statsbomb:1219",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a8a17068f95c5e80b17"
+    ],
+    "provider_club": "statsbomb:395",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ee9471bb55087699201"
+    ],
+    "provider_club": "statsbomb:403",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4adfb07bf2bf2c806d82"
+    ],
+    "provider_club": "statsbomb:627",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-21",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b291c99d4c707e3b54d8"
+    ],
+    "provider_club": "statsbomb:1041",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-acec17f36bf9ba23aee4"
+    ],
+    "provider_club": "statsbomb:1217",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1383dae8d0064b73334a"
+    ],
+    "provider_club": "statsbomb:1220",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ee9471bb55087699201"
+    ],
+    "provider_club": "statsbomb:403",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [],
+    "provider_club": "statsbomb:444",
+    "scope": "statsbomb-11-41",
+    "status": "unmatched"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-41",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-acec17f36bf9ba23aee4"
+    ],
+    "provider_club": "statsbomb:1217",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1383dae8d0064b73334a"
+    ],
+    "provider_club": "statsbomb:1220",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c1946c097e7263b5a4da"
+    ],
+    "provider_club": "statsbomb:1230",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a8a17068f95c5e80b17"
+    ],
+    "provider_club": "statsbomb:395",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ee9471bb55087699201"
+    ],
+    "provider_club": "statsbomb:403",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b44a824966fbc511ecf1"
+    ],
+    "provider_club": "statsbomb:901",
+    "scope": "statsbomb-11-40",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b77b5a95dfc7edc08980"
+    ],
+    "provider_club": "statsbomb:1036",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-acec17f36bf9ba23aee4"
+    ],
+    "provider_club": "statsbomb:1217",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1383dae8d0064b73334a"
+    ],
+    "provider_club": "statsbomb:1220",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8f223d93db6a9441e7b1"
+    ],
+    "provider_club": "statsbomb:207",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a023bca3552370ec0882"
+    ],
+    "provider_club": "statsbomb:210",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e03e54cb9400bf63b050"
+    ],
+    "provider_club": "statsbomb:219",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a8a17068f95c5e80b17"
+    ],
+    "provider_club": "statsbomb:395",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-39",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5a3be4df403979588950"
+    ],
+    "provider_club": "statsbomb:1043",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-acec17f36bf9ba23aee4"
+    ],
+    "provider_club": "statsbomb:1217",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfd04491593464f73172"
+    ],
+    "provider_club": "statsbomb:206",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-cc8f041636caeab48f32"
+    ],
+    "provider_club": "statsbomb:209",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-90e701db89b06e0cd5e0"
+    ],
+    "provider_club": "statsbomb:212",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-204f2d305d13557ccd99"
+    ],
+    "provider_club": "statsbomb:213",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c0ab1bd31bd59731b1ee"
+    ],
+    "provider_club": "statsbomb:215",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a32a6be07becd02b782c"
+    ],
+    "provider_club": "statsbomb:218",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1071e12fded45ada345d"
+    ],
+    "provider_club": "statsbomb:222",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7a8a17068f95c5e80b17"
+    ],
+    "provider_club": "statsbomb:395",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d9cdb140482648aacb16"
+    ],
+    "provider_club": "statsbomb:552",
+    "scope": "statsbomb-11-38",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-22500bc8ee6945a7a703"
+    ],
+    "provider_club": "statsbomb:214",
+    "scope": "statsbomb-11-37",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-6341a67756010871a0ea"
+    ],
+    "provider_club": "statsbomb:216",
+    "scope": "statsbomb-11-37",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-37",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1a8db25545cdd835bb07"
+    ],
+    "provider_club": "statsbomb:221",
+    "scope": "statsbomb-11-37",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4befc5b64762e2fa612f"
+    ],
+    "provider_club": "statsbomb:223",
+    "scope": "statsbomb-11-37",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-96b8d34ad914065efefa"
+    ],
+    "provider_club": "statsbomb:422",
+    "scope": "statsbomb-11-37",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-ca661bca62bb703c7640"
+    ],
+    "provider_club": "statsbomb:608",
+    "scope": "statsbomb-11-37",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e76359a6e6a674c8620c"
+    ],
+    "provider_club": "statsbomb:217",
+    "scope": "statsbomb-11-278",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3ae3cbe4b8cd7db637f8"
+    ],
+    "provider_club": "statsbomb:220",
+    "scope": "statsbomb-11-278",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-fixture-club-4f40b53fd2cebae092d7"
+    ],
+    "provider_club": "statsbomb:129",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0b9215196406491cc727"
+    ],
+    "provider_club": "statsbomb:130",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-27c1177fdfd738616ae1"
+    ],
+    "provider_club": "statsbomb:131",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4ad49e2ec9e3facdc071"
+    ],
+    "provider_club": "statsbomb:133",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a335cd1800e26f47f186"
+    ],
+    "provider_club": "statsbomb:134",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-74c2b8c5ed8ce99663b7"
+    ],
+    "provider_club": "statsbomb:136",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1e1e86cb55e516853ca9"
+    ],
+    "provider_club": "statsbomb:137",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bf158d0fb03823b91bd3"
+    ],
+    "provider_club": "statsbomb:138",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-beaba73a8ff51169332b"
+    ],
+    "provider_club": "statsbomb:139",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2da171ee3802ed9b2589"
+    ],
+    "provider_club": "statsbomb:143",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f52ece8463479f50419d"
+    ],
+    "provider_club": "statsbomb:144",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0c34572c99cce160b99c"
+    ],
+    "provider_club": "statsbomb:145",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2c7b3e90350df93caf9b"
+    ],
+    "provider_club": "statsbomb:147",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f69e0deb13146a449eb9"
+    ],
+    "provider_club": "statsbomb:152",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-84eec95f0efa36fabfcb"
+    ],
+    "provider_club": "statsbomb:153",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c1f13061c062f8677e3c"
+    ],
+    "provider_club": "statsbomb:156",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9ce7a1e94ab411b4ffa2"
+    ],
+    "provider_club": "statsbomb:158",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-83b78dcf5ce9596fdd81"
+    ],
+    "provider_club": "statsbomb:165",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4b42a1525877813a0a29"
+    ],
+    "provider_club": "statsbomb:167",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0303e03d247ea8e6858b"
+    ],
+    "provider_club": "statsbomb:168",
+    "scope": "statsbomb-7-235",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-fixture-club-4f40b53fd2cebae092d7"
+    ],
+    "provider_club": "statsbomb:129",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-27c1177fdfd738616ae1"
+    ],
+    "provider_club": "statsbomb:131",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4ad49e2ec9e3facdc071"
+    ],
+    "provider_club": "statsbomb:133",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a335cd1800e26f47f186"
+    ],
+    "provider_club": "statsbomb:134",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7daf32910eda639b0439"
+    ],
+    "provider_club": "statsbomb:135",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-74c2b8c5ed8ce99663b7"
+    ],
+    "provider_club": "statsbomb:136",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1e1e86cb55e516853ca9"
+    ],
+    "provider_club": "statsbomb:137",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bf158d0fb03823b91bd3"
+    ],
+    "provider_club": "statsbomb:138",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-beaba73a8ff51169332b"
+    ],
+    "provider_club": "statsbomb:139",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e82731dcc8b7154566f2"
+    ],
+    "provider_club": "statsbomb:141",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2da171ee3802ed9b2589"
+    ],
+    "provider_club": "statsbomb:143",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f52ece8463479f50419d"
+    ],
+    "provider_club": "statsbomb:144",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfdaa075f0935b7c7f46"
+    ],
+    "provider_club": "statsbomb:146",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2c7b3e90350df93caf9b"
+    ],
+    "provider_club": "statsbomb:147",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f69e0deb13146a449eb9"
+    ],
+    "provider_club": "statsbomb:152",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c1f13061c062f8677e3c"
+    ],
+    "provider_club": "statsbomb:156",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-83b78dcf5ce9596fdd81"
+    ],
+    "provider_club": "statsbomb:165",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0303e03d247ea8e6858b"
+    ],
+    "provider_club": "statsbomb:168",
+    "scope": "statsbomb-7-108",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-fixture-club-4f40b53fd2cebae092d7"
+    ],
+    "provider_club": "statsbomb:129",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0b9215196406491cc727"
+    ],
+    "provider_club": "statsbomb:130",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-27c1177fdfd738616ae1"
+    ],
+    "provider_club": "statsbomb:131",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4ad49e2ec9e3facdc071"
+    ],
+    "provider_club": "statsbomb:133",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a335cd1800e26f47f186"
+    ],
+    "provider_club": "statsbomb:134",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7daf32910eda639b0439"
+    ],
+    "provider_club": "statsbomb:135",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-74c2b8c5ed8ce99663b7"
+    ],
+    "provider_club": "statsbomb:136",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1e1e86cb55e516853ca9"
+    ],
+    "provider_club": "statsbomb:137",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-beaba73a8ff51169332b"
+    ],
+    "provider_club": "statsbomb:139",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-47febedde6024e7527ad"
+    ],
+    "provider_club": "statsbomb:140",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-63d2cbc91985948a88d9"
+    ],
+    "provider_club": "statsbomb:142",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2da171ee3802ed9b2589"
+    ],
+    "provider_club": "statsbomb:143",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-f52ece8463479f50419d"
+    ],
+    "provider_club": "statsbomb:144",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-0c34572c99cce160b99c"
+    ],
+    "provider_club": "statsbomb:145",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-bfdaa075f0935b7c7f46"
+    ],
+    "provider_club": "statsbomb:146",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2c7b3e90350df93caf9b"
+    ],
+    "provider_club": "statsbomb:147",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c1f13061c062f8677e3c"
+    ],
+    "provider_club": "statsbomb:156",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4fe784ad24e2d9022736"
+    ],
+    "provider_club": "statsbomb:160",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-83b78dcf5ce9596fdd81"
+    ],
+    "provider_club": "statsbomb:165",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-c138186efc01702fdc63"
+    ],
+    "provider_club": "statsbomb:2736",
+    "scope": "statsbomb-7-27",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-8ef3fb1897948c9afa9d"
+    ],
+    "provider_club": "statsbomb:1",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-e586fdc0798be64b2a6e"
+    ],
+    "provider_club": "statsbomb:101",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9365253ac91a97bb92b8"
+    ],
+    "provider_club": "statsbomb:105",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-5bb211d470390cbca538"
+    ],
+    "provider_club": "statsbomb:22",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-ad81ec722548cccb56c1"
+    ],
+    "provider_club": "statsbomb:24",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3a4cae2ea828a6d8eb9f"
+    ],
+    "provider_club": "statsbomb:25",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d2f1602966e73851c8ba"
+    ],
+    "provider_club": "statsbomb:29",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-40c70fd9314eb9032747"
+    ],
+    "provider_club": "statsbomb:328",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-1ee3ea6cea163bb70650"
+    ],
+    "provider_club": "statsbomb:33",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-3f541eacb4771610a0e1"
+    ],
+    "provider_club": "statsbomb:36",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-a290c8a48c25b2d6a59b"
+    ],
+    "provider_club": "statsbomb:37",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-da522fe5f7c8094d57a2"
+    ],
+    "provider_club": "statsbomb:38",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-4c7aebde5624525373f9"
+    ],
+    "provider_club": "statsbomb:39",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7d51657aae3cf42af433"
+    ],
+    "provider_club": "statsbomb:46",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-7bf668fbaba6a3cee372"
+    ],
+    "provider_club": "statsbomb:47",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-960301b5e28df05aacc7"
+    ],
+    "provider_club": "statsbomb:54",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-d9a9d35f8c7156cee694"
+    ],
+    "provider_club": "statsbomb:55",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b99b08b7a6a22f53986c"
+    ],
+    "provider_club": "statsbomb:59",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-78e2a687e94aaedea711"
+    ],
+    "provider_club": "statsbomb:75",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-2891ea118a07bbe2ab74"
+    ],
+    "provider_club": "statsbomb:98",
+    "scope": "statsbomb-2-44",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-b746a608594b7f77edf5"
+    ],
+    "provider_club": "statsbomb:224",
+    "scope": "statsbomb-12-86",
+    "status": "verified_exact_country_alias"
+  },
+  {
+    "candidates": [
+      "openfootball-club-9f6d1e04adb9521cb67e"
+    ],
+    "provider_club": "statsbomb:227",
+    "scope": "statsbomb-12-86",
+    "status": "verified_exact_country_alias"
+  }
+]

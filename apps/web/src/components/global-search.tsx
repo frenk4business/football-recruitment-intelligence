@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { route, type Locale } from "@/lib/routes";
 import { normalizeName, profileSearchText } from "@/lib/player-search";
-import type { ProfileIndex } from "@/lib/profile-contracts";
+import type { ProfileIndex } from "@/lib/player-view";
 
 /** Progressive enhancement: native GET search remains usable without JavaScript. */
 export function GlobalSearch({ locale }: { locale: Locale }) {
@@ -26,7 +26,7 @@ export function GlobalSearch({ locale }: { locale: Locale }) {
     const controller = new AbortController();
     import("@/lib/artifact")
       .then(({ fetchArtifact }) =>
-        fetchArtifact<ProfileIndex>("/data/v11/index.json", controller.signal),
+        fetchArtifact<ProfileIndex>("/data/v12/index.json", controller.signal),
       )
       .then(setIndex)
       .catch(() => {

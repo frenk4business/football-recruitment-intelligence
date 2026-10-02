@@ -1,0 +1,87 @@
+[
+  {
+    "scope": "wyscout-364-181150",
+    "league": "English first division",
+    "eligible_profiles": 350,
+    "paired_profiles": 338,
+    "clubs": 20,
+    "metrics": {
+      "recall_at_5": 0.6745562130177515,
+      "recall_at_10": 0.7928994082840237,
+      "mrr": 0.5083605879218496
+    },
+    "random": {
+      "recall_at_5": 0.04437869822485207,
+      "recall_at_10": 0.08875739644970414,
+      "mrr": 0.04665409614716803
+    }
+  },
+  {
+    "scope": "wyscout-412-181189",
+    "league": "French first division",
+    "eligible_profiles": 359,
+    "paired_profiles": 350,
+    "clubs": 20,
+    "metrics": {
+      "recall_at_5": 0.6457142857142857,
+      "recall_at_10": 0.7628571428571429,
+      "mrr": 0.5281109954769743
+    },
+    "random": {
+      "recall_at_5": 0.04285714285714286,
+      "recall_at_10": 0.08571428571428572,
+      "mrr": 0.045534247463594774
+    }
+  },
+  {
+    "scope": "wyscout-426-181137",
+    "league": "German first division",
+    "eligible_profiles": 321,
+    "paired_profiles": 315,
+    "clubs": 18,
+    "metrics": {
+      "recall_at_5": 0.6476190476190476,
+      "recall_at_10": 0.7619047619047619,
+      "mrr": 0.5071437520401095
+    },
+    "random": {
+      "recall_at_5": 0.047619047619047616,
+      "recall_at_10": 0.09523809523809523,
+      "mrr": 0.049512084585395195
+    }
+  },
+  {
+    "scope": "wyscout-524-181248",
+    "league": "Italian first division",
+    "eligible_profiles": 356,
+    "paired_profiles": 346,
+    "clubs": 20,
+    "metrics": {
+      "recall_at_5": 0.7023121387283237,
+      "recall_at_10": 0.8005780346820809,
+      "mrr": 0.5488871082692955
+    },
+    "random": {
+      "recall_at_5": 0.04335260115606936,
+      "recall_at_10": 0.08670520231213873,
+      "mrr": 0.04599660854356686
+    }
+  },
+  {
+    "scope": "wyscout-795-181144",
+    "league": "Spanish first division",
+    "eligible_profiles": 375,
+    "paired_profiles": 361,
+    "clubs": 20,
+    "metrics": {
+      "recall_at_5": 0.6952908587257618,
+      "recall_at_10": 0.8033240997229917,
+      "mrr": 0.5511180837733203
+    },
+    "random": {
+      "recall_at_5": 0.04155124653739612,
+      "recall_at_10": 0.08310249307479224,
+      "mrr": 0.044322501303666474
+    }
+  }
+]

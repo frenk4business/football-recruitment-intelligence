@@ -1,7 +1,8 @@
-import type { ProfileIndex, ProfileIndexEntry } from "./profile-contracts.ts";
+import type { ProfileIndex, ProfileIndexEntry } from "./player-view.ts";
 export type PlayerFilters = {
   q: string;
   provider: string;
+  country: string;
   competition: string;
   season: string;
   team: string;
@@ -17,6 +18,7 @@ export type PlayerFilters = {
 export const defaults: PlayerFilters = {
   q: "",
   provider: "",
+  country: "",
   competition: "",
   season: "",
   team: "",
@@ -50,6 +52,7 @@ export function readFilters(
   for (const key of [
     "q",
     "provider",
+    "country",
     "competition",
     "season",
     "team",
@@ -74,8 +77,14 @@ export function readFilters(
     )
   )
     state.role = "";
-  if (!["450", "600", "900"].includes(state.minutes)) state.minutes = "450";
-  if (!["", "common", "similarity"].includes(state.kind)) state.kind = "";
+  if (!["450", "600", "900", "1200"].includes(state.minutes))
+    state.minutes = "450";
+  if (
+    !["", "common", "similarity", "recruitment", "translation"].includes(
+      state.kind,
+    )
+  )
+    state.kind = "";
   if (!index.profiles.some((p) => p.id === state.profile)) state.profile = "";
   if (
     !index.profiles.some((p) => p.id === state.compare) ||
@@ -110,6 +119,7 @@ export function filterProfiles(
     const scope = scopes.get(p.scope)!;
     return (
       (!state.provider || p.provider === state.provider) &&
+      (!state.country || scope.country === state.country) &&
       (!state.competition || scope.competition_key === state.competition) &&
       (!state.season || scope.season === state.season) &&
       (!state.team || p.teams.includes(state.team)) &&
@@ -118,7 +128,11 @@ export function filterProfiles(
       (!state.kind ||
         (state.kind === "common"
           ? p.capabilities.common
-          : p.capabilities.similarity)) &&
+          : state.kind === "recruitment"
+            ? p.capabilities_v12?.recruitment
+            : state.kind === "translation"
+              ? p.capabilities.translation
+              : p.capabilities.similarity)) &&
       tokens.every((t) =>
         (names?.get(p.id) ?? profileSearchText(index, p)).includes(t),
       )

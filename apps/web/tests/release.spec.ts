@@ -118,7 +118,9 @@ for (const locale of ["en", "nl"]) {
         "recruitment/",
         "methodology/",
       ]) {
-        await page.goto(`${base}/${route}`);
+        await page.goto(
+          `${base}/${route}${route === "recruitment/" ? "?dataset=wsl" : ""}`,
+        );
         if (route === "player-dna/")
           await expect(page.locator(".dna-header h2")).toBeVisible();
         if (route === "translation/")
@@ -138,7 +140,7 @@ for (const locale of ["en", "nl"]) {
         await expectNoOverflow(page);
       }
     }
-    await page.goto(`${base}/recruitment/`);
+    await page.goto(`${base}/recruitment/?dataset=wsl`);
     await expect(page.locator(".recruitment-empty")).toBeVisible();
     await page.keyboard.press(browserName === "webkit" ? "Alt+Tab" : "Tab");
     await expect(page.locator(".skip-link")).toBeFocused();
@@ -182,7 +184,9 @@ for (const locale of ["en", "nl"]) {
           body: '{"version":"future-v99"}',
         }),
       );
-      await page.goto(`${base}/${route}/`);
+      await page.goto(
+        `${base}/${route}/${route === "recruitment" ? "?dataset=wsl" : ""}`,
+      );
       await expect(
         page.locator("main").getByRole("alert").first(),
       ).toBeVisible();
@@ -252,7 +256,7 @@ test("security headers enforce same-origin resources and stable data revalidatio
 }) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  const response = await page.goto("/recruitment/");
+  const response = await page.goto("/recruitment/?dataset=wsl");
   const headers = response!.headers();
   expect(headers["content-security-policy"]).toContain(
     "frame-ancestors 'none'",
@@ -285,7 +289,7 @@ test("clipboard denial retains a selectable share URL", async ({ page }) => {
       },
     });
   });
-  await page.goto("/recruitment/");
+  await page.goto("/recruitment/?dataset=wsl");
   await page
     .locator('[data-feature="pressures_per90"] select')
     .first()

@@ -1,0 +1,2024 @@
+{
+  "CapabilitySet": {
+    "additionalProperties": false,
+    "properties": {
+      "common_profile": {
+        "default": false,
+        "title": "Common Profile",
+        "type": "boolean"
+      },
+      "metadata_only": {
+        "default": false,
+        "title": "Metadata Only",
+        "type": "boolean"
+      },
+      "physical": {
+        "default": false,
+        "title": "Physical",
+        "type": "boolean"
+      },
+      "provider_profile": {
+        "default": true,
+        "title": "Provider Profile",
+        "type": "boolean"
+      },
+      "recruitment": {
+        "default": false,
+        "title": "Recruitment",
+        "type": "boolean"
+      },
+      "searchable": {
+        "default": true,
+        "title": "Searchable",
+        "type": "boolean"
+      },
+      "similarity": {
+        "default": false,
+        "title": "Similarity",
+        "type": "boolean"
+      },
+      "translation": {
+        "default": false,
+        "title": "Translation",
+        "type": "boolean"
+      }
+    },
+    "title": "CapabilitySet",
+    "type": "object"
+  },
+  "CommonMetrics": {
+    "additionalProperties": false,
+    "properties": {
+      "long_passes_all_per90": {
+        "minimum": 0,
+        "title": "Long Passes All Per90",
+        "type": "number"
+      },
+      "non_penalty_shots_per90": {
+        "minimum": 0,
+        "title": "Non Penalty Shots Per90",
+        "type": "number"
+      },
+      "passes_all_per90": {
+        "minimum": 0,
+        "title": "Passes All Per90",
+        "type": "number"
+      }
+    },
+    "required": [
+      "non_penalty_shots_per90",
+      "passes_all_per90",
+      "long_passes_all_per90"
+    ],
+    "title": "CommonMetrics",
+    "type": "object"
+  },
+  "ExpandedCounts": {
+    "additionalProperties": false,
+    "properties": {
+      "club_seasons": {
+        "title": "Club Seasons",
+        "type": "integer"
+      },
+      "common_profiles": {
+        "title": "Common Profiles",
+        "type": "integer"
+      },
+      "competition_seasons": {
+        "title": "Competition Seasons",
+        "type": "integer"
+      },
+      "competitions": {
+        "title": "Competitions",
+        "type": "integer"
+      },
+      "countries": {
+        "title": "Countries",
+        "type": "integer"
+      },
+      "events": {
+        "title": "Events",
+        "type": "integer"
+      },
+      "matches": {
+        "title": "Matches",
+        "type": "integer"
+      },
+      "metadata_clubs": {
+        "title": "Metadata Clubs",
+        "type": "integer"
+      },
+      "metadata_competition_seasons": {
+        "title": "Metadata Competition Seasons",
+        "type": "integer"
+      },
+      "metadata_player_records": {
+        "title": "Metadata Player Records",
+        "type": "integer"
+      },
+      "native_profiles": {
+        "title": "Native Profiles",
+        "type": "integer"
+      },
+      "profiles": {
+        "title": "Profiles",
+        "type": "integer"
+      },
+      "provider_competitions": {
+        "title": "Provider Competitions",
+        "type": "integer"
+      },
+      "provider_identities": {
+        "title": "Provider Identities",
+        "type": "integer"
+      },
+      "providers": {
+        "title": "Providers",
+        "type": "integer"
+      },
+      "recruitment_clubs": {
+        "title": "Recruitment Clubs",
+        "type": "integer"
+      },
+      "recruitment_profiles": {
+        "title": "Recruitment Profiles",
+        "type": "integer"
+      },
+      "seasons": {
+        "title": "Seasons",
+        "type": "integer"
+      },
+      "similarity_profiles": {
+        "title": "Similarity Profiles",
+        "type": "integer"
+      },
+      "specialist_profiles": {
+        "title": "Specialist Profiles",
+        "type": "integer"
+      },
+      "translation_profiles": {
+        "title": "Translation Profiles",
+        "type": "integer"
+      },
+      "validated_dna_profiles": {
+        "title": "Validated Dna Profiles",
+        "type": "integer"
+      },
+      "verified_persons": {
+        "const": 0,
+        "default": 0,
+        "title": "Verified Persons",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "providers",
+      "competitions",
+      "provider_competitions",
+      "competition_seasons",
+      "seasons",
+      "matches",
+      "events",
+      "profiles",
+      "provider_identities",
+      "native_profiles",
+      "common_profiles",
+      "similarity_profiles",
+      "translation_profiles",
+      "validated_dna_profiles",
+      "club_seasons",
+      "countries",
+      "recruitment_profiles",
+      "recruitment_clubs",
+      "metadata_clubs",
+      "metadata_player_records",
+      "metadata_competition_seasons",
+      "specialist_profiles"
+    ],
+    "title": "ExpandedCounts",
+    "type": "object"
+  },
+  "ExpandedDetail": {
+    "additionalProperties": false,
+    "properties": {
+      "appearances": {
+        "title": "Appearances",
+        "type": "integer"
+      },
+      "common": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/CommonMetrics"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "common_unavailable_reasons": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Common Unavailable Reasons",
+        "type": "array"
+      },
+      "dna_player_id": {
+        "default": null,
+        "title": "Dna Player Id",
+        "type": "null"
+      },
+      "first_date": {
+        "title": "First Date",
+        "type": "string"
+      },
+      "identity": {
+        "$ref": "#/$defs/ProfileIndexEntry"
+      },
+      "last_date": {
+        "title": "Last Date",
+        "type": "string"
+      },
+      "minute_methods": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Minute Methods",
+        "type": "array"
+      },
+      "native": {
+        "$ref": "#/$defs/StatsBombMetrics"
+      },
+      "neighbours": {
+        "items": {
+          "$ref": "#/$defs/ProfileNeighbour"
+        },
+        "maxItems": 0,
+        "title": "Neighbours",
+        "type": "array"
+      },
+      "provenance": {
+        "$ref": "#/$defs/ExpandedProvenance"
+      },
+      "provider_player_id": {
+        "title": "Provider Player Id",
+        "type": "integer"
+      },
+      "provider_role": {
+        "title": "Provider Role",
+        "type": "string"
+      },
+      "similarity_scaling": {
+        "const": "not_evaluated",
+        "title": "Similarity Scaling",
+        "type": "string"
+      },
+      "similarity_scope": {
+        "const": "not_evaluated",
+        "title": "Similarity Scope",
+        "type": "string"
+      },
+      "similarity_version": {
+        "const": "not_evaluated",
+        "title": "Similarity Version",
+        "type": "string"
+      },
+      "version": {
+        "const": "statsbomb-expanded-profile-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "identity",
+      "provider_player_id",
+      "provider_role",
+      "appearances",
+      "first_date",
+      "last_date",
+      "minute_methods",
+      "native",
+      "common",
+      "common_unavailable_reasons",
+      "similarity_version",
+      "similarity_scope",
+      "similarity_scaling",
+      "neighbours",
+      "provenance"
+    ],
+    "title": "ExpandedDetail",
+    "type": "object"
+  },
+  "ExpandedEntry": {
+    "additionalProperties": false,
+    "properties": {
+      "capabilities": {
+        "$ref": "#/$defs/ProfileCapabilities"
+      },
+      "capabilities_v12": {
+        "$ref": "#/$defs/CapabilitySet"
+      },
+      "detail_path": {
+        "pattern": "^/data/v(11|12)/profiles/[a-zA-Z0-9_./-]+\\.json$",
+        "title": "Detail Path",
+        "type": "string"
+      },
+      "id": {
+        "pattern": "^(statsbomb|wyscout)-[0-9]+-[0-9]+-[0-9]+$",
+        "title": "Id",
+        "type": "string"
+      },
+      "minutes": {
+        "minimum": 0,
+        "title": "Minutes",
+        "type": "number"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "provider": {
+        "enum": [
+          "statsbomb",
+          "wyscout"
+        ],
+        "title": "Provider",
+        "type": "string"
+      },
+      "role": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Role"
+      },
+      "role_family": {
+        "enum": [
+          "GK",
+          "DEF",
+          "MID",
+          "FWD"
+        ],
+        "title": "Role Family",
+        "type": "string"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "provider",
+      "scope",
+      "teams",
+      "role",
+      "role_family",
+      "minutes",
+      "capabilities",
+      "capabilities_v12",
+      "detail_path"
+    ],
+    "title": "ExpandedEntry",
+    "type": "object"
+  },
+  "ExpandedIndex": {
+    "additionalProperties": false,
+    "properties": {
+      "common_threshold": {
+        "title": "Common Threshold",
+        "type": "integer"
+      },
+      "common_version": {
+        "const": "common-profile-v1",
+        "title": "Common Version",
+        "type": "string"
+      },
+      "counts": {
+        "$ref": "#/$defs/ExpandedCounts"
+      },
+      "profiles": {
+        "items": {
+          "$ref": "#/$defs/ExpandedEntry"
+        },
+        "title": "Profiles",
+        "type": "array"
+      },
+      "scopes": {
+        "items": {
+          "$ref": "#/$defs/ExpandedScope"
+        },
+        "title": "Scopes",
+        "type": "array"
+      },
+      "search_threshold": {
+        "const": 450,
+        "title": "Search Threshold",
+        "type": "integer"
+      },
+      "teams": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "object"
+      },
+      "version": {
+        "const": "player-database-v12",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "common_version",
+      "common_threshold",
+      "search_threshold",
+      "counts",
+      "scopes",
+      "teams",
+      "profiles"
+    ],
+    "title": "ExpandedIndex",
+    "type": "object"
+  },
+  "ExpandedProvenance": {
+    "additionalProperties": false,
+    "properties": {
+      "build_manifest": {
+        "const": "/data/v12/build-manifest.json",
+        "title": "Build Manifest",
+        "type": "string"
+      },
+      "code_commit": {
+        "title": "Code Commit",
+        "type": "string"
+      },
+      "feature_manifest_sha256": {
+        "title": "Feature Manifest Sha256",
+        "type": "string"
+      },
+      "pipeline_sha256": {
+        "title": "Pipeline Sha256",
+        "type": "string"
+      },
+      "source_files": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Source Files",
+        "type": "array"
+      },
+      "source_manifest_sha256": {
+        "title": "Source Manifest Sha256",
+        "type": "string"
+      },
+      "source_revision": {
+        "title": "Source Revision",
+        "type": "string"
+      }
+    },
+    "required": [
+      "source_revision",
+      "source_files",
+      "source_manifest_sha256",
+      "feature_manifest_sha256",
+      "build_manifest",
+      "code_commit",
+      "pipeline_sha256"
+    ],
+    "title": "ExpandedProvenance",
+    "type": "object"
+  },
+  "ExpandedScope": {
+    "additionalProperties": false,
+    "properties": {
+      "clubs": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Clubs",
+        "type": "array"
+      },
+      "common_profiles": {
+        "minimum": 0,
+        "title": "Common Profiles",
+        "type": "integer"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "competition_key": {
+        "title": "Competition Key",
+        "type": "string"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "coverage": {
+        "title": "Coverage",
+        "type": "string"
+      },
+      "first_date": {
+        "title": "First Date",
+        "type": "string"
+      },
+      "gender": {
+        "enum": [
+          "male",
+          "female"
+        ],
+        "title": "Gender",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "last_date": {
+        "title": "Last Date",
+        "type": "string"
+      },
+      "matches": {
+        "minimum": 1,
+        "title": "Matches",
+        "type": "integer"
+      },
+      "profiles": {
+        "minimum": 0,
+        "title": "Profiles",
+        "type": "integer"
+      },
+      "provider": {
+        "enum": [
+          "statsbomb",
+          "wyscout"
+        ],
+        "title": "Provider",
+        "type": "string"
+      },
+      "recruitment": {
+        "title": "Recruitment",
+        "type": "boolean"
+      },
+      "scope_label": {
+        "title": "Scope Label",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "similarity_profiles": {
+        "minimum": 0,
+        "title": "Similarity Profiles",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "id",
+      "provider",
+      "competition",
+      "competition_key",
+      "season",
+      "gender",
+      "matches",
+      "profiles",
+      "common_profiles",
+      "similarity_profiles",
+      "coverage",
+      "first_date",
+      "last_date",
+      "country",
+      "scope_label",
+      "recruitment",
+      "clubs"
+    ],
+    "title": "ExpandedScope",
+    "type": "object"
+  },
+  "ExpansionManifest": {
+    "additionalProperties": false,
+    "properties": {
+      "code_commit": {
+        "title": "Code Commit",
+        "type": "string"
+      },
+      "counts": {
+        "$ref": "#/$defs/ExpandedCounts"
+      },
+      "evaluation_sha256": {
+        "title": "Evaluation Sha256",
+        "type": "string"
+      },
+      "index_gzip_bytes": {
+        "title": "Index Gzip Bytes",
+        "type": "integer"
+      },
+      "partial": {
+        "const": false,
+        "title": "Partial",
+        "type": "boolean"
+      },
+      "pipeline_sha256": {
+        "title": "Pipeline Sha256",
+        "type": "string"
+      },
+      "public_bytes": {
+        "title": "Public Bytes",
+        "type": "integer"
+      },
+      "public_files": {
+        "title": "Public Files",
+        "type": "integer"
+      },
+      "source_bytes": {
+        "title": "Source Bytes",
+        "type": "integer"
+      },
+      "source_files": {
+        "title": "Source Files",
+        "type": "integer"
+      },
+      "source_manifest_sha256": {
+        "title": "Source Manifest Sha256",
+        "type": "string"
+      },
+      "version": {
+        "const": "v12-build-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "code_commit",
+      "pipeline_sha256",
+      "source_manifest_sha256",
+      "evaluation_sha256",
+      "counts",
+      "public_files",
+      "public_bytes",
+      "index_gzip_bytes",
+      "source_bytes",
+      "source_files",
+      "partial"
+    ],
+    "title": "ExpansionManifest",
+    "type": "object"
+  },
+  "MetadataClub": {
+    "additionalProperties": false,
+    "properties": {
+      "aliases": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Aliases",
+        "type": "array"
+      },
+      "capabilities": {
+        "additionalProperties": {
+          "type": "boolean"
+        },
+        "title": "Capabilities",
+        "type": "object"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "metadata_updated": {
+        "title": "Metadata Updated",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "performance_scopes": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Performance Scopes",
+        "type": "array"
+      },
+      "resolution": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Resolution"
+      },
+      "seasons": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Seasons",
+        "type": "array"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      },
+      "source_line": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Source Line"
+      },
+      "stadium": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Stadium"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "country",
+      "aliases",
+      "stadium",
+      "source",
+      "source_line",
+      "metadata_updated",
+      "seasons",
+      "performance_scopes",
+      "capabilities"
+    ],
+    "title": "MetadataClub",
+    "type": "object"
+  },
+  "MetadataClubSummary": {
+    "additionalProperties": false,
+    "properties": {
+      "aliases": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Aliases",
+        "type": "array"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "performance_scopes": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Performance Scopes",
+        "type": "array"
+      },
+      "seasons": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Seasons",
+        "type": "array"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "country",
+      "aliases",
+      "seasons",
+      "performance_scopes"
+    ],
+    "title": "MetadataClubSummary",
+    "type": "object"
+  },
+  "MetadataCompetition": {
+    "additionalProperties": false,
+    "properties": {
+      "capabilities": {
+        "additionalProperties": {
+          "type": "boolean"
+        },
+        "title": "Capabilities",
+        "type": "object"
+      },
+      "clubs": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Clubs",
+        "type": "array"
+      },
+      "competition_code": {
+        "title": "Competition Code",
+        "type": "string"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "fixtures": {
+        "title": "Fixtures",
+        "type": "integer"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "metadata_updated": {
+        "title": "Metadata Updated",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "results": {
+        "title": "Results",
+        "type": "integer"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "country",
+      "season",
+      "competition_code",
+      "clubs",
+      "fixtures",
+      "results",
+      "source",
+      "provider",
+      "metadata_updated",
+      "capabilities"
+    ],
+    "title": "MetadataCompetition",
+    "type": "object"
+  },
+  "MetadataDirectory": {
+    "additionalProperties": false,
+    "properties": {
+      "clubs": {
+        "items": {
+          "$ref": "#/$defs/MetadataClubSummary"
+        },
+        "title": "Clubs",
+        "type": "array"
+      },
+      "competitions": {
+        "items": {
+          "$ref": "#/$defs/MetadataCompetition"
+        },
+        "title": "Competitions",
+        "type": "array"
+      },
+      "license": {
+        "title": "License",
+        "type": "string"
+      },
+      "player_countries": {
+        "additionalProperties": {
+          "type": "integer"
+        },
+        "title": "Player Countries",
+        "type": "object"
+      },
+      "player_paths": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Player Paths",
+        "type": "object"
+      },
+      "specialist_path": {
+        "title": "Specialist Path",
+        "type": "string"
+      },
+      "version": {
+        "const": "club-metadata-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "clubs",
+      "competitions",
+      "player_countries",
+      "player_paths",
+      "specialist_path",
+      "license"
+    ],
+    "title": "MetadataDirectory",
+    "type": "object"
+  },
+  "MetadataFixtures": {
+    "additionalProperties": false,
+    "properties": {
+      "columns": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Columns",
+        "type": "array"
+      },
+      "rows": {
+        "items": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "title": "Rows",
+        "type": "array"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      },
+      "version": {
+        "const": "fixture-metadata-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "scope",
+      "source",
+      "columns",
+      "rows"
+    ],
+    "title": "MetadataFixtures",
+    "type": "object"
+  },
+  "MetadataPeople": {
+    "additionalProperties": false,
+    "properties": {
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "metadata_updated": {
+        "title": "Metadata Updated",
+        "type": "string"
+      },
+      "players": {
+        "items": {
+          "$ref": "#/$defs/MetadataPerson"
+        },
+        "title": "Players",
+        "type": "array"
+      },
+      "version": {
+        "const": "player-metadata-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "country",
+      "metadata_updated",
+      "players"
+    ],
+    "title": "MetadataPeople",
+    "type": "object"
+  },
+  "MetadataPerson": {
+    "additionalProperties": false,
+    "properties": {
+      "capabilities": {
+        "$ref": "#/$defs/CapabilitySet"
+      },
+      "conflicting_source_rows": {
+        "default": false,
+        "title": "Conflicting Source Rows",
+        "type": "boolean"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "dob": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Dob"
+      },
+      "height_m": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Height M"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "position": {
+        "title": "Position",
+        "type": "string"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      },
+      "source_line": {
+        "title": "Source Line",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "country",
+      "dob",
+      "height_m",
+      "position",
+      "source",
+      "source_line",
+      "capabilities"
+    ],
+    "title": "MetadataPerson",
+    "type": "object"
+  },
+  "NativeClub": {
+    "additionalProperties": false,
+    "properties": {
+      "capabilities": {
+        "additionalProperties": {
+          "type": "boolean"
+        },
+        "title": "Capabilities",
+        "type": "object"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "roles": {
+        "items": {
+          "$ref": "#/$defs/RoleContext"
+        },
+        "title": "Roles",
+        "type": "array"
+      },
+      "roster_median": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Roster Median",
+        "type": "object"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "roles",
+      "roster_median",
+      "capabilities"
+    ],
+    "title": "NativeClub",
+    "type": "object"
+  },
+  "NativeFeature": {
+    "additionalProperties": false,
+    "properties": {
+      "en": {
+        "title": "En",
+        "type": "string"
+      },
+      "event_mapping": {
+        "title": "Event Mapping",
+        "type": "string"
+      },
+      "family": {
+        "title": "Family",
+        "type": "string"
+      },
+      "formula": {
+        "title": "Formula",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "nl": {
+        "title": "Nl",
+        "type": "string"
+      },
+      "null_semantics": {
+        "title": "Null Semantics",
+        "type": "string"
+      },
+      "research_note": {
+        "title": "Research Note",
+        "type": "string"
+      },
+      "role_suitability": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Role Suitability",
+        "type": "array"
+      },
+      "tags_required": {
+        "items": {
+          "type": "integer"
+        },
+        "title": "Tags Required",
+        "type": "array"
+      },
+      "unit": {
+        "title": "Unit",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "en",
+      "nl",
+      "family",
+      "formula",
+      "event_mapping",
+      "tags_required",
+      "unit",
+      "null_semantics",
+      "role_suitability",
+      "research_note"
+    ],
+    "title": "NativeFeature",
+    "type": "object"
+  },
+  "NativeLeague": {
+    "additionalProperties": false,
+    "properties": {
+      "clubs": {
+        "items": {
+          "$ref": "#/$defs/NativeClub"
+        },
+        "title": "Clubs",
+        "type": "array"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "competition_id": {
+        "title": "Competition Id",
+        "type": "string"
+      },
+      "context_version": {
+        "const": "wyscout-club-context-v1",
+        "title": "Context Version",
+        "type": "string"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "feature_registry_version": {
+        "const": "wyscout-recruitment-features-v1",
+        "title": "Feature Registry Version",
+        "type": "string"
+      },
+      "minutes_threshold": {
+        "title": "Minutes Threshold",
+        "type": "integer"
+      },
+      "players": {
+        "items": {
+          "$ref": "#/$defs/NativePlayer"
+        },
+        "title": "Players",
+        "type": "array"
+      },
+      "roles": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Roles",
+        "type": "array"
+      },
+      "scales": {
+        "additionalProperties": {
+          "additionalProperties": {
+            "minimum": 0,
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "title": "Scales",
+        "type": "object"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "season_id": {
+        "title": "Season Id",
+        "type": "string"
+      },
+      "version": {
+        "const": "recruitment-fit-wyscout-v1",
+        "title": "Version",
+        "type": "string"
+      },
+      "weights": {
+        "additionalProperties": {
+          "additionalProperties": {
+            "minimum": 0,
+            "type": "number"
+          },
+          "type": "object"
+        },
+        "title": "Weights",
+        "type": "object"
+      }
+    },
+    "required": [
+      "version",
+      "context_version",
+      "feature_registry_version",
+      "scope",
+      "competition",
+      "competition_id",
+      "country",
+      "season",
+      "season_id",
+      "minutes_threshold",
+      "roles",
+      "clubs",
+      "players",
+      "scales",
+      "weights"
+    ],
+    "title": "NativeLeague",
+    "type": "object"
+  },
+  "NativeLeagueSummary": {
+    "additionalProperties": false,
+    "properties": {
+      "clubs": {
+        "title": "Clubs",
+        "type": "integer"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "minutes_threshold": {
+        "title": "Minutes Threshold",
+        "type": "integer"
+      },
+      "path": {
+        "title": "Path",
+        "type": "string"
+      },
+      "profiles": {
+        "title": "Profiles",
+        "type": "integer"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      }
+    },
+    "required": [
+      "scope",
+      "competition",
+      "country",
+      "season",
+      "minutes_threshold",
+      "clubs",
+      "profiles",
+      "path"
+    ],
+    "title": "NativeLeagueSummary",
+    "type": "object"
+  },
+  "NativePlayer": {
+    "additionalProperties": false,
+    "properties": {
+      "features": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Features",
+        "type": "object"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "minutes": {
+        "minimum": 0,
+        "title": "Minutes",
+        "type": "number"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "percentiles": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Percentiles",
+        "type": "object"
+      },
+      "role": {
+        "enum": [
+          "GK",
+          "DEF",
+          "MID",
+          "FWD"
+        ],
+        "title": "Role",
+        "type": "string"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "scope",
+      "role",
+      "minutes",
+      "teams",
+      "features",
+      "percentiles"
+    ],
+    "title": "NativePlayer",
+    "type": "object"
+  },
+  "NativeRegistry": {
+    "additionalProperties": false,
+    "properties": {
+      "evaluation_path": {
+        "title": "Evaluation Path",
+        "type": "string"
+      },
+      "features": {
+        "items": {
+          "$ref": "#/$defs/NativeFeature"
+        },
+        "title": "Features",
+        "type": "array"
+      },
+      "leagues": {
+        "items": {
+          "$ref": "#/$defs/NativeLeagueSummary"
+        },
+        "title": "Leagues",
+        "type": "array"
+      },
+      "license": {
+        "title": "License",
+        "type": "string"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      },
+      "version": {
+        "const": "recruitment-fit-wyscout-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "features",
+      "leagues",
+      "source",
+      "license",
+      "evaluation_path"
+    ],
+    "title": "NativeRegistry",
+    "type": "object"
+  },
+  "PhysicalIndex": {
+    "additionalProperties": false,
+    "properties": {
+      "license": {
+        "title": "License",
+        "type": "string"
+      },
+      "profiles": {
+        "items": {
+          "$ref": "#/$defs/PhysicalSummary"
+        },
+        "title": "Profiles",
+        "type": "array"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      },
+      "version": {
+        "const": "physical-research-v1",
+        "title": "Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "version",
+      "profiles",
+      "source",
+      "license"
+    ],
+    "title": "PhysicalIndex",
+    "type": "object"
+  },
+  "PhysicalPerson": {
+    "additionalProperties": false,
+    "properties": {
+      "capabilities": {
+        "$ref": "#/$defs/CapabilitySet"
+      },
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "country": {
+        "title": "Country",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "provider": {
+        "const": "skillcorner",
+        "title": "Provider",
+        "type": "string"
+      },
+      "provider_player_id": {
+        "title": "Provider Player Id",
+        "type": "string"
+      },
+      "records": {
+        "items": {
+          "$ref": "#/$defs/PhysicalRecord"
+        },
+        "title": "Records",
+        "type": "array"
+      },
+      "scope_note": {
+        "title": "Scope Note",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "source": {
+        "title": "Source",
+        "type": "string"
+      },
+      "teams": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "object"
+      }
+    },
+    "required": [
+      "id",
+      "provider",
+      "provider_player_id",
+      "name",
+      "season",
+      "competition",
+      "country",
+      "teams",
+      "records",
+      "capabilities",
+      "scope_note",
+      "source"
+    ],
+    "title": "PhysicalPerson",
+    "type": "object"
+  },
+  "PhysicalRecord": {
+    "additionalProperties": false,
+    "properties": {
+      "kind": {
+        "enum": [
+          "physical",
+          "obr",
+          "passing"
+        ],
+        "title": "Kind",
+        "type": "string"
+      },
+      "source_file": {
+        "title": "Source File",
+        "type": "string"
+      },
+      "values": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "title": "Values",
+        "type": "object"
+      }
+    },
+    "required": [
+      "kind",
+      "source_file",
+      "values"
+    ],
+    "title": "PhysicalRecord",
+    "type": "object"
+  },
+  "PhysicalSummary": {
+    "additionalProperties": false,
+    "properties": {
+      "competition": {
+        "title": "Competition",
+        "type": "string"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "season": {
+        "title": "Season",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "season",
+      "competition",
+      "teams"
+    ],
+    "title": "PhysicalSummary",
+    "type": "object"
+  },
+  "ProfileCapabilities": {
+    "additionalProperties": false,
+    "properties": {
+      "common": {
+        "title": "Common",
+        "type": "boolean"
+      },
+      "similarity": {
+        "title": "Similarity",
+        "type": "boolean"
+      },
+      "translation": {
+        "title": "Translation",
+        "type": "boolean"
+      },
+      "validated_dna": {
+        "title": "Validated Dna",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "common",
+      "similarity",
+      "translation",
+      "validated_dna"
+    ],
+    "title": "ProfileCapabilities",
+    "type": "object"
+  },
+  "ProfileIndexEntry": {
+    "additionalProperties": false,
+    "properties": {
+      "capabilities": {
+        "$ref": "#/$defs/ProfileCapabilities"
+      },
+      "id": {
+        "pattern": "^(statsbomb|wyscout)-[0-9]+-[0-9]+-[0-9]+$",
+        "title": "Id",
+        "type": "string"
+      },
+      "minutes": {
+        "minimum": 0,
+        "title": "Minutes",
+        "type": "number"
+      },
+      "name": {
+        "title": "Name",
+        "type": "string"
+      },
+      "provider": {
+        "enum": [
+          "statsbomb",
+          "wyscout"
+        ],
+        "title": "Provider",
+        "type": "string"
+      },
+      "role": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Role"
+      },
+      "role_family": {
+        "enum": [
+          "GK",
+          "DEF",
+          "MID",
+          "FWD"
+        ],
+        "title": "Role Family",
+        "type": "string"
+      },
+      "scope": {
+        "title": "Scope",
+        "type": "string"
+      },
+      "teams": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Teams",
+        "type": "array"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "provider",
+      "scope",
+      "teams",
+      "role",
+      "role_family",
+      "minutes",
+      "capabilities"
+    ],
+    "title": "ProfileIndexEntry",
+    "type": "object"
+  },
+  "ProfileNeighbour": {
+    "additionalProperties": false,
+    "properties": {
+      "distance": {
+        "minimum": 0,
+        "title": "Distance",
+        "type": "number"
+      },
+      "id": {
+        "title": "Id",
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "distance"
+    ],
+    "title": "ProfileNeighbour",
+    "type": "object"
+  },
+  "RoleContext": {
+    "additionalProperties": false,
+    "properties": {
+      "median": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Median",
+        "type": "object"
+      },
+      "minutes": {
+        "minimum": 0,
+        "title": "Minutes",
+        "type": "number"
+      },
+      "percentiles": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Percentiles",
+        "type": "object"
+      },
+      "players": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Players",
+        "type": "array"
+      },
+      "q25": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Q25",
+        "type": "object"
+      },
+      "q75": {
+        "additionalProperties": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "title": "Q75",
+        "type": "object"
+      },
+      "role": {
+        "enum": [
+          "GK",
+          "DEF",
+          "MID",
+          "FWD"
+        ],
+        "title": "Role",
+        "type": "string"
+      }
+    },
+    "required": [
+      "role",
+      "players",
+      "minutes",
+      "median",
+      "q25",
+      "q75",
+      "percentiles"
+    ],
+    "title": "RoleContext",
+    "type": "object"
+  },
+  "StatsBombMetrics": {
+    "additionalProperties": false,
+    "properties": {
+      "carries_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Carries Per90"
+      },
+      "crosses_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Crosses Per90"
+      },
+      "dribbles_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Dribbles Per90"
+      },
+      "interceptions_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Interceptions Per90"
+      },
+      "non_penalty_xg_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Non Penalty Xg Per90"
+      },
+      "open_play_completion": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Open Play Completion"
+      },
+      "open_play_passes_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Open Play Passes Per90"
+      },
+      "pressures_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Pressures Per90"
+      },
+      "recoveries_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Recoveries Per90"
+      },
+      "tackles_per90": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Tackles Per90"
+      }
+    },
+    "required": [
+      "open_play_passes_per90",
+      "open_play_completion",
+      "crosses_per90",
+      "pressures_per90",
+      "carries_per90",
+      "dribbles_per90",
+      "tackles_per90",
+      "interceptions_per90",
+      "recoveries_per90",
+      "non_penalty_xg_per90"
+    ],
+    "title": "StatsBombMetrics",
+    "type": "object"
+  }
+}

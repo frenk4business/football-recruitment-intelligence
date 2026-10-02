@@ -60,6 +60,7 @@ def main():
     assert manifest["version"] == Path("VERSION").read_text().strip(), "Release version differs"
     inventory = json.loads(Path("config/public-artifacts.json").read_text())["files"]
     inventory += json.loads(Path("config/v11-public-artifacts.json").read_text())["files"]
+    inventory += json.loads(Path("config/v12-public-artifacts.json").read_text())["files"]
     expected = [{k: row[k] for k in ["path", "bytes", "sha256", "schema"]} for row in inventory]
     assert manifest["public_artifacts"] == expected, "Public scientific artifacts differ"
     assert (

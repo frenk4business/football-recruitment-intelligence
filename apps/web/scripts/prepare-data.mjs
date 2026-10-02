@@ -56,6 +56,7 @@ if (
 const schemas = {
   ...json("artifacts/contracts.schema.json"),
   ...json("artifacts/v11/contracts.schema.json"),
+  ...json("artifacts/v12/contracts.schema.json"),
 };
 const ajv = new Ajv({ strict: false, validateFormats: false });
 const validators = new Map();
@@ -63,6 +64,7 @@ const listed = new Set(inventory.files.map((f) => f.source));
 for (const dir of [
   "artifacts/explorer",
   "artifacts/v11/public",
+  "artifacts/v12/public",
   ...[2, 3, 4].map((n) => `artifacts/phase${n}/public`),
 ]) {
   for (const path of walk(join(root, dir))) {
@@ -105,7 +107,7 @@ for (const file of inventory.files) {
       : parts.slice(0, parts.length - 1).join("/") + "/";
   (groups[`/${prefix}`] ??= {})[`/${file.path}`] = file.sha256;
 }
-if (total > 55_000_000) throw new Error("Public JSON budget exceeded");
+if (total > 100_000_000) throw new Error("Public JSON budget exceeded");
 const groupIndex = [];
 mkdirSync(join(root, "apps/web/public/integrity"), { recursive: true });
 for (const [prefix, hashes] of Object.entries(groups)) {
@@ -139,8 +141,18 @@ const manifest = {
     "wyscout-profile-v1",
     "common-profile-v1",
     "common-similarity-v1",
+    "wyscout-recruitment-features-v1",
+    "recruitment-fit-wyscout-v1",
+    "wyscout-club-context-v1",
+    "statsbomb-expanded-profile-v1",
+    "club-metadata-v1",
   ],
   source_revisions: {
+    v12: {
+      audit_sha256: sha(read("artifacts/v12/source-audit.json")),
+      config_sha256: sha(read("config/v12-sources.json")),
+      source_registry_sha256: sha(read("config/v12-source-registry.json")),
+    },
     v11: {
       revision: json("config/v11-sources.json").statsbomb_revision,
       config_sha256: sha(read("config/v11-sources.json")),

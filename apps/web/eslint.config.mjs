@@ -7,6 +7,8 @@ export default tseslint.config(
   {
     files: [
       "scripts/performance.mjs",
+      "scripts/v12-performance.mjs",
+      "scripts/v12-search-performance.mjs",
       "scripts/players-performance.mjs",
       "scripts/ui-review.mjs",
       "scripts/product-review.mjs",

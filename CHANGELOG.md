@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0
+
+- Add separately versioned Wyscout native recruitment across all five 2017/18 Big Five leagues: 98 clubs, 1,761 eligible profiles and 24 audited features. Each league/role passes the preregistered retrieval and random-baseline gate at 450 minutes. Existing WSL recruitment remains unchanged.
+- Add 665 conservative StatsBomb profiles across separately labelled domestic, European and tournament scopes. Audit all 80 catalogue scopes, retaining partial/sample coverage and disabled new recruitment capabilities.
+- Add isolated OpenFootball club/player/fixture metadata and SkillCorner Australian physical/off-ball aggregates, explicit capabilities, dated provenance, country filters, coverage discovery and lazy detail partitions.
+- Preserve old scientific versions, WSL shared URLs, provider identities, branding and approved images. Cross-league discovery compares observed native rates only; no transfer-success, current availability or league-strength translation claims.
+- See [coverage](docs/v1.2-platform-coverage.md), [evaluation](docs/v1.2-recruitment-expansion-evaluation.md) and [reproduction](docs/v1.2-reproduction.md).
+
 ## 1.1.0 — 2026-10-01
 
 - Add an EN/NL player database with 3,074 observed player-season profiles and 2,840 common profiles from 3,361 matches across StatsBomb and Pappalardo/Wyscout open datasets.

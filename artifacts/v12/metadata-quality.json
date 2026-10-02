@@ -1,0 +1,253 @@
+{
+  "alias_collisions": [
+    {
+      "alias": "ballsportverein schwarz weiss rehden",
+      "clubs": [
+        "openfootball-club-dd013a0255f1747c7dad",
+        "openfootball-club-fbb309652199816d3ac7"
+      ],
+      "country": "Germany"
+    },
+    {
+      "alias": "bsv rehden",
+      "clubs": [
+        "openfootball-club-dd013a0255f1747c7dad",
+        "openfootball-club-fbb309652199816d3ac7"
+      ],
+      "country": "Germany"
+    },
+    {
+      "alias": "bsv schwarz weiss rehden",
+      "clubs": [
+        "openfootball-club-dd013a0255f1747c7dad",
+        "openfootball-club-fbb309652199816d3ac7"
+      ],
+      "country": "Germany"
+    },
+    {
+      "alias": "tekstilshchik",
+      "clubs": [
+        "openfootball-club-340dbe22f2e74f25c6bd",
+        "openfootball-club-8d10438f8859f960cefe"
+      ],
+      "country": "Russia"
+    },
+    {
+      "alias": "izola",
+      "clubs": [
+        "openfootball-club-227574362fac3fb7900f",
+        "openfootball-club-310a98c5a74c2c970116"
+      ],
+      "country": "Slovenia"
+    },
+    {
+      "alias": "extremadura",
+      "clubs": [
+        "openfootball-club-0dab7dd2034541b650df",
+        "openfootball-club-f112f05206d20821b0a5"
+      ],
+      "country": "Spain"
+    }
+  ],
+  "clubs": 3736,
+  "competition_seasons": 473,
+  "count_policy": "Source-scoped observations; do not claim deduplicated real-world fixtures or people. Metadata is not performance.",
+  "countries": [
+    "Albania",
+    "Andorra",
+    "Armenia",
+    "Austria",
+    "Azerbaijan",
+    "Belarus",
+    "Belgium",
+    "Bosnia and Herzegovina",
+    "Bulgaria",
+    "Croatia",
+    "Cyprus",
+    "Czech Republic",
+    "Denmark",
+    "England",
+    "Estonia",
+    "Europe",
+    "Faroe Islands",
+    "Finland",
+    "France",
+    "Georgia",
+    "Germany",
+    "Gibraltar",
+    "Greece",
+    "Hungary",
+    "Iceland",
+    "Ireland",
+    "Italy",
+    "Kosovo",
+    "Latvia",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Malta",
+    "Moldova",
+    "Montenegro",
+    "Netherlands",
+    "North Macedonia",
+    "Northern Ireland",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Romania",
+    "Russia",
+    "San Marino",
+    "Scotland",
+    "Serbia",
+    "Slovakia",
+    "Slovenia",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "Turkey",
+    "Ukraine",
+    "Wales"
+  ],
+  "fixture_observations": 138166,
+  "identity_statuses": {
+    "ambiguous": 29,
+    "likely": 414,
+    "none": 1798,
+    "verified": 1362
+  },
+  "issues": [
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-11eaf9c30e3479086778",
+        "openfootball-club-185c2d28178150d2d666",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-22bb0a68c3910e0f7bb4",
+        "openfootball-fixture-club-dd52b9ac4ddbc31c9ac8",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-f6ca5f619c0d79e97b7b",
+        "openfootball-club-587b10b05dfbf1f54b0d",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-1507eb6eb96f202e1316",
+        "openfootball-club-33cb37b2f3c9a72c915f",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-e4216550448162fd2a8f",
+        "openfootball-club-a5e7a73d0302eda353a7",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-411f728254aa5c92ab82",
+        "openfootball-club-f8bab75d17a22364adc1",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-47762846e9168f36f116",
+        "openfootball-club-234e863e1d88bc6379be",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-c3ce62210e2a8e7f4b2d",
+        "openfootball-club-e2f9ccd8b41e9b004b04",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-a92f0bc0feb9a49aa12a",
+        "openfootball-club-a95bbcfd4ce5c8ed4cbf",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-e2a412d1e01a498a279b",
+        "openfootball-club-58b444023621a43f0c77",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-8255c5abd0d03a80e3a4",
+        "openfootball-club-bb30d7ba3a52a4df045d",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    },
+    {
+      "file": "2025-26/en.4.json",
+      "identity": [
+        "openfootball-scope-832f828d32106848d6ee",
+        "2026-01-01",
+        "openfootball-club-2f436be3025efcf14f0e",
+        "openfootball-club-ac3a1d8ce768b8ab6345",
+        "24. Round"
+      ],
+      "reason": "duplicate_fixture"
+    }
+  ],
+  "player_metadata_records": 25885
+}

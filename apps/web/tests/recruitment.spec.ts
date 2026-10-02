@@ -19,7 +19,7 @@ for (const locale of ["en", "nl"] as const) {
     page.on("request", (r) => {
       if (r.url().includes("/data/phase4/")) requests.push(r.url());
     });
-    await page.goto(`${base}/recruitment/`);
+    await page.goto(`${base}/recruitment/?dataset=wsl`);
     await expect(page.locator("html")).toHaveAttribute("lang", locale);
     await expect(page.locator(".recruitment-empty")).toContainText(
       nl ? "Kies een eis" : "Choose a requirement",
@@ -131,7 +131,7 @@ for (const locale of ["en", "nl"] as const) {
 test("recruitment sharing, locale switch, reset, strict URLs and hard exclusions", async ({
   page,
 }) => {
-  await page.goto("/recruitment/");
+  await page.goto("/recruitment/?dataset=wsl");
   const feature = page.locator('[data-feature="progressive_passes_per90"]');
   await feature.locator("select").first().selectOption("minimum");
   await feature.locator('input[type="number"]').fill("100");
@@ -200,7 +200,7 @@ test("recruitment failed artifacts retry and do not invent profiles", async ({
   page,
 }) => {
   await page.route("**/data/phase4/index.json*", (r) => r.abort());
-  await page.goto("/recruitment/");
+  await page.goto("/recruitment/?dataset=wsl");
   await expect(page.locator("main").getByRole("alert")).toContainText(
     "could not be loaded",
   );
@@ -233,7 +233,7 @@ test("recruitment failed artifacts retry and do not invent profiles", async ({
 });
 test("recruitment mobile and keyboard workflow", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto("/nl/recruitment/");
+  await page.goto("/nl/recruitment/?dataset=wsl");
   const replace = page.getByRole("button", {
     name: "Speler vervangen",
     exact: false,
@@ -278,7 +278,7 @@ test("recruitment desktop visual evidence and bounded initial payload", async ({
     }
   });
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto("/recruitment/");
+  await page.goto("/recruitment/?dataset=wsl");
   await page
     .locator('[data-feature="progressive_passes_per90"] select')
     .first()

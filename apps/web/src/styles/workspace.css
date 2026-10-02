@@ -1058,3 +1058,120 @@ main#main {
     flex: 1 1 170px;
   }
 }
+
+/* v1.2 discovery and native recruitment use the existing restrained workspace. */
+.discovery {
+  margin-block: 1rem 1.5rem;
+}
+.discovery-panel {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--white);
+  min-width: 0;
+}
+.discovery-panel table,
+.native-recruitment table {
+  width: 100%;
+  font-size: 0.85rem;
+}
+.discovery-panel label,
+.native-recruitment label,
+.dataset-selector {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+.dataset-selector {
+  max-width: 30rem;
+  margin-bottom: 1.5rem;
+}
+.native-requirement {
+  display: grid;
+  grid-template-columns: minmax(8rem, 2fr) repeat(3, minmax(5rem, 1fr)) auto;
+  align-items: end;
+  gap: 0.6rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.native-recruitment .native-wider {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-block: 1.5rem 0.5rem;
+}
+.native-wider input {
+  width: auto;
+}
+.native-results {
+  padding: 0;
+  list-style: none;
+}
+.native-results li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: 1px solid var(--rule);
+  padding: 0.6rem;
+}
+.native-results li > div {
+  flex: 1;
+  min-width: 0;
+}
+.directory-list {
+  list-style: none;
+  padding: 0;
+}
+.directory-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.directory-list span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.native-recruitment details {
+  margin-block: 0.75rem;
+}
+.native-recruitment th small {
+  display: block;
+  font-weight: 400;
+}
+.native-recruitment input,
+.native-recruitment select,
+.discovery-panel input,
+.discovery-panel select {
+  max-width: 100%;
+  min-width: 0;
+}
+@media (max-width: 650px) {
+  .native-requirement {
+    grid-template-columns: 1fr 1fr;
+  }
+  .native-requirement strong {
+    grid-column: 1 / -1;
+  }
+  .directory-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .native-results li {
+    flex-wrap: wrap;
+  }
+  .native-results li > span {
+    margin-left: auto;
+  }
+}
+
+.recruitment-workspace {
+  min-height: 100vh;
+}
+.native-recruitment {
+  min-height: 100vh;
+}

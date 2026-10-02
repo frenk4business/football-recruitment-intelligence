@@ -13,6 +13,7 @@ test: lint typecheck
 	uv run pytest -q
 	uv run python scripts/generate_contracts.py --check
 	uv run python scripts/generate_profile_contracts.py --check
+	uv run python scripts/generate_expansion_contracts.py --check
 	cd apps/web && npm test
 data-bootstrap:
 	uv run fri data bootstrap
@@ -80,10 +81,12 @@ recruitment-evaluate:
 release-build:
 	uv run python scripts/generate_contracts.py --check
 	uv run python scripts/generate_profile_contracts.py --check
+	uv run python scripts/generate_expansion_contracts.py --check
 	cd apps/web && npm run build
 release-validate:
 	uv run python scripts/generate_contracts.py --check
 	uv run python scripts/generate_profile_contracts.py --check
+	uv run python scripts/generate_expansion_contracts.py --check
 	cd apps/web && npm run release:validate
 security-audit:
 	cd apps/web && npm audit --audit-level=high
@@ -98,3 +101,22 @@ v11-data-build:
 	uv run python scripts/v11_reports.py
 v11-contracts:
 	uv run python scripts/generate_profile_contracts.py
+
+.PHONY: v12-audit v12-fetch v12-data-build v12-recruitment-build v12-evaluate v12-public v12-reports
+# Audit is intentional discovery; all subsequent builds use reviewed source pins.
+v12-audit:
+	uv run python scripts/v12_audit_sources.py
+v12-fetch:
+	uv run python scripts/v12_fetch.py
+v12-data-build:
+	uv run python scripts/v12_statsbomb.py
+	uv run python scripts/v12_metadata.py
+v12-recruitment-build:
+	uv run python scripts/v12_wyscout.py
+v12-evaluate:
+	uv run python scripts/v12_evaluate.py
+v12-public:
+	uv run python scripts/v12_public.py
+	uv run python scripts/generate_expansion_contracts.py
+v12-reports:
+	uv run python scripts/v12_reports.py

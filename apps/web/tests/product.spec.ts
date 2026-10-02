@@ -42,7 +42,7 @@ for (const locale of ["en", "nl"] as const) {
   test(`${locale}: recruitment setup, shortlist, candidate details and advanced controls`, async ({
     page,
   }) => {
-    await page.goto(`${base}/recruitment/`);
+    await page.goto(`${base}/recruitment/?dataset=wsl`);
     await page
       .getByRole("combobox", {
         name: nl ? "Doelclub" : "Target club",
