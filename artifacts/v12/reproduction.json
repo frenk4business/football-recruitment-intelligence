@@ -1,0 +1,20 @@
+{
+  "version": "v12-offline-reproduction-v1",
+  "network": "httpx send blocked in process for both entire rebuilds",
+  "runs": [
+    {
+      "seconds": 94.311,
+      "public_files": 5226,
+      "public_bytes": 46580561,
+      "inventory_digest": "7bf664bdda07ba707e29fe0bbaabafaa53783365be2ff82c3208086e1c4eefe0"
+    },
+    {
+      "seconds": 96.359,
+      "public_files": 5226,
+      "public_bytes": 46580561,
+      "inventory_digest": "7bf664bdda07ba707e29fe0bbaabafaa53783365be2ff82c3208086e1c4eefe0"
+    }
+  ],
+  "identical": true,
+  "code_commit": "5787d2642486b0ce6d91e98eab5fb31172f2530e"
+}

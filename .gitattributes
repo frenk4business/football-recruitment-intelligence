@@ -1,0 +1,5 @@
+# Keep generated, hash-validated publication assets out of ordinary code-review diffs.
+artifacts/v12/public/** linguist-generated=true
+artifacts/v12/contracts.schema.json linguist-generated=true
+apps/web/src/lib/expansion-contracts.ts linguist-generated=true
+config/v12-public-artifacts.json linguist-generated=true
